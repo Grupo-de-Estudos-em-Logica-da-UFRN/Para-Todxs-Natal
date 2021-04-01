@@ -1,0 +1,446 @@
+%!TEX root = forallxyyc.tex
+\chapter{Referência rápida}
+%\pagestyle{plain}
+%\section{Characteristic truth tables}
+\section{Tabelas-verdade típicas}
+\label{app.CharacteristicTTs}
+
+%## TESTE DE REFERÊNCIA (início) ##
+%\newglossaryentry{zilhão}
+%{
+%name=Zilhão,
+%description={Termo usado para designar uma quantidade muito, mas muito grande mesmo.}
+%}
+%## TESTE DE REFERÊNCIA (fim) #####
+
+\begin{tabular}{c|c}
+\meta{A} & \enot\meta{A}\\
+\hline
+T & F\\
+F & T \\
+\phantom{.}\\
+\phantom{.}
+\end{tabular}
+\hfill
+\begin{tabular}{c c|c|c|c|c}
+\meta{A} & \meta{B} & $\meta{A}\eand\meta{B}$ & $\meta{A}\eor\meta{B}$ & $\meta{A}\eif\meta{B}$ & $\meta{A}\eiff\meta{B}$\\
+\hline
+T & T & T & T & T & T\\
+T & F & F & T & F & F\\
+F & T & F & T & T & F\\
+F & F & F & F & T & T
+\end{tabular}
+
+
+\vfill
+
+%\section{Symbolization}
+\section{Uso dos símbolos}
+\begin{center}
+\label{app.symbolization}
+%\begin{tabular*}{\textwidth}{rl}
+%\multicolumn{2}{c}{\textsc{Sentential Connectives}}\\ \\
+%It is not the case that $P$ & $\enot P$\\
+%Either $P$ or $Q$ & $(P \eor Q)$\\
+%Neither $P$ nor $Q$ & $\enot(P \eor Q)$\ or \ $(\enot P \eand \enot Q)$\\
+%Both $P$ and $Q$ & $(P \eand Q)$\\
+%If $P$ then $Q$ & $(P \eif Q)$\\
+%$P$ only if $Q$ & $(P \eif Q)$\\
+%$P$ if and only if $Q$ & $(P \eiff Q)$\\
+%$P$ unless $Q$ & $(P \eor Q)$\\
+%\\
+%\multicolumn{2}{c}{\label{SymbolizingPredicates}\textsc{Predicates}}\\ \\
+%All $F$s are $G$s & $\forall x(\atom{F}{x} \eif \atom{G}{x})$\\
+%Some $F$s are $G$s & $\exists x(\atom{F}{x} \eand \atom{G}{x})$\\
+%Not all $F$s are $G$s & $\enot\forall x(\atom{F}{x} \eif \atom{G}{x})$\ or\\
+%& $\exists x(\atom{F}{x} \eand \enot \atom{G}{x})$\\
+%No $F$s are $G$s & $\forall x(\atom{F}{x} \eif\enot \atom{G}{x})$\ or\\
+%& $\enot\exists x(\atom{F}{x} \eand \atom{G}{x})$\\
+%\\
+%\multicolumn{2}{c}{\textsc{Identity}}\\ \\
+%Only $c$ is $G$ & $\forall x(\atom{G}{x} \eiff x=c)$\\
+%Everything besides $c$ is $G$ & $\forall x(\enot x = c \eif \atom{G}{x} )$\\
+%%$j$ is more $R$ than anyone else. & $\forall x(x\neq j \eif Rjx)$\\
+%The $F$ is $G$ & $\exists x(\atom{F}{x} \eand \forall y(\atom{F}{y} \eif x=y) \eand \atom{G}{x} )$\\
+%It is not the case that\\
+% the $F$ is $G$ & $\enot\exists x(\atom{F}{x} \eand \forall y(\atom{F}{y} \eif x=y) \eand \atom{G}{x} )$\\
+%The $F$ is non-$G$ & $\exists x(\atom{F}{x} \eand \forall y(\atom{F}{y} \eif x=y) \eand \enot \atom{G}{x} )$
+%\end{tabular*}
+%\end{center}
+\begin{tabular*}{\textwidth}{rl}
+\multicolumn{2}{c}{\textsc{Conectivos Sentenciais}}\\ \\
+Não é o caso que $P$ & $\enot P$\\
+Ou $P$, ou $Q$ & $(P \eor Q)$\\
+Nem $P$, nem $Q$ & $\enot(P \eor Q)$\ or \ $(\enot P \eand \enot Q)$\\
+Tanto $P$ quanto $Q$ & $(P \eand Q)$\\
+Se $P$, então $Q$ & $(P \eif Q)$\\
+$P$ somente se $Q$ & $(P \eif Q)$\\
+$P$ se, e somente se $Q$ & $(P \eiff Q)$\\
+$P$ a não ser que $Q$ & $(P \eor Q)$\\
+\\
+\multicolumn{2}{c}{\label{SymbolizingPredicates}\textsc{Predicados}}\\ \\
+Todos os $F$s são $G$s & $\forall x(\atom{F}{x} \eif \atom{G}{x})$\\
+Alguns $F$s são $G$s & $\exists x(\atom{F}{x} \eand \atom{G}{x})$\\
+Nem todos os $F$s são $G$s & $\enot\forall x(\atom{F}{x} \eif \atom{G}{x})$\ or\\
+& $\exists x(\atom{F}{x} \eand \enot \atom{G}{x})$\\
+Nenhum $F$ é $G$ & $\forall x(\atom{F}{x} \eif\enot \atom{G}{x})$\ or\\
+& $\enot\exists x(\atom{F}{x} \eand \atom{G}{x})$\\
+\\
+\multicolumn{2}{c}{\textsc{Identidade}}\\ \\
+Apenas $c$ é $G$ & $\forall x(\atom{G}{x} \eiff x=c)$\\
+Todo não $c$ é $G$ & $\forall x(\enot x = c \eif \atom{G}{x} )$\\
+%$j$ is more $R$ than anyone else. & $\forall x(x\neq j \eif Rjx)$\\
+O $F$ é $G$ & $\exists x(\atom{F}{x} \eand \forall y(\atom{F}{y} \eif x=y) \eand \atom{G}{x} )$\\
+Não é o caso que\\
+ o $F$ é $G$ & $\enot\exists x(\atom{F}{x} \eand \forall y(\atom{F}{y} \eif x=y) \eand \atom{G}{x} )$\\
+O $F$ é não-$G$ & $\exists x(\atom{F}{x} \eand \forall y(\atom{F}{y} \eif x=y) \eand \enot \atom{G}{x} )$
+\end{tabular*}
+\end{center}
+
+
+
+
+% BEGIN: symbolizing cardinality
+
+\newpage
+%\section{Using identity to symbolize quantities}
+\section{Usando identidade para simbolizar quantidades}
+
+%\subsection*{There are at least \blank\ $F$s.}
+\subsection*{Há ao menos \blank\ $F$(s).}
+\label{summary.atleast}
+
+\begin{tabular*}{\textwidth}{rl}
+um & $\exists x\,\atom{F}{x}$\\
+dois & $\exists x_1\exists x_2(\atom{F}{x_1} \eand \atom{F}{x_2} \eand \enot x_1  = x_2)$\\
+três & $\exists x_1\exists x_2\exists x_3(\atom{F}{x_1} \eand \atom{F}{x_2} \eand \atom{F}{x_3} \eand {}$\\
+& $\enot x_1 = x_2 \eand\enot x_1 = x_3 \eand \enot x_2 = x_3)$\\
+quatro & $\exists x_1\exists x_2\exists x_3\exists x_4 (\atom{F}{x_1} \eand \atom{F}{x_2} \eand \atom{F}{x_3} \eand \atom{F}{x_4} \eand {}$\\
+& $\enot x_1 = x_2 \eand \enot x_1 = x_3 \eand \enot x_1 = x_4 \eand {}$\\
+& $ \enot x_2 = x_3 \eand \enot x_2 = x_4 \eand \enot x_3 = x_4)$\\
+$n$ & $\exists x_1\ldots\exists x_n(\atom{F}{x_1} \eand \ldots \eand \atom{F}{x_n} \eand {}$\\
+& $\enot x_1 = x_2 \eand\ldots\eand \enot x_{n-1} = x_n)$ 
+\end{tabular*}
+
+\subsection*{Há no máximo \blank\ $F$(s).}
+\label{summary.atmost}
+
+%One way to say `there are at most $n$ $F$s' is to put a negation sign in front of the symbolization for `there are at least $n+1$ $F$s'. Equivalently, we can offer:
+Uma maneira de dizer `há no máximo $n$ $F$(s)' é colocar um sinal de negação antes da simbolização para `há pelo menos $n+1$ $F$(s)'. De forma equivalente, podemos oferecer: 
+\begin{tabular*}{\textwidth}{rl}
+um & $\forall x_1\forall x_2\bigl[(\atom{F}{x_1} \eand \atom{F}{x_2}) \eif x_1=x_2\bigr]$\\
+dois & $\forall x_1\forall x_2\forall x_3\bigl[(\atom{F}{x_1} \eand \atom{F}{x_2} \eand \atom{F}{x_3}) \eif {}$\\ & $(x_1=x_2 \eor x_1=x_3 \eor x_2=x_3)\bigr]$\\
+três & $\forall x_1\forall x_2\forall x_3\forall x_4\bigl[(\atom{F}{x_1} \eand \atom{F}{x_2} \eand \atom{F}{x_3} \eand \atom{F}{x_4}) \eif {}$\\
+& $(x_1=x_2 \eor x_1=x_3 \eor x_1=x_4 \eor {}$\\
+& $x_2=x_3 \eor x_2=x_4 \eor x_3=x_4)\bigr]$\\
+$n$ & $\forall x_1\ldots\forall x_{n+1}
+\bigl[(\atom{F}{x_1} \eand \ldots \eand \atom{F}{x_{n+1}}) \eif {}$\\
+& $(x_1=x_2 \eor \ldots \eor x_n=x_{n+1})\bigr]$ 
+\end{tabular*}
+
+
+\subsection*{Há exatamente \blank\ $F$(s).}
+\label{summary.exactly}
+
+%One way to say `there are exactly $n$ $F$s' is to conjoin two of the symbolizations above and say `there are at least $n$ $F$s and there are at most $n$ $F$s.' The following equivalent formulas are shorter:
+Uma maneira de dizer `há exatamente $n$ $F$(s)' é juntar as duas simbolizações acima e dizer `há pelo menos $n$ $F$(s) e há no máximo $n$ $F$(s)'. As seguintes fórmulas equivalentes são mais curtas: 
+\begin{tabular*}{\textwidth}{rl}
+zero & $\forall x\,\enot \atom{F}{x}$\\
+um & $\exists x\bigl[\atom{F}{x} \eand \forall y(\atom{F}{y} \eif x = y)\bigr]$\\
+dois & $\exists x_1\exists x_2\bigl[\atom{F}{x_1} \eand \atom{F}{x_2} \eand {}$\\
+& $\enot x_1 = x_2 \eand \forall y\bigl(\atom{F}{y} \eif (y= x_1 \eor y = x_2)\bigr) \bigr]$\\
+três & $\exists x_1\exists x_2\exists x_3\bigl[\atom{F}{x_1} \eand \atom{F}{x_2} \eand \atom{F}{x_3} \eand {}$\\
+& $\enot x_1 =  x_2 \eand \enot  x_1 = x_3 \eand \enot x_2 = x_3 \eand {}$\\
+& $\forall y\bigl(\atom{F}{y} \eif (y = x_1 \eor y = x_2 \eor y =  x_3)\bigr) \bigr]$\\
+$n$ & $\exists x_1\ldots\exists x_n\bigl[\atom{F}{x_1} \eand\ldots\eand \atom{F}{x_n}  \eand {}$\\
+&$ \enot x_1 = x_2 \eand\ldots\eand \enot x_{n-1}= x_n \eand \phantom{.}$\\
+& $\forall y\bigl(\atom{F}{y} \eif (y= x_1 \eor \ldots \eor y= x_n)\bigr)\bigr]$ 
+%\item[one] $\exists x\forall y\bigl[\atom{F}{x} \eand (\atom{F}{y} \eif y = x)\bigr]$
+%\item[two] $\exists x\exists y\forall z\Bigl(\atom{F}{x} \eand \atom{F}{y} \eand \bigl[\atom{F}{z} \eif (z=x \eor z=y)\bigr] \eand x \neq y\Bigr)$
+%\item[three] $\exists x_1\exists x_2\exists x_3\forall y\Bigl(\atom{F}{x_1} \eand \atom{F}{x_2} \eand \atom{F}{x_3} \eand [\atom{F}{y} \eif (y=x_1 \eor y=x_2 \eor y=x_3)] \eand x_1 \neq x_2 \eand x_1 \neq x_3 \eand x_2 \neq x_3\Bigr)$
+%\item[n] $\exists x_1\cdots\exists x_n\forall y\Bigl(\atom{F}{x_1} \eand \cdots \eand \atom{F}{x_n} \eand \bigl[\atom{F}{y} \eif (y=x_1 \eor \cdots \eor y=x_n)\bigr] \eand x_1 \neq x_2 \eand\cdots\eand x_{n-1}\neq x_n\Bigr)$ 
+\end{tabular*}
+
+
+\label{ProofRules}
+\newpage\section{Regras de dedução básicas para LVF}
+\renewenvironment{proof}
+	{\noindent\par\noindent\small$\begin{nd}}
+	{\end{nd}$\noindent\normalsize\ignorespacesafterend}
+
+%{\LARGE \textbf{Basic Rules of Proof}}
+\begin{multicols}{2}
+\subsection*{Reiteração}
+
+\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[\ ]{c}{\meta{A}} \by{R}{a}
+\end{proof}
+
+\subsection*{Cconjunção}
+
+\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[n]{b}{\meta{B}}
+	\have[\ ]{c}{\meta{A}\eand\meta{B}} \ai{a, b}
+
+	\have[m]{ab}{\meta{A}\eand\meta{B}}
+\\	\have[\ ]{a}{\meta{A}} \ae{ab}
+
+	\have[m]{ab}{\meta{A}\eand\meta{B}}
+\\	\have[\ ]{b}{\meta{B}} \ae{ab}
+\end{proof}
+
+\subsection*{Condicional}
+
+\begin{proof}
+	\open
+		\hypo[i]{a}{\meta{A}}
+		\have[j]{b}{\meta{B}}
+	\close
+	\have[\ ]{ab}{\meta{A}\eif\meta{B}}\ci{a-b}
+
+	\have[m]{ab}{\meta{A}\eif\meta{B}}
+\\	\have[n]{a}{\meta{A}}
+	\have[\ ]{b}{\meta{B}} \ce{ab,a}
+\end{proof}
+
+\subsection*{Negação}
+
+\begin{proof}
+\open
+	\hypo[i]{a}{\meta{A}}
+	\have[j]{nb}{\ered}
+\close
+\have[\ ]{na}{\enot\meta{A}}\ni{a-nb}
+
+\have[m]{na}{\enot\meta{A}}
+\\ \have[n]{a}{\meta{A}}
+\have[ ]{bot}{\ered}\ri{na, a}
+\end{proof}
+
+\subsection*{Prova indireta}
+
+\begin{proof}
+\open
+	\hypo[i]{a}{\enot\meta{A}}
+	\have[j]{nb}{\ered}
+\close
+\have[\ ]{na}{\meta{A}}\ip{a-nb}
+\end{proof}
+
+
+\subsection*{Explosão}
+
+\begin{proof}
+\have[m]{bot}{\ered}
+\\\have[ ]{}{\meta{A}}\re{bot}
+\end{proof}
+
+\subsection*{Disjunção}
+
+\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[\ ]{ab}{\meta{A}\eor\meta{B}}\oi{a}
+
+	\have[m]{a}{\meta{A}}
+\\	\have[\ ]{ba}{\meta{B}\eor\meta{A}}\oi{a}
+
+	\have[m]{ab}{\meta{A}\eor\meta{B}}
+\\	\open
+		\hypo[i]{a}{\meta{A}}
+		\have[j]{c1}{\meta{C}}
+	\close
+	\open
+		\hypo[k]{b}{\meta{B}}
+		\have[l]{c2}{\meta{C}}
+	\close
+	\have[\ ]{c}{\meta{C}} \oe{ab,a-c1, b-c2}
+\end{proof}
+
+\subsection*{Bicondicional}
+
+\begin{proof}
+	\open
+		\hypo[i]{a1}{\meta{A}} 
+		\have[j]{b1}{\meta{B}}
+	\close
+	\open
+		\hypo[k]{b2}{\meta{B}}
+		\have[l]{a2}{\meta{A}}
+	\close
+	\have[\ ]{ab}{\meta{A}\eiff\meta{B}}\bi{a1-b1,b2-a2}
+
+	\have[m]{ab}{\meta{A}\eiff\meta{B}}
+\\	\have[n]{a}{\meta{A}}
+	\have[\ ]{b}{\meta{B}} \be{ab,a}
+
+	\have[m]{ab}{\meta{A}\eiff\meta{B}}
+\\	\have[n]{a}{\meta{B}}
+	\have[\ ]{b}{\meta{A}} \be{ab,a}
+\end{proof}
+
+\end{multicols}
+
+\newpage
+\section{Regras derivadas para LVF}
+\begin{multicols}{2}
+\subsection*{Silogismo disjuntivo}
+\begin{proof}
+	\have[m]{ab}{\meta{A} \eor \meta{B}}
+	\have[n]{nb}{\enot \meta{A}}
+	\have[\ ]{con}{\meta{B}}\by{DS}{ab, nb}
+
+	\have[m]{ab}{\meta{A} \eor \meta{B}}
+\\	\have[n]{nb}{\enot \meta{B}}
+	\have[\ ]{con}{\meta{A}}\by{DS}{ab, nb}
+\end{proof}
+
+\subsection*{Modus Tollens}
+
+\begin{proof}
+	\have[m]{ab}{\meta{A}\eif\meta{B}}
+	\have[n]{a}{\enot\meta{B}}
+	\have[\ ]{b}{\enot\meta{A}} \by{MT}{ab,a}
+\end{proof}
+
+\subsection*{Eliminação da dupla degação}
+	\begin{proof}
+		\have[m]{dna}{\enot \enot \meta{A}}
+		\have[ ]{a}{\meta{A}}\dne{dna}
+	\end{proof}
+
+
+\subsection*{Terceiro excluído}
+	\begin{proof}
+		\open
+			\hypo[i]{a}{\meta{A}}
+			\have[j]{c1}{\meta{B}}
+		\close
+		\open
+			\hypo[k]{b}{\enot\meta{A}}
+			\have[l]{c2}{\meta{B}}
+		\close
+		\have[\ ]{ab}{\meta{B}}\tnd{a-c1,b-c2}
+	\end{proof}
+
+%
+%\subsection*{Hypothetical Syllogism}
+%
+%\begin{proof}
+%	\have[m]{ab}{\meta{A}\eif\meta{B}}
+%	\have[n]{bc}{\meta{B}\eif\meta{C}}
+%	\have[\ ]{ac}{\meta{A}\eif\meta{C}}\by{HS}{ab,bc}
+%\end{proof}
+
+\subsection*{Regras de De Morgan}
+\begin{proof}
+	\have[m]{ab}{\enot (\meta{A} \eor \meta{B})}
+	\have[\ ]{dm}{\enot \meta{A} \eand \enot \meta{B}}\dem{ab}
+
+	\have[m]{ab}{\enot \meta{A} \eand \enot \meta{B}}
+\\	\have[\ ]{dm}{\enot (\meta{A} \eor \meta{B})}\dem{ab}
+
+	\have[m]{ab}{\enot (\meta{A} \eand \meta{B})}
+\\	\have[\ ]{dm}{\enot \meta{A} \eor \enot \meta{B}}\dem{ab}
+
+	\have[m]{ab}{\enot \meta{A} \eor \enot \meta{B}}
+\\	\have[\ ]{dm}{\enot (\meta{A} \eand \meta{B})}\dem{ab}
+\end{proof}
+\end{multicols}
+
+\newpage
+
+\section{Regras de dedução básica para LPO}
+
+\begin{multicols}{2}
+\subsection*{Eliminação do universal}
+
+\begin{proof}
+	\have[m]{a}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+	\have[\ ]{c}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)} \Ae{a}
+\end{proof}
+
+\subsection*{Introdução do universal}
+
+\begin{proof}
+	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+	\have[\ ]{c}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)} \Ai{a}
+\end{proof}
+
+\medskip\begin{raggedright}
+\meta{c} não pode ocorrer em nenhuma undischarged assumption<<obs>>
+
+\meta{x} não pode ocorrer em\\ $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$
+\end{raggedright}
+
+\subsection*{Introdução do existencial}
+
+\begin{proof}
+	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+	\have[\ ]{c}{\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{c}\ldots)}\Ei{a}
+\end{proof}
+
+\medskip\begin{raggedright}
+\noindent \meta{x} não pode ocorrer em\\ $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$
+\end{raggedright}
+%\noindent You can replace one or more instance of \meta{c} with \meta{x}.
+
+\subsection*{Eliminação do existencial}
+
+\begin{proof}
+	\have[m]{a}{\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+	\open	
+		\hypo[i]{b}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+		\have[j]{c}{\meta{B}}
+	\close
+	\have[\ ]{d}{\meta{B}}\Ee{a,b-c}
+\end{proof}
+
+\medskip\begin{raggedright}
+\noindent \meta{c} não pode ocorrer em nenhuma undischarged assumption<<obs>>, em $\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$, ou em \meta{B}\end{raggedright}\vfill\columnbreak
+
+\end{multicols}
+
+\subsection*{Introdução da identidade}
+
+\begin{proof}
+	\have[\ \,\,\,]{x}{\meta{c}=\meta{c}} \by{=I}{}
+\end{proof}
+
+
+\subsection*{Eliminação da identidade}
+
+\begin{multicols}{2}
+\begin{proof}
+	\have[m]{e}{\meta{a}=\meta{b}}
+	\have[n]{a}{\meta{A}(\ldots \meta{a} \ldots \meta{a}\ldots)}
+	\have[\ ]{ea1}{\meta{A}(\ldots \meta{b} \ldots \meta{a}\ldots)} \by{=E}{e,a}
+\end{proof}
+\begin{proof}
+	\have[m]{e}{\meta{a}=\meta{b}}
+	\have[n]{a}{\meta{A}(\ldots \meta{b} \ldots \meta{b}\ldots)}
+	\have[\ ]{ea2}{\meta{A}(\ldots \meta{a} \ldots \meta{b}\ldots)} \by{=E}{e,a}
+\end{proof}
+\end{multicols}
+
+\begin{minipage}{\textwidth} % hack to keep section header with table
+\section{Regras derivadas para LPO}
+
+\begin{multicols}{2}
+\begin{proof}
+	\have[m]{ab}{\forall \meta{x}\enot \meta{A}}
+	\have[\ ]{ac}{\enot \exists \meta{x} \meta{A}}\cq{m}
+
+	\have[m]{ab}{\enot \exists \meta{x}  \meta{A}}
+\\	\have[\ ]{ac}{\forall \meta{x}\enot\meta{A}}\cq{m}
+\end{proof}
+\begin{proof}
+	\have[m]{ab}{\exists \meta{x}\enot\meta{A}}
+	\have[\ ]{ac}{\enot \forall \meta{x} \meta{A}}\cq{m}
+
+	\have[m]{ab}{\enot \forall \meta{x}  \meta{A}}
+\\	\have[\ ]{ac}{\exists \meta{x}\enot \meta{A}}\cq{m}
+\end{proof}
+\end{multicols}
+\end{minipage}

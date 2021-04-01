@@ -1,0 +1,40 @@
+\frontmatter
+
+\include{forallx-yyc-frontmatter}
+
+\pagestyle{leadbeater}
+\currentpdfbookmark{Table of Contents}{name}
+\tableofcontents*
+
+\include{forallx-yyc-preface}   
+
+\mainmatter
+
+\include{forallx-yyc-what}
+\include{forallx-yyc-tfl}
+\include{forallx-yyc-truthtables}
+\include{forallx-yyc-fol}
+\include{forallx-yyc-interpretations}
+\include{forallx-yyc-prooftfl}
+\include{forallx-yyc-prooffol}
+%\include{forallx-yyc-ml}
+%\include{forallx-yyc-metatheory}
+
+\renewcommand\appendixtocname{Apêndices} % Altera "Appendices" (default) para "Apêndice" no sumário
+\appendix
+\part*{Apêndices}
+\addcontentsline{toc}{part}{Apêndices}
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+
+\input{forallx-yyc-notation} % RZ for some reason, with an \include here the TOC gets messed up
+\include{forallx-yyc-alternatives}
+\include{forallx-yyc-quickreference}
+
+\backmatter
+
+\glsaddall
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+%\printglossary[type=\acronymtype]
+\printglossaries
+\include{forallx-yyc-backmatter}
+

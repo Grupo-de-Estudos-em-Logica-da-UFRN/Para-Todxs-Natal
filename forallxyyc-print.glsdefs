@@ -1,0 +1,660 @@
+\ifglsentryexists{existential quantifier}{}%
+{%
+\gls@defglossaryentry{existential quantifier}%
+{%
+name={existential quantifier},%
+sort={existential quantifier},%
+type={main},%
+first={existential quantifier},%
+firstplural={existential quantifiers},%
+text={existential quantifier},%
+plural={existential quantifiers},%
+description={The symbol $\exists $ of FOL used to symbolize existence; $\exists x\, \atom {F}{x}$ is true iff at least one member of the domain is~$F$},%
+descriptionplural={The symbol $\exists $ of FOL used to symbolize existence; $\exists x\, \atom {F}{x}$ is true iff at least one member of the domain is~$F$},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{domain}{}%
+{%
+\gls@defglossaryentry{domain}%
+{%
+name={domain},%
+sort={domain},%
+type={main},%
+first={domain},%
+firstplural={domains},%
+text={domain},%
+plural={domains},%
+description={The collection of objects assumed for a symbolization in FOL, or that gives the range of the quantifiers in an \gls {interpretation}},%
+descriptionplural={The collection of objects assumed for a symbolization in FOL, or that gives the range of the quantifiers in an \gls {interpretation}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{empty predicate}{}%
+{%
+\gls@defglossaryentry{empty predicate}%
+{%
+name={empty predicate},%
+sort={empty predicate},%
+type={main},%
+first={empty predicate},%
+firstplural={empty predicates},%
+text={empty predicate},%
+plural={empty predicates},%
+description={A \gls {predicate} that applies to no object in the \gls {domain}},%
+descriptionplural={A \gls {predicate} that applies to no object in the \gls {domain}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{term}{}%
+{%
+\gls@defglossaryentry{term}%
+{%
+name={term},%
+sort={term},%
+type={main},%
+first={term},%
+firstplural={terms},%
+text={term},%
+plural={terms},%
+description={Either a \gls {name} or a \gls {variable}},%
+descriptionplural={Either a \gls {name} or a \gls {variable}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{formula}{}%
+{%
+\gls@defglossaryentry{formula}%
+{%
+name={formula},%
+sort={formula},%
+type={main},%
+first={formula},%
+firstplural={formulas},%
+text={formula},%
+plural={formulas},%
+description={An expression of FOL built according to the inductive rules in \S \ref {s:TermsFormulas}},%
+descriptionplural={An expression of FOL built according to the inductive rules in \S \ref {s:TermsFormulas}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{main logical operator}{}%
+{%
+\gls@defglossaryentry{main logical operator}%
+{%
+name={main connective},%
+sort={main connective},%
+type={main},%
+first={main connective},%
+firstplural={main connectives},%
+text={main connective},%
+plural={main connectives},%
+description={The last connective that you add when you assemble a sentence using the inductive definition},%
+descriptionplural={The last connective that you add when you assemble a sentence using the inductive definition},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{scope}{}%
+{%
+\gls@defglossaryentry{scope}%
+{%
+name={scope},%
+sort={scope},%
+type={main},%
+first={scope},%
+firstplural={scopes},%
+text={scope},%
+plural={scopes},%
+description={the subformula of a \gls {sentence of TFL} or a \gls {formula} of FOL for which the \gls {main logical operator} is the operator},%
+descriptionplural={the subformula of a \gls {sentence of TFL} or a \gls {formula} of FOL for which the \gls {main logical operator} is the operator},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bound variable}{}%
+{%
+\gls@defglossaryentry{bound variable}%
+{%
+name={bound variable},%
+sort={bound variable},%
+type={main},%
+first={bound variable},%
+firstplural={bound variables},%
+text={bound variable},%
+plural={bound variables},%
+description={An occurrence of a variable in a \gls {formula} which is in the scope of a quantifier followed by the same variable},%
+descriptionplural={An occurrence of a variable in a \gls {formula} which is in the scope of a quantifier followed by the same variable},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{free variable}{}%
+{%
+\gls@defglossaryentry{free variable}%
+{%
+name={free variable},%
+sort={free variable},%
+type={main},%
+first={free variable},%
+firstplural={free variables},%
+text={free variable},%
+plural={free variables},%
+description={An occurrence of a variable in a \gls {formula} which is not a \gls {bound variable}},%
+descriptionplural={An occurrence of a variable in a \gls {formula} which is not a \gls {bound variable}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sentence of FOL}{}%
+{%
+\gls@defglossaryentry{sentence of FOL}%
+{%
+name={sentence (of FOL)},%
+sort={sentence (of FOL)},%
+type={main},%
+first={sentence of FOL},%
+firstplural={sentence of FOLs},%
+text={sentence of FOL},%
+plural={sentence of FOLs},%
+description={A \gls {formula} of FOL which has no \glspl {bound variable}},%
+descriptionplural={A \gls {formula} of FOL which has no \glspl {bound variable}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{interpretation}{}%
+{%
+\gls@defglossaryentry{interpretation}%
+{%
+name={interpretation},%
+sort={interpretation},%
+type={main},%
+first={interpretation},%
+firstplural={interpretations},%
+text={interpretation},%
+plural={interpretations},%
+description={A specification of a \gls {domain} together with the objects the \glspl {name} pick out and which objects the \glspl {predicate} are true of},%
+descriptionplural={A specification of a \gls {domain} together with the objects the \glspl {name} pick out and which objects the \glspl {predicate} are true of},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{substitution instance}{}%
+{%
+\gls@defglossaryentry{substitution instance}%
+{%
+name={substitution instance},%
+sort={substitution instance},%
+type={main},%
+first={substitution instance},%
+firstplural={substitution instances},%
+text={substitution instance},%
+plural={substitution instances},%
+description={The result of replacing every free occurrence of a \gls {variable} in a \gls {formula} with a \gls {name}},%
+descriptionplural={The result of replacing every free occurrence of a \gls {variable} in a \gls {formula} with a \gls {name}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{validity}{}%
+{%
+\gls@defglossaryentry{validity}%
+{%
+name={validity},%
+sort={validity},%
+type={main},%
+first={validity},%
+firstplural={validitys},%
+text={validity},%
+plural={validitys},%
+description={A \gls {sentence of FOL} that is true in every \gls {interpretation}},%
+descriptionplural={A \gls {sentence of FOL} that is true in every \gls {interpretation}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{contradiction of FOL}{}%
+{%
+\gls@defglossaryentry{contradiction of FOL}%
+{%
+name={contradiction (of FOL)},%
+sort={contradiction (of FOL)},%
+type={main},%
+first={contradiction},%
+firstplural={contradictions},%
+text={contradiction},%
+plural={contradictions},%
+description={A \gls {sentence of FOL} that is false in every \gls {interpretation}},%
+descriptionplural={A \gls {sentence of FOL} that is false in every \gls {interpretation}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{valid in FOL}{}%
+{%
+\gls@defglossaryentry{valid in FOL}%
+{%
+name={validity of arguments (in FOL)},%
+sort={validity of arguments (in FOL)},%
+type={main},%
+first={valid},%
+firstplural={valids},%
+text={valid},%
+plural={valids},%
+description={A property held by arguments; an argument is valid if and only if no \gls {interpretation} makes all premises true and the conclusion false},%
+descriptionplural={A property held by arguments; an argument is valid if and only if no \gls {interpretation} makes all premises true and the conclusion false},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{equivalent in FOL}{}%
+{%
+\gls@defglossaryentry{equivalent in FOL}%
+{%
+name={equivalence (in FOL)},%
+sort={equivalence (in FOL)},%
+type={main},%
+first={equivalent},%
+firstplural={equivalents},%
+text={equivalent},%
+plural={equivalents},%
+description={A property held by pairs of \glspl {sentence of FOL} if and only if the sentences have the same truth value in every \gls {interpretation}},%
+descriptionplural={A property held by pairs of \glspl {sentence of FOL} if and only if the sentences have the same truth value in every \gls {interpretation}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{satisfiable in FOL}{}%
+{%
+\gls@defglossaryentry{satisfiable in FOL}%
+{%
+name={satisfiability (in FOL)},%
+sort={satisfiability (in FOL)},%
+type={main},%
+first={jointly satisfiable},%
+firstplural={jointly satisfiables},%
+text={jointly satisfiable},%
+plural={jointly satisfiables},%
+description={A property held by \glspl {sentence of FOL} if and only if some \gls {interpretation} makes all the sentences true},%
+descriptionplural={A property held by \glspl {sentence of FOL} if and only if some \gls {interpretation} makes all the sentences true},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{teorema}{}%
+{%
+\gls@defglossaryentry{teorema}%
+{%
+name={teorema},%
+sort={teorema},%
+type={main},%
+first={teorema},%
+firstplural={teoremas},%
+text={teorema},%
+plural={teoremas},%
+description={Uma senten\c ca que \'e provada sem nenhuma premissa},%
+descriptionplural={Uma senten\c ca que \'e provada sem nenhuma premissa},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{dedutivamente equivalente}{}%
+{%
+\gls@defglossaryentry{dedutivamente equivalente}%
+{%
+name={dedutivamente equivalente},%
+sort={dedutivamente equivalente},%
+type={main},%
+first={dedutivamente equivalente},%
+firstplural={dedutivamente equivalentes},%
+text={dedutivamente equivalente},%
+plural={dedutivamente equivalentes},%
+description={Duas senten\c cas A e B s\~ao dedutivamente equivalentes se e somente se cada uma puder ser provada a partir da outra.},%
+descriptionplural={Duas senten\c cas A e B s\~ao dedutivamente equivalentes se e somente se cada uma puder ser provada a partir da outra.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{dedutivamente inconsistente}{}%
+{%
+\gls@defglossaryentry{dedutivamente inconsistente}%
+{%
+name={dedutivamente inconsistente},%
+sort={dedutivamente inconsistente},%
+type={main},%
+first={dedutivamente inconsistente},%
+firstplural={dedutivamente inconsistentes},%
+text={dedutivamente inconsistente},%
+plural={dedutivamente inconsistentes},%
+description={Senten\c cas s\~ao dedutivamente inconsistentes se e somente se uma contradi\c c\~ao puder ser provada a partir delas},%
+descriptionplural={Senten\c cas s\~ao dedutivamente inconsistentes se e somente se uma contradi\c c\~ao puder ser provada a partir delas},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{correcao}{}%
+{%
+\gls@defglossaryentry{correcao}%
+{%
+name={correção},%
+sort={correção},%
+type={main},%
+first={corre\IeC {\c c}\IeC {\~a}o},%
+firstplural={corre\IeC {\c c}\IeC {\~a}os},%
+text={corre\IeC {\c c}\IeC {\~a}o},%
+plural={corre\IeC {\c c}\IeC {\~a}os},%
+description={Propriedade possuída pelos argumentos que são válidos e têm todas as premissas verdadeiras.},%
+descriptionplural={Propriedade possuída pelos argumentos que são válidos e têm todas as premissas verdadeiras.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{completude}{}%
+{%
+\gls@defglossaryentry{completude}%
+{%
+name={completude},%
+sort={completude},%
+type={main},%
+first={completude},%
+firstplural={completudes},%
+text={completude},%
+plural={completudes},%
+description={A property held by logical systems if and only if $\entails $ implies $\proves $},%
+descriptionplural={A property held by logical systems if and only if $\entails $ implies $\proves $},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

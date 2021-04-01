@@ -1,0 +1,864 @@
+%!TEX root = forallxyyc.tex
+\part{Dedu\c c\~ao natural para a LPO}
+\label{ch.NDFOL}
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+
+ %%%%%% -----------------------  CAP   32   -------------------------------------------------- 
+\chapter{Regras b\'asicas da LPO}\label{s:BasicFOL}
+
+A linguagem da LPO faz uso de todos os conectivos da LVF  e no \^ambito da teoria da prova n\~ao seria diferente.  No sistema de provas da LPO usaremos todas  as regras b\'asicas e derivadas da LVF,  assim como o s\'imbolo `$\proves$' e todas as no\c c\~oes de teoria da prova introduzidas  na Parte~\ref{ch.NDTFL}.  Entretanto,  precisaremos de algumas novas regras b\'asicas para governar os quantificadores e o s\'imbolo de identidade. 
+
+%%%%%% -----------------------  32.1   Elimina\c c\~ao universal  -----------
+\section{Elimina\c c\~ao universal}
+
+A partir da afirma\c c\~ao de que tudo \'e~$F$, voc\^e pode deduzir que qualquer coisa particular \'e~$F$. O que voc\^e nomear tem a propriedade~$F$.   Vejamos um exemplo:
+\begin{fitchproof}
+	\hypo{a}{\forall x\,\atom{R}{x,x,d}}
+	\have{c}{\atom{R}{a,a,d}} \Ae{a}
+\end{fitchproof}
+ Obtivemos a linha 2 abandonando  o quantificador universal e substituindo cada inst\^ancia de `$x$'  por `$a$'.  Igualmente, o seguinte deveria ser permitido:
+\begin{fitchproof}
+	\hypo{a}{\forall x\,\atom{R}{x,x,d}}
+	\have{c}{\atom{R}{d,d,d}} \Ae{a}
+\end{fitchproof}
+
+ 
+Neste caso, obtivemos a linha  2 tamb\'em abandonando o quantificador universal, mas substituindo todas as inst\^ancias de  `$x$' por  `$d$'. Poder\'iamos ter feito o mesmo com qualquer outro nome que quis\'essemos.
+
+Aqui est\'a uma ilustra\c c\~ao da regra elimina\c c\~ao universal ($\forall$E):
+\factoidbox{
+\begin{fitchproof}
+	\have[m]{a}{\forall \meta{x}\,\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+	\have[\ ]{c}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)} \Ae{a}
+\end{fitchproof}}
+Essa nota\c c\~ao foi introduzida no cap\'itulo \ref{s:TruthFOL}. O importante \'e que voc\^e pode obter qualquer \emph{inst\^ancia de substitui\c c\~ao} de uma f\'ormula quantificada universalmente: substitua todas as inst\^ancias da vari\'avel quantificada por qualquer nome que desejar. 
+
+Devemos enfatizar que (como em todas as regras de elimina\c c\~ao), voc\^e s\'o pode aplicar a regra $\forall$E quando o quantificador universal for o operador l\'ogico principal. Portanto, o seguinte \'e \emph{proibido}:
+\begin{fitchproof}
+	\hypo{a}{\forall x\,\atom{B}{x} \eif \atom{B}{k}}
+	\have{c}{\atom{B}{b} \eif \atom{B}{k}}\by{tentativa impr\'opria de invocar  $\forall$E}{a}
+\end{fitchproof}
+Isso \'e ileg\'itimo, pois `$\forall x$' n\~ao \'e o  operador l\'ogico principal da linha ~1. (Se voc\^e precisar relembrar por que esse tipo de infer\^encia \'e impr\'opria, releia o  cap\'itulo \ref{s:MoreMonadic}.)
+
+%%%%%% -----------------------  32.2    Introdu\c c\~ao existencial
+
+\section{Introdu\c c\~ao existencial}
+A partir da afirma\c c\~ao de que algo em particular \'e~$F$, voc\^e pode deduzir que algo \'e~$F$. Ent\~ao, devemos permitir:
+\begin{fitchproof}
+	\hypo{a}{\atom{R}{a,a,d}}
+	\have{b}{\exists x\, \atom{R}{a,a,x}} \Ei{a}
+\end{fitchproof}
+ 
+Substitu\'imos o nome `$d$' pela vari\'avel `$x$',  e  quantificamos existencialmente. Da mesma forma,  poder\'iamos ter feito:
+\begin{fitchproof}
+	\hypo{a}{\atom{R}{a,a,d}}
+	\have{c}{\exists x\, \atom{R}{x,x,d}} \Ei{a}
+\end{fitchproof}
+Aqui,  substitu\'imos as duas inst\^ancias do nome `$a$' por uma vari\'avel e depois generalizamos existencialmente. Mas n\~ao precisamos substituir  \emph{todas}  as inst\^ancias de um nome por  uma vari\'avel.  Vejamos outro exemplo: se Narciso ama ele pr\'opio, ent\~ao h\'a algu\'em que ama Narciso. Assim, temos:
+\begin{fitchproof}
+	\hypo{a}{\atom{S}{a,a}}
+	\have{d}{\exists x\, \atom{S}{x,a}} \Ei{a}
+\end{fitchproof}
+Nese caso, substitu\'imos \emph{uma} inst\^ancia do nome `$a$' por uma vari\'avel   e  fizemos uma  generaliz\c c\~ao  existencial. Essas observa\c c\~oes motivam nossa regra de introdu\c c\~ao existencial,  embora  precisaremos introduzir ainda uma nova nota\c c\~ao  para melhor explic\'a-la.
+
+Escrevemos  `$\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$' para enfatizar que uma senten\c ca
+ $\meta{A}$ cont\'em o nome $\meta{c}$,  e escreveremos `$\meta{A}(\ldots \meta{x} \ldots \meta{c}\ldots)$' para indicar qualquer f\'ormula obtida substituindo algumas ou todas as inst\^ancias do nome  \meta{c} pela vari\'avel \meta{x}.  Assim, nossa regra de introdu\c c\~ao existencial \'e:
+ 
+\factoidbox{
+\begin{fitchproof}
+	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+	\have[\ ]{c}{\exists \meta{x}\,\meta{A}(\ldots \meta{x} \ldots \meta{c}\ldots)} \Ei{a}
+\end{fitchproof}
+\meta{x} n\~ao deve ocorrer em $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$}
+A restri\c c\~ao \'e inclu\'ida para garantir que qualquer aplica\c c\~ao da regra produza uma senten\c ca da LPO. Assim, \'e permitido o seguinte:
+
+\begin{fitchproof}
+	\hypo{a}{\atom{R}{a,a,d}}
+	\have{d}{\exists x\, \atom{R}{x,a,d}} \Ei{a}
+	\have{e}{\exists y \exists x\, \atom{R}{x,y,d}} \Ei{d}
+\end{fitchproof}
+Mas o seguinte  n\~ao \'e permito:
+\begin{fitchproof}
+	\hypo{a}{\atom{R}{a,a,d}}
+	\have{d}{\exists x\, \atom{R}{x,a,d}} \Ei{a}
+	\have{e}{\exists x\, \exists x\, \atom{R}{x,x,d}}\by{tentativa impr\'opria de invocar $\exists$I}{d}
+\end{fitchproof}
+uma vez que a express\~ao da linha~3 n\~ao \'e uma senten\c ca da LPO, pois 
+temos aqui um choque de vari\'aveis.
+
+%%%%%% ----------------------- 32.3 Dom\'inios vazios   --------------------
+\section{Dom\'inios vazios}
+A prova a seguir combina nossas duas novas regras para quantificadores:
+	\begin{fitchproof}
+		\hypo{a}{\forall x\, \atom{F}{x}}
+		\have{in}{\atom{F}{a}}\Ae{a}
+		\have{e}{\exists x\, \atom{F}{x}}\Ei{in}
+	\end{fitchproof}
+Isso seria uma prova ruim? Se existe alguma coisa afinal de contas, certamente podemos inferir que algo \'e~$F$, pelo fato de que tudo \'e~$F$. Por\'em, e se \emph{nada} existir? Ent\~ao, com certeza, \'e vacuamente verdade que tudo \'e~$F$. No entanto, n\~ao se segue que algo seja~$F$, pois n\~ao h\'a nada para \emph{ser}~$F$. Portanto, se afirmarmos que, apenas por uma quest\~ao de l\'ogica  `$\exists x\,\atom{F}{x}$' segue de `$\forall x\,\atom{F}{x}$', ent\~ao estar\'iamos reivindicando que,   por uma quest\~ao de \emph{l\'ogica apenas}, h\'a algo em vez de nada. Isso pode nos parecer um pouco estranho.
+
+Na verdade,  j\'a estamos comprometidos com essa estranheza. No cap\'itulo \ref{s:FOLBuildingBlocks},  estipulamos que os dom\'inios na LPO devem ter pelo menos um membro. Definimos a validade    (da LPO)  como uma senten\c ca verdadeira em toda interpreta\c c\~ao. Como `$\exists x\, x=x$' ser\'a verdadeiro em toda interpreta\c c\~ao, isso \emph{tamb\'em} est\'a sob a condi\c c\~ao, por quest\~ao de l\'ogica,  que exista algo em vez de nada.
+
+ 
+Est\'a longe de ficar claro que a l\'ogica deveria nos dizer que deve haver algo em vez de nada. Entretanto, veremos que pagamos um pre\c co muito alto se recusarmos essa condi\c c\~ao. Para esclarecer melhor um pouco isso,  analisemos as tr\^es seguinte asser\c c\~oes:
+	\begin{ebullet}
+		\item $\forall x\,\atom{F}{x} \proves \atom{F}{a}$:  aplica\c c\~ao da regra  $\forall$E.
+		\item $\atom{F}{a} \proves \exists x\,\atom{F}{x}$:  aplica\c c\~ao da regra $\exists$I.
+		\item A capacidade de copiar-e-colar provas juntas: pois, o racioc\'inio funciona colocando muitos pequenos passos juntos em grandes cadeias.
+	\end{ebullet}
+Se aceitamos esses tr\^es fatos, devemos aceitar tamb\'em $\forall xFx \proves \exists x\,\atom{F}{x}$.  Assim, o sistema de provas nos diz que h\'a algo em vez de nada. E se recusarmos isso, teremos que renunciar a uma dessas tr\^es asser\c c\~oes. 
+
+
+Antes de come\c carmos a pensar sobre o que renunciar, podemos perguntar \emph{o quanto} isso seria uma trapa\c ca. \'E verdade que pode dificultar o debate teol\'ogico sobre o porqu\^e de haver algo em vez de nada. Mas fora isso, nos daremos bem. Assim, talvez dev\^essemos considerar nosso sistema de provas (e LPO, de maneira mais geral) como tendo um alcance muito limitado. Se quisermos permitir a possibilidade de dom\'inios vazios, i.e., do \emph{nada}, teremos que encontrar um sistema de provas mais complexo. Mas enquanto nos contentarmos em ignorar essa possibilidade, nosso sistema de provas estar\'a perfeitamente em ordem. (Assim como a estipula\c c\~ao de que todo dom\'inio deve conter pelo menos um objeto.)
+
+%%%%%% -----------------------  32.4   Introdu\c c\~ao universal  ------------
+\section{Introdu\c c\~ao universal}
+Suponha que voc\^e tenha demonstrado que cada coisa em particular \'e~$F$ (e que n\~ao h\'a outras coisas a considerar). Assim, seria permitido afirmar que tudo \'e~$F$. Isso motivaria a seguinte regra de prova. Se voc\^e estabeleceu toda e qualquer inst\^ancia de substitui\c c\~ao de `$\forall x\,\atom{F}{x}$', ent\~ao voc\^e pode inferir `$\forall x\,\atom{F}{x}$'. 
+ 
+ Infelizmente, essa regra n\~ao estaria  totalmente apta para ser usada. Para estabelecer cada uma das inst\^ancias de substitui\c c\~ao, seria necess\'ario provar  `$\atom{F}{a}$', `$\atom{F}{b}$', \dots, `$\atom{F}{j_2}$', \dots, `$\atom{F}{r_{79002}}$', \ldots, e assim por diante. De fato, como existem muitos nomes na LPO, esse processo nunca chegaria ao fim. Portanto, nunca poder\'iamos aplicar essa regra. Precisamos ser um pouco mais espertos ao apresentar nossa regra para introduzir a quantifica\c c\~ao universal.
+ 
+Uma solu\c c\~ao ser\'a inspirada por:
+$$\forall x\,\atom{F}{x} \therefore \forall y\,\atom{F}{y}$$
+Este argumento deve \emph{obviamente} ser v\'alido. Afinal, a varia\c c\~ao alfab\'etica deve ser uma quest\~ao de gosto e  n\~ao de consequ\^encia l\'ogica. Mas como nosso sistema de prova  pode refletir isso? Suponha que comecemos uma prova assim:
+\begin{fitchproof}
+	\hypo{x}{\forall x\, \atom{F}{x}} 
+	\have{a}{\atom{F}{a}} \Ae{x}
+\end{fitchproof}
+  N\'os provamos `$\atom{F}{a}$'. E, \'e claro, nada nos impede de usar a mesma justificativa para provar `$\atom{F}{b}$', `$\atom{F}{c}$', \ldots, `$\atom{F}{j_2}$', \ldots, `$\atom{F}{r_{79002}}$, \dots, e assim por diante at\'e ficarmos sem espa\c co, tempo ou paci\^encia. Mas, refletindo sobre isso, vemos que existe uma maneira de provar $F\meta{c}$, para qualquer nome \meta{c}. E se pudermos fazer isso para   \emph{qualquer coisa}, certamente poderemos dizer que  `$F$' \'e verdadeiro para \emph{tudo}. Isso, portanto, nos justifica deduzir `$\forall y\,\atom{F}{y}$' como segue:
+\begin{fitchproof}
+	\hypo{x}{\forall x\, \atom{F}{x}}
+	\have{a}{\atom{F}{a}} \Ae{x}
+	\have{y}{\forall y\, \atom{F}{y}} \Ai{a}
+\end{fitchproof}
+O ponto crucial aqui \'e que `$a$' era apenas um nome   \emph{arbitr\'ario}. N\~ao havia nada de especial nisso - poder\'iamos ter escolhido qualquer outro nome - e ainda assim a prova seria boa. E esse ponto crucial motiva a regra de introdu\c c\~ao  universal ($\forall$I):
+
+ 
+\factoidbox{
+\begin{fitchproof}
+	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+	\have[\ ]{c}{\forall \meta{x}\,\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)} \Ai{a}
+\end{fitchproof}
+	\meta{c} n\~ao deve ocorrer em nenhuma suposi\c c\~ao n\~ao descartada\\ 
+	\meta{x} n\~ao deve ocorrer em $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$}
+ Um aspecto crucial dessa regra, por\'em, est\'a ligado \`a primeira restri\c c\~ao. Essa restri\c c\~ao garante que estamos sempre raciocinando em um n\'ivel suficientemente geral. 
+%\footnote{Recall from \S\ref{s:BasicTFL} that we are treating `$\ered$' as a canonical contradiction. But if it were the canonical contradiction as involving some \emph{constant}, it might interfere with the constraint mentioned here. To avoid such problems, we will treat `$\ered$' as a canonical contradiction \emph{that involves no particular names}.} 
+ Para ver a restri\c c\~ao em a\c c\~ao, considere este argumento terr\'ivel:
+	\begin{quote}
+		Todo mundo ama Jos\'e; portanto, todo mundo se ama.
+	\end{quote}
+Podemos simbolizar esse padr\~ao de infer\^encia, obviamente inv\'alido, como:
+$$\forall x\,\atom{A}{x,j} \therefore \forall x\,\atom{A}{x,x}$$
+Agora, suponha que tentamos oferecer uma prova para  justificar esse argumento.
+\begin{fitchproof}
+	\hypo{x}{\forall x\, \atom{A}{x,j}}
+	\have{a}{\atom{A}{j,j}} \Ae{x}
+	\have{y}{\forall x\, \atom{A}{x,x}} \by{tentativa impr\'opria de invocar $\forall$I}{a}
+\end{fitchproof}\noindent
+ Isso n\~ao \'e permitido, porque `$j$'  j\'a ocorreu em uma suposi\c c\~ao n\~ao descartada, ou seja, na linha~1.   O ponto crucial \'e que, se fizemos alguma suposi\c c\~ao sobre o objeto com o qual estamos trabalhando, n\~ao poder\'iamos aplicar a regra $\forall$I.
+
+Embora o nome  n\~ao possa ocorrer em nenhuma suposi\c c\~ao n\~ao \emph{descartada}, ele pode ocorrer em uma suposi\c c\~ao \emph{descartada}. Ou seja, pode ocorrer em uma subprova que j\'a fechamos. Por exemplo:
+
+\begin{fitchproof}
+	\open
+		\hypo{f1}{\atom{G}{d}}
+		\have{f2}{\atom{G}{d}}\by{R}{f1}
+	\close
+	\have{ff}{\atom{G}{d} \eif \atom{G}{d}}\ci{f1-f2}
+	\have{zz}{\forall z(\atom{G}{z} \eif \atom{G}{z})}\Ai{ff}
+\end{fitchproof}
+Isso nos diz que `$\forall z (\atom{G}{z} \eif \atom{G}{z})$' \'e um \emph{teorema}. E de fato \'e como deveria ser.
+
+Vamos enfatizar um \'ultimo ponto. De acordo com as conven\c c\~oes da Se\c c\~ao \ref{s:MainLogicalOperatorQuantifier}, o uso de $\forall$I exige que devemos substituir  \emph{todas} as inst\^ancias do nome \meta{c} em $\meta{A}(\ldots \meta{c}\ldots\meta{c}\ldots)$ pela vari\'avel \meta{x}. Se substituirmos apenas \emph{alguns} nomes e outros n\~ao, acabar\'iamos "provando" coisas tolas. Por exemplo, considere o argumento:
+	\begin{quote}
+	Todo mundo \'e t\~ao velho quanto si mesmo; ent\~ao todo mundo \'e t\~ao velho quanto Matusal\'em
+	\end{quote}
+Podemos simbolizar isso da seguinte maneira:
+$$\forall x\,\atom{O}{x,x} \therefore \forall x\,\atom{O}{x,d}$$
+Mas agora suponha que tentamos justificar esse terr\'ivel argumento da seguinte forma:
+\begin{fitchproof}
+	\hypo{x}{\forall x\, \atom{O}{x,x}}
+	\have{a}{\atom{O}{d,d}}\Ae{x}
+	\have{y}{\forall x\, \atom{O}{x,d}}\by{tentativa impr\'opria de invocar $\forall$I}{a}	
+\end{fitchproof}
+Felizmente, nossas regras n\~ao nos permitem fazer isso: a tentativa de prova \'e proibida, pois n\~ao  foi substitu\'ida   \emph{todas} as ocorr\^encias de `$d$' na linha~$2$ por um `$x$'.
+
+%%%%%% ----------------------- 32.5 Elimina\c c\~ao  existencial  -------------
+\section{Elimina\c c\~ao  existencial}
+Suponha que sabemos que \emph{algo} \'e~$F$. O problema \'e que simplesmente saber isso n\~ao nos diz qual \'e~$F$. Ent\~ao pareceria que a partir de `$\exists x\,\atom{F}{x}$' n\~ao podemos concluir imediatamente `$\atom{F}{a}$', `$\atom{F}{e_{23}}$', ou qualquer outra inst\^ancia de substitui\c c\~ao da senten\c ca. O que podemos fazer?
+ 
+ Suponha que sabemos que algo \'e~$F$ e que tudo que \'e~$F$ tamb\'em \'e~$G$. Na l\'ingua portuguesa, podemos raciocinar da seguinte maneira:
+	\begin{quote}
+		Como algo \'e~$F$, h\'a algo em particular que \'e um~$F$. N\~ao sabemos nada sobre isso, exceto que tem a propriedade~$F$.  Mas, por conveni\^encia, vamos cham\'a-lo de "Bento". Ent\~ao: Bento \'e~$F$. Como tudo o que \'e~$F$ \'e~$G$, segue-se que Bento \'e~$G$. Mas como Bento\'e~$G$, segue-se que algo \'e~$G$. Nesse raciocino,  nada dependeu  de qual objeto era. Neste exemplo, n\~ao precisamos saber quem exatamente Bento era.   Ent\~ao, algo \'e~$G$.
+	\end{quote}
+ Podemos tentar capturar esse padr\~ao de racioc\'inio em uma prova da seguinte maneira:
+\begin{fitchproof}
+	\hypo{es}{\exists x\, \atom{F}{x}}
+	\hypo{ast}{\forall x(\atom{F}{x} \eif \atom{G}{x})}
+	\open
+		\hypo{s}{\atom{F}{b}}
+		\have{st}{\atom{F}{b} \eif \atom{G}{b}}\Ae{ast}
+		\have{t}{\atom{G}{b}} \ce{st, s}
+		\have{et1}{\exists x\, \atom{G}{x}}\Ei{t}
+	\close
+	\have{et2}{\exists x\, \atom{G}{x}}\Ee{es,s-et1}
+\end{fitchproof}\noindent
+Detalhando isso, come\c camos escrevendo nossas suposi\c c\~oes. Na linha~$3$, fizemos uma suposi\c c\~ao adicional: `$\atom{F}{b}$'. Essa foi apenas uma inst\^ancia de substitui\c c\~ao de `$\exists x\,\atom{F}{x}$'. A partir dessa suposi\c c\~ao, obtivemos `$\exists x\,\atom{G}{x}$'. Observe que n\~ao fizemos suposi\c c\~oes \emph{especiais} sobre o objeto nomeado por `$b$'; assumimos \emph{somente} que satisfaz `$\atom{F}{x}$'. Portanto, nada depende de qual objeto \'e. E a linha~$1$ nos disse que \emph{algo} satisfaz `$\atom{F}{x}$', ent\~ao nosso padr\~ao de racioc\'inio foi perfeitamente geral. Pudemos descartar a suposi\c c\~ao espec\'ifica `$\atom{F}{b}$', e simplesmente inferir `$\exists x\,\atom{G}{x}$' por conta pr\'opria.
+ 
+
+Levando em considera\c c\~ao tudo isso, obtemos a regra de elimina\c c\~ao existencial ($\exists$E):
+\factoidbox{
+\begin{fitchproof}
+	\have[m]{a}{\exists \meta{x}\,\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+	\open	
+		\hypo[i]{b}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+		\have[j]{c}{\meta{B}}
+	\close
+	\have[\ ]{d}{\meta{B}} \Ee{a,b-c}
+\end{fitchproof}
+\meta{c} n\~ao deve ocorrer em nenhuma suposi\c c\~ao n\~ao descartada antes da linha $i$\\
+\meta{c} n\~ao deve ocorrer em $\exists \meta{x}\,\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$\\
+\meta{c} n\~ao deve ocorrer em \meta{B}}
+Como na regra de introdu\c c\~ao universal, essas restri\c c\~oes s\~ao extremamente importantes. Para entender por que, considere o seguinte argumento terr\'ivel:
+	\begin{quote}
+		Daniel \'e professor. Algu\'em n\~ao \'e professor. Ent\~ao, Daniel \'e professor e n\~ao professor.
+	\end{quote}
+Podemos simbolizar esse padr\~ao de infer\^encia, obviamente inv\'alido, da seguinte maneira:
+$$\atom{L}{d}, \exists x\, \enot\atom{L}{x} \therefore \atom{L}{d} \eand \enot \atom{L}{d}$$
+Agora, suponha que tentamos oferecer uma prova para justificar esse argumento:
+
+\begin{fitchproof}
+	\hypo{f}{\atom{L}{d}}
+	\hypo{nf}{\exists x\, \enot \atom{L}{x}}	
+	\open	
+		\hypo{na}{\enot \atom{L}{d}}
+		\have{con}{\atom{L}{d} \eand \enot \atom{L}{d}}\ai{f, na}
+	\close
+	\have{econ1}{\atom{L}{d} \eand \enot \atom{L}{d}}\by{ tentativa impr\'opria}{}
+	\have[\ ]{x}{}\by{de invocar $\exists$E }{nf, na-con}
+\end{fitchproof}
+A \'ultima linha da prova n\~ao \'e permitida. O nome que usamos em nossa inst\^ancia de substitui\c c\~ao para `$\exists x\, \enot \atom{L}{x}$' na linha~$3$, ou seja,  `$d$', ocorre na linha~$4$. Vamos modificar um pouco:
+\begin{fitchproof}
+	\hypo{f}{\atom{L}{d}}
+	\hypo{nf}{\exists x\, \enot \atom{L}{x}}	
+	\open	
+		\hypo{na}{\enot \atom{L}{d}}
+		\have{con}{\atom{L}{d} \eand \enot \atom{L}{d}}\ai{f, na}
+		\have{con1}{\exists x (\atom{L}{x} \eand \enot \atom{L}{x})}\Ei{con}		
+	\close
+	\have{econ1}{\exists x (\atom{L}{x} \eand \enot \atom{L}{x})}\by{tentativa impr\'opria}{}
+	\have[\ ]{x}{}\by{de invocar $\exists$E }{nf, na-con1}
+\end{fitchproof}
+A  infer\^encia da \'ultima linha da prova ainda n\~ao \'e permitida. O nome que usamos em nossa inst\^ancia de substitui\c c\~ao para `$\exists x\, \enot \atom{L}{x}$', nomeadamente `$d$', ocorre em uma suposi\c c\~ao n\~ao descartada, ou seja, na linha~$1$.
+
+A moral da hist\'oria \'e essa. \emph{Se voc\^e deseja extrair informa\c c\~oes de um quantificador existencial, escolha um novo nome para sua inst\^ancia de substitui\c c\~ao.} Dessa forma, voc\^e pode garantir que todas as restri\c c\~oes da regra  $\exists$E sejam atendidas.
+
+%%%%%% -----------------------  CAP  32 -  EXERCICIOS --------------------------  
+\practiceproblems
+\problempart
+Explique por que essas duas `provas' est\~ao \emph{incorretas}. Al\'em disso, forne\c ca interpreta\c c\~oes que invalidariam o argumento falacioso dessa `provas':
+\begin{multicols}{2}
+	\begin{fitchproof}
+		\hypo{Rxx}{\forall x\, \atom{R}{x,x}}
+		\have{Raa}{\atom{R}{a,a}}\Ae{Rxx}
+		\have{Ray}{\forall y\, \atom{R}{a,y}}\Ai{Raa}
+		\have{Rxy}{\forall x\, \forall y\, \atom{R}{x,y}}\Ai{Ray}
+	\end{fitchproof}
+	\begin{fitchproof}
+		\hypo{AE}{\forall x\, \exists y\, \atom{R}{x,y}}
+		\have{E}{\exists y\, \atom{R}{a,y}}\Ae{AE}
+		\open
+			\hypo{ass}{\atom{R}{a,a}}
+			\have{Ex}{\exists x\, \atom{R}{x,x}}\Ei{ass}
+		\close
+		\have{con}{\exists x\, \atom{R}{x,x}}\Ee{E, ass-Ex}
+	\end{fitchproof}
+\end{multicols}
+
+\problempart 
+\label{pr.justifyFOLproof}
+Nas tr\^es provas a seguir est\~ao faltando as cita\c c\~oes (regra e
+n\'umeros de linha). Adicione-as, para transform\'a-las em provas fidedignas.
+\begin{earg}
+\item \begin{fitchproof}
+\hypo{p1}{\forall x\exists y(\atom{R}{x,y} \eor \atom{R}{y,x})}
+\hypo{p2}{\forall x\,\enot \atom{R}{m,x}}
+\have{3}{\exists y(\atom{R}{m,y} \eor \atom{R}{y,m})}{}
+	\open
+		\hypo{a1}{\atom{R}{m,a} \eor \atom{R}{a,m}}
+		\have{a2}{\enot \atom{R}{m,a}}{}
+		\have{a3}{\atom{R}{a,m}}{}
+		\have{a4}{\exists x\, \atom{R}{x,m}}{}
+	\close
+\have{n}{\exists x\, \atom{R}{x,m}} {}
+\end{fitchproof}
+
+\item \begin{fitchproof}
+\hypo{1}{\forall x(\exists y\,\atom{L}{x,y} \eif \forall z\,\atom{L}{z,x})}
+\hypo{2}{\atom{L}{a,b}}
+\have{3}{\exists y\,\atom{L}{a,y} \eif \forall z\atom{L}{z,a}}{}
+\have{4}{\exists y\, \atom{L}{a,y}} {}
+\have{5}{\forall z\, \atom{L}{z,a}} {}
+\have{6}{\atom{L}{c,a}}{}
+\have{7}{\exists y\,\atom{L}{c,y} \eif \forall z\,\atom{L}{z,c}}{}
+\have{8}{\exists y\, \atom{L}{c,y}}{}
+\have{9}{\forall z\, \atom{L}{z,c}}{}
+\have{10}{\atom{L}{c,c}}{}
+\have{11}{\forall x\, \atom{L}{x,x}}{}
+\end{fitchproof}
+
+\item \begin{fitchproof}
+\hypo{a}{\forall x(\atom{J}{x} \eif \atom{K}{x})}
+\hypo{b}{\exists x\,\forall y\, \atom{L}{x,y}}
+\hypo{c}{\forall x\, \atom{J}{x}}
+\open
+	\hypo{2}{\forall y\, \atom{L}{a,y}}
+	\have{3}{\atom{L}{a,a}}{}
+	\have{d}{\atom{J}{a}}{}
+	\have{e}{\atom{J}{a} \eif \atom{K}{a}}{}
+	\have{f}{\atom{K}{a}}{}
+	\have{4}{\atom{K}{a} \eand \atom{L}{a,a}}{}
+	\have{5}{\exists x(\atom{K}{x} \eand \atom{L}{x,x})}{}
+\close
+\have{j}{\exists x(\atom{K}{x} \eand \atom{L}{x,x})}{}
+\end{fitchproof}
+\end{earg}
+ 
+\problempart
+\label{pr.BarbaraEtc.proof1}
+No problema A do cap\'itulo \ref{s:MoreMonadic}, consideramos quinze figuras silog\'isticas da L\'ogica aristot\'elica. Forne\c ca provas para cada uma dessas formas de argumento. NB: Ser\'a \emph{muito} mais f\'acil se voc\^e simbolizar (por exemplo) `Nenhum F \'e G' como `$\forall x (\atom{F}{x} \eif \enot \atom{G}{x})$'.
+
+\
+ 
+\problempart
+\label{pr.BarbaraEtc.proof2}
+Arist\'oteles e seus sucessores identificaram outras formas silog\'isticas que dependiam da "importa\c c\~ao existencial". Simbolize cada uma dessas formas de argumento na LPO e  forne\c ca suas respectivas  provas.
+\begin{earg}
+	\item \textbf{Barbari.} Algo \'e H. Todo G \'e F. Todo H \'e G. Portanto: Algum H \'e F.
+	\item \textbf{Celaront.} Algo \'e H. Nenhum G \'e F. Todo H \'e G. Portanto: Algum H n\~ao \'e F
+	\item \textbf{Cesaro.} Algo \'e H. Nenhum F \'e G. Todo H \'e G. Portanto: Algum H n\~ao \'e  F.
+	\item \textbf{Camestros.} Algo \'e H. Todo F \'e G. No H \'e G. Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Felapton.} Algo \'e G. Nenhum G \'e F. Todo G \'e H. Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Darapti.} Algo \'e G. Todo G \'e F. Todo G \'e H. Portanto: Algum H \'e F.
+	\item \textbf{Calemos.} Algo \'e H. Todo F \'e G. No G \'e H. Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Fesapo.} Algo \'e G. Nenhum F is G. Todo G \'e H. Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Bamalip.} Algo \'e F. Todo F \'e G. Todo G \'e H. Portanto: Algum H \'e F.
+\end{earg}
+
+\problempart
+\label{pr.someFOLproofs}
+Forne\c ca uma prova para cada uma das nove afirma\c c\~oes seguintes. 
+\begin{earg}
+\item $\proves \forall x\,\atom{F}{x} \eif \forall y(\atom{F}{y} \eand \atom{F}{y})$
+\item $\forall x(\atom{A}{x}\eif \atom{B}{x}), \exists x\,\atom{A}{x} \proves \exists x\,\atom{B}{x}$
+\item $\forall x(\atom{M}{x} \eiff \atom{N}{x}), \atom{M}{a} \eand \exists x\,\atom{R}{x,a} \proves \exists x\,\atom{N}{x}$
+\item $\forall x\, \forall y\,\atom{G}{x,y}\proves\exists x\,\atom{G}{x,x}$
+\item $\proves\forall x\,\atom{R}{x,x} \eif \exists x\, \exists y\,\atom{R}{x,y}$
+\item $\proves\forall y\, \exists x (\atom{Q}{y} \eif \atom{Q}{x})$
+\item $\atom{N}{a} \eif \forall x(\atom{M}{x} \eiff \atom{M}{a}), \atom{M}{a}, \enot\atom{M}{b}\proves \enot \atom{N}{a}$
+\item $\forall x\, \forall y (\atom{G}{x,y} \eif \atom{G}{y,x}) \proves \forall x\forall y (\atom{G}{x,y} \eiff \atom{G}{y,x})$
+\item $\forall x(\enot\atom{M}{x} \eor \atom{L}{j,x}), \forall x(\atom{B}{x}\eif \atom{L}{j,x}), \forall x(\atom{M}{x}\eor \atom{B}{x})\proves \forall x\atom{L}{j,x}$
+\end{earg}
+ 
+\solutions
+\problempart
+\label{pr.likes}
+Escreva uma chave de simboliza\c c\~ao para o seguinte argumento, e forne\c ca uma prova para ele:
+\begin{quote}
+H\'a algu\'em que gosta de todos que gosta de todos que ela gosta. Portanto, h\'a algu\'em que gosta dela mesma.
+\end{quote}
+
+
+\problempart
+Mostre que cada par de senten\c cas \'e dedutivamente equivalente.
+\begin{earg}
+\item $\forall x (\atom{A}{x}\eif \enot \atom{B}{x})$, $\enot\exists x(\atom{A}{x} \eand \atom{B}{x})$
+\item $\forall x (\enot\atom{A}{x}\eif \atom{B}{d})$, $\forall x\,\atom{A}{x} \eor \atom{B}{d}$
+\item $\exists x\,\atom{P}{x} \eif \atom{Q}{c}$, $\forall x (\atom{P}{x} \eif \atom{Q}{c})$
+\end{earg}
+
+\solutions
+\problempart
+\label{pr.FOLequivornot}
+Para cada um dos seguintes pares de senten\c cas: Se forem dedutivamente equivalentes, d\^e provas para mostrar isso. Caso contr\'ario, construa uma interpreta\c c\~ao para mostrar que eles n\~ao s\~ao logicamente equivalentes.
+\begin{earg}
+\item $\forall x\,\atom{P}{x} \eif \atom{Q}{c}, \forall x (\atom{P}{x} \eif \atom{Q}{c})$
+\item $\forall x\,\forall y\, \forall z\,\atom{B}{x,y,z}, \forall x\,\atom{B}{x,x}x$
+\item $\forall x\,\forall y\,\atom{D}{x,y}, \forall y\,\forall x\,\atom{D}{x,y}$
+\item $\exists x\,\forall y\,\atom{D}{x,y}, \forall y\,\exists x\,\atom{D}{x,y}$
+\item $\forall x (\atom{R}{c,a} \eiff \atom{R}{x,a}), \atom{R}{c,a} \eiff \forall x\,\atom{R}{x,a}$
+\end{earg}
+
+\solutions
+\problempart
+\label{pr.FOLvalidornot}
+Para cada um dos seguintes argumentos: Se for v\'alido na LPO, forne\c ca uma prova. Se for inv\'alido, construa uma interpreta\c c\~ao para mostrar que \'e inv\'alido.
+\begin{earg}
+\item $\exists y\,\forall x\,\atom{R}{x,y} \therefore \forall x\,\exists y\,\atom{R}{x,y}$
+\item $\forall x\,\exists y\,\atom{R}{x,y} \therefore  \exists y\,\forall x\,\atom{R}{x,y}$
+\item $\exists x(\atom{P}{x} \eand \enot \atom{Q}{x}) \therefore \forall x(\atom{P}{x} \eif \enot \atom{Q}{x})$
+\item $\forall x(\atom{S}{x} \eif \atom{T}{a}), \atom{S}{d} \therefore \atom{T}{a}$
+\item $\forall x(\atom{A}{x}\eif \atom{B}{x}), \forall x(\atom{B}{x} \eif \atom{C}{x}) \therefore \forall x(\atom{A}{x} \eif \atom{C}{x})$
+\item $\exists x(\atom{D}{x} \eor \atom{E}{x}), \forall x(\atom{D}{x} \eif \atom{F}{x}) \therefore \exists x(\atom{D}{x} \eand \atom{F}{x})$
+\item $\forall x\,\forall y(\atom{R}{x,y} \eor \atom{R}{y,x}) \therefore \atom{R}{j,j}$
+\item $\exists x\,\exists y(\atom{R}{x,y} \eor \atom{R}{y,x}) \therefore \atom{R}{j,j}$
+\item $\forall x\,\atom{P}{x} \eif \forall x\,\atom{Q}{x}, \exists x\, \enot\atom{P}{x} \therefore \exists x\, \enot \atom{Q}{x}$
+\item $\exists x\,\atom{M}{x} \eif \exists x\,\atom{N}{x}$, $\enot \exists x\,\atom{N}{x}\therefore  \forall x\, \enot \atom{M}{x}$
+\end{earg}
+
+%%%%%% -----------------------  CAPITULO   33  - Provas com quantificadores  --------------------------  
+
+\chapter{Provas com quantificadores}
+
+No cap\'itulo \ref{s:stratTFL}  discutimos estrat\'egias para construir provas usando as regras b\'asicas de dedu\c c\~ao natural para a LVF.  Nesta se\c c\~ao, veremos que essas mesmas estrat\'egias tamb\'em se aplicam \`as regras para os quantificadores. Assim, podemos usar a estrat\'egia do fim para o come\c co, se quisermos provar senten\c cas quantificadas,  $\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}$ ou $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, justificando-as respectivamente com as regras de introdu\c c\~ao $\forall$I ou $\exists$I. Por outro lado, veremos tamb\'em que podemos usar a estrat\'egia do come\c co para o fim a partir de senten\c cas quantificadas, aplicando as regras de elimina\c c\~ao $\forall$E ou $\exists$E.
+
+Especificamente, suponha que voc\^e queira provar $\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}$. Para fazer isso usando $\forall$I, precisar\'iamos de uma prova de $\atom{\meta{A}}{\meta{c}}$ para algum nome~$\meta{c}$ que n\~ao ocorra em nenhuma suposi\c c\~ao n\~ao descartada. Assim, trabalhando com a estrat\'egia do fim para o come\c co, devemos escrever  a senten\c ca $\atom{\meta{A}}{\meta{c}}$ acima de $\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}$ e continuar tentando encontrar uma prova para ela, como no esbo\c co de prova seguinte. 
+ 
+\begin{fitchproof}
+	\ellipsesline
+	\have[n]{n}{\atom{\meta{A}}{\meta{c}}}
+	\have{m}{\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}}\Ai{n}
+\end{fitchproof}
+ 
+Como trabalhamos do fim para o come\c co,  $\atom{\meta{A}}{\meta{c}}$ \'e obtido de $\atom{\meta{A}}{\meta{x}}$ substituindo cada ocorr\^encia livre de $\meta{x}$ em $\atom{\meta{A}}{\meta{x}}$ por~$\meta{c}$. Para que isso funcione, $\meta{c}$ deve satisfazer a condi\c c\~ao especial da regra $\forall$I. Podemos garantir isso escolhendo sempre um nome que ainda n\~ao ocorreu na prova constru\'ida at\'e o momento. (??? Obviamente, isso ocorrer\'a na prova que acabamos construindo - mas n\~ao em uma suposi\c c\~ao que n\~ao \'e descartada na linha~$n + 1$.  ?????)
+
+Para trabalhar do fim para o come\c co  a partir de uma senten\c ca $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, escrevemos similarmente uma senten\c ca acima dela que pode servir como justificativa para uma aplica\c c\~ao da regra $\exists$I, ou seja, uma senten\c ca da forma $\atom{\meta{A}}{\meta{c}}$. 
+\begin{fitchproof}
+	\ellipsesline
+	\have[n]{n}{\atom{\meta{A}}{\meta{c}}}
+	\have{m}{\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}}\Ei{n}
+\end{fitchproof}
+Isto \'e exatamente o que far\'iamos se estiv\'essemos trabalhando em uma senten\c ca quantificada universalmente. A diferen\c ca \'e que, enquanto para $\forall$I temos que escolher um nome~$\meta{c}$ que n\~ao ocorreu na prova (at\'e agora), para $\exists$I podemos e, em geral, devemos escolher um nome~$\meta{c}$ que j\'a ocorre na prova. Assim como no caso da regra $\eor$I, muitas vezes n\~ao est\'a claro qual $\meta{c}$ funcionar\'a; portanto, para evitar ter que voltar atr\'as, voc\^e s\'o deve usar a estrat\'egia do fim para o come\c co a partir de senten\c cas quantificadas existencialmente quando todas as outras estrat\'egias tiverem sido aplicadas.
+
+Por outro lado, usar a estrat\'egia \emph{do come\c co para o fim} a partir de senten\c cas existenciais, $\exists \meta{x}\, \atom{\meta{A}(\meta{x}})$, geralmente funciona e voc\^e n\~ao precisa voltar atr\'as. Pois essa estrat\'egia  leva em considera\c c\~ao n\~ao apenas $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$  mas tamb\'em qualquer senten\c ca $\meta{B}$ que vo\c c\^e gostaria de provar. Isto exige que voc\^e configure uma subprova acima de $\meta{B}$, cuja suposi\c c\~ao \'e uma inst\^ancia de substitui\c c\~ao $\atom{\meta{A}}{\meta{c}}$ de $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$ e $\meta{B}$  \'e a \'ultima linha dessa subprova. Escolha um nome $\meta{c}$ que ainda n\~ao ocorra na prova para garantir as restri\c c\~oes da regra $\exists$E.
+ 
+\begin{fitchproof}
+	\ellipsesline
+	\have[m]{m}{\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}}
+	\ellipsesline
+	\open
+	\hypo[n]{n}{\atom{\meta{A}}{\meta{c}}}
+	\ellipsesline
+	\have[k]{k}{\meta{B}}
+	\close
+	\have{e}{\meta{B}}\Ee{m,n-k}
+\end{fitchproof}
+Voc\^e continuar\'a com o objetivo de provar $\meta{B}$, mas agora dentro de uma subprova em que voc\^e tem uma senten\c ca adicional para trabalhar, a saber~$\atom{\meta{A}}{\meta{c}}$.
+
+Por fim, trabalhar com a estrat\'egia do come\c co par o fim a partir de $\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}$ significa que voc\^e sempre pode escrever a senten\c ca $\atom{\meta{A}}{\meta{c}}$ e justific\'a-la usando $\forall$E, para qualquer nome~$\meta{c}$.  \'E claro que somente certos nomes $\meta{c}$ ajudar\~ao na sua tarefa de provar seja qual for a senten\c ca desejada. Portanto, assim como antes, voc\^e s\'o deveria  usar a estrat\'egia de come\c co para o fim a partir de  $\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}$ somente ap\'os todas as outras estrat\'egias terem sido aplicadas.
+
+Vamos considerar como exemplo o argumento $\forall x(\atom{A}{x} \eif B) \therefore \exists x\,\atom{A}{x} \eif B$. Para come\c car a construir uma prova, escrevemos a premissa no topo e a conclus\~ao na parte inferior.
+\begin{fitchproof}
+\hypo{1}{\forall x(\atom{A}{x} \eif B)}
+\ellipsesline
+\have[n]{7}{\exists x\,\atom{A}{x} \eif B}
+\end{fitchproof}
+As estrat\'egias usadas para os conectivos da LVF ainda se aplicam, e voc\^e deve aplic\'a-las na mesma ordem: primeiro trabalhe do fim para o come\c co a partir de condicionais, senten\c cas negadas, conjun\c c\~oes e agora tamb\'em a partir de  senten\c cas quantificadas universalmente, depois use a estrat\'egia do come\c co para o fim a partir de  disjun\c c\~oes e agora a partir de senten\c cas quantificadas existencialmente, e s\'o ent\~ao tente aplica as regras $\eif$E, $\enot$E, $\lor$I, $\forall$E, ou $\exists$I. Podemos ver a seguir que, no nosso exemplo, usamos a estrat\'egia do fim para o come\c co a partir da conclus\~ao:
+ 
+\begin{fitchproof}
+	\hypo{1}{\forall x(\atom{A}{x} \eif B)}
+	\open
+	\hypo{2}{\exists x\,\atom{A}{x}}
+	\ellipsesline
+	\have[n][-1]{6}{B}
+	\close
+	\have[n]{7}{\exists x\,\atom{A}{x} \eif B}\ci{2-(6)}
+\end{fitchproof}
+Nosso pr\'oximo passo ser\'a trabalhar do come\c co para o fim a partir de $\exists x\,\atom{A}{x}$ na linha~$2$. Para isso, precisamos escolher um nome que ainda n\~ao esteja em nossa prova. Como nenhum nome aparece, podemos escolher qualquer um, digamos~$d$.
+\begin{fitchproof}
+	\hypo{1}{\forall x(\atom{A}{x} \eif B)}
+	\open
+	\hypo{2}{\exists x\,\atom{A}{x}}
+	\open
+	\hypo{3}{\atom{A}{d}}
+	\ellipsesline
+	\have[n][-2]{5}{B}
+	\close
+	\have[n][-1]{6}{B}\Ee{2,3-(5)}
+	\close
+	\have[n]{7}{\exists x\,\atom{A}{x} \eif B}\ci{2-(6)}
+\end{fitchproof}
+Agora que exaurimos nossas estrat\'egias iniciais,  \'e hora de continuar  a partir da premissa $\forall x(\atom{A}{x} \eif B)$. Assim, aplicando a regra $\forall$E podemos justificar qualquer inst\^ancia de $A(\meta{c}) \eif B$, independentemente do nome $\meta{c}$ que escolhemos. Obviamente, neste caso, \'e conveniente  escolher~$d$, pois isso nos dar\'a $\atom{A}{d} \eif B$. Agora podemos aplicar $\eif$E para justificar~$B$, finalizando assim a prova:
+
+ 
+\begin{fitchproof}
+	\hypo{1}{\forall x(\atom{A}{x} \eif B)}
+	\open
+	\hypo{2}{\exists x\,\atom{A}{x}}
+	\open
+	\hypo{3}{\atom{A}{d}}
+\have{4}{\atom{A}{d} \eif B}\Ae{1}
+	\have{5}{B}\ce{4,3}
+	\close
+	\have{6}{B}\Ee{2,3-5}
+	\close
+	\have{7}{\exists x\,\atom{A}{x} \eif B}\ci{2-6}
+\end{fitchproof}
+
+Agora vamos construir uma prova do inverso. Come\c camos da seguinte maneira:
+\begin{fitchproof}
+	\hypo{1}{\exists x\,\atom{A}{x} \eif B}
+	\ellipsesline
+	\have[n]{7}{\forall x(\atom{A}{x} \eif B)}
+\end{fitchproof}
+Observe que a premissa \'e um condicional, e n\~ao uma senten\c ca  existencialmente quantificada. Assim, n\~ao devemos (ainda) come\c car a partir  dela,  mas trabalhar de fim para o come\c co a partir da conclus\~ao $\forall x(\atom{A}{x} \eif B)$, Isso nos leva a procurar uma prova para $\atom{A}{d} \eif B$:
+\begin{fitchproof}
+	\hypo{1}{\exists x\,\atom{A}{x} \eif B}
+	\ellipsesline
+	\have[n][-1]{6}{\atom{A}{d} \eif B}
+	\have[n]{7}{\forall x(\atom{A}{x} \eif B)}\Ai{6}
+\end{fitchproof}
+O pr\'oximo passo \'e usar outra vez a estrat\'egia do fim para o come\c co a partir de  $\atom{A}{d} \eif B$.  Isto significa que devemos configurar uma subprova  com  $\atom{A}{d}$ como suposi\c c\~ao  e $B$ como a \'ultima linha:  
+ 
+\begin{fitchproof}
+	\hypo{1}{\exists x\,\atom{A}{x} \eif B}
+	\open
+	\hypo{2}{\atom{A}{d}}
+	\ellipsesline
+	\have[n][-2]{5}{B}
+	\close
+	\have[n][-1]{6}{\atom{A}{d} \eif B}\ci{2-(5)}
+	\have[n]{7}{\forall x(\atom{A}{x} \eif B)}\Ai{6}
+\end{fitchproof}
+Agora podemos continuar a prova a partir da premissa da linha~$1$. Isso \'e um condicional e seu consequentemente \'e a senten\c ca~$B$ que estamos tentando justificar na linha~$n-2$. Assim, devemos procurar uma prova para o seu antecedente, $\exists x\,\atom{A}{x}$. Mas  como veremos a seguir, isso \'e obtido  facilmente aplicando a regra  $\exists$I.   Segue a prova completa:\begin{fitchproof}
+	\hypo{1}{\exists x\,\atom{A}{x} \eif B}
+	\open
+	\hypo{2}{\atom{A}{d}}
+	\have{3}{\exists x\,\atom{A}{x}}\Ei{2}
+	\have{5}{B}\ce{1,3}
+	\close
+	\have{6}{\atom{A}{d} \eif B}\ci{2-5}
+	\have{7}{\forall x(\atom{A}{x} \eif B)}\Ai{6}
+\end{fitchproof}
+
+ %%%%%% -----------------------  CAP  33  - EXERCICIOS   --------------------------   
+\practiceproblems
+
+\problempart
+Use as estrat\'egias  para encontrar provas para cada um dos  argumentos e teoremas seguintes:
+ 
+\begin{earg}
+\item $A \eif \forall x\,\atom{B}{x} \therefore \forall x(A \eif \atom{B}{x})$
+\item $\exists x(A \eif \atom{B}{x}) \therefore A \eif \exists x\, \atom{B}{x}$
+\item $\forall x(\atom{A}{x} \eand \atom{B}{x}) \eiff (\forall x\,\atom{A}{x} \eand \forall x\,\atom{B}{x})$
+\item $\exists x(\atom{A}{x} \eor \atom{B}{x}) \eiff (\exists x\,\atom{A}{x} \eor \exists x\,\atom{B}{x})$
+\item $A \eor \forall x\,\atom{B}{x}) \therefore \forall x(A \eor \atom{B}{x})$
+\item $\forall x(\atom{A}{x} \eif B) \therefore \exists x\,\atom{A}{x} \eif B$
+\item $\exists x(\atom{A}{x} \eif B) \therefore \forall x\,\atom{A}{x} \eif B$
+\item $\forall x(\atom{A}{x} \eif \exists y\,\atom{A}{y})$
+\end{earg}
+Use somente as regras b\'asicas da LVF, al\'em das regras b\'asicas dos quantificadores.
+
+\problempart
+Use as estrat\'egias para encontrar provas para cada um dos  seguintes argumentos e teoremas:
+\begin{earg}
+\item $\forall x\,\atom{R}{x,x} \therefore \forall x\,\exists y\,\atom{R}{x,y}$
+\item $\forall x\,\forall y\,\forall z[(\atom{R}{x,y} \eand \atom{R}{y,z}) \eif \atom{R}{x,z}]$ \\
+$\therefore \forall x\,\forall y[\atom{R}{x,y} \eif \forall z(\atom{R}{y,z} \eif \atom{R}{x,z})]$
+\item $\forall x\,\forall y\,\forall z[(\atom{R}{x,y} \eand \atom{R}{y,z}) \eif \atom{R}{x,z}],$\\ $\forall x\,\forall y(\atom{R}{x,y} \eif \atom{R}{y, x})$ \\ $\therefore \forall x\,\forall y\,\forall z[(\atom{R}{x,y} \eand \atom{R}{x,z}) \eif \atom{R}{y,z}]$
+\item $\forall x\,\forall y(\atom{R}{x,y} \eif \atom{R}{y, x})$ \\$\therefore \forall x\,\forall y\,\forall z[(\atom{R}{x,y} \eand \atom{R}{x,z}) \eif \exists u(\atom{R}{y,u} \eand \atom{R}{z,u})]$
+\item $\enot \exists x\,\forall y (\atom{A}{x, y} \eiff \lnot\atom{A}{y, y})$
+\end{earg}
+
+\problempart
+Use as estrat\'egias para encontrar provas para cada um dos  seguintes argumentos e teoremas
+\begin{earg}
+\item $\forall x\,\atom{A}{x} \eif B \therefore \exists x(\atom{A}{x} \eif B)$
+\item $A \eif \exists x\, \atom{B}{x} \therefore \exists x(A \eif \atom{B}{x})$
+\item $\forall x(A \eor \atom{B}{x}) \therefore A \eor \forall x\,\atom{B}{x})$
+\item $\exists x(\atom{A}{x} \eif \forall y\,\atom{A}{y})$
+\item $\exists x(\exists y\,\atom{A}{y} \eif \atom{A}{x})$
+\end{earg}
+Isso requer o uso de IP. Use apenas as regras b\'asicas da LVF, al\'em das regras b\'asicas dos quantificadores.
+
+ %%%%%% ----------------------  CAPITULO  34 - Transforma\c c\~ao de quantificadores  -------------------
+
+\chapter{Transforma\c c\~ao de quantificadores}\label{s:CQ}
+
+Nesta se\c c\~ao, introduziremos quatro regras adicionais \`as regras b\'asicas da se\c c\~ao anterior com o objetivo de governar a intera\c c\~ao entre os quantificadores e a nega\c c\~ao. Essas regras de transforma\c c\~ao de quantificadores ser\~ao chamadas regras CQ.
+ 
+No cap\'itulo \ref{s:FOLBuildingBlocks}, notamos que $\forall x\, \enot\meta{A}$
+   \'e logicamente equivalente a  $\enot\exists x\meta{A}$. Assim, adicionaremos as seguintes regras CQ ao nosso sistema de provas que regem isso. 
+	\factoidbox{
+	\begin{fitchproof}
+		\have[m]{a}{\forall \meta{x}\, \enot\meta{A}}
+		\have[\ ]{con}{\enot \exists \meta{x}\, \meta{A}}\cq{a}
+	\end{fitchproof}}
+e
+\factoidbox{
+	\begin{fitchproof}
+		\have[m]{a}{ \enot \exists \meta{x}\, \meta{A}}
+		\have[\ ]{con}{\forall \meta{x}\, \enot \meta{A}}\cq{a}
+	\end{fitchproof}}
+As duas seguintes  regras CQ  s\~ao adicionadas ao nosso sistema de provas para governar a equival\^encia l\'ogica entre as senten\c cas $\exists x\, \enot\meta{A}$  e   $\enot\forall x\meta{A}$, vista tamb\'em no  cap\'itulo \ref{s:FOLBuildingBlocks}.
+
+ 
+\factoidbox{
+	\begin{fitchproof}
+		\have[m]{a}{\exists \meta{x}\, \enot \meta{A}}
+		\have[\ ]{con}{\enot \forall \meta{x}\, \meta{A}}\cq{a}
+	\end{fitchproof}}
+e
+\factoidbox{
+	\begin{fitchproof}
+		\have[m]{a}{\enot \forall \meta{x}\, \meta{A}}
+		\have[\ ]{con}{\exists \meta{x}\, \enot \meta{A}}\cq{a}
+	\end{fitchproof}}
+Essas s\~ao  as quatro regras de transforma\c c\~ao de quantificadores,  CQ
+
+%%%%%% -----------------------  CAP  34  - EXERCICIOS   --------------------------   
+
+\practiceproblems
+\problempart
+ Mostre nos quatro casos seguintes que as senten\c cas s\~ao dedutivamente inconsistentes:
+\begin{earg}
+\item $\atom{S}{a}\eif \atom{T}{m}, \atom{T}{m} \eif \atom{S}{a}, \atom{T}{m} \eand \enot \atom{S}{a}$
+\item $\enot\exists x\,\atom{R}{x,a}, \forall x\, \forall y\,\atom{R}{y,x}$
+\item $\enot\exists x\, \exists y\,\atom{L}{x,y}, \atom{L}{a,a}$
+\item $\forall x(\atom{P}{x} \eif \atom{Q}{x}), \forall z(\atom{P}{z} \eif \atom{R}{z}), \forall y\,\atom{P}{y}, \enot \atom{Q}{a} \eand \enot \atom{R}{b}$
+\end{earg}
+
+\problempart
+Mostre que cada par de senten\c cas \'e dedutivamente equivalente:
+\begin{earg}
+\item $\forall x (\atom{A}{x}\eif \enot \atom{B}{x}), \enot\exists x(\atom{A}{x} \eand \atom{B}{x})$
+\item $\forall x (\enot\atom{A}{x}\eif \atom{B}{d}), \forall x\,\atom{A}{x} \eor \atom{B}{d}$
+\end{earg}
+
+\problempart
+No cap\'itulo \ref{s:MoreMonadic}, vimos o que acontece quando movemos quantificadores `entre'  v\'arios operadores l\'ogicos. Mostre que cada um dos seis pares de senten\c cas \'e dedutivamente equivalente:
+\begin{earg}
+\item $\forall x(\atom{F}{x} \eand \atom{G}{a}), \forall x\,\atom{F}{x} \eand \atom{G}{a}$
+\item $\exists x(\atom{F}{x} \eor \atom{G}{a}), \exists x\,\atom{F}{x} \eor \atom{G}{a}$
+\item $\forall x(\atom{G}{a} \eif \atom{F}{x}), \atom{G}{a} \eif \forall x\,\atom{F}{x}$
+\item $\forall x(\atom{F}{x} \eif \atom{G}{a}), \exists x\,\atom{F}{x} \eif \atom{G}{a}$
+\item $\exists x(\atom{G}{a} \eif \atom{F}{x}), \atom{G}{a} \eif \exists x\,\atom{F}{x}$
+\item $\exists x(\atom{F}{x} \eif \atom{G}{a}), \forall x\,\atom{F}{x} \eif \atom{G}{a}$
+\end{earg}
+NB: a vari\'avel `$x$'  n\~ao ocorre em `$\atom{G}{a}$'. Quando todos os quantificadores ocorrem no in\'icio de uma senten\c ca, diz-se que essa senten\c ca est\'a na  \emph{forma normal prenex}. Essas equival\^encias \`as vezes s\~ao chamadas de  \emph{regras prenex}, pois fornecem um meio para colocar qualquer senten\c ca na forma normal prenex.
+
+%%%%%% -----------------------  CAPITULO  35 - As regras para a identidade -------------------------- 
+
+\chapter{As regras para a identidade}
+ No cap\'itulo \ref{s:Interpretations},  mencionamos o filosoficamente controverso   principio da \emph{identidade dos indiscern\'iveis} que afirma que objetos que s\~ao indistingu\'iveis de todas as formas s\~ao, de fato, id\^enticos entre si. Entretanto, dissemos tamb\'em que esse n\~ao \'e um princ\'ipio v\'alido na LPO.  Daqui resulta que, n\~ao importa o quanto voc\^e saiba sobre dois objetos, n\~ao podemos provar que eles s\~ao id\^enticos. A menos que, \'e claro, voc\^e saiba que os dois objetos s\~ao de fato id\^enticos, mas a prova dificilmente ser\'a muito esclarecedora.
+
+ O ponto geral, no entanto, \'e que \emph{nenhuma senten\c ca} que ainda n\~ao contenha o predicado de identidade poderia justificar uma infer\^encia para `$a=b$'. Portanto, nossa regra de introdu\c c\~ao de identidade n\~ao pode permitir inferir uma reivindica\c c\~ao de identidade que cont\'em dois nomes  \emph{diferentes}.
+
+No entanto, todo objeto \'e id\^entico a si mesmo. N\~ao s\~ao necess\'arias premissas para concluir que algo \'e id\^entico a si mesmo. Portanto, esta ser\'a a regra de introdu\c c\~ao de identidade:
+\factoidbox{
+\begin{fitchproof}
+	\have[\ \,\,\,]{x}{\meta{c}=\meta{c}} \by{=I}{}
+\end{fitchproof}}
+Observe que esta regra n\~ao requer refer\^encia a nenhuma linha anterior da prova. Para qualquer nome \meta{c}, voc\^e pode escrever $\meta{c}=\meta{c}$ em qualquer ponto, justificando apenas com a regra  {=}I .
+ 
+Nossa regra de elimina\c c\~ao \'e mais divertida. Se voc\^e estabeleceu `$a=b$',  qualquer coisa que seja verdadeira para o objeto nomeado por `$a$' tamb\'em deve ser verdadeira para o objeto nomeado por `$b$'. Para qualquer senten\c ca com `$a$', voc\^e pode substituir algumas ou todas as ocorr\^encias de `$a$' por `$b$' e produzir uma senten\c ca equivalente. Por exemplo,  a partir de `$\atom{R}{a,a}$' e `$a = b$',  voc\^e pode deduzir `$\atom{R}{a,b}$', `$\atom{R}{b,a}$' ou `$\atom{R}{b,b}$'. De forma geral:
+\factoidbox{\begin{fitchproof}
+	\have[m]{e}{\meta{a}=\meta{b}}
+	\have[n]{a}{\meta{A}(\ldots \meta{a} \ldots \meta{a}\ldots)}
+	\have[\ ]{ea1}{\meta{A}(\ldots \meta{b} \ldots \meta{a}\ldots)} \by{=E}{e,a}
+\end{fitchproof}}
+A nota\c c\~ao aqui \'e similar \`a da regra $\exists$I. Assim, $\meta{A}(\ldots \meta{a} \ldots \meta{a}\ldots)$ \'e uma f\'ormula que cont\'em o nome $\meta{a}$, e $\meta{A}(\ldots \meta{b} \ldots \meta{a}\ldots)$ \'e uma f\'ormula obtida substituindo uma ou mais inst\^ancias do nome $\meta{a}$ pelo nome $\meta{b}$. As linhas $m$ e $n$ podem ocorrer em qualquer ordem e n\~ao precisam ser vizinhas, mas sempre citamos a identidade primeiro. Simetricamente, temos:
+\factoidbox{\begin{fitchproof}
+	\have[m]{e}{\meta{a}=\meta{b}}
+	\have[n]{a}{\meta{A}(\ldots \meta{b} \ldots \meta{b}\ldots)}
+	\have[\ ]{ea2}{\meta{A}(\ldots \meta{a} \ldots \meta{b}\ldots)} \by{=E}{e,a}
+\end{fitchproof}}
+Essa regra \`as vezes \'e chamada  \emph{Lei de Leibniz}, em homenagem a Gottfried Leibniz. 
+
+Para ver as regras em a\c c\~ao, provaremos alguns resultados r\'apidos. Primeiro, provaremos que a identidade \'e  \emph{sim\'etrica}:
+ 
+\begin{fitchproof}
+	\open
+		\hypo{ab}{a = b}
+		\have{aa}{a = a}\by{=I}{}
+		\have{ba}{b = a}\by{=E}{ab, aa}
+	\close
+	\have{abba}{a = b \eif b =a}\ci{ab-ba}
+	\have{ayya}{\forall y (a = y \eif y = a)}\Ai{abba}
+	\have{xyyx}{\forall x\, \forall y (x = y \eif y = x)}\Ai{ayya}
+\end{fitchproof}
+Obtemos a linha~$3$ substituindo uma inst\^ancia de `$a$'  na linha~$2$ por uma inst\^ancia de `$b$', pois t\'inhamos `$a= b$' na linha~$1$.
+
+Seguindo, provaremos que a identidade \'e  \emph{transitiva}:
+\begin{fitchproof}
+	\open
+		\hypo{abc}{a = b \eand b = c}
+		\have{ab}{a = b}\ae{abc}
+		\have{bc}{b = c}\ae{abc}
+		\have{ac}{a = c}\by{=E}{ab, bc}
+	\close
+	\have{con}{(a = b \eand b =c) \eif a = c}\ci{abc-ac}
+	\have{conz}{\forall z((a = b \eand b = z) \eif a = z)}\Ai{con}
+	\have{cony}{\forall y\,\forall z((a = y \eand y = z) \eif a = z)}\Ai{conz}
+	\have{conx}{\forall x\,\forall y \forall z((x = y \eand y = z) \eif x = z)}\Ai{cony}
+\end{fitchproof}
+Obtemos a linha~$4$ substituindo `$b$'  na linha~$3$ por `$a$'; uma vez que j\'a t\'inhamos  `$a= b$' na  linha~$2$
+
+%%%%%% -----------------------  CAP  35  EXERCICIOS  --------------------------  
+\practiceproblems
+\problempart
+\label{pr.identity}
+Forne\c ca uma prova para cada um das dez seguintes asser\c c\~oes.
+   
+\begin{earg}
+\item $\atom{P}{a} \eor \atom{Q}{b}, \atom{Q}{b} \eif b=c, \enot\atom{P}{a} \proves \atom{Q}{c}$
+\item $m=n \eor n=o, \atom{A}{n} \proves \atom{A}{m} \eor \atom{A}{o}$
+\item $\forall x\ x=m, \atom{R}{m,a} \proves \exists x\,\atom{R}{x,x}$
+\item $\forall x\,\forall y(\atom{R}{x,y} \eif x=y)\proves \atom{R}{a,b} \eif \atom{R}{b,a}$
+\item $\enot \exists x\enot x = m \proves \forall x\,\forall y (\atom{P}{x} \eif \atom{P}{y})$
+\item $\exists x\,\atom{J}{x}, \exists x\, \enot\atom{J}{x}\proves \exists x\, \exists y\, \enot x = y$
+\item $\forall x(x=n \eiff \atom{M}{x}), \forall x(\atom{O}{x} \eor \enot \atom{M}{x})\proves \atom{O}{n}$
+\item $\exists x\,\atom{D}{x}, \forall x(x=p \eiff \atom{D}{x})\proves \atom{D}{p}$
+\item $\exists x\bigl[(\atom{K}{x} \eand \forall y(\atom{K}{y} \eif x=y)) \eand \atom{B}{x}\bigr], Kd\proves \atom{B}{d}$
+\item $\proves \atom{P}{a} \eif \forall x(\atom{P}{x} \eor \enot x = a)$
+\end{earg}
+
+\problempart
+Mostre que as seguintes senten\c cas s\~ao dedutivamente equivalentes:
+\begin{ebullet}
+\item $\exists x \bigl([\atom{F}{x} \eand \forall y (\atom{F}{y} \eif x = y)] \eand x = n\bigr)$
+\item $\atom{F}{n} \eand \forall y (\atom{F}{y} \eif n= y)$
+\end{ebullet}
+E, portanto, ambas podem igualmente simbolizar a senten\c ca em portugu\^es `Nonato \'e o~$F$'.\\
+
+\problempart
+No cap\'itulo  \ref{sec.identity}, dissemos que as tr\^es seguintes senten\c cas logicamente equivalentes  s\~ao simboliza\c c\~oes da senten\c ca em portugu\^es `existe exatamente um $F$':
+\begin{ebullet}
+\item $\exists x\,\atom{F}{x} \eand \forall x\, \forall y \bigl[(\atom{F}{x} \eand \atom{F}{y}) \eif x = y\bigr]$
+\item $\exists x \bigl[\atom{F}{x} \eand \forall y (\atom{F}{y} \eif x = y)\bigr]$
+\item $\exists x\, \forall y (\atom{F}{y} \eiff x = y)$
+\end{ebullet}
+Mostre que todas s\~ao dedutivamente equivalentes. (\emph{Dica}: para mostrar que tr\^es senten\c cas s\~ao dedutivamente equivalentes, basta mostrar que a  primeiro  prova a segunda, a segunda prova a terceira e a terceira prova a primeira; pense no porqu\^e.)
+
+\
+\problempart
+Simbolize e prove seguinte argumento:
+	\begin{quote}
+		Existe exatamente um $F$. Existe exatamente um $G$. Nada \'e ambos $F$ e $G$. Portanto, existem exatamente duas coisas que  s\~ao ou $F$ ou $G$.
+	\end{quote}
+ 
+%\begin{ebullet}
+%\item  $\exists x \bigl[\atom{F}{x} \eand \forall y (\atom{F}{y} \eif x = y)\bigr], \exists x \bigl[\atom{G}{x} \eand \forall y (\atom{G}{y} \eif x = y)\bigr], \forall x (\enot\atom{F}{x} \eor \enot \atom{G}{x}) \proves \exists x\, \exists y \bigl[\enot x = y \eand \forall z ((\atom{F}{z} \eor \atom{G}{z}) \eif (x = y \eor x = z))\bigr]$
+%\end{ebullet}
+
+%%%%%% -----------------------  CAPITULO  36  - Regras derivadas  --------------------------   
+
+
+\chapter{Regras derivadas}\label{s:DerivedFOL}
+Lembramos que na LVF  primeiro introduzimos \`as regras b\'asicas do sistema de provas  e depois adicionamos outras regras.  Posteriormente mostramos que essas regras adicionais eram todas regras derivadas das regras b\'asica da LVF.  Faremos o mesmo no caso caso da LPO.  No no cap\'itulo \ref{s:BasicFOL} introduzimos algumas regras b\'asicas para a LPO e no capitulo \ref{s:CQ} adicionamos  as  regras de transforma\c c\~ao de quantificadores, CQ.  Veremos que todas as quatro regras CQ podem ser \emph{derivadas} das regras \emph{b\'asicas} da LPO.  
+
+Justificativa da primeira regra CQ:
+\begin{fitchproof}
+	\hypo{An}{\forall x\, \enot \atom{A}{x}}
+	\open
+		\hypo{E}{\exists x\, \atom{A}{x}}
+		\open
+			\hypo{c}{\atom{A}{c}}%\by{for $\exists$E}{}
+			\have{nc}{\enot \atom{A}{c}}\Ae{An}
+			\have{red}{\ered}\ne{nc,c}
+		\close
+		\have{red2}{\ered}\Ee{E,c-red}
+	\close
+	\have{dada}{\enot \exists x\, \atom{A}{x}}\ni{E-red2}
+\end{fitchproof}
+%You will note that on line 3 I have written `for $\exists$E'. This is not technically a part of the proof. It is just a reminder---to me and to you---of why I have bothered to introduce `$\enot \atom{A}{c}$' out of the blue. You might find it helpful to add similar annotations to assumptions when performing proofs. But do not add annotations on lines other than assumptions: the proof requires its own citation, and your annotations will clutter it.
+Justificativa da terceira regra CQ:
+   
+\begin{fitchproof}
+	\hypo{nEna}{\exists x\, \enot \atom{A}{x}} 
+	\open
+		\hypo{Aa}{\forall x\, \atom{A}{x}}
+		\open
+			\hypo{nac}{\enot \atom{A}{c}}%\by{for $\exists$E}{}
+			\have{a}{\atom{A}{c}}\Ae{Aa}
+			\have{con}{\ered}\ne{nac,a}
+		\close
+		\have{con1}{\ered}\Ee{nEna, nac-con}
+	\close
+	\have{dada}{\enot \forall x\, \atom{A}{x}}\ni{Aa-con1}
+\end{fitchproof}
+Isso explica por que estas duas regras podem ser tratadas como derivadas. Semelhante justificativas podem ser oferecidas para as outras duas regras CQ.
+
+%%%%%% -----------------------  CAP  36  EXERCICIOS  -------------------------- 
+\practiceproblems
+
+\problempart
+Mostre que a segunda e a quarta regra  CQ s\~ao regras derivadas.
+
+%%%%%% -----------------------  CAPITULO  37  -  Provas e sem\^antica  --------------------------  
+
+\chapter{Provas e sem\^antica}
+
+Apresentamos ao longo deste livro muitas no\c c\~oes as quais foram classificas de formas diferentes: umas como no\c c\~oes da teoria da prova e outras como  no\c c\~oes sem\^anticas.  Falaremos neste cap\'itulo, mesmo que brevemente, de suas diferen\c cas  e conex\~oes. 
+Por exemplo, usamos duas roletas diferentes.  Por um lado, a roleta \'unica  \proves,  para simbolizar a no\c c\~ao de dedutibilidade. Quando afirmamos 
+$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves \meta{C}$$
+estamos dizendo que h\'a uma prova que termina com $\meta{C}$ e cujas \'unicas suposi\c c\~oes n\~ao descartadas est\~ao entre  $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$. Esta \'e uma no\c c\~ao da \emph{teoria da prova}.   Por outro lado,  a roleta  dupla  \entails, representa simbolicamente a no\c c\~ao de sustenta\c c\~ao. E a afirma\c c\~ao 
+$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \entails \meta{C}$$
+significa que n\~ao h\'a nenhuma valora\c c\~ao (ou interpreta\c c\~ao) na qual  $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ s\~ao todas verdadeiras e~$\meta{C}$ falsa. Isso diz respeito a atribui\c c\~oes de verdade e falsidade \`as senten\c cas. Essa \'e portanto uma \emph{no\c c\~ao sem\^antica}.
+
+Embora nossas no\c c\~oes sem\^antica e de teoria da prova sejam \emph{no\c c\~oes diferentes}, h\'a uma conex\~ao profunda entre elas. Para explicar essa conex\~ao, come\c caremos considerando a rela\c c\~ao entre validade  e teorema.
+
+Para mostrar que uma senten\c ca \'e um teorema, voc\^e s\'o precisa produzir uma prova. Pode ser dif\'icil produzir uma prova de vinte linhas, mas n\~ao \'e t\~ao dif\'icil verificar cada linha da prova e confirmar se ela \'e leg\'itima; e se cada linha da prova individualmente \'e leg\'itima, ent\~ao toda a prova \'e leg\'itima. Mostrar que uma senten\c ca \'e uma validade, no entanto, requer raciocinar sobre todas as interpreta\c c\~oes poss\'iveis. Dada a escolha entre mostrar que uma senten\c ca \'e um teorema e mostrar que \'e uma validade, seria mais f\'acil mostrar que \'e um teorema.
+
+Por outro lado, mostrar que uma senten\c ca \emph{n\~ao} \'e um teorema \'e dif\'icil. Precisamos raciocinar sobre todas as provas (poss\'iveis). Isso \'e muito dif\'icil. No entanto, para mostrar que uma senten\c ca n\~ao \'e uma validade, voc\^e precisa encontrar apenas uma interpreta\c c\~ao na qual essa senten\c ca seja falsa. \'E verdade que pode ser dif\'icil apresentar essa tal interpreta\c c\~ao; mas depois de fazer isso, \'e relativamente simples verificar qual o valor de verdade atribu\'ido a uma senten\c ca. Dada a escolha entre mostrar que uma senten\c ca n\~ao \'e um teorema e mostrar que n\~ao \'e uma validade, seria mais f\'acil mostrar que n\~ao \'e uma validade.
+
+Felizmente, \emph{uma senten\c ca \'e um teorema se e somente se for uma validade}. Como resultado, se fornecermos uma prova de $\meta{A}$ sem suposi\c c\~oes e, assim, mostrarmos que $\meta{A}$ \'e um teorema, i.e., ${}\proves \meta{A}$, podemos legitimamente inferir que $\meta{A}$ 'e uma validade, i.e., $\entails\meta{A}$. Da mesma forma, se construirmos um interpreta\c c\~ao em que \meta{A} seja falsa e, assim, mostrar que ela n\~ao \'e uma validade, i.e., $\nentails \meta{A}$, disto  segue que \meta{A} n\~ao \'e um teorema, i.e.,  $\nproves \meta{A}$.
+
+De maneira mais geral, temos o seguinte resultado poderoso:
+$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves\meta{B} \textbf{ se e somente se }\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \entails\meta{B}$$
+Isso mostra que, embora a dedutibilidade e sustenta\c c\~ao sejam no\c c\~oes \emph{diferentes}, elas s\~ao extensionalmente equivalentes. Assim sendo:
+	\begin{ebullet}
+		\item Um argumento \'e \emph{v\'alido} se e somente se \emph{a conclus\~ao puder ser provada a partir das premissas}.
+		\item Duas senten\c cas s\~ao \emph{logicamente equivalentes} se e somente se \emph{elas s\~ao dedutivamente equivalentes}.
+		\item Senten\c cas s\~ao \emph{satisfat\'orias} se e somente se  \emph{n\~ao s\~ao dedutivamente inconsistentes}.
+	\end{ebullet}
+ 
+Pelos  motivos citados acima, voc\^e pode escolher quando pensar em termos de provas e quando pensar em termos de valora\c c\~oes / interpreta\c c\~oes, fazendo o que for mais f\'acil para uma determinada tarefa. A tabela na pr\'oxima p\'agina resume qual \'e (geralmente) a mais f\'acil.
+
+\'E intuitivo que a dedutibilidade e a sustenta\c c\~ao sem\^antica devam concordar. Mas, \'e bom sempre repetir, n\~ao se deixe enganar pela semelhan\c ca dos s\'imbolos `$\entails$' e `$\proves$'. Esses dois s\'imbolos t\^em significados muito diferentes. O fato de que a dedutibilidade  e a sustenta\c c\~ao sem\^antica concordam n\~ao \'e um resultado f\'acil de mostrar. 
+
+De fato, demonstrar que a dedutibilidade e a sustenta\c c\~ao sem\^antica concordam \'e, muito decisivamente, o ponto em que a l\'ogica introdut\'oria se torna l\'ogica intermedi\'aria.
+
+
+\begin{sidewaystable}\small
+\begin{center}
+\begin{tabular*}{\textwidth}{p{.25\textheight}p{.325\textheight}p{.325\textheight}}
+ & \textbf{Sim}  & \textbf{N\~ao}\\
+\\
+ \meta{A} \'e uma  \textbf{validade}? 
+& d\^e uma prova para  $\proves\meta{A}$ 
+& d\^e  uma interpreta\c c\~ao na qual  \meta{A} seja falsa\\
+\\
+ \meta{A} \'e uma \textbf{contradi\c c\~ao}? &
+d\^e uma prova para $\proves\enot\meta{A}$ & 
+d\^e uma interpreta\c c\~ao na qual \meta{A} seja verdadeira\\
+\\
+%Is \meta{A} contingent? & 
+%give two interpretations, one in which \meta{A} is true and another in which \meta{A} is false & give a proof which either shows $\proves\meta{A}$ or $\proves\enot\meta{A}$\\
+%\\
+ \meta{A} e \meta{B} s\~ao \textbf{equivalentes}? &
+d\^e duas provas, uma para $\meta{A}\proves\meta{B}$ e outra para $\meta{B}\proves\meta{A}$  
+& d\^e uma interpreta\c c\~ao na qual \meta{A} e \meta{B} tenham diferentes valores de verdade\\
+\\
+$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ s\~ao  \textbf{conjuntamente satisfat\'orias}? 
+& d\^e uma interpreta\c c\~ao na qual todas as senten\c cas $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sejam verdadeiras 
+& prove uma contradi\c c\~ao a partir das suposi\c c\~oes $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$\\
+\\
+$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$  \'e \textbf{v\'alido}?
+& d\^e uma prova para a senten\c ca \meta{C} a  partir das suposi\c c\~oes $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$  
+& d\^e uma interpreta\c c\~ao na qual cada uma das suposi\c c\~oes $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ seja verdadeira e \meta{C}  falsa\\
+\end{tabular*}
+\end{center}
+\end{sidewaystable}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

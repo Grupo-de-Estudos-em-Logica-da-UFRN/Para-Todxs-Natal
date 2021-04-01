@@ -1,0 +1,2151 @@
+%!TEX root = forallxyyc.tex
+\normalsize
+\part{Tabelas de verdade}
+\label{ch.TruthTables}
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+
+\chapter{Tabelas de verdade características}
+\label{s:CharacteristicTruthTables}
+
+Qualquer sentença da LVF é composta por letras sentenciais, possivelmente combinadas pelos conectivos sentenciais.
+O valor de verdade de uma sentença composta depende apenas do valor de verdade das letras sentenciais que a compõem.
+Para sabermos o valor de verdade de `$(D \eand E)$', por exemplo, basta sabermos o valor de verdade de `$D$' e `$E$'; exatamente do mesmo modo que saber o valor numérico de `$x+y$' depende apenas de saber os valores numéricos de `$x$' e `$y$'.
+
+No Capítulo \ref{s:TFLConnectives} nós apresentamos os cinco conectivos da LVF:
+`$\enot$', `$\eand$', `$\eor$', `$\eif$', `$\eiff$'.
+O que precisamos fazer agora é explicar qual é o tipo de operação que cada um deles faz com os valores de verdade.
+Por conveniência, abreviaremos `Verdadeiro' por `V' e `Falso' por `F'.
+Mas, que fique bem claro, os dois valores de verdade que nos interessam são o Verdadeiro (a verdade) e o Falso (a falsidade). Os valores de verdade não são \emph{letras}!
+
+\paragraph{Negação.} Para qualquer sentença \meta{A}: Se \meta{A} for verdadeira, então \enot\meta{A} é falsa e se \meta{A} for falsa, então \enot\meta{A} é verdadeira. Essa regra pode ser expressa na seguinte \emph{tabela de verdade característica} para a negação:
+\begin{center}
+\begin{tabular}{c|c}
+\meta{A} & \enot\meta{A}\\
+\hline
+V & F\\
+F & V 
+\end{tabular}
+\end{center}
+
+\paragraph{Conjunção.} Para quaisquer sentenças \meta{A} e \meta{B}, a sentença \mbox{\meta{A} \eand\ \meta{B}} é verdadeira se e somente se \meta{A} e \meta{B} forem ambas verdadeiras.
+Podemos expressar esta regra na seguinte tabela da verdade característica para conjunção:
+\begin{center}
+\begin{tabular}{c c |c}
+\meta{A} & \meta{B} & $\meta{A}\eand\meta{B}$\\
+\hline
+V & V & V\\
+V & F & F\\
+F & V & F\\
+F & F & F
+\end{tabular}
+\end{center}
+Observe que a conjunção é uma operação \emph{simétrica}.
+Ou seja, o valor de verdade para $\meta{A} \eand \meta{B}$ sempre é o mesmo que o valor de verdade para $\meta{B} \eand \meta {A}$.  
+
+\paragraph{Disjunção.} Lembre-se de que `$\eor$' sempre representa o ou inclusivo.
+Portanto, para quaisquer sentenças \meta{A} e \meta{B}, a sentença $\meta{A} \eor \meta{B}$ é verdadeira se e somente se \meta{A} ou \meta{B} forem verdadeiros. Podemos expressar isso na seguinte tabela da verdade característica para disjunção:
+\begin{center}
+\begin{tabular}{c c|c}
+\meta{A} & \meta{B} & $\meta{A}\eor\meta{B}$ \\
+\hline
+V & V & V\\
+V & F & V\\
+F & V & V\\
+F & F & F
+\end{tabular}
+\end{center}
+Como a conjunção, a disjunção também é simétrica.
+$\meta{A} \eor \meta{B}$ sempre tem o mesmo valor de verdade que $\meta{B} \eand \meta {A}$.
+
+\paragraph{Condicional.} Temos que admitir, sem meias palavras, que os condicionais são uma bagunça na LVF.
+Exatamente quão bagunçados os condicionais da LVF são, é uma questão \emph{filosoficamente} controversa.
+Discutiremos algumas de suas sutilezas nas Seções \ref{s:IndicativeSubjunctive} e \ref{s:ParadoxesOfMaterialConditional}.
+Por enquanto, vamos estipular o seguinte:
+$\meta{A} \eif \meta{B}$ será uma sentença falsa se e somente se \meta{A} for verdadeira e \meta{B} for falsa.
+Podemos expressar esta regra através da seguinte tabela de verdade característica para o condicional.
+\begin{center}
+\begin{tabular}{c c|c}
+\meta{A} & \meta{B} & $\meta{A}\eif\meta{B}$\\
+\hline
+V & V & V\\
+V & F & F\\
+F & V & V\\
+F & F & V
+\end{tabular}
+\end{center}
+O condicional, diferentemente da conjunção e disjunção, é um operador \emph{assimétrico}.
+Você não pode trocar o antecedente pelo consequente sem alterar o significado da sentença, porque \mbox{$\meta{A} \eif \meta{B}$} tem uma tabela de verdade muito diferente de $\meta{B} \eif \meta{A}$.
+
+Apesar de estranha, a estipulação dada pela tabela acima não é de todo arbitrária.
+Um modo de entendermos isso é pensarmos o seguinte:
+quem sustenta que `Se A então B', ou seja `$(A \eif B)$' é uma sentença verdadeira, está assumindo um único compromisso:
+o de que `$B$' tem que ser verdadeira sempre que `$A$' for verdadeira.
+Se, por acaso, `$A$' for falsa, nenhum compromisso sobre a verdade ou falsidade de `$B$' é assumido.
+Por exemplo, se a professora diz a uma de suas alunas que se ela tiver mais de dez faltas, então ela será reprovada, `$(D \eif R)$', o único compromisso que a professora está assumindo é que mais de dez faltas reprova a aluna.
+Ao tomar esta sentença condicional como verdadeira, a professora não está dizendo nada sobre o que acontece à aluna caso ela não tenha mais do que dez faltas.
+Ou seja, se o antecedente do condicional `$D$' for falso (a aluna não tem mais de dez faltas), a aluna tanto pode ser aprovada como reprovada, dependendo de seu desempenho na disciplina.
+E nem a aprovação nem a reprovação da aluna falsificam a afirmação condicional da professora.
+Então, a única situação que falsifica a sentença condicional é quando seu antecedente é verdadeiro e seu consequente falso (segunda linha da tabela).
+Em todas as outras situações (outras três linhas da tabela) a afirmação condicional pode ser sustentada sem qualquer quebra de compromisso e, por isso, deve ser considerada verdadeira.
+
+\paragraph{Bicondicional.}Dado que um bicondicional deve ser o mesmo que a conjunção das duas direções de um condicional, sua tabela de verdade característica deve ser:
+\begin{center}
+\begin{tabular}{c c|c}
+\meta{A} & \meta{B} & $\meta{A}\eiff\meta{B}$\\
+\hline
+V & V & V\\
+V & F & F\\
+F & V & F\\
+F & F & V
+\end{tabular}
+\end{center}
+Sem surpresa, o bicondicional é simétrico.
+
+
+\chapter{Conectivos verofuncionais}
+\label{s:TruthFunctionality}
+
+\section{A ideia da verofuncionalidade}
+Vamos introduzir uma ideia importante.
+	\factoidbox{
+		Um conectivo é \define{verofuncional} (também chamado de \define{funcao de verdade}) se o valor de verdade de uma sentença em que esse conectivo é o conectivo principal for determinado exclusivamente pelos valores de verdade das sentenças que a constituem.
+	}
+        
+Todos os conectivos da LVF são realmente verofuncionais (funções de verdade).
+O valor de verdade de uma negação é determinado exclusivamente pelo valor de verdade da sentença não negada.
+O valor de verdade de uma conjunção é determinado exclusivamente pelo valor de verdade de ambos os conjuntos.
+O valor de verdade de uma disjunção é determinado exclusivamente pelo valor de verdade de ambos os disjuntos, e assim por diante.
+Para determinar o valor de verdade de qualquer sentença LVF, precisamos apenas conhecer o valor de verdade de suas partes componentes.
+
+A LVF é, então, a lógica das funções de verdade, e é este fato que seu nome indica: \emph{LVF $=$ lógica verofuncional}.
+
+Em inúmeras linguagens, há conectivos que não são verofuncionais.
+Em português, por exemplo, podemos formar uma nova sentença a partir de qualquer sentença mais simples, prefixando-a com `É necessariamente o caso que\ldots'.
+Mas o valor de verdade desta nova sentença não é determinado apenas pelo valor de verdade da sentença original.
+Considere, por exemplo, duas sentenças verdadeiras:
+	\begin{earg}
+		\item $2 + 2 = 4$
+		\item Luiz Gonzaga e Humberto Teixeira compuseram Asa Branca
+	\end{earg}
+Enquanto é necessariamente o caso que $2+2=4$, obviamente não é \emph{necessariamente} o caso que Luiz Gonzaga e Humberto Teixeira compuseram Asa Branca.
+Luiz Gonzaga poderia nunca ter conhecido Humberto Teixeira, Asa Branca poderia nunca ter sido composta, ou muitas outras possibilidades.
+Portanto, `é necessariamente o caso que\ldots' é um conectivo do português, mas não é uma função de verdade.
+Não é um conectivo \emph{verofuncional}.
+
+
+
+\section{Simbolização \emph{versus} Tradução}
+Todos os conectivos da LVF são funções de verdade.
+Mais do que isso:  eles realmente não fazem \emph{nada além de} um mapeamento entre os valores de verdade.  
+
+Quando nós simbolizamos uma sentença ou argumento na LVF, ignoramos tudo que \emph{extrapola} a contribuição que os valores de verdade de um componente podem dar ao valor de verdade do todo.
+Existem sutilezas em nossas afirmações comuns que ultrapassam em muito seus meros valores de verdade.
+Sarcasmo; lirismo; conotações maliciosas; ênfase; ironia; essas são partes importantes do discurso cotidiano, mas nada disso é capturado pela LVF.
+Conforme observado no Capítulo \ref{s:TFLConnectives},
+a LVF não pode capturar as diferenças sutis entre, por exemplo, as seguintes sentenças em português:
+	\begin{earg}
+		\item Mila é professora de lógica e Mila é uma pessoa legal.
+		\item Embora Mila seja uma professora de lógica, Mila é uma pessoa legal.
+		\item Mila é uma professora de lógica, apesar de ser uma pessoa legal.
+		\item Mila é uma pessoa legal, mas também uma professora de lógica.
+		\item Mila, não obstante a ser uma professora de lógica, é uma pessoa legal.
+	\end{earg}
+Todas essas sentenças são simbolizadas com a mesma sentença da LVF, talvez `$P \eand L$'.
+
+Nós temos dito que usamos as sentenças da LVF para \emph{simbolizar} sentenças em português.
+Muitos outros livros preferem dizer que as sentenças do português são \emph{traduzidas} para a LVF.
+No entanto, uma boa tradução deve preservar certas facetas do significado e, como acabamos de salientar, a LVF simplesmente não consegue fazer isso.
+É por isso que falaremos de \emph{simbolização} das sentenças em português, em vez de \emph{tradução}.\footnote{
+Um outro termo empregado por filósofos e lógicos com este sentido de simbolização que se contrapõe à ideia de tradução é: \emph{arregimentação}.}
+
+Isso afeta o modo como devemos entender as nossas chaves de simbolização.
+Considere a seguinte chave de simbolização:
+	\begin{ekey}
+		\item[P] Mila é uma professora de lógica.
+		\item[L] Mila é uma pessoa legal.
+	\end{ekey}
+Outros livros didáticos entenderão isso como uma estipulação de que a sentença `$L$' da LVF deve \emph{significar} que Mila é uma professora de lógica, e `$N$' deve \emph{significar} que Mila é uma pessoa legal.
+No entanto, a LVF não possui nenhum recurso para lidar com significados de letras sentenciais.
+A chave de simbolização acima está fazendo nada mais nem menos do que estipular que a sentença `$P$' deve ter o mesmo valor de verdade que a sentença do português `Mila é uma professora de lógica' (qualquer que seja este valor) e que a sentença `$L$' deve ter o mesmo valor de verdade que `Mila é uma pessoa legal' (qualquer que seja ele).
+	\factoidbox{
+		Ao consideramos que uma sentença da LVF apenas \emph{simboliza} uma sentença em português, estamos, com isso, nada mais que estipulando que a sentença da LVF deve ter o mesmo valor de verdade que a sentença em português.
+	}
+
+\section[Indicativo \emph{versus} subjuntivo]{Condicionais indicativos \emph{versus} condicionais subjuntivos}\label{s:IndicativeSubjunctive}
+Vamos esclarecer um pouco melhor a limitação da LVF que restringe seus conectivos a funções de verdade, olhando um pouco mais atentamente para o caso das sentenças condicionais.
+Quando introduzimos a tabela de verdade característica para o condicional material, no Capítulo \ref{s:CharacteristicTruthTables}, reconhecemos sua estranheza e procuramos justificá-la com um exemplo.
+Vamos, agora, aprofundar um pouco mais aquela justificativa, seguindo as indicações de Dorothy Edgington.\footnote{Dorothy Edgington, `Conditionals', 2006, em \emph{Stanford Encyclopedia of Philosophy} (\url{http://plato.stanford.edu/entries/conditionals/}).} 
+
+Suponha que Lara tenha desenhado algumas formas em um pedaço de papel e tenha pintado algumas delas.
+Eu não vi o que ela fez, mas, mesmo assim, faço a seguinte afirmação:
+	\begin{quote}
+		Se alguma forma é cinza, então esta forma é também circular.
+	\end{quote}
+Suponha que Lara tenha feito os seguintes desenhos:
+\begin{center}
+\begin{tikzpicture}
+	\node[circle, grey_shape] (cat1) {A};
+	\node[right=10pt of cat1, diamond, phantom_shape] (cat2)  { } ;
+	\node[right=10pt of cat2, circle, white_shape] (cat3)  {C} ;
+	\node[right=10pt of cat3, diamond, white_shape] (cat4)  {D};
+\end{tikzpicture}
+\end{center}
+Nesse caso, minha afirmação é certamente verdadeira.
+As formas C e D não são cinza e por isso não se constituem em \emph{contraexemplos} à minha afirmação.
+A forma A \emph{é} cinza, mas felizmente também é circular.
+Portanto, minha afirmação não tem contra-exemplos.
+Deve, por isso, ser verdadeira.
+Isso significa que cada uma das seguintes \emph{instâncias} da minha afirmação também deve ser verdadeira:
+{\small 
+	\begin{ebullet}
+		\item Se A é cinza, então é circular\ \ \hfill (antecedente V, consequente V)
+		\item Se C é cinza, então é circular\ \ \hfill (antecedente F, consequente V)
+		\item Se D é cinza, então é circular\  \ \hfill (antecedente F, consequente F)
+	\end{ebullet}}
+No entanto, suponha que Lara tivesse desenhado uma forma a mais:
+\begin{center}
+\begin{tikzpicture}
+	\node[circle, grey_shape] (cat1) {A};
+	\node[right=10pt of cat1, diamond, grey_shape] (cat2)  {B};
+	\node[right=10pt of cat2, circle, white_shape] (cat3)  {C};
+	\node[right=10pt of cat3, diamond, white_shape] (cat4)  {D};
+\end{tikzpicture}
+\end{center}
+neste caso, podemos ver que não é verdade que ``se alguma forma é cinza, então esta forma também é circular''.
+A figura B corresponde a um contraexemplo para a minha afirmação, que seria, por isso, falsa.
+Portanto, a seguinte instância de minha afirmação tem que ser  falsa:
+{\small
+	\begin{ebullet}
+		\item Se B é cinza, então é circular \ \ \hfill (antecedente V, consequente F)
+	\end{ebullet}}
+Agora, lembre-se de que todos os conectivos da LVF são verofuncionais. Isso significa que os valores de verdade do antecedente e consequente devem determinar exclusivamente o valor de verdade do condicional como um todo.
+Assim, a partir dos valores de verdade das quatro instâncias de minha afirmação---que nos fornecem todas as combinações possíveis para a verdade e falsidade de antecedente e consequente---obtemos a tabela da verdade para o condicional material.
+As instâncias relacionadas às figuras A, C e D nos dão as linhas em que o condicional é verdadeiro, e a instância relacionada à figura B nos dá a linha em que o condicional é falso.
+
+O que essa explicação mostra é que o `$\eif$' da LVF é o \emph{melhor} que uma interpretação verofuncional do condicional pode nos dar.
+Dito de outra forma, \emph{é o melhor condicional que a LVF pode fornecer}.
+Mas será que o `$\eif$' da LVF é bom como um substituto dos condicionais que usamos na linguagem cotidiana?
+Considere as duas sentenças seguintes:
+	\begin{earg}
+		\item[\ex{brownwins1}] Se Fernando Haddad tivesse vencido a eleição de 2018, ele teria sido o 38º  presidente do Brasil.
+		\item[\ex{brownwins2}] Se Fernando Haddad tivesse vencido a eleição de 2018, ele teria sido o 99º presidente do Brasil.
+	\end{earg}
+Uma rápida pesquisa na internet sobre as eleições de 2018 e sobre os presidentes do Brasil nos mostra claramente que a sentença \ref{brownwins1} é verdadeira e a sentença \ref{brownwins2} é falsa.
+No entanto, ambas são sentenças condicionais (têm a forma `se\ldots então\ldots') e, de acordo com os fatos que realmente ocorreram, as indicações dos antecedentes e dos consequentes das duas sentenças, quando consideradas isoladamente, são todas falsas.
+Ou seja, Fernando Haddad não venceu as eleições de 2018 (os dois antecedentes, vistos isoladamente, são falsos), e ele não foi nem o 38º nem o 99º presidente do Brasil (os dois consequentes, vistos isoladamente, são falsos).
+Portanto, o valor de verdade das sentenças \ref{brownwins1} e \ref{brownwins2} acima não são determinados  exclusivamente pelos valores de verdade de suas partes (antecedentes e consequentes),
+porque valores idênticos aos antecedentes e consequentes (Falso e Falso) levaram a valores de verdade distintos nas sentenças.
+A primeira é verdadeira e a segunda é falsa.
+Nenhuma tabela de verdade jamais conseguirá apontar a diferença entre o valor de verdade de \ref{brownwins1} e \ref{brownwins2}.
+Isso mostra que os condicionais usados nas sentenças \ref{brownwins1} e \ref{brownwins2} não são verofuncionais.
+Não são funções de verdade e, por isso, não podem ser adequadamente simbolizados na LVF.
+
+Esta é uma lição de cautela e modéstia.
+Não assuma, levianamente, que você sempre consegue simbolizar adequadamente as sentenças condicionais do português `se\ldots, então\ldots' com o `$\eif$' da LVF, porque em muitos casos você simplesmente não conseguirá.
+
+O ponto crucial é que as sentenças \ref{brownwins1} e \ref{brownwins2} empregam condicionais \emph{subjuntivos}, em vez de \emph{indicativos}.
+Eles nos solicitam que imaginemos algo contrário aos fatos---Fernando Haddad perdeu a eleição de 2018---e depois nos pedem para avaliar o que \emph{teria} acontecido nesse caso.
+Tais considerações simplesmente não podem ser abordadas com o  `$\eif$'.
+
+Falaremos mais sobre as dificuldades com condicionais na Seção \ref{s:ParadoxesOfMaterialConditional}.
+Por enquanto é suficiente lembrarmos da observação de que `$\eif$' é o único candidato a um condicional verofuncional da TFL; no entanto, muitas sentenças condicionais em português não serão representadas adequadamente por `$\eif$'.
+A LVF é uma linguagem intrinsecamente limitada.
+
+
+\chapter{Tabelas de verdade completas}
+\label{s:CompleteTruthTables}
+
+Até agora, consideramos atribuir valores de verdade às sentenças LVF apenas indiretamente.
+Dissemos, por exemplo, que uma sentença LVF como `$C$' deve ter o mesmo valor de verdade que a sentença em português `A praia de Copacabana fica no Rio de Janeiro' (qualquer que seja esse valor de verdade).
+Mas também podemos atribuir valores de verdade \emph{diretamente} às letras sentenciais da LVF.
+Podemos simplesmente estipular que `$C$' deve ser verdadeira, ou estipular que deve ser falsa.
+	\factoidbox{
+		Uma \define{valoracao} é qualquer atribuição de valores de verdade a um grupo particular de sentenças da LVF.
+	}
+
+O poder das tabelas de verdade consiste no seguinte:
+dado um certo conjunto de letras sentenciais, cada linha de uma tabela de verdade representa uma valoração possível para este conjunto de letras sentenciais.
+A tabela da verdade completa representa todas valorações possíveis para estas letras sentenciais; assim, a tabela verdade nos fornece um meio de calcular os valores de verdade de sentenças complexas, em cada uma das valorações possíveis.
+Isso é mais fácil de entender através de um exemplo.
+
+\section{Exemplo de uma tabela de verdade}
+Considere a sentença:
+$$(H\eand I)\eif H$$
+Existem quatro maneiras possíveis de atribuir Verdadeiro e Falso às letras sentenciais `$H$' e `$I$' que ocorrem nesta sentença---ou seja, existem quatro valorações possíveis para este conjunto de duas letras sentenicias---que podemos representar da seguinte maneira:
+\begin{center}
+\begin{tabular}{c c|d e e e f}
+$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+\hline
+ V & V\\
+ V & F\\
+ F & V\\
+ F & F
+\end{tabular}
+\end{center}
+Para calcular o valor de verdade da sentença completa \mbox{`$(H \eand I) \eif H$'}, primeiro copiamos os valores de verdade das letras sentenciais (lado esquerdo do traço vertical da tabela abaixo), de cada linha, e os escrevemos abaixo das letras sentenciais na sentença (lado direito do traço vertical da tabela abaixo):
+\begin{center}
+\begin{tabular}{c c|d e e e f}
+$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+\hline
+ V & V & {V} & & {V} & & {V}\\
+ V & F & {V} & & {F} & & {V}\\
+ F & V & {F} & & {V} & & {F}\\
+ F & F & {F} & & {F} & & {F}
+\end{tabular}
+\end{center}
+Agora considere a subsentença `$(H \eand I)$'.
+Ela é uma conjunção, $(\meta{A} \eand \meta{B})$, com `$H$' como \meta{A} e `$I$' como \meta{B}.
+A tabela de verdade característica para conjunção, que vimos no Capítulo \ref{s:CharacteristicTruthTables}, fornece as condições de verdade para \emph{qualquer} sentença no formato $(\meta{A} \eand \meta{B})$, qualquer que sejam as sentenças $\meta{A}$ e $\meta{B}$.
+Aquela tabela característica apenas indica o fato de que uma conjunção é verdadeira se ambos os conjuntos (as subsentenças da conjunção) forem verdadeiros.
+Nesse caso, nossos conjuntos são apenas `$H$' e `$I$'.
+E ambos são verdadeiros na (e somente na) primeira linha da tabela de verdade.
+Então, usando este fato, podemos preencher o valor de verdade desta conjunção nas quatro linhas.
+\begin{center}
+\begin{tabular}{c c|d e e e f}
+ & & \meta{A} & \eand & \meta{B} & & \\
+$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+\hline
+ V & V & V & {\textbf{V}} & V & & V\\
+ V & F & V & {\textbf{F}} & F & & V\\
+ F & V & F & {\textbf{F}} & V & & F\\
+ F & F & F & {\textbf{F}} & F & & F
+\end{tabular}
+\end{center}
+Agora, a sentença completa que nos interessa aqui é um condicional $\meta{A} \eif \meta{B}$, com `$(H \eand I)$' como \meta{A} e com `$H$' como \meta{B}.
+Então, para preencher nossa tabela, usamos a tabela de verdade característica do condicional, que estabelece que um condicional é falso apenas quando seu antecedente é verdadeiro e seu consequente é falso.
+Por exemplo, na primeira linha de preenchimento `$(H \eand I)$' e `$H$' são ambas verdadeiras.
+Então, de acordo com a tabela característica, o condicional é verdadeiro neste caso, e colocamos um `V' na primeira linha, abaixo do símbolo do condicional.
+Fazemos o mesmo procedimento nas outras três linhas e obtemos o seguinte:
+\begin{center}
+\begin{tabular}{c c| d e e e f}
+ & &  & \meta{A} &  &\eif &\meta{B} \\
+$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+\hline
+ V & V &  & {V} &  &{\textbf{V}} & V\\
+ V & F &  & {F} &  &{\textbf{V}} & V\\
+ F & V &  & {F} &  &{\textbf{V}} & F\\
+ F & F &  & {F} &  &{\textbf{V}} & F
+\end{tabular}
+\end{center}
+O condicional é o conectivo principal da sentença, portanto, a coluna de `V's abaixo do condicional nos diz que a sentença \mbox{`$(H \eand I) \eif H$'} é verdadeira em todos os casos possíveis para os valores de verdade de `$H$' e `$I$'.
+Como consideramos todas as quatro valorações possíveis para o par `$H$' e `$I$', podemos dizer que `$(H \eand I) \eif H$' é verdadeira em todas as valorações.
+
+Neste exemplo, não repetimos todas as inscrições de `V' e `F' em todas as colunas de cada tabela que apresentamos.
+Porém, quando de fato fazemos tabelas de verdade no papel, é impraticável apagar colunas inteiras ou reescrever a tabela inteira em cada etapa.
+Embora fique mais poluída (cheia de `V's e `F's), esta tabela de verdade quando feita, de modo completo, sem apagar nada, fica da seguinte maneira:
+\begin{center}
+\begin{tabular}{c c| d e e e f}
+$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+\hline
+ V & V & V & {V} & V & \TTbf{V} & V\\
+ V & F & V & {F} & F & \TTbf{V} & V\\
+ F & V & F & {F} & V & \TTbf{V} & F\\
+ F & F & F & {F} & F & \TTbf{V} & F
+\end{tabular}
+\end{center}
+A maioria das inscrições de `V' e `F' abaixo da sentença (nas colunas do lado direito do traço vertical) está ali apenas para fins de contabilidade.
+Elas representam os passos intermediários na construção da tabela.
+A coluna que mais importa é a coluna abaixo do \emph{conectivo principal} da sentença, pois ela indica o valor de verdade da sentença completa em cada valoração.
+Nós enfatizamos isso, colocando esta coluna em negrito.
+Quando você trabalhar nas suas tabelas da verdade, enfatize-as da mesma forma (talvez sublinhando, mudando a cor,...).
+
+
+\section{Construindo tabelas de verdade completas}
+Uma \define{tabela de verdade completa} para uma sentença \meta{A} tem uma linha para cada atribuição possível de Verdadeiro ou Falso para as letras sentencias presentes na sentença.
+Cada linha da tabela corresponde a uma \emph{valoração} das letras sentencias de \meta{A}, e uma tabela de verdade completa possuirá, portanto, uma linha para cada uma destas valorações.
+
+Então o tamanho (a quantidade de linhas) de uma tabela de verdade completa depende do número de letras sentenciais diferentes na tabela.
+Uma sentença que contém apenas uma letra sentencial requer apenas duas linhas, como na tabela de verdade característica para negação.
+E isso é verdade mesmo que a mesma letra seja repetida várias vezes, como na sentença:
+$$[(C\eiff C) \eif C] \eand \enot(C \eif C)$$
+Sua tabela de verdade completa requer apenas duas linhas, porque existem apenas duas possibilidades:
+`$C$' pode ser verdadeira ou falsa.
+A tabela de verdade para esta sentença fica assim:
+\begin{center}
+\begin{tabular}{c| d e e e e e e e e e e e e e e f}
+$C$&$[($&$C$&\eiff&$C$&$)$&\eif&$C$&$]$&\eand&\enot&$($&$C$&\eif&$C$&$)$\\
+\hline
+ V &    & V &  V  & V &   & V  & V & &\TTbf{F}&  F& &   V &  V  & V &   \\
+ F &    & F &  V  & F &   & F  & F & &\TTbf{F}&  F& &   F &  V  & F &   \\
+\end{tabular}
+\end{center}
+Observando a coluna abaixo do operador lógico principal, vemos que a sentença é falsa nas duas linhas da tabela; ou seja, a sentença é falsa, independentemente de `$C$' ser verdadeira ou falsa.
+A sentença é falsa em todas as valorações.
+
+Uma sentença que contenha duas letras sentenciais requer quatro linhas para uma tabela de verdade completa, como nas tabelas de verdade características para nossos conectivos binários e como na tabela de verdade completa para `$(H \eand I) \eif H$'.
+
+Uma sentença \meta{A} que contenha três letras sentenciais requer oito linhas para sua tabela completa:
+\begin{center}
+\begin{tabular}{c c c|d e e e f}
+$M$&$N$&$P$&$M$&\eand&$(N$&\eor&$P)$\\
+\hline
+%           M        &     N   v   P
+V & V & V & V & \TTbf{V} & V & V & V\\
+V & V & F & V & \TTbf{V} & V & V & F\\
+V & F & V & V & \TTbf{V} & F & V & V\\
+V & F & F & V & \TTbf{F} & F & F & F\\
+F & V & V & F & \TTbf{F} & V & V & V\\
+F & V & F & F & \TTbf{F} & V & V & F\\
+F & F & V & F & \TTbf{F} & F & V & V\\
+F & F & F & F & \TTbf{F} & F & F & F
+\end{tabular}
+\end{center}
+Através desta tabela sabemos que a sentença `$M \eand (N \eor P)$' pode ser verdadeira ou falsa, dependendo dos valores de verdade de `$M$', `$N$' e `$P$'.
+A segunda linha, por exemplo, nos mostra, que quando `$M$' e `$N$' são verdadeiras e `$P$' é falsa, a sentença `$M \eand (N \eor P)$' é verdadeira.
+Já a oitava linha nos mostra quer quando `$M$', `$N$' e `$P$' são todas falsas, a sentença completa também é falsa.
+
+Uma tabela de verdade completa para uma sentença com quatro letras sentenciais diferentes requer 16 linhas.
+Cinco letras, 32 linhas.
+Seis letras, 64 linhas.
+E assim por diante.
+Para ser perfeitamente geral: se uma tabela verdade completa tiver $n$ letras sentenciais diferentes, ela deverá ter $2^n$ linhas.
+
+Para preencher as colunas abaixo das letras sentenciais de uma tabela de verdade completa, que indicam as diversas valorações (a parte do lado esquerdo do traço vertical da tabela), comece com a letra sentencial mais à direita e preencha as linhas de sua coluna com valores alternados `V' e `F', até completar o número total de linhas.
+Na próxima coluna à esquerda, preencha-a de duas em duas linhas, alternando entre dois `V's, depois dois `F's, até completar o número total de linhas.
+Para a terceira letra sentencial, preencha sua coluna com quatro `T's seguidos de quatro `F's. Isso gera uma tabela de verdade de 8 linhas como a acima.
+Para uma tabela de verdade de 16 linhas, a próxima coluna de letras sentenciais deve ter oito `T's seguidos de oito `F's.
+Para uma tabela de 32 linhas, a próxima coluna teria 16 `T's seguidos por 16` F's e assim por diante.
+
+Seguindo este procedimento, uma tabela para uma sentença como
+$$(A \eand B) \eiff (C \eor \enot D)$$
+com 4 letras sentenciais, terá
+$$2^4=16$$
+linhas, cujo preenchimento das colunas das valorações nos daria:
+\begin{center}
+\begin{tabular}{c c c c|c}
+$A$&$B$&$C$&$D$&$(A \eand B) \eiff (C \eor \enot D)$\\
+\hline
+V & V & V & V &  \\
+V & V & V & F &  \\
+V & V & F & V & \\
+V & V & F & F & \\
+V & F & V & V & \\
+V & F & V & F & \\
+V & F & F & V & \\
+V & F & F & F & \\
+F & V & V & V & \\
+F & V & V & F & \\
+F & V & F & V & \\
+F & V & F & F & \\
+F & F & V & V & \\
+F & F & V & F & \\
+F & F & F & V & \\
+F & F & F & F & 
+\end{tabular}
+\end{center}
+Bem, aproveite a ocasião e preencha todos os valores deta tabela de verdade!
+
+
+\section{Mais sobre os parênteses}\label{s:MoreBracketingConventions}
+Considere as duas seguintes sentenças:
+	\begin{align*}
+		((A \eand B) \eand C)\\
+		(A \eand (B \eand C))
+	\end{align*}
+Elas são verofuncionalmente equivalentes.
+Ou seja, é impossível que tenham valores de verdade diferentes.
+Suas tabelas de verdade são idênticas.
+Para mesmos valores de verdade de `$A$', `$B$' e `$C$', as duas sentenças terão exatamente os mesmos valores de verdade.
+São ambas verdadeiras apenas no caso de suas três letras sentenciais serem todas verdadeiras e são falsas em todos os outros casos.
+Como os valores de verdade são tudo o que importa na LVF (veja o Capítulo \ref{s:TruthFunctionality}), não faz muita diferença diferenciar uma da outra.
+Apesar disso, não devemos simplesmente descartar os parênteses nessas sentenças.
+A expressão
+	\begin{align*}
+		A \eand B \eand C
+	\end{align*}
+é ambígua entre as duas sentenças acima e não deve ser usada.
+A mesma observação vale para as disjunções.
+As seguintes sentenças são logicamente equivalentes:
+	\begin{align*}
+		((A \eor B) \eor C)\\
+		(A \eor (B \eor C))
+	\end{align*}
+Mas não devemos, por isso, escrever simplesmente:
+	\begin{align*}
+		A \eor B \eor C
+	\end{align*}
+De fato, é uma especificidade das tabelas de verdade características de $\eor$ e $\eand$ que garante que quaisquer duas conjunções (ou disjunções) das mesmas sentenças sejam verofuncionalmente equivalentes, independentemente de como os parênteses estejam dispostos.
+No entanto, \emph{isto é válido apenas para conjunções e disjunções}.
+As duas sentenças seguintes, por exemplo, possuem tabelas de verdade \emph{diferentes} e não são, por isso, equivalentes.
+	\begin{align*}
+		((A \eif B) \eif C)\\
+		(A \eif (B \eif C))
+	\end{align*}
+Então, se escrevêssemos:
+	\begin{align*}
+		A \eif B \eif C
+	\end{align*}
+isto seria perigosamente ambíguo.
+Não usar parênteses neste caso seria desastroso.
+Da mesma forma as sentenças abaixo também têm tabelas de verdade diferentes:
+	\begin{align*}
+		((A \eor B) \eand C)\\
+		(A \eor (B \eand C))
+	\end{align*}
+Então, se escrevêssemos:
+	\begin{align*}
+		A \eor B \eand C
+	\end{align*}
+isto seria perigosamente ambíguo.
+A moral da estória é: \emph{nunca omita os parênteses} (exceto os mais externos).
+
+
+\practiceproblems\label{pr.TT.TTorC}
+\problempart
+Faça as tabelas de verdade completas para cada uma das seguintes 9 sentenças:
+\begin{earg}
+\item $A \eif A$ %taut
+\item $C \eif\enot C$ %contingent
+\item $(A \eiff B) \eiff \enot(A\eiff \enot B)$ %tautology
+\item $(A \eif B) \eor (B \eif A)$ % taut
+\item $(A \eand B) \eif (B \eor A)$  %taut
+\item $\enot(A \eor B) \eiff (\enot A \eand \enot B)$ %taut
+\item $\bigl[(A\eand B) \eand\enot(A\eand B)\bigr] \eand C$ %contradiction
+\item $[(A \eand B) \eand C] \eif B$ %taut
+\item $\enot\bigl[(C\eor A) \eor B\bigr]$ %contingent
+\end{earg}
+
+\problempart
+Verifique se as afirmações sobre equivalência que acabamos de fazer na Seção \ref{s:MoreBracketingConventions} estão de fato corretas.
+Ou seja, mostre que:
+\begin{earg}
+	\item `$((A \eand B) \eand C)$' e `$(A \eand (B \eand C))$' têm tabelas de verdade idênticas.
+	\item `$((A \eor B) \eor C)$' e `$(A \eor (B \eor C))$' têm tabelas de verdade idênticas.
+	\item `$((A \eor B) \eand C)$' e `$(A \eor (B \eand C))$' têm tabelas de verdade diferentes.
+	\item `$((A \eif B) \eif C)$' e `$(A \eif (B \eif C))$' têm tabelas de verdade diferentes.
+\end{earg}
+Verifique também se:
+\begin{earg}
+	\item[5.] `$((A \eiff B) \eiff C)$' e `$(A \eiff (B \eiff C))$' têm tabelas de verdade idênticas ou diferentes.
+\end{earg}
+
+\problempart
+Escreva tabelas de verdade completas para as cinco sentenças a seguir e indique a coluna que representa os possíveis valores de verdade da sentença completa.
+
+\begin{earg}
+
+\item $\enot (S \eiff (P \eif S))$
+
+%\begin{tabular}{c|c|ccccc}
+%\cline{2-2}
+%1.	&	\enot 	&	(S 	&	\eiff	&	(P 	&	\eif	&	S))	\\ 
+%\cline{2-7}
+%	& 	F 		&	T	&	T	&	T	&	T	&	T	\\
+%	& 	F 		&	T	&	T	&	F	&	T	&	T	\\
+%	& 	F 		&	F	&	T	&	T	&	F	&	F	\\
+%	& 	T 		&	F	&	F	&	F	&	T	&	F	\\
+%\cline{2-2}
+%\end{tabular}
+
+
+ \item $\enot [(X \eand Y) \eor (X \eor Y)]$
+
+%\begin{tabular}{c|c|ccccccc}
+%\cline{2-2}
+%2.	&	\enot	&	 [(X 	&	\eand& 	Y) 	&	\eor 	&	(X 	&	\eor 	&	Y)] \\
+%\cline{2-9}
+%	&	F	&	T	&	T	&	T	&	T	&	T	&	T	&	T	\\
+%	&	F	&	T	&	F	&	F	&	T	&	T	&	T	&	F	\\
+%	&	F	&	F	&	F	&	T	&	T	&	F	&	T	&	T	\\
+%	&	T	&	F	&	F	&	F	&	F	&	F	&	F	&	F	\\
+%\cline{2-2}
+%\end{tabular}
+
+
+\item $(A \eif B) \eiff (\enot B\eiff \enot A)$
+%\begin{tabular}{cccc|c|ccccc}
+%\cline{5-5}
+%3.	&	(A 	&	\eif	&	B)	&	 \eiff 	&	(\enot&	B 	&	\eiff 	&	 \enot 	& 	 A) \\
+%\cline{2-10}
+%	&	T	&	T	&	T	&	T		&	F	 &	T	&	T	&	F		&	T	\\	
+%	&	T	&	F	&	F	&	T		&	T	 &	F	&	F	&	F		&	T	\\
+%	&	F	&	T	&	T	&	F		&	F	 &	T	&	F	&	T		&	F	\\
+%	&	F	&	T	&	F	&	T		&	T	 &	F	&	T	&	T		&	F	\\
+%\cline{5-5}
+%\end{tabular}
+
+\item $[C \eiff (D \eor E)] \eand \enot C$
+
+%\begin{tabular}{cccccc|c|cc}
+%\cline{7-7}
+%4.	&	[C 	&	\eiff 	&	(D 	&	\eor 	&	E)] 	&	\eand 	&	 \enot 	&	 C \\
+%\cline{2-9}
+%	&	T	&	T	&	T	&	T	&	T	&	F		&	F		&	T	\\
+%	&	T	&	T	&	T	&	T	&	F	&	F		&	F		&	T	\\
+%	&	T	&	T	&	F	&	T	&	T	&	F		&	F		&	T	\\
+%	&	T	&	F	&	F	&	F	&	F	&	F		&	F		&	T	\\
+%	&	F	&	F	&	T	&	T	&	T	&	F		&	T		&	F	\\
+%	&	F	&	F	&	T	&	T	&	F	&	F		&	T		&	F	\\
+%	&	F	&	F	&	F	&	T	&	T	&	F		&	T		&	F	\\
+%	&	F	&	T	&	F	&	F	&	F	&	T		&	T		&	F	\\
+%\cline{7-7}
+%\end{tabular}
+
+\item $\enot(G \eand (B \eand H)) \eiff (G \eor (B \eor H))$
+%
+%\begin{tabular}{ccccccc|c|ccccc}
+%\cline{8-8}
+%5.	&\enot&	(G 	&\eand &	(B 	&	 \eand 	&	 H))	&	\eiff 	&	(G 	& \eor 	& (B 	& \eor	& H))	\\
+%\cline{2-13}
+%	&F	   &	T	&	  T &	T	&	T		&	T	&	F	&	T	&	T	&	T	&	T	&	T	\\
+%	&T	   &	T	&	  F &	T	&	F		&	F	&	T	&	T	&	T	&	T	&	T	&	F	\\	
+%	&T	   &	T	&	 F  &	F	&	F		&	T	&	T	&	T	&	T	&	F	&	T	&	T	\\
+%	&T	   &	T	&	 F  &	F	&	F		&	F	&	T	&	T	&	T	&	F	&	F	&	F	\\
+%	&T	   &	F	&	F   &	T	&	T		&	T	&	T	&	F	&	T	&	T	&	T	&	T	\\
+%	&T	   &	F	&	F   &	T	&	F		&	F	&	T	&	F	&	T	&	T	&	T	&	F	\\
+%	&T	   &	F	&	F   &	F	&	F		&	T	&	T	&	F	&	T	&	F	&	T	&	T	\\
+%	&T	   &	F	&	F   &	F	&	F		&	F	&	F	&	F	&	F	&	F	&	F	&	F	\\
+%\cline{8-8}
+%\end{tabular}
+
+%\vspace{1em}
+
+\end{earg}
+
+\problempart
+Escreva tabelas de verdade completas para as cinco sentenças a seguir e indique a coluna que representa os possíveis valores de verdade da sentença completa.
+
+\begin{earg}
+
+\item	$(D \eand \enot D) \eif G $
+
+%\vspace{1em}
+
+%\begin{tabular}{ccccc|c|c}
+%\cline{6-6}
+%1.	&	(D 	&	 \eand 	& 	 \enot	&	 D) 	&	 \eif 	&	 G \\
+%	&	T	&	F		&	F		&	T	&	T	&	T	\\
+%	&	T	&	F		&	F		&	T	&	T	&	F	\\
+%	&	F	&	F		&	T		&	F	&	T	&	T	\\
+%	&	F	&	F		&	T		&	F	&	T	&	F	\\
+%\cline{6-6}
+%\end{tabular}
+%\vspace{1em}
+
+
+\item	$(\enot P \eor \enot M) \eiff M $
+
+%\begin{tabular}{cccccc|c|c}
+%\cline{7-7}
+%2.	&	(\enot 	&	P 	&	\eor 	&	\enot 	& 	 M) 	& 	\eiff 	&	 M \\
+%	&	F		&	T	&	F	&	F		&	T	&	T	&	T	\\
+%	&	F		&	T	&	T	&	T		&	F	&	F	&	F	\\
+%	&	T		&	F	&	T	&	F		&	T	&	T	&	T	\\
+%	&	T		&	F	&	T	&	T		&	F	&	T	&	F	\\
+%\cline{7-7}
+%\end{tabular}
+%\vspace{1em}
+
+
+
+\item	$\enot \enot (\enot A \eand \enot B)  $
+
+%\begin{tabular}{c|c|cccccc}
+%\cline{2-2}
+%3.	&	\enot		&	 \enot 	&	(\enot 	& 	 A 	& \eand 	& 	\enot 	&	 B)  \\
+%	&	F		&	T		&	F		&	T	&	F	&	F		&	T	\\
+%	&	F		&	T		&	F		&	T	&	F	&	T		&	F	\\
+%	&	F		&	T		&	T		&	F	&	F	&	F		&	T	\\
+%	&	T		&	F		&	T		&	F	&	T	&	T		&	F	\\
+%\cline{2-2}
+%\end{tabular}
+%\vspace{1em}
+
+
+
+\item 	$[(D \eand R) \eif I] \eif \enot(D \eor R) $
+
+%\begin{tabular}{cccccc|c|cccc}
+%\cline{7-7}
+%4.	&	[(D 	& 	 \eand 	& 	 R)	& 	\eif 	&	I] 	&	\eif 	&	 \enot 	&	(D 	&	 \eor 	& R) \\
+%	&	T	&	T		&	T	&	T	&	T	&	F	&	F		&	T	&	T		&T	\\
+%	&	T	&	T		&	T	&	F	&	F	&	T	&	F		&	T	&	T		&T	\\
+%	&	T	&	F		&	F	&	T	&	T	&	F	&	F		&	T	&	T		&F	\\
+%	&	T	&	F		&	F	&	T	&	F	&	F	&	F		&	T	&	T		&F	\\
+%	&	F	&	F		&	T	&	T	&	T	&	F	&	F		&	F	&	T		&T	\\
+%	&	F	&	F		&	T	&	T	&	F	&	F	&	F		&	F	&	T		&T	\\
+%	&	F	&	F		&	F	&	T	&	T	&	T	&	T		&	F	&	F		&F	\\
+%	&	F	&	F		&	F	&	T	&	F	&	T	&	T		&	F	&	F		&F	\\
+%\cline{7-7}
+%\end{tabular}
+%	
+%\vspace{1em}
+
+
+\item	$\enot [(D \eiff O) \eiff A] \eif (\enot D \eand O) $
+
+%\begin{tabular}{ccccccc|c|cccc}
+%\cline{8-8}
+%5.	&	\enot 	&	[(D 	&	\eiff 	&	O) 	&	\eiff 	&	 A]	& 	\eif 	 &	(\enot 	& 	D 	 & 	 \eand &O) \\ 
+%	&	F		&	T	&	T	&	T	&	T	&	T	&	T	&	F		&	T	&	F	&T	\\
+%	&	T		&	T	&	T	&	T	&	F	&	F	&	F	&	F		&	T	&	F	&T	\\
+%	&	T		&	T	&	F	&	F	&	F	&	T	&	F	&	F		&	T	&	F	&F	\\
+%	&	F		&	T	&	F	&	F	&	T	&	F	&	T	&	F		&	T	&	F	&F	\\
+%	&	T		&	F	&	F	&	T	&	F	&	T	&	T	&	T		&	F	&	T	&T	\\
+%	&	F		&	F	&	F	&	T	&	T	&	F	&	T	&	T		&	F	&	T	&T	\\
+%	&	F		&	F	&	T	&	F	&	T	&	T	&	T	&	T		&	F	&	F	&F	\\
+%	&	T		&	F	&	T	&	F	&	F	&	F	&	T	&	T		&	F	&	F	&F	\\
+%\cline{8-8}
+%\end{tabular}
+%\vspace{1em}
+\end{earg}
+
+Para praticar mais, você pode construir tabelas de verdade para todas as sentenças e argumentos nos exercícios dos capítulos anteriores.
+
+
+\chapter{Conceitos semânticos}
+\label{s:SemanticConcepts}
+
+No Capítulo anterior, introduzimos a ideia de valoração e mostramos como determinar o valor de verdade de qualquer sentença da LVF, em qualquer valoração, usando as tabelas de verdade.
+Neste Capítulo, apresentaremos alguns conceitos importantes em lógica e mostraremos como usar tabelas de verdade para testar quando eles se aplicam ou não.
+
+Este é um capítulo muito importante, o mais importante sobre a LVF.
+Além das definições dos conceitos e dos métodos sobre como verificá-los através das tabelas de verdade, apresentaremos também muitos esclarecimentos fundamentais sobre a lógica enquanto disciplina, sobre suas possibilidades e limites de aplicação. Leia com calma e anote suas dúvidas para discuti-las com os monitores e o professor.
+
+
+\section{Tautologias e contradições}\label{s:TautContra}
+No Capítulo \ref{s:BasicNotions}, introduzimos as noções gerais de \emph{verdade necessária} e \emph{falsidade necessária}.
+Estas duas noções têm representantes mais específicas na LVF.
+Comecemos com um representante para a noção de verdade necessária.
+	\factoidbox{
+		Uma sentença $\meta{A}$ é uma \define{tautologia} se e somente se ela for verdadeira em todas as valorações.
+	}
+
+Podemos usar as tabelas de verdade para determinar se uma sentença é uma tautologia ou não.
+Se a sentença for verdadeira em todas as linhas de sua tabela de verdade completa, então ela é verdadeira em todas as valorações e, portanto, é uma tautologia.
+A sentença
+$$(H \eand I) \eif H$$
+apresentada como exemplo no Capítulo \ref{s:CompleteTruthTables}, é uma tautologia, porque sua tabela de verdade completa tem `V' em todas as linhas:
+\begin{center}
+\begin{tabular}{c c| d e e e f}
+$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+\hline
+ V & V & V & {V} & V & \TTbf{V} & V\\
+ V & F & V & {F} & F & \TTbf{V} & V\\
+ F & V & F & {F} & V & \TTbf{V} & F\\
+ F & F & F & {F} & F & \TTbf{V} & F
+\end{tabular}
+\end{center}
+
+A noção de tautologia é apenas um \emph{caso especial} na LVF da noção geral de verdade necessária.
+Isso porque existem algumas verdades necessárias que não podem ser simbolizadas adequadamente na LVF.
+Um exemplo é
+$$2+2=4$$
+Esta afirmação é \emph{necessariamente} verdadeira.
+Sua falsidade não faz sentido, é impossível.
+No entanto, quando tentamos simbolizá-la na LVF, o melhor que conseguimos fazer é atribuir-lhe uma letra sentencial.
+Mas nenhuma letra sentencial sozinha é uma tautologia.
+Entretanto, mesmo havendo muitas verdades necessárias como esta, cujas simbolizações na LVF não são tautologias, quando uma simbolização aceitável na LVF de alguma sentença em português for uma tautologia, podemos ter confiança que essa sentença em português expressa uma verdade necessária.
+Ou seja, as tautologias representam um subgrupo das verdades necessárias:
+algumas verdades necessárias não são tautologias, mas todas as tautologias são verdades necessárias.
+
+De modo semelhante, temos também um representante na LVF para a noção de falsidade necessária:
+	\factoidbox{
+		Uma sentença $\meta{A}$ é uma \define{contradicao} (na LVF) se e somente se ela for falsa em todas as valorações.
+	}
+
+Aqui também podemos usar as tabelas de verdade para determinar se uma sentença é uma contradição ou não.
+Se a sentença for falsa em todas as linhas de sua tabela de verdade completa, então ela é falsa em todas as valorações e, portanto, é uma contradição.
+A sentença
+$$[(C\eiff C) \eif C] \eand \enot(C \eif C)$$
+apresentada como exemplo no Capítulo \ref{s:CompleteTruthTables}, é uma contradição, porque sua tabela de verdade completa tem `F' em todas as linhas:
+\begin{center}
+\begin{tabular}{c| d e e e e e e e e e e e e e e f}
+$C$&$[($&$C$&\eiff&$C$&$)$&\eif&$C$&$]$&\eand&\enot&$($&$C$&\eif&$C$&$)$\\
+\hline
+ V &    & V &  V  & V &   & V  & V & &\TTbf{F}&  F& &   V &  V  & V &   \\
+ F &    & F &  V  & F &   & F  & F & &\TTbf{F}&  F& &   F &  V  & F &   \\
+\end{tabular}
+\end{center}
+
+
+\section{Equivalência}
+Eis aqui uma noção bastante útil:
+	\factoidbox{
+		$\meta{A}$ e $\meta{B}$ são sentenças \define{equivalentes} (na LVF) se e somente se, em todas as valorações, seus valores de verdade são idênticos, ou seja, se e somente se não há valoração na qual o valor de verdade de $\meta{A}$ seja distinto do valor de verdade de $\meta{B}$.
+	}
+
+Essa noção já foi utilizada por nós na Seção \ref{s:MoreBracketingConventions}, quando dissemos que as sentenças `$(A \eand B) \eand C$' e `$A \eand (B \eand C)$' são equivalentes.
+Novamente, é fácil testar a equivalência usando tabelas de verdade.
+Considere as sentenças
+\begin{center}
+$\enot(P \eor Q)$\ \ \ \ \ \  e \ \ \ \ \ $\enot P \eand \enot Q$
+\end{center}
+Será que elas são equivalentes? Para descobrir, construímos uma tabela de verdade.
+\begin{center}
+\begin{tabular}{c c|d e e f |d e e e f}
+$P$&$Q$&\enot&$(P$&\eor&$Q)$&\enot&$P$&\eand&\enot&$Q$\\
+\hline
+ V & V & \TTbf{F} & V & V & V & F & V & \TTbf{F} & F & V\\
+ V & F & \TTbf{F} & V & V & F & F & V & \TTbf{F} & V & F\\
+ F & V & \TTbf{F} & F & V & V & V & F & \TTbf{F} & F & V\\
+ F & F & \TTbf{V} & F & F & F & V & F & \TTbf{V} & V & F
+\end{tabular}
+\end{center}
+Repare nas colunas dos conectivos principais (destacadas em negrito):
+a negação, na primeira sentença, e a conjunção, na segunda.
+Nas três primeiras linhas, ambas são falsas.
+Na linha final, ambas são verdadeiras.
+Como em cada linha os valores são os mesmos, as duas sentenças são equivalentes.\footnote{
+	Um nome mais preciso para o que estamos chamando aqui simplesmente de equivalência seria `equivalência na LVF' ou `LVF-equivalência', porque corresponde à equivalência entre sentenças capaz de ser detectada pela LVF.
+	Linguagens lógicas diferentes apontarão diferentes sentenças como equivalentes. Estudaremos mais adiante neste livro  a LPO, uma linguagem lógica mais poderosa que a LVF, que reconhece equivalências que a LVF não consegue reconhecer.
+	Estas noções de equivalência cujas definições são dependentes de linguagens lógicas específicas são genericamente chamadas de `equivalências lógicas'.
+	Ou seja, quando se diz que as sentenças de um grupo são todas \emph{equivalentes} ou \emph{logicamente equivalentes}, deve estar subentendida uma linguagem lógica. No nosso caso, por enquanto, é a LVF.
+	Apesar destas variações, todas as noções de `equivalência lógica' são derivadas da noção geral de \emph{equivalência necessária}, que não depende de qualquer sistema lógico e que apresentamos ao final do Capítulo 3. }
+
+
+\section{Satisfação}
+No Capítulo \ref{s:BasicNotions}, dissemos que as sentenças de um grupo são conjuntamente possíveis se for possível que todas elas sejam conjuntmente verdadeiras (verdadeiras ao mesmo tempo, na mesma circunstância).
+Também para esta noção podemos oferecer um representante na LVF:
+	\factoidbox{
+		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são \define{conjuntamente satisfatorias} (na LVF) se e somente se há alguma valoração na qual todas elas são verdadeiras.
+	}
+
+Derivativamente, podemos definir que as sentenças de um grupo são \define{conjuntamente insatisfatorias} se não houver nenhuma valoração na qual todas elas sejam verdadeiras.
+Novamente, é fácil testar a satisfação e a insatisfação conjuntas usando tabelas de verdade. 
+Por exemplo, a tabela de verdade abaixo mostra que as sentenças
+\begin{center}
+ $P \eor Q$\ \ \ \ \ \  e \ \ \ \ \ $\enot P \eor \enot Q$
+\end{center}
+são conjuntamente satisfatórias, porque há valorações (a segunda e a terceira linhas) nas quais ambas são verdadeiras.
+\begin{center}
+\begin{tabular}{c c|d e f |d e e e f}
+$P$&$Q$&$P$&\eor&$Q$&\enot&$P$&\eor&\enot&$Q$\\
+\hline
+ V & V & V & \TTbf{V} & V & F & V & \TTbf{F} & F & V\\
+ V & F & V & \TTbf{V} & F & F & V & \TTbf{V} & V & F\\
+ F & V & F & \TTbf{V} & V & V & F & \TTbf{V} & F & V\\
+ F & F & F & \TTbf{F} & F & V & F & \TTbf{V} & V & F
+\end{tabular}
+\end{center}
+Já na tabela seguinte, podemos ver que as sentenças
+\begin{center}
+$A \eand B$\ \ \ \ \ \  e \ \ \ \ \ $\enot A \eand B$
+\end{center}
+são conjuntamente insatisfatórias pois em nenhuma linha da tabela as sentenças são ambas verdadeiras. 
+\begin{center}
+\begin{tabular}{c c|d e f |d e e f}
+$A$&$B$&$A$&\eand&$B$&\enot&$A$&\eand&$B$\\
+\hline
+ V & V & V & \TTbf{V} & V & F & V & \TTbf{F} & V\\
+ V & F & V & \TTbf{F} & F & F & V & \TTbf{F} & F\\
+ F & V & F & \TTbf{F} & V & V & F & \TTbf{V} & V\\
+ F & F & F & \TTbf{F} & F & V & F & \TTbf{F} & F
+\end{tabular}
+\end{center}
+
+
+\section{Sustentação e validade}\label{s:SustentValid}
+A ideia a seguir está intimamente ligada à noção de satisfação conjunta:
+	\factoidbox{
+		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \define{sustentam} (na LVF) a sentença $\meta{C}$ se não há valoração na qual $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são todas verdadeiras e $\meta{C}$ é falsa.
+	}
+ 
+Novamente, não é difícil verificar a sustentação com uma tabela de verdade.
+Vamos, a título de exemplo, verificar se
+\begin{center}
+$\enot L \eif (J \eor L)$ \ \ \ \ \  e \ \ \ \ $\enot L$ \ \ \ \ \ \ \ sustentam \ \ \ \ \ \ \ $J$
+\end{center}
+Para fazer isso, basta fazer uma tabela de verdade completa para estas três sentenças e verificar se há alguma valoração (ou seja, alguma linha da tabela) em que `$\enot L \eif (J \eor L)$' e `$\enot L$' são ambas verdadeiras e  `$J$' é falsa.
+Se houver tal linha na tabela, então `$\enot L \eif (J \eor L)$' e `$\enot L$' \emph{não sustentam} `$J$'.
+Caso contrário, quando não há uma tal valoração, `$\enot L \eif (J \eor L)$' e `$\enot L$' \emph{sustentam} `$J$'.
+Vejamos: 
+\begin{center}
+\begin{tabular}{c c|d e e e e f|d f| c}
+$J$&$L$&\enot&$L$&\eif&$(J$&\eor&$L)$&\enot&$L$&$J$\\
+\hline
+%J   L   -   L      ->     (J   v   L)
+ T & T & F & T & \TTbf{T} & T & T & T & \TTbf{F} & T & \TTbf{T}\\
+ T & F & T & F & \TTbf{T} & T & T & F & \TTbf{T} & F & \TTbf{T}\\
+ F & T & F & T & \TTbf{T} & F & T & T & \TTbf{F} & T & \TTbf{F}\\
+ F & F & T & F & \TTbf{F} & F & F & F & \TTbf{T} & F & \TTbf{F}
+\end{tabular}
+\end{center}
+A única linha na qual `$\enot L \eif (J \eor L)$' e `$\enot L$' são ambas verdadeiras é a segunda linha, e nessa linha `$J$' também é verdadeira.
+Portanto, de acordo com nossa definição, `$\enot L \eif (J \eor L)$' e `$\enot L$' sustentam `$J$'.
+
+A seguinte observação é de extrema importância:
+	\factoidbox{
+		Se $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sustentam $\meta{C}$ na LVF, então o argumento  $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$ é  válido.
+	}
+%Aqui está a explicação.
+%Conforme vimos na Seção \ref{ss:Validade}, um argumento é válido quando ele não tem contraexemplo, ou seja, quando não há situação na qual suas premissas sejam todas verdadeiras e sua conclusão seja falsa.
+%A ideia geral, então, é a seguinte:
+%se houvesse um contraexemplo que invalidasse o argumento, este contraexemplo, a situação à qual ele corresponde, geraria uma valoração na qual $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ seriam todas verdadeiras e $\meta{C}$ seria falsa, e portanto, $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ não sustentariam $\meta{C}$.
+%Mas como estamos assumindo que $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sustentam $\meta{C}$, então o argumento não pode ter um contraexemplo e, por isso, é um argumento válido.
+
+Aqui está a explicação.
+Conforme vimos na Seção \ref{ss:Validade}, um argumento é válido quando ele não tem contraexemplo, ou seja, quando não há situação na qual suas premissas sejam todas verdadeiras e sua conclusão seja falsa.
+A ideia geral, então, é a seguinte:
+as situações são cenários hipotéticos, são possibilidades em que os fatos podem ocorrer.
+Estes cenários hipotéticos correspondem a diferentes versões possíveis para os fatos.
+Cada um deles é uma estória diferente que utilizamos como fonte de informação para dizer de cada sentença se ela é verdadeira ou falsa.
+Por causa disso, qualquer valoração liga-se a alguma situação que a gera; e valorações diferentes têm que ter sido geradas por situações diferentes.
+Então, se houvesse um contraexemplo que invalidasse o argumento $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$, a situação que o caracteriza geraria uma valoração na qual $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ seriam todas verdadeiras e $\meta{C}$ seria falsa e, portanto, $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ não sustentariam $\meta{C}$.
+Por isso, quando $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sustentam $\meta{C}$ e não há tal valoração, não pode haver também situação que a gere e, por isso, o argumento não tem contraexemplo e é válido.
+
+Como este é um ponto crucial, talvez o ponto mais importante de toda a lógica, vamos avançar com calma aqui, examinando-o mais detidamente.
+Você pode, com razão, estar se perguntando:
+como é que podemos garantir que um contraexemplo para um argumento gera uma valoração na qual suas premissas não sustentam sua conclusão?
+Um exemplo nos ajudará a entender melhor.
+Considere o segundo argumento que apresentamos na Seção \ref{ss:Validade}:
+\begin{earg}
+	\item[] Se foi o motorista, então não foi a babá.
+	\item[] Não foi a babá.
+	\item[\therefore] Foi o motorista.
+\end{earg}
+Este argumento não é válido.
+Eis um contraexemplo:
+\begin{ebullet}
+	\item A expressão `foi' refere-se ao assassinato do patrão, dono e morador da mansão.
+	O assassino foi o mordomo, e ele trabalhou sozinho, sem cúmplices.
+\end{ebullet}
+
+De acordo com este contraexemplo, as duas premissas do argumento são verdadeiras, pois como o assassino trabalhou sozinho, se foi o motorista, não pode ter sido a babá.
+Logo, a primeira premissa é verdadeira.
+Além disso, como o assassino foi o mordomo, e ele agiu sozinho, então não foi mesmo a babá, e, portanto, a segunda premissa também é verdadeira.
+A conclusão, por sua vez, é falsa, porque no contraexemplo o assassino foi o mordomo, não o motorista.
+
+Então, na situação descrita no contraexemplo, as premissas são todas verdadeiras e a conclusão é falsa.
+Logo, o argumento é inválido.
+Vamos agora simbolizar este argumento de acordo com a seguinte chave de simbolização:
+	\begin{ekey}
+		\item[M] Foi o motorista
+		\item[B] Foi a babá
+	\end{ekey}
+Com esta chave nosso argumento simbolizado na LVF fica:
+\begin{earg}
+	\item[] $M \eif \enot B$
+	\item[] $\enot B$
+	\item[\therefore] $M$
+\end{earg}
+O ponto crucial é o seguinte:
+se utilizarmos a situação do contraexemplo como o critério (a estória que é fonte de informação) para atribuir os valores de verdade para as letras sentenciais do argumento, nós obteremos uma valoração na qual as premissas são verdadeiras e a conclusão é falsa.
+
+Vejamos.
+De acordo com nosso contraexemplo e chave de simbolização, `$M$' e `$B$' são ambas falsas, já que no contraexemplo o assassino foi o mordomo, não a babá, nem o motorista.
+Então o nosso contraexemplo está gerando uma valoração em que as duas letras sentenciais do argumento são falsas.
+Podemos agora construir a tabela de verdade completa das sentenças de nosso argumento e analisar o que acontece nesta valoração:
+\begin{center}
+\begin{tabular}{c c|d e e f|d f| c}
+$M$&$B$&$M$&\eif&\enot&$B$&\enot&$B$&$M$\\
+\hline
+ V & V & V & \TTbf{F} & F & V & \TTbf{F} & V & \TTbf{V}\\
+ V & F & V & \TTbf{V} & V & F & \TTbf{V} & F & \TTbf{V}\\
+ F & V & F & \TTbf{V} & F & V & \TTbf{F} & V & \TTbf{F}\\
+ F & F & F & \TTbf{V} & V & F & \TTbf{V} & F & \TTbf{F}
+\end{tabular}
+\end{center}
+Repare que a valoração gerada pelo contraexemplo, na qual as duas letras sentenciais `$M$' e `$B$' são falsas, corresponde à última linha de nossa tabela.
+Repare também que exatamente nesta valoração (linha) as duas premissas do argumento são verdadeiras e sua conclusão é falsa.
+Ou seja, exatamente esta linha nos mostra que as premissas não sustentam a conclusão.
+
+A ideia central aqui é que as situações, os cenários hipotéticos, funcionam como uma interpretação (uma estória) que usamos como fonte de informação para atribuir valores de verdade às letras sentenciais dos argumentos.
+O que este caso ilustra é que quando a situação é um contraexemplo que invalida o argumento, então ela nos dará uma valoração (uma distribuição de valores de verdade para as letras sentenciais do argumento) na qual as premissas são todas verdadeiras, mas a conclusão é falsa.
+Esta valoração garante, portanto, que as premissas não sustentam a conclusão do argumento.
+
+É por isso que podemos dizer, como fizemos no quadro acima, que se as premissas de um argumento sustentam sua conclusão, então o argumento é válido.
+Quando as premissas sustentam a conclusão, sabemos, pela definição de sustentação, que não existe valoração na qual suas premissas são verdadeiras e sua conclusão é falsa.
+Mas se não existe tal valoração, não pode haver nenhuma situação que a gere, ou seja, o argumento não tem contraexemplo.
+E se um argumento não tem contraexemplo, ele é válido!
+
+Em resumo, a noção de sustentação é um representante na LVF da noção de validade.
+Ela nos dá uma maneira de usar a LVF para testar a validade de (alguns) argumentos em português.
+Primeiro nós os simbolizamos na LVF e em seguida usamos as tabelas de verdade para testar se suas premissas, $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sustentam sua conclusão $\meta{C}$.
+Se elas sustentam, então podemos confiar que o argumento é válido.\footnote{
+	O termo original em inglês para a noção que denominamos por `sustentação' é \emph{entailment}, que costuma ser traduzido ao português como `implicação' ou `acarretamento'.
+	Ou seja, quando nós dizemos neste livro que $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \emph{sustentam} $\meta{C}$, a maioria dos outros livros diriam que $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \emph{implicam} (ou \emph{acarretam}) $\meta{C}$.
+	O termo `implicação', no entanto, é ambíguo e confunde a relação entre premissas e conclusão em um argumento válido, com a relação entre antecedente e consequente dada pelo operador condicional da LVF, `$\eif$', que muitas vezes é chamado de `implicação material' ou mesmo apenas de `implicação'.
+	Mas esta confusão é um equívoco.
+	A relação entre premissas e conclusão de um argumento válido é diferente da relação entre antecedente e consequente de um condicional verdadeiro, conforme veremos mais detalhadamente na Seção \ref{s:SustVsCond}.
+	Já o termo `acarretamento' pode sugerir que há uma conexão causal entre as premissas e a conclusão de um argumento válido, que as premissas levam a ou produzem a conclusão.
+	Mas isso também é um equívoco.
+	Não é preciso que haja qualquer relação causal ou de produção entre as premissas e a conclusão de um argumento para que ele seja válido.
+	Para evitar estas más interpretações, preferimos usar o termo pouco comum `sustentação'.
+	É importante, no entanto, que você saiba que aquilo que estamos chamando de `sustentação', outros livros chamam de `acarretamento' ou `implicação (estrita)'.}
+
+
+\section{Alcance e limites da LVF}\label{s:ParadoxesOfMaterialConditional}
+Atingimos, na Seção anterior, um marco importante para os objetivos da lógica enquanto disciplina: um teste para a validade de argumentos!
+É fundamentalmente para fazer testes como este que estudamos lógica.
+Estudamos lógica para saber distinguir os bons dos maus argumentos, e o teste de validade via tabelas de verdade, que aprendemos na Seção anterior, corresponde a uma das respostas que a lógica pode nos dar.
+%Há muitas outras que ainda não estudamos, claro.
+%\label{key}Este livro é apenas uma introdução ao estudo da lógica.
+É essencial, portanto, entendermos \emph{o alcance} e também \emph{os limites} desta nossa primeira conquista.
+
+Um aspecto básico das limitações não só da LVF, mas da lógica como um todo, é que ela é um método indireto.
+Não conseguimos, com a LVF, testar diretamente a validade dos argumentos originais em português.
+Conseguimos apenas testar a validade de suas simbolizações.
+Então os resultados de nossos testes lógicos serão tão confiáveis quanto as simbolizações forem aceitáveis como substitutos fiéis para os argumentos originais.
+No exemplo da Seção anterior, não testamos diretamente a validade do argumento
+	\begin{earg}
+		\item[] Se foi o motorista, então não foi a babá.
+		\item[] Não foi a babá.
+		\item[\therefore] Foi o motorista.
+	\end{earg}
+O que testamos foi a validade do argumento
+	\begin{earg}
+		\item[] $M \eif \enot B$
+		\item[] $\enot B$
+		\item[\therefore] $M$
+	\end{earg}
+
+Este ponto é fundamental.
+Quando afirmamos, como fizemos no segundo box da Seção anterior, que se $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sustentam $\meta{C}$ na LVF, então o argumento  $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$ é  válido; estamos nos referindo à validade do argumento simbolizado, não à validade do argumento original em português.
+
+Vimos, através da tabela de verdade, que as premissas deste argumento não sustentam sua conclusão, porque na valoração em quem `$M$' e `$B$' são ambas falsas (última linha da tabela), as premissas são verdadeiras, mas a conclusão é falsa.  
+A LVF não vai além disso.
+Sua avaliação não atinge o argumento original; limita-se ao argumento simbolizado.
+Precisamos de uma chave de simbolização, tal como
+\begin{ekey}
+	\item[M] Foi o motorista
+	\item[B] Foi a babá
+\end{ekey}
+para ligar o argumento original ao argumento simbolizado, que é o único tipo de argumento que a LVF consegue avaliar.
+O teste da validade do argumento simbolizado, então, só será um bom teste de validade para o argumento original se a simbolização for aceitável, se não for problemática.
+Ou seja, a avaliação que a LVF pode fazer de um argumento em português será tão boa quanto o argumento simbolizado for um bom substituto para o argumento original.
+Neste exemplo, o argumento simbolizado é um bom substituto.
+Dada a chave de simbolização proposta, as mais variadas situações (cenários hipotéticos) que pudermos imaginar para o argumento original vão se ligar a valorações nas quais os valores de verdade das sentenças do argumento simbolizado coincidem com os valores de verdade das sentenças originais dados pelas situações.
+Quando há sincronia entre as valorações do argumento simbolizado e as situações para o argumento original, nós podemos confiar amplamente nas avaliações feitas através da LVF.
+Ela será um instrumento útil, poderoso, simples e extremamente confiável para a avaliação de argumentos.
+
+No entanto, em muitos casos não conseguiremos uma simbolização na LVF que seja um substituto à altura do argumento original.
+Veremos, em muitos casos, que haverá uma assincronia entre os valores de verdade das sentenças originais nas diversas situações e os valores de verdade das sentenças simbolizadas nas diversas valorações.
+A ligação entre situações e valorações não será perfeita.
+Nestes casos, a LVF não será um bom instrumento para avaliar o argumento.
+Ilustraremos esses limites com alguns exemplos.
+
+Considere, em primeiro lugar, o seguinte argumento:
+	\begin{earg}
+		\item Olga tem quatro patas. Logo Olga tem mais de duas patas.
+	\end{earg}
+Para simbolizar esse argumento na LVF precisamos de duas letras sentenciais diferentes---talvez `$Q$' e `$D$'---a primeira para a premissa e a outra para a conclusão.
+É óbvio que `$Q$' não sustenta `$D$', para ver isso, basta considerarmos a valoração em que `$Q$' é verdadeira e `$D$' é falsa.
+No entanto, o argumento original em português é claramente válido.
+Não é possível que a premissa seja verdadeira (Olga tenha quatro patas) e a conclusão falsa (Olga não tenha mais de duas patas).
+Há, então, uma clara discrepância entre as situações (cenários hipotéticos) e as valorações, pois a valoração em que `$Q$' é verdadeira e `$D$' é falsa não corresponde a nenhum cenário concebível.
+
+Considere agora esta segunda sentença:
+	\begin{earg} \setcounter{eargnum}{1}
+		\item\label{n:JanBald} João não é careca nem não-careca.
+	\end{earg}
+Ao simbolizar esta sentença na LVF obteríamos algo como
+$$\enot C \eand \enot \enot C$$
+Esta sentença é uma contradição (verifique isso fazendo uma tabela de verdade para a sentença; você verá que ela não é verdadeira em nenhuma linha).
+Porém, a sentença \ref{n:JanBald} não parece uma falsidade necessária; após afirmá-la poderíamos acrescentar que `João está no limite da calvície.
+Tem cabelo ralo. Seria injusto classificá-lo tanto como careca quanto como não careca.'
+Aqui também há uma discrepância entre as situações e as valorações.
+Não há valoração na qual a simbolização de 2 é verdadeira, mas há sim um cenário hipotético concebível no qual 2 é verdadeira.
+
+Em terceiro lugar, considere a seguinte sentença:
+	\begin{earg}
+\setcounter{eargnum}{2}	
+		\item\label{n:GodParadox}	Não é o caso que se deus existe, então ela atende a preces que pedem o mal.\footnote{ Sim, estou me referindo a deus com letra minúscula e no gênero feminino. Por que não?}
+%	Aaliyah wants to kill Zebedee. She knows that, if she puts chemical A into Zebedee's water bottle, Zebedee will drink the contaminated water and die. Equally, Bathsehba wants to kill Zebedee. She knows that, if she puts chemical B into Zebedee's water bottle, then Zebedee will drink the contaminated water and die. But chemicals A and B neutralize each other; so that if both are added to the water bottle, then Zebedee will not die.
+	\end{earg}
+Considere agora a seguinte chave de simbolização:
+\begin{ekey}
+	\item[D] deus existe.
+	\item[M] deus atende preces que pedem o mal.
+\end{ekey}
+Com esta chave, a simbolização mais natural na LVF da sentença \ref{n:GodParadox} seria:
+$$\enot (D \eif M)$$
+Acontece que `$\enot (D \eif M)$' sustenta `$D$' (novamente, verifique isso com uma tabela de verdade).
+Ou seja, o argumento
+	\begin{earg}
+		\item[] $\enot (D \eif M)$
+		\item[\therefore] $D$
+	\end{earg}
+é um argumento válido.
+Mas, por outro lado, o argumento correspondente em português
+	\begin{earg}
+		\item[] Não é o caso que se deus existe, então ela atende a preces que pedem o mal.
+		\item[\therefore] Deus existe.
+	\end{earg}
+não parece de modo algum um argumento válido.
+
+Afinal de contas, até mesmo um ateu pode aceitar a sentença \ref{n:GodParadox} sem se contradizer.
+Você, por exemplo, certamente não acredita mais na existência do Papai Noel, eu espero.
+Mas mesmo sem acreditar que Papai Noel existe, você sabe que em todas as descrições desta figura fictícia, ele se veste de vermelho na noite de natal.
+Logo, a afirmação ``não é o caso que se o Papai Noel existe, então ele se veste de azul na noite de natal'' parece perfeitamente aceitável, mesmo para você, que não acredita em Papai Noel.
+Porém, com a seguinte chave de simbolização
+\begin{ekey}
+	\item[D] Papai Noel existe.
+	\item[M] Papai Noel se veste de azul na noite de natal.
+\end{ekey}
+O mesmo argumento da LVF acima que parecia provar a existência de deus, agora parece provar a existência do Papai Noel.
+Mudando engenhosamente a chave de simbolização, você pode usar este argumento para provar a existência de qualquer coisa que você queira.
+Bem, isso não pode estar certo.
+Ainda que o caso da existência de deus esteja sob permanente discussão, o de Papai Noel não está. Ele não existe. %Este, certamente, não pode ser um bom argumento.
+
+Temos aqui um caso de assincronia entre a simbolização na LVF e o que o argumento em português afirma.
+Conseguimos conceber um contraexemplo para o argumento em português, uma situação na qual a premissa é verdadeira e conclusão é falsa, mas esta situação não tem lugar nas valorações possíveis da versão simbolizada do argumento, porque na simbolização a premissa sustenta a conclusão.
+
+Como a simbolização da sentença \ref{n:GodParadox} como `$\enot (D \eif M)$' parece irresistível, uma lição que este exemplo nos dá é que talvez a própria sentença \ref{n:GodParadox} não esteja bem formulada em português.
+Ou seja, talvez o que queiramos expressar com ela seja melhor dito com outra sentença, tal como
+        	\begin{earg}
+                  \setcounter{eargnum}{3}	
+                \item\label{n:GodParadox2} Se deus existe, então ela não atende a preces que pedem o mal.
+  \end{earg}
+Com a mesma chave, a simbolização da sentença \ref{n:GodParadox2} fica:
+$$D \eif \enot M$$
+E agora a simbolização nos dá o argumento
+	\begin{earg}
+		\item[] $D \eif \enot M$
+		\item[\therefore] $D$
+	\end{earg}
+que não é válido, porque a premissa não sustenta a conclusão (outra vez, verifique isso com uma tabela de verdade), o que parece solucionar o quebra-cabeças.
+Não conseguimos mais provar a existência de deus apenas por aceitar a sentença  \ref{n:GodParadox2}.
+
+No entanto, outros problemas surgem.
+Os dois argumentos a seguir são válidos (verifique isso também!):
+	\begin{earg}
+		\item[] $\enot D$
+		\item[\therefore] $D \eif \enot M$
+	\end{earg}
+e
+	\begin{earg}
+		\item[] $\enot D$
+		\item[\therefore] $D \eif M$
+	\end{earg}
+E o que eles dizem é que se os ateístas têm razão, se deus não existe, então ela tanto atende quanto não atende a preces que pedem o mal.
+Qualquer condicional cujo antecedente é a suposição da existência de deus
+$$(D \eif \ldots)$$
+é sustentado pela afirmação de sua não existência
+$$\enot D$$
+Como qualquer condicional que tem antecedente falso é verdadeiro, independentemente do que diz o consequente,
+nós não conseguiremos especificar as características de nada que não existe, porque tudo que dissermos será verdadeiro.
+Mas isso também não pode estar certo.
+Papai Noel não existe, mas o fato de que ele não existe não nos autoriza a afirmar qualquer coisa sobre ele.
+Por exemplo, o fato de que Papai Noel não existe não nos autoriza a afirmar que se ele existisse ele usaria azul na noite de natal.
+Não!
+Sabemos que se o Papai Noel que as crianças acreditam existisse, ele usaria vermelho.
+                
+De maneiras diferentes, os exemplos vistos nesta Seção destacam algumas das limitações de utilizar uma linguagem como a LVF, que é restrita a conectivos verofuncionais (especificáveis via tabelas de verdade características).
+Por outro lado, esses limites da LVF suscitam algumas questões filosóficas interessantes.
+O caso da calvície (ou não) de João levanta a questão geral sobre qual deve ser a lógica dos discursos com termos \emph{vagos}, tais como careca, jovem, rica, bonito,... 
+O caso da ateísta levanta a questão de como lidar com os (assim chamados) \emph{paradoxos da implicação material}.
+Parte do objetivo deste livro é equipar vocês com as ferramentas para explorar essas questões de \emph{lógica filosófica}.
+Mas temos que aprender a andar antes de conseguirmos correr; precisamos nos tornar proficientes no uso da LVF, antes que possamos discutir adequadamente seus limites e considerar outras alternativas.
+
+
+\section{A roleta dupla}
+A noção de sustentação é uma das mais importantes da lógica e será muito usada neste livro.
+Facilitará nosso estudo se introduzirmos um símbolo para abreviá-la.
+Uma afirmação como `as sentenças da LVF $\meta{A}_1, \meta{A}_2, \ldots$ e $\meta{A}_n$ sustentam $\meta{C}$', será abreviada por:
+	$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \entails \meta{C}$$
+Chamaremos o símbolo `$\entails$' de \emph{roleta dupla}, pois ele parece uma roleta ou catraca de ônibus, com uma barra dupla.
+
+Que fique claro: `$\entails$' não é um símbolo da LVF.
+É um símbolo da nossa metalinguagem, o português aumentado (vale a pena reler e relembrar a diferença entre a linguagem objeto e a metalinguagem apresentada no Capítulo  \ref{s:UseMention}).
+Então o arranjo simbólico abaixo é uma afirmação em nossa metalinguagem (o português aumentado):
+	\begin{ebullet}
+		\item $P, P \eif Q \entails Q$
+	\end{ebullet}
+e representa apenas uma abreviação da seguinte sentença do português:
+	\begin{ebullet}
+		\item As sentenças da LVF `$P$' e `$P \eif Q$' sustentam `$Q$'
+	\end{ebullet}
+Observe que não há limite para o número de sentenças da LVF que podem ser mencionadas à esquerda do símbolo `$\entails$'.
+De fato, podemos até considerar o caso limite:
+	$$\entails \meta{C}$$
+Para entendermos o que isto quer dizer, basta aplicarmos a definição de sustentação.
+%Vamos aplicar a definição de sustentação a esta afirmação para entender seu significado.
+De acordo com nossa definição, apresentada na Seção \ref{s:SustentValid}, quando afirmamos, por exemplo, `$\meta{A}_1, \meta{A}_2 \entails \meta{C}$', estamos dizendo que não há valoração na qual todas as sentenças do lado esquerdo de `$\entails$' são verdadeiras e $\meta{C}$ é falsa.
+Então, usando o mesmo princípio, quando dizemos `\ $\entails \meta{C}$', como não há qualquer sentença do lado esquerdo de `$\entails$', isto significa simplesmente que $\meta{C}$ não é falsa em nenhuma valoração.
+Em outras palavras, `\ $\entails \meta{C}$' corresponde à afirmação de que $\meta{C}$ é verdadeira em todas as valorações.
+Em outras palavras ainda, corresponde a dizer que $\meta{C}$ é uma tautologia.
+Se raciocinarmos de modo similar, veremos que:
+	$$\meta{A} \entails$$
+diz exatamente que $\meta{A}$ é uma contradição (reveja as definições de tautologia e contradição na Seção \ref{s:TautContra}).
+
+
+\section[Sustenta \emph{versus} implica]{Sustenta `$\entails$' \emph{versus} Implica `$\eif$'}\label{s:SustVsCond}
+Vamos agora comparar a noção de sustentação, `$\entails$', com o conectivo condicional da LVF, `$\eif$'.
+Uma primeira e importantíssima diferença entre `$\entails$' e `$\eif$' é que:
+{\small
+	\factoidbox{
+		`$\eif $' \ \ é um conectivo que faz parte da LVF (a linguagem objeto) \\
+		\\
+		`$\entails$' \ \ é um símbolo da metalinguagem (o português aumentado)
+	}}
+De fato, quando `$\eif$' está entre duas sentenças da LVF, o resultado é uma sentença da LVF mais longa.
+Já quando usamos `$\entails$', o que formamos é uma sentença do português aumentado (metalinguagem) que \emph{menciona} as sentenças LVF ao seu redor.
+
+Mas há, também, um aspecto que aproxima estas noções.
+Com base no que já sabemos sobre `$\entails$' e `$\eif$' podemos fazer as seguintes observações.
+
+	\begin{ebullet}
+		\item[\textbf{Observação 1:}] $\meta{A} \entails \meta{C}$ se e somente se não há valoração de letras sentencias na qual $\meta{A}$ é verdadeira e $\meta{C}$ é falsa.
+	\end{ebullet}
+
+	\begin{ebullet}
+		\item[\textbf{Observação 2:}] $\meta{A} \eif \meta{C}$ é uma tautologia se e somente se em nenhuma valoração de letras sentencias, $\meta{A} \eif \meta{C}$ é falsa.
+	\end{ebullet}
+Dado que uma sentença condicional é falsa apenas quando seu antecedente é verdadeiro e seu consquente é falso, podemos reescrever a observação 2.
+
+	\begin{ebullet}
+		\item[\textbf{Observação 3:}] $\meta{A} \eif \meta{C}$ é uma tautologia se e somente se não há valoração de letras sentencias na qual $\meta{A}$ é verdadeira e $\meta{C}$ é falsa.
+	\end{ebullet}
+Combinando as observações 1 e 3, vemos que
+\factoidbox{
+	\begin{center}
+		 $\meta{A} \eif \meta{C}$ é uma tautologia se e somente se $\meta{A} \entails \meta{C}$
+	\end{center}
+	}
+Isso, de fato, indica uma aproximação entre `$\entails$' e `$\eif$'.
+Mas esta aproximação de modo algum iguala as duas noções.
+Há diferenças fundamentais entre elas.
+Um exemplo nos ajudará aqui.
+Considere a seguinte sentença:
+	\begin{earg}\setcounter{eargnum}{4}
+		\item \label{n:MariPraia}Se é domingo e Mariana está viva, então Mariana vai à praia.
+	\end{earg}
+Considere também a seguinte chave de simbolização:
+\begin{ekey}
+	\item[D] É domingo.
+	\item [V] Mariana está viva.
+	\item[P] Mariana vai à praia.
+\end{ekey}
+Com esta chave, a simbolização de \ref{n:MariPraia} na LVF fica:
+	\begin{earg}\setcounter{eargnum}{5}
+		\item \label{n:MariPraiaLVF}$(D \eand V) \eif P$
+	\end{earg}
+Podemos dizer que afirmar \ref{n:MariPraiaLVF} significa o mesmo que dizer que o mundo real corresponde a uma situação que gera uma valoração na qual \mbox{ `$(D \eand V) \eif P$'} é \emph{verdadeira}.
+Ou seja, na valoração gerada pelo mundo real não ocorre que `$D \eand V$' é verdadeira e `$P$' é falsa.
+Isso, dada nossa chave de simbolização, significa que no mundo real não acontece jamais de ser domingo e Mariana estar viva, mas ela não ir à praia.
+A \emph{verdade} de \ref{n:MariPraiaLVF} significa que Mariana é extremamente sistemática em suas idas à Praia, que Mariana jamais deixou e, enquanto viver, jamais deixará de ir à Praia aos domingos. Chova ou faça sol.
+Esta é uma afirmação bastante forte sobre Mariana, mas enquanto aceitarmos a simbolização proposta, é exatamente isso que significa dizer que a sentença original \ref{n:MariPraia} é \emph{verdadeira}.
+
+Por outro lado, afirmar \mbox{`$D \eand V$' $\entails$ `$P$'} (ou seja, que `$D \eand V$' sustenta `$P$') significa algo muito mais forte ainda que isso.
+Significa o mesmo que dizer que não apenas na valoração gerada pelo mundo real, mas em nenhuma valoração `$D \eand V$' é verdadeira e `$P$' é falsa.
+Ou seja, significa o mesmo que dizer que `$(D \eand V) \eif P$' é uma tautologia.
+Isso, dada nossa chave de simbolização, significa que em todas as alternativas concebíveis ao mundo real, em todos os cenários hipotéticos imagináveis, não acontece jamais de ser domingo e Mariana estar viva, mas ela não ir à praia.
+Esta não é apenas uma afirmação bastante forte sobre Mariana, é uma afirmação bastante forte sobre como o mundo pode ser.
+Enquanto aceitarmos a simbolização proposta, afirmar \mbox{`$D \eand V$' $\entails$ `$P$'} é afirmar que o mundo não pode ser de um modo tal que Mariana, estando viva, não vá a praia em um domingo.
+E isso significa afirmar que a sentença original \ref{n:MariPraia} é uma \emph{verdade necessária} (ver definição na Seção 3.2): é verdadeira em todas as situações; é impossível que não seja verdadeira.
+
+Então, dada uma simbolização aceitável, esta outra diferença fundamental entre `$\entails$' e `$\eif$' pode ser assim resumida em termos mais gerais:
+\factoidbox{
+	Afirmar $\meta{A} \eif \meta{C}$ é comprometer-se com a \emph{verdade} da sentença que $\meta{A} \eif \meta{C}$ simboliza. \\ \\
+	Afirmar $\meta{A} \entails \meta{C}$ é comprometer-se com a \emph{necessidade} da sentença que $\meta{A} \eif \meta{C}$ simboliza.
+	}
+
+Estes dois compromissos são bastantes diferentes.
+Quem afirma $\meta{A} \eif \meta{C}$ está dizendo que \emph{o mundo real} é tal que jamais ocorre $\meta{A}$ sem que também ocorra $\meta{C}$.
+Quem afirma $\meta{A} \entails \meta{C}$ está dizendo que não só o mundo real, mas \emph{qualquer alternativa concebível ao mundo real} é tal que jamais ocorre $\meta{A}$ sem que também ocorra $\meta{C}$.
+Em nosso exemplo `$(D \eand V) \eif P$' \emph{pode ser} uma afirmação verdadeira, desde que Mariana seja mesmo alguém que jamais falhou e jamais falhará em ir à praia aos Domingos.
+No entanto, `$(D \eand V) \eif P$' \emph{não pode ser} uma verdade necessária.
+Porque mesmo se esta sentença for verdadeira, os passeios dominicais de Mariana não parecem ser algo que delimite as possibilidades do mundo.
+Conseguimos imaginar que o mundo poderia ser (ou ter sido) diferente, de modo que `$(D \eand V) \eif P$' fosse falsa.
+Mariana, por algum motivo qualquer, poderia simplesmente não ter ido à praia em algum domingo.
+Esta situação gera uma valoração na qual `$D \eand V$' é verdadeira, mas `$P$' é falsa.
+
+Para finalizar.
+Comprometer-se com a verdade de uma sentença é comprometer-se com o fato específico que ela afirma, que pode ser verificado no mundo real.
+A lógica, a metafísica e a filosofia em geral pouco nos ajudam nesta verificação.
+Melhor contar aqui com a ciência, nossos sentidos, o jornalismo, até a internet, se tivermos cuidado.
+Por outro lado, comprometer-se com a necessidade de uma sentença é comprometer-se com algo que não se pode verificar no mundo real, é comprometer-se com certas características gerais que limitam e constrangem todas as alternativas concebíveis para o mundo real.
+Para este tipo de verificação, a ciência, nossos sentidos, o jornalismo e a internet pouco nos ajudarão.
+Aqui, sim, a lógica, a metafísica e a filosofia em geral serão os únicos instrumentos de que dispomos.
+
+
+\practiceproblems
+\problempart
+Examine as tabelas de verdade que você fez como resposta ao Exercício \ref{s:CompleteTruthTables} \textbf{A} e determine quais sentenças são tautologias, quais são contradições e quais são contingências (ou seja, nem tautologias, nem contradições).
+\solutions
+
+\
+
+\problempart
+\label{pr.TT.satisfiable}
+Use tabelas de verdade para determinar se as sentenças de cada um dos quatro itens abaixo são conjuntamente satisfatórias ou conjuntamente insatisfatórias:
+\begin{earg}
+\item $A\eif A$, $\enot A \eif \enot A$, $A\eand A$, $A\eor A$ %satisfiable
+\item $A\eor B$, $A\eif C$, $B\eif C$ %satisfiable
+\item $B\eand(C\eor A)$, $A\eif B$, $\enot(B\eor C)$  %unsatisfiable
+\item $A\eiff(B\eor C)$, $C\eif \enot A$, $A\eif \enot B$ %satisfiable
+\end{earg}
+
+
+\solutions
+\problempart
+\label{pr.TT.valid}
+Use tabelas de verdade para determinar se cada um dos cinco argumentos abaixo é válido ou inválido.
+\begin{earg}
+\item $A\eif A \therefore A$ %invalid
+\item $A\eif(A\eand\enot A) \therefore \enot A$ %valid
+\item $A\eor(B\eif A) \therefore \enot A \eif \enot B$ %valid
+\item $A\eor B, B\eor C, \enot A \therefore B \eand C$ %invalid
+\item $(B\eand A)\eif C, (C\eand A)\eif B \therefore (C\eand B)\eif A$ %invalid
+\end{earg}
+
+\problempart Para cada uma das seis sentenças abaixo, determine se ela é uma tautologia, uma contradição ou uma sentença contingente, usando, em cada caso, uma tabela de verdade completa.
+\begin{earg}
+\item $\enot B \eand B$ \vspace{.5ex}%contra
+
+
+\item $\enot D \eor D$ \vspace{.5ex}%taut
+
+
+\item $(A\eand B) \eor (B\eand A)$\vspace{.5ex} %contingent
+
+
+\item $\enot[A \eif (B \eif A)]$\vspace{.5ex} %contra
+
+
+\item $A \eiff [A \eif (B \eand \enot B)]$ \vspace{.5ex}%contra
+
+
+\item $[(A \eand B) \eiff B] \eif (A \eif B)$ \vspace{.5ex}% contingent. 
+
+\end{earg}
+
+
+
+\noindent\problempart
+\label{pr.TT.equiv}
+Determine, para cada um dos cinco pares de sentença abaixo, se as sentenças do par são ou não são logicamente equivalentes, usando, para isso, tabelas de verdade completas.
+\begin{earg}
+\item $A$ e $\enot A$
+\item $A \eand \enot A$ e $\enot B \eiff B$
+\item $[(A \eor B) \eor C]$ e $[A \eor (B \eor C)]$
+\item $A \eor (B \eand C)$ e $(A \eor B) \eand (A \eor C)$
+\item $[A \eand (A \eor B)] \eif B$ e $A \eif B$\end{earg}
+
+
+\problempart
+\label{pr.TT.equiv2}
+Determine, para cada um dos cinco pares de sentença abaixo, se as sentenças do par são ou não são logicamente equivalentes, usando, para isso, tabelas de verdade completas.
+\begin{earg}
+\item $A\eif A$ e $A \eiff A$
+\item $\enot(A \eif B)$ e $\enot A \eif \enot B$
+\item $A \eor B$ e $\enot A \eif B$
+\item$(A \eif B) \eif C$ e $A \eif (B \eif C)$
+\item $A \eiff (B \eiff C)$ e $A \eand (B \eand C)$
+\end{earg}
+
+\problempart
+\label{pr.TT.satisfiable2}
+Determine se as sentenças de cada uma das cinco coleções abaixo são conjuntamente satisfatórias ou conjuntamente insatisfatórias, usando, em cada caso, uma tabela de verdade completa.
+\begin{earg}
+\item $A \eand \enot B$, $\enot(A \eif B)$, $B \eif A$\vspace{.5ex} %Consistent
+
+%\begin{tabular}{ccccccccccccccc} 
+%1. 	&	A 					 & \eand 		&  \enot & B & & \enot  		& 	 (A	  & 	 \eif	 	 & 	 B)		 & 	 & 	 B	 	 & 	\eif 	 	 & 	A 	 	 & 	 Consistent \\ 
+%\cline{2-5} \cline{7-10}\cline{12-14} 
+%	& 	T 					 & 	 F	 		&  F	 & T & & F	 		& 	 T	  & 	 T	 	 & 	T 	 	 & 	 & 	 T	 	 & 	 T	 	 & T	 	 	&	  \\ 
+%\cline{2-14}
+%	& \multicolumn{1}{|r}{T}& 	\textbf{T}	 & T	 & F & & \textbf{T}	 & 	 T	 & 	 F	 	 & 	 F	 	 & 	 & 	 F	 	 & 	 \textbf{T}	 	 & 	 \multicolumn{1}{r|}{T}	 	 & 	  \\ 
+%\cline{2-14}
+%	& 	 F	 				 & 	 F	 & 	 F	 & T & 	& 	 F	 & 	 F	 & 	 T	 	 & 	 T	 	 & 	  & 	 T	 	 & 	 F	 	 & 	 F	 	 & 	  \\ 
+%	& 	 F	  				& 	 F	 & 	 T	 & 	F&  & 	 F	 & 	 F	 & 	 T	 	 & 	 F	 	 & 	  & 	 F	 	 & 	 T	 	 & 	 F	 	 & 	  \\ 
+%\end{tabular}
+
+\item $A \eor B$, $A \eif \enot A$, $B \eif \enot B$ \vspace{.5ex}%unsatisfiable. 
+
+%\begin{tabular}{ccccccccccccccc} 
+%2. &A	 & \eor 	 & B 	 & 	 	 & A 	 & \eif 	 & 	\enot & A 	 & 	 	 & B 	 & \eif 	 & \enot	 & 	B 	 & 	Insatisfiable \\ 
+%\cline{2-4}\cline{6- 9} \cline{11-14}
+%   &	T	 & 	 T	 &T  	 & 	 	 & T	 & 	 F	 & 	F 	 & T 	 & 	 	 & 	T 	 & 	F 	 & 	 F	 & 	T 	 & 	 \\ 
+%   &	 T	& 	 T	 & F 	 & 	 	 & 	T 	 & 	 F	 & 	 F	 & 	 T	 & 	 	 & 	F 	 & 	 T	 & 	 T	 & 	 F	 & 	 \\ 
+%   &	 F	& 	 T	 & 	 T	 & 	 	 & 	F 	 & 	 T	 & 	 T	 & 	F 	 & 	 	 & 	 T	 & 	 F	 & 	 F	 & 	 T	 & 	 \\ 
+%   &	 F	& 	 F	 & 	 F	 & 	 	 & 	 F	 & 	 T	 & 	 T	 & 	 F	 & 	 	 & 	 F	 & 	 T	 & 	 T	 & 	 F	 & 	 \\ 
+%\end{tabular}
+
+\item $\enot(\enot A \eor B) $, $A \eif \enot C$, $A \eif (B \eif C)$\vspace{.5ex} %Insatisfiable
+
+%3. &\enot & (\enot & A & \eor &B) &  &A  & \eif 	 &\enot 	 &C & 	 & A &\eif 	& (B 	 &\eif 	& C)	 &Consistent \\ 
+%\cline{2-6}\cline{8-11} \cline{13-17} 
+%   &	F 	& 	F	 & 	T & T	 & T & 	  & T & F	 & 	 F&T 	 & 	 &T & T	 & T	 &T 	 &T 	 & \\ 
+%   &	 F	& 	F	 & 	T & T	 & T & 	  & T & T	 & 	 T& F	 & 	 &T & F	 & T	 & F	 &F 	 & \\ 
+% 
+%  &	 T & 	F 	& 	T & F	 & F & 	  & T & F	 & 	 F& T	 & 	 &T & T	 & F	 & T	 &T 	 & \\ 
+%\cline{2-17}
+%   &	 \multicolumn{1}{|r}{{\color{red}T}}		&  F	 & 	T & F	 & 	F &  & 	T & {\color{red}T}	 & 	 T&F 	& 	 &T & {\color{red}T}	 & F	 & T	 &\multicolumn{1}{r|}{F} 	 & \\ 
+%\cline{2-17}
+%   &	 F	& 	T	 & 	F & T	 & 	T &  & 	F & T	 & 	 F& T	 & 	 &F	 & F	 & T	 & T	 &T 	 & \\ 
+%   &	 F	& 	 T	& 	F & T	 & 	T &  & 	F & T	 & 	T & F 	& 	 &F	 & T	 & T	 &F 	 &F 	 & \\ 
+%   &	 F	& 	 T	& 	F & T	 & 	F &  & 	F & T	 & 	F & T	 & 	 &F	 & T	 & F	 & T	 &T 	 & \\ 
+%   &	 F	& 	 T	& 	F & T	 & 	F &  & 	F & T	 & 	T & F	 & 	 &F	 & T	 & F	 & T	 &F 	 & \\ 
+%\end{tabular}
+%
+
+
+\item $A \eif B$, $A \eand \enot B$\vspace{.5ex} %Insatisfiable
+
+\item $A \eif (B \eif C)$, $(A \eif B) \eif C$, $A \eif C$\vspace{.5ex} % satisfiable. 
+
+\end{earg}
+
+\noindent\problempart
+\label{pr.TT.satisfiable3}
+Determine se as sentenças de cada uma das cinco coleções abaixo são conjuntamente satisfatórias ou conjuntamente insatisfatórias, usando, em cada caso, uma tabela de verdade completa.
+\begin{earg}
+\item $\enot B$, $A \eif B$, $A$ \vspace{.5ex}%unsatisfiable.
+\item $\enot(A \eor B)$, $A \eiff B$, $B \eif A$\vspace{.5ex} %Consistent
+\item $A \eor B$, $\enot B$, $\enot B \eif \enot A$\vspace{.5ex} %Insatisfiable
+\item $A \eiff B$, $\enot B \eor \enot A$, $A \eif B$\vspace{.5ex} %satisfiable. 
+\item $(A \eor B) \eor C$, $\enot A \eor \enot B$, $\enot C \eor \enot B$\vspace{.5ex} %satisfiable
+\end{earg}
+
+
+
+
+\noindent\problempart
+\label{pr.TT.valid2}
+Determine se cada um dos quatro argumentos abaixo é válido ou inválido, usando, em cada caso, uma tabela de verdade completa.
+\begin{earg}
+\item $A\eif B$, $B \therefore  A$ %invalid
+
+\item $A\eiff B$, $B\eiff C \therefore A\eiff C$ %valid
+
+\item $A \eif B$, $A \eif C\therefore B \eif C$ %invalid. 
+
+\item $A \eif B$, $B \eif A\therefore A \eiff B$ %valid. 
+
+\end{earg}
+
+\noindent\problempart
+\label{pr.TT.valid3}
+Determine se cada um dos cinco argumentos abaixo é válido ou inválido, usando, em cada caso, uma tabela de verdade completa.
+\begin{earg}
+\item $A\eor\bigl[A\eif(A\eiff A)\bigr] \therefore  A $\vspace{.5ex}%invalid
+\item $A\eor B$, $B\eor C$, $\enot B \therefore A \eand C$\vspace{.5ex} %valid
+\item $A \eif B$, $\enot A\therefore \enot B$ \vspace{.5ex}%invalid
+\item $A$, $B\therefore \enot(A\eif \enot B)$ \vspace{.5ex}%valid
+\item $\enot(A \eand B)$, $A \eor B$, $A \eiff B\therefore C$ \vspace{.5ex}%valid 
+\end{earg}
+
+\solutions
+\problempart
+\label{pr.TT.concepts}
+Responda cada uma das sete perguntas abaixo e justifique todas as suas respostas.
+\begin{earg}
+\item Suponha que  \meta{A} e \meta{B} sejam logicamente equivalentes.
+O que esta suposição nos diz a respeito de se $\meta{A}\eiff\meta{B}$ é uma tautologia, uma contradição ou uma contingência?
+%\meta{A} and \meta{B} have the same truth value on every line of a complete truth table, so $\meta{A}\eiff\meta{B}$ is true on every line. It is a tautology.
+\item Suponha que $(\meta{A}\eand\meta{B})\eif\meta{C}$ não seja nem uma tautologia, nem uma contradição.
+O que esta suposição nos diz a respeito da validade ou não de $\meta{A}, \meta{B} \therefore\meta{C}$?
+%The sentence is false on some line of a complete truth table. On that line, \meta{A} and \meta{B} are true and \meta{C} is false. So the argument is invalid.
+\item Suponha que  $\meta{A}$, $\meta{B}$ e $\meta{C}$ sejam conjuntamente insatisfatórias.
+O que esta suposição nos diz a respeito de se $(\meta{A}\eand\meta{B}\eand\meta{C})$ é uma tautologia, uma contradição ou uma contingência?
+\item Suponha que \meta{A} seja uma contradição.
+O que esta suposição nos diz a respeito de $\meta{A}, \meta{B} \entails \meta{C}$?
+$\meta{A}$ e $\meta{B}$ sustentam $\meta{C}$ ou não?
+%Since \meta{A} is false on every line of a complete truth table, there is no line on which \meta{A} and \meta{B} are true and \meta{C} is false. So the argument is valid.
+\item Suponha que \meta{C} seja uma tautologia. 
+O que esta suposição nos diz a respeito de $\meta{A}, \meta{B}\entails \meta{C}$?
+$\meta{A}$ e $\meta{B}$ sustentam $\meta{C}$ ou não?
+%Since \meta{C} is true on every line of a complete truth table, there is no line on which \meta{A} and \meta{B} are true and \meta{C} is false. So the argument is valid.
+\item Suponha que \meta{A} e \meta{B} sejam logicamente equivalentes.
+O que esta suposição nos diz a respeito de se $(\meta{A}\eor\meta{B})$ é uma tautologia, uma contradição ou uma contingência?
+%Not much. $(\meta{A}\eor\meta{B})$ is a tautology if \meta{A} and \meta{B} are tautologies; it is a contradiction if they are contradictions; it is contingent if they are contingent.
+\item Suponha que  \meta{A} e \meta{B} \emph{não} sejam logicamente equivalentes.
+O que esta suposição nos diz a respeito de se $(\meta{A}\eor\meta{B})$ é uma tautologia, uma contradição ou uma contingência?
+%\meta{A} and \meta{B} have different truth values on at least one line of a complete truth table, and $(\meta{A}\eor\meta{B})$ will be true on that line. On other lines, it might be true or false. So $(\meta{A}\eor\meta{B})$ is either a tautology or it is contingent; it is \emph{not} a contradiction.
+\end{earg}
+\problempart 
+Considere o seguinte princípio:
+	\begin{ebullet}
+		\item Assuma que $\meta{A}$ e $\meta{B}$ sejam logicamente equivalentes.
+		Suponha que um argumento contenha $\meta{A}$ (ou como uma premissa ou como a conclusão).
+		A validade do argumento não é afetada quando substituímos $\meta{A}$ por $\meta{B}$.
+	\end{ebullet}
+Este princípio está correto? Explique sua resposta.
+
+
+\chapter{Atalhos nas tabelas de verdade}
+Com a prática, produzir tabelas de verdade se tornará uma atividade simples para você.
+Ao fazer os exercícios do capítulo anterior você deve ter notado que, apesar de ser trabalhoso e um pouco monótono, preencher tabelas de verdade não é uma atividade assim tão difícil.
+É uma espécie de contabilidade lógica.
+Muito mais difícil do que preencher tabelas de verdade é produzir boas simbolizações e refletir sobre a adequação ou não das simbolizações com relação aos argumentos originais.
+Vamos, neste capítulo e no próximo, facilitar um pouco mais as coisas com as tabelas de verdade, fornecendo alguns atalhos permitidos em seu preenchimento.
+
+\section{Trabalhando com tabelas de verdade}
+Você descobrirá rapidamente que não precisa copiar o valor de verdade de cada letra sentencial.
+Você pode simplesmente consultá-los nas colunas do lado esquerdo do traço vertical.
+Por exemplo:
+\begin{center}
+\begin{tabular}{c c|d e e e e e f}
+$P$&$Q$&$(P$&\eor&$Q)$&\eiff&\enot&$P$\\
+\hline
+ V & V & V & V & V & \TTbf{F} & F & V\\
+ V & F & V & V & F & \TTbf{F} & F & V\\
+ F & V & F & V & V & \TTbf{V} & V & F\\
+ F & F & F & F & F & \TTbf{F} & V & F
+\end{tabular}
+\end{center}
+A tabela acima, quando não reescrevemos os valores de verdade abaixo das letras sentenciais do lado direito do traço vertical, pode ser preenchida, de modo mais abreviado, como:
+\begin{center}
+\begin{tabular}{c c|d e e e e f}
+$P$&$Q$&$(P$&\eor&$Q)$&\eiff&\enot&$P$\\
+\hline
+ V & V &  & V &  & \TTbf{F} & F\\
+ V & F &  & V &  & \TTbf{F} & F\\
+ F & V &  & V & & \TTbf{V} & V\\
+ F & F &  & F &  & \TTbf{F} & V
+\end{tabular}
+\end{center}
+Você também sabe com certeza que para uma disjunção ser verdadeiras, basta que um de seus disjuntos seja verdadeiro.
+Portanto, se em uma certa linha da tabela de verdade você encontrar um disjunto verdadeiro, não há necessidade de calcular o valor de verdade do outro disjunto para saber que a  disjunção é verdadeira naquela linha.
+
+O conectivo principal da sentença da tabela de verdade abaixo é uma disjunção.
+Um dos disjuntos é apenas uma negação e o outro uma sentença bem mais complexa.
+Pouparemos trabalho se preenchermos a coluna do disjunto mais simples primeiro.
+Fazendo isso, só precisaremos calcular os valores de verdade do disjunto mais complexo nas linhas em que o disjunto mais simples tem valor falso.
+Veja:
+\begin{center}
+\begin{tabular}{c c|d e e e e e e f}
+$P$&$Q$& $(\enot$ & $P$&\eor&\enot&$Q)$&\eor&\enot&$P$\\
+\hline
+ V & V & F & & F & F& & \TTbf{F} & F\\
+ V & F &  F & & V& V& &  \TTbf{V} & F\\
+ F & V & & & $-$ & &  & \TTbf{V} & V\\
+ F & F & & & $-$ & & &\TTbf{V} & V
+\end{tabular}
+\end{center}
+Apenas para registrar, colocaremos um traço `$-$' na coluna do conectivo principal da sentença ou subsentença que não precisa ser calculada.
+
+Eis outro atalho.
+Você também sabe com certeza que para uma conjunção ser falsa, basta que um dos conjuntos seja falso.
+Portanto, se você encontrar um conjunto falso, não há necessidade de descobrir o valor de verdade do outro conjunto.
+Assim, também com as conjunções você pode poupar trabalho se calcular os valores de verdade dos conjuntos mais simples, conforme o exemplo abaixo ilustra:
+\begin{center}
+\begin{tabular}{c c|d e e e e e e f}
+$P$&$Q$&\enot &$(P$&\eand&\enot&$Q)$&\eand&\enot&$P$\\
+\hline
+ V & V & $-$ &  &  &  & & \TTbf{F} & F\\
+ V & F & $-$  &  &  &  & & \TTbf{F} & F\\
+ F & V & V &  & F &  & & \TTbf{V} & V\\
+ F & F & V &  & F & & & \TTbf{V} & V
+\end{tabular}
+\end{center}
+O condicional também tem atalhos semelhantes.
+Duas possibilidades distintas garantem a verdade do condicional:
+quando o consequente é verdadeiro sabemos que o condicional é verdadeiro; e quando o antecedente é falso, sabemos também que o condicional é verdadeiro.
+Então, também com as sentenças condicionais, pouparemos trabalho se preenchermos primeiro a coluna da sub-sentença mais simples.
+Os dois exemplos abaixo ilustram as duas possibilidades de atalho para o condicional:
+\begin{center}
+\begin{tabular}{c c|d e e e e e f}
+$P$&$Q$& $((P$&\eif&$Q$)&\eif&$P)$&\eif&$P$\\
+\hline
+ V & V & &  & &$-$ & & \TTbf{V} & \\
+ V & F &  &  & &$-$& & \TTbf{V} & \\
+ F & V & & V & & F & & \TTbf{V} & \\
+ F & F & & V & & F & &\TTbf{V} & 
+\end{tabular}
+\end{center}
+e
+\begin{center}
+\begin{tabular}{c c|d e e e e e f}
+$P$&$Q$& $P$&\eif&$((Q$&\eif&$P)$&\eif&$Q)$\\
+\hline
+ V & V & & \TTbf{V} & & $-$ & & V & \\
+ V & F & & \TTbf{F} & & V & & F & \\
+ F & V & & \TTbf{V} & &  & & $-$ & \\
+ F & F & & \TTbf{V} & &  & & $-$ & 
+\end{tabular}
+\end{center}
+Repare que `$((P \eif Q) \eif P) \eif P$' é uma tautologia.
+Ela, de fato, é um exemplo da \emph{Lei de Peirce}, assim chamada em homenagem ao filósofo e lógico a Charles Sanders Peirce.
+
+
+\section{Testando a validade ou sustentação}
+Quando usamos tabelas verdadeiras para testar a validade ou sustentação, nossa tarefa é procurar as linhas \emph{ruins}, aquelas que indicam que as premissas \emph{não} sustentam a conclusão: ou seja, linhas onde as premissas são todas verdadeiras e a conclusão é falsa.
+Repare que:
+	\begin{earg}
+		\item[\textbullet] Qualquer linha em que a conclusão seja verdadeira não será uma linha ruim. 
+		\item[\textbullet] Qualquer linha em que alguma premissa seja falsa não será uma linha ruim. 
+	\end{earg}
+Se levarmos isso em consideração, podemos economizar muito trabalho.
+Sempre que encontrarmos uma linha onde a conclusão é verdadeira, não precisamos avaliar mais nada nessa linha: saberemos que essa linha definitivamente não é ruim.
+Da mesma forma, sempre que encontrarmos uma linha onde alguma premissa é falsa, não precisamos avaliar mais nada nessa linha.
+Aqui também a estratégia é sempre preencher as colunas das sentenças mais simples antes das mais complicadas.
+
+Com isso em mente, considere como poderíamos testar a validade do seguinte argumento:
+	$$\enot L \eif (J \eor L), \enot L \therefore J$$
+A \emph{primeira} coisa que devemos fazer é avaliar a conclusão.
+Afinal ela é a sentença mais simples: apenas uma letra sentencial.
+Qualquer linha na qual a conclusão é \emph{verdadeira} não é uma linha ruim, e, por isso, não precisaremos calcular mais nada nesta linha.
+Após este primeiro estágio nossa tabela fica:
+\begin{center}
+\begin{tabular}{c c|d e e e e f |d f|c}
+$J$&$L$&\enot&$L$&\eif&$(J$&\eor&$L)$&\enot&$L$&$J$\\
+\hline
+%J   L   -   L      ->     (J   v   L)
+ V & V & &&$-$&&&&$-$&& {V}\\
+ V & F & &&$-$&&&&$-$&& {V}\\
+ F & V & &&&&&&&& {F}\\
+ F & F & &&&&&&&& {F}
+\end{tabular}
+\end{center}
+onde os traços indicam os valores com os quais não precisamos mais nos preocupar, já que as linhas em que ocorrem não são ruins, e não precisamos calcular mais nada nestas linhas.
+Os espaços em branco indicam que os valores que, por ora, precisamos continuar investigando.
+
+A premissa mais simples e fácil de avaliar é a segunda, então continuamos nossa tabela preenchendo a coluna da segunda premissa, nas linhas não marcadas com pontos (que ainda não foram descartadas).
+\begin{center}
+\begin{tabular}{c c|d e e e e f |d f|c}
+$J$&$L$&\enot&$L$&\eif&$(J$&\eor&$L)$&\enot&$L$&$J$\\
+\hline
+%J   L   -   L      ->     (J   v   L)
+ V & V & &&$-$&&&&$-$&& {V}\\
+ V & F & &&$-$&&&&$-$&& {V}\\
+ F & V & &&$-$&&&&{F}&& {F}\\
+ F & F & &&&&&&{V}&& {F}
+\end{tabular}
+\end{center}
+Observe que podemos descartar também a terceira linha: ela não será uma linha ruim porque (pelo menos) uma das premissas é falsa nesta linha.
+Por fim, concluímos a tabela verdade calculando o valor da primeira premissa apenas na última linha, que ainda não foi descartada.
+\begin{center}
+\begin{tabular}{c c|d e e e e f |d f|c}
+$J$&$L$&\enot&$L$&\eif&$(J$&\eor&$L)$&\enot&$L$&$J$\\
+\hline
+%J   L   -   L      ->     (J   v   L)
+  V & V & &&$-$&&&&$-$&& {V}\\
+  V & F & &&$-$&&&&$-$&& {V}\\
+  F & V & &&$-$&&&&{F}&& {F}\\
+ F & F & V &  & \TTbf{F} &  & F & & {V} & & {F}
+\end{tabular}
+\end{center}
+A tabela de verdade não tem linhas ruins, portanto as premissas sustentam a conclusão e o argumento é válido.
+
+Vamos fazer mais um exemplo e verificar se o seguinte argumento é válido
+$$A\eor B, \enot (A\eand C), \enot (B \eand \enot D) \therefore (\enot C\eor D)$$
+No primeiro estágio, calculamos o valor de verdade da conclusão.
+Como se trata de uma disjunção, ela será verdadeira sempre que qualquer disjunto for verdadeiro, então aceleramos um pouco as coisas ali, calculando o valor de verdade de `$\enot C$' apenas nas linhas em que `$D$ é falso.
+Feito isso, podemos então ignorar a maioria das linhas, exceto as poucas nas quais a conclusão é falsa.
+\begin{center}
+\begin{tabular}[t]{c c c c | c|c|c|d e e f }
+$A$ & $B$ & $C$ & $D$ & $A\eor B$ & $\enot (A\eand C)$ & $\enot (B\eand \enot D)$ & $(\enot$ &$C$& $\eor$ & $D)$\\
+\hline
+V & V & V & V & $-$ & $-$ & $-$ & &  &  \TTbf{V} & \\
+V & V & V & F & & & & F & &  \TTbf{F} & \\
+V & V & F & V & $-$ & $-$ & $-$ & & &  \TTbf{V} & \\
+V & V & F & F & $-$ & $-$ & $-$ & V & &  \TTbf{V} &\\
+V & F & V & V & $-$ & $-$ & $-$ & & &  \TTbf{V} & \\
+V & F & V & F &  &  &   & F &  &  \TTbf{F} &\\
+V & F & F & V & $-$ & $-$ & $-$ & & & \TTbf{V} &\\
+V & F & F & F & $-$ & $-$ & $-$ & V &  & \TTbf{V} & \\
+F & V & V & V & $-$ & $-$ & $-$ & & & \TTbf{V} & \\
+F & V & V & F &  &   &   & F &  & \TTbf{F} &\\
+F & V & F & V & $-$ & $-$ & $-$ & & & \TTbf{V} & \\
+F & V & F & F & $-$ & $-$ & $-$ &V & & \TTbf{V} & \\
+F & F & V & V & $-$ & $-$ & $-$ & & & \TTbf{V} & \\
+F & F & V & F &  &  &  & F & & \TTbf{F} & \\
+F & F & F & V & $-$ & $-$ & $-$ & & & \TTbf{V} & \\
+F & F & F & F & $-$ & $-$ & $-$ & V& & \TTbf{V} & \\
+\end{tabular}
+\end{center}
+Devemos agora avaliar as premissas, começando pela mais simples, usando atalhos sempre que pudermos:
+\begin{center}
+\begin{tabular}[t]{c c c c | d e f |d e e f |d e e e f |d e e f }
+$A$ & $B$ & $C$ & $D$ & $A$ & $\eor$ & $B$ & $\enot$ & $(A$ &$\eand$ &$ C)$ & $\enot$ & $(B$ & $\eand$ & $\enot$ & $D)$ & $(\enot$ &$C$& $\eor$ & $D)$\\
+\hline
+V & V & V & V & & $-$ & & $-$ & & & & $-$ & & & & & &  &  \TTbf{V} & \\
+V & V & V & F & &\TTbf{V}& & \TTbf{F}& &V& & $-$ & & & & & F & &  \TTbf{F} & \\
+V & V & F & V & & $-$ & & $-$ & & & & $-$ & &  & &   & & &  \TTbf{V} & \\
+V & V & F & F & & $-$ & & $-$ & & & & $-$ &&  &  &   & V & &  \TTbf{V} & \\
+V & F & V & V & & $-$ & & $-$ & & & & $-$ &&  &  &  & & &  \TTbf{V} & \\
+V & F & V & F & &\TTbf{V}& &\TTbf{F}& &V& & $-$ && & & & F & & \TTbf{F} & \\
+V & F & F & V & & $-$ & & $-$ & & & & $-$ && & & & & & \TTbf{V} & \\
+V & F & F & F & & $-$ & & $-$ & & & & $-$ && & & & V &  & \TTbf{V} & \\
+F & V & V & V& & $-$ & & $-$ & & & & $-$ & & & & & & & \TTbf{V} & \\
+F & V & V & F & &\TTbf{V}& & \TTbf{V}& & F& & \TTbf{F}& & V& V&  & F &  & \TTbf{F} & \\
+F & V & F & V & & $-$ & & $-$ & & & & $-$ && & &  & & & \TTbf{V} & \\
+F & V & F & F& & $-$ & & $-$ & & & & $-$ && & & &V & & \TTbf{V} & \\
+F & F & V & V & & $-$ & & $-$ & & & & $-$ && & & & & & \TTbf{V} & \\
+F & F & V & F & & \TTbf{F} & & $-$ & & & & $-$ &&  &  &  & F & & \TTbf{F} & \\
+F & F & F & V & & $-$ & & $-$ & & & & $-$ && & & & & & \TTbf{V} & \\
+F & F & F & F & & $-$ & & $-$ & & & & $-$ && & & & V& & \TTbf{V} & \\
+\end{tabular}
+\end{center}
+Podemos ver na tabela que o argumento é válido.
+Ela não tem linha ruim, em que todas as premissas verdadeiras e a conclusão falsa.
+Mesmo com a maioria dos valores não preenchidos, tudo o que é necessário para vermos este fato está na tabela.
+Examine-a com calma e certifique-se disso.
+Nossos atalhos nos ajudaram a poupar \emph{muito} trabalho.
+Se tivéssemos preenchido toda a tabela, teríamos escrito 256 `V's ou `F's.
+Como usamos atalhos, escrevemos apenas 37.
+
+
+\practiceproblems
+\problempart
+\label{pr.TT.TTorC2}
+Usando atalhos, determine se cada uma das nove sentenças abaixo é uma tautologia, uma contradição ou uma contingência.
+\begin{earg}
+\item $\enot B \eand B$ %contra
+\item $\enot D \eor D$ %taut
+\item $(A\eand B) \eor (B\eand A)$ %contingent
+\item $\enot[A \eif (B \eif A)]$ %contra
+\item $A \eiff [A \eif (B \eand \enot B)]$ %contra
+\item $\enot(A\eand B) \eiff A$ %contingent
+\item $A\eif(B\eor C)$ %contingent
+\item $(A \eand\enot A) \eif (B \eor C)$ %tautology
+\item $(B\eand D) \eiff [A \eiff(A \eor C)]$%contingent
+\end{earg}
+
+
+\chapter{Tabelas de verdade parciais}\label{s:PartialTruthTable}
+
+Nem sempre precisamos das informações de todas as linhas de uma tabela da verdade.
+Às vezes, apenas uma ou duas linhas bastam.
+
+\paragraph{Tautologia.} 
+Para mostrar que uma sentença é uma tautologia, precisamos mostrar que ela é verdadeira em todas as valorações.
+Ou seja, precisamos saber que ela é verdadeira em todas as linhas da tabela de verdade.
+Então, mesmo que usemos os atalhos aprendidos no Capítulo anterior, para mostrar que uma sentença é uma tautologia precisamos de uma tabela de verdade completa, com o conectivo principal da sentença preenchido em todas as linhas.
+
+Entretanto, para mostrar que uma sentença \emph{não} é uma tautologia, basta uma linha na qual a sentença seja falsa.
+Ou seja, não precisamos fazer uma tabela de verdade completa para mostrar que uma sentença não é uma tautologia.
+Podemos fazer isso  com uma \emph{tabela de verdade parcial}.
+
+Suponha que queiramos mostrar que a sentença
+$$(U \eand T) \eif (S \eand W)$$
+\emph{não} é uma tautologia.
+Montamos, para isso, uma \define{tabela de verdade parcial}:
+\begin{center}
+\begin{tabular}{c c c c |d e e e e e f}
+$S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
+\hline
+   &   &   &   &    &   &    &  &    &   &   
+\end{tabular}
+\end{center}
+A tabela completa teria 16 linhas, já que a sentença tem 4 letras sentenciais.
+Mas deixamos espaço para apenas uma linha, pois uma linha em que a sentença seja falsa é suficiente para mostrar que ela não é uma tautologia.
+Como o que nos interessa é uma linha na qual a sentença seja falsa, preenchemos com um `F' a coluna do conectivo principal da sentença: 
+\begin{center}
+\begin{tabular}{c c c c |d e e e e e f}
+$S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
+\hline
+   &   &   &   &    &   &    &\TTbf{F}&    &   &   
+\end{tabular}
+\end{center}
+O que precisamos fazer agora é encontrar uma valoração na qual a sentença é mesmo falsa; ou seja, encontrar valores de verdade para as 4 letras sentencias ($S$, $T$, $U$ e $W$) para os quais a sentença \mbox{`$(U \eand T) \eif (S \eand W)$'} é falsa.
+Como o conectivo principal da sentença é um condicional, e um condicional é falso sempre que seu antecedente for verdadeiro e seu consequente for falso, preenchemos isso na tabela:
+\begin{center}
+\begin{tabular}{c c c c |d e e e e e f}
+$S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
+\hline
+   &   &   &   &    &  V  &    &\TTbf{F}&    &   F &   
+\end{tabular}
+\end{center}
+Para que o `$(U\eand T)$' seja verdadeira,`$U$' e `$T$' devem ser ambos verdadeiros.
+Então, também preenchemos isso na tabela:
+\begin{center}
+\begin{tabular}{c c c c|d e e e e e f}
+$S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
+\hline
+   & V & V &   &  V &  V  & V  &\TTbf{F}&    &   F &   
+\end{tabular}
+\end{center}
+Agora, apenas precisamos tornar `$(S \eand W)$' falsa.
+Para fazer isso, pelo menos um entre `$S$' e `$W$' deve ser falso.
+Podemos tornar ambos `$S$' e `$W$' falsos, se quisermos; ou apenas o primeiro, ou apenas o segundo.
+Tanto faz.
+Tudo o que importa é que a sentença completa seja falsa nessa linha.
+Esta multiplicidade de opções apenas indica que a sentença é falsa em mais de uma linha da tabela de verdade completa.
+Então, escolhendo arbitrariamente uma dessas três opções, concluímos assim a tabela:
+\begin{center}
+\begin{tabular}{c c c c|d e e e e e f}
+$S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
+\hline
+ F & V & V & F &  V &  V  & V  &\TTbf{F}&  F &   F & F  
+\end{tabular}
+\end{center}
+O que obtivemos foi uma tabela de verdade parcial que mostra que `$(U \eand T) \eif (S \eand W)$' não é uma tautologia.
+Em outras palavras, mostramos que existe uma valoração na qual `$(U \eand T) \eif (S \eand W)$' é falsa.
+Esta valoração está explicitada na única linha da tabela que foi preenchida, e é caracterizada pelos seguintes valores de verdade das letras sentenciais:
+`$S$' é falsa, `$T$' é verdadeira, `$U$' é verdadeira e `$W$' é falsa.
+
+
+\paragraph{Contradição.}
+Mostrar que algo é uma contradição requer uma tabela de verdade completa: precisamos mostrar que não há valoração na qual a sentença é verdadeira; isto é, precisamos mostrar que a sentença é falsa em todas as linhas da tabela de verdade.
+
+No entanto, para mostrar que uma sentença \emph{não} é uma contradição, tudo o que precisamos fazer é encontrar uma valoração na qual a sentença é verdadeira.
+E para fazer isso, uma única linha de uma tabela de verdade é suficiente.
+Vamos ilustrar isso com a mesma sentença do exemplo anterior.
+\begin{center}
+\begin{tabular}{c c c c|d e e e e e f}
+$S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
+\hline
+  &  &  &  &   &   &   &\TTbf{V}&  &  &
+\end{tabular}
+\end{center}
+Esta é uma sentença condicional (seu conectivo principal é um condicional) e sabemos que um condicional é verdadeiro tanto se seu antecedente for falso, quanto se seu consequente for verdadeiro.
+Temos duas opções para trabalhar.
+Escolhemos arbitrariamente a primeira:
+vamos fazer o antecedente deste condicional `$(U \eand T)$' falso.
+Como o antecedente é uma conjunção, basta que tenha um conjunto falso, para que seja falsa.
+Também de modo arbitrário, sem qualquer motivo específico, vamos tornar `$U$' falsa.
+Fazendo isso, podemos atribuir qualquer valor de verdade às outras letras que a sentença completa será falsa.
+Então completamos a tabela assim:
+\begin{center}
+\begin{tabular}{c c c c|d e e e e e f}
+$S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
+\hline
+ F & V & F & F &  F &  F  & V  &\TTbf{V}&  F &   F & F
+\end{tabular}
+\end{center}
+Esta tabela parcial mostra que a sentença \mbox{`$(U \eand T) \eif (S \eand W)$'} não é uma contradição porque ela mostra que na valoração em que `$S$' é falsa, `$T$' é verdadeira, `$U$' é falsa e `$W$' é falsa, a sentença condicional é verdadeira.
+
+
+\paragraph{Equivalência.}
+Para mostrar que duas sentenças são equivalentes, devemos mostrar que as sentenças têm o mesmo valor de verdade em todas as valorações.
+Isso requer uma tabela de verdade completa, com todas as linhas.
+
+Mas para mostrar que duas sentenças \emph{não} são equivalentes, precisamos apenas mostrar que existe uma valoração na qual elas têm valores de verdade diferentes.
+Isso requer uma tabela de verdade parcial de uma linha apenas.
+Para fazer isso aplicamos estes mesmos procedimentos para construir uma tabela parcial de uma linha, na qual uma das sentenças é verdadeira e a outra é falsa.
+
+\paragraph{Consistência.}
+Para mostrar que algumas sentenças são conjuntamente satisfatórias, devemos mostrar que existe uma valoração em que todas as sentenças são verdadeiras.
+Uma tabela de verdade parcial com uma única linha é suficiente para fazer isso.
+
+Já para mostrar que algumas sentenças são conjuntamente insatisfatórias, devemos mostrar que não há valoração em que todas as sentenças sejam verdadeiras. 
+Para isso, uma tabela parcial não basta. Precisamos de uma tabela completa, com todas as linhas para ver que em cada linha da tabela pelo menos uma das sentenças é falsa.
+
+\paragraph{Validade.}
+Para mostrar que um argumento é válido (ou que suas premissas sustentam a conclusão), devemos mostrar que não há valoração na qual todas as premissas são verdadeiras e a conclusão é falsa.
+Isso requer uma tabela de verdade completa, porque temos que mostrar que isso não ocorre em nenhuma linha da tabela.
+
+No entanto, para mostrar que um argumento é \emph{inválido} (ou que suas premissas não sustentam a conclusão), devemos mostrar que existe uma valoração na qual todas as premissas são verdadeiras e a conclusão é falsa.
+Uma tabela de verdade parcial com apenas uma linha será suficiente para isso.
+Basta que nesta linha as premissas sejam todas verdadeiras e a conclusão seja falsa.
+%Isso requer apenas uma tabela de verdade parcial de uma linha, na qual todas as premissas são verdadeiras e a conclusão é falsa.
+
+Veja abaixo um resumo sobre que tipo de tabela de verdade é necessária nos diversos testes:
+\begin{center}\label{t:TruthTable}
+\begin{tabular}{l l l}
+\cline{1-3}
+\textbf{Teste} & \textbf{Sim} & \textbf{Não}\\
+ \hline
+\cline{1-3}
+{\footnotesize A sentença é tautologia?} & {\footnotesize completa} & {\footnotesize uma linha} \\
+{\footnotesize A sentença é  contradição?} &  {\footnotesize completa} & {\footnotesize uma linha} \\
+{\footnotesize A sentença é contingente?} & {\footnotesize duas linhas} & {\footnotesize completa}\\
+{\footnotesize As sentenças são equivalentes?} & {\footnotesize completa}  & {\footnotesize uma linha} \\
+{\footnotesize As sentenças são cojuntamente satisfatórias?} & {\footnotesize uma linha} & {\footnotesize completa} \\
+{\footnotesize O argumento válido?} & {\footnotesize completa} & {\footnotesize uma linha} \\
+{\footnotesize As premissas sustentam a conclusão?} & {\footnotesize completa} & {\footnotesize uma linha}\\
+\cline{1-3}
+\end{tabular}
+\end{center}
+\label{table.CompleteVsPartial}
+
+
+\practiceproblems
+\solutions
+
+\solutions
+\problempart
+\label{pr.TT.equiv3}
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para determinar se as sentenças de cada um dos oito pares abaixo são ou não logicamente equivalentes:
+\begin{earg}
+\item $A$, $\enot A$ %No
+\item $A$, $A \eor A$ %Yes
+\item $A\eif A$, $A \eiff A$ %Yes
+\item $A \eor \enot B$, $A\eif B$ %No
+\item $A \eand \enot A$, $\enot B \eiff B$ %Yes
+\item $\enot(A \eand B)$, $\enot A \eor \enot B$ %Yes
+\item $\enot(A \eif B)$, $\enot A \eif \enot B$ %No
+\item $(A \eif B)$, $(\enot B \eif \enot A)$ %Yes
+\end{earg}
+
+\solutions
+\problempart
+\label{pr.TT.satisfiable4}
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para determinar se as sentenças de cada um dos seis grupos abaixo são ou não conjuntamente satisfatórias:
+\begin{earg}
+\item $A \eand B$, $C\eif \enot B$, $C$ %unsatisfiable
+\item $A\eif B$, $B\eif C$, $A$, $\enot C$ %unsatisfiable
+\item $A \eor B$, $B\eor C$, $C\eif \enot A$ %satisfiable
+\item $A$, $B$, $C$, $\enot D$, $\enot E$, $F$ %satisfiable
+\item $A \eand (B \eor C)$, $\enot(A \eand C)$, $\enot(B \eand C)$ %satisfiable
+\item $A \eif B$, $B \eif C$, $\enot(A \eif C)$ %unsatisfiable
+\end{earg}
+
+\solutions
+\problempart
+\label{pr.TT.valid4}
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para determinar se cada um dos cinco argumentos abaixo é válido ou inválido:
+\begin{earg}
+\item $A\eor\bigl[A\eif(A\eiff A)\bigr] \therefore A$ %invalid
+\item $A\eiff\enot(B\eiff A) \therefore A$ %invalid
+\item $A\eif B, B \therefore A$ %invalid
+\item $A\eor B, B\eor C, \enot B \therefore A \eand C$ %valid
+\item $A\eiff B, B\eiff C \therefore A\eiff C$ %valid
+\end{earg}
+
+\problempart
+\label{pr.TT.TTorC3}
+Para cada uma das dez sentenças abaixo, decida se ela é uma tautologia, uma contradição ou uma sentença contingente.
+Justifique sua resposta em cada caso com uma tabela de verdade completa ou, quando for apropriado, parcial.
+
+% truth tables in LaTeX generated by http://www.curtisbright.com/logic/. Be sure to give him a shout out.
+
+\begin{earg}
+\item  $A \eif \enot A$ \vspace{.5ex}							
+
+%{\color{red}
+%$
+%\begin{array}{c|cccc}
+%A&A&\eif&\enot&A\\\hline
+%T&T&\mathbf{F}&F&T\\
+%F&F&\mathbf{T}&T&F
+%\end{array}
+%$ 
+%
+%Contingent	 \vspace{6pt}
+%}
+%	T letter, 2 connectives
+\item $A \eif (A \eand (A \eor B))$ \vspace{.5ex}	
+
+%{\color{red}
+%$
+%\begin{array}{cc|ccc@{}ccc@{}ccc@{}c@{}c}
+%A&B&A&\eif&(&A&\eand&(&A&\eor&B&)&)\\\hline
+%T&T&T&\mathbf{T}&&T&T&&T&T&T&&\\
+%T&F&T&\mathbf{T}&&T&T&&T&T&F&&\\
+%F&T&F&\mathbf{T}&&F&F&&F&T&T&&\\
+%F&F&F&\mathbf{T}&&F&F&&F&F&F&&
+%\end{array}
+%$
+%
+%Tautology \vspace{6pt}
+%}
+%			2 letters, 3 connectives
+
+\item $(A \eif B) \eiff (B \eif A)$ 	\vspace{.5ex}				%
+%
+%{\color{red}
+%$
+%\begin{array}{cc|c@{}ccc@{}ccc@{}ccc@{}c}
+%a&b&(&a&\rightarrow&b&)&\leftrightarrow&(&b&\rightarrow&a&)\\\hline
+%T&T&&T&T&T&&\mathbf{T}&&T&T&T&\\
+%T&F&&T&F&F&&\mathbf{F}&&F&T&T&\\
+%F&T&&F&T&T&&\mathbf{F}&&T&F&F&\\
+%F&F&&F&T&F&&\mathbf{T}&&F&T&F&
+%\end{array}
+%$
+%
+%Contingent \vspace{6pt}
+%
+%}
+%		2 letters, 3 connectives
+
+\item $A \eif \enot(A \eand (A \eor B)) $	\vspace{.5ex}	
+
+%{\color{red}
+%$
+%\begin{array}{cc|cccc@{}ccc@{}ccc@{}c@{}c}
+%a&b&a&\rightarrow&\enot&(&a&\eand&(&a&\eor&b&)&)\\\hline
+%T&T&T&\mathbf{F}&F&&T&T&&T&T&T&&\\
+%T&F&T&\mathbf{F}&F&&T&T&&T&T&F&&\\
+%F&T&F&\mathbf{T}&T&&F&F&&F&T&T&&\\
+%F&F&F&\mathbf{T}&T&&F&F&&F&F&F&&
+%\end{array}
+%$
+%
+%Contingent	\vspace{6pt}
+%
+%}
+%
+% 2 letters, 4 connectives
+
+\item $\enot B \eif [(\enot A \eand A) \eor B]$\vspace{.5ex} 
+
+%{\color{red}
+%$
+%\begin{array}{cc|cccc@{}c@{}cccc@{}ccc@{}c}
+%a&b&\enot&b&\rightarrow&(&(&\enot&a&\eand&a&)&\eor&b&)\\\hline
+%T&T&F&T&\mathbf{T}&&&F&T&F&T&&T&T&\\
+%T&F&T&F&\mathbf{F}&&&F&T&F&T&&F&F&\\
+%F&T&F&T&\mathbf{T}&&&T&F&F&F&&T&T&\\
+%F&F&T&F&\mathbf{F}&&&T&F&F&F&&F&F&
+%\end{array}
+%$
+%Contingent	 \vspace{6pt}
+%
+%}
+%	2 letters, 5 connectives
+
+\item $\enot(A \eor B) \eiff (\enot A \eand \enot B)$ \vspace{.5ex}
+
+%{\color{red}
+%$
+%\begin{array}{cc|cc@{}ccc@{}ccc@{}ccccc@{}c}
+%a&b&\enot&(&a&\eor&b&)&\leftrightarrow&(&\enot&a&\eand&\enot&b&)\\\hline
+%T&T&F&&T&T&T&&\mathbf{T}&&F&T&F&F&T&\\
+%T&F&F&&T&T&F&&\mathbf{T}&&F&T&F&T&F&\\
+%F&T&F&&F&T&T&&\mathbf{T}&&T&F&F&F&T&\\
+%F&F&T&&F&F&F&&\mathbf{T}&&T&F&T&T&F&
+%\end{array}
+%$
+%
+%Tautology \vspace{6pt}
+%}
+%2 letters, 6 connectives
+
+\item $[(A \eand B) \eand C] \eif B$\vspace{.5ex}							
+%
+%{\color{red}
+%$
+%\begin{array}{ccc|c@{}c@{}ccc@{}ccc@{}ccc}
+%a&b&c&(&(&a&\eand&b&)&\eand&c&)&\rightarrow&b\\\hline
+%T&T&T&&&T&T&T&&T&T&&\mathbf{T}&T\\
+%T&T&F&&&T&T&T&&F&F&&\mathbf{T}&T\\
+%T&F&T&&&T&F&F&&F&T&&\mathbf{T}&F\\
+%T&F&F&&&T&F&F&&F&F&&\mathbf{T}&F\\
+%F&T&T&&&F&F&T&&F&T&&\mathbf{T}&T\\
+%F&T&F&&&F&F&T&&F&F&&\mathbf{T}&T\\
+%F&F&T&&&F&F&F&&F&T&&\mathbf{T}&F\\
+%F&F&F&&&F&F&F&&F&F&&\mathbf{T}&F
+%\end{array}
+%$
+%
+%Tautology \vspace{6pt}
+%}
+%
+%3 letters, 3 connectives
+
+\item $\enot\bigl[(C\eor A) \eor B\bigr]$\vspace{.5ex} 						
+%
+%{\color{red}
+%$
+%\begin{array}{ccc|cc@{}c@{}ccc@{}ccc@{}c}
+%a&b&c&\enot&(&(&c&\eor&a&)&\eor&b&)\\\hline
+%T&T&T&\mathbf{F}&&&T&T&T&&T&T&\\
+%T&T&F&\mathbf{F}&&&F&T&T&&T&T&\\
+%T&F&T&\mathbf{F}&&&T&T&T&&T&F&\\
+%T&F&F&\mathbf{F}&&&F&T&T&&T&F&\\
+%F&T&T&\mathbf{F}&&&T&T&F&&T&T&\\
+%F&T&F&\mathbf{F}&&&F&F&F&&T&T&\\
+%F&F&T&\mathbf{F}&&&T&T&F&&T&F&\\
+%F&F&F&\mathbf{T}&&&F&F&F&&F&F&
+%\end{array}
+%$
+%
+%Contingent \vspace{6pt}
+%
+%}
+%	 	3 letters, 3 connectives
+
+\item $\bigl[(A\eand B) \eand\enot(A\eand B)\bigr] \eand C$ \vspace{.5ex}	
+%
+%{\color{red}
+%$
+%\begin{array}{ccc|c@{}c@{}ccc@{}cccc@{}ccc@{}c@{}ccc}
+%a&b&c&(&(&a&\eand&b&)&\eand&\enot&(&a&\eand&b&)&)&\eand&c\\\hline
+%T&T&T&&&T&T&T&&F&F&&T&T&T&&&\mathbf{F}&T\\
+%T&T&F&&&T&T&T&&F&F&&T&T&T&&&\mathbf{F}&F\\
+%T&F&T&&&T&F&F&&F&T&&T&F&F&&&\mathbf{F}&T\\
+%T&F&F&&&T&F&F&&F&T&&T&F&F&&&\mathbf{F}&F\\
+%F&T&T&&&F&F&T&&F&T&&F&F&T&&&\mathbf{F}&T\\
+%F&T&F&&&F&F&T&&F&T&&F&F&T&&&\mathbf{F}&F\\
+%F&F&T&&&F&F&F&&F&T&&F&F&F&&&\mathbf{F}&T\\
+%F&F&F&&&F&F&F&&F&T&&F&F&F&&&\mathbf{F}&F
+%\end{array}
+%$
+%
+%Contradiction \vspace{6pt}
+%
+%}
+%
+%% 	3 letters, 5 connectives
+%
+\item $(A \eand B) ]\eif[(A \eand C) \eor (B \eand D)]$ \vspace{.5ex}		
+%
+%{\color{red}
+%$
+%\begin{array}{cccc|c@{}c@{}ccc@{}c@{}ccc@{}c@{}ccc@{}ccc@{}ccc@{}c@{}c}
+%a&b&c&d&(&(&a&\eand&b&)&)&\eif&(&(&a&\eand&c&)&\eor&(&b&\eand&d&)&)\\\hline
+%T&T&T&T&&&T&T&T&&&\mathbf{T}&&&T&T&T&&T&&T&T&T&&\\
+%T&T&F&F&&&T&T&T&&&\mathbf{F}&&&T&F&F&&F&&T&F&F&&\\
+%\end{array}
+%$
+%
+%Contingent \vspace{6pt}
+%}
+%
+%	4 letters, 5 connectives
+\end{earg}
+
+\noindent\problempart
+\label{pr.TT.TTorC4}
+Para cada uma das dez sentenças abaixo, decida se ela é uma tautologia, uma contradição ou uma sentença contingente.
+Justifique sua resposta em cada caso com uma tabela de verdade completa ou, quando for apropriado, parcial.
+\begin{earg}
+\item  $\enot (A \eor A)$\vspace{.5ex}							%	Contradiction		1 letter, 2 connectives
+\item $(A \eif B) \eor (B \eif A)$\vspace{.5ex}					%	Tautology			2 letters, 2 connectives
+\item $[(A \eif B) \eif A] \eif A$\vspace{.5ex}					%	Tautology			2 letters, 3 connectives
+\item $\enot[( A \eif B) \eor (B \eif A)]$\vspace{.5ex}			%	Contradiction		2 letters, 4 connectives
+\item $(A \eand B) \eor (A \eor B)$\vspace{.5ex} 				%	Contingent		2 letters, 5 connectives
+\item $\enot(A\eand B) \eiff A$\vspace{.5ex} 					%contingent			2 letters, 3 connectives
+\item $A\eif(B\eor C)$\vspace{.5ex} 							%contingent			3 letters, 2 connectives
+\item $(A \eand\enot A) \eif (B \eor C)$\vspace{.5ex} 			%tautology			3 letters, 4 connectives 
+\item $(B\eand D) \eiff [A \eiff(A \eor C)]$\vspace{.5ex}			%contingent			4 letters, 4 connectives
+\item $\enot[(A \eif B) \eor (C \eif D)]$\vspace{.5ex} 			% Contingent. 		4 letters, 4 connectives
+\end{earg}
+
+
+\noindent\problempart
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para decidir se as sentenças de cada um dos nove pares abaixo são ou não logicamente equivalentes:
+\begin{earg}
+\item $A$ and $A \eor A$
+\item $A$ and $A \eand A$
+\item $A \eor \enot B$ and $A\eif B$
+\item $(A \eif B)$ and $(\enot B \eif \enot A)$
+\item $\enot(A \eand B)$ and $\enot A \eor \enot B$
+\item $ ((U \eif (X \eor X)) \eor U)$ and $\enot (X \eand (X \eand U))$
+\item $ ((C \eand (N \eiff C)) \eiff C)$ and $(\enot \enot \enot N \eif C)$
+\item $[(A \eor B) \eand C]$ and $[A \eor (B \eand C)]$
+\item $((L \eand C) \eand I)$ and $L \eor C$
+\end{earg}
+
+
+\noindent\problempart
+\label{pr.TT.satisfiable5}
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para decidir se as sentenças de cada um dos dez grupos abaixo são ou não conjuntamente satisfatórias:
+\begin{earg}
+\item $A\eif A$, $\enot A \eif \enot A$, $A\eand A$, $A\eor A$ %satisfiable
+\item $A \eif \enot A$, $\enot A \eif A$%unsatisfiable. 
+\item $A\eor B$, $A\eif C$, $B\eif C$ %satisfiable
+\item $A \eor B$, $A \eif C$, $B \eif C$, $\enot C$ %	Insatisfiable
+\item $B\eand(C\eor A)$, $A\eif B$, $\enot(B\eor C)$  %unsatisfiable
+\item $(A \eiff B) \eif B$,  $B \eif \enot (A \eiff B)$, $A \eor B$  %	Consistent
+\item $A\eiff(B\eor C)$, $C\eif \enot A$, $A\eif \enot B$ %satisfiable
+\item  $A \eiff B$,  $\enot B \eor \enot A$,  $A \eif  B$ % Consistent
+\item $A \eiff B$, $A \eif C$, $B \eif D$, $\enot(C \eor D)$ %consitent
+\item $\enot (A \eand \enot B)$,  $B \eif \enot A$, $\enot B$   %Consistent
+\end{earg}
+
+\noindent\problempart 
+Para cada um dos dez argumentos abaixo, decida se ele é válido ou inválido.
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para justificar sua resposta em cada caso:
+\label{pr.TT.valid5} 
+\begin{earg}
+\item $A\eif(A\eand\enot A)\therefore \enot A$% valid
+\item $A \eor B$, $A \eif B$, $B \eif A \therefore  A \eiff B$  % Valid
+\item $A\eor(B\eif A)\therefore \enot A \eif \enot B$ %valid
+\item $A \eor B$, $A \eif B$, $ B \eif A \therefore  A \eand B$ %valid
+\item $(B\eand A)\eif C$, $(C\eand A)\eif B\therefore (C\eand B)\eif A$ % invalid
+\item $\enot (\enot A \eor \enot B)$, $A \eif \enot C \therefore  A \eif (B \eif C)$ % invalid.
+\item $A \eand (B \eif C)$, $\enot C \eand (\enot B \eif \enot A)\therefore C \eand \enot C$ % valid
+\item $A \eand B$, $\enot A \eif \enot C$, $B \eif \enot D \therefore  A \eor B$ % Invalid
+\item $A \eif B\therefore (A \eand B) \eor (\enot A \eand \enot B)$ % invalid
+\item $\enot A \eif B$,$ \enot B \eif C $,$ \enot C \eif A \therefore  \enot A \eif (\enot B \eor \enot C) $% Invalid
+
+\end{earg}
+
+\noindent\problempart Para cada um dos cinco argumentos abaixo, decida se ele é válido ou inválido.
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para justificar sua resposta em cada caso:
+\label{pr.TT.valid6} 
+\begin{earg}
+\item $A\eiff\enot(B\eiff A)\therefore A$ % invalid
+\item $A\eor B$, $B\eor C$, $\enot A\therefore B \eand C$ % invalid
+\item $A \eif C$, $E \eif (D \eor B)$, $B \eif \enot D\therefore (A \eor C) \eor (B \eif (E \eand D))$ % invalid
+\item $A \eor B$, $C \eif A$, $C \eif B\therefore A \eif (B \eif C)$ % invalid
+\item $A \eif B$, $\enot B \eor A\therefore A \eiff B$ % valid
+\end{earg}
+

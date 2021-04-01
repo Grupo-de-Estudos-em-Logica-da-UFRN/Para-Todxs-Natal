@@ -1,0 +1,159 @@
+\documentclass[openany,oneside,12pt]{memoir}
+
+\usepackage{forallxyyc}
+\usepackage[absolute,overlay]{textpos}
+
+% Accessibility: use a sans-serif font
+% GoSans is designed by Bigelow & Holmes, also the makers of the Dyslexia font
+\usepackage[sfdefault]{GoSans}
+\usepackage{sfmath}
+\usepackage[T1]{fontenc}
+
+
+\renewcommand*{\chaptitlefont}{\normalfont\fontsize{40pt}{40pt}\selectfont\bfseries\color{leadbeater}}
+\renewcommand*{\parttitlefont}{\normalfont\fontsize{40pt}{40pt}\selectfont\bfseries\color{leadbeater}}
+
+\setlength{\midchapskip}{50pt}
+
+
+\makeatletter
+  \renewcommand*{\printchaptername}{%
+    \chapnamefont\@chapapp}
+\makeatother
+  
+\renewcommand*{\printchaptertitle}[1]{\begin{Spacing}{1.1}
+  \chaptitlefont #1\\[-\baselineskip]%
+\end{Spacing}
+    \hspace*{-20pt}%
+    \smash{\color{leadbeater}\rule{7pt}{\barlength}}}
+\renewcommand{\printparttitle}[1]{\RaggedRight\parttitlefont #1}
+\renewcommand*{\printpartname}{%
+\RaggedRight\partnamefont Part}
+
+
+% set stock & paper size with narrow margins
+
+\setstocksize{8in}{5in}
+
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+\settrims{0pt}{0pt}
+
+% let's calculate the line length for 65 characters in \normalfont
+
+\setlxvchars
+
+% set the size of the type block
+
+\settypeblocksize{*}{1.05\lxvchars}{1.52}
+
+% set spine and and edge margin
+
+\setlrmargins{*}{*}{1}
+\setulmargins{.6in}{*}{*}
+\setheaderspaces{*}{*}{1}
+
+\checkandfixthelayout
+
+\definecolor{lyallpink}{RGB}{222,31,149}
+\colorlet{leadbeater}{lyallpink}
+\colorlet{dkleadbeater}{lyallpink!80!black}
+\colorlet{ltleadbeater}{lyallpink!50}
+\colorlet{vltleadbeater}{lyallpink!3}
+
+% Accessibility
+
+% used for letter tracking/spacing
+\RequirePackage[tracking=alltext]{microtype}
+
+% Part numbers need more space in TOC
+\setlength{\cftpartnumwidth}{5em}
+
+\renewcommand{\cftchapterfont}{\textsf}
+\renewcommand{\cftchapterpagefont}{\textsf}
+
+% set text ragged right
+%\usepackage{ragged2e} % use this to get hyphenation
+\let\RaggedRight\raggedright
+
+\begin{document}
+
+% discard page after cover
+%\AtBeginShipoutNext{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\midsloppy\raggedbottom
+
+% Cover Page
+
+\thispagestyle{empty}
+
+\begin{textblock*}{\stockwidth}(0in,3.5in)
+  \noindent\includegraphics{assets/forallx-coverart-screen.pdf}
+\end{textblock*}
+
+% make front cover
+\begin{textblock*}{0in}(0in,0in)
+  \noindent\hfill
+  \begin{minipage}[b][\stockheight][s]{.9\stockwidth}
+    \begin{raggedleft}
+      \vspace*{1.2cm}
+      \hfill
+      \sffamily\fontsize{66pt}{0pt}\selectfont
+      \color{lyallpink}
+      \textbf{forall}%
+      \fontsize{80pt}{0pt}\selectfont\rmfamily\textit{\textbf{x}\/}
+                    
+      \vskip.5cm
+          
+      \sffamily\fontsize{24pt}{28pt}\selectfont
+      \color{black}
+      \textbf{\uppercase{Calgary}\\ (Accessible)}
+
+      \vspace*{1cm}
+      \color{black}
+      \sffamily
+      \fontsize{20pt}{22pt}\selectfont
+      \textbf{An Introduction to\\ Formal Logic}
+
+      \vfill
+      \fontsize{11pt}{14pt}\selectfont
+      \color{white}
+      \textbf{P.~D. Magnus}\\
+      \textbf{Tim Button}\\
+      \textit{with additions by}\\
+      \textbf{J.~Robert Loftis}\\ \textit{remixed and revised by}\\
+      \textbf{Aaron Thomas-Bolduc}\\ \textbf{Richard Zach}\par
+      \vspace{1cm}
+      \forallxversion\par
+      \vspace{1cm}
+    \end{raggedleft}
+  \end{minipage}
+  \hspace*{1cm}
+\end{textblock*}
+\ 
+\newpage\color{black}
+
+% Turn on accessibility
+
+% increase line spacing
+\setSingleSpace{1.3}
+\SingleSpacing
+
+% set text ragged right and increase paragraph spacing
+\RaggedRight
+\setlength\parindent{2em}
+\setlength\parskip{1em}
+
+% increase character spacing
+\SetTracking[no ligatures = f]{encoding=*,shape=*}{70}
+
+% avoid italics and small caps
+\let\emph\textbf
+\renewcommand*{\define}[1]{\textbf{\color{leadbeater}#1}}
+
+% no all caps in headers
+\nouppercaseheads
+
+\setlength{\barlength}{0pt}
+\input{forallx-yyc-content}
+
+\end{document}

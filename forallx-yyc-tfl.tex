@@ -1,0 +1,1328 @@
+%!TEX root = forallxyyc.tex
+\normalsize
+\part{Lógica verofuncional}
+\label{ch.TFL}
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+
+\chapter{Primeiros passos para a simbolização}
+
+\section{Validade em  virtude da forma}\label{s:ValidityInVirtueOfForm}
+Considere este argumento:
+	\begin{earg}
+		\item[] Chove lá fora.
+		\item[] Se chove lá fora, então Sheila está melancólica.
+		\item[\therefore] Sheila está melancólica.
+	\end{earg}
+e este outro também:
+	\begin{earg}
+		\item[] Márcia é uma sindicalista anarquista.
+		\item[] Se Márcia é uma sindicalista anarquista, então Sílvio é um ávido leitor de Tolstoy.
+		\item[\therefore] Sílvio é um ávido leitor de Tolstoy.
+	\end{earg}
+Ambos os argumentos são válidos e não é difícil notar que eles compartilham uma erstrutura comum, que pode ser expressada assim:
+	\begin{earg}
+		\item[] $A$
+		\item[] Se $A$, então $C$
+		\item[\therefore] $C$
+	\end{earg}
+Esta parece ser uma \emph{estrutura} excelente para um argumento.
+De fato, qualquer argumento com essa \emph{estrutura} será válido.
+E essa não é a única estrutura boa para argumentos.
+Considere um argumento como:
+	\begin{earg}
+		\item[] Raquel está lendo Platão ou estudando lógica
+		\item[] Raquel não está lendo Platão.
+		\item[\therefore] Raquel está estudando lógica.
+	\end{earg}
+Este também é um argumento válido e sua estrutura é algo como:
+	\begin{earg}
+		\item[] $A$ ou $B$
+		\item[] não-$A$
+		\item[\therefore] $B$
+	\end{earg}
+Uma estrutura excelente! Veja este outro exemplo:
+	\begin{earg}
+		\item[] Não é o caso que Leonardo fez ambos, atuou em vários filmes e estudou muito.
+		\item[] Leonardo atuou em vários filmes.
+		\item[\therefore] Leonardo não estudou muito.
+	\end{earg}
+Este argumento também é válido e tem uma estrutura que poderíamos representar como:
+	\begin{earg}
+		\item[] não-($A$ e $B$)
+		\item[] $A$
+		\item[\therefore] não-$B$
+	\end{earg}
+Esses exemplos ilustram uma ideia muito importante, que podemos chamar de \emph{validade em virtude da forma}.
+A validade dos argumentos que acabamos de considerar não tem muito a ver com os significados das expressões em português como 'Sheila está melancólica', 'Sílvio é um ávido leitor de Tolstoi' ou 'Leonardo atuou em vários filmes'.
+Se a validade destes argumentos têm algo a ver com significado, é apenas com os significados de expressões tais como `e', `ou', `não' e `se \ldots, então\ldots'.
+
+Nas Partes \ref{ch.TFL}, \ref{ch.TruthTables} e \ref{ch.NDTFL} deste livro, vamos desenvolver uma linguagem formal que nos permitirá simbolizar muitos argumentos de tal modo que poderemos mostrar que eles são válidos em virtude de sua forma.
+Essa linguagem será a \emph{lógica verofuncional}, ou LVF.
+
+
+\section{Validade por razões especiais}
+Existem, no entanto, inúmeros argumentos que são válidos, mas não por razões relacionadas à sua forma. Vejamos um exemplo:
+	\begin{earg}
+		\item[] Morgana gosta de macaxeira.
+		\item[\therefore] Morgana gosta de aipim.
+	\end{earg}
+É impossível que a premissa seja verdadeira e a conclusão falsa.
+Portanto, o argumento é válido.
+No entanto, a validade não está relacionada à forma do argumento.
+Veja abaixo um argumento inválido com exatamente a mesma forma:
+	\begin{earg}
+		\item[] Morgana gosta de macaxeira.
+		\item[\therefore] Morgana gosta de rapadura.
+	\end{earg}
+Isso poderia sugerir que a validade do primeiro argumento \emph{depende} do significado das palavras `macaxeira' e `aipim'.
+Mas, esteja isso correto ou não, não é apenas a \emph{forma} daquele argumento que o torna válido.
+Considere agora este outro argumento:
+	\begin{earg}
+		\item[] A escultura é toda verde.
+		\item[\therefore] A escultura não é toda vermelha. 
+	\end{earg}
+Novamente, parece impossível que a premissa seja verdadeira e a conclusão falsa, pois nada pode ser todo verde e todo vermelho.
+Portanto, o argumento é válido.
+Mas aqui está um argumento inválido com esta mesma forma:
+	\begin{earg}
+		\item[] A escultura é toda verde.
+		\item[\therefore] A escultura não é toda brilhante.
+	\end{earg}
+Este argumento é inválido, pois é possível que uma coisa seja toda verde e toda brilhante também.
+(Pode-se, por exemplo, pintar as unhas com um elegante esmalte verde brilhante.)
+A validade do primeiro argumento parece estar relacionada com a maneira como as cores (ou as palavras-que-designam-cores) interagem.
+Mas, seja isso correto ou não, não é simplesmente a \emph{forma} daquele argumento que o torna válido.
+
+A conclusão importante a ser tirada aqui é a seguinte:
+\emph{Na melhor das hipóteses, a lógica verofuncional (LVF) nos ajudará a entender argumentos válidos devido à sua forma.}
+
+
+\section{Sentenças atômicas}
+
+Na Seção \ref{s:ValidityInVirtueOfForm} começamos a isolar a forma de um argumento substituindo \emph{subsentenças} de sentenças por letras específicas.
+Assim, no primeiro exemplo daquela seção, `chove lá fora' é uma subsentença de `Se chove lá fora, então Sheila está melancólica', e substituímos essa subsentença por `$A$'.
+
+Nossa linguagem artificial, a LVF (lógica verofuncional), leva a cabo essa ideia de forma absolutamente implacável.
+Seu componente mais básico é uma coleção destas letras que chamaremos de \emph{letras sentenciais}.
+Elas serão os blocos de construção básicos a partir dos quais sentenças mais complexas são construídas.
+Usaremos as letras maiúsculas do alfabeto como letras sentenciais da LVF.
+Existem apenas 26 letras diferentes, mas não há limite para o número de letras sentenciais que podemos querer considerar.
+Obtemos novas letras sentenciais adicionando subíndices às letras do alfabeto.
+Por exemplo, abaixo temos cinco letras sentenciais diferentes:
+	$$A, P, P_1, P_2, A_{234}$$
+Usaremos as letras sentenciais para representar ou \emph{simbolizar} certas sentenças em português.
+Para fazer isso, precisamos fornecer uma \define{chave de simbolizacao}, tal como a seguinte
+	\begin{ekey}
+		\item[A] Chove lá fora
+		\item[C] Sheila está melancólica
+	\end{ekey}
+Ao fazer isso, não estamos fixando essa chave simbolização \emph{para sempre}.
+Estamos apenas dizendo que, por enquanto, usaremos a letra sentencial `$A$'  da LVF para simbolizar a sentença em português `Chove lá fora', e a letra sentencial `$C$' para simbolizar a sentença `Sheila está melancólica'.
+Mais tarde, quando estivermos lidando com sentenças diferentes ou argumentos diferentes, poderemos fornecer uma nova chave de simbolização, tal como:
+	\begin{ekey}
+		\item[A] Márcia é uma sindicalista anarquista
+		\item[C] Sílvio é um ávido leitor de Tolstoy
+	\end{ekey}
+É importante entender que qualquer que seja a estrutura interna que uma sentença em português possa ter, esta estrutura é perdida quando a sentença é simbolizada por uma letra sentencial da LVF.
+Do ponto de vista da LVF, uma letra sentencial é apenas uma letra.
+Ela pode ser usada para criar sentenças mais complexas, mas não pode ser desmontada.
+
+\chapter{Conectivos}
+\label{s:TFLConnectives}
+
+No capítulo anterior, propusemos simbolizar as sentenças básicas do português através das letras sentenciais da lógica verofuncional (LVF).
+Neste capítulo veremos como simbolizar as expressões `e', `ou', `não',\ldots\ 
+que normalmente ligam, conectam as sentenças.
+As suas simbolizações na LVF são, por esta razão, chamadas de \emph{conectivos}.
+Usaremos os conectivos lógicos para criar sentenças complexas a partir de componentes atômicos. Existem cinco conectivos na LVF.
+A tabela a seguir os resume e a explicação de cada um deles será dada nas seções seguintes.
+
+	\begin{table}[h]
+	\center
+	\begin{tabular}{l l l}
+	
+	\textbf{símbolo}&\textbf{nome do símbolo}&\textbf{significado}\\
+	\hline
+	\enot&negação&`não é o caso que$\ldots$'\\
+	\eand&conjunção&`$\ldots$\ e $\ldots$'\\
+	\eor&disjunção&`$\ldots$\ ou $\ldots$'\\
+	\eif&condicional&`se $\ldots$\ então $\ldots$'\\
+	\eiff&bicondicional&`$\ldots$ se e somente se $\ldots$'\\
+	
+	\end{tabular}
+	\end{table}
+
+Esses não são os únicos conectivos do português que interessam.
+Outros são, por exemplo, `a menos que', `nem\ldots{}nem\ldots' e `porque'.
+Veremos que os dois primeiros podem ser expressos através dos conectivos da tabela acima, enquanto o último não pode.
+`Porque', diferentemente dos outros, não é um conectivo \emph{verofuncional}.
+        
+\section{Negação}
+
+Considere como nós poderíamos simbolizar estas sentenças:
+	\begin{earg}
+	\item[\ex{not1}] Maria está em Mossoró.
+	\item[\ex{not2}] Não é o caso de que Maria esteja em Mossoró.
+	\item[\ex{not3}] Maria não está em Mossoró.
+	\end{earg}
+Para simbolizar a sentença \ref{not1}, simplesmente adotamos uma letra sentencial.
+Podemos propor a seguinte chave de simbolização:
+	\begin{ekey}
+		\item[M] Maria está em Mossoró.
+	\end{ekey}
+Dessa forma, a sentença \ref{not1} é simbolizada simplesmente por:
+$$M$$
+Como a sentença \ref{not2} é claramente relacionada à sentença \ref{not1}, não devemos simbolizá-la com uma nova letra sentencial.
+Grosso modo, a sentença \ref{not2} significa algo como `Não é o caso que $M$'.
+Na tabela acima o símbolo de negação `$\enot$' faz este papel.
+Podemos, agora, simbolizar a sentença \ref{not2} como:
+$$\enot M$$
+A sentença \ref{not3} também contém a palavra `não' e claramente diz a mesma coisa que a sentença \ref{not2}.
+Portanto, também podemos simbolizá-la como:
+$$\enot M$$
+As sentenças \ref{not1} a \ref{not3} acima podem, então, ser simbolizadas como:
+	\begin{ekey}
+		\item[M] Maria está em Mossoró.
+		\item[$\enot$M] Não é o caso de que Maria esteja em Mossoró.
+		\item[$\enot$M] Maria não está em Mossoró.
+	\end{ekey}
+A regra básica para saber se usamos a negação ($\enot$) na simbolização de uma sentença pode ser assim expressa:
+
+\factoidbox{
+Uma sentença pode ser simbolizada como $\enot\meta{A}$ se puder ser parafraseada em português como `Não é o caso que \ldots'.
+}
+\noindent Considerar mais alguns exemplos nos ajudará a entender melhor a negação.
+	\begin{earg}
+		\item[\ex{not4}] O dispositivo pode ser substituído.
+		\item[\ex{not5}] O dispositivo é insubstituível.
+		\item[\ex{not5b}] O dispositivo não é insubstituível.
+	\end{earg}
+Vamos usar a seguinte chave de substituição:
+	\begin{ekey}
+		\item[S] O dispositivo é substituível
+	\end{ekey}
+A sentença \ref{not4} agora pode ser simbolizada por:
+$$S$$
+Repare que a sentença da chave de simbolização é ligeiramente diferente de \ref{not4}, mas é evidente que elas têm o mesmo significado, afinal ser substituível é poder ser substituído.
+Passando para a sentença \ref{not5}, dizer que o dispositivo é insubstituível significa que não é o caso que o dispositivo é substituível.
+Portanto, mesmo que a sentença \ref{not5} não contenha a palavra `não', nós a simbolizaremos da seguinte forma: $$\enot S$$
+A sentença \ref{not5b} pode ser parafraseada como `Não é o caso que o dispositivo seja insubstituível.'
+E esta paráfrase pode novamente ser parafraseada como `Não é o caso que não é o caso que o dispositivo seja substituível'.
+Portanto, podemos simbolizar essa sentença na LVF como:
+$$\enot\enot S$$
+As sentenças \ref{not4} a \ref{not5b} acima podem, então, ser simbolizadas como:
+	\begin{ekey}
+		\item[S] O dispositivo pode ser substituído.
+		\item[$\enot$S] O dispositivo é insubstituível.
+		\item[$\enot\enot$S] O dispositivo não é insubstituível.
+	\end{ekey}
+
+Mas é necessário termos cuidado quando lidamos com negações. Considere:
+	\begin{earg}
+		\item[\ex{not6}] Glória está feliz.
+		\item[\ex{not7}] Glória está infeliz.
+	\end{earg}
+Se usamos como chave de simbolização
+	\begin{ekey}
+		\item[F] Glória está feliz
+	\end{ekey}
+então podemos simbolizar a sentença \ref{not6} como `$F$'.
+No entanto, seria um erro simbolizar a sentença \ref{not7} como `$\enot{F}$'. 
+Porque a sentença \ref{not7} diz que Glória está infeliz.
+Mas isso não é o mesmo que `Não é o caso que Glória está feliz'.
+Glória pode, por exemplo, estar estudando lógica, e não estar nem feliz nem infeliz, mas em um estado  de plácida indiferença.
+Como `estar infeliz' não significa o mesmo que `não estar feliz', então, para simbolizar a sentença \ref{not7}, precisamos de uma nova letra sentencial da LVF.
+
+As sentenças \ref{not6} e \ref{not7} acima são melhor simbolizadas na LVF como:
+	\begin{ekey}
+		\item[F] Glória está feliz.
+		\item[I] Glória está infeliz.
+	\end{ekey}
+
+\section{Conjunção}
+\label{s:ConnectiveConjunction}
+
+Considere estas sentenças:
+	\begin{earg}
+		\item[\ex{and1}]Suzana é atleta.
+		\item[\ex{and2}]Bárbara é artista.
+		\item[\ex{and3}]Suzana é atleta e, além disso, Bárbara é artista.
+	\end{earg}
+Precisamos de duas letras sentenciais diferentes para simbolizar as sentenças \ref{and1} e \ref{and2}.
+Nossa chave de simbolização pode ser:
+	\begin{ekey}
+		\item[S] Suzana é atleta.
+		\item[B] Bárbara é artista.
+	\end{ekey}
+A sentença \ref{and1} pode, então, ser simbolizada como `$S$' e a sentença \ref{and2} como `$B$'.
+A sentença \ref{and3} diz, aproximadamente, `A e B'.
+Usaremos um outro conectivo da lógica para lidar com este `e'.
+Vamos usar, para isso, o símbolo `\eand', que chamamos na tabela da p. 31 de \define{conjuncao}.
+Assim, simbolizaremos a sentença \ref{and3} como:
+$$(S \eand B)$$
+Dizemos que `$S$' e `$B$' são os dois \define{conjuntos} da conjunção `$(S \eand B)$'.
+
+Resumindo, simbolizamos as sentenças  \ref{and1} a \ref{and3} acima como:
+	\begin{ekey}
+		\item[S]Suzana é atleta.
+		\item[B]Bárbara é artista.
+		\item[$($S$\eand$B$)$]Suzana é atleta e, além disso, Bárbara é artista.
+	\end{ekey}
+Observe que não fizemos nenhuma tentativa de simbolizar a expressão `além disso' na sentença \ref{and3}.
+Expressões como `além disso', `ambos' e `também' funcionam para chamar nossa atenção para o fato de que duas coisas estão sendo conjuntamente ditas.
+Talvez elas afetem a ênfase de uma frase, mas a ênfase é algo que em geral não interfere na validade ou não de um argumento e não é considerada na LVF.
+
+Mais alguns exemplos ajudarão a esclarecer um pouco mais esse ponto:
+	\begin{earg}
+		\item[\ex{and4}]Suzana é atleta e canhota.
+		\item[\ex{and5}]Bárbara e Renata são ambas saxofonistas.
+		\item[\ex{and6}]Embora Bárbara seja saxofonista, ela não é canhota.
+		\item[\ex{and7}]Romeu é compreensivo, mas Bárbara é mais compreensiva do que ele.
+	\end{earg}
+A sentença \ref{and4} é obviamente uma conjunção.
+Ela diz duas coisas (sobre Suzana).
+Em português é permitido dizer as duas coisas mencionando o nome Suzana apenas uma vez.
+Como definimos acima a chave de simbolização 
+	\begin{ekey}
+		\item[S] Suzana é atleta.
+	\end{ekey}
+\emph{pode} ser tentador pensar que devemos simbolizar a sentença \ref{and4} com algo parecido a `$S$ e canhota'.
+Mas isso seria um erro.
+`Canhota' não é uma sentença completa do português.
+Não poderíamos simbolizar `canhota' como uma letra sentencial.
+O que estamos buscando é algo como `$S$ e Suzana é canhota'.
+Portanto, precisamos adicionar outra letra sentencial à chave de simbolização. Utilizemos `$C$' para simbolizar 'Suzana é canhota'.
+Agora a sentença inteira pode ser simbolizada como:
+$$(S \eand C)$$	
+A sentença \ref{and5} diz uma única coisa de duas pessoas diferentes, ou seja, atribui um predicado único a dois sujeitos.
+Diz tanto de Bárbara como de Renata que elas são saxofonistas, ainda que em português tenhamos usado a palavra ``saxofonista'' apenas uma vez.
+A sentença \ref{and5} pode claramente ser parafraseada como `Bárbara é saxofonista e Renata é saxofonista'.
+Podemos então usar a seguinte chave
+	\begin{ekey}
+		\item[B_1] Bárbara é saxofonista.
+		\item[R] Renata é saxofonista.
+	\end{ekey}
+e simbolizar \ref{and5} na LVF como
+$$(B_1 \eand R)$$
+A sentença \ref {and6} é um pouco mais complicada.
+A palavra ``embora'' estabelece um contraste entre a primeira parte da frase e a segunda parte.
+No entanto, a sentença nos diz que Bárbara é saxofonista e que ela não é canhota.
+Para fazer com que cada um dos conjuntos (sentenças que compõe uma conjunção) seja uma letra sentencial, precisamos substituir ``ela'' por ``Bárbara''.
+Portanto, podemos parafrasear a frase \ref{and6} como: `Bárbara é saxofonista \emph{e} Bárbara não é canhota'.
+O segundo conjunto contém uma negação, então parafraseando mais uma vez, chegamos a: `Bárbara é saxofonista \emph{e} \emph{não é o caso que} Bárbara é canhota'.
+Como já propusemos a chave de que $B_1$ simboliza ``Bárbara é saxofonista'', então completamos nossa chave de simbolização com mais uma letra sentencial:
+	\begin{ekey}
+		\item[C_1] Bárbara é canhota.
+	\end{ekey}
+Agora, finalmente, usamos a paráfrase acima para simbolizar a sentença \ref{and6} como a seguinte sentença da LVF:
+$$(B_1 \eand \enot C_1)$$
+Observe que perdemos todos as nuances da sentença original em português nessa simbolização.
+Existe uma clara diferença de tom, ênfase, entre a sentença `Embora Bárbara seja saxofonista, ela não é canhota' (a sentença \ref{and6}) e `Bárbara é saxofonista e não é o caso de que Bárbara é canhota' (a paráfrase que fizemos para simbolizá-la na LVF).
+A LVF não preserva (e não pode) preservar esse tipo nuance.
+
+A sentença \ref{and7} levanta questões semelhantes.
+Existe um claro contraste entre o que é dito de Romeu com o que é dito de Bárbara, mas isso não é algo com o qual a LVF consiga lidar.
+Assim, podemos parafrasear \ref{and7} como `Romeu é compreensivo \emph{e} Bárbara é mais compreensiva que Romeu'.
+(Observe que mais uma vez substituímos, em nossa paráfrase, um pronome [ele] por um nome [Romeu].)
+Considere a seguinte chave de simbolização:
+	\begin{ekey}
+		\item[R_1] Romeu é compreensivo.
+		\item[B_2] Bárbara é compreensiva.
+	\end{ekey}
+Para simbolizar o primeiro conjunto da paráfrase acima, `$R_1$' basta.
+Mas como devemos simbolizar o segundo conjunto? O que diz: `Bárbara é mais compreensiva que Romeu'?
+Não tem como dizer que Bárbara é \emph{mais} compreensiva que Romeu usando esta chave.
+Precisamos de uma nova letra sentencial para simbolizar `Bárbara é mais compreensiva que Romeu'. Seja `$M_1$' esta letra.
+Podemos agora simbolizar a sentença \ref{and7} como:
+$$(R_1 \eand M_1)$$
+A regra básica para saber se usamos a conjunção ($\eand$) na simbolização de uma sentença pode ser assim expressa:
+	\factoidbox{
+		Uma sentença pode ser simbolizada como $(\meta{A} \eand \meta{B})$ se puder ser parafraseada em português como `\ldots{}e\ldots{}' ou como `\ldots, mas\ldots', ou como `embora\ldots, \ldots'.
+	}
+Você pode estar se perguntando por que colocamos parênteses em volta das conjunções.
+A razão para isso ficará clara ao observarmos como a negação pode interagir com a conjunção.
+Considere:
+	\begin{earg}
+		\item[\ex{negcon1}] Você não beberá ambos, refrigerante e suco.
+		\item[\ex{negcon2}] Você não beberá refrigerante, mas beberá suco.
+	\end{earg}
+A sentença \ref{negcon1} pode ser parafraseada como `Não é o caso que: você beberá refrigerante e você beberá suco'.
+Usando esta chave de simbolização
+	\begin{ekey}
+		\item[S_1] Você beberá refrigerante.
+		\item[S_2] Você beberá suco.
+	\end{ekey}
+podemos simbolizar `você beberá refrigerante e você beberá suco' como `$(S_1 \eand S_2)$'.
+Então, para simbolizar \ref{negcon1}, nós simplesmente negamos esta sentença toda:
+$$\enot(S_1 \eand S_2)$$
+A sentença \ref{negcon2} é uma conjunção:
+você \emph{não} beberá refrigerante e você \emph{beberá} suco.
+Dada a chave de simbolização recém proposta, simbolizamos `Você não beberá refrigerante' como `$\enot S_1$' e `Você beberá suco' como `$S_2$.
+Então, a sentença \ref{negcon2} é simbolizada como:
+$$(\enot S_1 \eand S_2)$$
+As sentenças \ref{negcon1} e \ref{negcon2} têm, em português, significados muito diferentes e por isso suas simbolizações têm que ser também diferentes.
+Em \ref{negcon1}, o \emph{âmbito} (ou \emph{escopo}) da negação é toda a conjunção.
+O posicionamento da negação `$\enot$' antes do símbolo de abre parênteses `$($'  em `$\enot(S_1 \eand S_2)$' indica que toda a sentença que está entre parênteses está sendo negada. O âmbito da negação é a conjunção como um todo.
+Já em \ref{negcon2}, o âmbito da negação é apenas o primeiro conjunto (a sentença $S_1$).
+Isso é indicado pelo posicionamento de `$\enot$' após o parêntese `$($' em `$(\enot S_1 \eand S_2)$'.
+O uso dos parênteses tem o propósito de distinguir situações como estas e ajudar a definir o escopo (ou âmbito) da negação.
+
+
+\section{Disjunção}
+
+Considere as seguintes sentenças:
+	\begin{earg}
+		\item[\ex{or1}]Fátima vai jogar videogame ou ela vai assistir TV.
+		\item[\ex{or2}]Fátima ou Omar vão jogar videogame. 
+	\end{earg}
+Podemos, para estas sentenças, usar a seguinte chave de simbolização:
+	\begin{ekey}
+		\item[F] Fátima vai jogar videogame.
+		\item[O] Omar vai jogar videogame.
+		\item[T] Fátima vai assistir TV.
+	\end{ekey}
+A sentença \ref{or1} diz, aproximadamente, que `$F$ ou $T$'.
+Usaremos um símbolo novo da LVF para simbolizar este `ou'.
+É o símbolo `$\eor$' que na tabela da página 31 foi chamado de \define{disjuncao}. 
+A sentença \ref{or1} é, então, simbolizada como:
+$$(F \eor T)$$
+Além disso, dizemos que `$F$' e `$T$' são os \define{disjuntos} da disjunção `$(F \eor T)$'.
+
+A sentença \ref{or2} é apenas um pouco mais complicada.
+Há dois sujeitos (ou, como dizem os gramáticos, um sujeito composto) para os quais uma única predicação é feita.
+A seguinte paráfrase, no entanto, tem claramente o mesmo significado da sentença  \ref{or2}:
+`Fátima vai jogar videogame ou Omar vai jogar videogame'.
+Podemos, então, simbolizá-la como:
+$$(F \eor O)$$
+A regra para saber se usamos a disjunção ($\eor$) na simbolização de uma sentença pode ser assim expressa:
+	\factoidbox{
+		Uma sentença pode ser simbolizada como $(\meta{A} \eor \meta{B})$ se ela puder ser parafraseada por `\ldots{}ou\ldots'.
+		Cada um dos disjuntos deve ser uma sentença.
+	}
+Às vezes, em português, a palavra `ou' é usada de uma maneira que exclui a possibilidade de que ambos os disjuntos sejam verdadeiros.
+Isso é chamado de \define{ou exclusivo}.
+Um caso claro de uso do ou exclusivo ocorre quando no cardápio de uma lanchonete você lê ``todos os sanduíches vêm acompanhados de um refrigerante \emph{ou} um suco''.
+Você pode beber o refrigerante, pode beber o suco, mas se quiser beber \emph{os dois}, terá que pagar a mais por isso.
+
+Outras vezes, a palavra `ou' permite a possibilidade de ambos os disjuntos serem verdadeiros.
+Este é provavelmente o caso da sentença \ref{or2}, acima.
+Fátima pode jogar sozinha, Omar pode jogar sozinho, ou os dois podem jogar.
+A sentença \ref{or2} apenas diz que \emph{pelo menos} um deles vai jogar videogame. Isso é chamado de \define{ou inclusivo}.
+Na lógica, adotou-se a convenção de que o símbolo `\eor' da LVF sempre simboliza um \emph{ou inclusivo}.
+Abaixo veremos como simbolizar um ou exclusivo na LVF usando os símbolos que já vimos `$\eor$', `$\eand$' e `$\enot$'.
+
+Vejamos como a negação interage com a disjunção. Considere:
+	\begin{earg}
+		\item[\ex{or3}] Você não beberá refrigerante ou você não beberá suco.
+		\item[\ex{or4}] Você não beberá nem refrigerante nem suco.
+		\item[\ex{or.xor}] Você beberá refrigerante ou suco, mas não ambos.
+	\end{earg}
+
+Usando a mesma chave de simbolização apresentada anteriormente,
+	\begin{ekey}
+		\item[S_1] Você beberá refrigerante.
+		\item[S_2] Você beberá suco.
+	\end{ekey}
+a sentença \ref{or3} pode ser parafraseada da seguinte forma:
+`\emph{Não é o caso de que} você beberá refrigerante ou \emph{não é o caso de que} você beberá suco'.
+Para simbolizar isso na LVF precisamos da disjunção e da negação.
+`Não é o caso de que você beberá refrigerante' é simbolizado por `$\enot S_1$'. `Não é o caso de que você beberá suco' é simbolizado por `$\enot S_2$'. Portanto, a sentença \ref{or3} é simbolizada como:
+$$(\enot S_1 \eor \enot S_2)$$
+A sentença \ref{or4} também requer a negação para ser simbolizada.
+Ela pode ser parafraseada como:
+`\emph{Não é o caso de que} você beberá refrigerante ou você beberá suco'.
+Como isso nega toda a disjunção, simbolizamos a sentença \ref{or4} como:\footnote{
+	Uma outra possibilidade aceitável para parafrasear \ref{or4}, que talvez seja até mais natural, é a seguinte:
+	`\emph{Não é o caso de que} você beberá refrigerante \textbf{e} \emph{não é o caso de que} você beberá suco'. Neste caso a simbolização da sentença utilizará a conjunção das negações de cada uma das subsentenças e será: `$(\enot S_1 \eand \enot S_2)$'.
+	Mais adiante veremos que estas duas simbolizações distintas da sentença \ref{or4} como `$\enot(S_1 \eor S_2)$' ou como `$(\enot S_1 \eand \enot S_2)$' são, de uma perspectiva lógica, perfeitamente equivalentes na LVF.}
+$$\enot(S_1 \eor S_2)$$
+A sentença \ref{or.xor} corresponde a uma explicitação clara e não ambígua de um \emph{ou exclusivo}. 
+Podemos dividi-la em duas partes.
+A primeira parte diz que você beberá refrigerante ou suco.
+Nós simbolizamos isso como `$(S_1 \eor S_2)$'.
+A segunda parte diz que você não beberá os dois.
+Podemos parafrasear isso como:
+``Não é o caso de que você beberá refrigerante e você beberá suco''.
+Usando a negação e a conjunção, simbolizamos isso como `$\enot(S_1 \eand S_2)$'.
+Agora só precisamos juntar as duas partes.
+Como vimos anteriormente, a palavra `mas' usada para juntar as duas partes da sentença \ref{or.xor}, geralmente pode ser simbolizada como `$\eand$'.
+Então, simbolizamos a sentença \ref{or.xor} como:
+$$((S_1 \eor S_2) \eand \enot (S_1 \eand S_2))$$
+Este último exemplo mostra algo importante.
+Embora o símbolo `\eor' da LVF sempre simbolize o \emph{ou inclusivo}, o \emph{ou exclusivo} pode também ser simbolizado na LVF.
+Nós apenas temos que usar alguns de nossos outros símbolos também.
+
+
+
+
+\section{Condicional}
+Considere as seguintes sentenças:
+	\begin{earg}
+		\item[\ex{if1}] Se Oscar está em Caicó, então Oscar está no Rio Grande do Norte.
+		\item[\ex{if2}] Oscar está no Rio Grande do Norte apenas se Oscar está em Caicó.
+	\end{earg}
+Vamos usar a seguinte chave de simbolização:
+	\begin{ekey}
+		\item[C] Oscar está em Caicó.
+		\item[R] Oscar está no Rio Grande do Norte.
+	\end{ekey}
+A sentença \ref{if1} tem aproximadamente esta forma: `se C, então R'.
+Usaremos um símbolo novo, `\eif', para simbolizar essa estrutura `se\ldots, então\ldots'.
+Deste modo, simbolizamos a sentença \ref{if1} como:
+$$(C \eif R)$$
+O conectivo `\eif' é chamado de \define{o condicional}.
+Na sentença condicional `$(C \eif R)$', `$C$' é chamado de \define{antecedente} e `$R$' é chamado de \define{consequente}.
+
+A sentença \ref{if2} também é um condicional.
+Como a palavra ``se'' aparece na segunda metade da frase, pode ser tentador simbolizá-la da mesma maneira que a sentença \ref{if1}, como `$(C \eif R)$'.
+Mas isso seria um erro.
+Quando pensamos no significado destas duas sentenças, nossos conhecimentos de geografia garantem que \ref{if1} é verdadeira, mas \ref{if2} não é.
+Afinal, não há como Oscar estar em Caicó sem que ele esteja também no Rio Grande do Norte.
+E isso parece assegurar a verdade de \ref{if1}.
+Por outro lado, reconhecemos a sentença \ref{if2} como falsa porque sabemos que se Oscar estiver em Natal, Mossoró ou Currais Novos, por exemplo, ele estará no Rio Grande do Norte sem estar em Caicó.
+Então não parece verdade que `Oscar está no Rio Grande do Norte apenas se Oscar está em Caicó'.
+Portanto, como \ref{if1} é verdadeira e \ref{if2} é falsa, elas não dizem a mesma coisa e não podem, por isso, ser simbolizadas pela mesma sentença da  LVF.
+
+A sentença \ref{if2}, na verdade, pode ser parafraseada como `Se Oscar está no Rio Grande do Norte, então Oscar está em Caicó'.
+Podemos simbolizá-la, então, como:
+$$(R \eif C)$$
+A regra para saber se usamos o condicional ($\eif$) na simbolização de uma sentença pode então ser assim expressa:
+	\factoidbox{
+		Uma sentença pode ser simbolizada como $(\meta{A} \eif \meta{B})$ se ela puder ser parafraseada em português como `Se A, então B' ou como `A apenas se B'.
+	}
+\noindent De fato, muitas expressões em português podem ser representadas usando o condicional. Considere:
+	\begin{earg}
+		\item[\ex{ifnec1}] Para Oscar estar em Caicó, é necessário que Oscar esteja no Rio Grande do Norte.
+		\item[\ex{ifnec2}] Uma condição necessária para que Oscar esteja em Caicó é que ele esteja no Rio Grande do Norte.
+		\item[\ex{ifsuf1}] Para que Oscar esteja no Rio Grande do Norte, é suficiente que ele esteja em Caicó.
+		\item[\ex{ifsuf2}] Uma condição suficiente para que Oscar esteja no Rio Grande do Norte é que ele esteja em Caicó.
+	\end{earg}
+Quando pensamos com calma sobre o significado destas quatro sentenças, sobre o que cada uma delas afirma, vemos que todas elas significam o mesmo que `Se Oscar está em Caicó, então Oscar está no Rio Grande do Norte'.
+Por isso todas elas podem ser simbolizadas como:
+$$(C \eif R)$$
+É importante ter em mente que o conectivo `\eif' diz apenas que, se o antecedente for verdadeiro, o consequente será verdadeiro.
+Ele não diz nada sobre uma possível conexão \emph{causal} entre o antecedente e o consequente.
+De fato, o nosso uso dos condicionais na língua portuguesa é muito rico em informação e sutilezas que não cabem no conectivo `$\eif$' da LVF.
+Portanto, muito está sendo perdido quando simbolizamos um condicional do português com `$\eif$'.
+Voltaremos a estas questões mais adiante neste livro, nas Seções \ref{s:IndicativeSubjunctive} e \ref{s:ParadoxesOfMaterialConditional}.
+
+
+\section{Bicondicional}
+Considere as sentenças:
+	\begin{earg}
+		\item[\ex{iff1}] Olavo é um asno apenas se ele for um mamífero.
+		\item[\ex{iff2}] Olavo é um asno se ele for um mamífero.
+		\item[\ex{iff3}] Olavo é um asno se e somente se ele for um mamífero.
+	\end{earg}
+Usaremos a seguinte chave de simbolização:
+	\begin{ekey}
+		\item[A_3] Olavo é um asno.
+		\item[M_3] Olavo é um mamífero.
+	\end{ekey}
+A sentença \ref{iff1}, conforme acabamos de ver na Seção anterior, pode ser simbolizada como:
+$$(A_3 \eif M_3)$$
+A sentença \ref{iff2}, apesar de muito parecida, difere de \ref{iff1} em um aspecto bastante importante:
+o sentido do condicional.
+Ela pode ser parafraseada como:
+``Se Olavo é um mamífero, então Olavo é um asno''.
+Portanto, pode ser simbolizada por:
+$$(M_3 \eif A_3)$$
+A sentença \ref{iff3} diz algo mais forte que tanto \ref{iff1} quanto \ref{iff2}.
+Ela pode ser parafraseada como ``Olavo é um asno se Olavo for um mamífero, e Olavo é um asno apenas se Olavo for um mamífero''.
+Esta paráfrase nada mais é do que a conjunção das sentenças \ref{iff1} e \ref{iff2}.
+Portanto, podemos simbolizá-la como:
+$$((A_3 \eif M_3) \eand (M_3 \eif A_3))$$
+Nós chamamos uma sentença deste tipo de \define{bicondicional}, porque corresponde ao condicional em ambas as direções.
+
+Poderíamos simbolizar todos os bicondicionais dessa maneira.
+Portanto, assim como não precisamos de um novo símbolo da LVF para lidar com o \emph{ou exclusivo}, também não precisamos de um novo símbolo da LVF para lidar com os bicondicionais.
+Mas como o bicondicional ocorre com bastante frequência, usaremos o símbolo `\eiff' para ele.
+Podemos então simbolizar a sentença \ref{iff3} como:
+$$(A_3 \eiff M_3)$$
+A expressão ``se e somente se'' é bastante usada em filosofia, matemática e lógica.
+Por uma questão de economia, ela é costumeiramente abreviada por `sse'.
+Nós vamos seguir esta prática neste livro.
+Portanto, `se' com apenas \emph {um} `s' é o condicional.
+Mas `sse' com \emph{dois} `s's é o bicondicional.
+Diante disso, podemos apresentar a regra que indica se usamos o bicondicional (\eiff) na simbolização de uma sentença como:
+	\factoidbox{
+		Uma sentença pode ser simbolizada como $(\meta{A} \eiff \meta{B})$ se ela puder ser parafraseada como `A sse B'; isto é, como `A se e somente se B'.
+	}
+
+
+\subsection{Condicionais que expressam bicondicionais e o princípio da caridade}
+Aqui vai um alerta.
+Apesar de bastante usada na filosofia e na matemática, a expressão `se e somente se', que indica o bicondicional, é uma expressão `técnica' que quase nunca é usada na linguagem falada ou mesmo em textos não acadêmicos.
+Quando foi a última vez que você ouviu alguém dizendo `se e somente se' em uma conversa?
+O que acontece é que, nas conversas comuns, expressamos bicondicionais de um modo `relaxado' através de sentenças condicionais.
+Ou seja, usamos a expressão `se\ldots, então\ldots' onde, de acordo com a lógica, deveríamos usar  `\ldots{}se e somente se\ldots'.
+Um exemplo deste `uso relaxado' é o seguinte.
+Suponha que o pai diga à filha:
+	\begin{earg}
+		\item[\ex{if_iff1}] Se você não comer toda a verdura, então não ganhará sobremesa.
+	\end{earg}
+Aí a filha, interessada no sorvete que viu no congelador, come toda a verdura.
+Bem, conforme a interpretação lógica que vimos aqui, o pai poderia mesmo assim se recusar a dar sobremesa à filha, alegando que ele fez uma afirmação condicional e não bicondicional.
+Ao proferir a sentença \ref{if_iff1} o pai se compromete com o que fará caso a filha \emph{não} coma toda a verdura.
+A sentença diz apenas que se ela não comer toda a verdura, ela não ganhará sobremesa.
+Mas nada é dito sobre o que acontece se a filha come toda a verdura.
+No entanto, ao ouvir a sentença \ref{if_iff1}, a filha espera do pai não só o compromisso condicional que a sentença literalmente expressa, mas ela espera também o compromisso de que `ela não ganhará sobremesa \emph{apenas se} não comer toda a verdura'.
+E como vimos na Seção anterior, este compromisso pode ser parafraseado na sentença
+\begin{earg}
+		\item[\ex{if_iff2}] Se você não ganhar sobremesa, então você não comeu toda a verdura.
+	\end{earg}
+%É importante notarmos que a pressuposição deste compromisso dado pela sentença \ref{if_iff2} e não explícito na fala do pai não é um erro lógico da filha.
+É importante notarmos que quando a filha ouve a sentença \ref{if_iff1} e pressupõe que o pai também se compromete com a sentença \ref{if_iff2}, ela não está cometendo um erro lógico.
+A motivação mais plausível para o pai ter dito a sentença \ref{if_iff1} para a filha é justamente a de convencê-la a comer toda a verdura.
+Ou seja, não ganhar sobremesa seria um castigo por não comer toda a verdura:
+a filha não ganharia a sobremesa \emph{apenas se} não comesse toda a verdura; situação esta parafraseada na sentença \ref{if_iff2}.
+Então, quando levamos em conta as motivações do pai, vemos que também ele assume que sua afirmação de \ref{if_iff1} o compromete adicionalmente com \ref{if_iff2}.
+A filha teria razão em fazer pantim se o pai se recusasse a lhe dar a sobremesa, tendo ela comido toda a verdura.
+Portanto, no contexto informal em que a sentença \ref{if_iff1} foi proferida, está claro que devemos entendê-la não como um condicional, mas como o bicondicional dado pela conjunção de \ref{if_iff1} e \ref{if_iff2}.\footnote{
+	Não se preocupe muito se você ainda tem dúvidas sobre por que em uma análise estritamente lógica a afirmação do pai (a sentença \ref{if_iff1}) não o obriga a dar sobremesa à filha mesmo quando ela come toda a verdura.
+	Mais adiante, com mais recursos, voltaremos a este ponto e esclareceremos a questão.}
+
+A moral da história aqui é que em muitos contextos de uso da linguagem nós utilizamos sentenças condicionais para fazer afirmações bicondicionais.
+A expressão `se e somente se', que marca o bicondicional, é uma expressão técnica, um jargão lógico-matemático que não costuma aparecer nos usos não acadêmicos da linguagem.
+Quando, portanto, estamos interessados em fazer uma análise lógica de um diálogo, texto, discurso, ... temos que ter muito cuidado em perceber estes usos `relaxados' de sentenças condicionais que fazem afirmações bicondicionais.
+É importante levar o contexto em consideração e aplicar o que costuma ser chamado de  \emph{princípio da caridade}.
+Segundo este princípio devemos simbolizar as sentenças da maneira mais próxima possível às intenções dos sujeitos envolvidos no diálogo ou texto, mesmo que para isso tenhamos que `corrigir' ou completar algumas de suas formulações.
+
+
+\section{A menos que}
+Os cinco conectivos introduzidos até agora (`$\enot$', `$\eand$', `$\eor$', `$\eif$' e `$\eiff$') correspondem a todos os conectivos da LVF.
+Podemos, agora, usá-los em conjunto para simbolizar muitos tipos diferentes de sentenças.
+Um caso especialmente difícil é o de sentenças com as expressões sinônimas  `a menos que' e `a não ser que'.
+
+\begin{earg}
+\item[\ex{unless1}] A não ser que você saia do sol, você terá uma insolação.
+\item[\ex{unless2}] Você terá uma insolação a menos que você saia do sol.
+\end{earg}
+Estas duas sentenças são claramente equivalentes.
+Para simbolizá-las usaremos a seguinte chave:
+	\begin{ekey}
+		\item[S] Você sairá do sol.
+		\item[I] Você terá uma insolação.
+	\end{ekey}
+Ambas as sentenças significam que, se você não sair do sol, então você terá uma insolação.
+Com isso em mente, podemos simbolizá-las como:
+$$(\enot S \eif I)$$
+Da mesma forma, as duas frases significam também que, se você não tem uma insolação, então deve ter saído do sol.
+Com isso em mente, podemos simbolizá-las como:
+$$(\enot I \eif S)$$
+Além disso, ambas as sentenças também significam que você sairá do sol ou terá uma insolação. Então, também podemos simbolizá-las como:
+$$(S \eor I)$$
+Todas essas três simbolizações estão corretas.
+De fato, no Capítulo \ref{s:SemanticConcepts}, veremos que todas essas três simbolizações são sentenças equivalentes na LVF.
+Vamos então, por economia, usar a terceira simbolização, que utiliza menos símbolos, na seguinte regra:
+% TODO: it might be useful to reference exercise 11.F.3 explicitly
+% here, since the point is not discussed in the main text
+	\factoidbox{
+		Se uma sentença puder ser parafraseada como `A não ser que $A$, $B$' ou por `A menos que $A$, $B$', então ela pode ser simbolizada como `$(\meta{A} \eor \meta{B})$'.
+	}
+Há, porém, uma pequena complicação também neste caso.
+`A menos que' pode ser simbolizado tanto como condicional quanto como disjunção.
+Mas, como vimos acima, as pessoas às vezes usam a forma do condicional quando pretendem dizer o bicondicional.
+Além disso, vimos também que há dois tipos de disjunção, a exclusiva e a inclusiva.
+Diante disso, não é surpresa nenhuma o fato de que os falantes comuns do português muitas vezes utilizam as expressões `a menos que' e `a não ser que' de um modo `relaxado', pretendendo fazer afirmações bicondicionais ou disjunções exclusivas.
+Suponha que uma pessoa diga:
+`Vou correr a menos que chova'.
+Ela provavelmente está querendo dizer algo como:
+``Vou correr se e somente se não chover'' ou ``Ou vou correr ou vai chover, mas não as duas coisas''.
+O primeiro caso é um bicondicional e o segundo uma disjunção exclusiva.
+Então, aqui também a moral da história é que temos que estar cientes destes usos `relaxados' e aplicar o princípio da caridade em nossas simbolizações para que elas reflitam o melhor possível a intenção dos falantes, ainda que para isso tenhamos que `corrigir' algumas de suas formulações.
+
+
+\practiceproblems
+\solutions
+\problempart Usando a chave a seguir, simbolize cada uma das 6 sentenças abaixo na LVF.\label{pr.monkeysuits}
+	\begin{ekey}
+		\item[H] Essas criaturas são homens de terno. 
+		\item[C] Essas criaturas são chimpanzés.
+		\item[G] Essas criaturas são gorilas.
+	\end{ekey}
+\begin{earg}
+	\item Essas criaturas não são homens de terno.
+	\item Essas criaturas são homens de terno, ou não.
+	\item Essas criaturas são gorilas ou chimpanzés.
+	\item Essas criaturas não são gorilas nem chimpanzés.
+	\item Se essas criaturas são chimpanzés, então não são gorilas nem homens de terno.
+	\item A menos que essas criaturas sejam homens de terno, elas são chimpanzés ou gorilas.
+\end{earg}
+
+\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.
+\begin{ekey}
+	\item[A] O Sr. Abel foi assassinado.
+	\item[B] Foi a babá.
+	\item[C] Foi o cozinheiro.
+	\item[D] A Duquesa está mentindo.
+	\item[E] A Sra. Elsa foi assassinada.
+	\item[F] A arma do crime foi uma frigideira.
+\end{ekey}
+\begin{earg}
+	\item O Sr. Abel ou a Sra. Elsa foram assassinados.
+	\item Se o Sr. Abel foi assassinado, então foi o cozinheiro.
+	\item Se a Sra. Elsa foi assassinada, então não foi o cozinheiro.
+	\item Foi a babá ou a Duquesa está mentindo.
+	\item Foi o cozinheiro apenas se a Duquesa estiver mentindo.
+	\item Se a arma do crime foi uma frigideira, então o culpado deve ter sido o cozinheiro.
+	\item Se a arma do crime não foi uma frigideira, então o culpado foi o cozinheiro ou a babá.
+	\item O Sr. Abel foi assassinado se e somente se a Sra. Elsa não foi assassinada.
+	\item A Duquesa está mentindo, a menos que a vítima do assassinato tenha sido a Sra. Elsa.
+	\item Se o Sr. Abel foi assassinado, ele foi morto com uma frigideira.
+	\item Uma vez que foi o cozinheiro, não foi a babá.
+	\item É claro que a Duquesa está mentindo!
+\end{earg}
+\solutions
+
+\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.\label{pr.avacareer}
+	\begin{ekey}
+		\item[E_1] Aline é eletricista.
+		\item[E_2] Helena é eletricista.
+		\item[B_1] Aline é bombeira.
+		\item[B_2] Helena é bombeira.
+		\item[S_1] Aline está satisfeita com sua carreira.
+		\item[S_2] Helena está satisfeita com sua carreira.
+	\end{ekey}
+	\begin{earg}
+		\item Aline e Helena são eletricistas.
+		\item Se Aline é bombeira, então ela está satisfeita com sua carreira.
+		\item Aline é bombeira, a menos que seja eletricista.
+		\item Helena é uma eletricista insatisfeita.
+		\item Nem Aline nem Helena são eletricistas.
+		\item Tanto Aline quanto Helena são eletricistas, mas nenhuma delas está satisfeita com isso.
+		\item Helena está satisfeita apenas se ela for bombeira.
+		\item Se Aline não é eletricista, então Helena também não, mas se a primeira for, então a outra também é.
+		\item Aline está satisfeita com sua carreira, se e somente se Helena não estiver satisfeito com a dela.
+		\item Se Helena é eletricista e bombeira, então ela deve estar satisfeita com seu trabalho.
+		\item Não é possível que Helena seja ambos eletricista e bombeira.
+		\item Helena e Aline são ambas bombeiras se e somente se nenhuma delas é uma eletricista.
+	\end{earg}
+
+\problempart
+Usando a chave a seguir, simbolize cada uma das 9 sentenças abaixo na LVF.
+\label{pr.jazzinstruments}
+\begin{ekey}
+	\item[J_1] John Coltrane tocava sax tenor.
+	\item[J_2] John Coltrane tocava sax soprano.
+	\item[J_3] John Coltrane tocava tuba.
+	\item[M_1] Miles Davis tocava trompete.
+	\item[M_2] Miles Davis tocava tuba.
+\end{ekey}
+
+\begin{earg}
+	\item John Coltrane tocava sax tenor e soprano.
+	\item Nem Miles Davis nem John Coltrane tocavam tuba.
+	\item John Coltrane não tocava ambos, sax tenor e tuba.
+	\item John Coltrane não tocava sax tenor, a menos que ele também tocasse sax soprano.
+	\item John Coltrane não tocava tuba, mas Miles Davis tocava.
+	\item Miles Davis tocava trompete apenas se ele também tocava tuba.
+	\item Se Miles Davis tocava trompete, John Coltrane tocava pelo menos um destes três instrumentos: sax tenor, sax soprano ou tuba.
+	\item Se John Coltrane tocava tuba, então  Miles Davis não tocava trompete nem tuba.
+	\item Miles Davis e John Coltrane tocavam tuba se e somente se Coltrane não tocava sax tenor e Miles Davis não tocava trompete.
+\end{earg}
+
+\solutions
+\problempart
+\label{pr.spies}
+Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6 sentenças abaixo na LVF.
+\begin{earg}
+	\item Amália e Betina são espiãs.
+	\item Se Amália ou Betina são espiãs, então o código foi quebrado.
+	\item Se nem Amália nem Betina são espiãs, então o código permanece desconhecido.
+	\item A embaixada peruana ficará em polvorosa, a menos que alguém tenha quebrado o código.
+	\item O código foi quebrado ou não, mas a embaixada peruana ficará em polvorosa, independentemente.
+	\item Amália ou Betina é uma espiã, mas não ambas.
+\end{earg}
+
+\solutions
+\problempart Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 5 sentenças abaixo na LVF.
+\begin{earg}
+	\item Se não houver álcool gel na dispensa, então Celso sairá de casa na quarentena.
+	\item Celso sairá de casa na quarentena, a menos que haja álcool gel na dispensa.
+	\item Celso sairá de casa na quarentena ou não, mas há álcool gel na dispensa, independentemente.
+	\item Úrsula permanecerá calma se e somente se houver álcool gel na dispensa.
+	\item Se Celso sair de casa na quarentena, então Úrsula não permanecerá calma.
+\end{earg}
+
+\problempart
+Para cada um dos 3 argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e use-a para simbolizar todas as sentenças do argumento na LVF.
+\begin{earg}
+	\item Se Danina toca piano de manhã, então Richard acorda irritadiço. Danina toca piano de manhã, a menos que esteja distraída. Portanto, se Richard não acorda irritadiço, Danina deve estar distraída.
+	\item Vai chover ou ventar forte na terça-feira. Se chover, Natália ficará triste. Se ventar forte, Natália ficará descabelada. Portanto, Natália ficará triste ou descabelada na terça-feira.
+	\item Se Zé se lembrou de ir fazer compras, então sua dispensa está cheia, mas sua casa não está arrumada. Se ele se esqueceu, então sua casa está arrumada, mas sua dispensa não está cheia. Portanto, a dispensa de Zé está cheia ou sua casa está arrumada, mas não ambos.
+\end{earg}
+
+\problempart
+Para cada um dos três argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e utilize-a para simbolizar o  argumento da melhor maneira possível na LVF.
+Os trechos em \emph{itálico} apenas ajudam a fornecer um contexto para a melhor interpretação do argumento e não precisam ser simbolizados.
+\begin{earg}
+\item Vai chover em breve. Eu sei porque minha perna está doendo, e minha perna dói se vai chover.
+
+%{\color{red}
+%\begin{ekey}
+%\item[A:]  
+%\item[B:]  
+%\item[C:]  %\end{ekey}
+
+%begin{\earg}
+%\item[1.]  
+%\item[2.]  
+%\item[$\therefore$]  
+%}
+
+\item  \emph{O Homem-Aranha está tentando entender o plano malígno do Dr. Octopus.} Se o Dr. Octopus conseguir obter urânio, ele chantageará a cidade. Estou certo disso, porque se o Dr. Octopus conseguir obter urânio, ele poderá fazer uma bomba suja e, se ele puder fazer uma bomba suja, chantageará a cidade.
+
+%{\color{red}
+%\begin{ekey}
+%\item[A:]  
+%\item[B:]  
+%\item[C:]  %\end{ekey}
+
+%begin{\earg}
+%\item[1.]  
+%\item[2.]  
+%\item[$\therefore$]  
+%}
+
+\item \emph{Um analista ocidental está tentando prever as políticas do governo chinês.} Se o governo chinês não conseguir resolver a escassez de água em Pequim, ele terá que transferir sua capital. O governo chinês não quer transferir a capital. Portanto, ele tem que resolver a escassez de água. Mas a única maneira de resolver a escassez de água é desviar quase toda a água do rio Yangzi para o norte. Portanto, o governo chinês executará o projeto para desviar a água do sul para o norte.       
+
+
+
+%{\color{red}
+%\begin{ekey}
+%\item[A:]  
+%\item[B:]  
+%\item[C:]  %\end{ekey}
+
+%begin{\earg}
+%\item[1.]  
+%\item[2.]  
+%\item[$\therefore$]  
+%}
+
+\end{earg}
+
+\problempart
+Nós simbolizamos o \emph{ou exclusivo} usando os conectivos `$\eor$', `$\eand$' e `$\enot$'.
+Como você poderia simbolizar o \emph{ou exclusivo} usando apenas dois conectivos?
+Existe alguma maneira de simbolizar o \emph{ou exclusivo} usando apenas um conectivo?
+
+
+\chapter{Sentenças da LVF}\label{s:TFLSentences}
+A expressão ``as maçãs são vermelhas ou as jaboticabas são pretas'' é uma sentença em português e a expressão ``$(M \eor J)$'' é uma sentença da LVF.
+Embora não tenhamos em geral dificuldades em identificar uma expressão como sendo ou não uma sentença do português, não há uma definição formal que esclareça completamente o que conta como sentença na língua portuguesa.
+Neste capítulo, no entanto, ofereceremos uma \emph{definição} completa do que conta como uma sentença de LVF.
+E esse é um dos motivos pelos quais dizemos que uma linguagem formal como a LVF é mais precisa do que uma linguagem natural como o português.
+
+
+\section{Expressões}
+
+Vimos que há três tipos diferentes de símbolos na LVF:
+\begin{center}
+\begin{tabular}{l l}
+Sentenças atômicas: & $A,B,C,\ldots,Z$\\
+com subíndices, se necessário: & $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$\\
+\\
+Conectivos: & $\enot,\eand,\eor,\eif,\eiff$\\
+\\
+Parênteses: &( , )\\
+\end{tabular}
+\end{center}
+Definimos uma \define{expressao da LVF} como qualquer sequência de símbolos da LVF.
+Pegue uma quantidade qualquer de símbolos da LVF e escreva-os, em qualquer ordem, e você terá uma expressão da LVF.
+
+
+\section{Sentenças}\label{s:Sentences}
+Obviamente, muitas expressões de LVF serão totalmente sem sentido.
+Nós precisamos saber quando uma expressão de LVF constitui uma \emph{sentença}.
+
+Letras sentenciais individuais tais como `$A$' e `$G_{13}$' devem, claramente, contar como sentenças.
+(Nós as chamaremos de sentenças \emph{atomicas}.)
+Podemos formar sentenças adicionais a partir das sentenças atômicas usando os vários conectivos.
+Usando negação, podemos obter `$\enot A$' e `$\enot G_{13} $'.
+Usando conjunção, podemos obter `$(A \eand G_{13})$', `$(G_{13} \eand A)$', `$(A \eand A)$' e `$(G_{13} \eand G_{13})$'.
+Também poderíamos aplicar negação repetidamente para obter sentenças como `$\enot\enot A$', ou aplicar a negação junto com a conjunção para obter sentenças como `$\enot(A \eand G_{13})$' e `$\enot(G_{13} \eand \enot G_{13})$'.
+As combinações possíveis são infinitas, mesmo começando com apenas essas duas letras sentenciais, e há infinitas letras sentenciais.
+Portanto, não faz sentido tentar listar todas as sentenças uma por uma.
+
+Em vez disso, descreveremos o processo pelo qual as sentenças podem ser \emph{construídas}.
+Considere a negação: dada qualquer sentença \meta{A} da LVF, $\enot\meta{A}$ é uma sentença da LVF.
+(Por que as fontes engraçadas? Trataremos disso na Seção \ref{s:Metavariables}.)
+
+Podemos fazer o mesmo para cada um dos outros conectivos da LVF.
+Por exemplo, se \meta{A} e \meta{B} são sentenças da LVF, então $(\meta{A}\eand\meta{B})$ é uma sentença da LVF.
+Fornecendo cláusulas como essa para todos os conectivos, chegamos à seguinte definição formal para uma \define{sentenca da LVF}:
+{\small 
+	\factoidbox{\label{TFLsentences}
+	\begin{enumerate}
+		\item Toda letra sentencial é uma sentença.
+		\item Se \meta{A} é uma sentença, então $\enot\meta{A}$ é uma sentença.
+		\item Se \meta{A} e \meta{B} são sentenças, então $(\meta{A}\eand\meta{B})$ é uma sentença.
+		\item Se \meta{A} e \meta{B} são sentenças, então $(\meta{A}\eor\meta{B})$ é uma sentença.
+		\item Se \meta{A} e \meta{B} são sentenças, então $(\meta{A}\eif\meta{B})$ é uma sentença.
+		\item Se \meta{A} e \meta{B} são sentenças, então $(\meta{A}\eiff\meta{B})$ é uma sentença.
+		\item Nada além do estabelecido por essas cláusulas é uma sentença.
+	\end{enumerate}
+	}}
+
+Definições como essa são chamadas \emph{indutivas}.
+As definições indutivas começam com alguns elementos básicos especificáveis e, em seguida, apresentam regras que regulam a geração de novos elementos, combinando os já estabelecidos.
+Na definição de sentença da LVF acima, a cláusula básica é a 1; as cláusulas 2 a 6 correspondem às regras para a geração de novos elementos a partir dos já estabelecidos, e a cláusula 7 é o fechamento, que garante que nada além do que for assim gerado será uma sentença.
+Para dar a você uma ideia melhor do que é uma definição indutiva, vou definir indutivamente o que é ser \emph{um ancestral meu}.
+A cláusula básica pode ser assim especificada:
+	\begin{ebullet}
+		\item Meus pais são meus ancestrais.
+	\end{ebullet}
+a regra para geração de novos elementos e o fechamento são dados pelas seguintes cláusulas:
+	\begin{ebullet}
+		\item Se $x$ is meu acestral, então os pais de $x$ são meus ancestrais.
+		\item Nada além do estabelecido por estas cláusulas é meu ancestral.
+	\end{ebullet}
+Usando essa definição, podemos facilmente verificar se alguém é ou não meu ancestral:
+basta verificar se a pessoa é um dos pais de um dos pais de...um dos meus pais.
+O mesmo se aplica à nossa definição indutiva de sentenças de LVF.
+A definição indutiva permite não apenas construir sentenças complexas a partir de partes mais simples, mas permite também verificar se uma expressão qualquer é uma sentença, decompondo-a em partes mais simples. Se ao final chegarmos em letras sentenciais, então a expressão inicial era uma sentença.
+
+Vejamos alguns exemplos.
+
+Suponha que queiramos saber se
+$$\enot\enot\enot D$$
+é ou não uma sentença da LVF.
+Olhando para a segunda cláusula da definição, sabemos que '$\enot\enot\enot D$' será uma sentença \emph{se} `$\enot\enot D$' for uma sentença.
+Então, precisamos agora perguntar se '$\enot\enot D$' é ou não uma sentença.
+Olhando novamente para a segunda cláusula da definição, sabemos que `$\enot\enot D$' será uma sentença \emph{se} `$\enot D$' for.
+E, da mesma forma, `$\enot D$' será uma sentença \emph{se} `$D$' for uma sentença.
+Bem, `$D$' é uma letra sentencial da LVF, então, sabemos que `$D$' é uma sentença por causa da primeira cláusula da definição.
+Portanto, quando partimos de uma sentença composta qualquer, tal como `$\enot\enot\enot D$', e aplicamos a definição repetidamente, nós eventualmente chegaremos às letras sentenciais das quais a sentença é constituída.
+
+Vejamos agora o seguinte exemplo:
+$$\enot (P \eand \enot (\enot Q \eor R))$$
+A segunda cláusula da definição nos diz que esta é uma sentença se `$(P \eand \enot (\enot Q \eor R))$' for, e a cláusula 3 nos diz que essa é uma sentença se \emph{ambas} `$P$' \emph{e} `$\enot (\enot Q \eor R)$' forem sentenças.
+A primeira é uma letra sentencial e a segunda é uma sentença se `$(\enot Q \eor R)$' for uma sentença.
+E ela é.
+Pois de acordo com a quarta cláusula da definição `$(\enot Q \eor R)$' é uma sentença se ``$\enot Q$'' e `$R$' são sentenças. E ambas são!
+
+Cada sentença é harmoniosamente construída a partir de letras sentenciais.
+Quando estamos diante de uma \emph{sentença} diferente de uma letra sentencial, vemos que sempre há um conectivo que é o \emph{último} que foi introduzido na construção dessa sentença.
+Chamamos este conectivo de o \define{conectivo principal} da sentença.
+No caso de `$\enot\enot\enot D$', por exemplo, o conectivo principal é o primeiro `$\enot$' (o mais à esquerda).
+No caso de `$(P \eand \enot (\enot Q \eor R))$', o conectivo principal é o `$\eand$'.
+Já no caso de `$((\enot E \eor F) \eif \enot\enot G)$', o conectivo principal  é `$\eif$'.
+
+O conectivo principal é sempre o envolvido por menos parênteses, ou seja, o mais externo com relação aos parênteses.
+Em geral conseguimos identificá-lo sem muita dificuldade apenas olhando para a sentença.
+Mas se você tiver dúvidas sobre qual é o conectivo principal de alguma sentença, o seguinte método pode ser usado:
+\begin{ebullet}
+	\item Se o primeiro símbolo da sentença for `$\enot$', ele é o conectivo principal.
+	\item  Caso contrário, percorra todos os símbolos da sentença da esquerda para a direita e faça a seguinte contagem: sempre que encontrar um símbolo de `abre parênteses', ou seja, `$($', adicione $1$ à sua contagem. Sempre que encontrar um símbolo de `fecha parênteses', ou seja `$)$', subtraia $1$ de sua contagem. O conectivo principal de sua sentença será o primeiro conectivo diferente de `\enot' que ocorre na sentença no ponto em que a contagem for igual a $1$.
+\end{ebullet}
+
+\noindent (\textbf{Nota}: antes de aplicar este método, assegure-se de que a sentença esteja escrita com todos os seus parênteses.
+Não aplique este método em sentenças nas quais parentes foram omitidos ou substituídos através das convenções que veremos na próxima Seção!)
+
+Considere, por exemplo, a sentença
+$$((A \eor B) \eand C))$$
+Ela não começa com uma negação, então é preciso fazer a contagem dos parênteses para aplicar o método.
+Se marcarmos cada símbolo de parênteses com o número da contagem obtemos:
+$$(^1 (^2 A \eor B)^1 \eand C)^0$$
+Nesta sentença temos $2$ conectivos.
+A disjunção `\eor' ocorre em um ponto no qual a contagem está em $2$, então não é o conectivo principal.
+A conjunção `\eand', por sua vez, é o primeiro concectivo que ocorre à direita do ponto em que a contagem está em 1.
+Então, de acordo com nosso método, `\eand' é o conectivo principal.
+Já em
+$$(A \eor (B \eand C))$$
+a marcação da contagem nos dá
+$$(^1 A \eor (^2 B \eand C)^1 )^0$$
+Aqui, o primeiro conectivo à direita do ponto em que a contagem está em 1 é `\eor' que será, por isso, o conectivo principal.
+
+Isso pode à primeira vista parecer confuso, mas não é.
+Se uma sentença começa com uma negação, `\enot', esta negação inicial é o conectivo principal, porque ela é o último conectivo introduzido na construção da sentença (pela cláusula 2 da tabela acima).
+Quando a sentença não começa com uma negação, precisamos encontrar este último conectivo introduzido na construção da sentença.
+E é isso que a contagem faz.
+Os números nos parênteses apenas indicam explicitamente quão internos ou externos esses parênteses são.
+O conectivo que ocorre no ponto em que a contagem está em $1$ será o mais externo, o envolvido por apenas um par de parênteses.
+Um conectivo que ocorra no ponto em que a contatem está em $3$, por exemplo, é um conectivo envolvido por 3 pares de parênteses.
+ 
+A estrutura indutiva das sentenças da LVF será importante quando considerarmos as circunstâncias sob as quais uma determinada sentença seria verdadeira ou falsa.
+Por exemplo, a sentença `$\enot\enot\enot D$' é verdadeira se e somente se a sentença `$\enot\enot D$' for falsa, e assim por diante, através da estrutura da sentença, até chegarmos aos componentes atômicos.
+Nós estudaremos detalhadamente este ponto mais adiante, nos capítulos da Parte \ref{ch.TruthTables} deste livro.
+
+A estrutura indutiva das sentenças da LVF também nos permite dar uma definição formal da noção de \emph{escopo} de uma negação (mencionado na Seção  \ref{s:ConnectiveConjunction}).
+O escopo de um `$\enot$' é a subsentença da qual `$\enot$' é o conectivo principal.
+Considere, por exemplo, a sentença:
+$$(P \eand (\enot (R \eand B) \eiff Q))$$
+que foi construída fazendo-se a conjunção de `$P$' com \mbox{`$(\enot(R \eand B) \eiff Q)$'}.
+Esta última sentença, por sua vez, foi construída colocando um bicondicional entre `$\enot(R \eand B)$' e `$Q$'.
+A primeira dessas duas sentenças---uma subsentença da sentença original---tem o `\enot' como seu conectivo principal.
+Portanto, o escopo desta negação é apenas `$\enot(R \eand B)$'.
+De forma geral:
+	\factoidbox{O \define{escopo} de um conectivo (em uma sentença) é a subsentença da qual esse conectivo é o conectivo principal.}
+
+\section{Convenções sobre o uso de parênteses}
+\label{TFLconventions}
+A rigor, os parênteses em `$(Q \eand R)$' são uma parte indispensável da sentença.
+Isto é assim porque podemos querer usar `$(Q \eand R)$' como subsentença de uma sentença mais complexa.
+Por exemplo, podemos querer negar `$(Q \eand R)$', obtendo `$\enot(Q \eand R)$'.
+Se a sentença `$Q \eand R$' estivesse assim, sem parênteses, e colocássemos uma negação na sua frente, obteríamos `$\enot Q \eand R$'.
+E é mais natural ler isso como significando a mesma coisa que `$(\enot Q \eand R)$'.
+Mas já vimos na Seção \ref{s:ConnectiveConjunction}, que isso é muito diferente de `$\enot(Q \eand R)$'.
+
+Estritamente falando, então, `$Q \eand R$' \emph{não} é uma sentença.
+É apenas uma sequência de símbolos da LVF, ou seja, uma \emph{expressão}.
+
+No entanto, em muitas situações em que a LVF é utilizada, as pessoas são menos rigorosas sobre o uso dos parênteses.
+Existem algumas convenções que regulam a omissão e a substituição de alguns destes parênteses, que nós precisamos conhecer.
+
+A mais comum delas é a omissão dos parênteses \emph{mais externos} de uma sentença.
+Assim, muitas vezes nos permitimos escrever `$Q \eand R$' em vez de `$(Q \eand R)$'.
+No entanto, devemos nos lembrar de colocar de volta os parênteses quando quisermos utilizar esta sentença como parte de uma sentença mais complexa, tal como `$A \eif (Q \eand R)$'.
+
+Segundo, pode ser um pouco difícil olhar para sentenças longas com muitos pares de parênteses aninhados.
+Para tornar as coisas um pouco mais fáceis para os olhos, nos permitiremos usar colchetes, `[', `]' e chaves, `\{', `\}' juntamente com os parênteses, `(' e `)'.
+Geralmente os parênteses mais internos são os arredondados, intermediariamente usamos colchetes, e as chaves reservamos para os mais externos.
+Entretanto, não há regras rígidas.
+A idéia é apenas facilitar a leitura.
+Neste sentido, não há qualquer diferença lógica entre a sentença
+$$((((H \eif I) \eor Z) \eand (J \eor K)) \eiff (A \eor B))$$
+e a sentença
+$$\{[(H \eif I) \eor Z] \eand (J \eor K)\} \eiff (A \eor B)$$
+A única diferença é que a segunda é um pouco mais fácil de ser lida.
+
+
+\practiceproblems
+
+\solutions
+\problempart
+\label{pr.wiffTFL}
+Para cada uma das $8$ expressões abaixo, decida (a) se ela é uma sentença da LVF, estritamente falando; (b) se é uma sentença da LVF quando permitimos as convenções sobre o uso de parênteses; (c) se ela for uma sentença apontada em (a) ou em (b), indique seu conectivo principal.
+\begin{earg}
+\item $(A)$
+\item $J_{374} \eor \enot J_{374}$
+\item $\enot \enot \enot \enot F$
+\item $\enot \eand S$
+\item $(G \eand \enot G)$
+\item $(A \eif (A \eand \enot F)) \eor (D \eiff E)$
+\item $[(Z \eiff S) \eif W] \eand [J \eor X]$
+\item $(F \eiff \enot D \eif J) \eor (C \eand D)$
+\end{earg}
+
+\problempart
+Existem sentenças da LVF que não contêm letras sentenciais? Explique sua resposta.
+
+\problempart
+Qual é o escopo de cada conectivo na sentença abaixo?
+$$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$
+
+\chapter{Ambiguidade}\label{s:AbmbiguityTFL}
+
+%In English, sentences can be \define{ambiguous}, i.e., they can have more than one meaning.  There are many sources of ambiguity. One is \emph{lexical ambiguity:} a sentence can contain words which have more than one meaning.  For instance, `bank' can mean the bank of a river, or a financial institution. So I might say that `I went to the bank' when I took a stroll along the river, or when I went to deposit a check.  Depending on the situation, a different meaning of `bank' is intended, and so the sentence, when uttered in these different contexts, expresses different meanings.
+Em português as sentenças podem ser \define{ambiguas}, ou seja, podem ter mais de um significado. Existem muitas fontes de ambiguidade. Uma delas é a \emph{ambiguidade lexical:} uma sentença pode conter palavras que têm mais de um significado. Por exemplo, `banco' pode significar um móvel que serve como assento ou uma instituição financeira. Assim, posso dizer que `estava no banco aqui perto', apontando para onde estava sentado ou para a instituição financeira no outro lado da rua. Dependendo da situação, um significado diferente de `banco' é pretendido e, portanto, a sentença expressa diferentes significados.
+
+%A different kind of ambiguity is \emph{structural ambiguity}.  This arises when a sentence can be interpreted in different ways, and depending on the interpretation, a different meaning is selected.  A famous example due to Noam Chomsky is the following:
+%\begin{earg}
+%	\item[] Flying planes can be dangerous.
+%\end{earg}
+%There is one reading in which `flying' is used as an adjective which modifies `planes'. In this sense, what's claimed to be dangerous are airplanes which are in the process of flying.  In another reading, `flying' is a gerund: what's claimed to be dangerous is the act of flying a plane.  In the first case, you might use the sentence to warn someone who's about to launch a hot air baloon.  In the second case, you might use it to counsel someone against becoming a pilot.
+Um tipo diferente é a \emph{ambiguidade estrutural}. Isso ocorre quando uma sentença pode ser interpretada de maneiras diferentes e, dependendo da interpretação, um significado diferente é selecionado. Um exemplo famoso devido a Noam Chomsky é o seguinte:
+\begin{earg}
+\item[] \textit{Flying planes can be dangerous.}
+\end {earg}
+Há uma leitura em que `flying' (voando) é usado como um adjetivo que modifica `planes' (aviões), resultando na afirmação de que aviões voando (\textit{flying planes}) podem ser perigosos (\textit{can be dangerous}). Em outra leitura, `flying' funciona como o verbo pilotar, resultando na afirmação de que pilotar aviões (\textit{flying planes}) pode ser perigoso (\textit{can be dangerous}). No primeiro caso, você pode usar a frase para alertar alguém que está prestes a lançar um balão de ar quente. No segundo, para aconselhar alguém a não se tornar um piloto. 
+
+%When the sentence is uttered, usually only one meaning is intended. Which of the possible meanings an utterance of a sentence intends is determined by context, or sometimes by how it is uttered (which parts of the sentence are stressed, for instance). Often one interpretation is much more likely to be intended, and in that case it will even be difficult to ``see'' the unintended reading.  This is often the reason why a joke works, as in this example from Groucho Marx:
+%\begin{earg}
+%	\item[] One morning I shot an elephant in my pajamas.
+%	\item[] How he got in my pajamas, I don't know.
+%\end{earg}
+Quando a frase é pronunciada, geralmente apenas um significado é pretendido. É o contexto que determina qual dos significados possíveis de um enunciado deve ser usado, ou, às vezes, a própria entonação da fala (que partes da frase são enfatizadas, por exemplo). Frequentemente, é muito mais provável que uma determinada interpretação seja pretendida e, nesses casos, é até difícil perceber o sentido não intencional. Muitas vezes essa é a razão pela qual uma piada funciona, como neste exemplo de Groucho Marx:
+\begin{earg}
+\item[] Certa manhã, atirei num elefante de pijama.
+\item[] Como ele vestiu meu pijama, eu não sei.
+\end{earg} 
+
+%Ambiguity is related to, but not the same as, vagueness. An adjective, for instance `rich' or `tall,' is \define{vague} when it is not always possible to determine if it applies or not.  For instance, a person who's 6~ft 4~in (1.9~m) tall is pretty clearly tall, but a building that size is tiny.  Here, context has a role to play in determining what the clear cases and clear non-cases are (`tall for a person,' `tall for a basketball player,' `tall for a building'). Even when the context is clear, however, there will still be cases that fall in a middle range.
+A ambiguidade está relacionada à vagueza, mas elas não são a mesma coisa. Um adjetivo, como `rico' ou `alto', é \define{vago} quando nem sempre é possível determinar se eles se aplicam ou não. Por exemplo, uma pessoa com 1,9m de altura é claramente alta, mas um prédio desse tamanho é minúsculo. Aqui, o contexto tem um papel a desempenhar na determinação de quais são os casos claros de aplicação e de não-aplicação do adjetivo (`alto para uma pessoa', `alto para um jogador de basquete', `alto para um edifício'). Mesmo quando o contexto é claro, no entanto, ainda haverá casos que se enquadram em uma faixa intermediária.
+
+%In TFL, we generally aim to avoid ambiguity. We will try to give our symbolization keys in such a way that they do not use ambiguous words or  disambiguate them if a word has different meanings. So, e.g., your symbolization key will need two different sentence letters for `Rebecca went to the (money) bank' and `Rebecca went to the (river) bank.' Vagueness is harder to avoid. Since we have stipulated that every case (and later, every valuation) must make every basic sentence (or sentence letter) either true or false and nothing in between, we cannot accommodate borderline cases in TFL.
+Em LVF, geralmente buscamos evitar ambiguidades. Tentaremos fazer com que nossas chaves de simbolização não usem palavras ambíguas ou que eliminem a ambiguidade quando a palavra usada tiver significados diferentes. Então, por exemplo, a chave de simbolização precisará de duas letras sentenciais diferentes para `Ivo está trabalhando no banco (instituição financeira)' e `Ivo está trabalhando no banco (de dados)'. A imprecisão é mais difícil de evitar. Uma vez que estipulamos que cada caso (e posteriormente, cada valoração) deve tornar cada sentença básica (ou letra sentencial) verdadeira ou falsa, sem meio-termo, não podemos acomodar casos limítrofes em LVF. 
+
+%It is an important feature of sentences of TFL that they \emph{cannot} be structurally ambiguous. Every sentence of TFL can be read in one, and only one, way. This feature of TFL is also a strength. If an English sentence is ambiguous, TFL can help us make clear what the different meanings are.  Although we are pretty good at dealing with ambiguity in everyday conversation, avoiding it can sometimes be terribly important. Logic can then be usefully applied: it helps philosopher express their thoughts clearly, mathematicians to state their theorems rigorously, and software engineers to specify loop conditions, database queries, or verification criteria unambiguously. 
+Uma característica importante das sentenças em LVF é que elas \emph{não podem} ser estruturalmente ambíguas. Cada sentença em LVF pode ser lida de uma, e apenas uma, maneira. Essa característica da LVF é um ponto forte. Se uma frase em português for ambígua, a LVF pode nos ajudar a esclarecer quais são os diferentes significados. Embora sejamos bons em lidar com a ambiguidade na conversa do dia-a-dia, evitá-la pode às vezes ser extremamente importante. Nesse caso, a lógica pode ser aplicada de maneira útil: ajuda o filósofo a expressar seus pensamentos com clareza, os matemáticos a expor seus teoremas rigorosamente e os engenheiros de software a especificar sem ambiguidade as condições de laços (\textit{loops}), as consultas a bancos de dados ou critérios de verificação. 
+
+%Stating things without ambiguity is of crucial importance in the law as well. Here, ambiguity can, without exaggeration, be a matter of life and death. Here is a famous example of where a death sentence hinged on the interpretation of an ambiguity in the law. Roger Casement (1864--1916) was a British diplomat who was famous in his time for publicizing human-rights violations in the Congo and Peru (for which he was knighted in 1911). He was also an Irish nationalist. In 1914--16, Casement secretly travelled to Germany, with which Britain was at war at the time, and tried to recruit Irish prisoners of war to fight against Britain and for Irish independence. Upon his return to Ireland, he was captured by the British and tried for high treason.
+Afirmar coisas sem ambiguidade também é de importância crucial na legislação. Nela, a ambiguidade pode, sem exagero, ser uma questão de vida ou morte. Aqui está um exemplo conhecido em que uma sentença de morte dependia da interpretação de uma ambiguidade na lei. Roger Casement (1864--1916) foi um diplomata britânico famoso por divulgar as violações dos direitos humanos no Congo e no Peru (motivo pelo qual foi nomeado cavaleiro em 1911). Ele também era um nacionalista irlandês. Entre 1914--1916, Casement viajou secretamente para a Alemanha, à época em guerra com a Grã-Bretanha, e tentou recrutar prisioneiros de guerra irlandeses para lutar contra a Grã-Bretanha e pela independência irlandesa. Ao retornar à Irlanda, ele foi capturado pelos britânicos e julgado por alta traição.
+
+%The law under which Casement was tried is the \emph{Treason Act of 1351}. That act specifies what counts as treason, and so the prosecution had to establish at trial that Casement's actions met the criteria set forth in the Treason Act. The relevant passage stipulated that someone is guilty of treason
+%\begin{quote}
+%	if a man is adherent to the King's enemies in his
+%realm, giving to them aid and comfort in the realm, or elsewhere.
+%\end{quote}
+A lei sob a qual Casement foi julgado foi o \emph{Ato de Traição de 1351}. Esse ato especifica o que conta como traição e, portanto, a acusação teve de estabelecer no julgamento que as ações de Casement atendiam aos critérios estabelecidos nele. A passagem relevante estipulava que alguém é culpado de traição:
+\begin{quote}
+	se um homem associa-se a inimigos do rei em seu
+reino, dando a eles ajuda e conforto no reino, ou em outro lugar.
+\end{quote} 
+
+%Casement's defense hinged on the last comma in this sentence, which is not present in the original French text of the law from 1351.  It was not under dispute that Casement had been `adherent to the King's enemies', but the question was whether being adherent to the King's enemies constituted treason only when it was done in the realm, or also when it was done abroad. The defense argued that the law was ambiguous. The claimed ambiguity hinged on whether `or elsewhere' attaches only to `giving aid and comfort to the King's enemies' (the natural reading without the comma), or to both `being adherent to the King's enemies' and `giving aid and comfort to the King's enemies' (the natural reading with the comma).  Although the former interpretation might seem far fetched, the argument in its favor was actually not unpersuasive. Nevertheless, the court decided that the passage should be read with the comma, so Casement's antics in Germany were treasonous, and he was sentenced to death. Casement himself wrote that he was `hanged by a comma'.
+A defesa de Casement girou em torno da última vírgula da sentença, que não está presente no texto original em francês da lei de 1351. Não foi questionada a `associação aos inimigos do rei', mas a dúvida era se a associação aos inimigos do rei constituía traição apenas quando praticada no reino, ou também quando praticada no exterior. A defesa argumentou que a lei era ambígua. A ambiguidade alegada dependia de se `ou em outro lugar' refería-se apenas a `dar ajuda e conforto aos inimigos do rei' (a leitura natural sem a vírgula), ou a ambos `associar-se aos inimigos do rei' e `dar ajuda e conforto aos os inimigos do Rei' (a leitura natural com a vírgula). Embora a primeira interpretação possa parecer improvável, o argumento a seu favor acabou não deixando de ser convincente. Apesar disso, o tribunal decidiu que a passagem deveria ser lida com a vírgula, de modo que as trapalhadas de Casement na Alemanha foram consideradas traição e ele foi condenado à morte. O próprio Casement escreveu que foi `enforcado por uma vírgula'.
+
+%We can use TFL to symbolize both readings of the passage, and thus to provide a disambiguiation. First, we need a symbolization key:
+%\begin{ekey}
+%	\item[A] Casement was adherent to the King's enemies in the realm.
+%	\item[G] Casement gave aid and comfort to the King's enemies in the realm.
+%	\item[B] Casement was adherent to the King's enemies abroad.
+%	\item[H] Casement gave aid and comfort to the King's enemies abroad.
+%\end{ekey}
+%The interpretation according to which Casement's behavior was not treasonous is this:
+%\begin{earg}
+%	\item[] $A \lor (G \lor H)$
+%\end{earg} 
+%The interpretation which got him executed, on the other hand, can be symbolized by:
+%\begin{earg}
+%	\item[] $(A \lor B) \lor (G \lor H)$
+%\end{earg}
+%Remember that in the case we're dealing with Casement, was adherent to the King's enemies abroad ($B$ is true), but not in the realm, and he did not give the King's enemies aid or comfort in or outside the realm ($A$, $G$, and~$H$ are false).
+Podemos usar LVF para simbolizar ambas as leituras da passagem e, assim, fornecer uma desambiguação. Primeiro, precisamos de uma chave de simbolização:
+\begin{ekey}
+	\item [A] Casement associou-se aos inimigos do Rei no reino.
+	\item [G] Casement deu ajuda e conforto aos inimigos do Rei no reino.
+	\item [B] Casement associou-se aos inimigos do Rei no exterior.
+	\item [H] Casement deu ajuda e conforto aos inimigos do Rei no exterior.
+\end{ekey}
+A interpretação de acordo com a qual o comportamento de Casement não é traição é esta:
+\begin{earg}
+	\item [] $A \lor (G \lor H)$
+\end{earg}
+Já a interpretação que o levou a ser executado pode ser simbolizada por:
+\begin{earg}
+	\item [] $(A \lor B) \lor (G \lor H)$
+\end{earg}
+Lembre-se de que no caso de Casement com que estamos lidando ele associou-se aos inimigos do Rei no exterior ($B$ é verdade), mas não no reino, e ele não deu ajuda ou conforto aos inimigos do Rei dentro ou fora do reino ($A$, $G$ e~$H$ são falsos). 
+
+%One common source of structural ambiguity in English arises from its lack of parentheses. For instance, if I say `I like movies that are not long and boring', you will most likely think that what I dislike are movies that are long and boring. A less likely, but possible, interpretation is that I like movies that are both (a) not long and (b) boring. The first reading is more likely because who likes boring movies? But what about `I like dishes that are not sweet and flavorful'? Here, the more likely interpretation is that I like savory, flavorful dishes.  (Of course, I could have said that better, e.g., `I like dishes that are not sweet, yet flavorful'.) Similar ambiguities result from the interaction of `and' with `or'. For instance, suppose I ask you to send me a picture of a small and dangerous or stealthy animal.  Would a leopard count? It's stealthy, but not small. So it depends whether I'm looking for small animals that are dangerous or stealthy (leopard doesn't count), or whether I'm after either a small, dangerous animal or a stealthy animal (of any size).
+Uma fonte comum de ambiguidade estrutural em português surge da falta de parênteses. Por exemplo, se eu disser `Gosto de filmes que não sejam longos e enfadonhos', você provavelmente pensará que o que eu não gosto são filmes longos e enfadonhos. Uma interpretação menos provável, mas possível, é que eu gosto de filmes que são (a) não longos e (b) enfadonhos. A primeira leitura é mais provável porque, afinal, quem gosta de filmes chatos? Mas e quanto a `gosto de pratos que não são doces e saborosos'?<<obs>> Aqui, a interpretação mais provável é que gosto de pratos saborosos (claro, eu poderia ter dito isso melhor, por exemplo, `Gosto de pratos que não são doces, mas saborosos'). Ambiguidades semelhantes resultam da interação de `e' com `ou'. Por exemplo, suponha que eu lhe peça para me enviar a foto de um animal pequeno e perigoso ou furtivo. Um leopardo contaria? É furtivo, mas não pequeno. Portanto, depende se procuro pequenos animais perigosos ou furtivos (o leopardo não conta), ou se procuro um animal pequeno e perigoso ou um que seja furtivo (de qualquer tamanho).
+
+%These kinds of ambiguities are called \emph{scope ambiguities}, since they depend on whether or not a connective is in the scope of another. For instance, the sentence, `\emph{Avengers: Endgame} is not long and boring' is ambiguous between:
+Esses tipos de ambiguidades são chamados de \emph{ambiguidades de escopo}, pois dependem de um conectivo estar ou não no escopo de outro. Por exemplo, a frase `\emph{Vingadores: Ultimato} é um filme que não é longo e chato'<<obs>> é ambígua entre:
+
+%\begin{earg}
+%	\item[\ex{scamb1}] \emph{Avengers: Endgame} is not: both long and boring.
+%	\item[\ex{scamb2}] \emph{Avengers: Endgame} is both: not long and boring.
+%\end{earg}
+\begin{earg}
+	\item[\ex{scamb1}] \emph{Vingadores: Ultimato} não é ao mesmo tempo: longo e chato.
+	\item[\ex{scamb2}] \emph{Vingadores: Ultimato} é ao mesmo tempo: não longo e chato<<obs>>.
+\end{earg}
+
+%Sentence~\ref{scamb2} is certainly false, since \emph{Avengers: Endgame} is over three hours long. Whether you think~\ref{scamb1} is true depends on if you think it is boring or not. We can use the symbolization key:
+A sentença~\ref{scamb2} é certamente falsa, já que \emph{Vingadores: Ultimato} tem mais de três horas de duração. Julgar que~\ref{scamb1} é verdadeira, então, depende de decidir se o filme é chato ou não. Podemos usar a chave de simbolização: 
+
+\begin{ekey}
+	\item[C] \emph{Vingadores: Ultimato} é chato.
+	\item[L] \emph{Vingadores: Ultimato} é longo.
+\end{ekey}
+
+%Sentence~\ref{scamb1} can now be symbolized as `$\enot(L \eand B)$', whereas sentence~\ref{scamb2} would be `$\enot L \eand B$'. In the first case, the `\eand' is in the scope of `\enot', in the second case `\enot' is in the scope of `\eand'.
+A sentença~\ref{scamb1} agora pode ser simbolizada como `$\enot(L \eand C)$', enquanto \ref{scamb2} seria `$\enot L \eand C$'. No primeiro caso, `\eand' está no escopo de `\enot', no segundo caso `\enot' está no escopo de `\eand'. 
+
+%The sentence `Tai Lung is small and dangerous or stealthy' is ambiguous between:
+A sentença `Tai Lung é pequeno e perigoso ou furtivo' é ambígua entre: 
+
+%\begin{earg}
+%	\item[\ex{scamb3}] Tai Lung is either both small and dangerous or stealthy.
+%	\item[\ex{scamb4}] Tai Lung is both small and either dangerous or stealthy.
+%\end{earg}
+\begin{earg}
+	\item[\ex{scamb3}] Tai Lung é pequeno e perigoso ou é furtivo.
+	\item[\ex{scamb4}] Tai Lung é pequeno e é ou perigoso ou furtivo<<obs>>.
+\end{earg} 
+
+%We can use the following symbolization key:
+%\begin{ekey}
+%	\item[D] Tai Lung is dangerous.
+%	\item[S] Tai Lung is small.
+%	\item[T] Tai Lung is stealthy. 
+%\end{ekey}
+Podemos usar a seguinte chave de simbolização:
+\begin{ekey}
+\item[R] Tai Lung é perigoso.
+\item[Q] Tai Lung é pequeno.
+\item[F] Tai Lung é furtivo.
+\end{ekey} 
+
+%The symbolization of sentence~\ref{scamb3} is `$(S \eand D) \eor T$' and that of sentence~\ref{scamb4} is `$S \eand (D \eor T)$'. In the first, \eand is in the scope of \eor, and in the second \eor is in the scope of \eand.
+A simbolização da sentença~\ref{scamb3} é `$(Q \eand R) \eor F$' e a da sentença~\ref{scamb4} é `$Q \eand (R \eor F)$'. Na primeira, \eand está no escopo de \eor, e na segunda \eor está no escopo de \eand.
+
+\practiceproblems
+\solutions
+%\problempart The following sentences are ambiguous. Give symbolization keys for each and symbolize the different readings.
+%\begin{earg}
+%	\item Haskell is a birder and enjoys watching cranes.
+%	\item The zoo has lions or tigers and bears.
+%	\item The flower is not red or fragrant.
+%\end{earg}
+\problempart As seguintes sentenças são ambíguas. Dê chaves de simbolização para cada uma e simbolize as diferentes leituras.
+\begin{earg}
+	\item Haskell é observador de pássaros e gosta de observar grous.
+	\item O zoológico tem leões ou tigres e ursos.
+	\item A flor não é vermelha ou perfumada.
+\end{earg} 
+
+\chapter{Uso e menção}\label{s:UseMention}
+Temos, nesta Parte do livro, falado bastante \emph{sobre} sentenças.
+Devemos, por isso, fazer uma pausa para explicar um ponto importante e bastante geral.
+
+\section{Convenções sobre uso de aspas}
+Considere as duas seguintes sentenças:
+	\begin{ebullet}
+		\item Fátima Bezerra é a terceira mulher a governar o Rio Grande do Norte.
+		\item A expressão `Fátima Bezerra' é composta por duas letras maiúsculas e onze letras minúsculas.
+	\end{ebullet}
+Quando queremos falar sobre a governadora, nós \emph{usamos} o nome dela.
+Quando queremos falar sobre o nome da governadora, nós \emph{mencionamos} seu nome, o que é feito colocando-o entre aspas simples.
+
+Há um ponto mais geral aqui.
+Quando queremos falar sobre coisas no mundo, apenas \emph{usamos} as palavras.
+Mas às vezes queremos falar sobre as próprias palavras, e não sobre as coisas às quais elas se referem.
+Nestes casos nós não estamos usando as palavras, mas \emph{mencionando}-as.
+Para não sermos ambíguos e para diminuir o risco de sermos mal entendidos, precisamos indicar (marcar de alguma forma) estes casos onde não estamos usando, mas mencionando as palavras. 
+E para fazer isso, é necessária alguma convenção.
+A convenção largamente adotada entre filósofos e lógicos é a de que uma expressão entre \emph{aspas simples} não está sendo usada, mas sim mencionada.
+Então esta frase:
+	\begin{ebullet}
+		\item `Fátima Bezerra' é a terceira mulher a governar o Rio Grande do Norte.
+	\end{ebullet}
+diz que uma certa \emph{expressão} é a terceira mulher a governar o Rio Grande do Norte.
+E isso é claramente falso.
+A \emph{pessoa} com este nome é a terceira mulher a governar o estado; não o próprio nome.
+Por outro lado, esta sentença:
+	\begin{ebullet}
+		\item Fátima Bezerra é composta por duas letras maiúsculas e onze letras minúsculas.
+	\end{ebullet}
+também diz algo falso:
+Fátima Bezerra é uma mulher, feita de carne e osso, e não de letras.
+Um último exemplo:
+	\begin{ebullet}
+		\item `\,`Fátima Bezerra'\,' é o nome de `Fátima Bezerra'.
+	\end{ebullet} 
+No lado esquerdo da sentença temos, de acordo com nossa convenção, o nome de um nome.
+No lado direito, temos um nome.
+Bem, talvez esse tipo de sentença, com nomes de nomes, ocorra apenas nos livros de lógica, mas mesmo assim é uma sentença verdadeira.
+
+Essas são apenas regras gerais para o uso de aspas simples, e você deve segui-las cuidadosamente, sempre!
+Para ficar claro, as aspas simples aqui não indicam o mesmo que as aspas duplas normalmente indicam em um romance:
+uma fala indireta, o discurso de um personagem.
+Não.
+As aspas simples, em nosso contexto aqui, indicam que você está deixando de falar sobre um objeto para falar sobre o nome desse objeto.
+
+
+\section{Linguagem objeto e metalinguagem}\label{s:LingObjMeta}
+Essas convenções gerais sobre o uso de aspas são de particular importância para nós.
+Afinal, estamos descrevendo uma linguagem formal aqui, a LVF, e, portanto, muito frequentemente \emph{mencionaremos} as expressões da LVF.
+
+Quando falamos sobre uma linguagem, a linguagem \emph{sobre a qual} estamos falando é chamada de \define {linguagem objeto}.
+E a linguagem \emph{que usamos para falar sobre} a linguagem objeto é chamada de \define{metalinguagem}.
+\label{def.metalanguage}
+
+A linguagem objeto que tem nos ocupado até aqui e também nas próximas Partes deste livro é a linguagem formal que estamos desenvolvendo: a LVF.
+Já a metalinguagem, a linguagem que estamos usando para falar da LVF, é o português.
+Bem, não exatamente o português de nossas conversas comuns, mas um \emph{português aumentado}, que é suplementado por um vocabulário técnico adicional, que nos ajuda nesta tarefa.
+
+Por exemplo, temos usado as letras maiúsculas como letras sentenciais da LVF:
+	$$A, B, C, Z, A_1, B_4, A_{25}, J_{375},\ldots$$
+Esta é uma lista de sentenças da linguagem objeto (LVF).
+As letras nesta lista não são sentenças do português.
+Portanto, não devemos dizer, por exemplo:
+	\begin{ebullet}
+		\item $D$ é uma letra sentencial da LVF.
+	\end{ebullet}
+Estamos, obviamente, tentando criar uma sentença em português que diga algo sobre a linguagem objeto (LVF), mas `$D$' é uma sentença da LVF, e não parte do português.
+Portanto, a expressão acima é sem sentido.
+É como se tivéssemos dito algo como:
+	\begin{ebullet}
+		\item Schnee ist wei\ss\ é uma sentença do alemão.
+	\end{ebullet}
+Mas o que de verdade estamos querendo dizer, neste caso, é:
+	\begin{ebullet}
+		\item `Schnee ist wei\ss' é uma sentença do alemão.
+	\end{ebullet}
+Da mesma forma, o que pretendíamos dizer acima era apenas:
+	\begin{ebullet}
+		\item `$D$' é uma letra sentencial da LVF.
+	\end{ebullet}
+O ponto geral é que, sempre que quisermos falar em português sobre alguma expressão específica da LVF, precisamos indicar que estamos \emph{mencionando} a expressão, em vez de \emph{usando}-a.
+Podemos empregar aspas simples ou adotar alguma convenção semelhante, tal como destacar a expressão em uma linha separada, centralizando-a horizontalmente na página.
+Como você já deve ter notado, neste livro estamos utilizando estas duas convenções.
+Então, quando, por exemplo, destacamos uma sentença, tal como $$(A \eand \enot A)$$ que está sem aspas, isolada na linha e centralizada, estamos mencionando-a, tanto quanto em `$(A \eand \enot A)$', onde a sentença está entre aspas simples e acompanha o fluxo do texto.
+Estas duas maneiras de apresentar indicam que a sentença da LVF está sento mencionada, não usada.
+Estamos, nos dois casos, apenas nos referindo, através nossa metalinguagem, o português aumentado, a uma expressão da LVF.
+
+
+\section{Metavariáveis}\label{s:Metavariables}
+Nós, no entanto, não queremos falar apenas sobre expressões \emph{específicas} da LVF. 
+Queremos também poder falar sobre \emph{qualquer sentença arbitrária} da LVF.
+Nós, de fato, já fizemos isso na Seção \ref{s:Sentences}, quando apresentamos a definição indutiva de sentença da LVF.
+Usamos as letras maiúsculas cursivas para fazer isso, a saber:
+	$$\meta{A}, \meta{B}, \meta{C}, \meta{D}, \ldots$$
+Diferentemente das letras sentenciais, essas letras não pertencem à LVF.
+Elas, na verdade, fazem parte da metalinguagem (o português aumentado) que usamos para falar sobre a as expressões da LVF.
+Neste caso, usamos as letras maiúsculas cursivas para nos referir genericamente a uma expressão \emph{qualquer} da LVF.
+Por exemplo, a segunda cláusula da definição indutiva de sentença da LVF foi assim expressada:
+	\begin{earg}
+		\item[2.] Se $\meta{A}$ é uma sentença, então $\enot \meta{A}$ é uma sentença.
+	\end{earg}
+Nesta cláusula, `$\meta{A}$' se refere de modo genérico a uma expressão qualquer da LVF.
+Ela não é uma expressão específica da LVF, como `$A$', mas uma váriável da metalinguagem (metavariável) que se refere genericamente a qualquer expressão da LVF, tal como $$A,\ \ B,\ \  (A \eif (Q \eand R)),\ \  \enot\enot(B_3 \eif Z),\ \ldots$$
+Se, no lugar da cláusula 2, tivéssemos usado a seguinte formulação:
+	\begin{ebullet}
+		\item Se `$A$' é uma sentença, então `$\enot A$' é uma sentença.
+	\end{ebullet}
+nós não poderíamos, com esta formulação, determinar se `$\enot B$' ou `$\enot A_7$' são sentenças, porque a cláusula seria específica e exclusiva para a letra sentencial $A$.
+
+Fazendo uma analogia com a matemática, é como se as letras sentencias tais como `$A$', `$D_3$',\ldots\ fossem os números, tais como $2$, $17$, \ldots\ e as metavariáveis tais como \meta{A}, \meta{B}, \ldots\ fossem as variáveis, tais como $n$, $x$, \ldots\ que podem assumir quaisquer valores entre os números.
+Para enfatizar:
+	\factoidbox{
+`$\meta{A}$' é um símbolo, que chamamos de \define{metavariavel} e que usamos para falar sobre qualquer expressão da LVF.
+
+`$A$' é apenas uma letra sentencial específica da LVF.
+Nós incluímos as metavariáveis `$\meta{A}$', `$\meta{B}$', `$\meta{C}$',\ldots\ ao português, para construir nossa metalinguagem, o \emph{português aumentado}, que usamos para falar da LVF.}
+
+Mas este último exemplo suscita uma complicação adicional para nossas convenções sobre o uso das aspas.
+Nós não incluímos aspas na segunda cláusula de nossa definição indutiva. Deveríamos ter feito isso?
+
+O problema é que a expressão no lado direito daquela cláusula não é uma sentença do português, nem do português aumentado com as metavariáveis, pois contém o símbolo `$\enot$'.
+Poderíamos, então, tentar reformular a cláusula como:
+	\begin{enumerate}
+		\item[2$'$.] Se \meta{A} é uma sentença, então `$\enot \meta{A}$' é uma sentença.
+	\end{enumerate}
+Mas esta reformulação também não é boa:
+`$\enot\meta{A}$' não é uma sentença da LVF, pois `$\meta{A}$' é um símbolo da metalinguagem, do português aumentado, e não um símbolo da LVF.
+
+O que realmente queremos dizer ali é algo como:
+	\begin{enumerate}
+		\item[2$''$.] Se \meta{A} é uma sentença, então o resultado da concatenação do símbolo `$\enot$' com a sentença \meta{A} é uma sentença.
+	\end{enumerate}
+Esta formulação é impecável, mas exageradamente eloquente e pouco econômica.
+Podemos, no entanto, evitar esta falta de economia criando nossas próprias convenções.
+Podemos, perfeitamente, estipular que uma expressão como `$\enot\meta{A}$' deva ser entendida como uma abreviação para a expressão:
+\begin{quote}
+	o resultado da concatenação do símbolo `$\enot$' com a sentença \meta{A}
+\end{quote}
+e, da mesma forma, expressões como `$(\meta{A} \eand \meta{B})$' e `$(\meta{A} \eor \meta{B})$' também são convencionalmente tomadas como abreviações para as expressões que afirmam explicitamente as concatenações que elas indicam.
+
+
+\section{Convenções para representação de argumentos}
+Um dos nossos principais objetivos para o uso da LVF é estudar argumentos. Este será o foco das Partes \ref{ch.TruthTables} e \ref{ch.NDTFL} do livro.
+Em português, cada premissa de um argumento é geralmente expressa por uma sentença individual e a conclusão por outra sentença.
+Da mesma forma que podemos simbolizar sentenças do português na LVF, podemos também simbolizar argumentos em português usando a LVF.
+Assim, poderíamos, por exemplo, perguntar se o argumento cujas premissas são as sentenças da LVF `$A$' e `$A \eif C$' e cuja conclusão é `$C$' é válido.
+No entanto, escrever tudo isso, sempre, é bem pouco econômico.
+Então, em vez disso, proporemos mais uma convenção para ampliar um pouco mais nossa metalinguagem:
+	$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$$
+será uma abreviação para:
+	\begin{quote}
+		o argumento com as premissas $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ e a conclusão $\meta{C}$
+	\end{quote}
+Para manter o texto mais limpo e evitar confusões desnecessárias, não exigiremos aspas nesta representação de argumentos.
+(Note que `$\therefore$' é um símbolo de nossa \emph{metalinguagem}, o português aumentado, e não um novo símbolo de LVF.

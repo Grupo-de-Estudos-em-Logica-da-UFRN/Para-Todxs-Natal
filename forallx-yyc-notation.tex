@@ -1,0 +1,107 @@
+%!TEX root = forallxyyc.tex
+
+\chapter{Notação simbólica}
+\label{app.notation}
+
+%\section{Alternative nomenclature}
+\section{Nomemclatura alternativa}
+
+%\paragraph{Truth-functional logic.} TFL goes by other names. Sometimes it is called \emph{sentential logic}, because it deals fundamentally with sentences. Sometimes it is called \emph{propositional logic}, on the idea that it deals fundamentally with propositions. We have stuck with \emph{truth-functional logic}, to emphasize the fact that it deals only with assignments of truth and falsity to sentences, and that its connectives are all truth-functional.
+
+%Checartermo: Lógica verofuncional
+\paragraph{Lógica verofuncional.} LVF também é conhecida por outros nomes. Às vezes é chamada de \emph{lógica sentencial}, porque lida fundamentalmente com sentenças. Às vezes é chamada de \emph{lógica proposicional}, a partir da ideia de que trabalha fundamentalmente com proposições. Preferimos continuar usando \emph{lógica verofuncional}, para enfatizar o fato de que ela lida apenas com atribuições de verdade e falsidade a sentenças, e que seus conectivos são todos verofuncionais.
+
+%\paragraph{First-order logic.} FOL goes by other names. Sometimes it is called \emph{predicate logic}, because it allows us to apply  predicates to objects. Sometimes it is called \emph{quantified logic}, because it makes use of quantifiers.
+
+\paragraph{Lógica de primeira ordem.} LPO tem outros nomes. Às vezes é chamada de \emph{lógica de predicados}, porque nos permite aplicar predicados a objetos. Às vezes é chamada de \emph{lógica quantificada}, porque faz uso de quantificadores. 
+
+%\paragraph{Formulas.} Some texts call formulas \emph{well-formed formulas}. Since `well-formed formula' is such a long and cumbersome phrase, they then abbreviate this as \emph{wff}. This is both barbarous and unnecessary (such texts do not countenance `ill-formed formulas'). We have stuck with `formula'. 
+
+\paragraph{Fórmulas.} Alguns textos referem-se a fórmulas usando o termo \emph{fórmulas bem formadas}. Uma vez que `fórmula bem formada' é uma frase longa e incômoda, eles a abreviam como \emph{fbf} ou, em inglês, \emph{wff} (\emph{well-formed formulas}). Isso é bárbaro e desnecessário (tais textos não aceitam `fórmulas mal formadas'). Nós optamos por usar apenas `fórmula'.
+
+%In \S\ref{s:TFLSentences}, we defined \emph{sentences} of TFL. These are also sometimes called `formulas' (or `well-formed formulas') since in TFL, unlike FOL, there is no distinction between a formula and a sentence.
+
+Em \S\ref{s:TFLSentences}, nós definimos \emph{sentenças} na LVF. Algumas vezes elas também são chamadas de `fórmulas' (ou `fórmulas bem formadas'), pois na LVF, ao contrário da LPO, não há distinção entre uma fórmula e uma sentença. 
+
+%\paragraph{Valuations.} Some texts call valuations \emph{truth-assignments}, or \emph{truth-value assignments}.
+\paragraph{Valorações.} Alguns textos chamam valorações de \emph{atribuições de verdade}, ou \emph{atribuições de valor de verdade}.
+
+%\paragraph{Expressive adequacy.} Some texts describe TFL as \emph{truth-functionally complete}, rather than expressively adequate.
+\paragraph{Adequação expressiva.} Alguns textos descrevem LVF como \emph{verofuncionalmente completa} em vez de adequadamente expressiva.
+
+%\paragraph{$n$-place predicates.} We have chosen to call predicates `one-place', `two-place', `three-place', etc. Other texts respectively call them `monadic', `dyadic', `triadic', etc. Still other texts call them `unary', `binary', `ternary', etc.
+\paragraph{Predicados $n$-ários.} Escolhemos chamar os predicados de `unários', `binários', `ternários' e, de maneira geral, `n-ários'. Alguns textos preferem referir-se a eles como sendo de `um lugar', `dois lugares', `três lugares', etc. Outros, ainda, optam por caracterizá-los como `monádicos', `diádicos', `triádicos', etc.
+
+%\paragraph{Names.} In FOL, we have used `$a$', `$b$', `$c$', for names. Some texts call these `constants'. Other texts do not mark any difference between names and variables in the syntax. Those texts focus simply on  whether the symbol occurs \emph{bound} or \emph{unbound}. 
+\paragraph{Nomes.} Em LPO, usamos `$a$',`$b$', `$c$', para nomes. Alguns textos chamam isso de 'constantes'. Outros textos não usam nenhuma diferenciação entre nomes e variáveis na sintaxe. Esses textos focam simplesmente em se o símbolo ocorre \emph{ligado} ou \emph{livre}.
+
+%\paragraph{Domains.} Some texts describe a domain as a `domain of discourse', or a `universe of discourse'.
+\paragraph{Domínios.} Alguns textos descrevem um domínio como 'domínio de discurso' ou 'universo de discurso'.
+
+%\section{Alternative symbols}
+%In the history of formal logic, different symbols have been used at different times and by different authors. Often, authors were forced to use notation that their printers could typeset. This appendix presents some common symbols, so that you can recognize them if you encounter them in an article or in another book.
+\section{Símbolos alternativos}
+Na história da lógica formal, diferentes símbolos foram usados em diferentes momentos e por diferentes autores. Frequentemente, os autores eram forçados a usar notações que suas impressoras podiam produzir. Este apêndice apresenta alguns símbolos comuns, para que você possa reconhecê-los se os encontrar em um artigo ou em outro livro. 
+
+%\paragraph{Negation.} Two commonly used symbols are the \emph{hoe}, `$\neg$', and the \emph{swung dash} or \emph{tilda}, `${\sim}$.' In some more advanced formal systems it is necessary to distinguish between two kinds of negation; the distinction is sometimes represented by using both `$\neg$' and `${\sim}$'. Older texts sometimes indicate negation by a line over the formula being negated, e.g., $\overline{A \eand B}$. Some texts use `$x \neq y$' to abbreviate `$\enot x = y$'.
+\paragraph{Negação.} Dois símbolos comumente usados são o `$\neg$' e o `${\sim}$' (\emph{til}). Em alguns sistemas formais mais avançados, é necessário distinguir entre dois tipos de negação; a distinção às vezes é representada usando ambos: `$\neg$' e `${\sim}$'. Textos mais antigos às vezes indicam negação por uma linha sobre a fórmula sendo negada, por exemplo, $\overline{A \land B}$. Alguns textos usam `$x \neq y$' para abreviar `$\lnot x = y$'.
+
+%\paragraph{Disjunction.} The symbol `$\vee$' is typically used to symbolize inclusive disjunction. One etymology is from the Latin word `vel', meaning `or'.%In some systems, disjunction is written as addition.
+\paragraph{Disjunção.} O símbolo `$\vee$' é tipicamente usado para simbolizar a disjunção inclusiva. Uma etimologia aponta a palavra latina `vel', que significa `ou', como origem desse uso. Em alguns sistemas a disjunção é representada usando-se o símbolo da adição.
+
+%\paragraph{Conjunction.}
+%Conjunction is often symbolized with the \emph{ampersand}, `{\&}'. The ampersand is a decorative form of the Latin word `et', which means `and'.  (Its etymology still lingers in certain fonts, particularly in italic fonts; thus an italic ampersand might appear as `\emph{\&}'.) This symbol is commonly used in natural English writing (e.g.  `Smith \& Sons'), and so even though it is a natural choice, many logicians use a different symbol to avoid confusion between the object and metalanguage: as a symbol in a formal system, the ampersand is not the English word `\&'. The most common choice now is `$\wedge$', which is a counterpart to the symbol used for disjunction. Sometimes a single dot, `{\scriptsize\textbullet}', is used. In some older texts, there is no symbol for conjunction at all; `$A$ and $B$' is simply written `$AB$'.
+\paragraph{Conjunção.}
+A conjunção é frequentemente simbolizada com o \emph{e comercial}, `{\&}', também conhecido como \emph{e sertanejo}. O e comercial é uma forma decorativa da palavra latina `et', que significa a conjunção `e'. (Sua etimologia ainda persiste em certas fontes, particularmente em fontes em itálico; portanto, um `e' comercial em itálico pode aparecer como `\emph{\&}'.) Este símbolo é comumente usado na escrita natural do português (por exemplo, `Chitãozinho \& Xororó') e assim, embora seja uma escolha natural, muitos lógicos usam um símbolo diferente para evitar confusão entre objeto e metalinguagem: como um símbolo em um sistema formal, o e comercial não é a palavra portuguesa `\&'. A escolha mais comum agora é `$\wedge$', que é uma contraparte do símbolo usado para disjunção. Às vezes, um único ponto, `{\scriptsize\textbullet}', é usado. Em alguns textos mais antigos, não há nenhum símbolo de conjunção; `$A$ e $B$' são simplesmente escritos como `$AB$'.
+
+%\paragraph{Material Conditional.} There are two common symbols for the material conditional: the \emph{arrow}, `$\rightarrow$', and the \emph{hook}, `$\supset$'.
+\paragraph{Condicional Material.} Existem dois símbolos comuns para o condicional material: a \emph{seta}, `$\rightarrow$ ', e o \emph{contém}, `$\supset$', usado em teoria de conjuntos matemáticos.
+
+%\paragraph{Material Biconditional.} The \emph{double-headed arrow}, `$\leftrightarrow$', is used in systems that use the arrow to represent the material conditional. Systems that use the hook for the conditional typically use the \emph{triple bar}, `$\equiv$', for the biconditional.
+\paragraph{Bicondicional Material.} A \emph{seta dupla}, `$\leftrightarrow$', é usada em sistemas que usam a seta para representar o condicional material. Os sistemas que usam o símbolo de contém para o condicional normalmente usam a \emph{barra tripla}, `$\equiv$', como bicondicional.
+
+%\paragraph{Quantifiers.} The universal quantifier is typically symbolized as a rotated `A', and the existential quantifier as a rotated, `E'. In some texts, there is no separate symbol for the universal quantifier. Instead, the variable is just written in parentheses in front of the formula that it binds. For example, they might write `$(x)Px$' where we would write `$\forall x\, Px$'.
+\paragraph{Quantificadores.} O quantificador universal é tipicamente simbolizado como um `A' de cabeça para baixo, e o quantificador existencial como um `E' espelhado horizontalmente. Em alguns textos não existe um símbolo separado para o quantificador universal. Em vez disso, simplesmente coloca-se entre parênteses as variáveis cujas ocorrências estão sob a ação do quantificador. Por exemplo, eles podem escrever `$(x) Px$' onde escreveríamos `$ \forall x \, Px$'.
+
+\bigskip
+
+Resumo dos símbolos:
+
+\begin{center}
+\begin{tabular}{rl}
+negação & $\neg$, ${\sim}$\\
+conjunção & $\wedge$, $\&$, {\scriptsize\textbullet}\\
+disjunção & $\vee$\\
+condicional & $\rightarrow$, $\supset$\\
+bicondicional & $\leftrightarrow$, $\equiv$\\
+quantificador universal & $\forall x$, $(x)$
+\end{tabular}
+\end{center}
+
+
+%
+%
+%
+%\section*{Polish notation}
+%
+%This section briefly discusses sentential logic in Polish notation, a system of notation introduced in the late 1920s by the Polish logician Jan {\L}ukasiewicz.
+%
+%Lower case letters are used as sentence letters. The capital letter $N$ is used for negation. $A$ is used for disjunction, $K$ for conjunction, $C$ for the conditional, $E$ for the biconditional. (`A' is for alternation, another name for logical disjunction. `E' is for equivalence.)
+%%\marginpar{
+%%\begin{tabular}{cc}
+%%notation & Polish\\
+%%of TFL & notation\\
+%%\enot & $N$\\
+%%\eand & $K$\\
+%%\eor & $A$\\
+%%\eif & $C$\\
+%%\eiff & $E$
+%%\end{tabular}
+%%}
+%
+%In Polish notation, a binary connective is written \emph{before} the two sentences that it connects. For example, the sentence $A\eand B$ of TFL would be written $Kab$ in Polish notation.
+%
+%The sentences $\enot A\eif B$ and $\enot (A\eif B)$ are very different; the main logical operator of the first is the conditional, but the main connective of the second is negation. In TFL, we show this by putting parentheses around the conditional in the second sentence. In Polish notation, parentheses are never required. The left-most connective is always the main connective. The first sentence would simply be written $CNab$ and the second $NCab$.
+%
+%This feature of Polish notation means that it is possible to evaluate sentences simply by working through the symbols from right to left. If you were constructing a truth table for $NKab$, for example, you would first consider the truth-values assigned to $b$ and $a$, then consider their conjunction, and then negate the result. The general rule for what to evaluate next in TFL is not nearly so simple. In TFL, the truth table for $\enot(A\eand B)$ requires looking at $A$ and $B$, then looking in the middle of the sentence at the conjunction, and then at the beginning of the sentence at the negation. Because the order of operations can be specified more mechanically in Polish notation, variants of Polish notation are used as the internal structure for many computer programming languages.
+%

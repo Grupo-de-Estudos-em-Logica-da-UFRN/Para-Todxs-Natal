@@ -1,0 +1,2175 @@
+%!TEX root = forallxyyc.tex
+\normalsize
+\part{Lógica de primeira ordem}
+\label{ch.FOL}
+\addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
+\chapter{Elementos fundamentais da LPO}\label{s:FOLBuildingBlocks}
+
+\section[Olhar dentro das sentenças]{A necessidade de `olhar dentro' das sentenças}
+Considere o seguinte argumento, que é obviamente válido em português:
+\begin{earg}\label{willard1}
+	\item[] Samir é um lógico.
+	\item[] Todos os lógicos usam chapéus ridículos.
+	\item[\therefore] Samir usa chapéus ridículos.
+\end{earg}
+Repare que todas as sentenças deste argumento são atômicas, ou seja, não são compostas por sentenças mais simples ligadas por conectivos verofuncionais.
+Por isso qualquer chave de simbolização para o argumento na LVF seria semelhante a esta:
+\begin{ekey}
+\item[L] Samir é um lógico.
+\item[T] Todos os lógicos usam chapéus ridículos.
+\item[R] Samir usa chapéus ridículos.
+\end{ekey}
+Sob esta chave nosso argumento fica simplesmente:
+$$L, T \therefore R$$
+%\begin{center}
+%	\item[] $L$
+%	\item[] $T$
+%	\item[\therefore] $R$
+%\end{earg}
+Esse argumento é \emph{inválido} na LVF, mas o argumento original em português é claramente válido.
+
+Temos um problema aqui.
+O argumento em português é válido porque não tem contraexemplo, já que em todo cenário hipotético (situação concebível) em que é verdade que todos os lógicos usam chapéus ridículos e Samir é um lógico, também será verdade que Samir usa chapéus ridículos.
+Mas há uma valoração na qual `$L$' e `$T$' são verdadeiras e `$R$' é falsa e, portanto, o argumento simbolizado não é válido.
+Temos então uma valoração que nenhuma situação concebível é capaz de gerar.
+Isso demonstra que há uma assincronia (uma discrepância) entre as situações às quais as sentenças do  argumento original em português podem estar se referindo e as valorações do argumento simbolizado na LVF.
+
+Acontece que não cometemos nenhum erro de simbolização.
+Esta é a melhor simbolização na LVF que podemos oferecer a este argumento.
+Qualquer outra chave de simbolização aceitável na LVF diferiria desta apenas nas letras sentenciais utilizadas.
+O argumento simbolizado continuaria inválido em qualquer uma delas.
+Este fato, conforme vimos na Seção \ref{s:ParadoxesOfMaterialConditional}, é um indício de que este argumento está além dos limites da LVF e vai requerer uma nova linguagem, com mais recursos, para que possa ser adequadamente simbolizado.
+
+A sentença `Todos os lógicos usam chapéus ridículos' é uma sentença sobre lógicos e seu gosto peculiar por chapéus.
+Ela tem uma estrutura formal interna que reflete e expressa a relação de qualquer lógico com o tipo de chapéu que ele usa.
+Muitas outras sentenças, tais como `Todos os filósofos adoram repolho', ou  `Todos os seres humanos são mortais', têm esta mesma estrutura formal que reflete um tipo de relação semelhante de qualquer filósofo com seu gosto por repolho e de qualquer ser humano com sua mortalidade. 
+No entanto, todas estas sentenças são atômicas e por isso são todas simbolizadas na LVF por letras sentenciais isoladas.
+Mas nenhuma letra sentencial tem estrutura.
+E, sem estrutura, nenhuma letra sentencial conseguirá expressar esta relação entre ser um lógico e usar chapéus ridículos, ou ser um filósofo e adorar repolho.
+
+Para simbolizar adequadamente argumentos como este, precisamos de uma linguagem nova que nos possibilite olhar dentro das sentenças e decompor as letras sentenciais em partes, de modo que possamos levar em consideração a estrutura formal interna das sentenças.
+Teremos que desenvolver uma nova linguagem lógica que nos permita \emph{dividir o átomo}.
+Vamos chamar essa linguagem nova de \emph{lógica de primeira ordem} ou \emph{LPO}.
+
+Os detalhes da LPO serão explicados ao longo de vários capítulos desta e da próxima parte deste livro; mas, antes de entrarmos nos detalhes, vejamos uma breve descrição das ideias básicas e das três ``partículas subatômicas'' nas quais  o átomo (a letra sentencial) será dividido.
+
+Em primeiro lugar, a LPO terá \emph{nomes}.
+Eles serão indicados por letras minúsculas em itálico.
+Por exemplo, podemos usar `$b$' para representar Beto e `$k$' para representar Kaline.
+
+Em segundo lugar, a LPO terá \emph{predicados}.
+Em português os predicados são expressões como
+\begin{center}
+`\blank\ é um cachorro'\\ `\blank\ é uma advogada'
+\end{center}
+Estas expressões não são sentenças completas.
+Para fazer um predicado tornar-se uma sentença completa é preciso preencher sua lacuna (com algum sujeito).
+Precisamos dizer algo como
+\begin{center}
+``\underline{Beto} é um cachorro''\\
+``\underline{Kaline} é uma advogada''
+\end{center}
+Na LPO, indicaremos predicados com letras maiúsculas em itálico.
+Por exemplo, podemos usar o predicado da LPO `$C$' para simbolizar o predicado do português `\blank\ é um cachorro'.
+E então, a expressão
+$$\atom{C}{b}$$
+será uma sentença da LPO, que simboliza a sentença em português
+\begin{center}
+`Beto é um cachorro'
+\end{center}
+Da mesma forma, podemos fazer o predicado `$A$' da LPO simbolizar o predicado do português `\blank\ é uma advogada'.
+Neste caso a expressão
+$$\atom{A}{k}$$
+simbolizará a sentença do português
+\begin{center}
+`Kaline é uma advogada'
+\end{center}
+Em terceiro lugar, a LPO terá \emph{quantificadores}.
+Por exemplo, `$\exists$' transmitirá aproximadamente a ideia de `Há pelo menos um \ldots'.
+Portanto, podemos simbolizar a sentença do português
+\begin{center}
+`existe um cachorro'
+\end{center}
+com a sentença da LPO
+$$\exists x\, \atom{C}{x}$$
+que leríamos em voz alta como `existe pelo menos uma coisa, $x$, de tal forma que $x$ é um cachorro'.
+
+Essa é apenas uma ideia geral.
+A LPO é significativamente mais complexa e sutil que a LVF e, por isso, vamos começar agora a estudá-la lentamente.
+
+
+\section{Nomes}
+Em português, um \emph{termo singular} é uma palavra ou frase que se refere a uma pessoa, lugar ou coisa \emph{específicos}.
+A palavra `cachorro', por exemplo, não é um termo singular, porque existem muitos cachorros e a palavra `cachorro' não se refere especificamente a nenhum deles.
+Já a palavra `Beto' é termo singular, porque se refere a um vira-lata específico.
+Da mesma forma, a expressão `o cachorro de Felipe' também é um termo singular, porque se refere a este mesmo  pequeno vira-lata específico.
+
+Os \emph{nomes próprios} são um tipo particularmente importante de termo singular.
+Eles são expressões que selecionam indivíduos sem descrevê-los.
+O nome `Emília' é um nome próprio; e o nome, por si só, não diz nada sobre Emília.
+Certamente, alguns nomes são tradicionalmente dados a meninos e outros são tradicionalmente dados a meninas.
+Quando `Ivani' é usado como um termo singular, você pode achar que se refere a uma mulher.
+Mas você pode estar cometendo um erro.
+`Ivani' pode ser nome de um homem, pode nem ser o nome de uma pessoa, mas de um gato, ou de uma gata, ou uma tartaruga.
+
+Na LPO, os \define{nomes} são letras minúsculas de `$a$' a `$r$'.
+Podemos adicionar índices numéricos se quisermos usar a mesma letra para nomes diferentes.
+Aqui estão alguns termos singulares distintos da LPO:
+	$$a,\ b,\ c,\ldots, r, \ a_1, \ f_{32}, \ j_{390}, \ m_{12}$$
+Os nomes da LPO devem ser entendidos de modo similar aos nomes próprios em português, com uma única diferença.
+`José da Silva', por exemplo, é um nome próprio, mas existem muitas pessoas com esse mesmo nome.
+Nós convivemos com esse tipo de ambiguidade em português, permitindo que o contexto individualize cada um dos vários `José da Silva'.
+Na LPO esta ambiguidade não é tolerada.
+Um nome não pode se referir a mais de uma coisa, mas apenas a uma \emph{única} coisa.
+(Apesar disso, é sim permitido que uma única coisa tenha mais de um nome diferente.)
+
+Como na LVF, utilizaremos chaves de simbolização também na LPO.
+Um primeiro elemento, então, que nossas chaves de simbolização da LPO devem conter são os nomes.
+Vamos utilizá-las para relacionar nomes da LPO com termos singulares (nomes próprios e descrições) do português.
+Uma chave de simbolização da LPO pode, por exemplo, apresentar a seguinte conexão entre nomes próprios do português e nomes da LPO:
+	\begin{ekey}
+		\item[e] Emília
+		\item[g] Glória
+		\item[m] Marcelo
+	\end{ekey}
+
+
+\section{Predicados}
+Os predicados mais simples são propriedades de indivíduos.
+São coisas que você pode dizer sobre um objeto.
+Aqui estão alguns exemplos de predicados em português:
+	\begin{quote}
+		\blank\ é um cachorro\\
+		\blank\ estudou filosofia na UFRN\\
+		Um raio caiu em \blank
+	\end{quote}
+Em geral, você pode pensar nos predicados como as coisas que se combinam com os termos singulares para formar sentenças completas.
+Ou seja, ao combinar o predicado `\blank\ é um cachorro' com o termo singular `Beto', obtemos a sentença completa `Beto é um cachorro'.
+Por outro lado, você pode começar com as sentenças e criar predicados a partir delas, removendo termos singulares.
+Considere, por exemplo, a sentença `Viviane pegou emprestado o carro da família de Nelson'.
+Ao remover um termo singular desta sentença, podemos obter qualquer um dos três predicados diferentes abaixo:
+	\begin{quote}
+		\blank\ pegou emprestado o carro da família de Nelson\\
+		Viviane pegou emprestado \blank\ de Nelson\\
+		Viviane pegou emprestado o carro da família de \blank
+	\end{quote}
+Os \define{predicados} na LPO são letras maiúsculas de $A$ a $Z$, com ou sem índices numéricos.
+Podemos apresentar uma chave de simbolização para predicados assim:
+	\begin{ekey}
+		\item[\atom{B}{x}] \gap{x} está bravo
+		\item[\atom{A}{x}] \gap{x} está alegre
+%		\item[\atom{T_1}{x,y}] \gap{x} is as tall or taller than \gap{y}
+%		\item[\atom{T_2}{x,y}] \gap{x} is as tough or tougher than \gap{y}
+%		\item[\atom{B}{x,y,z}] \gap{y} is between \gap{x} and \gap{z}
+	\end{ekey}
+       (Por que colocamos `$x$'s como índices das lacunas? Não se preocupe com isso agora.
+       Nos dedicaremos a este ponto no Capítulo \ref{s:MultipleGenerality}.)
+
+Se combinarmos isso com a chave de simbolização para nomes que apresentamos na Seção anterior obtemos
+	\begin{ekey}
+		\item[\atom{B}{x}] \gap{x} está bravo
+		\item[\atom{A}{x}] \gap{x} está alegre
+		\item[e] Emília
+		\item[g] Glória
+		\item[m] Marcelo
+	\end{ekey}
+e podemos começar a simbolizar na LPO algumas sentenças do português que usam esses nomes e predicados.
+Por exemplo, considere as seguintes sentenças:
+	\begin{earg}
+		\item[\ex{terms1}] Emília está brava.
+		\item[\ex{terms2a}] Glória e Marcelo estão bravos.
+		\item[\ex{terms2}] Se Emília está brava, então Glória e Marcelo também estão.
+	\end{earg}
+
+A sentença \ref{terms1} é imediatamente simbolizada por:
+$$\atom{B}{e}$$
+A sentença \ref{terms2a} é uma conjunção de duas sentenças mais simples.
+As sentenças simples podem ser simbolizadas respectivamente por `$\atom{B}{g}$' e `$\atom{B}{m}$'.
+Então nós utilizamos aqui os recursos da LVF e simbolizamos a sentença inteira por
+$$\atom{B}{g} \eand \atom{B}{m}$$
+Isso ilustra um ponto importante:
+a LPO possui todos os conectivos verofuncionais da LVF.
+
+A sentença~\ref{terms2} é um condicional, cujo antecedente é a sentença~\ref{terms1} e cujo consequente é a sentença~\ref{terms2a}.
+Então, podemos simbolizá-la como:
+$$\atom{B}{e} \eif (\atom{B}{g} \eand \atom{B}{m})$$
+
+
+\section{Quantificadores}
+Estamos agora prontos para introduzir os quantificadores.
+Considere estas sentenças:
+	\begin{earg}
+		\item[\ex{q.a}] Todos estão alegres.
+%		\item[\ex{q.ac}] Everyone is at least as tough as Elsa.
+		\item[\ex{q.e}] Alguém está bravo.
+	\end{earg}
+Pode parecer tentador simbolizar a sentença \ref{q.a} como:
+$$\atom{A}{e} \eand \atom{A}{g} \eand \atom{A}{m}$$
+No entanto, isso diria apenas que Emília, Glória e Marcelo estão alegres.
+Mas não é isso exatamente o que queremos dizer com a sentença \ref{q.a}.
+Queremos dizer que \emph{todos} estão alegres, mesmo aqueles a quem não demos nome.
+Para fazer isso, utilizaremos o símbolo `$\forall$', que é chamado de \define{quantificador universal}.
+
+Um quantificador deve ser seguido sempre por uma \define{variavel}.
+Na LPO, as variáveis são as letras minúsculas de `$s$' a `$z$', em itálico, com ou sem índices numéricos.
+Podemos, assim, simbolizar a sentença \ref{q.a} como:
+$$\forall x\, \atom{A}{x}$$
+A variável `$x$' funciona como um tipo de marca que reserva um lugar.
+A expressão `$\forall x$' grosso modo significa que você pode escolher qualquer coisa e colocá-la como `$x$'.
+A expressão que a segue, `$\atom{A}{x}$', indica, desta coisa que você escolheu,  que ela está alegre.
+
+Deve-se ressaltar que não há qualquer razão especial para usarmos `$x$' em vez de alguma outra variável.
+As sentenças `$\forall x\, \atom{A}{x}$', `$\forall y\, \atom{A}{y}$', `$\forall z\, \atom{A}{z}$' e `$\forall x_5 \atom{A}{x_5}$' usam variáveis diferentes, mas todas são simbolizações logicamente equivalentes da sentença \ref{q.a}.
+
+Para simbolizar a sentença \ref{q.e}, introduzimos mais um símbolo novo: o \define{quantificador existencial}, `$\exists$'.
+Assim como o quantificador universal, o quantificador existencial também requer uma variável.
+A sentença \ref{q.e} pode ser simbolizada por:
+$$\exists x\,\atom{B}{x}$$
+Enquanto `$\forall x\,\atom{B}{x}$' deve ser lida como `para todo $x$, $x$ está bravo', `$\exists x\,\atom{B}{x}$' deve ser lida como `existe algo, $x$, tal que $x$ está bravo'.
+Aqui também a variável serve apenas para reservar um espaço; poderíamos facilmente simbolizar a sentença~\ref{q.e} por `$\exists z\, \atom{B}{z}$', `$\exists w_{256}\, \atom{B}{w_{256}}$', ou com qualquer outra variável.
+
+\newglossaryentry{existential quantifier}{
+  name = existential quantifier,
+  description = {The symbol $\exists$ of FOL used to symbolize existence; $\exists x\, \atom{F}{x}$ is true iff at least one member of the domain is~$F$}
+}
+
+Mais alguns exemplos ajudarão. Considere estas outras sentenças:
+	\begin{earg}
+		\item[\ex{q.ne}] Ninguém está bravo.
+		\item[\ex{q.en}] Há alguém que não está alegre.
+		\item[\ex{q.na}] Nem todos estão alegres.
+	\end{earg}
+A sentença \ref{q.ne} pode ser parafraseada como:
+`Não é o caso de que alguém está bravo'.
+Podemos então simbolizá-la usando a negação e um quantificador existencial:
+$$\enot \exists x\,\atom{B}{x}$$
+Mas a sentença \ref{q.ne} também pode ser parafraseada (de um jeito um pouco menos comum, mas também aceitável em português) como:
+`Todos não estão bravos'.
+Com base nesta paráfrase ela pode também ser simbolizada usando a negação e um quantificador universal:
+$$\forall x\, \enot \atom{B}{x}$$
+Ambas são simbolizações aceitáveis.
+De fato, conforme ficará claro mais adiante, em geral, $\forall x\, \enot\meta{A}$ é logicamente equivalente a $\enot\exists x\,\meta{A}$.
+(Observe que voltamos aqui à prática, explicada no Capítulo \ref{s:UseMention}, de usar `$\meta{A}$' como meta-variável.)
+A escolha sobre simbolizar uma sentença como \ref{q.ne} de uma maneira ou da outra depende do que soa mais natural em alguns contextos e  não representa muito mais do que uma mera questão de gosto.
+
+A sentença \ref{q.en} é parafraseada mais naturalmente como:
+`Há algum~$x$, de tal forma que $x$ não está alegre'.
+E isso, por sua vez, se torna:
+$$\exists x\, \enot \atom{A}{x}$$
+Certamente, poderíamos igualmente tê-la simbolizado por:
+$$\enot\forall x\,\atom{A}{x}$$
+que, naturalmente, leríamos como `não é o caso de que todos estejam alegres'.
+E essa também seria uma simbolização perfeitamente adequada da sentença \ref{q.na}.
+Ou seja, de modo coerente com o que mencionamos no parágrafo anterior, \ref{q.en} e \ref{q.na} são sentenças equivalentes.
+
+
+\section{Domínios}
+Dada a chave de simbolização que estamos usando, `$\forall x\,\atom{A}{x}$' simboliza `Todos estão alegres'.
+Mas quem está incluído neste \emph{todos}?
+Em português, quando usamos sentenças como esta, geralmente não queremos dizer com elas todos que estão atualmente vivos.
+Certamente também não queremos dizer todos que já estiveram vivos ou que um dia viverão.
+Normalmente, queremos dizer algo mais modesto, tal como:
+todos nesta sala, ou todos que atualmente fazem o curso de dança contemporânea da professora Rita, ou todas as filhas de dona Arlete, ou algo do gênero.
+
+Para eliminar essa ambiguidade, precisaremos especificar um \define{dominio}.
+O domínio é a coleção das coisas sobre as quais estamos falando; e por isso é também chamado de \emph{domínio do discurso}.
+Assim, se quisermos falar sobre as pessoas em Caicó, definimos nosso domínio como as pessoas em Caicó.
+Anotamos o domínio no início da chave de simbolização, assim:
+\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] as pessoas em Caicó
+	\end{ekey}
+\end{center}
+O alcance dos quantificadores fica, então, limitado ao domínio estabelecido.
+Para expressar isso costuma-se dizer que os quantificadores \emph{variam sobre} o domínio.
+Dado, então, o domínio especificado na chave acima, `$\forall x$' deve ser lido, aproximadamente, como  `Toda pessoa em Caicó é tal que \ldots' e `$\exists x $' deve ser lido aproximadamente como `alguma pessoa em Caicó é tal que \ldots'. 
+
+\newglossaryentry{domain}{
+  name = domain,
+  description = {The collection of objects assumed for a symbolization in FOL, or that gives the range of the quantifiers in an \gls{interpretation}}
+}
+
+Na LPO, o domínio nunca será vazio, deve sempre incluir pelo menos uma coisa. Além disso, nós, em português, normalmente podemos concluir `alguém está bravo' a partir de `Glória está brava'.
+Se transferirmos isso para a LPO, devemos ser capazes de deduzir `$\exists x\, \atom{B}{x}$' a partir de `$\atom{B}{g}$'.
+Bem, para que estas inferências sejam legítimas, cada nome deve ligar-se a uma coisa que esteja no domínio.
+Se, por exemplo, quisermos nomear pessoas em outros lugares além de Caicó, precisamos ampliar o domínio para incluir essas pessoas. 
+	\factoidbox{
+		Um domínio deve ter \emph{pelo menos} um membro.
+		Um nome deve ligar-se a \emph{exatamente} um membro do domínio, mas um membro do domínio pode ter um nome, muitos nomes ou nenhum nome.
+	}
+
+Domínios com apenas um membro podem produzir alguns resultados estranhos.
+Considere a seguinte chave de simbolização:
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] a Torre Eiffel
+\item[\atom{P}{x}] \gap{x} está em Paris.
+\end{ekey}
+\end{center}
+Dada esta chave, a maneira mais natural de parafrasear a sentença `$\forall x\,\atom{P}{x}$' em português é como: `Tudo está em Paris'.
+No entanto, dada a peculiaridade do domínio de nossa chave de simbolização, isso seria enganoso.
+Porque o que queremos dizer é que tudo \emph{no domínio} está em Paris.
+Mas nosso domínio contém apenas a Torre Eiffel.
+Portanto, com essa chave de simbolização, $\forall x\,\atom{P}{x}$ significa o mesmo que a sentença `a Torre Eiffel está em Paris' e por isso deveria ser dessa forma parafraseada em português.
+
+
+\subsection{Termos sem referência}
+
+Na LPO, cada nome refere-se a exatamente um membro do domínio.
+Isso significa que um nome não pode referir-se a mais de uma coisa (afinal, um nome é um termo \emph{singular}).
+Isso significa também que um nome não pode não se referir a nenhum membro do domínio.
+Todo nome tem que referir-se a \emph{algo}.
+Este fato relaciona-se a um problema filosófico clássico: o chamado problema dos termos sem referência.
+
+Os filósofos medievais costumavam usar sentenças sobre a \emph{Quimera} para exemplificar esse problema.
+A Quimera é um monstro mitológico com cabeça de leão, corpo de cabra e rabo de dragão.
+A Quimera não existe realmente, é uma ficção, um mito.
+Considere, então, estas duas sentenças:
+\begin{earg}
+\item[\ex{chimera1}] A Quimera está brava.
+\item[\ex{chimera2}] A Quimera não está brava.
+\end{earg}
+É tentador simplesmente definir um nome da LPO para significar `Quimera'.
+Poderíamos obter assim a seguinte chave de simbolização:
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] seres na terra
+\item[q] Quimera
+\item[\atom{B}{x}] \gap{x} está brava
+\end{ekey}
+\end{center}
+Com esta chave, poderíamos, então, simbolizar a sentença \ref{chimera1} como:
+$$\atom{B}{q}$$
+e a sentença \ref{chimera2} como:
+$$\enot\atom{B}{q}$$
+Problemas surgem quando nos perguntamos se essas sentenças são verdadeiras ou falsas.
+
+Uma opção é dizer que a sentença \ref{chimera1} não é verdadeira, porque não há nenhuma Quimera. 
+Mas se a sentença \ref{chimera1} for falsa porque se refere a algo inexistente, então a sentença \ref{chimera2} deve, pelo mesmo motivo, ser falsa também.
+No entanto, isso significaria que $\atom{B}{q}$ e $\enot \atom{B}{q}$ seriam ambas falsas.
+Mas dadas as condições de verdade da negação, este não pode ser o caso.
+Sabemos que se $\meta{A}$ é falsa, então $\enot\meta{A}$ deveria ser verdadeira.
+
+O que, então, devemos fazer? Como resolver este problema?
+Uma outra opção é dizer que a sentença \ref{chimera1} é \emph{sem sentido}, porque fala sobre uma coisa que não existe.
+Mas o sentido de uma expressão não deveria depender da existência das coisas referidas na sentença.
+Por exemplo, quando um ateu e um crente discutem sobre a existência de deus, ambos entendem o sentido das afirmações sobre as características de deus (onipotência, onisciência,...) e é justamente porque entende o sentido das descrições sobre deus que o ateu afirma que ele não existe.
+Ele acha que não deve haver um ser com tais características.
+ 
+Além disso, se uma sentença só tem sentido quando seus termos têm referência, `$\atom{B}{q}$' seria uma expressão significativa na LPO em algumas interpretações (ou seja, com algumas chaves de interpretação), mas não seria significativa em outras.
+Isso, no entanto, tornaria nossa linguagem formal refém de interpretações (chaves de simbolização) particulares.
+Mas uma vez que nós estamos interessados na forma lógica, nós queremos considerar a força lógica de uma sentença como `$\atom{B}{q}$' de modo independente de qualquer interpretação específica.
+Se `$\atom{B}{q}$' às vezes fosse significativa e às vezes sem sentido, não poderíamos fazer isso.
+
+Esse é o \emph{problema dos termos sem referência}.
+%Trataremos dele mais tarde (consulte a p.~\pageref{subsec.defdesc}.)
+Trataremos dele mais tarde (no Capítulo \ref{c:Desdef}, p.\,\pageref{c:Desdef}.)
+Por ora vamos resolver este problema simplesmente proibindo termos sem referência e \emph{exigindo} que cada nome da LPO designe a algo no domínio.
+Então, se quisermos simbolizar argumentos sobre criaturas mitológicas, devemos definir um domínio que as inclua.
+Essa opção é importante se quisermos considerar a lógica de estórias ficcionais. Podemos simbolizar uma sentença como `Sherlock Holmes morava na rua Baker, número 221B', desde que aceitemos incluir personagens fictícios como Sherlock Holmes em nosso domínio.
+
+
+\chapter{Sentenças com um quantificador}
+\label{s:MoreMonadic}
+
+Já temos à nossa disposição todas as peças da LPO.
+Simbolizar sentenças mais complicadas será apenas uma questão de saber qual o caminho certo para combinar predicados, nomes, quantificadores e conectivos. Fazer isso de modo competente é uma arte e, como todas as artes,  só a adquiriremos com bastante prática.
+
+
+\section{Sentenças quantificacionais comuns}
+Considere as seguintes sentenças:
+	\begin{earg}
+		\item[\ex{quan1}] Todas as moedas no meu bolso são de 50 centavos.
+		\item[\ex{quan2}] Alguma moeda sobre a mesa é de 10 centavos.
+		\item[\ex{quan3}] Nem todas as moedas sobre a mesa são de 10 centavos.
+		\item[\ex{quan4}] Nenhuma moeda em meu bolso é de 10 centavos.
+	\end{earg}
+Para fornecer uma chave de simbolização, precisamos especificar um domínio.
+Como estamos falando de moedas no meu bolso e na mesa, o domínio deve conter pelo menos todas essas moedas.
+Como não estamos falando de nada além de moedas, façamos o domínio ser todas moedas.
+Como não estamos falando de moedas específicas, não precisamos de nomes.
+Então aqui está a nossa chave de simbolização:
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] todas as moedas
+		\item[\atom{B}{x}] \gap{x} está no meu bolso
+		\item[\atom{M}{x}] \gap{x} está sobre a mesa
+		\item[\atom{C}{x}] \gap{x} é uma moeda de 50 centavos
+		\item[\atom{D}{x}] \gap{x} é uma moeda de 10 centavos
+	\end{ekey}
+	\end{center}
+A sentença \ref{quan1} é mais naturalmente simbolizada usando um quantificador universal.
+O quantificador universal diz algo sobre tudo no domínio, não apenas sobre as moedas no meu bolso.
+Por isso, a sentença \ref{quan1} pode ser parafraseada como `para qualquer moeda, \emph{se} essa moeda estiver no meu bolso, \emph{então} é uma moeda de 50 centavos'.
+Portanto, podemos simbolizá-la como:
+$$\forall x(\atom{B}{x} \eif \atom{C}{x})$$
+Como a sentença \ref{quan1} é sobre moedas que estão no meu bolso \emph{e} que são de 50 centavos, poderíamos ficar tentados a simbolizá-la usando uma conjunção.
+No entanto, a sentença `$\forall x(\atom{B}{x} \eand \atom{C}{x})$' seria uma simbolização para a sentença `todas as moedas estão no meu bolso e são de 50 centavos'. Isso, claramente, tem um significado muito diferente do significado da sentença \ref{quan1}.
+Podemos, então, estabelecer que:
+	\factoidbox{
+		Uma sentença pode ser simbolizada como \mbox{$\forall x (\atom{\meta{F}}{x} \eif \atom{\meta{G}}{x})$} se ela puder ser parafraseada em português como `todo $F$ é $G$'.
+	}
+A sentença \ref{quan2} é mais naturalmente simbolizada usando um quantificador existencial.
+Ela pode ser parafraseada como `há alguma moeda que está sobre a mesa e que é uma moeda de dez centavos'.
+Portanto, podemos simbolizá-la como:
+$$\exists x(\atom{M}{x} \eand \atom{D}{x})$$
+Observe que com o quantificador universal nós tivemos que utilizar um condicional, mas com o quantificador existencial nós utilizamos uma conjunção.
+Suponha que, em vez disso, tivéssemos simbolizado a sentença \ref{quan2} como `$\exists x(\atom{M}{x} \eif \atom{D}{x})$'.
+Isso significaria que existe algum objeto no domínio para o qual \hbox{`$(\atom{M}{x} \eif \atom{D}{x})$'} é verdadeiro.
+E lembre-se de que, na LVF, \hbox{$\meta{A} \eif \meta{B}$} é logicamente equivalente a $\enot\meta{A} \eor \meta{B}$.
+Essa equivalência também será válida na LPO.
+Portanto, `$\exists x(\atom{M}{x} \eif \atom{D}{x})$' será verdadeira se houver algum objeto no domínio tal que `$(\enot \atom{M}{x} \eor \atom{D}{x})$' for verdadeira para esse objeto.
+Ou seja, `$\exists x (\atom{M}{x} \eif \atom{D}{x})$' é verdadeira se alguma moeda não estiver sobre a mesa \emph{ou} for uma moeda de dez centavos.
+Claro que há uma moeda que não está sobre a mesa: há moedas em muitos outros lugares.
+Portanto, é \emph{muito fácil} que `$\exists x(\atom{M}{x} \eif \atom{D}{x})$' seja verdadeira.
+Um condicional geralmente será o conectivo natural a ser usado com um quantificador universal, ao passo que um condicional no escopo de um quantificador existencial tende a dizer algo muito fraco.
+Como regra geral, não coloque condicionais no escopo dos quantificadores existenciais, a menos que você tenha certeza de que precisa de um.
+	\factoidbox{
+		Uma sentença pode ser simbolizada como $\exists x (\atom{\meta{F}}{x} \eand \atom{\meta{G}}{x})$ se puder ser parafraseada em português como `algum $F$ é~$G$'.
+	}		
+A sentença \ref{quan3} pode ser parafraseada como:
+`Não é o caso de que todas as moedas sobre a mesa são moedas de dez centavos'.
+Portanto, podemos simbolizá-la por:
+$$\enot \forall x(\atom{M}{x} \eif \atom{D}{x})$$
+Mas você também pode olhar para a sentença \ref{quan3} e parafrasea-la como `Alguma moeda sobre a mesa não é uma moeda de 10 centavos'.
+Você, então, a simbolizaria como:
+$$\exists x(\atom{M}{x} \eand \enot \atom{D}{x})$$
+Embora talvez isso ainda não seja óbvio para você, essas duas sentenças são logicamente equivalentes.
+(Isso se deve à equivalência lógica entre $\enot\forall x\,\meta{A}$ e $\exists x\enot\meta{A}$, mencionada no Capítulo \ref{s:FOLBuildingBlocks}, junto com a equivalência entre $\enot(\meta{A}\eif\meta{B})$ e $(\meta{A}\eand\enot\meta{B})$.)
+
+A sentença \ref{quan4} pode ser parafraseada como:
+`Não é o caso de que há alguma moeda de 10 centavos no meu bolso'.
+Isso pode ser simbolizado por:
+$$\enot\exists x(\atom{B}{x} \eand \atom{D}{x})$$
+Mas a sentença \ref{quan4} também pode ser parafraseada  como:
+`Qualquer coisa no meu bolso não é uma moeda de dez centavos' e, em seguida, pode ser simbolizada por:
+$$\forall x(\atom{B}{x} \eif \enot \atom{D}{x})$$
+Novamente, as duas simbolizações são logicamente equivalentes; ambas são simbolizações corretas da sentença \ref{quan4}.
+
+
+\section{Predicados vazios}\label{s:PredVaz}
+
+No Capítulo \ref{s:FOLBuildingBlocks}, enfatizamos que um nome deve selecionar exatamente um objeto no domínio.
+No entanto, um predicado não precisa se aplicar a nada no domínio.
+Um predicado que não se aplica a nada no domínio é chamado de \define{predicado vazio}.
+
+\newglossaryentry{empty predicate}{
+  name = {empty predicate},
+  description = {A \gls{predicate} that applies to no object in the \gls{domain}}
+}
+
+Suponha que estejamos interessados em  simbolizar as duas sentenças seguintes:
+	\begin{earg}
+		\item[\ex{monkey1}] Todo macaco conhece a linguagem de sinais.
+		\item[\ex{monkey2}] Algum macaco conhece a linguagem de sinais.
+	\end{earg}
+Podemos propor a seguinte a chave de simbolização para essas sentenças:
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] os animais
+		\item[\atom{M}{x}] \gap{x} é um macaco.
+		\item[\atom{L}{x}] \gap{x} conhece a linguagem de sinais.
+	\end{ekey}
+	\end{center}
+A sentença \ref{monkey1} pode agora ser simbolizada por:
+$$\forall x(\atom{M}{x} \eif \atom{L}{x})$$
+E a sentença \ref{monkey2} por:
+$$\exists x(\atom{M}{x} \eand \atom{L}{x})$$
+Pode ser tentador pensar que a sentença \ref{monkey1} \emph{sustenta} a sentença \ref{monkey2}.
+Ou seja, poderíamos pensar que é impossível que todo macaco conheça a linguagem de sinais, sem que também ocorra que algum macaco conheça a linguagem de sinais.
+Mas isso seria um erro.
+É possível que a sentença `$\forall x(\atom{M}{x} \eif \atom{L}{x})$' seja verdadeira mesmo quando a sentença `$\exists x(\atom{M}{x} \eand \atom{L}{x})$' é falsa.
+
+Como isso pode ser possível?
+A explicação surge quando avaliamos a verdade ou falsidade destas sentenças assumindo como hipótese uma situação em que \emph{macacos não existem}.
+Se não houvesse macacos (no domínio), então `$\forall x(\atom{M}{x} \eif \atom{L}{x})$' seria \emph{vacuamente} verdadeira:
+sem macacos no domínio, você não consegue `pegar' um macaco que não conhece a linguagem dos sinais: qualquer que seja o elemento do domínio no lugar de $x$, `$\atom{M}{x}$' será falsa e, portanto, $(\atom{M}{x} \eif \atom{L}{x})$ será verdadeira.
+Por outro lado, sob esta mesma hipótese de não haver macacos (no domínio), a sentença `$\exists x(\atom{M}{x} \eand \atom{L}{x})$' seria falsa.
+
+Então `$\forall x(\atom{M}{x} \eif \atom{L}{x})$' não sustenta `$\exists x(\atom{M}{x} \eand \atom{L}{x})$' e usamos este mesmo raciocínio para concluir que a sentença \ref{monkey1} não sustenta a sentença \ref{monkey2}.
+
+Mais um exemplo nos ajudará aqui.
+Considere a seguinte extensão para a chave de simbolização acima:
+		\begin{center}
+		\begin{ekey}
+			\item[\text{domínio}] os animais
+			\item[\atom{M}{x}] \gap{x} é um macaco.
+			\item[\atom{L}{x}] \gap{x} conhece a linguagem de sinais.
+			\item[\atom{G}{x}] \gap{x} é uma geladeira.
+		\end{ekey}
+		\end{center}
+Agora considere a sentença `$\forall x(\atom{G}{x} \eif \atom{M}{x})$', que é uma simbolização de `toda geladeira é um macaco'.
+Dada nossa chave de simbolização, essa sentença é verdadeira; o que é um tanto contraintuitivo, já que nós (presumivelmente) não queremos dizer que há um monte de geladeiras macacos.
+É importante lembrar, porém, que `$\forall x(\atom{G}{x} \eif \atom{M}{x})$' é verdadeira se e somente se qualquer membro do domínio que é uma geladeira for também um macaco.
+Como o domínio é de \emph{animais} apenas, não há geladeiras no domínio. Novamente, então, a sentença é \emph{vacuamente} verdadeira:
+não conseguimos encontrar nenhum elemento do domínio que é uma geladeira, mas não é um macaco. 
+
+Se você realmente tivesse interesse em considerar a sentença `Toda geladeira é um macaco', o mais sensato, provavelmente, seria incluir utensílios de cozinha no domínio.
+Assim, o predicado `$G$' não seria vazio e a sentença `$\forall x(\atom{G}{x} \eif \atom{M}{x})$' seria falsa.\footnote{
+			É justamente porque nós admitimos a possibilidade de conceber predicados vazios, que não são satisfeitos por nada, que admitimos também, como consequência disso,  a convenção de que uma sentença como `todo unicórnio tem apenas um chifre' é verdadeira (no mundo real).
+			Ela é verdadeira simplesmente porque não existem unicórnios e, portanto, nada que existe será um contraexemplo para a sentença, ou seja, nada que existe será um unicórnio que não tenha apenas um chifre.
+			Mas as coisas nem sempre foram assim.
+			Quando Aristóteles propôs seu sistema lógico, ele não admitia a hipótese de predicados vazios e, por isso, nenhuma sentença era vacuamente verdadeira.
+			Como consequência disso, na Lógica Silogística de Aristóteles (sobre a qual, mais adiante neste livro, falaremos um pouco), a sentença \ref{monkey1} sustenta a sentença \ref{monkey2}.
+			Esta característica da lógica aristotélica que é divergente da LPO é chamada de \emph{importação existêncial}.}
+	\factoidbox{
+		Quando $\meta{F}$ for um predicado vazio, qualquer sentença com a forma $\forall x (\atom{\meta{F}}{x} \eif \ldots)$ será vacuamente verdadeira.
+	}
+
+
+\section{Escolhendo um domínio}
+A simbolização apropriada na LPO de uma sentença originalmente em português dependerá da chave de simbolização.
+Escolher uma chave não é uma tarefa trivial.
+Suponha que queiramos simbolizar a seguinte sentença:
+	\begin{earg}
+		\item[\ex{pickdomainrose}] Toda rosa tem um espinho.
+	\end{earg}
+Podemos começar nossa chave de simbolização propondo que:
+	\begin{ekey}
+		\item[\atom{R}{x}] \gap{x} é uma rosa
+		\item[\atom{E}{x}] \gap{x} tem um espinho
+	\end{ekey}
+É tentador dizer que a sentença \ref{pickdomainrose} \emph{deve} ser simbolizada como `$\forall x(\atom{R}{x} \eif \atom{E}{x})$', mas dizer isso antes de escolher um domínio pode nos levar ao erro.
+Se o domínio escolhido contiver todas as rosas, essa seria uma boa simbolização. No entanto, se o domínio for, por exemplo, apenas as \emph{coisas na minha mesa da cozinha}, então a simbolização `$\forall x(\atom{R}{x} \eif \atom{E}{x})$' não faz mais do que apenas se aproximar de cobrir a afirmação de que toda rosa na minha mesa da cozinha tem um espinho.
+Porque se não houver rosas na minha mesa da cozinha, a sentença simbolizada na LPO torna-se trivialmente verdadeira.
+E, na maioria das vezes, não é isso que queremos.
+Para simbolizar adequadamente a sentença \ref{pickdomainrose} de modo a evitar resultados contraintuitivos, precisamos incluir todas as rosas no domínio, o que nos deixa com duas opções distintas. 
+
+Uma alternativa é restringir o domínio para incluir todas as rosas e \emph{nada além} de rosas.
+Então a sentença \ref{pickdomainrose} pode, se quisermos, ser simbolizada simplesmente como:
+$$\forall x\,\atom{E}{x}$$
+Esta sentença é verdadeira se tudo no domínio tiver um espinho; como o domínio contém apenas as rosas, a sentença será verdadeira se toda rosa tem um espinho, o que a torna uma boa simbolização de \ref{pickdomainrose}.
+Ao restringir o domínio, conseguimos uma simbolização bastante econômica na LPO de nossa sentença em português.
+Portanto, essa abordagem pode nos poupar trabalho, se todas as sentenças que precisamos simbolizar forem sobre rosas.
+
+A segunda opção é permitir que o domínio contenha outras coisas além de rosas: jabuticabeiras, ratos, enxadas, o que quisermos.
+Nós certamente precisaremos de um domínio mais abrangente se, além de \ref{pickdomainrose}, precisarmos simbolizar também sentenças como:
+	\begin{earg}
+		\item[\ex{pickdomaincowboy}] Todo boia-fria trabalha cantando músicas tristes.
+	\end{earg}
+Nosso domínio agora precisa incluir todas as rosas (para conseguirmos simbolizar adequadamente a sentença \ref{pickdomainrose}) e todos os boias-frias (para conseguirmos simbolizar adequadamente a sentença \ref{pickdomaincowboy}). Deste modo, podemos oferecer a seguinte chave de simbolização:
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas e plantas
+		\item[\atom{B}{x}] \gap{x} é boia-fria
+		\item[\atom{T}{x}] \gap{x} trabalha cantando músicas tristes
+		\item[\atom{R}{x}] \gap{x} é uma rosa
+		\item[\atom{E}{x}] \gap{x} tem um espinho
+	\end{ekey}
+	\end{center}
+Agora não podemos mais simbolizar a sentença \ref{pickdomainrose} como `$\forall x\, \atom{E}{x}$', pois, dado nosso domínio mais abrangente, esta sentença é uma simbolização para `toda pessoa ou planta tem um espinho'.
+A sentença \ref{pickdomainrose} deve, então, ser simbolizada como:
+$$\forall x (\atom{R}{x} \eif \atom{E}{x})$$
+De modo similar, a sentença~\ref{pickdomaincowboy} deve ser simbolizada por:
+$$\forall x (\atom{B}{x} \eif \atom{T}{x})$$
+
+%In general, the universal quantifier can be used to symbolize the English expression `everyone' if the domain only contains people. If there are people and other things in the domain, then `everyone' must be treated as `every person'.
+
+
+\section{A utilidade das paráfrases}
+Ao simbolizar sentenças em português na LPO, é importante entender a estrutura das sentenças que você deseja simbolizar.
+O que importa é a simbolização final na LPO.
+Às vezes, você conseguirá fazer isso de modo direto, passando de uma sentença no português para uma sentença na LPO sem qualquer passo intermediário.
+Outras vezes, no entanto, você precisará fazer uma ou mais paráfrases intermediárias da sentença original, até conseguir descobrir qual sua melhor simbolização na LPO.
+Cada paráfrase sucessiva é um passo que aproxima a sentença original de algo que você consiga simbolizar na LPO de modo fácil e direto.
+
+Para os exemplos a seguir, usaremos esta chave de simbolização:
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[\atom{S}{x}] \gap{x} é sanfoneiro.
+		\item[\atom{P}{x}] \gap{x} é popular.
+		\item[d] Dominguinhos
+	\end{ekey}
+	\end{center}
+Considere agora estas sentenças:
+	\begin{earg}
+		\item[\ex{pronoun1}] Se Dominguinhos é sanfoneiro, então é popular.
+		\item[\ex{pronoun2}] Se uma pessoa é um sanfoneiro, então é popular.
+	\end{earg}
+A mesma expressão aparece como consequente dos condicionais nas sentenças \ref{pronoun1} e \ref{pronoun2}: `$\ldots$ é popular'.
+Apesar disso, essa expressão significa coisas muito diferentes em cada caso.
+Para deixar isso claro, muitas vezes ajuda parafrasear as sentenças originais, de modo a eliminar os pronomes ou preencher as sentenças com as expressões elípticas, que não estão escritas, mas fazem parte da sentença.
+
+A sentença \ref{pronoun1} pode ser parafraseada como: `Se Dominguinhos é um sanfoneiro, então \emph{Dominguinhos} é popular'. E esta paráfrase pode ser simbolizada como:
+$$\atom{S}{d} \eif \atom{P}{d}$$
+A sentença \ref{pronoun2}, diferentemente, deve ser parafraseada como:
+`Se uma pessoa é um sanfoneiro, então \emph{essa pessoa} é popular'.
+Esta frase não é sobre uma pessoa específica, por isso precisamos de uma variável.
+Então, como um segundo passo intermediário, podemos parafraseá-la como:
+`Para qualquer pessoa $x$, se $x$ é um sanfoneiro, então $x$ é popular'.
+Isso agora pode ser simbolizado, de um modo bastante direto, como:
+$$\forall x (\atom{S}{x} \eif \atom{P}{x})$$
+Repare que esta é a mesma sentença da LPO que teríamos usado para simbolizar `Todo mundo que é sanfoneiro é popular'.
+Se você pensar bem, notará que esta sentença em português é verdadeira se e somente se a sentença \ref{pronoun2} for verdadeira.
+
+Considere, agora, estas outras sentenças:
+	\begin{earg}
+		\item[\ex{anyone1}] Se alguém é um sanfoneiro, então Dominguinhos é popular.
+		\item[\ex{anyone2}] Se alguém é um sanfoneiro, então também é popular.
+	\end{earg}
+As mesmas palavras aparecem como o antecedente nas sentenças \ref{anyone1} e \ref{anyone2}: `Se alguém é um sanfoneiro$\ldots$'.
+Novamente não é simples perceber as diferentes simbolizações que estas mesmas palavras requerem em cada caso.
+Mais uma vez, fazer paráfrases nos ajudará nesta tarefa. 
+
+A sentença \ref{anyone1} pode ser parafraseada como: `Se há pelo menos um sanfoneiro, então Dominguinhos é popular'.
+Esta paráfrase deixa claro que se trata de um condicional cujo antecedente é uma expressão quantificada existencialmente.
+Sua simbolização, então, terá um condicional como conectivo principal:
+$$\exists x \atom{S}{x} \eif \atom{P}{d}$$
+A sentença \ref{anyone2}, por sua vez, pode ser parafraseada como:
+`Para toda pessoa $x$, se $x$ for um sanfoneiro, então $x$ é popular'.
+Ou, em português mais natural, pode ser parafraseada por `Todos os sanfoneiros são populares'.
+E deve, portanto, ser simbolizada como:
+$$\forall x(\atom{S}{x} \eif \atom{P}{x})$$
+exatamente como a sentença \ref{pronoun2}.
+
+A moral da história é que as palavras em português `algum' e `alguém' devem ser tipicamente simbolizadas usando quantificadores, e, apesar de quase sempre o quantificador existencial ser o mais adequado, em alguns casos ele não será.
+Há usos destas palavras, tal como o exemplificado na sentença \ref{anyone2}, nos quais elas devem ser simbolizadas com o quantificador universal.
+Sempre que você estiver em dúvida sobre como simbolizar e qual quantificador utilizar, tanto em casos como estes, quanto em outros, faça paráfrases intermediárias que utilizem palavras diferentes e tenham estruturas internas mais próximas da de sentenças cuja simbolização na LPO você não tem dúvidas.
+%Se você estiver em dúvida sobre qual quantificador utilizar, faça paráfrases intermediárias que utilizem outras palavras \emph{além de} `algum' ou `alguém'.
+
+
+\section{O âmbito dos quantificadores}
+Continuando com nosso exemplo, suponha que queremos simbolizar estas duas frases:
+	\begin{earg}
+		\item[\ex{qscope1}] Se qualquer pessoa é sanfoneira, então Larissa é sanfoneira.
+		\item[\ex{qscope2}] Qualquer pessoa é de tal modo que, se for sanfoneira, então Larissa é  sanfoneira.
+	\end{earg}
+Para simbolizar essas sentenças, temos que adicionar um nome na LPO para Larissa.
+Nossa chave fica então:
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[\atom{S}{x}] \gap{x} é um(a) sanfoneiro(a).
+		\item[\atom{P}{x}] \gap{x} é popular.
+		\item[d] Dominguinhos
+		\item[l] Larissa
+	\end{ekey}
+	\end{center}
+A sentença \ref{qscope1} é um condicional, cujo antecedente é `qualquer pessoa é sanfoneira'; portanto, vamos simbolizá-la como:
+$$\forall x\, \atom{S}{x} \eif \atom{S}{l}$$
+Essa sentença é \emph{necessariamente} verdadeira:
+se \emph{qualquer pessoa} for realmente um sanfoneiro, escolha a pessoa que você quiser---por exemplo Larissa---e ela será uma sanfoneira.
+
+A sentença \ref{qscope2}, por outro lado, pode ser parafraseada como `toda pessoa $x$ é tal que, se $x$ for sanfoneiro, então Larissa é uma sanfoneira'. Isso é simbolizado por:
+$$\forall x (\atom{S}{x} \eif \atom{S}{l})$$
+Esta sentença é falsa; Dominguinhos é sanfoneiro.
+Então, `$\atom{S}{d}$' é verdadeira. 
+Mas suponha que Larissa não seja uma sanfoneira (digamos que ela seja é uma zabumbeira), então `$\atom{S}{l}$' é falsa.
+Logo, `$\atom{S}{d} \eif \atom{S}{l}$' será falsa e, por causa disso, \mbox{`$\forall x (\atom{S}{x} \eif \atom{S}{l})$'} também será falsa.
+
+Em resumo, as sentenças
+\begin{center}
+	$\forall x \atom{S}{x} \eif \atom{S}{l}$ \\ $\forall x (\atom{S}{x} \eif \atom{S}{l})$
+\end{center} 
+são muito diferentes uma da outra.
+A primeira é necessariamente verdadeira e a segunda é falsa.
+Podemos explicar esta diferença em termos do \emph{âmbito} (ou \emph{escopo}) do quantificador.
+O âmbito de uma quantificação é muito parecido com o âmbito da negação, que estudamos na LVF.
+Nos ajudará aqui se relembrarmos brevemente como funciona o escopo da negação.
+
+Na sentença
+$$\enot \atom{S}{d} \eif \atom{S}{l}$$
+o escopo de `$\enot$' é apenas o antecedente do condicional. Estamos dizendo algo como: se `$\atom{S}{d}$' é falsa, então `$\atom{S}{l}$' é verdadeira.
+Da mesma forma, na sentença
+$$\forall x \atom{S}{x} \eif \atom{S}{l}$$
+o escopo de `$\forall x$' é apenas o antecedente do condicional.
+Estamos dizendo algo como: se `$\atom{S}{x}$' é verdadeira para \emph{todo mundo}, então `$\atom{S}{l}$' também é verdadeira.
+
+Já na sentença
+$$\enot(\atom{S}{d} \eif \atom{S}{l})$$
+o escopo de `$\enot$' é a sentença inteira.
+Estamos dizendo algo como: `$(\atom{S}{d} \eif \atom{S}{l})$' é falsa.
+Da mesma forma, na sentença
+$$\forall x (\atom{S}{x} \eif \atom{S}{l})$$
+o escopo de `$\forall x$' é a sentença inteira.
+Estamos dizendo algo como: `$(\atom{S}{x} \eif \atom{S}{l})$' é verdadeira para \emph{todo mundo}.
+
+Como você pode notar, tanto para a negação quanto para os quantificadores, o modo que temos na LPO para indicar o âmbito é  através da utilização dos parênteses.
+A moral da história é, então, bastante simples.
+Com os quantificadores (mas não só com eles) tome sempre bastante cuidado com  uso de parênteses e a delimitação do escopo, de modo a obter a simbolização mais fiel possível.
+
+
+\section{Predicados ambíguos}
+
+Suponha que queiramos apenas simbolizar esta sentença:
+\begin{earg}
+\item[\ex{surgeon1}] Ana é uma cirurgiã habilidosa.
+\end{earg}
+Considere que nosso domínio são as pessoas.
+Considere também que $\atom{H}{x}$ signifique `$x$ é um cirurgião habilidoso' e que $a$ signifique Ana.
+A sentença \ref{surgeon1} é, então, simbolizada simplesmente como:
+$$\atom{H}{a}$$
+Suponha agora que queiramos simbolizar todo este argumento:
+\begin{quote}
+O hospital contratará apenas um cirurgião habilidoso.
+Todos os cirurgiões são gananciosos.
+Bruno é cirurgião, mas não é habilidoso.
+Portanto, Bruno é ganancioso, mas o hospital não o contratará.
+\end{quote}
+Precisamos distinguir ser um \emph{cirurgião habilidoso} de ser meramente um \emph{cirurgião}.
+Podemos, então, definir a seguinte chave de simbolização:
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] pessoas
+\item[\atom{G}{x}] \gap{x} é ganancioso(a).
+\item[\atom{T}{x}] O hospital contratará \gap{x}.
+\item[\atom{C}{x}] \gap{x} é um(a) cirurgiã(o).
+\item[\atom{H}{x}] \gap{x} é habilidoso(a).
+\item[b] Bruno
+\end{ekey}
+\end{center}
+
+Nosso argumento pode agora ser assim simbolizado:
+\begin{earg}
+\label{surgeon2}
+\item[] $\forall x\bigl[\enot (\atom{C}{x} \eand \atom{H}{x}) \eif \enot \atom{T}{x}\bigr]$
+\item[] $\forall x(\atom{C}{x} \eif \atom{G}{x})$
+\item[] $\atom{C}{b} \eand \enot \atom{H}{b}$
+\item[\therefore] $\atom{G}{b} \eand \enot \atom{T}{b}$
+\end{earg}
+Reflita com calma nesta simbolização e veja como ela formaliza adequadamente o argumento, de acordo com a chave de simbolização proposta.
+
+Suponha, em seguida, que queiramos simbolizar o argumento abaixo:
+\begin{quote}
+\label{surgeon3}
+Carol é uma cirurgiã habilidosa e é uma tenista. Portanto, Carol é uma tenista habilidosa.
+\end{quote}
+Assumindo a chave de simbolização do argumento anterior, podemos adicionar um predicado (faça `$\atom{J}{x}$' significar `$x$ é uma tenista') e um nome (seja `$c$' o nome de Carol na LPO).
+Este argumento pode, então, ser simbolizado por:
+\begin{earg}
+\item[] $(\atom{C}{c} \eand \atom{H}{c}) \eand \atom{J}{c}$
+\item[\therefore] $\atom{J}{c} \eand \atom{H}{c}$
+\end{earg}
+Essa simbolização, no entanto, é desastrosa!
+Ela pega um argumento em português muito ruim, claramente inválido, e o simboliza como um argumento válido na LPO.
+O problema é que ser \emph{habilidoso como cirurgião} é bem diferente de ser \emph{habilidoso como tenista}.
+Para simbolizar corretamente esse argumento precisaremos de dois predicados diferentes para `habilidoso', um para cada tipo distinto de habilidade que estamos considerando.
+Se fizermos `$\atom{H_1}{x}$' significar `$x$ é habilidoso como cirurgião' e `$\atom{H_2}{x}$' significar `$x$ é habilidoso como tenista', então poderemos simbolizar este último argumento como:
+\begin{earg}
+\label{surgeon3correct}
+\item[] $(\atom{C}{c} \eand \atom{H_1}{c}) \eand \atom{J}{c}$
+\item[\therefore] $\atom{J}{c} \eand \atom{H_2}{c}$
+\end{earg}
+Esta nova simbolização é um argumento inválido, exatamente como o argumento original em português que ele simboliza.
+
+Problemas semelhantes a este podem surgir com predicados como \emph{bom}, \emph{ruim}, \emph{grande}, \emph{pequeno}, \emph{rápido} entre muitos outros.
+Assim como cirurgiões e tenistas habilidosos têm habilidades diferentes, cachorros grandes, formigas grandes e problemas grandes são grandes de maneiras diferentes.
+Estes predicados são ambíguos em português.
+Em cada um destes exemplos usamos uma mesma palavra para indicar coisas diferentes.
+Em português, no entanto, na maioria das vezes convivemos bem com esta ambiguidade, e de modo intuitivo, sem nem pensar muito sobre o assunto.
+Nós conseguimos separar bem as muitas noções diferentes que uma mesma palavra (como habilidoso) significa.
+Mas sendo a LPO uma linguagem formal, ela não pode depender de nossa intuição.
+Tudo precisa estar claramente especificado nos elementos das sentenças, e, por isso, em um mesmo contexto não poderemos utilizar o mesmo predicado para noções diferentes.
+Cada sentido diferente de uma noção ambígua em português precisa ser simbolizado por um predicado diferente na LPO.
+
+A moral desses exemplos é que é preciso ter cuidado ao simbolizar tais predicados, de modo que quando mais de um sentido de um predicado ambíguo ocorre em um dado contexto, estes sentidos diferentes devem ser formalizados na LPO por predicados diferentes.
+Foi isso que fizemos ao separar a noção de `ser habilidoso' em duas. Habilidoso como cirurgião ($H_1$) e habilidoso como tenista ($H_2$). 
+
+Mas podemos ainda nos perguntar: não seria suficiente ter um único predicado que significa, por exemplo, `$x$ é um cirurgião habilidoso', em vez de dois predicados, um para  `$x$ é habilidoso' e outro para  `$x$ é um cirurgião'?
+A resposta é: em algumas situações, sim; mas em outras, não.
+A sentença \ref{surgeon1} mostra que às vezes não precisamos distinguir entre cirurgiões habilidosos e outros cirurgiões.
+Mas se quisermos simbolizar, por exemplo, `Ana e Marcelo são cirurgiões. Ela é habilidosa, jé ele, nem tanto', separar em dois predicados, um para `ser um cirurgião' e outro para `ser habilidoso' parece a melhor escolha.
+
+Uma outra pergunta importante é: devemos sempre distinguir, em nossas simbolizações, as diferentes as acepções vinculadas a uma mesma palavra, tal como habilidoso, bom, ruim ou grande?
+A resposta é não. O argumento sobre Bruno exemplificado acima mostra que nos contextos em que apenas uma das acepções do predicado ambíguo está sendo utilizada, não precisamos indicar nenhuma separação especial.
+Se você estiver simbolizando um argumento que trata apenas de cães, não há problema em definir um predicado que significa `$x$ é grande' sem maiores especificações.
+Mas se o domínio incluir cães e ratos, no entanto, é provavelmente melhor especificar mais detalhadamente o significado do predicado como, por exemplo, `$x$ é grande para um cão'.
+
+
+\practiceproblems
+\problempart
+\label{pr.BarbaraEtc}
+Abaixo estão as quinze figuras da famosa \textbf{Lógica Silogística}, proposta por Aristóteles na Grécia antiga, com os nomes que cada figura recebeu dos lógicos medievais.
+Cada uma destas `figuras', veremos mais adiante neste livro, é um argumento válido na LPO:
+\begin{earg}\footnotesize 
+	\item \textbf{Barbara.} Todo G é F. Todo H é G. Portanto:  Todo H é F
+	\item \textbf{Celarent.} Nenhum G é F. Todo H é G. Portanto: Nenhum H é F
+	\item \textbf{Ferio.} Nenhum G é F. Algum H é G. Portanto: Algum H não é F
+	\item \textbf{Darii.} Todo G é F. Algum H é G. Portanto: Algum H é F.
+	\item \textbf{Camestres.} Todo F é G. Nenhum H é G. Portanto: Nenhum H é F.
+	\item \textbf{Cesare.} Nenhum F é G. Todo H é G. Portanto: Nenhum H é F.
+	\item \textbf{Baroko.} Todo F é G. Algum H não é G. Portanto: Algum H não é~F.
+	\item \textbf{Festino.} Nenhum F é G. Algum H é G. Portanto: Algum H não é~F.
+	\item \textbf{Datisi.} Todo G é F. Algum G é H. Portanto: Algum H é F.
+	\item \textbf{Disamis.} Algum G é F. Todo G é H. Portanto: Algum H é F.
+	\item \textbf{Ferison.} Nenhum G é F. Algum G é H. Portanto: Algum H não é F.
+	\item \textbf{Bokardo.} Algum G não é F. Todo G é H. Portanto:  Algum H não é~F.
+	\item \textbf{Camenes.} Todo F é G. Nenhum G é H Portanto: Nenhum H é F.
+	\item \textbf{Dimaris.} Algum F é G. Todo G é H. Portanto: Algum H é F.
+	\item \textbf{Fresison.} Nenhum F é G. Algum G é H. Portanto: Algum H não é~F.
+\end{earg}
+Simbolize cada um destes quinze argumentos na LPO.
+
+\
+
+\problempart
+\label{pr.FOLvegetarians}
+Com a chave de simbolização abaixo, simbolize na LPO cada uma das quatro sentenças seguintes:
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] pessoas
+\item[\atom{C}{x}] \gap{x} sabe a combinação do cofre
+\item[\atom{E}{x}] \gap{x} é um(a) espiã(o)
+\item[\atom{V}{x}] \gap{x} é vegetariano(a)
+%\item[\atom{T}{x,y}] \gap{x} trusts \gap{y}.
+\item[h] Horácio
+\item[i] Ingrid
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Nem Horácio nem Ingrid são vegetarianos.
+\item Nenhum espião sabe a combinação do cofre.
+\item Ninguém sabe a combinação do cofre, a menos que Ingrid saiba.
+\item Horácio é um espião, mas nenhum vegetariano é espião.
+\end{earg}
+\solutions
+
+\problempart\label{pr.FOLalligators}
+Com a chave de simbolização abaixo, simbolize na LPO cada uma das oito sentenças seguintes:
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] os animais
+\item[\atom{J}{x}] \gap{x} é um(a) jacaré.
+\item[\atom{M}{x}] \gap{x} é um(a) macaco(a).
+\item[\atom{R}{x}] \gap{x} é um réptil.
+\item[\atom{Z}{x}] \gap{x} mora no zoológico.
+\item[a] Amadeu
+\item[b] Bela
+\item[c] Clara
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Amadeu, Bela e Clara moram no zoológico.
+\item Bela é um réptil, mas não um jacaré.
+\item Alguns répteis vivem no zoológico.
+\item Todo jacaré é um réptil.
+\item Qualquer animal que vive no zoológico é um macaco ou um jacaré.
+\item Existem répteis que não são jacarés.
+\item Se algum animal é um réptil, então Amadeu é.
+\item Se algum animal é um jacaré, então também é um réptil.\end{earg}
+
+\problempart
+\label{pr.FOLarguments}
+Para cada um dos seis argumentos abaixo, proponha uma chave de simbolização e simbolize-o na LPO.
+\begin{earg}
+\item Samir é um lógico. Todos os lógicos usam chapéus ridículos. Logo Samir usa chapéus ridículos.
+
+\item Nada na minha mesa escapa à minha atenção. Há um computador na minha mesa. Logo, há um computador que não escapa à minha atenção.
+
+\item Todos os meus sonhos são em preto e branco. Os programas de TV antigos são em preto e branco. Portanto, alguns dos meus sonhos são antigos programas de TV.
+
+\item Nem Holmes nem Watson já estiveram na Austrália. Uma pessoa só pode ter visto um canguru se já esteve na Austrália ou se foi em um zoológico. Embora Watson não tenha visto um canguru, Holmes viu. Portanto, Holmes foi a um zoológico.
+
+\item Ninguém consegue voar apenas com a força do pensamento. Ninguém pode observar o futuro em uma bola de cristal. Portanto, quem consegue voar apenas com a força do pensamento pode observar o futuro em uma bola de cristal.
+
+\item Todos os bebês são ilógicos. Ninguém que é ilógico consegue escapar de um jacaré. Boris é um bebê. Portanto, Boris não consegue escapar de um jacaré.
+
+\end{earg}
+
+%\problempart
+%label{pr.QLarguments}
+%For each argument, write a symbolization key and symbolize the argument into FOL.
+%\begin{earg}
+%\item Nothing on my desk escapes my attention. There is a computer on my desk. As such, there is a computer that does not escape my attention.
+%\item All my dreams are black and white. Old TV shows are in black and white. Therefore, some of my dreams are old TV shows.
+%\item Neither Holmes nor Watson has been to Australia. A person could see a kangaroo only if they had been to Australia or to a zoo. Although Watson has not seen a kangaroo, Holmes has. Therefore, Holmes has been to a zoo.
+%\item No one expects the Spanish Inquisition. No one knows the troubles I've seen. Therefore, anyone who expects the Spanish Inquisition knows the troubles I've seen.
+%\item An antelope is bigger than a bread box. I am thinking of something that is no bigger than a bread box, and it is either an antelope or a cantaloupe. As such, I am thinking of a cantaloupe.
+%\item All babies are illogical. Nobody who is illogical can manage a crocodile. Berthold is a baby. Therefore, Berthold is unable to manage a crocodile.
+%\end{earg}
+
+
+\chapter{Relações e quantificação múltipla}\label{s:MultipleGenerality}
+Todas as sentenças que consideramos até agora requeriam um único quantificador e continham apenas predicados simples, unários, com lugar para uma única variável. 
+Mas a LPO fica muito mais poderosa quando utilizamos predicados com lugar para muitas variáveis em sentenças com múltiplos quantificadores.
+As inovadoras ideias gerais e o primeiro desenvolvimento sistemático da LPO foram propostos \mbox{Gottlob} Frege, em 1879; mas Charles S. Peirce também merece créditos por suas contribuições.
+
+
+\section{Relações: predicados com muitos lugares}
+Todos os predicados que consideramos até agora dizem respeito a propriedades que os objetos possam ter.
+Esses predicados têm uma única lacuna que precisa ser preenchida para gerar uma sentença completa.
+Por causa disso eles são chamados de \define{predicados de um lugar} ou simplesmente \define{predicados}.
+
+No entanto, outros predicados dizem respeito a \emph{relações} entre duas ou mais coisas.
+Aqui estão alguns exemplos de predicados relacionais em português:
+	\begin{quote}
+		\blank\ ama \blank\\
+		\blank\ está à esquerda de \blank\\
+		\blank\ está em dívida com \blank
+	\end{quote}
+Estes são \define{predicados de dois lugares}, também chamados de \define{relacoes binarias}.
+Para formar uma sentença completa a partir deles, precisamos preencher com um termo singular cada uma de suas duas lacunas.
+Nós também podemos começar com uma sentença em português que contenha muitos termos singulares e remover dois deles; como resultado obteremos predicados de dois lugares.
+Considere a sentença:
+\begin{quote}
+	Viviane pegou emprestado o carro da família de Nelson.
+\end{quote}
+Ao excluir dois termos singulares desta sentença, podemos obter qualquer um dos  três predicados de dois lugares diferentes listados abaixo:
+	\begin{quote}
+		Viviane pegou emprestado \blank\ de \blank\\
+		\blank\ pegou emprestado o carro da família de \blank\\
+		\blank\ pegou emprestado \blank\ de Nelson
+	\end{quote}
+e se removermos todos os três termos singulares das sentenças, obtemos um \define{predicado de tres lugares} ou \define{relacao ternaria}:
+	\begin{quote}
+		\blank\ pegou emprestado \blank\ de \blank
+	\end{quote}
+Não há, na verdade, qualquer limite máximo para o número de lugares que os predicados podem conter.
+
+Há, no entanto, um problema com o exposto acima.
+Usamos o mesmo símbolo, `\blank', para indicar todas as lacunas formadas pela exclusão de algum termo singular de uma sentença.
+No entanto (como Frege enfatizou), essas lacunas são \emph{diferentes} umas das outras.
+Considere a relação binária:
+\begin{quote}
+	\blank\ ama \blank
+\end{quote}
+Se a preenchermos com um mesmo termo individual, digamos, `Guto', obteremos uma sentença, mas se a preenchermos com termos individuais diferentes, digamos, `Guto' e `Nico', obteremos uma sentença diferente.
+E se colocarmos estes mesmos termos, mas em outra ordem, obteremos uma terceira sentença diferente.
+Cada uma das sentenças abaixo, por exemplo, tem um significado bastante diferente do das outras:
+
+	\begin{quote}
+		Guto ama Guto\\
+		Guto ama Nico\\
+		Nico ama Guto\\
+		Nico ama Nico
+	\end{quote}
+Ou seja, para conseguir expressar na LPO a distinção de sentenças como essas nós precisamos identificar as lacunas dos predicados, de modo a poder acompanhar como eles são preenchidos.
+
+Vamos, então, usar variáveis para rotular as lacunas das relações e fazer esta identificação.
+A convenção que adotaremos nesta rotulagem será melhor explicada através de um exemplo.
+Suponha que queiramos simbolizar as seguintes sentenças:
+	\begin{earg}
+%		\item[\ex{terms3}] Imre is at least as tall Karl.
+%		\item[\ex{terms4}] Imre is shorter than Karl.
+		\item[\ex{terms3}] Guto ama Nico.
+		\item[\ex{terms4}] Nico se ama.
+		\item[\ex{terms5}] Guto ama Nico, mas não o contrário.
+		\item[\ex{terms6}] Guto é amado por Nico.
+	\end{earg}
+Vamos começar propondo a seguinte chave de simbolização:
+\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[n] Nico
+		\item[g] Guto
+		\item[\atom{A}{x,y}] \gap{x} ama \gap{y}
+	\end{ekey}
+\end{center}
+A sentença \ref{terms3} pode agora ser simbolizada como:
+$$\atom{A}{g,n}$$ 
+A sentença \ref{terms4} pode ser parafraseada como `Nico ama Nico'; e pode agora ser simbolizada por: $$\atom{A}{n,n}$$
+A sentença \ref{terms5} é uma conjunção.
+Podemos parafraseá-la como `Guto ama Nico, e Nico não ama Guto'.
+Podemos, agora, simbolizá-la como:
+$$\atom{A}{g,n} \eand \enot \atom{A}{n,g}$$
+A sentença \ref{terms6} pode ser parafraseada por `Nico ama Guto'.
+E pode, então, ser simbolizado por:
+$$\atom{A}{n,g}$$
+É fato que esta paráfrase despreza a diferença de tom entre voz ativa e voz passiva; mas essas nuances de tom são todas, sempre,  perdidas na LPO.
+O tom em que uma sentença é proferida, em geral, não costuma interferir em sua verdade ou falsidade, nem tampouco na validade ou invalidade dos argumentos que envolvem tal sentença. 
+
+Este último exemplo, no entanto, destaca algo importante.
+Suponha que adicionemos à nossa chave de simbolização a seguinte relação:
+\begin{center}
+	\begin{ekey}
+		\item[\atom{C}{x,y}] \gap{y} ama \gap{x}
+	\end{ekey}
+\end{center}
+Estamos usando aqui a mesma palavra em português (`ama') que usamos em nossa chave de simbolização para `$\atom{A}{x,y}$'.
+No entanto, repare que trocamos a ordem das \emph{lacunas}.
+Olhe atentamente para os índices dos traços que indicam as lacunas dos dois casos abaixo:
+
+\begin{center}
+	\begin{ekey}
+		\item[\atom{A}{x,y}] \gap{x} ama \gap{y}
+		\item[\atom{C}{x,y}] \gap{y} ama \gap{x}
+	\end{ekey}
+\end{center}
+Isso significa que \emph{ambas}, `$\atom{C}{g,n}$' e `$\atom{A}{n,g}$',  simbolizam a sentença `Nico ama Guto'.
+Da mesma forma, `$\atom{C}{n,g}$' e `$\atom{A}{g,n}$'
+\emph{ambas} simbolizam `Guto ama Nico'.
+Como, infelizmente, o amor pode não ser correspondido, essas são afirmações muito diferentes.
+
+A moral é simples. Quando lidamos com relações, ou seja, predicados com mais de um lugar, precisamos prestar muita atenção à ordem dos lugares.
+
+
+\section{A ordem dos quantificadores}
+Considere a sentença `todo mundo ama alguém'.
+Esta é uma sentença ambígua.
+Ela pode ter qualquer um dos seguintes dois significados:
+	\begin{earg}
+		\item[\ex{lovecycle}] Para cada pessoa $x$, há alguma pessoa que $x$ ama.
+		\item[\ex{loveconverge}] Há uma pessoa específica que todas as pessoas amam.
+	\end{earg}
+A sentença \ref{lovecycle} pode ser simbolizada por:
+$$\forall x \exists y\, \atom{A}{x,y}$$
+E isso seria verdade em um triângulo amoroso.
+Por exemplo, suponha que nosso domínio do discurso esteja restrito a Guto, Nico e Zeca.
+Suponha também que Guto ama Nico, mas não ama Zeca, que Nico ama Zeca, mas não ama Guto, e que Zeca ama Guto, mas não ama Nico.
+Então, nesta situação, a a sentença \ref{lovecycle} é verdadeira, porque cada um dos três indivíduos do domínio ama alguém.
+
+A sentença \ref{loveconverge} pode ser simbolizada por
+$$\exists y \forall x\, \atom{A}{x,y}$$
+E isto \emph{não} é verdade na situação descrita por nosso triângulo amoroso.
+Para que esta sentença fosse verdadeira, precisaria haver pelo menos uma pessoa que todos amassem, o que não é o caso na situação de nosso exemplo (porque Guto não é amado por Nico, que não é amado por Zeca, que não é amado por Guto).
+
+O objetivo deste exemplo é ilustrar que a ordem dos quantificadores é muito importante.
+Repare que a única diferença entre as simbolizações das sentenças \ref{lovecycle} e \ref{loveconverge} é a ordem dos quantificadores.
+De fato, confundir a ordem correta dos quantificadores corresponde à conhecida \emph{falácia de mudanca de quantificador}.
+Vejamos um exemplo que aparece com frequência, em diferentes formas, na literatura filosófica:
+	\begin{earg}
+		\item[] Para toda pessoa, há alguma verdade que ela é incapaz de reconhecer. \ ($\forall \exists$)
+		\item[\therefore] Há alguma verdade que todos são incapazes de reconhecer. \ ($\exists \forall$)
+	\end{earg}
+Este argumento é obviamente inválido, ele é tão ruim quanto:
+	\begin{earg}
+		\item[] Para todo mundo, há um dia que é seu aniversário. \hfill ($\forall \exists$)
+		\item[\therefore] Há um dia que é aniversário de todo mundo. \hfill ($\exists \forall$)
+	\end{earg} 
+%The order of quantifiers is also important in definitions in mathematics.  For instance, there is a big difference between pointwise and uniform continuity of functions:
+%\begin{itemize}
+%\item A function $f$ is \emph{pointwise continuous} if
+%\[
+%\forall \epsilon\forall x\forall y\exists \delta(\left|x - y\right| < \delta \to \left|f(x) - f(y)\right| < \epsilon)
+%\]
+%\item A function $f$ is \emph{uniformly continuous} if
+%\[
+%\forall \epsilon\exists \delta\forall x\forall y(\left|x - y\right| < \delta \to \left|f(x) - f(y)\right| < \epsilon)
+%\] 
+%\end{itemize}
+Novamente a moral da história é simples:
+tome muito cuidado com a ordem dos quantificadores.
+
+
+\section{Alguns atalhos para a simbolização}
+Uma vez que temos a possibilidade de múltiplos quantificadores e predicados de muitos lugares, a simbolização na LPO pode rapidamente se tornar um pouco complicada.
+Ao tentar simbolizar uma sentença complexa, recomendamos que você utilize alguns atalhos.
+Como sempre, essa ideia é melhor ilustrada através de exemplos.
+Considere a seguinte chave de simbolização:
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] pessoas e cachorros
+\item[\atom{C}{x}] \gap{x} é um cachorro
+\item[\atom{A}{x,y}] \gap{x} é amigo de \gap{y}
+\item[\atom{D}{x,y}] \gap{x} é dono de \gap{y}
+\item[g] Geraldo
+\end{ekey}
+\end{center}
+Vamos agora tentar simbolizar as seguintes sentenças:
+\begin{earg}
+\item[\ex{dog2}] Geraldo é dono de cachorro.
+\item[\ex{dog3}] Alguém tem cachorro.
+\item[\ex{dog4}] Todos os amigos de Geraldo têm cachorros.
+\item[\ex{dog5}] Qualquer dono de cachorro é amigo de um dono de cachorro.
+\item[\ex{dog6}] Todo amigo de dono de cachorro é dono de algum cachorro de um amigo.
+\end{earg}
+A sentença \ref{dog2} pode ser parafraseada como: `Existe algum cachorro que Geraldo é dono'.
+Isso pode ser simbolizado por:
+$$\exists x(\atom{C}{x} \eand \atom{D}{g,x})$$
+A sentença \ref{dog3}, em um primeiro passo, pode obviamente ser parafraseada como
+\begin{center}
+	Alguém é dono de cachorro
+\end{center}
+e, em seguida, ser novamente parafraseada como
+\begin{center}
+	Existe algum $y$ tal que $y$ é dono de cachorro.
+\end{center}
+Podemos, então, reescrever isso como
+\begin{center}
+	$\exists y(y\ \text{é dono de cachorro})$.
+\end{center}
+Repare que, nessa expressão, o fragmento `$y$ é dono de cachorro' é muito parecido com a sentença \ref{dog2}, com a diferença de que ele não é especificamente sobre Geraldo, mas sobre algum `$y$'.
+Então, simbolizando este fragmento de modo semelhante à simbolização da sentença \ref{dog2} podemos, finalmente, simbolizar a sentença \ref{dog3} como:
+$$\exists y \exists x(\atom{C}{x} \eand \atom{D}{y,x})$$
+Vamos, neste ponto, fazer uma pausa para esclarecer o sentido que a palavra `atalho' tem no título desta Seção.
+No processo passo-a-passo de simbolização da sentença \ref{dog3}, escrevemos a expressão `$\exists y(y\ \text{é dono de cachorro})$'.
+É importante termos clareza de que essa expressão não é uma sentença da LPO, também não é uma sentença do português, nem tampouco é uma sentença de nossa metalinguagem (o português aumentado---veja Seção \ref{s:LingObjMeta}---pois não a estamos utilizando para falar sobre as sentenças da LPO).
+Ela é uma mistura escrita parte na LPO ((`$\exists$', `$y$')) e parte em português (`é dono de um cachorro').
+Ela é apenas um  \emph{atalho} que visa facilitar o caminho entre a sentença original em português e sua simbolização na LPO.
+Você deve considerá-la como um rascunho, parecida com aquelas anotações que fazemos apenas para nós mesmos, que nos ajudam a lembrar de algo, como os rabiscos que às vezes escrevemos ou desenhamos nas margens de um livro, quando estamos concentrados tentando entender e resolver algum problema difícil.
+
+A sentença \ref{dog4} pode ser parafraseada como:
+\begin{center}
+	Todo mundo que é amigo de Geraldo é dono de cachorro.
+\end{center}
+Usando nossa tática de tomar atalhos, podemos escrever
+$$\forall x \bigl[\atom{A}{x,g} \eif x \text{ é dono de cachorro}\bigr]$$
+O fragmento que ainda falta ser simbolizado, `$x$ é dono de cachorro', é, como no caso anterior, similar estruturalmente à sentença \ref{dog2}.
+No entanto, seria um erro simbolizá-lo de modo exatamente idêntico ao caso anterior e simplesmente escrever
+$$\forall x \bigl[\atom{A}{x,g} \eif \exists x(\atom{C}{x} \eand \atom{D}{x,x})\bigr]$$
+pois se fizermos isso, teremos aqui um \emph{choque de variáveis}.
+O escopo do quantificador universal, `$\forall x$', é a sentença condicional inteira (o antecedente e o consequente) portanto, o `$x$' em `$\atom{C}{x}$' deve ser governado pelo `$\forall x$' do início da sentença.
+Mas `$\atom{C}{x}$' também está no escopo do quantificador existencial `$\exists x$' e, portanto, o `$x$' em `$\atom{C}{x}$' também deve ser governado pelo quantificador existencial.
+Isso gera confusão e ambiguidade intoleráveis na LPO.
+Afinal, o `$x$' em `$\atom{C}{x}$' está ligado ao `$\forall x$' ou ao `$\exists x$'?
+Uma mesma variável não pode servir a dois quantificadores diferentes.
+
+Então, para continuar nossa simbolização, devemos escolher uma variável diferente para o nosso quantificador existencial. O que queremos obter é algo como:
+$$\forall x\bigl[\atom{A}{x,g} \eif\exists z(\atom{C}{z} \eand \atom{D}{x,z})\bigr]$$
+E esta, sim, é uma simbolização adequada da sentença \ref{dog4}.
+
+A sentença \ref{dog5} pode ser parafraseada como
+\begin{quote}
+	Para qualquer $x$ que seja um dono de cachorro, existe um dono de cachorro de quem $x$ é amigo'.	
+\end{quote}
+Usando, mais uma vez, nossa tática de fazer atalhos, isso se torna:
+$$\forall x\bigl[\mbox{$x$ é dono de cachorro}\eif\exists y(\mbox{$y$ é dono de cachorro}\eand \atom{A}{x,y})\bigr]$$
+E, a partir daqui, o caso é o mesmo que nos exemplos anteriores.
+Precisamos completar as duas partes em português com sentenças da LPO similares à sentença \ref{dog2}.
+Desse modo fica um pouco mais fácil obter a (complexa) simbolização:
+$$\forall x\bigl[\exists z(\atom{C}{z} \eand \atom{D}{x,z})\eif\exists y\bigl(\exists z(\atom{C}{z} \eand \atom{D}{y,z})\eand \atom{A}{x,y}\bigr)\bigr]$$
+Observe que usamos a mesma letra, `$z$', em dois quantificadores diferentes, um `$\exists z$' no antecedente do condicional e outro `$\exists z$' no consequente do condicional.
+Será que não estamos novamente aqui provocando um choque de quantificadores? 
+Se examinarmos atentamente a sentença, veremos que não.
+Mesmo tendo usado a mesma variável para dois quantificadores diferentes, na mesma sentença, não há qualquer conflito aqui, porque os escopos (âmbitos) destes dois quantificadores existenciais estão bem separados e não se misturam.
+Ou seja, dado qualquer predicado específico presente na sentença completa, no qual a variável `$z$' ocorre, tal como `$\atom{D}{x,z}$' ou as duas ocorrências de `$\atom{C}{z}$', sempre sabemos a qual dos dois quantificadores `$\exists z$' cada ocorrência da variável `$z$' está ligada.
+$$\overbrace{\forall x\bigl[\overbrace{\exists z(\atom{C}{z} \eand \atom{D}{x,z})}^{\text{escopo do 1º `}\exists z\text{'}}\eif \overbrace{\exists y(\overbrace{\exists z(\atom{C}{z} \eand \atom{D}{y,z})}^{\text{escopo do 2º `}\exists z\text{'}}\eand \atom{A}{x,y})\bigr]}^{\text{escopo de `}\exists y\text{'}}}^{\text{escopo de `}\forall x\text{'}}$$
+Isso mostra que nenhuma variável está sendo forçada a servir a dois senhores (quantificadores) simultaneamente!
+
+A sentença \ref{dog6} é ainda mais complicada.
+Nós primeiro a parafraseamos como
+\begin{quote}
+	Para qualquer $x$ que seja amigo de um dono de cachorro, $x$ é dono de um cachorro do qual um amigo de $x$ também é dono.
+\end{quote}
+E usamos nossa tática de atalhos para transformá-la em:
+\footnotesize
+\begin{multline*}
+\forall x\bigl[x\text{ é amigo de um dono de cachorro}\eif {}\\
+x\text{ é dono de um cachorro do qual um amigo de $x$ também é dono}\bigr]
+\end{multline*}
+
+\normalsize
+\noindent Podemos, agora, quebrar esta sentença um pouco mais, dando a cada parte em português um atalho próprio, transformando-a em:
+\begin{multline*}
+	\forall x\bigl[\exists y(\atom{A}{x,y} \eand y\text{ é dono de cachorro})\eif {}\\
+\exists w(\atom{C}{w} \eand \atom{D}{x,w} \eand \text{um amigo de  $x$ é dono de }w)\bigr]
+\end{multline*}
+Com mais um passo, eliminamos todas as partes em português e obtemos, finalmente a simbolização da sentença \ref{dog6}: 
+\begin{multline*}
+\forall x\bigl[\exists y(\atom{A}{x,y} \eand \exists z(\atom{C}{z} \eand \atom{D}{y,z})) \eif {}\\
+\exists w(\atom{C}{w} \eand \atom{D}{x,w} \eand \exists v(\atom{A}{v,x} \eand \atom{D}{v,w}))\bigr]
+\end{multline*}
+Esta sentença da LPO é extremamente complexa.
+Tanto que nem coube em uma única linha.
+Ela exemplifica bem como sentenças do português com aparência singela, como a sentença \ref{dog6}, podem esconder uma alta complexidade de significado.
+A simbolização na LPO nos ajuda a reconhecer esta complexidade e a resolver possíveis ambiguidades da sentença original.
+Nós jamais conseguiríamos simbolizá-la sem utilizar esta tática de vários passos de atalho.
+Sugiro que você releia com calma todas as simbolizações feitas nesta Seção e, em caso de dúvidas, consulte os monitores e o professor.
+
+
+\section{Quantificadores escondidos}
+
+A lógica pode, com frequência, nos ajudar a esclarecer o significado de afirmações em português, especialmente quando seus quantificadores são deixados implícitos ou sua ordem é ambígua ou pouco clara.
+A clareza de expressão e pensamento proporcionada pela aprendizagem da LPO pode oferecer uma grande vantagem em sua capacidade argumentativa.
+A seguinte discussão é um ótimo exemplo disso.
+Ela se deu entre a filósofa política britânica Mary Astell (1666--1731) e seu contemporâneo, o teólogo William Nicholls.
+No Discurso IV: O Dever das Esposas para seus Maridos, publicado no livro \emph{The Duty of Inferiors towards their Superiors, in Five Practical Discourses} (Londres, 1701)\footnote{
+	O Dever dos Inferiores para com seus Superiores, em Cinco Discursos Práticos.},
+de autoria de Nicholls, ele argumentou que as mulheres são naturalmente inferiores aos homens.
+Astell escreveu a resposta transcrita abaixo no prefácio da 3ª edição de seu tratado \emph{Some Reflections upon Marriage, Occadsion'd by Duke and Duchess of Mazarine's Case; which is also considered}:\footnote{
+	Algumas Reflexões sobre o Casamento, Propiciadas pelo Episódio do Duque e Duquesa de Mazarine; que também é abordado.}
+\begin{quotation}
+\noindent É verdade, por falta de conhecimento, e daquele gênio superior que os homens alegam possuir enquanto homens, ela [Astell] ignorava a \emph{inferioridade natural} de nosso sexo, a qual nossos mestres apresentam como uma verdade fundamental autoevidente.
+Ela não viu nada na razão das coisas para considerá-la [a inferioridade das mulheres frente aos homens] um princípio ou uma conclusão, mas muito ao contrário; defender isso neste reinado seria no mínimo insubordinação, se não for traição.
+
+Pois se pela superioridade natural de seu sexo, eles querem dizer que \textit{todo} homem é por natureza superior a \textit{toda} mulher, que é o significado óbvio e o que deve ser fixado, caso queiram fazer sentido, seria um pecado a \textit{qualquer} mulher ter domínio sobre \textit{qualquer} homem, e a majestosa Rainha não deveria comandar, mas obedecer ao seu criado, porque nenhuma lei civil pode suplantar ou modificar a lei da natureza; de modo que se tal fosse o domínio dos homens, a \emph{lei sálica}\footnote{
+	A lei sálica era o direito comum usado na França que proibia a passagem da coroa para herdeiras mulheres.}, injusta como sempre foi considerada pelos \emph{homens ingleses}, deveria valer por toda a terra, e os mais gloriosos reinos, \emph{o inglês, o dinamarquês, o espanhol} e outros, seriam perversas violações da lei da natureza!
+
+Se eles querem dizer que \textit{alguns} homens são superiores a \textit{algumas} mulheres, isso não é uma grande descoberta; tivessem eles virado a mesa poderiam ter percebido que \textit{algumas} mulheres são superiores a \textit{alguns} homens.
+Ou tivessem eles a gentileza de recordar de seus juramentos de lealdade e supremacia, eles saberiam que \textit{uma} mulher é superior a \textit{todos} os homens nessas nações, caso contrário eles teriam tido muito pouco propósito em seus juramentos.\footnote{
+	Em 1706, a Inglaterra era governada pela Rainha Ana.}
+E não se deve supor que sua razão e religião permitiriam que prestassem juramentos contrários às leis da natureza e à razão das coisas.\footnote{
+	Mary Astell, \textit{Reflections upon Marriage}, 1706 Prefácio, iii - iv, e Mary Astell, \textit{Political Writings}, ed. Patricia Springborg, Cambridge University Press, 1996, pp. 9--10.}
+\end{quotation}
+Vamos simbolizar as diferentes interpretações que Astell oferece para a alegação de Nicholls de que os homens são superiores às mulheres.
+A interpretação mais óbvia é que todo homem é superior a toda mulher, isto é,
+\[
+\forall x(\atom{H}{x} \eif \forall y(\atom{M}{y} \eif \atom{S}{x,y}))
+\]
+outra interpretação é que alguns homens são superiores a algumas mulheres,
+\[
+\exists x(\atom{H}{x} \eand \exists y(\atom{M}{y} \eand \atom{S}{x,y})).
+\]
+Esta última é uma afirmação verdadeira, mas a seguinte afirmação também é
+\[
+\exists y(\atom{M}{y} \eand \exists x(\atom{H}{x} \eand \atom{S}{y,x}))
+\]
+(algumas mulheres são superiores a alguns homens), de modo que ``não seria uma grande descoberta''.
+De fato, uma vez que a rainha é superior a todos seus súditos, é mesmo verdade que uma mulher é superior a todo homem, ou seja,
+\[
+\exists y(\atom{M}{y} \land \forall x(\atom{H}{x} \eif \atom{S}{y,x})).
+\]
+Mas isso é incompatível com o ``significado óbvio'' da alegação de Nicholls, que é a primeira interpretação.
+Portanto, o que Nicholls afirma equivale a uma traição contra a rainha!
+
+
+\practiceproblems
+\solutions
+\problempart
+Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das quinze sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] todos os animais
+\item[\atom{J}{x}] \gap{x} é um jacaré
+\item[\atom{M}{x}] \gap{x} é um macaco
+\item[\atom{R}{x}] \gap{x} é um réptil
+\item[\atom{Z}{x}] \gap{x} vive no zoológico
+\item[\atom{A}{x,y}] \gap{x} ama \gap{y}
+\item[a] Amadeu
+\item[b] Bela
+\item[c] Clara
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Amadeu, Bela e Clara vivem no zoológico.
+\item Bela é um réptil, mas não um jacaré.
+\item Se Clara ama Bela, então Bela é um macaco.
+\item Se Bela e Clara são jacarés, então Amos ama os dois.
+\item Alguns répteis vivem no zoológico.
+\item Todo jacaré é um réptil.
+\item Qualquer animal que vive no zoológico é um macaco ou um jacaré.
+\item Existem répteis que não são jacarés.
+\item Clara ama um réptil.
+\item Bela ama todos os macacos que vivem no zoológico.
+\item Todos os macacos amados por Amadeu o amam.
+\item Se algum animal é um réptil, então Amadeu também é.
+\item Se algum animal é um jacaré, então é um réptil.
+\item Todo macaco que Clara ama também é amado por Amadeu.
+\item Há um macaco que ama Bela, mas infelizmente Bela não retribui esse amor.
+\end{earg}
+
+\problempart 
+Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das dezesseis sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] all animals
+\item[\atom{C}{x}] \gap{x} é um cachorro
+\item[\atom{S}{x}] \gap{x} gosta de filmes de samurai
+\item[\atom{L}{x,y}] \gap{x} é maior que \gap{y}
+\item[r] Rayane
+\item[h] Sueli
+\item[d] Daisy
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Rayane é uma cadela que gosta de filmes de samurai.
+\item Rayane, Sueli e Daisy são todas cadelas.
+\item Sueli é maior que Rayane, mas Daisy é maior que Sueli.
+\item Todos os cães gostam de filmes de samurai.
+\item Apenas cachorros gostam de filmes de samurai.
+\item Há um cachorro maior que Sueli.
+\item Se houver um cachorro maior que Daisy, então há um cachorro maior que Sueli.
+\item Nenhum animal que gosta de filmes de samurai é maior que Sueli.
+\item Nenhum cachorro é maior que Daisy.
+\item Qualquer animal que não goste de filmes de samurai é maior que Rayane.
+\item Há um animal cujo tamanho entre o de Rayane e o de Sueli.
+\item Não há cachorro com tamanho entre o de Rayane e o de Sueli.
+\item Nenhum cachorro é maior que ele próprio.
+\item Todo cachorro é maior que algum cachorro.
+\item Há um animal menor que qualquer cachorro.
+\item Se existe um animal maior que qualquer cachorro, esse animal não gosta de filmes de samurai.\end{earg}
+
+\problempart
+\label{pr.QLcandies}
+Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das dez sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] doces
+\item[\atom{C}{x}] \gap{x} contém chocolate.
+\item[\atom{M}{x}] \gap{x} contém caramelo.
+\item[\atom{A}{x}] \gap{x} contém açúcar.
+\item[\atom{B}{x}] Berenice já provou \gap{x}.
+\item[\atom{G}{x,y}] \gap{x} é mais gostoso que \gap{y}.
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Berenice nunca provou nenhum doce.
+\item O caramelo é sempre feito com açúcar.
+\item Alguns doces não contêm açúcar.
+\item O chocolate é o doce mais gostoso.
+\item Nenhum doce é mais gostoso que ele próprio.
+\item Berenice nunca provou chocolate sem açúcar.
+\item Berenice já provou caramelo e chocolate, mas nunca juntos.
+\item Berenice nunca provou nada mais gostoso que caramelo sem açúcar.
+\item Qualquer doce com chocolate é mais gostoso do que qualquer doce sem.
+\item Qualquer doce com chocolate e caramelo é mais gostoso do que qualquer doce sem os dois.
+\end{earg}
+
+\problempart
+Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das nove sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] pessoas e comidas em uma festa
+\item[\atom{F}{x}] \gap{x} já acabou
+\item[\atom{M}{x}] \gap{x} está na mesa.
+\item[\atom{C}{x}] \gap{x} é comida.
+\item[\atom{P}{x}] \gap{x} é uma pessoa.
+\item[\atom{G}{x,y}] \gap{x} gosta de \gap{y}.
+\item[e] Eduarda
+\item[f] Francisca
+\item[g] o cuscuz
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Toda a comida está na mesa.
+\item Se o cuscuz não acabou, então está na mesa.
+\item Todo mundo gosta do cuscuz.
+\item Se alguém gosta do cuscuz, então Eduarda gosta.
+\item Francisca só gosta das comidas que já acabaram.
+\item Francisca não gosta de ninguém e ninguém gosta de Francisca.
+\item Eduarda gosta de todos que gostam do cuscuz.
+\item Eduarda gosta de todos que gostam das pessoas que ela gosta.
+\item Se há uma pessoa na mesa, então toda a comida já acabou.
+\end{earg}
+
+
+\solutions
+\problempart
+\label{pr.FOLballet}
+Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das doze sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] pessoas
+\item[\atom{D}{x}] \gap{x} dança forró.
+\item[\atom{M}{x}] \gap{x} é mulher.
+\item[\atom{H}{x}] \gap{x} é homem.
+\item[\atom{F}{x,y}] \gap{x} é filho(a) de \gap{y}.
+\item[\atom{I}{x,y}] \gap{x} é irmã(o) de \gap{y}.
+\item[e] Emerson
+\item[j] Jane
+\item[p] Patrick
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Todos os filhos de Patrick dançam forró.
+\item Jane é filha de Patrick.
+\item Patrick tem uma filha.
+\item Jane é filha única.
+\item Todos os filhos homens de Patrick dançam forró.
+\item Patrick não tem filhos homens.
+\item Jane é sobrinha de Emerson.
+\item Patrick é irmão de Emerson.
+\item Os irmãos de Patrick não têm filhos.
+\item Jane é tia.
+\item Todo mundo que dança forró tem um irmão que também dança.
+\item Toda mulher que dança forró é filha de alguém que dança forró.
+\end{earg}
+
+
+\chapter{Identidade}
+\label{sec.identity}
+
+Considere a sentença e chave de simbolização seguintes: 
+
+\begin{earg}
+\item[\ex{else1}] Paulo deve dinheiro a todos.
+\end{earg}
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[\atom{D}{x,y}] \gap{x} deve dinheiro a \gap{y}
+		\item[p] Paulo
+	\end{ekey}
+	\end{center}
+Como restringimos nosso domínio às pessoas, não precisamos de um predicado específico para identificar as pessoas.
+Podemos, então, simbolizar a sentença \ref{else1} como `$\forall x\, \atom{D}{p,x}$'.
+Mas isso tem uma consequência bem estranha.
+Esta simbolização só será uma sentença verdadeira se Paulo deve dinheiro a \emph{todos} os elementos do domínio, \emph{incluindo ele próprio}.
+Ou seja, esta formalização só é uma sentença verdadeira se Paulo deve dinheiro a si mesmo!
+
+Talvez quiséssemos dizer:
+	\begin{earg}
+		\item[\ex{else1b}] Paulo deve dinheiro a todos \emph{os outros}.
+		\item[\ex{else1c}] Paulo deve dinheiro a todos \emph{que não sejam} Paulo.
+		\item[\ex{else1d}] Paulo deve dinheiro a todos  \emph{exceto} o próprio Paulo.
+	\end{earg}
+Mas ainda não sabemos bem como lidar com as palavras em itálico.
+Podemos adicionar um novo símbolo à LPO, de modo a dotá-la de uma abordagem sistemática para casos como este.
+
+
+\section{Adicionando a identidade}
+O símbolo `$=$' é um predicado de dois lugares, ou seja, uma relação binária.
+Ele será incluído na LPO e terá uma interpretação única, inalterável por qualquer chave de simbolização.
+Como já estamos acostumados com este símbolo na matemática, sua notação seguirá o padrão da matemática:
+colocaremos o predicado de identidade entre os dois termos que ele relaciona, e não à esquerda, como fazemos com os demais predicados e relações.
+A seguinte chave de simbolização explicita tanto a notação especial, como o significado único da identidade na LPO:
+	\begin{ekey}
+		\item[x=y] \gap{x} e \gap{y}\ são o mesmo objeto. 
+	\end{ekey}
+Isso não significa \emph{apenas} que os objetos em questão são indistinguíveis um do outro, ou que o que quer que seja verdadeiro dizer de um deles, também é verdadeiro quando dito do outro.
+Significa, além disso, que os objetos em questão são, na verdade, \emph{o mesmo} objeto.
+Na LPO ser idêntico \emph{não é} ser `igualzinho'; ser idêntico \emph{é ser o mesmo}, é ter a mesma identidade.
+
+Suponha, agora, que queremos simbolizar a seguinte sentença:
+\begin{earg}
+\item[\ex{else2}] Paulo é o Dr. Ferreira.
+\end{earg}
+Vamos adicionar mais um nome à nossa chave de simbolização:
+	\begin{ekey}
+		\item[f] Dr. Ferreira
+	\end{ekey}
+A sentença \ref{else2} pode agora ser simbolizada simplesmente como
+$$p=f$$
+que significa precisamente que os nomes `$p$' e `$f$' são nomes do mesmo objeto.
+
+Com este novo recurso adicionado à LPO, podemos agora lidar com as sentenças \ref{else1b}--\ref{else1d}.
+Todas elas podem ser parafraseadas como `Paulo deve dinheiro a todo mundo que não é Paulo'.
+Parafraseando mais uma vez, obtemos:
+`Para todo $x$, se $x$ não é Paulo, então Paulo deve dinheiro a $x$'.
+Utilizando nosso novo símbolo para a identidade, podemos simbolizar isso como:
+$$\forall x (\enot x = p \eif \atom{D}{p,x})$$
+
+Esta última sentença contém a expressão `$\enot x = p$', que pode parecer um pouco estranha, porque o símbolo que vem imediatamente após o `$\enot$' é uma variável, e não um predicado.
+Mas isso não é um problema.
+Estamos simplesmente negando a expressão `$x = p$'.
+A expressão `$\enot x = p$' também poderia ser escrita como `$\enot(x = p)$'.
+Vamos, no entanto, na maioria das vezes, omitir estes parênteses.
+
+Além das sentenças que usam as expressões `outro(s)', `diferente', `o próprio', `exceto', a identidade também será útil para simbolizar algumas sentenças com as expressões `além de', `apenas', `somente' e `só'.
+Considere os seguintes exemplos:
+
+\begin{earg}
+\item[\ex{else3}] Ninguém além de Paulo deve dinheiro a Hasina.
+\item[\ex{else4}] Apenas Paulo deve dinheiro a Hasina.
+\item[\ex{else5}] Somente Paulo deve dinheiro a Hasina.
+\item[\ex{else6}] Só Paulo deve dinheiro a Hasina.
+\end{earg}
+Seja `$h$' um nome para Hasina na LPO.
+Todas estas sentenças podem igualmente ser parafraseadas como
+`Ninguém diferente de Paulo deve dinheiro a Hasina', que, por sua vez, pode ser simbolizada por:
+$$\enot\exists x(\enot x = p \eand \atom{D}{x,h})$$
+Alternativamente, as sentenças \ref{else3}--\ref{else6} podem também ser parafraseadas como
+`Para todo $x$, se $x$ deve dinheiro a Hasina, então $x$ é Paulo'.
+E podem, então, ser simbolizadas como:
+$$\forall x (\atom{D}{x,h} \eif x = p)$$
+Há, no entanto, uma sutileza aqui.
+Você acha que quando afirmamos qualquer uma das sentenças \ref{else3}--\ref{else6} acima estamos assumindo que Paulo deve dinheiro a Hasina?
+Parece óbivio que sim!
+Todas elas afirmam que Paulo deve dinheiro à Hasina e acrescentam a isto o fato de que ninguém mais deve dinheiro à Hasina.
+Então, ao afirmar qualquer uma destas sentenças nos comprometemos com a afirmação de que Paulo deve dinheiro a Hasina.
+Agora pense um pouco sobre as duas alternativas de simbolização que propusemos para estas sentenças.
+Se ninguém no domínio deve dinheiro a Hasina, elas serão verdadeiras ou falsas?
+Ambas serão verdadeiras.\footnote{
+	Só na próxima Parte do livro veremos em todos os detalhes a explicação de por que estas sentenças são verdadeiras quando ninguém deve dinheiro a Hasina, ou seja, quando nenhum elemento `$x$' do domínio satisfaz `$\atom{D}{x,h}$'.
+	Então não se preocupe muito com isso agora.
+	Mas, caso você esteja curioso, a ideia geral é a seguinte.
+	Quando nenhum elemento `$x$' do domínio satisfaz `$\atom{D}{x,h}$', então `$\atom{D}{x,h}$' será falsa para qualquer valor de `$x$'.
+	Então a conjunção `$(\enot x = p \eand \atom{D}{x,h})$' também será falsa, porque tem um conjunto falso, e a formalização com o existencial, `$\enot\exists x(\enot x = p \eand \atom{D}{x,h})$', será verdadeira, já que está negando uma falsidade.
+	A formalização com o universal também é verdadeira porque o condicional `$(\atom{D}{x,h} \eif x = p)$' será verdadeiro, já que, para qualquer valor de `$x$', o antecedente é falso;  e, portanto, `$\forall x (\atom{D}{x,h} \eif x = p)$' será verdadeira.}	
+É o velho `problema' das sentenças vacuamente verdadeiras (mencionado na Seção \ref{s:PredVaz}) mostrando novamente suas garras.
+Estas sentenças simbolizadas são (vacuamente) verdadeiras quando ninguém do domínio deve dinheiro a Hasina.
+Então, ao afirmá-las, não nos comprometemos com a afirmação de que Paulo deve dinheiro a Hasina.
+Por causa disso, as duas simbolizações corretas das sentenças \ref{else3}--\ref{else6} devem ser:
+$$\atom{D}{p,h}\eand \enot\exists x(\enot x = p \eand \atom{D}{x,h})$$
+$$\atom{D}{p,h}\eand \forall x (\atom{D}{x,h} \eif x = p)$$
+ou, alternativamente:
+$$\exists y \atom{D}{y,h}\eand \enot\exists x(\enot x = p \eand \atom{D}{x,h})$$
+$$\exists y \atom{D}{y,h}\eand \forall x (\atom{D}{x,h} \eif x = p)$$
+Incluir a identidade na LPO significa tratá-la como um conceito lógico, tanto quanto o são a negação, o condicional, os quantificadores e demais conectivos.
+Ao pertencer à LPO, sua interpretação fica fixada e não pode variar.
+Ou seja, a linha da chave de simbolização especificada anteriormente e o significado que definimos para a identidade ficam implícitos e fixos em toda chave de simbolização, seja ela qual for.
+Não incluir a identidade na LPO, por sua vez, não nos retira a possibilidade de simbolizar adequadamente as sentenças acima.
+Poderíamos propor um predicado para a identidade e simbolizar essas sentenças.
+A diferença é que não seríamos obrigados a adotar o significado único da identidade, definido na LPO.
+A ideia aqui é que domínios muito diferentes poderiam requerer identidades ligeiramente diferentes.
+Não há consenso sobre se a identidade é ou não parte da lógica, nem mesmo da própria LPO.
+Há um vibrante debate acadêmico sobre esta questão com interessantes argumentos dos dois lados.
+Neste livro optamos por incluir a identidade como parte da LPO.
+
+
+\section{Há pelo menos\ldots}\label{s:HaPeloMenos}
+Também podemos usar a identidade para dizer quantas coisas de um tipo específico existem. Considere, por exemplo, as seguintes sentenças:
+\begin{earg}
+\item[\ex{atleast1}] Há pelo menos um caju.
+\item[\ex{atleast2}] Há pelo menos dois cajus.
+\item[\ex{atleast3}] Existem pelo menos três cajus.
+\end{earg}
+Usaremos a seguinte chave de simbolização
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] coisas em minha geladeira
+		\item[\atom{C}{x}] \gap{x} é um caju
+	\end{ekey}
+	\end{center}
+A sentença \ref{atleast1} não requer a identidade.
+Ela pode ser adequadamente simbolizada por
+$$\exists x\, \atom{C}{x}$$
+que diz que há (ou existe) um caju; talvez muitos, mas pelo menos um.
+
+Influenciados pela sentença \ref{atleast1}, poderíamos ficar tentados a simbolizar a sentença \ref{atleast2} de modo similar, sem identidade, talvez como
+$$\exists x \exists y(\atom{C}{x} \eand \atom{C}{y})$$
+que diz, aproximadamente, que há um caju $x$ no domínio e um caju $y$ no domínio.
+Mas não há nada nesta simbolização que impeça que $y$ e $x$ sejam \emph{o mesmo} caju.
+Então, em uma situação na qual há apenas um caju em minha geladeira, esta sentença será verdadeira.
+Para dizermos que há pelo menos dois cajus, precisamos da identidade para termos  certeza de que $x$ e $y$ são cajus \emph{diferentes}.
+A simbolização da sentença \ref{atleast2}, abaixo, faz isso ao explicitar que os dois cajus que existem não são idênticos:
+$$\exists x \exists y((\atom{C}{x} \eand \atom{C}{y}) \eand \enot x = y)$$
+
+A sentença \ref{atleast3} exige três cajus diferentes.
+Então precisaremos usar três quantificadores existenciais  e  garantir que cada um deles designe um caju diferente dos designados pelos outros dois.
+Podemos fazer isso assim:
+\[
+	\exists x \exists y\exists z[((\atom{C}{x} \eand \atom{C}{y}) \eand \atom{C}{z}) \eand ((\enot x = y \eand \enot y = z) \eand \enot x = z)]
+\]
+Observe que \emph{não} basta usar `$\lnot x = y \land \lnot y = z$' para dizer que $x$, $y$ e~$z$ são todos diferentes.
+Pois esta seria uma afirmação verdadeira mesmo quando $x = z$.\footnote{
+	Quando, por exemplo, $x=z=1$ e $y=2$ é verdade que `$\lnot x = y \land \lnot y = z$'.}
+Em geral, para dizer que $x_1$, \dots, $x_n$ são todos diferentes entre si, precisamos de uma conjunção de $\lnot x_i = x_j$ para cada par $i$ e $j$ diferentes.
+
+
+\section{Há no máximo\ldots}\label{s:HaNoMaximo}
+Considere agora as seguintes sentenças:
+\begin{earg}
+	\item[\ex{atmost1}] Há no máximo um caju.
+	\item[\ex{atmost2}] Existem no máximo dois cajus.
+\end{earg}
+Uma primeira observação que a matemática elementar nos ajuda a perceber é que afirmar que `Há no máximo $n$' corresponde exatamente a negar que `Há pelo menos $(n+1)$'.
+Portanto, a sentença~\ref{atmost1} pode ser parafraseada como:
+`Não é o caso de que há pelo menos \emph{dois} cajus', que é exatamente a negação da sentença~\ref{atleast2}:
+$$\enot \exists x \exists y[(\atom{C}{x} \eand \atom{C}{y}) \eand \enot x = y]$$
+Mas também podemos abordar a sentença \ref{atmost1} de outra maneira.
+Afirmar que há no máximo dois cajus no domínio pode ser entendido da seguinte maneira:
+se você aponta para um objeto, e ele é um caju, aí você faz isso de novo, aponta para um objeto, e ele também é um caju, então você certamente apontou para o mesmo objeto nas duas vezes (há no máximo um caju).
+Com isso em mente, podemos simbolizar a sentença \ref{atmost1} como:
+$$\forall x\forall y\bigl[(\atom{C}{x} \eand \atom{C}{y}) \eif x=y\bigr]$$
+Conforme veremos em detalhes na próxima Parte do livro, estas duas simbolizações são logicamente equivalentes.
+
+De maneira semelhante, a sentença \ref{atmost2} pode ser abordada dessas duas maneiras equivalentes.
+Ela pode ser parafraseada como:
+`Não é o caso de que há \emph{três} ou mais cajus distintos', e, portanto, pode ser simbolizada como:
+\[
+	\enot\exists x \exists y\exists z[((\atom{C}{x} \eand \atom{C}{y}) \eand \atom{C}{z}) \eand ((\enot x = y \eand \enot y = z) \eand \enot x = z)]
+\]
+Alternativamente, podemos interpretar a sentença \ref{atmost2} como afirmando que se você repete três vezes o procedimento de apontar para um caju, você certamente terá apontado para um mesmo caju mais de uma vez (há no máximo dois).
+Portanto:
+$$\forall x\forall y\forall z\bigl[((\atom{C}{x} \eand \atom{C}{y}) \eand \atom{C}{z}) \eif ((x=y \eor x=z) \eor y=z)\bigr]$$
+
+
+\section{Há exatamente\ldots}\label{s:HaExatamente}
+Podemos agora considerar declarações de quantidades precisas, como:
+\begin{earg}
+\item[\ex{exactly1}] Há exatamente um caju.
+\item[\ex{exactly2}] Existem exatamente dois cajus.
+\item[\ex{exactly3}] Há precisamente três cajus.
+\end{earg}
+A sentença \ref{exactly1} pode ser parafraseada como
+`Há \emph{pelo menos} um caju e há \emph{no máximo} um caju', que corresponde à conjunção das sentenças \ref{atleast1} e \ref{atmost1}. Então, podemos simbolizá-la como:
+$$\exists x \atom{C}{x} \eand \forall x\forall y\bigl[(\atom{C}{x} \eand \atom{C}{y}) \eif x=y\bigr]$$
+Mas talvez seja mais simples parafrasear a sentença \ref{exactly1} como:
+`Há uma coisa $x$ que é um caju e qualquer coisa que for um caju é o próprio $x$'.
+Pensado desta forma, podemos simbolizá-la como:
+\[
+	\exists x\bigl[\atom{C}{x} \eand \forall y(\atom{C}{y} \eif x= y)\bigr]
+\]
+Semelhantemente, a sentença \ref{exactly2} pode ser parafraseada como:
+`Há \emph{pelo menos} dois e \emph{no máximo} dois cajus'.
+Assim, podemos simbolizá-la como:
+%\footnotesize
+\small
+\begin{multline*}
+  \exists x \exists y((\atom{C}{x} \eand \atom{C}{y}) \eand \enot x = y) \eand {}\\
+  \forall x\forall y\forall z\bigl[((\atom{C}{x} \eand \atom{C}{y}) \eand \atom{C}{z}) \eif ((x=y \eor x=z) \eor y=z)\bigr]
+\end{multline*}
+\normalsize
+Mais eficiente, porém, é parafrasear a sentença \ref{exactly2} como
+``Há pelo menos dois cajus distintos e todos os cajus são um desses dois''.
+Podemos, então, simbolizá-la como:
+$$\exists x\exists y\bigl[((\atom{C}{x} \eand \atom{C}{y}) \eand \enot x = y) \eand \forall z(\atom{C}{z} \eif ( x= z \eor y = z)\bigr]$$
+Considere, por fim, as seguintes sentenças:
+\begin{earg}
+\item[\ex{exactly2things}] Há exatamente duas coisas.
+\item[\ex{exactly2objects}] Existem exatamente dois objetos.
+\end{earg}
+Poderíamos ficar tentados a adicionar um predicado à nossa chave para simbolizar a o predicado do português `\blank\ é uma coisa' ou `\blank\ é um objeto'.
+Mas isso é desnecessário.
+A não ser que estejamos fazendo sofisticadas distinções metafísicas, palavras 
+como `coisa', `objeto' ou `entidade' não separam o joio do trigo:
+elas se aplicam trivialmente a tudo, ou seja, aplicam-se trivialmente a todas as coisas.
+Portanto, podemos simbolizar essas duas sentenças como:
+
+$$\exists x \exists y \bigl[\enot x = y  \eand \forall z(x=z \eor y = z)\bigr]$$
+
+\practiceproblems
+
+\problempart\label{e:HaExatamenteSee} Explique, com suas palavras, por quê:
+	\begin{ebullet}
+		\item   `$\exists x \forall y(\atom{C}{y} \eiff x= y)$' é uma boa simbolização de `há exatamente um caju'.
+		\item `$\exists x \exists y \bigl[\enot x = y \eand \forall z(\atom{C}{z} \eiff (x= z \eor y = z))\bigr]$' é uma boa simbolização de `há exatamente dois cajus'.
+	\end{ebullet}		
+
+
+\chapter{Descrições definidas}\label{subsec.defdesc}\label{c:Desdef}
+Considere as seguintes sentenças
+	\begin{earg}
+		\item[\ex{traitor1}] Nivaldo é o traidor.
+		\item[\ex{traitor2}] O traidor estudou na UFRN.
+		\item[\ex{traitor3}] O traidor é o delegado.
+	\end{earg}
+Estas três sentenças contém a expressão
+\begin{center}
+	`o traidor'
+\end{center}
+que, em todas elas, tem a função de se referir a um certo indivíduo \emph{único} do domíno, através de uma descrição que o define (ser o traidor).
+A sentença \ref{traitor3} tem ainda uma outra expressão do mesmo tipo:
+\begin{center}
+	`o delegado'
+\end{center}
+Estas expressões são chamadas de \emph{descrições definidas} e devem ser contrastadas com descrições \emph{indefinidas}, tal como a expressão
+\begin{center}
+	`um traidor'
+\end{center}
+que na sentença `Nivaldo é \emph{um} traidor', por exemplo, não tem a função de se referir a um indivíduo único, mas apenas indica uma propriedade de um indivíduo.
+`Nivaldo' é um nome e se refere a um indivíduo, e `um traidor' apenas indica uma propriedade de Nivaldo. 
+Diferentemente, as descrições definidas usam uma certa propriedade (ser traidor) que supostamente é satisfeita por um único indivíduo do domínio (ser \emph{o único} traidor) para designar este indivíduo.
+
+As descrições definidas devem também ser contrastadas com os \emph{termos genéricos}.
+Na sentença `A baleia é um mamífero', por exemplo, a expressão
+\begin{center}
+	`a baleia'
+\end{center}
+é gramaticalmente semelhante a `o traidor', das sentenças \ref{traitor1}--\ref{traitor3} acima. No entanto, ela claramente não se refere a um indivíduo único.
+Seria inapropriado perguntar, neste caso, \emph{qual} baleia.
+A questão que nos interessa aqui é: como simbolizar descrições definidas na LPO?
+
+
+\section[Descrições definidas como termos]{Tratando descrições definidas como termos}
+Uma opção seria simbolizar descrições definidas através de nomes novos. Esta, provavelmente, não seria uma boa ideia.
+Considere, por exemplo, a seguinte chave de simbolização:
+\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[\atom{U}{x}] \gap{x} estudou na UFRN
+		\item[t] o traidor
+	\end{ekey}
+\end{center}
+Poderíamos, com ela, simbolizar a sentença \ref{traitor2} acima como:
+$$\atom{U}{t}$$
+Mas esta simbolização diz apenas que a pessoa (indivíduo do domínio) com o nome `$t$' estudou na UFRN.
+A propriedade que `$t$' tem, de ser `um traidor', que até está indicada na chave, perde-se nesta simbolização.
+Na LPO os nomes apenas apontam para indivíduos do domínio, não lhes atribuem qualquer propriedade.
+Para fazer isso precisamos de um predicado.
+
+Uma opção melhor, então, seria acrescentar um novo símbolo (`$\maththe$' por exemplo) à LPO e utilizá-lo junto com um predicado  para simbolizar uma descrição definida.
+Vamos então reformular nossa chave de simbolização para visualizar esta alternativa:
+\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[\atom{T}{x}] \gap{x} é um traidor
+		\item[\atom{D}{x}] \gap{x} é um delegado
+		\item[\atom{U}{x}] \gap{x} estudou na UFRN
+		\item[n] Nivaldo
+	\end{ekey}
+\end{center}
+Com nosso novo símbolo e esta nova chave, a descrição definida `o traidor' seria simbolizada por:
+$$\maththe x\, \atom{T}{x}$$
+que lemos como:
+\begin{center}
+	`o $x$ tal que $\atom{T}{x}$'
+\end{center}
+De um modo geral, qualquer descrição definida da forma `$\text{o}\ \meta{A}$' poderia ser formalizada como
+$\maththe x\, \atom{\meta{A}}{x}$.
+Não se engane com a aparência desta expressão.
+Apesar da aparência semelhante com as sentenças quantificadas $\forall x\, \atom{\meta{A}}{x}$ e $\exists x\, \atom{\meta{A}}{x}$, a expressão $\maththe x\, \atom{\meta{A}}{x}$ não é uma sentença.
+Por exemplo, `$\forall x\, \atom{T}{x}$' é verdadeira se todos os indivíduos do domínio são traidores e falsa, caso contrário.
+Entretanto, não cabe perguntarmos se  `$\maththe x\, \atom{T}{x}$' é verdadeira ou falsa.
+`$\maththe x\, \atom{T}{x}$' é uma expressão que se comporta como os nomes.
+Sua função é designar (apontar) um indivíduo específico do domíno, o único indivíduo que é um traidor.
+Assim, dada nossa chave, simbolizaríamos a sentença \ref{traitor1} acima, `Nivaldo é o traidor', como:
+$$n = \maththe x\, \atom{T}{x}$$
+Já a sentença \ref{traitor2}, `O traidor estudou na UFRN', seria simbolizada por:
+$$\atom{U}{\maththe x\,\atom{T}{x}}$$
+E, finalmente, a sentença \ref{traitor3}, `O traidor é o delegado', ficaria:
+$$\maththe x\, \atom{T}{x} = \maththe x\, \atom{D}{x}$$
+Apesar desta estratégia resolver o problema, ela, ao requerer um símbolo novo, inclui uma complicação extra à LPO.
+Seria interessante se conseguíssemos lidar com descrições definidas sem a necessidade de adicionar nenhum símbolo novo à LPO.
+De fato, talvez consigamos fazer isso.
+
+
+\section{A análise de Russell}
+Bertrand Russell ofereceu uma análise das descrições definidas.
+Em poucas palavras, ele observou que, sempre que dizemos \mbox{`o $F$'}, nosso objetivo é apontar para a \emph{única} coisa que é $F$ no domínio do discurso apropriado e dizer algo deste indivíduo: que ele é um $G$, por exemplo.
+Ou seja, atribuímos um predicado (ser um $G$) ao único indivíduo que é `$F$'.
+Levando em consideração estes elementos, Russell analisou a noção de descrição definida da seguinte maneira:\footnote{
+	Bertrand Russell, `On Denoting', 1905, \emph{Mind 14}, pp. 479--493; também em Russell, \emph{Introduction to Mathematical Philosophy}, 1919, Londres: Allen e Unwin, cap. 16.}
+	\begin{align*}
+		\text{o $F$ é $G$  \textbf{ \ \ \ se e somente se} }&\text{ \ \ \ há pelo menos um $F$, \textbf{e}}\\
+	&\text{ \ \ \ há no máximo um $F$, \textbf{e}}\\	
+	&\text{ \ \ \ todo $F$ é $G$}
+\end{align*}
+Observe que uma característica muito importante dessa análise é que o artigo definido \emph{`o'} não aparece no lado direito da equivalência.
+Ou seja, dada uma sentença que contém uma descrição definida (a sentença `o $F$ é $G$'), a análise de Russell é, na verdade, a proposta de uma \emph{paráfrase} para esta sentença (a conjunção no lado direito do `se e somente se') na qual não há qualquer descrição definida e que, por isso,  pode ser simbolizada com os recursos que já dispomos na LPO.
+Em outras palavras, Russell está propondo que afirmar que `o $F$ é $G$ é o mesmo que afirmar que `Há pelo menos um e no máximo um $F$, e que este $F$ é  $G$.
+
+Alguém poderia, então, objetar, dizendo que quando afirmamos, por exemplo, que `a mesa é marrom', nossa afirmação não implica, como Russell parece sugerir, que há uma e apenas uma mesa no universo.
+Mas esta não seria uma objeção muito forte.
+Restringindo o domínio do discurso ao contexto adequado, esta preocupação desaparece. Se o domínio se restringe ao que está no meu campo de visão, posso dizer perfeitamente que `a mesa é marrom' sem implicar com isso que a mesa de minha cozinha é a única mesa do universo.
+
+Se aceitarmos a análise de Russell, podemos simbolizar sentenças com a forma
+\begin{center}
+	`o $F$ é $G$'
+\end{center}
+usando as estratégias para quantificação numérica que vimos nas Seções \ref{s:HaPeloMenos}--\ref{s:HaExatamente}.
+Podemos lidar com os três conjuntos (as três partes) da conjunção do lado direito da análise de Russell da seguinte maneira:
+\begin{ebullet}
+	\item há pelo menos um $F$: \ \ $\exists w \atom{F}{w}$
+	\item há no máximo um $F$: \ \  $\forall x \forall y ((\atom{F}{x} \eand \atom{F}{y}) \eif x = y)$
+	\item todo $F$ é $G$: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $\forall z (\atom{F}{z} \eif \atom{G}{z})$
+\end{ebullet}
+A sentença `o $F$ é $G$' pode, então, ser simbolizada por:
+	$$\bigl[\exists w \atom{F}{w} \eand \forall x \forall y ((\atom{F}{x} \eand \atom{F}{y}) \eif x = y)\bigr] \eand \forall z (\atom{F}{z} \eif \atom{G}{z})$$
+Podemos, inclusive, expressar o mesmo ponto com um pouco mais de clareza, ao reconhecermos que os dois primeiros conjuntos equivalem à afirmação de que há \emph{exatamente} um $F$, e que o terceiro conjunto nos diz que esse objeto é~$G$.
+Assim, de modo equivalente, uma sentença com a forma `o $F$ é $G$' pode ser simbolizada, de acordo com a análise de Russell, como:
+	$$\exists x \bigl[(\atom{F}{x} \eand \forall y (\atom{F}{y} \eif x = y)) \eand \atom{G}{x}\bigr]$$
+E se quisermos ser ainda mais econômicos, podemos usar a forma reduzida da quantificação numérica descrita no Exercício 17.A (p.\,\pageref{e:HaExatamenteSee}) que usa o conectivo bicondicional,  e simbolizar uma sentença da forma `o $F$ é $G$' como: 
+	$$\exists x \bigl[\forall y(\atom{F}{y} \eiff x = y) \eand \atom{G}{x}\bigr]$$
+Com isso, podemos agora simbolizar as sentenças \ref{traitor1}--\ref{traitor3} do início deste Capítulo sem a necessidade de nenhum operador sofisticado novo, tal como o `$\maththe$' proposto na Seção anterior.
+
+A sentença \ref{traitor1} (Nivaldo é o traidor) tem a forma exata do exemplo que acabamos de considerar.
+Então nós a simbolizamos por:
+$$\exists x \bigl[(\atom{T}{x} \eand \forall y(\atom{T}{y} \eif x = y)) \eand x = n\bigr]$$
+Ou, do modo mais econômico, como:
+$$\exists x \bigl[\forall y(\atom{T}{y} \eiff x = y) \eand x = n\bigr]$$
+A sentença \ref{traitor2} (o traidor estudou na UFRN) também tem a mesma forma e, do modo mais econômico, é simbolizada como:  
+$$\exists x \bigl[\forall y(\atom{T}{y} \eiff x = y) \eand \atom{U}{x}\bigr]$$
+A sentença \ref{traitor3} (o traidor é o delegado) é um pouco mais complicada, porque envolve duas descrições definidas.
+Mas, através da análise de Russell, ela pode ser parafraseada por
+`há exatamente um traidor, $x$, e há exatamente um delegado, $y$, e $x = y$'. Então, também do modo mais econômico, podemos simbolizá-la como: 
+$$\exists x \exists y \bigl[(\forall z(\atom{T}{z} \eiff x = z) \eand \forall w(\atom{D}{w} \eiff y = w)) \eand x = y\bigr]$$
+Observe que garantimos que a expressão `$x = y$' se encontra no âmbito dos dois quantificadores existenciais!
+
+
+\section{Descrições definidas vazias}\label{s:Desdefvaz}
+Uma das características interessantes da análise de Russell é que ela nos permite lidar com descrições definidas \emph{vazias} com precisão. 
+Suponha que uma amiga lhe diga em tom confidencial:
+	\begin{earg}
+		\item[\ex{kingbald}] O atual rei da França é careca.
+	\end{earg}
+A expressão `o atual rei da França' é uma descrição definida nesta sentença.
+Ela tem a função de designar, através de uma descrição, um indivíduo específico, que supostamente é careca. 
+Acontece que a França, em nossos dias, é uma república, e por isso não tem nenhum rei.
+Ou seja, a descrição definida na afirmação de sua amiga é vazia, ela não designa ninguém. Não há nenhum indivíduo que a satisfaça.
+Como tratar uma tal descrição?
+E as sentenças nas quais descrições vazias como esta ocorrem? São verdadeiras ou falsas?
+Parece óbvio que sua amiga está enganada ou mentindo.
+Então também parece natural considerar a sentença \ref{kingbald} como sendo falsa.
+Mas suponha agora que sua amiga lhe diga que estava brincando, e afirme:
+	\begin{earg}
+		\item[\ex{kingnotbald}] O atual rei da França \emph{não é} careca.
+	\end{earg}
+Parece que ela está agora, com a sentença \ref{kingnotbald}, negando o que havia anteriormente afirmado com a sentença \ref{kingbald}.
+Então a sentença \ref{kingnotbald} deveria ser verdadeira, já que \ref{kingbald} é uma sentença falsa.
+Mas como \ref{kingnotbald} pode ser verdadeira se não há um rei da França?
+Qual seria o fundamento para sua verdade?
+
+A análise de Russell resolve de um modo bastante elegante esse problema.
+De acordo com ela, uma paráfrase aceitável para a sentença \ref{kingbald} é: `há um e apenas um $x$ que é o atual rei da França e $x$ é careca'.
+Considere, agora a seguinte chave de simbolização:
+	\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[\atom{R}{x}] \gap{x} é o atual rei da França
+		\item[\atom{C}{x}] \gap{x} é careca.
+	\end{ekey}
+	\end{center}
+Com esta chave e a paráfrase fornecida pela análise de Russel, a sentença \ref{kingbald} pode então ser simbolizada como:
+%$$\exists x \bigl[\forall y(\atom{R}{y} \eiff x = y) \eand \atom{C}{x}\bigr]$$
+$$\exists x \bigl[(\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \atom{C}{x}\bigr]$$
+Esta sentença, conforme veremos mais detalhadamente na próxima Parte do livro, é uma sentença falsa, uma vez que seu primeiro conjunto, `$\atom{R}{x}$', é falso para qualquer elemento do domínio (ninguém é o atual rei da França).
+De modo análogo, a sentença \ref{kingnotbald} pode ser parafraseada por `há um e apenas um $x$ que é o atual rei da França e $x$ \emph{não é} careca', que por sua vez é simbolizada por:
+$$\exists x \bigl[(\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \enot\atom{C}{x}\bigr]$$
+E esta sentença, assim como a anterior, também será falsa, dado que `$\atom{R}{x}$' é falso para todo elemento do domínio.
+
+A análise de Russell nos ajuda a perceber que não há qualquer problema no fato de que tanto \ref{kingbald} quanto \ref{kingnotbald} sejam ambas falsas, porque, apesar das aparências, uma sentença não é a negação da outra.
+A sentença  \ref{kingnotbald} nega apenas um dos conjuntos que compõem a sentença \ref{kingbald} e ambas são falsas simplesmente porque nenhum elemento do domínio é rei da França.
+
+A sentença \ref{kingnotbald} faz o que os lógicos convencionaram chamar de  \emph{negação interna} da sentença \ref{kingbald}.
+Por outro lado, uma sentença que nega toda a sentença \ref{kingbald} e que deveria ser verdadeira, já que \ref{kingbald} é falsa, seira:
+	\begin{earg}
+		\item[\ex{notkingbald}] Não é o caso que o atual rei da França é careca
+	\end{earg}
+sua simbolização de acordo com nossa chave seria:
+$$\enot\exists x \bigl[(\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \atom{C}{x}\bigr]$$
+Então é a sentença \ref{notkingbald} e não a \ref{kingnotbald}, que corresponde à negação da sentença \ref{kingbald}.
+Para distingui-la da negação interna, nos contextos em que esta diferenciação é relevante, convencionou-se chamar esta negação de \emph{negação externa}.
+% A sentença \ref{notkingbald} faz o que os lógicos convencionaram de chamar de \emph{negação externa} da sentença \ref{kingbald}.
+A análise de Russell nos ajuda a resolver os supostos problemas das descrições definidas vazias e mostra de modo cristalino a diferença entre negação interna e externa.
+
+
+\section{A adequação da análise de Russell}
+Quão boa é a análise das descrições definidas proposta por Russell?
+Essa questão gerou toda uma literatura filosófica, com muito material e ramificações em diversas áreas.
+Nós aqui nos restringiremos a apenas duas observações.
+
+A primeira delas se concentra no tratamento que Russell propõe para descrições definidas vazias.
+Conforme vimos, de acordo com sua análise, quando não há $F$s, ou mesmo quando há mais de um $F$, tanto `o $F$ é $G$' quanto `o $F$ não é $G$' são falsas.
+Peter Strawson sugeriu que tais sentenças não deveriam ser consideradas falsas.\footnote{
+	P.F.\ Strawson, `On Referring', 1950, \emph{Mind 59}, pp.\ 320--34.}
+Em vez disso, o que ocorre é que ambas falham igualmente em atender uma pressuposição que faz parte de seus significados: a pressuposição de que há um e apenas um indivíduo do domínio que satisfaz $F$.
+De acordo com Strawson, quem profere qualquer uma destas duas sentenças não está \emph{afirmando} que existe um e apenas um $F$, está \emph{pressupondo} isso. A única afirmação (ou declaração) que a sentença `o $F$ é $G$' faz é a de que este pressuposto único $F$ é um $G$.
+Para que esta declaração seja um evento comunicativo bem sucedido, a pressuposição de que existe um e apenas um $F$ tem que ser satisfeita.
+Quando ela não é satisfeita, ou porque não há qualquer $F$, ou porque há mais de um, o proferimento de `o $F$ é $G$' ou de `o $F$ não é $G$' é uma comunicação \emph{mal sucedida} e por isso não deveria ser considerada \emph{nem} como verdadeira, \emph{nem} como falsa.
+
+Se concordarmos com Strawson, precisaremos revisar nossa lógica.
+Pois, conforme veremos na próxima Parte do livro, assim como na LVF, na LPO também existem apenas dois valores de verdade (o Verdadeiro e o Falso), e toda sentença tem que ter um desses dois valores, não havendo qualquer outra alternativa.
+
+Mas é possível, também, discordarmos de Strawson.
+Ele está apelando para algumas intuições linguísticas, mas não está claro que elas sejam muito robustas.
+Onde fica, exatamente, a fronteira entre o que uma sentença \emph{diz} e o que ela \emph{pressupõe}?
+Qual o fundamento e a justificativa para uma tal distinção?
+
+Keith Donnellan levantou um segundo tipo de preocupação que, de um modo bem geral, vem à tona quando consideramos um caso de identidade equivocada.\footnote{
+	Keith Donnellan, `Reference and Definite Descriptions', 1966, \emph{Philosophical Review 77}, pp.\ 281--304.}
+Imagine a seguinte cena.
+Dois homens estão em uma esquina: um homem extremamente alto bebendo em  uma lata de cerveja; e um homem bem mais baixo bebendo em uma lata de refrigerante.
+Ao vê-los, Manuela afirma com espanto:
+
+	\begin{earg}
+		\item[\ex{gindrinker}] O homem bebendo cerveja é gigantesco!
+	\end{earg}
+De acordo com a análise de Russell tal sentença pode ser parafraseada por:
+	\begin{earg}
+		\item[\ref{gindrinker}$'$.] Há exatamente um homem bebendo cerveja [na esquina] e qualquer um que esteja bebendo cerveja [na esquina] é gigantesco.		
+	\end{earg}
+Agora suponha que o homem muito alto esteja, na verdade, bebendo refrigerante, que foi colocado dentro de uma lata de cerveja; enquanto que o homem bem mais baixo esteja, na verdade, bebendo cerveja que foi colocada dentro de uma lata de refrigerante.
+Então, de acordo com a análise de Russell, Manuela disse uma sentença falsa.
+Porque há, de fato, exatamente um homem bebendo cerveja na esquina, mas ele não é gigantesco.
+%O homem realmente bebendo cerveja não é gigantesco.
+
+Mas será que Manuela disse mesmo uma sentença falsa?
+Parece claro que Manuela usou a descrição definida `o homem bebendo cerveja' para designar uma pessoa específica, e dizer algo desta pessoa.
+Se você estivesse ao lado de Manuela, vendo a mesma cena que ela viu, e, como ela, não soubesse que os conteúdos das latas estavam trocados, você também  entenderia a descrição definida que ela usou (o homem bebendo cerveja) como designando o homem alto e, por isso, concordaria que a sentença que ela disse é verdadeira.
+
+Entretanto, segundo a análise de Russell, a descrição que ela usou designa uma pessoa diferente, o homem bem mais baixo, porque, na verdade, é ele que está bebendo cerveja, e não o homem alto.
+Mas se a descrição definida usada por Manuela designa o homem mais baixo, então o que ela disse é uma falsidade.
+O ponto aqui é que, segundo Donnellan, quando Manuela diz a sentença \ref{gindrinker}, ela não está \emph{afirmando} que o homem alto está bebendo cerveja, ela está \emph{pressupondo} isso.
+Esta pressuposição nos ajuda a identificar um certo indivíduo e, feita esta identificação, a única \emph{afirmação} feita é que este indivíduo é gigantesco.
+Então, para todos que compartilham da mesma pressuposição, a sentença \ref{gindrinker} será verdadeira.
+
+A controvérsia aqui, então, é sobre o modo como designamos as coisas através da linguagem.
+Ou seja, é uma controvérsia sobre se Manuela disse uma sentença falsa sobre o homem mais baixo, conforme a análise de Russell sugere, ou se ela disse uma sentença verdadeira sobre o homem mais alto, conforme Donnellan sugere.
+Se, por um lado, o ponto que Donnellan defende é bastante interessante, por outro lado, os defensores da análise de Russell talvez consigam sair deste embaraço se explicarem por que as intenções de Manuela e sua comunicação bem sucedida (com você) se afastam da verdade.
+Elas se afastam da verdade porque se baseiam em crenças falsas de Manuela e sua, sobre o que os homens estão bebendo.
+Tivesse Manuela e você crenças corretas sobre o que os homens estão bebendo, não haveria qualquer discrepância entre a análise de Russell e as intuições de Donnellan sobre o modo como designamos indivíduos com a linguagem.
+
+A questão, no entanto, é controversa e tem muitos desdobramentos.\footnote{
+	Se você estiver interessado no debate pode consultar o artigo `Speaker Reference and Semantic Reference' de Saul Kripke, publicado em  in French et al (eds.), \emph{Contemporary Perspectives in the Philosophy of Language}, Minneapolis: University of Minnesota Press, 1977, pp.\ 6-27.}
+Ir além nos levaria a águas filosóficas profundas, o que não é nada mal, mas neste momento nos distrairia de nosso objetivo principal aqui de aprender lógica formal.
+Então, por ora, enquanto estivermos ocupados com a LPO, seguiremos a análise de Russell das descrições definidas.
+Ela certamente é uma análise defensável, além de ser o melhor que podemos oferecer, sem a exigência de uma revisão significativa da lógica.
+
+ 
+\practiceproblems
+
+\problempart
+Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das sete sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] pessoas
+\item[\atom{S}{x}] \gap{x} sabe a combinação do cofre.
+\item[\atom{E}{x}] \gap{x} é uma espiã.
+\item[\atom{V}{x}] \gap{x} é vegetariana.
+\item[\atom{C}{x,y}] \gap{x} confia em \gap{y}.
+\item[h] Hortênsia
+\item[i] Isadora
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Hortênsia confia em um vegetariano.
+\item Todo mundo que confia em Isadora, confia em uma vegetariana.
+\item Todo mundo que confia em Isadora confia em alguém que confia em um vegetariano.
+\item Apenas Isadora sabe a combinação do cofre.
+\item Isadora confia em Hortência, e em mais ninguém.
+\item A pessoa que sabe a combinação do cofre é vegetariana.
+\item A pessoa que sabe a combinação do cofre não é um espião.
+\end{earg}
+
+
+\solutions
+\problempart
+\label{pr.FOLcards}
+Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das doze sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] cartas de um baralho típico
+\item[\atom{R}{x}] \gap{x} é uma carta preta.
+\item[\atom{P}{x}] \gap{x} é uma carta de paus.
+\item[\atom{D}{x}] \gap{x} é um dois.
+\item[\atom{V}{x}] \gap{x} é um valete.
+\item[\atom{M}{x}] \gap{x} é um homem com o machado.
+\item[\atom{C}{x}] \gap{x} é caolho.
+\item[\atom{J}{x}] \gap{x} é um curinga.
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Todas as cartas de paus são pretas.
+\item Não há curingas.
+\item Há pelo menos duas cartas de paus.
+\item Há pelo menos dois valetes caolhos.\footnote{
+	Um valete caolho é um valete de copas ou de espadas.
+	Se você reparar bem no baralho, verá que estes valetes são desenhados de perfil.
+	Só um olho deles aparece desenhado.
+	Enquanto os outros dois valetes, de paus e de ouros, são desenhados de frente, com os dois olhos.}
+\item Há no máximo dois valetes caolhos.
+\item Há dois valetes pretos.
+\item Há quatro dois.
+\item O dois de paus é uma carta preta.
+\item Os valetes caolhos e o homem com o machado são curingas.\footnote{
+	O homem com o machado é o rei de ouros, porque no desenho do baralho, se você reparar bem, verá que ele é o único rei que segura um machado. Os outros seguram espadas.}
+\item Se o dois de paus for um curinga, então há exatamente um curinga.
+\item O homem com o machado não é um valete.
+\item O dois de paus não é o homem com o machado.
+\end{earg}
+
+
+\problempart Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das oito sentenças abaixo.
+\begin{center}
+\begin{ekey}
+\item[\text{domínio}] animais no mundo
+\item[\atom{E}{x}] \gap{x} está no pasto da fazenda Estrela.
+\item[\atom{C}{x}] \gap{x} é um cavalo.
+\item[\atom{P}{x}] \gap{x} é Pégasus.
+\item[\atom{A}{x}] \gap{x} tem asas.
+\end{ekey}
+\end{center}
+\begin{earg}
+\item Há pelo menos três cavalos no mundo.
+\item Há pelo menos três animais no mundo.
+\item Há mais de um cavalo no pasto da fazenda Estrela.
+\item Há três cavalos no pasto da fazenda Estrela.
+\item Há uma única criatura alada no pasto da fazenda Estrela; quaisquer outras criaturas nesse pasto não têm asas.
+\item O animal que é Pégasus é um cavalo alado.
+\item O animal no pasto da fazenda Estrela não é um cavalo.
+\item O cavalo no pasto da fazenda estrela, não tem asas.
+\end{earg}
+
+\problempart
+Neste capítulo, nós simbolizamos `Nivaldo é o traidor' por
+$$\exists x (\atom{T}{x} \eand \forall y(\atom{T}{y} \eif x = y) \eand x = n)$$
+Duas outras simbolizações igualmente boas são:
+	\begin{ebullet}
+		\item $\atom{T}{n} \eand \forall y(\atom{T}{y} \eif n = y)$
+		\item $\forall y(\atom{T}{y} \eiff y = n)$
+	\end{ebullet}
+Explique por que estas sentenças também são boas simbolizações de `Nivaldo é o traidor'.
+
+
+\chapter{Sentenças da LPO}\label{s:FOLSentences}
+Agora que já aprendemos como simbolizar sentenças do português na LPO, finalmente  chegou a hora de definir rigorosamente a noção de uma \emph{sentença} da LPO.
+
+\section{Expressões}
+Existem seis tipos de símbolos na LPO:
+
+\begin{description}
+\item[Predicados e Relações] $A,B,C,\ldots,Z$,\\ 
+	ou com subíndices, quando necessário $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$
+\item[Nomes] $a,b,c,\ldots, r$,\\
+	ou com subíndices, quando necessário $a_1, b_{224}, h_7, m_{32},\ldots$
+\item[Variáveis] $s, t, u, v, w, x,y,z$,\\
+	ou com subíndices, quando necessário $x_1, y_1, z_1, x_2,\ldots$
+\item[Conectivos]  $\enot,\eand,\eor,\eif,\eiff$
+\item[Parênteses] ( , )
+\item[Quantificadores]  $\forall, \exists$
+\end{description}
+Definimos uma \define{expressao da LPO} como qualquer sequência de símbolos da LPO.
+Se você pegar quaisquer dos símbolos da LPO e escrevê-los sequencialmente, em qualquer ordem, você terá uma expressão.
+
+
+\section{Termos e fórmulas}
+\label{s:TermsFormulas}
+
+No capítulo \ref{s:TFLSentences}, passamos direto da apresentação do vocabulário da LVF para a definição de sentença.
+Na LPO, no entanto, teremos que passar por um estágio intermediário: a noção de uma \define{formula}.
+A ideia intuitiva é que uma fórmula seja qualquer expressão que possa ser transformada em uma sentença pela adição de quantificadores à sua esquerda.
+Mas vamos com calma.
+Chegaremos lá passo a passo.
+Antes de definirmos fórmulas, precisamos de definir o que é um termo e o que é uma fórmula atômica.
+
+Começamos definindo a noção de termo.
+	\factoidbox{
+		Um \define{termo} é qualquer nome ou qualquer variável. }
+Aqui estão alguns termos:
+	$$a, \ b, \ x, \ x_1, \ x_2, \ y, \ y_{254}, \ z$$
+Em seguida, precisamos definir fórmulas atômicas.
+	\factoidbox{
+		\begin{enumerate}
+		\item Qualquer letra sentencial é uma fórmula atômica.
+		\item Se $\meta{R}$ é um predicado de $n$ lugares e $\meta{t}_1, \meta{t}_2, \ldots, \meta{t}_n$ são termos, então $\atom{\meta{R}}{\meta{t}_1, \meta{t}_2, \ldots, \meta{t}_n}$ é uma fórmula atômica.
+		\item Se $\meta{t}_1$ e $\meta{t}_2$ são termos, então $\meta{t}_1 = \meta{t}_2$ é uma fórmula atômica.
+		\item Nada mais é uma fórmula atômica.
+		\end{enumerate}
+	}
+Repare que no item 1 do quadro acima consideramos as letras sentenciais (da LVF) como fórmulas atômicas da LPO; ao final de nossa definição veremos que toda sentença LVF também será uma sentença da LPO.
+
+\newglossaryentry{term}{
+  name = term,
+  description = {Either a \gls{name} or a \gls{variable}}
+}
+
+\newglossaryentry{formula}{
+  name = formula,
+  description = {An expression of FOL built according to the inductive rules in \S\ref{s:TermsFormulas}}
+}
+
+O uso de metavariáveis em letras cursivas no quadro acima ($\meta{R}$ e $\meta{t}$) segue as convenções estabelecidas no Capítulo \ref{s:UseMention}.
+Portanto, `$\meta{R}$' não é, ela própria, um predicado da LPO.
+`$\meta{R}$' é um símbolo da nossa metalinguagem (o português aumentado) que usamos para falar sobre um predicado qualquer, não especificado, da LPO.
+Da mesma forma, `$\meta{t}_1$' não é um termo, mas um símbolo da metalinguagem que usamos para falar sobre um termo qualquer da LPO.
+
+Considere `$F$' um predicado de um lugar, `$G$' um predicado de três lugares (relação ternária) e `$S$' um predicado de seis lugares. As seguintes expressões são exemplos de fórmulas atômicas:
+	\begin{align*}
+		& D &&  \atom{F}{a}\\
+		& x = a && \atom{G}{x,a,y}\\
+		& a = b && \atom{G}{a,a,a}\\
+		& \atom{F}{x} && \atom{S}{x_1, x_2, a, b, y, x_1}\\
+	\end{align*}
+Agora que já sabemos o que é uma fórmula atômica, podemos oferecer cláusulas que definem recursivamente as fórmulas em geral.
+As primeiras cláusulas são exatamente idênticas às da LVF.
+	\factoidbox{
+	\begin{enumerate}
+		\item Toda fórmula atômica é uma fórmula. 
+		\item Se \meta{A} é uma fórmula, então $\enot\meta{A}$ é uma fórmula.
+		\item Se \meta{A} e \meta{B} são fórmulas, então $(\meta{A}\eand\meta{B})$ é uma fórmula.
+		\item Se \meta{A} e \meta{B} são fórmulas, então $(\meta{A}\eor\meta{B})$ é uma fórmula.
+		\item Se \meta{A} e \meta{B} são fórmulas, então $(\meta{A}\eif\meta{B})$ é uma fórmula.
+		\item Se \meta{A} e \meta{B} são fórmulas, então $(\meta{A}\eiff\meta{B})$ é uma fórmula.
+		\item Se \meta{A} é uma fórmula e \meta{x} é uma variável,
+		% \meta{A} contains at least one occurrence of \meta{x}, and \meta{A} contains neither $\forall \meta{x}$ nor $\exists \meta{x}$, 
+		então $\forall\meta{x}\,\meta{A}$ é uma fórmula.
+		\item Se \meta{A} é uma fórmula e \meta{x} é uma variável, 
+		%\meta{A} contains at least one occurrence of \meta{x}, and \meta{A} contains neither $\forall \meta{x}$ nor $\exists \meta{x}$, 
+		então $\exists\meta{x}\,\meta{A}$ é uma fórmula.
+		\item Nada mais é uma fórmula.
+	\end {enumerate}
+	}
+Supondo novamente que `$F$' é um predicado de um lugar, que `$G$' é uma relação ternária e `$S$' um predicado de seis lugares, temos abaixo alguns exemplos de fórmulas que podem ser criadas através das cláusulas da definição acima:
+	\begin{align*}
+		& \atom{F}{x}\\
+		& \atom{G}{a,y,z}\\
+		& \atom{S}{y,z,y,a,y,x}\\
+		(\atom{G}{a,y,z} \eif {}& \atom{S}{y,z,y,a,y,x})\\
+		\forall z (\atom{G}{a,y,z} \eif {}& \atom{S}{y,z,y,a,y,x})\\
+		\atom{F}{x} \eand \forall z (\atom{G}{a,y,z} \eif {}& \atom{S}{y,z,y,a,y,x})\\
+		\exists y (\atom{F}{x} \eand \forall z (\atom{G}{a,y,z} \eif {}& \atom{S}{y,z,y,a,y,x}))\\
+		\forall x \exists y (\atom{F}{x} \eand \forall z (\atom{G}{a,y,z} \eif {}& \atom{S}{y,z,y,a,y,x}))
+	\end{align*}
+%However, this is \emph{not} a formula:
+%	\begin{center}
+%		$\forall x \exists x\, \atom{G}{x,x,x}$
+%	\end{center}
+%Certainly `$\atom{G}{x,x,x}$' is a formula, and `$\exists x\, \atom{G}{x,x,x}$' is therefore also a formula. But we cannot form a new formula by putting `$\forall x$' at the front. This violates the constraints on clause 7 of our inductive definition: `$\exists x\, \atom{G}{x,x,x}$' contains at least one occurrence of `$x$', but it already contains `$\exists x$'.
+
+%These constraints have the effect of ensuring that variables only serve one master at any one time (see \S\ref{s:MultipleGenerality}). In fact, w
+Podemos, agora, oferecer uma definição formal de escopo (ou âmbito), que incorpora a definição de escopo de um quantificador.
+Aqui seguimos o caso da LVF, com a observação de que a noção de operador lógico principal corresponde ao acréscimo dos quantificadores à noção de conectivo principal definida no Capítulo \ref{s:TFLSentences}.
+	\factoidbox{
+		O \define{operador logico principal} de uma fórmula corresponde ao último operador introduzido, quando se considera a construção da fórmula através das nove cláusulas recursivas do quadro acima.
+		
+\bigskip
+
+O \define{escopo} ou \define{ambito} de um operador lógico em uma fórmula é a subfórmula para a qual esse operador é o operador lógico principal.
+	}
+Abaixo uma ilustração gráfica do escopo dos quantifidadores da última fórmula apresentada no exemplo anterior:
+	$$\overbrace{\forall x \overbrace{\exists y \bigl[(\atom{F}{x} \eand \overbrace{\forall z (\atom{G}{a,y,z} \eif \atom{S}{y,z,y,a,y,x})}^{\text{escopo de `}\forall z\text{'}}}^{\text{escopo de `}\exists y\text{'}}\bigr]}^{\text{escopo de `$\forall x$'}}$$
+
+\newglossaryentry{main logical operator}{
+  name = main logical operator,
+  description = {The operator used last in the construction of a \gls{sentence of TFL} or a \gls{formula} of FOL}
+}
+
+\newglossaryentry{scope}{
+  name = scope,
+  description = {the subformula of a \gls{sentence of TFL} or a \gls{formula} of FOL for which the \gls{main logical operator} is the operator}
+}
+
+
+\section{Sentenças}
+É importante lembrarmos que o objetivo principal da lógica é avaliar se os argumentos são válidos ou não.
+E os argumentos são compostos por sentenças declarativas:
+sentenças que podem ser verdadeiras ou falsas (asserções).
+Entretanto, muitas fórmulas não são asserções.
+Considere a seguinte chave de simbolização:
+\begin{center}
+	\begin{ekey}
+		\item[\text{domínio}] pessoas
+		\item[\atom{A}{x,y}] \gap{x} ama \gap{y}
+		\item[b] Boris
+	\end{ekey}
+\end{center}
+Considere, agora, a fórmula atômica `$\atom{A}{z,z}$'.
+Como todas as fórmulas atômicas são fórmulas, `$\atom{A}{z,z}$' é uma fórmula. Mas será que ela é uma asserção? Uma sentença que pode ser verdadeira ou falsa?
+Você pode pensar que ela será verdadeira caso a pessoa nomeada por `$z$' ame a si mesma, da mesma maneira que `$\atom{A}{b,b}$' é verdadeira caso Boris ame a si mesmo.
+No entanto, `$z$' não é nome de ninguém, `$z$' é uma variável.
+E, por isso, nenhuma asserção é feita com `$\atom{A}{z,z}$'.
+
+Quando, no entanto, colocamos um quantificador existencial, por exemplo, à esquerda de `$\atom{A}{z,z}$', resultando em `$\exists z \atom{A}{z,z}$', a fórmula obtida é uma asserção  que será verdadeira se alguém amar a si próprio.
+Da mesma forma, com um quantificador universal obteríamos `$\forall z \atom{A}{z,z}$', que é verdadeira se todos amam a si mesmos.
+O ponto é que sempre que há variáveis em nossas fórmulas, precisamos de algum quantificador para indicar como lidar com aquela variável.
+
+Vamos tornar esta ideia mais precisa.
+	\factoidbox{
+		Uma ocorrência de uma variável \meta{x} é uma \define{ocorrencia ligada} se está dentro do escopo de $\forall \meta{x}$ ou de $\exists \meta{x}$. 
+		
+		\bigskip
+		
+		Qualquer ocorrência de variável que não seja ligada, é uma \define{ocorrencia livre}.
+	}
+
+\newglossaryentry{bound variable}{
+  name = bound variable,
+  description = {An occurrence of a variable in a \gls{formula} which is in the scope of a quantifier followed by the same variable}
+}
+
+\newglossaryentry{free variable}{
+  name = free variable,
+  description = {An occurrence of a variable in a \gls{formula} which is not a \gls{bound variable}}
+}
+
+        
+Considere, por exemplo, a seguinte fórmula:
+	$$\forall x(\atom{E}{x} \eor \atom{D}{y}) \eif \exists z(\atom{E}{x} \eif \atom{L}{z,x})$$
+O âmbito do quantificador universal `$\forall x$' é `$\forall x (\atom{E}{x} \eor \atom{D}{y})$', portanto, a primeira ocorrência de `$x$' é ligada por `$\forall x$'.
+No entanto, a segunda e a terceira ocorrências de '$x$' (em `$\atom{E}{x}$' e em `$\atom{L}{z,x}$') são livres.
+Da mesma forma, a única ocorrência de `$y$' é livre.
+O escopo do quantificador existencial `$\exists z$' é `$(\atom{E}{x} \eif \atom{L}{z,x})$', portanto a ocorrência de `$z$' é ligada.
+
+Podemos agora, finalmente, completar a nossa definição de sentença da LPO.
+	\factoidbox{	
+		Uma \define{sentenca} da LPO é qualquer fórmula que não contém ocorrências livres de variáveis.
+	}
+
+\newglossaryentry{sentence of FOL}{
+	name = sentence (of FOL),
+	text = sentence of FOL,
+	description = {A \gls{formula} of FOL which has no \glspl{bound variable}}
+}
+
+
+\section{Convenções sobre parênteses}
+
+Adotaremos na LPO as mesmas convenções sobre o uso de parênteses que adotamos na LVF (veja o Capítulo \ref{s:TFLSentences} e a Seção \ref{s:MoreBracketingConventions}):
+\begin{ebullet}
+	\item podemos omitir os parênteses mais externos das fórmulas.
+	\item podemos usar colchetes, `[' e `]', no lugar de parênteses, para aumentar a legibilidade das fórmulas.
+\end{ebullet}
+
+%Third, we may omit brackets between each pair of conjuncts when writing long series of conjunctions. 
+
+%Fourth, we may omit brackets between each pair of disjuncts when writing long series of disjunctions.
+
+\practiceproblems
+\problempart
+\label{pr.freeFOL}
+Em cada uma das seis fórmulas abaixo, para todas as variáveis, identifique as ocorrências livres e ligadas.
+\begin{earg}
+\item $\exists x\, \atom{L}{x,y} \eand \forall y\, \atom{L}{y,x}$
+\item $\forall x\, \atom{A}{x} \eand \atom{B}{x}$
+\item $\forall x\, \atom{A}{x} \eand \exists x\, \atom{B}{x}$
+\item $\forall x (\atom{A}{x} \eand \atom{B}{x}) \eand \forall y(\atom{C}{x} \eand \atom{D}{y})$
+\item $\forall x\exists y[\atom{R}{x,y} \eif (\atom{J}{z} \eand \atom{K}{x})] \eor \atom{R}{y,x}$
+\item $\forall x_1(\atom{C}{x_2} \eiff \atom{L}{x_2,x_1}) \eand \exists x_2\,\atom{L}{x_3,x_2}$
+\end{earg}
+
+\problempart
+Dentre as seis fórmulas do exercício acima, apenas uma é uma sentença.
+Qual? E por quê?
