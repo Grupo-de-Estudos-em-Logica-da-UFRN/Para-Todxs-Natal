@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  1 APR 2021 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  2 APR 2021 15:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -6249,11 +6249,14 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  44294 strings out of 494789
  799598 string characters out of 6177363
- 940011 words of memory out of 5000000
+ 939405 words of memory out of 5000000
  46663 multiletter control sequences out of 15000+600000
  220538 words of font info for 367 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
@@ -6286,7 +6289,7 @@ texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf
 type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
 lvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on forallxyyc-print.pdf (436 pages, 1974887 bytes).
+Output written on forallxyyc-print.pdf (436 pages, 1974900 bytes).
 PDF statistics:
  1541 PDF objects out of 1728 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,4 +1,4 @@
-# forallx-yyc
+# Para Todxs: Natal
 
 ![Book Cover](http://forallx.openlogicproject.org/forallxyyc.png)
 
