@@ -4,18 +4,19 @@
 
 ## Description
 
-_forall x: Calgary_ is a full-featured textbook on formal logic. It covers key
-notions of logic such as consequence and validity of arguments, the
-syntax of truth-functional propositional logic TFL and truth-table
-semantics, the syntax of first-order (predicate) logic FOL with
-identity (first-order interpretations), translating (formalizing)
-English in TFL and FOL, and Fitch-style natural deduction proof
-systems for both TFL and FOL. It also deals with some advanced topics
-such as truth-functional completeness. Exercises with solutions are
-available. It is provided in PDF (for screen reading, printing, and a
-special version for dyslexics) and in LaTeX source code. A proof
-editor/checker for the proof system used is available at
-[proofs.openlogicproject.org](http://proofs.openlogicproject.org/).
+_Para Todxs: Natal_ é um livro didático completo sobre lógica formal.
+ Ele aborda noções fundamentais da lógica, como consequência e validade 
+de argumentos, a sintaxe da lógica proposicional verofuncional (LVF) e 
+semântica de tabelas-verdade, a sintaxe da lógica de predicados de primeira 
+ordem (LPO) com identidade (interpretações de primeira ordem), traduções 
+(formalizações) do português para LVF e LPO, além de sistemas de prova em 
+dedução natural (estilo Fitch) para LVF e LPO. Também são abordados alguns 
+tópicos avançados, como completude verofuncional. São disponibilizados exercícios 
+com soluções. O livro será disponibilizado inicialmente em LaTeX, em PDF para 
+impressão e, posteriormente, em versões especiais para visualização em tela de 
+dispositivos eletrônicos, além de uma versão com fonte especial para disléxicos. 
+Um editor/checador de provas para o sistema usado no livro está disponível online 
+em [proofs.openlogicproject.org](http://proofs.openlogicproject.org/).
 
 [Download](#download) links below.
 
