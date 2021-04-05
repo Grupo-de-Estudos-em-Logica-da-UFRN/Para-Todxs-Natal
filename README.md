@@ -1,6 +1,6 @@
 # Para Todxs: Natal
 
-![Book Cover](https://drive.google.com/file/d/1KCYwUhoxr3SAluy8D54dqOSzq4ul1rtj/view?usp=sharing)
+![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/paratodxscapa.png)
 
 ## Description
 
