@@ -2,6 +2,8 @@
 
 ![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/paratodxscapa.png)
 
+# (OBS: este trabalho está em fase inicial, inclusive em relação a essa introdução) #
+
 ## Description
 
 _Para Todxs: Natal_ é um livro didático completo sobre lógica formal.
@@ -22,24 +24,9 @@ em [proofs.openlogicproject.org](http://proofs.openlogicproject.org/).
 
 ## Credits and License
 
-_forall x: Calgary_ is based on [_forall x:
-Cambridge_](http://people.ds.cam.ac.uk/tecb2/forallx.shtml), by [Tim
-Button](http://nottub.com/) used under a [CC
-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license, which
-is based in turn on [_forall x_](https://www.fecundity.com/logic/), by
-[P.D. Magnus](https://www.fecundity.com/job/) used under a [CC BY
-4.0](https://creativecommons.org/licenses/by/3.0/) license, and was
-remixed, revised, & expanded by [Aaron
-Thomas-Bolduc](https://phil.ucalgary.ca/profiles/aaron-thomas-bolduc)
-& [Richard Zach](http://richardzach.org/).  It includes additional
-material from _forall x_ by P.D. Magnus and
-[_Metatheory_](http://people.ds.cam.ac.uk/tecb2/metatheory.shtml) by
-Tim Button, both used under a [CC BY
-4.0](https://creativecommons.org/licenses/by/4.0/) license, from
-[_forall x: Lorain County
-Remix_](https://github.com/rob-helpy-chalk/openintroduction), by
-[Cathal Woods](https://sites.google.com/site/cathalwoods/) and
-J. Robert Loftis, used with permission, and \href{http://www.rtrueman.com/uploads/7/0/3/2/70324387/modal_logic_primer.pdf}{\emph{A Modal Logic Primer}} by \href{http://www.rtrueman.com/}{Robert Trueman}, used with permission.
+_Para Todxs: Natal_ é baseado no [_Forall x:
+Calgary_](https://github.com/rzach/forallx-yyc), mantido por 
+Richard Zach e ambos estão disponíveis sob licensas Creative Commons.
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
@@ -49,38 +36,19 @@ The LaTeX source code for this work is available on GitHub at [github.com/rzach/
 
 ## Download
 
-You can download PDFs of the files here:
+Vovê pode fazer o download do último pdf gerado aqui:
 
-  - [`forallxyyc.pdf`](http://forallx.openlogicproject.org/forallxyyc.pdf) (in color, for screen reading)
-  - [`forallxyyc-print.pdf`](http://forallx.openlogicproject.org/forallxyyc-print.pdf) (b/w, for printing on Quarto stock)
-  - [`forallxyyc-letter.pdf`](http://forallx.openlogicproject.org/forallxyyc-letter.pdf) (b/w, for printing on regular letter-size paper)
-  - [`forallxyyc-accessible.pdf`](http://forallx.openlogicproject.org/forallxyyc-accessible.pdf) (an accessible version for dyslexics)
-  - [`forallxsol.pdf`](http://forallx.openlogicproject.org/solutions/forallxsol.pdf) (solutions booklet)
+  - [`forallxyyc-print.pdf`](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/blob/fcd872d75926468fed9edaad6335d601fd77d507/forallxyyc-print.pdf) (arquivo para impressão)
 
 Note that these files change whenevery the source files are
 changed. So if you use the text in a course, better to download the
 PDFs and make them available to students directly, than to link here.
 
-## Buy a Printed Copy
+## Crie o PDF você mesmo!
 
-If you'd like to purchase a nice paperback copy, you can do so on
-Amazon ([US](https://www.amazon.com/dp/1077319851) | [CA](https://www.amazon.ca/dp/1077319851) | 
-[UK](https://www.amazon.co.uk/dp/1077319851)) (or use search in your local Amazon store).
+Clone [GitHub repository](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal) em sua máquina 
+ou faça o download do arquivo ZIP compile o código usando o [LaTeX](http://www.latex-project.org/) a partir do arquivo
 
-(The process for getting the book printed is described [here](http://openlogicproject.org/2015/11/22/getting-your-book-to-print/) and [here](http://openlogicproject.org/2017/05/19/forall-x-yyc-is-now-on-amazon-and-how-it-got-there/).)
+  - `forallxyyc-print.tex` (arquivo para impressão)
 
-## Make PDFs Yourself
-
-Clone the [GitHub repository](https://github.com/rzach/forallx-yyc) locally or download the ZIP file and run [LaTeX](http://www.latex-project.org/) on one of
-
-  - `forallxyyc.tex` (in color, for screen reading)
-  - `forallxyyc-accessible.tex` (accessible version)
-  - `forallxyyc-print.tex` (b/w, for printing on Quarto stock)
-  - `forallxyyc-letter.tex` (b/w, for printing on regular letter-size paper)
-
-You'll have to run `makeglossaries` to produce the glossary as well.
-
-To make changes to the definitions in the preamble and `forallyyc.sty`
-file, put them in a file named `forallxyyc-local.sty`. For instance,
-to get the connectives to be & for and and horseshoe for the
-conditional, copy `forallxyyc-local-sample.sty` to that file.
+É necessário executar `makeglossaries` para gerar o glossário.
