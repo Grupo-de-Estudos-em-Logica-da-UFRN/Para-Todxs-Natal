@@ -28,11 +28,11 @@ _Para Todxs: Natal_ é baseado no [_Forall x:
 Calgary_](https://github.com/rzach/forallx-yyc), mantido por 
 Richard Zach e ambos estão disponíveis sob licensas Creative Commons.
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/3.0/)
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+Esse projeto está sob a licença [Creative Commons Attribution 3.0 International License](http://creativecommons.org/licenses/by/3.0/).
 
-The LaTeX source code for this work is available on GitHub at [github.com/rzach/forallx-yyc](https://github.com/rzach/forallx-yyc).
+Os arquivos-fonte do projeto, em LaTeX, estão disponíveis em [Para Todxs: Natal](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal).
 
 ## Download
 
