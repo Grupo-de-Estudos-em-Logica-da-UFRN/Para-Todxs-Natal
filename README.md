@@ -1,6 +1,6 @@
 # Para Todxs: Natal
 
-![Book Cover](http://forallx.openlogicproject.org/forallxyyc.png)
+![Book Cover](https://drive.google.com/file/d/1KCYwUhoxr3SAluy8D54dqOSzq4ul1rtj/view?usp=sharing)
 
 ## Description
 
