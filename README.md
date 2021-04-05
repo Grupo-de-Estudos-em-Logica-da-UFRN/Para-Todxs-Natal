@@ -22,7 +22,7 @@ em [proofs.openlogicproject.org](http://proofs.openlogicproject.org/).
 
 [Download](#download) links below.
 
-## Credits and License
+## Créditos e licença
 
 _Para Todxs: Natal_ é baseado no [_Forall x:
 Calgary_](https://github.com/rzach/forallx-yyc), mantido por 
@@ -40,13 +40,9 @@ Vovê pode fazer o download do último pdf gerado aqui:
 
   - [`forallxyyc-print.pdf`](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/blob/fcd872d75926468fed9edaad6335d601fd77d507/forallxyyc-print.pdf) (arquivo para impressão)
 
-Note that these files change whenevery the source files are
-changed. So if you use the text in a course, better to download the
-PDFs and make them available to students directly, than to link here.
-
 ## Crie o PDF você mesmo!
 
-Clone [GitHub repository](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal) em sua máquina 
+Clone o [repositório github](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal) em sua máquina 
 ou faça o download do arquivo ZIP compile o código usando o [LaTeX](http://www.latex-project.org/) a partir do arquivo
 
   - `forallxyyc-print.tex` (arquivo para impressão)
