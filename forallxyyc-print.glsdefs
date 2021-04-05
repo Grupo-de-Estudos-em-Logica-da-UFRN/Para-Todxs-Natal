@@ -658,3 +658,93 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{disjunctive normal form}{}%
+{%
+\gls@defglossaryentry{disjunctive normal form}%
+{%
+name={disjunctive normal form (DNF)},%
+sort={disjunctive normal form (DNF)},%
+type={main},%
+first={disjunctive normal form},%
+firstplural={disjunctive normal forms},%
+text={disjunctive normal form},%
+plural={disjunctive normal forms},%
+description={a sentence which is a disjunction of conjunctions of atomic sentences or negated atomic sentences},%
+descriptionplural={a sentence which is a disjunction of conjunctions of atomic sentences or negated atomic sentences},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{forma normal conjuntiva}{}%
+{%
+\gls@defglossaryentry{forma normal conjuntiva}%
+{%
+name={conjunctive normal form (DNF)},%
+sort={conjunctive normal form (DNF)},%
+type={main},%
+first={conjunctive normal form},%
+firstplural={conjunctive normal forms},%
+text={conjunctive normal form},%
+plural={conjunctive normal forms},%
+description={a sentence which is a conjunction of disjunctions of atomic sentences or negated atomic sentences},%
+descriptionplural={a sentence which is a conjunction of disjunctions of atomic sentences or negated atomic sentences},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{expressively adequate}{}%
+{%
+\gls@defglossaryentry{expressively adequate}%
+{%
+name={expressive adequacy},%
+sort={expressive adequacy},%
+type={main},%
+first={expressively adequate},%
+firstplural={expressively adequates},%
+text={expressively adequate},%
+plural={expressively adequates},%
+description={property of a collection of connectives which holds iff every possible truth table is the truth table of a sentence involving only those connectives},%
+descriptionplural={property of a collection of connectives which holds iff every possible truth table is the truth table of a sentence involving only those connectives},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
