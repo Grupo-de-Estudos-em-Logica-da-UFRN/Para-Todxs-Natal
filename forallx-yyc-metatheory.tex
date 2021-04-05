@@ -6,57 +6,94 @@
 \chapter{Formas normais e expressividade}
 
 
-\section{Disjunctive Normal Form}\label{s:DNFDefined}
+\section{Forma Normal Disjuntiva}\label{s:DNFDefined}
 
-Sometimes it is useful to consider sentences of a particularly simple form. For instance, we might consider sentences in which $\enot$ only attaches to atomic sentences, or those which are combinations of atomic sentences and negated atomic sentences using only $\eand$.  A relatively general but still simple form is that where a sentence is a disjunction of conjunctions of atomic or negated atomic sentences.  When such a sentence is constructed, we start with atomic sentences, then (perhaps) attach negations, then (perhaps) combine using $\eand$, and finally (perhaps) combine using~$\eor$. 
-
-Let's say that a sentence is in \define{disjunctive normal form} \emph{iff} it meets all of the following conditions:
+Às vezes é útil considerar grupos restritos de sentenças com formas particularmente simples.
+Por exemplo, podemos considerar o grupo restrito formado pelas sentenças atômicas e pelas sentenças que são negações de sentenças atômicas:
+$$A, \enot B, A_3, \enot F_2, ...$$
+As sentenças deste grupo  são comumente chamadas de \define{literais}.
+Podemos criar um grupo mais amplo, acrescentando aos literais sentenças que são conjunções arbitrárias de literais:
+	\begin{align*}
+			& A_3 \\
+			& A \eand \enot B \\
+			& \enot C \\
+			& \enot J \eand \enot A_3 \eand  C \\
+			& F_2 \eand  J \\
+			& \ \ \vdots
+	\end{align*}
+Podemos ampliar mais um pouco este grupo e acrescentar a ele sentenças que são disjunções de literais ou de conjunções arbitrárias de literais:
+	\begin{align*}
+  		& A \\
+  		& A \eand \lnot B \eand C\\
+  		& (A \eand B) \eor (A \eand \enot B)\\
+  		& (A \eand B) \eor (A \eand  B \eand C \eand \enot D \eand \enot E)\\
+  		& A \eor (C \eand \enot P_{234} \eand P_{233} \eand Q) \eor \enot B\\
+  		& \ \ \vdots
+	\end{align*}
+Dizemos que as sentenças deste grupo mais amplo estão na \define{forma normal disjuntiva}, cuja definição formal pode ser assim apresentada:
+uma sentença está na \textit{forma normal disjuntiva} se e somente se ela satisfezer todas as seguintes condições:
 	\begin{earg}
-		\item[(\textsc{dnf1})] No connectives occur in the sentence other than negations, conjunctions and disjunctions;
-		\item[(\textsc{dnf2})] Every occurrence of negation has minimal scope (i.e.\ any `$\enot$' is immediately followed by an atomic sentence);
-		\item[(\textsc{dnf3})] No disjunction occurs within the scope of any conjunction.
+		\item[(\textsc{fnd 1})] Nenhum conectivo que não seja negação, conjunção ou disjunção ocorre na sentença;
+		\item[(\textsc{fnd 2})] Qualquer negação que ocorra na sentença é a negação de uma letra sentencial;
+		\item[(\textsc{fnd 3})] Qualquer conjunção que ocorra na sentença é conjunção de literais; ou seja, apenas sentenças atômicas ou negações de sentenças atômicas podem ser conjuntos das conjunções.
 	\end{earg}
 \newglossaryentry{disjunctive normal form}{
   name = disjunctive normal form (DNF),
   text = disjunctive normal form,
   description = {a sentence which is a disjunction of conjunctions of atomic sentences or negated atomic sentences}
 }
-So, here are are some sentences in disjunctive normal form:
-\begin{align*}
-  & A \\
-  & (A \eand \lnot B \eand C)\\
-  & (A \eand B) \eor (A \eand \enot B)\\
-  & (A \eand B) \eor (A \eand  B \eand C \eand \enot D \eand \enot E)\\
-  & A \eor (C \eand \enot P_{234} \eand P_{233} \eand Q) \eor \enot B
-\end{align*}
-Note that we have here broken one of the maxims of this book and \emph{temporarily} allowed ourselves to employ the relaxed bracketing-conventions that allow conjunctions and disjunctions to be of arbitrary length. These conventions make it easier to see when a sentence is in disjunctive normal form. We will continue to help ourselves to these relaxed conventions, without further comment.
+Um outro modo de entender o grupo de sentenças que estão na forma normal disjuntiva é definindo-o como o grupo composto pelas sentenças que pertencem a qualquer um dos seguintes 4 grupos:
+\begin{earg}
+		\item[\textsc{grupo 1} - letras sentenciais:] \ \\
+				$B_3, A, J_7, C, P_5,...$
+		\item[\textsc{grupo 2} - negações de sentenças do grupo anterior:] \ \\
+				$\enot A, \enot B_9, \enot K_2, \enot J,... $
+		\item[\textsc{grupo 3} - conjunção de sentenças dos grupos anteriores:] \ \\
+				$(B_3 \eand C), \ (\enot S \eand A \eand \enot C_1),...$
+		\item[\textsc{grupo 4} - disjunção de sentenças dos grupos anteriores:] \ \\ 
+				$(A \eand B) \eor (A \eand \enot B),\ \  A \eor (C \eand \enot P_{234} \eand P_{233} \eand Q) \eor \enot B,...$
+	\end{earg}
+Repare que estamos \emph{temporariamente} desrespeitando a gramática da LVF aqui. 
+Nos exemplos acima, empregamos conjunções e disjunções com mais de dois itens sem os necessários parênteses intermediários.
+Estritamente falando, `$(A \eand B \eand C)$', por exemplo, não é uma sentença gramaticalmente correta. Ela teria que ter sido escrita ou como `$((A \eand B) \eand C)$' ou como `$(A \eand (B \eand C))$'. 
+E o mesmo ocorre com as disjunções com mais de dois disjuntos.
+Vamos continuar desconsiderando os parênteses intermediários em disjunções e conjunções com mais de duas partes porque isso facilita o reconhecimento das sentenças na forma normal disjuntiva e, além disso, todos os diferentes modos possíveis de preencher os parênteses nestes casos levam a sentenças logicamente equivalentes.
 
-To further illustrate the idea of disjunctive normal form, we will introduce some more notation. We write `$\pm\meta{A}$' to indicate that $\meta{A}$ is an atomic sentence which may or may not be prefaced with an occurrence of negation. Then a sentence in disjunctive normal form has the following shape:
+A seguinte notação nos ajudará a termos uma intuição visual de como são as sentenças na forma normal disjuntiva.
+Escrevemos `$\pm \meta{A}$' para indicar que $\meta{A}$ é um literal, ou seja, $\meta{A}$ é uma letra sentencial ou a negação de uma letra sentencial.
+Então, uma sentença na forma normal disjuntiva tem o seguinte aspecto geral:
 	$$(\pm \meta{A}_1 \land \ldots \land \pm \meta{A}_i) \lor (\pm \meta{A}_{i+1} \land \ldots \land \pm\meta{A}_j) \lor \ldots \lor (\pm\meta{A}_{m+1} \land \ldots \land \pm \meta{A}_n)$$
-We now know what it is for a sentence to be in disjunctive normal form. The result that we are aiming at is:
-	\factoidbox{\label{thm:dnf}\textbf{Disjunctive Normal Form Theorem.} For any sentence, there is a logically equivalent sentence in disjunctive normal form.
+Veja que o aspecto mais geral de uma sentença na forma normal disjuntiva é o de uma disjunção de conjunções de literais.
+Mas esta é só uma intuição visual, já que qualquer sentença pertencente a  qualquer um dos quatro grupos descritos acima está na forma normal disjuntiva.
+
+As sentenças na forma normal disjuntiva satisfazem a seguinte propriedade:
+	\factoidbox{\label{thm:dnf}\textbf{Teorema da Formal Normal Disjuntiva.} Dada qualquer sentença da LVF, existe uma sentença logicamente equivalente a ela que está na forma normal disjuntiva.
 	}
-Henceforth, we will abbreviate `Disjunctive Normal Form' by `DNF'. 
+Daqui para a frente iremos abreviar a expressão  `forma normal disjuntiva' por `FND'. 
 
 
-\section{Proof of DNF Theorem via truth tables}
+\section{Prova do Teorema FND}
 \label{s:DNFTruthTable}
 
-Our first proof of the DNF Theorem employs truth tables. We will first illustrate the technique for finding an equivalent sentence in DNF, and then turn this illustration into a rigorous proof. 
+Usaremos as tabelas de verdade para construirmos uma prova do Teorema da FND.
+A ideia é que dada uma sentença qualquer, podemos utilizar sua tabela de verdade como fonte para produzir uma sentença na FND com tabela de verdade idêntica e que, por isso, será logicamente equivalente à sentença original.
+Vamos inicialmente ilustrar como isto é feito e, em seguida, transformar essa ilustração em uma prova rigorosa.
 
-Let's suppose we have some sentence, $\meta{S}$, which contains three atomic sentences, `$A$', `$B$' and `$C$'. The very first thing to do is fill out a complete truth table for $\meta{S}$. Maybe we end up with this:
+Considere uma sentença $\meta{S}$ e suponha que $\meta{S}$ contém três letras sentencias:  `$A$', `$B$' e `$C$'.
+O nosso primeiro passo é construir uma tabela de verdade completa para $\meta{S}$.
+Suponha que $\meta{S}$ seja tal que sua tabela de verdade resulte em:
 \begin{center}
 \begin{tabular}{c c c | c}
 $A$ & $B$ & $C$ & $\meta{S}$\\
 \hline
- T & T & T & T \\
- T & T & F & F \\
- T & F & T & T \\
- T & F & F & F \\
- F & T & T & F \\
- F & T & F & F \\
- F & F & T & T \\
- F & F & F & T
+ V & V & V & V \\
+ V & V & F & F \\
+ V & F & V & V \\
+ V & F & F & F \\
+ F & V & V & F \\
+ F & V & F & F \\
+ F & F & V & V \\
+ F & F & F & V
 \end{tabular}
 \end{center}
 %Now, consider a sentence, whose only connectives are negations and conjunctions, where no connective occurs within the scope of any negation, e.g.:
@@ -69,78 +106,131 @@ $A$ & $B$ & $C$ & $\meta{S}$\\
 %	$$(A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand C)$$
 %then it will be true on exactly \emph{two} lines of the truth table which describes all possible valuations of `$A$', `$B$' and `$C$'. 
 %
-As it happens, $\meta{S}$ is true on four lines of its truth table, namely lines 1, 3, 7 and 8. Corresponding to each of those lines, we will write down four sentences, whose only connectives are negations and conjunctions, where every negation has minimal scope:
+
+\noindent Note que $\meta{S}$ é verdadeira em quatro linhas da tabela de verdade: nas linhas 1, 3, 7 e 8.
+Na linha 1 de nossa tabela, as três letras sentencias `$A$', `$B$' e `$C$' são verdadeiras.
+Utilizamos esta informação para construir uma sentença que será verdadeira nesta linha e falsa em todas as outras.
+A sentença é: 
+		$$A \eand B \eand C$$
+Note que uma conjunção só é verdadeira quando todos os seus conjuntos são verdadeiros.
+Então esta conjunção só será verdadeira quando `$A$', `$B$' e `$C$' forem.
+Ou seja, só na linha 1 da tabela de $\meta{S}$.
+
+Fazemos a mesma coisa com as outras linhas da tabela em que $\meta{S}$ é verdadeira.
+A próxima delas  é a linha 3, onde as colunas de referência indicam que `$A$' é verdadeira, `$B$' é falsa e `$C$' é verdadeira.
+Utilizamos esta informação para construir uma sentença que será verdadeira nesta linha e falsa em todas as outras.
+A sentença é: 
+		$$A \eand \enot B \eand C$$
+Novamente, repare que uma conjunção só é verdadeira quando todos os seus conjuntos são verdadeiros. Então esta conjunção só será verdadeira quando `$A$' é verdadeira, `$B$' é falsa e `$C$' é verdadeira.
+Ou seja, só na linha 3 da tabela de $\meta{S}$.
+
+Fazendo a mesma coisa com as outras linhas da tabela nas quais $\meta{S}$ é verdadeira, as linhas 7 e 8, obtemos, respectivamente, as seguintes sentenças:
+\begin{center}
+		$\enot A \eand \enot B \eand C$ \\
+		$\enot A \eand \enot B \eand \enot C$
+\end{center}
+%$$\enot A \eand \enot B \eand C$$
+%$$\enot A \eand \enot B \eand \enot C$$
+Então, o que fizemos até aqui foi que, dada a tabela de verdade de $\meta{S}$, para cada uma das linhas em que $\meta{S}$ é verdeira, construímos uma sentença que é verdadeira nesta linha e falsa em todas as outras:
 	\begin{earg}
-		\item  `$A \eand B \eand C$'\hfill which is true on line 1 (and only then)
-		\item `$A \eand \enot B \eand C$' \hfill which is true on line 3 (and only then)
-		\item `$\enot A \eand \enot B \eand C$' \hfill which is true on line 7 (and only then)
-		\item `$\enot A \eand \enot B \eand \enot C$' \hfill which is true on line 8 (and only then)
+		\item  `$A \eand B \eand C$'\hfill verdadeira apenas na linha 1
+		\item `$A \eand \enot B \eand C$' \hfill verdadeira apenas na linha 3
+		\item `$\enot A \eand \enot B \eand C$' \hfill verdadeira apenas na linha 7
+		\item `$\enot A \eand \enot B \eand \enot C$' \hfill verdadeira apenas na linha 8
 	\end{earg}
-We now combine all of these conjunctions using~$\eor$, like so:
+Fazendo uma disjunção destas 4 sentenças obtemos:
 $$(A \eand B \eand C) \eor (A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand \enot C)$$
-This gives us a sentence in DNF which is true on exactly those lines where one of the disjuncts is true, i.e.\ it is true on (and only on) lines 1, 3, 7, and 8. So this sentence has exactly the same truth table as $\meta{S}$. So we have a sentence in DNF that is logically equivalent to $\meta{S}$, which is exactly what we wanted!
+Repare que, devido à sua construção, esta sentença terá uma tabela de verdade idêntica à da sentença $\meta{S}$. Será verdadeira exatamente nas linhas 1, 3, 7 e 8, e falsa nas demais; exatamente como  $\meta{S}$.
+Ou seja, esta sentença é logicamente equivalente a $\meta{S}$.
+Repare também que esta sentença é uma disjunção de conjunções de literais. Ou seja, é uma sentença na FND.
+Ela é, então, a sentença que queríamos.
+Uma sentença na FND que é logicamente equivalente a $\meta{S}$.
 
-Now, the strategy that we just adopted did not depend on the specifics of $\meta{S}$; it is perfectly general. Consequently, we can use it to obtain a simple proof of the DNF Theorem.
+Partimos de uma sentença qualquer e construímos uma sentença na FND logicamente equivalente à sentença original.
+A estratégia que utilizamos para esta construção não depende de nenhuma característica específica de $\meta{S}$.
+$\meta{S}$ é uma sentença qualquer e por isso nossa estratégia é completamente geral.
+Podemos, então, utilizá-la como base para construir uma prova do teorema da forma normal disjuntiva da seguinte forma.
 
-Pick any arbitrary sentence, $\meta{S}$, and let $\meta{A}_1, \ldots, \meta{A}_n$ be the atomic sentences that occur in $\meta{S}$. To obtain a sentence in DNF that is logically equivalent $\meta{S}$, we consider $\meta{S}$'s truth table. There are two cases to consider:
+\subsection{Explicitando a prova do teorema da FND}
+Considere  $\meta{S}$ uma sentença qualquer e $\meta{A}_1, \ldots, \meta{A}_n$ as letras sentenciais que ocorrem em $\meta{S}$.
+Considere, também, a tabela de verdade de $\meta{S}$.
+Para obter uma sentença na FND que seja logicamente equivalente a $\meta{S}$, há dois casos a tratar:
 	\begin{enumerate}
-		\item \emph{$\meta{S}$ is false on every line of its truth table.} Then, $\meta{S}$ is a contradiction. In that case, the contradiction $(\meta{A}_1 \eand \enot \meta{A}_1)$ is in DNF and logically equivalent to~$\meta{S}$. 
+		\item \emph{$\meta{S}$ é falsa em todas as linhas de sua tabela de verdade.} Neste caso  $\meta{S}$ é uma contradição.
+		A sentença $(\meta{A}_1 \eand \enot \meta{A}_1)$ satisfaz as condições que buscamos.
+		Está na FND e é logicamente equivalente a $\meta{S}$, já que também é uma contradição.
 	
-		\item \emph{$\meta{S}$ is true on at least one line of its truth table.}
-		For each line $i$ of the truth table, let $\meta{B}_i$ be a conjunction of the form 
-		$$(\pm\meta{A}_1 \land \ldots \land \pm\meta{A}_n)$$
-		where the following rules determine whether or not to include a negation in front of each atomic sentence:
+		\item\emph{$\meta{S}$ é verdadeira em pelo menos uma linha de sua tabela de verdade.}
+		Neste caso, para cada linha $i$ da tabela de verdade de $\meta{S}$, seja $\meta{B}_i$ uma conjunção da forma
+		$$(\pm\meta{A}_{1} \land \ldots \land \pm\meta{A}_{n})$$
+		onde cada literal $\pm\meta{A}_{j}$ será da forma $\meta{A}_{j}$ ou $\enot\meta{A}_{j}$ conforme as seguinte regras:
 			\begin{align*}
-				\meta{A}_m\text{ is a conjunct of }\meta{B}_i&\emph{ iff }\meta{A}_m\text{ is true on line }i\\
-				\enot\meta{A}_m\text{ is a conjunct of }\meta{B}_i&\emph{ iff }\meta{A}_m\text{ is false on line }i
+				\pm\meta{A}_{j}\text{ \ é \ }\meta{A}_{j}&\emph{ \ \ sse \ \ \ }\meta{A}_{j}\text{ é verdadeira na linha }i\\
+				\pm\meta{A}_{j}\text{ \ é \ }\enot\meta{A}_{j}&\emph{ \ \ sse \ \ \ }\meta{A}_{j}\text{ é falsa na linha }i
 			\end{align*}
-		Given these rules, $\meta{B_i}$ is true on (and only on) line $i$ of the truth table which considers all possible valuations of $\meta{A}_1, \ldots, \meta{A}_n$ (i.e.\ $\meta{S}$'s truth table). 
+		O objetivo destas regras é garantir que  $\meta{B_i}$ será verdadeira na (e somente na) linha $i$ da tabela de verdade de $\meta{S}$.
 		
-		Next, let $i_1$, $i_2$, \dots, $i_m$ be the numbers of the lines of the truth table where $\meta{S}$ is \emph{true}. Now let $\meta{D}$ be the sentence:
+		Considere agora  $i_1$, $i_2$, \dots, $i_m$ os números das linhas da tabela verdade onde $\meta{S}$ é \emph{verdadeira} e seja $\meta{D}$ a seguinte sentença:
 		$$\meta{B}_{i_1} \eor \meta{B}_{i_2} \eor \ldots \eor \meta{B}_{i_m}$$
-		Since $\meta{S}$ is true on at least one line of its truth table, $\meta{D}$ is indeed well-defined; and in the limiting case where $\meta{S}$ is true on exactly one line of its truth table, $\meta{D}$ is just $\meta{B}_{i_1}$, for some $i_1$.
+		Como estamos considerando o caso 2, em que $\meta{S}$ é verdadeiro em pelo menos uma linha de sua tabela de verdade, a sentença $\meta{D}$ está, por isso, bem definida.
+		$\meta{D}$ é, em geral, uma disjunção de conjunções de literais e no caso limite, quando $\meta{S}$ é verdadeira em apenas uma linha de sua tabela, $\meta{D}$ é uma conjunção de literais.
+		Seja qual for o caso, $\meta{D}$ está na FND.
 		
-		By construction, $\meta{D}$ is in DNF. Moreover, by construction, for each line~$i$ of the truth table: $\meta{S}$ is true on line $i$ of the truth table \emph{iff} one of $\meta{D}$'s disjuncts (namely, $\meta{B_i}$) is true on, and only on, line $i$. Hence $\meta{S}$ and $\meta{D}$ have the same truth table, and so are logically equivalent.
+		Além disso, a construção de $\meta{D}$ assegura também que para cada linha~$i$ da tabela de verdade:
+		$\meta{S}$ é verdadeira na linha $i$ da tabela verdade \emph{se e somente se} um dos disjuntos de $\meta{D}$ (a saber, $\meta{B_i}$) é verdadeiro na, e somente na, linha $i$.
+		Portanto, $\meta{S}$ e $\meta{D}$ têm a mesma tabela verdade e são, por isso, logicamente equivalentes.
 	\end{enumerate}
-	These two cases are exhaustive and, either way, we have a sentence in DNF that is logically equivalent to $\meta{S}$.
+	Esses dois casos esgotam todas as possibilidades para a tabela de $\meta{S}$ e em ambos obtivemos uma sentença na FND que é logicamente equivalente a $\meta{S}$.
+	Eles garantem, portanto, que dada qualquer sentença $\meta{S}$ há uma sentença na FND que é equivalente a $\meta{S}$. E isso finaliza a nossa prova do teorema da forma normal disjuntiva.
 
-So we have proved the DNF Theorem. Before we say any more, though, we should immediately flag that we are hereby returning to the austere definition of a (TFL) sentence, according to which we can assume that any conjunction has exactly two conjuncts, and any disjunction has exactly two disjuncts.
+%So we have proved the DNF Theorem. Before we say any more, though, we should immediately flag that we are hereby returning to the austere definition of a (TFL) sentence, according to which we can assume that any conjunction has exactly two conjuncts, and any disjunction has exactly two disjuncts.
 
 
-\section{Conjunctive Normal Form}
+
+\section{Forma Normal Conjuntiva}
 \label{s:CNF}
 
-So far in this chapter, we have discussed \emph{disjunctive} normal form. It may not come as a surprise to hear that there is also such a thing as \emph{conjunctive normal form} (CNF).
-
-The definition of CNF is exactly analogous to the definition of DNF. So, a sentence is in CNF \emph{iff} it meets all of the following conditions:
+Existem outras formas normais além da \emph{disjuntiva}.
+Uma que merece nossa atenção é a \emph{forma normal conjuntiva} (FNC).
+A definição de FNC é muito parecida à definição da FND.
+Uma sentença está na FNC se e somente se ela satisfaz todas as seguintes condições:
 	\begin{earg}
-		\item[(\textsc{cnf1})] No connectives occur in the sentence other than negations, conjunctions and disjunctions;
-		\item[(\textsc{cnf2})] Every occurrence of negation has minimal scope;
-		\item[(\textsc{cnf3})] No conjunction occurs within the scope of any disjunction. 
+		\item[(\textsc{fnc 1})] Nenhum conectivo que não seja negação, conjunção ou disjunção ocorre na sentença;
+		\item[(\textsc{fnc 2})] Qualquer negação que ocorra na sentença é negação de uma letra sentencial;
+		\item[(\textsc{fnc 3})] Qualquer disjunção que ocorra na sentença tem literais como disjuntos; ou seja, apenas sentenças atômicas ou negações de sentenças atômicas podem ser disjuntos das disjunções.
 	\end{earg}
-\newglossaryentry{conjunctive normal form}{
+
+\newglossaryentry{forma normal conjuntiva}{
   name = conjunctive normal form (DNF),
   text = conjunctive normal form,
   description = {a sentence which is a conjunction of disjunctions of atomic sentences or negated atomic sentences}
 }
-Generally, then, a sentence in CNF looks like this
-	$$(\pm \meta{A}_1 \lor \ldots \lor \pm \meta{A}_i) \land (\pm \meta{A}_{i+1} \lor \ldots \lor \pm\meta{A}_j) \land \ldots \land (\pm\meta{A}_{m+1} \lor\ldots \lor \pm \meta{A}_n)$$
-where each $\meta{A}_k$ is an atomic sentence.
+\noindent A definição da FNC é, portanto, absolutamente análoga à definição da FND, com a única diferença de que as conjunções e as disjunções trocaram de papel.
+Ou seja, enquanto a forma geral das sentenças na FND é a de uma \textit{disjunção de conjunções} de literais, o aspecto mais geral de uma sentença na FNC será o de uma \textit{conjunção de disjunções} de literais:
+$$(\pm \meta{A}_1 \lor \ldots \lor \pm \meta{A}_i) \land (\pm \meta{A}_{i+1} \lor \ldots \lor \pm\meta{A}_j) \land \ldots \land (\pm\meta{A}_{m+1} \lor\ldots \lor \pm \meta{A}_n)$$
+lembrando que a notação $\pm\meta{A}_k$ indica que $\meta{A}_k$ é um literal, ou seja, uma letra sentencial ou a negação de uma letra sentencial.
 
-We can now prove another normal form theorem:
-	\factoidbox{\label{thm:cnf}\textbf{Conjunctive Normal Form Theorem.} For any sentence, there is a logically equivalent sentence in conjunctive normal form.}
+Podemos agora propor e provar outro teorema sobre forma normal:
+	\factoidbox{\label{thm:cnf}\textbf{Teorma da Forma Normal Conjuntiva.} Dada qualquer sentença da LVF, existe uma sentença logicamente equivalente a ela que está na forma normal conjuntiva.}
 
-        
-	Given a TFL sentence, $\meta{S}$, we begin by writing down the complete truth table for $\meta{S}$.
-	
-	If $\meta{S}$ is \emph{true} on every line of the truth table, then $\meta{S}$ and $(\meta{A}_1 \eor \enot \meta{A}_1)$ are logically equivalent.
-	
-	If $\meta{S}$ is \emph{false} on at least one line of the truth table then, for every line on the truth table where $\meta{S}$ is false, write down a disjunction $(\pm\meta{A}_1 \eor \ldots \eor \pm\meta{A}_n)$ which is \emph{false} on (and only on) that line. Let $\meta{C}$ be the conjunction of all of these disjuncts; by construction, $\meta{C}$ is in CNF and $\meta{S}$ and $\meta{C}$ are logically equivalent.
-
+Seja $\meta{S}$ uma sentença LVF.
+	\begin{itemize}
+       	\item Começamos escrevendo a tabela verdade completa para $\meta{S}$.
+       	\item Se $\meta{S}$ é \emph{verdadeira} em todas as linhas da tabela verdade, então $(\meta{A}_1 \eor \enot \meta{A}_1)$ satisfaz o teorema, já que está na FNC e é logicamente equivalente a $\meta{S}$.
+       	\item Se $\meta{S}$ é \emph{falsa} em pelo menos uma linha da sua tabela de verdade, então, para cada linha onde $\meta{S}$ é falsa, escreva uma disjunção $(\pm\meta{A}_1 \eor \ldots \eor \pm\meta{A}_n)$ que seja \emph{falsa} nesta linha (e verdadeira em todas as outras).\footnote{
+       	Quais devem ser as regras para a construção desta sentença? Tente descobrir. O que queremos aqui é o inverso do que fizemos na prova do teorema da FND.
+       	Lá queríamos uma sentença verdadeira na linha especificada e falsa em todas as outras, que fosse uma conjunção de literais.
+       	Aqui queremos uma sentença que é uma disjunção de literais, e que seja falsa na linha especificada e verdadeira em todas as outras.}
+       	\item Considere $\meta{C}$ a conjunção de todas essas disjunções.
+       	A construção de $\meta{C}$ garante que ela está na FNC e que sua tabela de verdade é idêntica à de $\meta{S}$, e que, por isso, $\meta{C}$ e $\meta{S}$ são logicamente equivalentes.
+	\end{itemize}
+       
+ 
 \practiceproblems
 \problempart
 \label{pr.DNF}
-Consider the following sentences:
+Para cada uma das 6 sentenças abaixo apresente duas outras sentenças logicamente equivalentes à sentença original.
+Uma delas na FND e outra na FNC.
 	\begin{earg}
 		\item $(A \eif \enot B)$
 		\item $\enot (A \eiff B)$
@@ -149,155 +239,241 @@ Consider the following sentences:
 		\item $(\enot (A \eor B) \eiff ((\enot C \eand \enot A) \eif \enot B))$
 		\item $((\enot (A \eand \enot B) \eif C) \eand \enot (A \eand D))$
 	\end{earg}
-        For each sentence, find a logically equivalent sentence in DNF and one in CNF.
-        
-\section{The expressive adequacy of TFL}
 
-Of our connectives, $\enot$ attaches to a single sentences, and the others all combine exactly two sentences. We may also introduce the idea of an $n$-place connective. For example, we could consider a three-place connective, `$\heartsuit$', and stipulate that it is to have the following characteristic truth table:
+        
+\section{Adequação Expressiva da LVF}  
+
+Dos conectivos da LVF, a engação, `$\enot$', é um conectivo de um lugar (unário), ou seja, liga-se a uma única sentença, e todos os outros são conectivos de dois lugares (binários) que ligam-se a exatamente duas sentenças.
+Mas nós podemos cogitar sobre conectivos de \textit{n} lugares (\textit{n}-ários), que ligam-se a $n$ sentenças.
+Por exemplo, poderíamos propor um conectivo de três lugares, cujo símbolo poderia ser um coração, `$\heartsuit$', e estipular que ele tem a seguinte tabela de verdade característica:
 \begin{center}
 \begin{tabular}{c c c | c}
 $A$ & $B$ & $C$ & $\heartsuit(A,B,C)$\\
 \hline
- T & T & T & F \\
- T & T & F & T \\
- T & F & T & T \\
- T & F & F & F \\
- F & T & T & F \\
- F & T & F & T \\
- F & F & T & F \\
+ V & V & V & F \\
+ V & V & F & V \\
+ V & F & V & V \\
+ V & F & F & F \\
+ F & V & V & F \\
+ F & V & F & V \\
+ F & F & V & F \\
  F & F & F & F
 \end{tabular}
 \end{center}
-Probably this new connective would not correspond with any natural English expression (at least not in the way that `$\eand$' corresponds with `and'). But a question arises: if we wanted to employ a connective with this characteristic truth table, must we add a \emph{new} connective to TFL? Or can we get by with the connectives we \emph{already have}?
+Um tal conectivo, provavelmente, não corresponde nem aproximadamente a nenhuma expressão do português. Pelo menos não do jeito que `$\eand$' corresponde a `e', por exemplo.
+Mas independentemente disso, há uma questão interessante a ser feita aqui. Suponha que nós queremos construir uma sentença que diz exatamente o que `$\heartsuit(A,B,C)$' diz.
+Ou seja, suponha que queremos construir uma sentença tautologicamente equivalente a `$\heartsuit(A,B,C)$', cuja tabela é idêntica à tabela de `$\heartsuit(A,B,C)$'.
+Será que para fazer isso nós precisamos adicionar à LVF o conectivo  `$\heartsuit$' e sua tabela característica?
+Ou será que para dizer o que `$\heartsuit(A,B,C)$' diz, os conectivos que \emph{já existem} na LVF bastam?
 
-Let us make this question more precise. Say that some connectives are \define{jointly expressively adequate} \emph{iff}, for any possible truth table, there is a sentence containing only those connectives with that truth table.
+Vamos refazer esta pergunta de um modo mais geral e preciso.
+Antes disso, aqui vai um pouco de vocabulário.
+Chamaremos um conjunto de conectivos de \define{expressivamente adequado} se e somente se as sentenças construídas apenas com estes conectivos são capazes de nos dar todas as tabelas de verdade possíveis.
+Dito de outro modo, um conjunto de conectivos é \emph{expressivamente adequado} se e somente se dada qualquer tabela de verdade, existe alguma sentença com todos os seus conectivos pertencentes a este grupo e que tem exatamente esta tabela de verdade.
 
 \newglossaryentry{expressively adequate}{
   name = {expressive adequacy},
   text = {expressively adequate},
   description = {property of a collection of connectives which holds iff every possible truth table is the truth table of a sentence involving only those connectives}}
 
-The general point is, when we are armed with some jointly expressively adequate connectives, no characteristic truth table lies beyond our grasp. And in fact, we are in luck.
-	\factoidbox{\label{thm:ExpressiveAdequacy}\textbf{Expressive Adequacy Theorem.}
-The connectives of TFL are jointly expressively adequate. Indeed, the following pairs of connectives are jointly expressively adequate:
+O ponto geral aqui é que quando um conjunto de conectivos é expressivamente adequado, podemos, com ele, construir sentenças que nos dão qualquer tabela de verdade.
+Todas as tabelas de verdade são alcançáveis através de um conjunto de conectivos expressivamente adequado.
+Então, o modo mais geral e preciso da pergunta feita acima é: será que o conjunto total de conectivos da LVF, $\{\enot, \eand, \eor, \eif, \eiff\}$, é expressivamente adequado?
+	\factoidbox{\label{thm:ExpressiveAdequacy}\textbf{Teorema da Adequação Expressiva.}
+O conjunto dos conectivos da LVF é expressivamente adequado.
+Na verdade, cada um dos seguintes pares é um conjunto expressivamente adequado de conectivos:
 \begin{earg}
-\item\label{expressive:eor} `$\enot$' and `$\eor$'
-\item\label{expressive:eand} `$\enot$' and `$\eand$'
-\item\label{expressive:eif} `$\enot$' and `$\eif$'
+\item\label{expressive:eor} `$\enot$' e `$\eor$'
+\item\label{expressive:eand} `$\enot$' e `$\eand$'
+\item\label{expressive:eif} `$\enot$' e `$\eif$'
 \end{earg}}
 
-Given any truth table, we can use the method of proving the DNF Theorem (or the CNF Theorem) via truth tables, to write down a scheme which has the same truth table. For example, employing the truth table method for proving the DNF Theorem, we find that the following scheme has the same characteristic truth table as $\heartsuit(A,B,C)$, above:
+Dada qualquer tabela verdade, podemos usar o método empregado na prova do Teorema FND para obter uma sentença com os conectivos tradicionais da LVF cuja tabela de verdade é idêntica a esta dada.
+Por exemplo, aplicando aquele método à tabela de `$\heartsuit(A, B, C)$' apresentada acima,  obtemos a seguinte sentença que tem exatamente a mesma tabela de verdade:
 		$$(A \eand B \eand \enot C) \eor (A \eand \enot B \eand C) \eor (\enot A \eand B \eand \enot C)$$			
-It follows that the connectives of TFL are jointly expressively adequate. We now prove each of the subsidiary results.
-	
-\emph{Subsidiary Result \ref{expressive:eor}: expressive adequacy of `$\enot$' and `$\eor$'.} Observe that the scheme that we generate, using the truth table method of proving the DNF Theorem, will only contain the connectives `$\enot$', `$\eand$' and `$\eor$'. So it suffices to show that there is an equivalent scheme which contains only `$\enot$' and `$\eor$'. To show do this, we simply consider that
+Ou seja, o método empregado na prova do Teorema da FND nos garante que $\{\enot, \eand, \eor \}$ é um conjunto expressivamente adequado de conectivos, porque conseguimos produzir qualquer tabela de verdade com eles.
+Então é claro que o conjunto de todos os conectivos da LVF, que contém $\{\enot, \eand, \eor \}$, também é expressivamente adequado.
+Vamos agora provar alguns resultados subsidiários.
+
+\subsubsection{Resultado subsidiário \ref{expressive:eor}: adequação expressiva de `$\enot$' e `$\eor$'}	
+Observe que as sentenças que construímos através do método de prova do Teorema da FND sempre vão conter apenas os conectivos `$\enot$', `$\eand$' e `$\eor$'.
+Portanto, para demonstrar este resultado subsidiário é suficiente mostrar que dada qualquer sentença cujos conectivos sejam `$\enot$', `$\eand$' e `$\eor$', existe uma sentença tautologicamente equivalente na qual ocorrem apenas os conectivos `$\enot$' e `$\eor$'.
+E para mostrar isso, basta mostrar que
 		\begin{align*}
-		(\meta{A} \eand \meta{B}) & \text{\quad and \quad} \enot(\enot \meta{A} \eor\enot \meta{B})
+		(\meta{A} \eand \meta{B}) & \text{\quad \ e \quad} \enot(\enot \meta{A} \eor\enot \meta{B})
 		\end{align*}
-		are logically equivalent.
+		são logicamente equivalentes.\footnote{
+			Considere, por exemplo, uma sentença com os três tipos de conectivos, tal como$((\enot A \eand B) \eor \enot C)$.
+			É fácil ver como a aplicação desta equivalência transforma esta sentença em uma que contém apenas disjunção e negação:
+			$$((\enot A \eand B) \eor \enot C) \ \ \iff \ \ (\enot(\enot\enot A \eor\enot B) \eor \enot C)$$
+			a sentença da direita é equivalente à da esquerda e só emprega `$\enot$' e `$\eor$'.}
 
-\emph{Subsidiary Result \ref{expressive:eand}: expressive adequacy of `$\enot$' and `$\eand$'.} Exactly as in Subsidiary Result~\ref{expressive:eor}, making use of the fact that
+\subsubsection{Resultado subsidiário \ref{expressive:eand}: adequação expressiva de `$\enot$' e `$\eand$'}
+Exatamente como no caso anterior, como já provamos que $\{ \enot, \eand, \eor\}$ é expressivamente adequado, a equivalência 
 		\begin{align*}
-		(\meta{A} \eor \meta{B}) & \text{\quad and \quad}\enot(\enot \meta{A} \eand\enot \meta{B})
+		(\meta{A} \eor \meta{B}) & \text{\quad \ e \quad}\enot(\enot \meta{A} \eand\enot \meta{B})
 		\end{align*}
-are logically equivalent.
+é suficiente para mostrar que $\{ \enot, \eand\}$ também é, uma vez que nos dá um método para substituir disjunções por conjunções combinadas com negações.
 
-\emph{Subsidiary Result \ref{expressive:eif}: expressive adequacy of `$\enot$' and `$\eif$'.} Exactly as in Subsidiary Result~\ref{expressive:eor}, making use of these equivalences instead:
+\subsubsection{Resultado subsidiário \ref{expressive:eif}: adequação expressiva de `$\enot$' e `$\eif$'}
+%\emph{Subsidiary Result \ref{expressive:eif}: expressive adequacy of `$\enot$' and `$\eif$'.}
+Aqui também, como no caso dos resultados subsidiários anteriores, estas duas equivalências 
 		\begin{align*}
-		(\meta{A} \eor \meta{B}) &\text{\quad and \quad} (\enot \meta{A} \eif \meta{B})\\
-		(\meta{A} \eand \meta{B}) &\text{\quad and \quad} \enot(\meta{A} \eif \enot\meta{B})
+		(\meta{A} \eor \meta{B}) &\text{\quad \ e \quad} (\enot \meta{A} \eif \meta{B})\\
+		(\meta{A} \eand \meta{B}) &\text{\quad \ e \quad} \enot(\meta{A} \eif \enot\meta{B})
 		\end{align*}
-Alternatively, we could simply rely upon one of the other two subsidiary results, and (repeatedly) invoke only one of these two equivalences.
+são suficientes para demonstrar que $\{ \enot, \eif\}$ é expressivamente adequado, pois nos dão um método para transformar sentenças na FND em sentenças que contenham apenas a negação e o condicional como conectivos.
 
-In short, there is never any \emph{need} to add new connectives to TFL. Indeed, there is already some redundancy among the connectives we have: we could have made do with just two connectives, if we had been feeling really austere.
+Em resumo, não há qualquer \emph{necessidade} de adicionar novos conectivos à LVF.
+Estes resultados nos mostram, inclusive, que já existe alguma redundância entre os conectivos que temos: poderíamos ter nos contentado com apenas dois conectivos, se quiséssemos ser realmente austeros.
 
-\section{Individually expressively adequate connectives}
 
-In fact, some two-place connectives are \emph{individually} expressively adequate. These connectives are not standardly included in TFL, since they are rather cumbersome to use. But their existence shows that, if we had wanted to, we could have defined a truth-functional language that was expressively adequate, which contained only a single primitive connective.
+\section{Adequação expressiva com um único conectivo}
 
-The first such connective we will consider is `$\uparrow$', which has the following characteristic truth table. 
+Há alguns conectivos de dois lugares que são expressivamente adequados \emph{individualmente}; ou seja, podemos obter todas as tabelas de verdade com sentenças em que ocorrem apenas conectivos de um destes tipos.
+Eles não são incluídos nas apresentações típicas da LVF porque eles tornam as tabelas e as simbolizações das sentenças em português mais complicadas.
+Mas a sua existência mostra que, se quiséssemos, poderíamos ter definido a linguagem da LVF com apenas um conectivo e, mesmo assim, ela seria expressivamente adequada.
+
+Veremos dois destes conectivos.
+O primeiro deles, simbolizado por `$\uparrow$', tem a seguinte tabela verdade característica. 
 \begin{center}
 \begin{tabular}{c c | c}
 $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
 \hline
- T & T & F \\
- T & F & T \\
- F & T & T  \\
- F & F & T
+ V & V & F \\
+ V & F & V \\
+ F & V & V  \\
+ F & F & V
 \end{tabular}
 \end{center}
- This is often called `the Sheffer stroke', after Henry Sheffer, who used it to show how to reduce the number of logical connectives in Russell and Whitehead's \emph{Principia Mathematica}.\footnote{Sheffer, `A Set of Five Independent Postulates for Boolean Algebras, with application to logical constants,' (1913, \emph{Transactions of the American Mathematical Society} 14.4)} (In fact, Charles Sanders Peirce had anticipated Sheffer by about 30 years, but never published his results.)\footnote{See Peirce, `A Boolian Algebra with One Constant', which dates to c.1880; and Peirce's \emph{Collected Papers}, 4.264--5.} It is quite common, as well, to call it `nand', since its characteristic truth table is the negation of the truth table for `$\eand$'.
-\factoidbox{\label{prop:upexpressive}`$\uparrow$' is expressively adequate all by itself.}
 
-The Expressive Adequacy Theorem tells us that `$\enot$' and `$\eor$' are jointly expressively adequate. So it suffices to show that, given any scheme which contains only those two connectives, we can rewrite it as a logically equivalent scheme which contains only `$\uparrow$'. As in the proof of the subsidiary cases of the Expressive Adequacy Theorem, then, we simply apply the following equivalences:
+ Este conectivo costuma ser chamado de `o traço de Sheffer'\footnote{ em inglês: `\emph{the Sheffer stroke}'.}, em homenagem a Henry Sheffer, que o propôs e usou para mostrar como reduzir o número de conectivos lógicos da versão da LVF introduzida por Russell e Whitehead na famosa obra  \emph{Principia Mathematica}.\footnote{
+ Confira Sheffer, `A Set of Five Independent Postulates for Boolean Algebras, with application to logical constants' (1913, \emph{Transactions of the American Mathematical Society} 14.4)}
+ (Na verdade, Charles Sanders Peirce antecipou Sheffer em cerca de 30 anos, mas nunca publicou seus resultados.)\footnote{
+ Veja Peirce, `A Boolian Algebra with One Constant', que data de1880. Veja também, de Peirce, os seus  \emph{Collected Papers}, 4. 264--5.}
+ É bastante comum, também, chamar este conectivo de `\emph{nand}', já que sua tabela característica é equivalente à tabela da negação da conjunção (em inglês: \emph{not} $+$ \emph{and} $=$ \emph{nand}).
+\factoidbox{O conectivo \label{prop:upexpressive}`$\uparrow$' é, sozinho, expressivamente adequado.}
+
+
+
+O Teorema da Adequação Expressiva garante que o conjunto $\{\enot, \eor\}$ é expressivamente adequado.
+Portanto, é suficiente mostrar que, dada qualquer sentença que contém apenas esses dois conectivos, podemos reescrevê-la como uma sentença logicamente equivalente que contém apenas o `$\uparrow$'.
+Assim como fizemos na prova dos casos subsidiários do Teorema da Adequação Expressiva, aqui também basta aplicamos as seguintes equivalências
 		\begin{align*}
-			\enot \meta{A} &\text{\quad and \quad} (\meta{A} \uparrow \meta{A})\\
-			(\meta{A} \eor \meta{B}) & \text{\quad and \quad} ((\meta{A} \uparrow \meta{A}) \uparrow (\meta{B} \uparrow \meta{B}))
+			\enot \meta{A} &\text{\quad \ e \quad} (\meta{A} \uparrow \meta{A})\\
+			(\meta{A} \eor \meta{B}) & \text{\quad \ e \quad} ((\meta{A} \uparrow \meta{A}) \uparrow (\meta{B} \uparrow \meta{B}))
 		\end{align*}
-to the Subsidiary Result~\ref{expressive:eor}.
+ao Resultado Subsidiário~\ref{expressive:eor}.\footnote{Como exercício, use a tabela característica da `$\uparrow$' acima para verificar que estas sentenças são mesmo logicamente equivalentes.}
 
-Similarly, we can consider the connective `$\downarrow$':
+Da mesma forma, podemos considerar o conectivo `$\downarrow$', cuja tabela característica é:
 \begin{center}
 \begin{tabular}{c c | c}
 $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\downarrow} \meta{B}$\\
 \hline
- T & T & F \\
- T & F & F  \\
- F & T & F  \\
- F & F & T
+ V & V & F \\
+ V & F & F  \\
+ F & V & F  \\
+ F & F & V
 \end{tabular}
 \end{center}
-This is sometimes called the `Peirce arrow' (Peirce himself called it `ampheck'). More often, though, it is called `nor', since its characteristic truth table is the negation of `$\eor$', that is, of `neither \dots{} nor \dots'.
-	\factoidbox{
-	`$\downarrow$' is expressively adequate all by itself. }
+Este conectivo é algumas vezes chamado de `seta de Peirce' (apesar de o próprio Peirce o ter batizado de `\emph{ampheck}').
+Seu nome mais comum, no entanto, é `\emph{nor}', porque sua tabela de verdade característica é a negação da disjunção (\emph{not} $+$ \emph{or} $=$ \emph{nor}).
+	\factoidbox{O conectivo `$\downarrow$' é, sozinho, expressivamente adequado.}
 
-As in the previous result for $\uparrow$, although invoking the equivalences:
+Analogamente ao resultado anterior para o `$\uparrow$', as equivalências
 		\begin{align*}
-			\enot \meta{A} &\text{\quad and \quad} (\meta{A} \downarrow \meta{A})\\
-			(\meta{A} \eand \meta{B}) & \text{\quad and \quad} ((\meta{A} \downarrow \meta{A}) \downarrow (\meta{B} \downarrow \meta{B}))
+			\enot \meta{A} &\text{\quad \ e \quad} (\meta{A} \downarrow \meta{A})\\
+			(\meta{A} \eand \meta{B}) & \text{\quad \ e \quad} ((\meta{A} \downarrow \meta{A}) \downarrow (\meta{B} \downarrow \meta{B}))
 		\end{align*}
-and Subsidiary Result~\ref{expressive:eand}.
+aplicadas ao Resultado Subsidiário~\ref{expressive:eand} são suficientes para demonstrar a adequação expressiva de $\downarrow$.
 
 
-\section{Failures of expressive adequacy}
+\section{Identificando a inadequação expressiva}
 
-In fact, the \emph{only} two-place connectives which are individually expressively adequate are `$\uparrow$' and `$\downarrow$'. But how would we show this? More generally, how can we show that some connectives are \emph{not} jointly expressively adequate? 
+De fato, os \emph{únicos} conectivos binários que são expressivamente adequados individualmente são `$\uparrow$' e `$\downarrow$'.
+Mas como podemos demonstrar isso?
+Ou ainda, como podemos mostrar que um certo conjunto de conectivos \emph{não é} expressivamente adequado?
  
-The obvious thing to do is to try to find some truth table which we \emph{cannot} express, using just the given connectives. But there is a bit of an art to this.
+O modo mais direto de fazer isso é tentar encontrar alguma tabela de verdade \emph{impossível} de ser expressa usando apenas os conectivos do conjunto dado.
+Mas essa não é uma tarefa mecânica.
+Ela envolve um pouco de arte.
 
-To make this concrete, let's consider the question of whether `$\eor$' is expressively adequate all by itself. After a little reflection, it should be clear that it is not. In particular, it should be clear that any scheme which only contains disjunctions cannot have the same truth table as negation, i.e.:
+Vejamos um exemplo concreto.
+Será que o conjunto unitário $\{\eor\}$ é expressivamente adequado?
+Um pouco de reflexão nos convencerá de que a resposta é não.
+Não parece possível construir uma sentença que tenha apenas disjunções e cuja tabela de verdade seja idêntica à tabela característica da negação.
 				\begin{center}
 				\begin{tabular}{c | c}
 				$\meta{A}$ & $\enot \meta{A}$\\
 				\hline
-				 T & F \\
-				 F & T
+				 V & F \\
+				 F & V
 				\end{tabular}
 				\end{center}
-The intuitive reason, why this should be so, is simple: the top line of the desired truth table needs to have the value False; but the top line of any truth table for a scheme which \emph{only} contains $\eor$ will always be True. The same is true for $\eand$, $\eif$, and $\eiff$.
- 	\factoidbox{
-		`$\eor$', `$\eand$', `$\eif$', and `$\eiff$' are not expressively adequate by themselves.}
+A razão intuitiva deste fato é simples: o valor da primeira linha da tabela de verdade da negação é o  Falso, mas o valor da primeira linha da tabela de qualquer sentença que tenha \emph{apenas} disjunções ($\eor$) sempre será o Verdadeiro.
+A negação leva o Verdadeiro no Falso, mas nenhuma combinação de disjunções fará isso.
+As disjunções sempre levam o Verdadeiro no Verdadeiro.
+O mesmo raciocínio vale para a conjunção, o condicional e o bicondicional.
+ 	\factoidbox{Nenhum dos conectivos `$\eor$', `$\eand$', `$\eif$', e `$\eiff$' é expressivamente adequado isoladamente.}
 
-In fact, the following is true:
+De fato, a seguinte afirmação é verdadeira:        
         
-\factoidbox{The \emph{only} two-place connectives that are expressively adequate by themselves are `$\uparrow$' and `$\downarrow$'. }
+\factoidbox{Os \emph{únicos} conectivos binários que são expressivamente adequados isoladamente são `$\uparrow$' e `$\downarrow$'. }        
 
-This is of course harder to prove than for the primitive connectives. For instance, the ``exclusive or'' connective does not have a T in the first line of its characteristic truth table, and so the method used above no longer suffices to show that it cannot express all truth tables.  It is also harder to show that, e.g., `$\eiff$' and `$\enot$' \emph{together} are not expressively adequate.
+Isso, no entanto, é mais difícil de provar do que a inadequação expressiva dos conectivos primitivos tomados isoladamente.
+Por exemplo, o conectivo ``ou exclusivo'' não tem um V na primeira linha de sua tabela de verdade característica e, portanto, o método usado acima não funciona para mostrar que ele não pode expressar todas as tabelas de verdade.
+Também é mais difícil mostrar, por exemplo, que  $\{\eiff, \enot\}$ não é um conjunto expressivamente adequado.
 
 
 \chapter{Correção}\label{ch:Soundness}
 
-In this chapter we relate TFL's semantics to its natural deduction \emph{proof system} (as defined in Part~\ref{ch.NDTFL}). We will prove that the formal proof system is safe: you can only prove sentences from premises from which they actually follow.
-Intuitively, a formal proof system is sound iff it does not allow you to prove any invalid arguments. This is obviously a highly desirable property. It tells us that our proof system will never lead us astray. Indeed, if our proof system were not sound, then we would not be able to trust our proofs. The aim of this chapter is to prove that our proof system is sound.
+Neste capítulo vamos relacionar os dois aspectos distintos nos quais estudamos a LVF: a sua \textit{semântica}, dada pelas tabelas de verdade (estudadas  na Parte~\ref{ch.TruthTables}), e o seu \emph{sistema formal}, dado pelo sistema de dedução natural (apresentado na Parte~\ref {ch.NDTFL}).
+Nós vamos comprovar que o sistema formal da LVF é \textit{correto}: através dele só conseguimos provar formalmente a validade de argumentos que são de fato válidos quando analisados via tabelas de verdade.
+Intuitivamente, um sistema formal é correto quando é impossível, através dele, provar quaisquer argumentos inválidos.
+Obviamente esta é uma propriedade altamente desejável.
+Ela nos diz, quando satisfeita, que o sistema formal de provas nunca nos levará ao erro.
+Na verdade, se o nosso sistema formal não fosse correto, nós não poderíamos confiar nas provas feitas através dele.
+O objetivo deste capítulo é provar que o sistema formal de provas da LVF apresentado na Parte~\ref {ch.NDTFL} é correto.
 
-Let's make the idea more precise. We'll abbreviate a list of sentences using the greek letter $\Gamma$ (`gamma'). A formal proof system is \define{sound} (relative to a given semantics) \emph{iff}, whenever there is a formal proof of $\meta{C}$ from assumptions among $\Gamma$, then $\Gamma$ genuinely entails $\meta{C}$ (given that semantics). Otherwise put, to prove that TFL's proof system is sound, we need to prove the following
+Vamos tornar essa ideia mais precisa.
+Em primeiro lugar, um pouco de notação.
+\begin{itemize}
+	\item Nós vamos usar a letra maiúscula grega $\Gamma$ (gama) como abreviação para uma lista qualquer de sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$.
+	\item Vamos também nos lembrar que o símbolo `$\entails$' indica \textit{sustentação}. Ou seja, $\Gamma \entails \meta{C}$ denota que as sentenças de $\Gamma$ sustentam $\meta{C}$ e, por isso, o argumento $\Gamma \therefore \meta{C}$ é válido.\footnote{
+		Dito de um modo ainda mais detalhado, `$\Gamma \entails \meta{C}$' denota que qualquer valoração (linha de tabela de verdade) na qual todas as sentenças de $\Gamma$ são verdadeiras também torna $\meta{C}$ verdadeira.}
+	\item Por fim, vamos nos lembrar que símbolo `$\proves$' indica a existência de uma \textit{prova} formal. Ou seja, $\Gamma \proves \meta{C}$ denota que há uma prova que termina com $\meta{C}$ cujas suposições não descartadas estão todas entre as sentenças de $\Gamma$.	
+\end{itemize}
+Dizemos, então, que um sistema formal de provas é \define{correto} (com relação a uma dada semântica) \emph{se e somente se}, sempre que houver uma prova formal de $\meta{C}$ cujas suposições não descartadas estão todas em $\Gamma$, então $\Gamma$ sustenta $\meta{C}$ (na semântica considerada). 
+Usando as notações de metalinguagem que acabamos de relembrar, podemos dizer, então, que provar que o sistema formal da LVF é correto equivale a provar o seguinte teorema:
 
-\begin{factoidboxe}\textbf{Soundness Theorem.} For any sentences $\Gamma$ and $\meta{C}$: if $\Gamma\proves\meta{C}$, then $\Gamma \entails\meta{C}$
+\begin{factoidboxe}\textbf
+	{Teorema da Correção.} Para quaisquer sentenças $\Gamma$ e $\meta{C}$: se $\Gamma\proves\meta{C}$, então $\Gamma \entails\meta{C}$.
 \end{factoidboxe}
 
-To prove this, we will check each of the rules of TFL's proof system individually. We want to show that no application of those rules ever leads us astray. Since a proof just involves repeated application of those rules, this will show that no proof ever leads us astray. Or at least, that is the general idea.
+Para provar este teorema usaremos a seguinte ideia geral:
+verificaremos individualmente cada uma das regras do sistema formal da LVF e mostraremos que nenhuma aplicação dessas regras nos leva ao erro.
+Como uma prova envolve apenas repetidas aplicações destas regras, esta verificação será suficiente para mostrar que nenhuma prova jamais nos levará ao erro.
 
-To begin with, we must make the idea of `leading us astray' more precise. Say that a line of a proof is \define{shiny} iff the assumptions on which that line depends tautologically entail the sentence on that line.\footnote{The word `shiny' is not standard among logicians.} To illustrate the idea, consider the following:
+%====== versão modificada em 04-04-2021 ======%
+Em primeiro lugar, precisamos tornar mais precisa essa idéia de ``levar ao erro''.
+Vamos chamar uma linha de uma prova de \define{inocente} se a sentença desta linha é \textit{sustentada} pelas suposições das quais esta linha \textit{depende}.
+
+Lembremos que uma linha depende de todas as suposições ainda não descartadas em linhas anteriores da prova.
+Considere, por exemplo, que $\meta{S}_1, \ldots, \meta{S}_k$ sejam todas as suposições ainda não descartadas por linhas anteriores à linha $n$ em uma prova, e que $\meta{A}_n$ seja a sentença da linha $n$.
+Dizer que a linha $n$ é inocente, ou seja, que ela é sustentada pelas suposições das quais ela depende, equivale a afirmar que $\meta{S}_1, \ldots, \meta{S}_k \entails \meta{A}_n$.
+
+Vale a pena, também, notar que uma suposição sempre depende dela mesma e, por isso, como toda sentença sustenta a si mesma (para qualquer $\meta{A}$ e $\Gamma$, vale $\Gamma, \meta{A} \entails \meta{A}$), a linha de qualquer suposição em qualquer prova sempre é uma linha inocente.
+
+Para ilustrar essa ideia de inocência das linhas, considere a seguinte prova:
+%======  04-04-2021 ======%
+%====== versão até 04-04-2021 ======% 
+%Em primeiro lugar, precisamos tornar mais precisa essa idéia de ``levar ao erro''.
+%Vamos chamar uma linha de uma prova de \define{inocente} se a sentença desta linha é \textit{sustentada} pelas suposições das quais esta linha \textit{depende}.\footnote{
+%	Lembremos que uma linha depende de todas as suposições ainda não descartadas em linhas anteriores da prova.
+%	Considere, por exemplo, que $\meta{S}_1, \ldots, \meta{S}_k$ sejam todas as suposições ainda não descartadas por linhas anteriores à linha $n$ em uma prova, e que $\meta{A}_n$ seja a sentença da linha $n$.
+%	Então dizer que a linha $n$ é inocente, ou seja, que ela é sustentada pelas pelas suposições das quais ela depende, equivale a afirmar que $\meta{S}_1, \ldots, \meta{S}_k \entails \meta{A}_n$.
+%	Vale a pena, também, notar que uma suposição sempre depende dela mesma e, por isso, como toda sentença sustenta a si mesma (para qualquer $\meta{A}$ e $\Gamma$, vale $\Gamma, \meta{A} \entails \meta{A}$), a linha de qualquer suposição em qualquer prova é uma linha inocente.}
+%Para ilustrar essa ideia, considere a seguinte prova:
 	\begin{proof}
 		\hypo{fgh}{F\eif(G\eand H)}
 		\open
@@ -307,75 +483,180 @@ To begin with, we must make the idea of `leading us astray' more precise. Say th
 		\close
 		\have{fg}{F \eif G}\ci{f-g}
 	\end{proof}\noindent\noindent
-Line $1$ is shiny iff $F \eif (G \eand H) \entails F \eif (G \eand H)$. You should be easily convinced that line $1$ is, indeed, shiny! Similarly, line $4$ is shiny iff $F \eif (G \eand H), F \entails G$. Again, it is easy to check that line $4$ is shiny. As is every line in this TFL-proof. We want to show that this is no coincidence. That is, we want to prove:
-	\begin{factoidboxe}\textbf{Shininess Lemma.}
-		Every line of every TFL-proof is shiny.
+Como as linhas $1$ e $2$ são suposições, cada uma delas depende de si e são, como vimos, inocentes, uma vez que
+	$$F \eif (G \eand H) \ \entails \ F \eif (G \eand H)$$
+	$$F \eif (G \eand H), \ F \ \entails \ F$$ 
+As linhas $3$ e $4$, por sua vez, serão inocentes se elas forem sustentadas pelas suposições não descartadas neste setor da prova.
+Ou seja, as linhas $3$ e $4$ serão inocentes, respectivmente, se
+	$$F \eif (G \eand H), \ F \ \entails \ G \eand F$$
+	$$F \eif (G \eand H), \ F \ \entails \ G$$
+Não é difícil verificar que isso de fato se dá nos dois casos.
+Com relação à linha $5$, repare que ela depende apenas da suposição da linha $1$, uma vez que a suposição da linha $2$ foi descartada na passagem da linha $4$ para a $5$, quando sua subprova foi finalizada.
+Então a linha $5$ será inocente se
+	$$F \eif (G \eand H) \entails F \eif G$$
+o que, novamente, não é difícil de verificar em uma tabela de verdade.
+O que nós queremos mostrar é que não é por mera coinciência que todas as linhas desta prova são inocentes.
+	\begin{factoidboxe}\textbf{Lema da Inocência.}
+		Todas as linhas de qualquer prova formal da LVF são inocentes.
 	\end{factoidboxe}\noindent
-Then we will know that we have never gone astray, on any line of a proof. Indeed, given the Shininess Lemma, it will be easy to prove the Soundness Theorem:
+Se todas as linhas de todas as provas que podem ser feitas na LVF são inocentes, então nós podemos confiar que as provas nunca vão nos desviar do caminho e nos levar ao erro.
+De fato, é bem simples provar o Teorema da Correção quando assumimos como suposição que o Lema da Inocência vale.
 
-\emph{Proof.} Suppose $\Gamma \proves \meta{C}$. Then there is a TFL-proof, with $\meta{C}$ appearing on its last line, whose only undischarged assumptions are among $\Gamma$. The Shininess Lemma tells us that every line on every TFL-proof is shiny. So this last line is shiny, i.e.\ $\Gamma \entails \meta{C}$. QED
+\emph{Prova do Teorema da Correção}. Suponha que $\Gamma \proves \meta{C}$. Então, há uma prova na LVF cuja sentença da última linha é $\meta{C}$ e cujas suposições não descartadas estão todas entre as sentenças de $\Gamma$.
+O Lema da Inocência nos garante que cada linha desta prova é inocente.
+Em particular, a última linha desta prova é inocente, ou seja, é consequência tautológica das suposições não descartadas e, portanto, $\Gamma \entails \meta{C}$.
+Veja que partimos de $\Gamma \proves \meta{C}$ e chegamos em $\Gamma \entails \meta{C}$, o que demonstra o Teorema da Correção.$\blacklozenge$\footnote{
+	Uma prática comum em livros de matemática e lógica é indicar o fim das demonstrações (provas) com alguma marca. Vamos, neste capítulo, nos exercitar nesta prática, usando o símbolo `$\blacklozenge$' para fazer este papel.}
 
-It remains to prove the Shininess Lemma. 
+Resta agora provar o Lema da Inocência.
+Para fazer isso começamos observando que cada linha de qualquer prova da LVF ou é uma suposição, ou é obtida aplicando-se alguma regra.
+Como todas as suposições são por definição inocentes, o que precisamos mostrar é que nenhuma aplicação de qualquer regra de inferência nos levará ao erro.
+Para tornar essa ideia mais precisa, vamos definir mais uma noção, a de \define{regra confiavel}.
+Dada uma prova qualquer da LVF e uma aplicação de regra qualquer (digamos que a linha $n$ de uma prova contém a sentença $\meta{A}$ obtida pela aplicação de uma regra qualquer G)
+		   \begin{proof}
+			   \have[\vdots]{ab}{\ \vdots}
+			   \have[n]{a}{\meta{\ A} \ \ \ \textit{regra G}}
+			   \have[\vdots]{ab}{\ \vdots}
+		   \end{proof}	   
+nós dizemos que a regra G é uma \emph{regra confiável} se e somente se em qualquer uso desta regra, em qualquer prova, se todas as linhas da prova anteriores à linha $n$ são inocentes, então a linha $n$ também é inocente.
 
-To do this, we observe that every line of any TFL-proof is obtained by applying some rule. So what we want to show is that no application of a rule of TFL's proof system will lead us astray. More precisely, say that a rule of inference is \define{rule-sound} \emph{iff} for all TFL-proofs, if we obtain a line on a TFL-proof by applying that rule, and every earlier line in the TFL-proof is shiny, then our new line is also shiny. What we need to show is that \emph{every} rule in TFL's proof system is rule-sound. 
+Então, intuitivamente, uma regra é confiável quando sempre que ela é aplicada em uma prova com todas as linhas anteriores inocentes, a linha resultante de sua aplicação também será inocente.
+O que nós queremos é mostrar que \emph{todas} as regras do sistema formal da LVF são regras confiáveis.
+Antes de fazer isso, vejamos como a prova do Lema da Inocência fica simples quando assumimos que todas as regras de inferência da LVF são confiáveis.
+	
+	
+\emph{Prova do Lema da Inocência}
+\begin{itemize}
+	\item A primeira linha de qualquer prova é sempre uma suposição e, conforme já notamos, toda suposição é inocente. Portanto a primeira linha de qualquer prova é inocente.
+	\item E a segunda linha de uma prova qualquer? Ou ela é uma suposição ou foi obtida através da aplicação de uma regra de inferência.
+		\begin{itemize} 
+			\item Se a $2$ª linha for uma suposição, ela também será inocente.
+			\item Se a $2$ª linha for obtida pela aplicação de uma regra, como estamos assumindo que todas as regras são confiáveis, e já vimos que a $1$ª linha é inocente, então a segunda linha também será inocente.
+			\item Ou seja, todas as linhas de todas as provas de duas linhas são inocentes.
+		\end{itemize}
+	\item Até aqui mostramos que qualquer prova de uma linha tem sua linha inocente, e qualquer prova de duas linhas tem as suas duas linhas inocentes.
+	\item Mas e as provas de $3$ linhas? O caso é idêntico ao das provas de $2$ linhas. Ou a $3$ª linha é uma suposição ou foi obtida através da aplicação de uma regra de inferência.
+		\begin{itemize} 
+			\item Se a $3$ª linha for uma suposição, ela também será inocente.
+			\item Se a $3$ª linha for obtida pela aplicação de uma regra, como estamos assumindo que todas as regras são confiáveis, e já vimos que todas as linhas de todas as provas de $2$ linhas são inocentes, então a terceira linha também será inocente.
+			\item Ou seja, todas as linhas de todas as provas de três linhas são inocentes.
+		\end{itemize}
+	\item Bem, acho que você já pegou o espírito da coisa. A mesma situação vai acontecer com as provas de $4$ linhas, com as de $5$ linhas,... e com as de $n$ linhas, para qualquer número finito $n$ de linhas. Ou seja, todas as linhas de todas as provas da LVF são inocentes, o que demonstra o Lema da Inocência.$\blacklozenge$\footnote{
+		Esta prova do Lema da Inocência poderia ser apresentada de modo mais preciso e conciso se explicitássemos o uso que fazemos do \textit{princípio da indução finita} (PIF). O PIF fornece um poderoso método de prova muito empregado nas demonstrações de resultados metatetóricos sobre a lógica. Optamos por ocultar a referência explícita ao PIF nesta prova por razões de economia didática. Nós mencionamos este princípio anterioremente no \textit{Capítulo 31 - Correção e Completude}, quando falamos ali de \textit{provas indutivas}. Vale apena rever.}
+\end{itemize}
 
-We will do this in the next section. But having demonstrated the rule-soundness of every rule, the Shininess Lemma will follow immediately:
+O único passo que ainda falta para completarmos de vez a prova do Teorema da Correção é provar que todas as regras de inferência da LVF são mesmo confiáveis.
+Apesar de não ser especialmente difícil, esta é uma prova longa, já que a LVF tem muitas regras de inferência e precisaremos verificar a confiabilidade de cada regra individualmente.
+Para encurtar um pouco as coisas, vamos introduzir mais algumas notações convenientes:
+\begin{itemize}
+	\item `$\Delta_i$' abreviará a lista das suposições (se houver) das quais a linha $i$ da prova analisada depende.
+	\item `$\meta{S}_i$' denotará de modo genérico a sentença da linha $i$ da prova analisada.
+	\item Com estas duas notações, podemos fazer a seguinte abreviação:
+		\begin{center}
+			`a linha $i$ é inocente' \ \ \ \ \ \textit{abrevia-se por} \ \ \ \ \ `$\Delta_i \entails \meta{S}_i$'
+		\end{center}
+\end{itemize}
 
-\emph{Proof.} Fix any line, line $n$, on any TFL-proof. The sentence written on line $n$ must be obtained using a formal inference rule which is rule-sound. This is to say that, if every earlier line is shiny, then line $n$ itself is shiny. Hence, by strong induction on the length of TFL-proofs, every line of every TFL-proof is shiny. QED
+Bem, nós queremos demonstrar que todas as regras da LVF são confiáveis, ou seja, queremos demonstrar que a sentença resultante da aplicação de qualquer regra em uma linha $n$ qualquer de uma prova será uma sentença inocente sempre que todas as sentenças das linhas $i$, com $i<n$, nesta prova, também forem todas inocentes.
+Com as notações recém introduzidas podemos denotar genericamente isso que queremos demonstrar como:
+\begin{center}
+	Se  \ ({para todo}  $i<n$, $\Delta_i \entails \meta{S}_i$) \ \ então \ \ $\Delta_n \entails \meta{S}_n$
+\end{center}
 
-Note that this proof appeals to a principle of strong induction on the length of TFL-proofs. This is the first time we have seen that principle, and you should pause to confirm that it is, indeed, justified.
+Aqui vale a pena sermos bem minuciosos.
+Repare que esta notação está fazendo uma afirmação condicional.
+Seu antecedente (para todo  $i<n$, $\Delta_i \entails \meta{S}_i$) equivale à afirmação de que todas as linhas anteriores à linha $n$ são inocentes, e seu consequente ($\Delta_n \entails \meta{S}_n$) equivale à afirmação de que a linha $n$ é inocente.
+Ou seja, a notação  `se  \ ({para todo}  $i<n$, $\Delta_i \entails \meta{S}_i$) \ \ então \ \ $\Delta_n \entails \meta{S}_n$' afirma precisamente a propriedade da confiabilidade que queremos demonstrar que é satisfeita por todas as regras de inferência da LVF.
 
-It remains to show that every rule is rule-sound. This is not difficult, but it is time-consuming, since we need to check each rule individually, and TFL's proof system has plenty of rules! To speed up the process marginally, we will introduce a convenient abbreviation: `$\Delta_i$' (`delta') will abbreviate the assumptions (if any) on which line $i$ depends in our TFL-proof (context will indicate which TFL-proof we have in mind).
+A ideia é enunciar um lema para cada regra de inferência da LVF e provar que cada uma delas é confiável.
+Então, mãos à obra.
 
-\begin{factoidboxe}Introducing an assumption is rule-sound.
+\begin{factoidboxe}
+	$\eand$I \ é uma regra de inferência confiável.
 \end{factoidboxe}
 
-If $\meta{A}$ is introduced as an assumption on line $n$, then $\meta{A}$ is among $\Delta_n$, and so $\Delta_n \entails \meta{A}$.
-
-\begin{factoidboxe}$\eand$I is rule-sound.
-\end{factoidboxe}
-
-\emph{Proof.} Consider any application of $\eand$I in any TFL-proof, i.e., something like:
+\noindent\emph{Prova.} Considere uma aplicação qualquer de $\eand$I em uma prova qualquer da LVF.
+Esta aplicação genérica pode ser representada esquematicamente como:
 \begin{proof}
 	\have[i]{a}{\meta{A}}
 	\have[j]{b}{\meta{B}}
 	\have[n]{c}{\meta{A}\eand\meta{B}} \ai{a, b}
 \end{proof}\noindent
-To show that $\eand$I is rule-sound, we assume that every line before line $n$ is shiny; and we aim to show that line $n$ is shiny, i.e.\ that $\Delta_n \entails \meta{A} \eand \meta{B}$. 
+Aplicando a a notação recém introduzida nesta representação, o que temos que demonstrar é:
+\begin{itemize}
+	\item[(*)]  Se  \ ({para todo}  $k<n$, $\Delta_k \entails \meta{S}_k$) \ \ então \ \ $\Delta_n \entails \meta{A} \eand \meta{B}$
+\end{itemize}
+Começamos, então, assumindo o antecedente de (*) como suposição.
+\begin{itemize}
+	\item[(1)] Para todo  $k<n$, $\Delta_k \entails \meta{S}_k$
+\end{itemize}
+Pelo esquema da regra apresentado acima e por (1) é claro que
+\begin{itemize}
+	\item[(2)] $\Delta_i \entails \meta{A}$
+\end{itemize}
+Além disso, o esquema da regra também nos ajuda ver que
+\begin{itemize}
+	\item[(3)] todas as sentenças de $\Delta_i$ estão também em $\Delta_n$.\footnote{
+		$\Delta_i$ só poderia ter alguma sentença ausente em $\Delta_n$ se a linha $i$ estivesse em uma subprova finalizada em linha anterior à linha $n$. Mas se este fosse o caso, nós não poderíamos usar a linha $i$ na aplicação da regra $\eand$I.}
+\end{itemize}
+Então, de (2) e (3) podemos afirmar que
+\begin{itemize}
+	\item[(4)] $\Delta_n \entails \meta{A}$
+\end{itemize}
+Um raciocínio exatamente análogo garante que
+\begin{itemize}
+	\item[(5)]  $\Delta_n \entails \meta{B}$
+\end{itemize}
+Mas de (4) e (5) podemos concluir que
+\begin{itemize}
+	\item[(6)]  $\Delta_n \entails \meta{A} \eand \meta{B}$ \footnote{
+		Para entender melhor este passo da prova considere $v$ uma valoração qualquer que faz todas as sentenças de $\Delta_n$ verdadeiras.
+		Como $\Delta_n \entails \meta{A}$ e $\Delta_n \entails \meta{B}$, então $v$ também faz $\meta{A}$ e $\meta{B}$ verdadeiras.
+		Logo, é claro que $v$ faz $\meta{A} \eand \meta{B}$ verdadeira.
+		Ou seja, qualquer valoração que faz todas as sentenças de  $\Delta_n$ verdadeiras também faz $\meta{A} \eand \meta{B}$ verdadeira.
+		Portanto $\Delta_n \entails \meta{A} \eand \meta{B}$.}
+\end{itemize}
+Veja que nós assumimos (1), o antecedente de (*), como suposição e obtivemos (6), o consequente de (*). Isso prova (*) e finaliza a demonstração do Lema.$\blacklozenge$
 
-So, let $v$ be any valuation that makes all of $\Delta_{n}$ true. 
+Todos os lemas restantes, que estabelecem a confiabilidade das demais regras da LVF terão, essencialmente, a mesma estrutura que este.
 
-We first show that $v$ makes $\meta{A}$ true. To prove this, note that all of $\Delta_i$ are among $\Delta_{n}$. By hypothesis, line $i$ is shiny. So any valuation that makes all of $\Delta_i$ true makes $\meta{A}$ true. Since $v$ makes all of $\Delta_i$ true, it makes $\meta{A}$ true too.
-
-We can similarly see that $v$ makes $\meta{B}$ true. 
-
-So $v$ makes $\meta{A}$ true and $v$ makes $\meta{B}$ true. Consequently, $v$ makes $\meta{A}\eand\meta{B}$ true. So any valuation that makes all of the sentences among $\Delta_{n}$ true also makes $\meta{A} \eand \meta{B}$ true. That is: line $n$ is shiny. QED
-
-
-All of the remaining lemmas establishing rule-soundness will have, essentially, the same structure as this one did. 
-
-\begin{factoidboxe}$\eand$E is rule-sound.
+\begin{factoidboxe}
+	$\eand$E \ é uma regra de inferência confiável.
 \end{factoidboxe}
 
-\emph{Proof.}
-	Assume that every line before line $n$ on some TFL-proof is shiny, and that $\eand$E is used on line $n$. So the situation is:
-		   \begin{proof}
-			   \have[i]{ab}{\meta{A}\eand\meta{B}}
-			   \have[n]{a}{\meta{A}} \ae{ab}
-		   \end{proof}\noindent
-(or perhaps with $\meta{B}$ on line $n$ instead; but similar reasoning will apply in that case). Let $v$ be any valuation that makes all of $\Delta_{n}$ true. Note that all of $\Delta_i$ are among $\Delta_{n}$. By hypothesis, line $i$ is shiny. So any valuation that makes all of $\Delta_i$ true makes $\meta{A}\eand\meta{B}$ true. So $v$ makes $\meta{A}\eand\meta{B}$ true, and hence makes $\meta{A}$ true. So $\Delta_{n} \entails \meta{A}$. QED
+\noindent\emph{Prova.}
+Uma aplicação genérica da regra $\eand$E pode ser representada esquematicamente por:
+	\begin{proof}
+		\have[i]{ab}{\meta{A}\eand\meta{B}}
+		\have[n]{a}{\meta{A}} \ae{ab}
+	\end{proof}\noindent
+(alternativamente poderíamos ter $\meta{B}$ na linha $n$; e um raciocínio semelhante ao que faremos aqui se aplicaria neste caso)
+Analogamente à prova do lema anterior, o que temos que demonstrar é:
+\begin{itemize}
+	\item[(*)]  Se  \ ({para todo}  $k<n$, $\Delta_k \entails \meta{S}_k$) \ \ então \ \ $\Delta_n \entails \meta{A}$
+\end{itemize}
+Aqui também assumimos como suposição o antecedente de (*)
+\begin{itemize}
+	\item[(1)] Para todo  $k<n$, $\Delta_k \entails \meta{S}_k$
+\end{itemize}
+De (1) é claro que $\Delta_i \entails \meta{A} \eand \meta{B}$ e, como aqui também não pode haver qualquer sentença em $\Delta_i$ que não esteja também em $\Delta_n$, temos que
+\begin{itemize}
+	\item[(2)] $\Delta_n \entails \meta{A} \eand \meta{B}$
+\end{itemize}
+E (2) nos assegura que $\Delta_n \entails \meta{A}$, que é o consequente de (*), o que finaliza a prova do lema.$\blacklozenge$
 
-
-\begin{factoidboxe}$\eor$I is rule-sound.
+\begin{factoidboxe}
+	$\eor$I \ é uma regra de inferência confiável.
 \end{factoidboxe}
 
-We leave this as an exercise.
+Deixamos esta prova como um exercício.
+Ela é análoga aos lemas anteriores.
 
-\begin{factoidboxe}$\eor$E is rule-sound.
+\begin{factoidboxe}
+	$\eor$E \ é uma regra de inferência confiável.
 \end{factoidboxe}
-
-\emph{Proof.}
-	Assume that every line before line $n$ on some TFL-proof is shiny, and that $\eand$E is used on line $n$. So the situation is:
+\noindent\emph{Prova.}
+Uma aplicação genérica da regra$\eor$E pode ser representada esquematicamente por:
    \begin{proof}
 	   \have[m]{aob}{\meta{A}\eor\meta{B}}
 	   \open
@@ -388,41 +669,148 @@ We leave this as an exercise.
 	   \close
 	   \have[n]{ab}{\meta{C}}\oe{aob, a-c1,b-c2}
    \end{proof}\noindent
-Let $v$ be any valuation that makes all of $\Delta_{n}$ true. Note that all of $\Delta_m$ are among $\Delta_{n}$. By hypothesis, line $m$ is shiny. So any valuation that makes $\Delta_{n}$ true makes $\meta{A} \eor \meta{B}$ true. So in particular, $v$ makes $\meta{A} \eor \meta{B}$ true, and hence either $v$ makes $\meta{A}$ true, or $v$ makes $\meta{B}$ true. We now reason through these two cases:
+Novamente, dada nossa notação, o que temos que demonstrar neste caso é:   
+	\begin{itemize}
+		\item[(*)]  Se  \ ({para todo}  $h<n$, $\Delta_k \entails \meta{S}_h$) \ \ então \ \ $\Delta_n \entails \meta{C}$
+	\end{itemize}   
+De novo, assumimos como suposição o antecedente de (*):
+	\begin{itemize}
+		\item[(1)] Para todo  $h<n$, $\Delta_h \entails \meta{S}_h$
+	\end{itemize}
+O mesmo raciocínio feito nos lemas anteriores nos assegura que não há sentença em $\Delta_m$ que não esteja também em $\Delta_n$.
+Portanto, como, por (1), $\Delta_m \entails \meta{A} \eor \meta{B}$, então
+	\begin{itemize}
+		\item[(2)] $\Delta_n \entails \meta{A} \eor \meta{B}$
+	\end{itemize}
+Mas se, conforme (2), qualquer valoração que faz todas as sentenças de $\Delta_{n}$ verdadeiras, faz também $\meta{A} \eor \meta{B}$ verdadeira, então as propriedades da tabela de verdade da disjunção asseguram que qualquer valoração que faz todas as sentenças de  $\Delta_{n}$ verdadeiras faz $\meta{A}$ verdadeira ou faz $\meta{B}$ verdadeira. Ou seja, de (2) temos que:
+	\begin{itemize}
+		\item[(3)] $\Delta_n \entails \meta{A}$ \ \ \ ou \ \ \ $\Delta_n \entails \meta{B}$
+	\end{itemize}
+Vamos analisar estas duas alternativas:
    \begin{ebullet}
-	   \item[\emph{Case 1: $v$ makes $\meta{A}$ true.}] All of $\Delta_i$ are among $\Delta_{n}$, with the possible exception of $\meta{A}$. Since $v$ makes all of $\Delta_{n}$ true, and also makes $\meta{A}$ true,  $v$ makes all of $\Delta_i$ true. Now, by assumption, line $j$ is shiny; so $\Delta_{j} \entails \meta{C}$. But the sentences $\Delta_i$ are just the sentences $\Delta_{j}$, so $\Delta_i \entails \meta{C}$. So, any valuation that makes all of $\Delta_i$ true makes $\meta{C}$ true. But $v$ is just such a valuation. So $v$ makes $\meta{C}$ true. 
-	   \item[\emph{Case 2: $v$ makes $\meta{B}$ true.}] Reasoning in exactly the same way, considering lines $k$ and $l$, $v$ makes $\meta{C}$ true.
-	   \end{ebullet}
-Either way, $v$ makes $\meta{C}$ true. So $\Delta_n \entails \meta{C}$.
-QED
-
+	   \item[\emph{Caso 1: \ \ $\Delta_n \entails \meta{A}$}].
+	   		\\Repare que, por (1),
+	   		\begin{itemize}
+	   			\item[(4)] $\Delta_j \entails \meta{C}$
+	   		\end{itemize}
+	   		Repare também, através do esquema da regra representado acima, que a única sentença em $\Delta_{j}$ que pode não estar em $\Delta_{n}$ é $\meta{A}$. Então, de (4) temos:
+	   		\begin{itemize}
+				\item[(5)] $\Delta_n, \meta{A} \entails \meta{C}$
+			\end{itemize} 
+			Mas a hipótese deste caso é que $\Delta_n \entails \meta{A}$. Então de (5) e desta hipótese temos:
+			\begin{itemize}
+				\item[(6)] $\Delta_n \entails \meta{C}$
+			\end{itemize}
+	   \item[\emph{Caso 2: \ \ $\Delta_n \entails \meta{B}$}].
+	   		\\Raciocinando exatamente como no caso 1, considerando agora que $\Delta_l \entails \meta{C}$, também concluímos que
+		   \begin{itemize}
+	   			\item[(7)] $\Delta_n \entails \meta{C}$
+	   		\end{itemize}
+	\end{ebullet}
+Assim, como (3) nos assegura que $\Delta_n \entails \meta{A}$ ou $\Delta_n \entails \meta{B}$ e como vimos que em ambas essas alternativas $\Delta_n \entails \meta{C}$, então concluímos incondicionalmente que $\Delta_n \entails \meta{C}$, o que, de acordo com (*), finaliza a prova do lema.$\blacklozenge$
 
 \begin{factoidboxe}
-	$\enot$E is rule-sound.
+	$\enot$E \ é uma regra de inferência confiável.
 \end{factoidboxe}
-
-\emph{Proof.}
-	Assume that every line before line $n$ on some TFL-proof is shiny, and that $\enot$E is used on line $n$. So the situation is:
+\noindent\emph{Prova.}
+Uma aplicação genérica da regra $\enot$E pode ser representada esquematicamente por:
 \begin{proof}
    \have[i]{i}{\meta{A}} 
    \have[j]{j}{\enot\meta{A}}
    \have[n]{nb}{\ered}\ri{i, j}
 \end{proof}\noindent
-Note that all of $\Delta_i$ and all of $\Delta_j$ are among $\Delta_{n}$. By hypothesis, lines $i$ and $j$ are shiny. So any valuation which makes all of $\Delta_{n}$ true would have to make both $\meta{A}$ and $\enot\meta{A}$ true. But no valuation can do that. So no valuation makes all of $\Delta_{n}$ true. So $\Delta_{n} \entails \ered$, vacuously.
-QED
+Aqui o que temos que demonstrar é:
+\begin{itemize}
+	\item[(*)]  Se  \ ({para todo}  $k<n$, $\Delta_k \entails \meta{S}_k$) \ \ então \ \ $\Delta_n \entails \ered$
+\end{itemize}
+Iniciamos, novamente, assumindo o antecedente de (*) como suposição:
+\begin{itemize}
+	\item[(1)] Para todo  $k<n$, $\Delta_k \entails \meta{S}_k$
+\end{itemize}
+Como toda sentença de $\Delta_i$ é sentença de $\Delta_n$ e, por (1), $\Delta_i \entails \meta{A}$, então:
+\begin{itemize}
+	\item[(2)] $\Delta_n \entails \meta{A}$
+\end{itemize}
+Um raciocínio análogo garante que:
+\begin{itemize}
+	\item[(3)]  $\Delta_n \entails \enot\meta{A}$
+\end{itemize}
+De (2) e (3) podemos concluir que:
+\begin{itemize}
+	\item[(4)]  $\Delta_n \entails \meta{A} \eand \enot\meta{A}$ 
+\end{itemize}
+Mas lembre-se que a notação $\Delta_n \entails \meta{A} \eand \enot\meta{A}$ significa que toda valoração que faz verdadeiras todas as senças de $\Delta_n$ também faz $\meta{A} \eand \enot\meta{A}$ verdadeira.
+Só que nós sabemos que $\meta{A} \eand \enot\meta{A}$ é uma contradição, ou seja, nenhuma valoração a faz verdadeira. Então, de (4) e do fato de que nenhuma valoração faz $\meta{A} \eand \enot\meta{A}$ verdadeira, concluímos que:
+\begin{itemize}
+	\item[(5)] não há qualquer valoração que faz todas as sentenças de  $\Delta_n$ verdadeiras.\footnote{
+		Repare que o raciocínio (a inferência) que fizemos na passagem de (4) para (5) é a \textit{contraposição}, ou \textit{negação do consequente}: `$P \eif Q, \enot Q \entails \enot P$'.
+		Veja que uma consequência da afirmação (4) é que se $v$ é uma valoração na qual todas as sentenças de $\Delta_n$ são verdadeiras, então  $\meta{A} \eand \enot\meta{A}$ também é verdadeira em $v$ ($P \eif Q$).
+		Mas nós sabemos que $\meta{A} \eand \enot\meta{A}$ não é verdadeira em nenhuma valoração ($\enot Q$).
+		Então concluímos que não pode haver nenhuma valoração $v$ na qual todas as sentenças de $\Delta_n$ são verdadeiras ($\enot Q$).}
+\end{itemize}
+Mas então, (5) nos autoriza a concluir a seguinte estranha afirmação:
+\begin{itemize}
+	\item[(6)]  toda valoração que faz todas as sentenças de $\Delta_n$ verdadeiras também faz $\ered$ verdadeira.
+\end{itemize}
+A afirmação (6) é mesmo bem suspeita.
+Não só porque acabamos de dizer, em (5), que nenhuma valoração faz todas as sentenças de $\Delta_n$ verdadeiras, mas também porque sabemos que  `$\ered$' não é verdadeiro em nenhuma valoração; o que deixa esta passagem de (5) para (6) pelo menos duvidosa.
+Nós vamos refletir um pouco sobre isso, mas antes vamos apenas notar que, reescrita através de nossa notação, a afirmação (6) diz que $\Delta_n \entails \ered$, e isso, de acordomdo (*), admitindo que não cometemos nenhum erro, finaliza a prova do lema.$\blacklozenge$
+
+
+\subsection{Um rápido desvio: sentenças vacuamente verdadeiras}
+
+Antes de prosseguir com os lemas que faltam, vamos nos deter brevemente sobre a passagem crucial da prova anterior, de (5) para (6), e certificarmo-nos de que não cometemos nenhum erro ali. 
+
+Pense um pouco sobre a afirmação (6).
+Em que condições (6) seria uma afirmação falsa?
+%Qual seria um contraexemplo para (6)?
+%Que situação comprovaria a falsidade de (6)?
+Veja bem, como (6) está dizendo que toda valoração que faz todas as sentenças de $\Delta_n$ verdadeiras também faz $\ered$ verdadeira, as únicas situações que comprovariam a falsidade de (6) ocorrem quando temos uma valoração $v$ na qual
+\begin{itemize}
+	\item[\textit{a})] todas as sentenças de $\Delta_n$ são verdadeiras, 
+	\item[\textit{b})] mas $\ered$ é falsa.
+\end{itemize}
+Mas note que (5) afirma que nenhuma valoração faz todas as sentenças de $\Delta_n$ verdadeiras.
+Ou seja, (5) está dizendo que a condição (\textit{a}) exigida para qualquer contraexemplo de (6) é impossível. Nunca ocorre.
+Então (5) garante que (6) não tem contraexemplo:
+(6) não será falsa em nenhuma situação que respeite o que (5) diz.
+É isso que nos autoriza concluir (6) a partir de (5) e ter confiança de que não cometemos nenhum erro.
+
+A estranheza desta passagem se dá porque, apesar de aceitarmos (6) como verdadeira, a propriedade que (6) expressa sobre as valorações não é instanciada por nenhuma valoração, quando (5) é mesmo verdadeira. Nenhuma valoração satisfaz as condições de aplicabilidade de (6). Ela é verdadeira apenas porque não tem contraexemplo que a falsifique.
+
+O caso da afirmação (6) é similar, por exemplo, ao da seguinte afirmação:
+\begin{itemize}
+	\item[(7)] Todas as pessoas com mais de 400 anos têm três pés.
+\end{itemize}
+
+A propriedade sobre as pessoas que a afirmação (7) expressa não é instanciada por ninguém. Nenhuma pessoa satisfaz a condição de aplicabilidade da propriedade (7), já que ninguém tem mais de 400 anos.
+Mas note que ao não ser instanciada, (7) não tem contraexemplo.
+Um contraexemplo para (7) seria dado por uma pessoa que tivesse mais de 400 anos e não tivesse três pés.
+Como ninguém tem mais de 400 anos, (7) não tem contraexemplo.
+
+A convenção clássica estabelecida é considerar \textit{vacuamente verdadeiras} sentenças como (6) e (7) que não são instanciáveis.
+São classificadas como \textit{verdadeiras} porque não têm contraexemplo, mas são rotuladas de \textit{vacuamente} verdadeiras porque não têm instâncias.
+Tratamos rapidamente deste assunto no âmbito da LPO na Seção 15.2.
+
+
+\subsection{De volta à confiabilidade das regras de inferência}
+
+Pronto. Depois deste breve desvio, voltemos aos nossos lemas sobre a confiabilidade das regras de inferência.
+
+%\footnote{
+%	Este tipo de situação, quando um determinado item (no caso, a regra $\enot$E) não consegue violar uma certa propriedade (no caso a confiabilidade) apenas porque as condições para que a propriedade seja satisfeita ou violada são impossíveis (no caso a inocência de todas as linhas anteriores à aplicação da regra $\enot$E), é chamado de \emph{vacuidade}. Nós dizemos que a regra $\enot$E é confiável não porque ela sempre produz uma linha inocente quando todas as linhas anteriores à sua aplicação são inocentes. Nós dizemos que a regra $\enot$E é confiável porque sempre que há ocasião para a sua aplicação, não pode ser que todas as linhas anteriores sejam inocentes. Então a regra $\enot$E é um caso a parte. Ela nunca confirma a confiabilidade, mas também nunca a viola. Quando isso ocorre, a convenção \emph{clássica} estabelecida é considerar que o item (neste caso a regra $\enot$E) \textit{satisfaz vacuamente} a propriedade (neste caso a confiabilidade).}
 
 \begin{factoidboxe}
-	X is rule-sound.
+	X \ é uma regra de inferência confiável.
 \end{factoidboxe}
 
-We leave this as an exercise.
+Também deixamos esta prova como um exercício.
 
 \begin{factoidboxe}
-	$\enot$I is rule-sound.
+	$\enot$I \ é uma regra de inferência confiável.
 \end{factoidboxe}
-
-\emph{Proof.}
-	Assume that every line before line $n$ on some TFL-proof is shiny, and that $\enot$I is used on line $n$. So the situation is:
+\noindent\emph{Prova.}
+	Uma aplicação genérica da regra $\enot$I pode ser representada esquematicamente por:
 \begin{proof}
    \open
 	   \hypo[i]{a}{\meta{A}}
@@ -430,39 +818,106 @@ We leave this as an exercise.
    \close
    \have[n]{na}{\enot\meta{A}}\ni{a-b}
 \end{proof}\noindent
-Let $v$ be any valuation that makes all of $\Delta_{n}$ true. Note that all of $\Delta_{n}$ are among $\Delta_i$, with the possible exception of $\meta{A}$ itself. By hypothesis, line $j$ is shiny. But no valuation can make `$\ered$' true, so no valuation can make all of $\Delta_{j}$ true. Since the sentences $\Delta_i$ are just the sentences $\Delta_{j}$, no valuation can make all of $\Delta_i$ true. Since $v$ makes all of $\Delta_{n}$ true, it must therefore make $\meta{A}$ false, and so make $\enot \meta{A}$ true. So $\Delta_n \entails \enot \meta{A}$.
-QED
+O que temos que demonstrar é:
+\begin{itemize}
+	\item[(*)]  Se  \ ({para todo}  $k<n$, $\Delta_k \entails \meta{S}_k$) \ \ então \ \ $\Delta_n \entails \enot\meta{A}$
+\end{itemize}
+Iniciamos, novamente, assumindo o antecedente de (*) como suposição:
+\begin{itemize}
+	\item[(1)] Para todo  $k<n$, $\Delta_k \entails \meta{S}_k$
+\end{itemize}
+Por (1) é claro que
+\begin{itemize}
+	\item[(2)] $\Delta_j \entails \ered$ \ \ e
+\end{itemize}
+\begin{itemize}
+	\item[(3)] $\Delta_i \entails \meta{A}$
+\end{itemize}
+Note, através do esquema da regra representado acima, que $\Delta_j=\Delta_i$, portanto, por (2),
+\begin{itemize}
+	\item[(4)] $\Delta_i \entails \ered$
+\end{itemize}
+O esquema geral da regra também nos mostra que
+\begin{itemize}
+ 	\item[(5)] toda sentença em $\Delta_i$ está entre as sentenças de $\Delta_n$, com a possível exceção de $\meta{A}$.
+\end{itemize}
+De (4) e (5) temos que:
+\begin{itemize}
+	\item[(6)] $\Delta_n, \meta{A} \entails \ered$
+\end{itemize}
+Então, pelo mesmo racioncínio de contraposição usado no Lema da regra $\enot$E, de (6) nós podemos inferir que
+\begin{itemize}
+	\item[(7)] nenhuma valoração faz todas as sentenças de $\Delta_n$ e $\meta{A}$ verdadeiras.
+\end{itemize}
+Ou seja, de acordo com (7), $\meta{A}$ tem que ser falsa em qualquer valoração onde todas as sentenças de $\Delta_n$ são verdadeiras. Então, 
+\begin{itemize}
+	\item[(8)] toda valoração que faz todas as sentenças de $\Delta_n$ verdadeiras também faz $\enot\meta{A}$ verdadeira.
+\end{itemize}
+Reescrita segundo nossa notação, (8) diz que $\Delta_n \entails \enot\meta{A}$; e isso, de acordo com (*), finaliza a prova o lema.$\blacklozenge$
 
+%Há duas opções para $\Delta_n$:
+%\begin{itemize}
+%	\item ou \ \ $\Delta_n \entails \meta{A}$
+%	\item ou \ \ $\Delta_n \nvDash \meta{A}$ \ e, \ portanto, \  $\Delta_n \entails \enot\meta{A}$
+%\end{itemize}
+%Se $\Delta_n \entails \enot\meta{A}$, então o lema já está demonstrado.
+%
+%\noindent Se, por outro lado, $\Delta_n \entails \meta{A}$, então, por (6):
+%\begin{itemize}
+%	\item[(7)] $\Delta_n \entails \ered$
+%\end{itemize}
+%Mas como $\ered$ não é verdadeiro em nenhuma valoração, então (7) implica (por contraposição) que 
+%\begin{itemize}
+%	\item[(8)] nenhuma valoração faz todas as sentenças de $\Delta_n$ verdadeiras. 
+%\end{itemize}
+%E se aplicamos a (8) o mesmo raciocínio por vacuidade que usamos no caso da regra $\enot$E, obtemos $\Delta_n \entails \enot\meta{A}$ e o lema também fica demonstrado.$\blacklozenge$
 
-\begin{factoidboxe}\label{lem:LastRuleSound} IP, $\eif$I,  $\eif$E, $\eiff$I, and $\eiff$E are all rule-sound.
+\begin{factoidboxe}\label{lem:LastRuleSound} IP, \ $\eif$I, \ $\eif$E, \ $\eiff$I \ e \ $\eiff$E \ são todas regras confiáveis.
 \end{factoidboxe}
 
-We leave these as exercises.
+Como estes casos não trazem novidade aos já apresentados, também os deixamos como exercícios.
 
-This establishes that all the basic rules of our proof system are rule-sound. Finally, we show:
+Até aqui já demonstramos que todas as regras básicas do sistema formal de provas da LVF são confiáveis.
+Vamos agora demonstrar que qualquer regra derivada também é confiável.
 
-\begin{factoidboxe}All of the derived rules of our proof system are rule-sound.
+\begin{factoidboxe}
+	Todas as regras derivadas de nosso sistema formal para a LVF são confiáveis.
 \end{factoidboxe}
+\noindent\emph{Prova.}
+	Suponha que tenhamos usado uma regra derivada para obter alguma sentença, $\meta{A}$, na linha $n$ de alguma prova da LVF, e que todas as linhas anteriores da prova são inocentes.
+	Mas qualquer uso de uma regra derivada é, na verdade, uma abreviação de vários usos das regras básicas de inferência.
+	Ou seja, poderíamos ter usado apenas as regras básicas para obter a sentença $\meta{A}$ em alguma linha $n+k$, sem a introdução de quaisquer outras suposições.
+	Portanto, aplicando várias vezes (exatamente $k+1$ vezes) os resultados já demonstrados de que todas as regras básicas são confiáveis, concluímos que a linha $n+k$ é inocente. Conseqüentemente, a regra derivada é confiável.$\blacklozenge$
 
-\emph{Proof.}
-	Suppose that we used a derived rule to obtain some sentence, $\meta{A}$, on line $n$ of some TFL-proof, and that every earlier line is shiny. Every use of a derived rule can be replaced (at the cost of long-windedness) with multiple uses of basic rules. That is to say, we could have used basic rules to write $\meta{A}$ on some line $n + k$, without introducing any further assumptions. So, applying our individual results that all basic rules are rule-sound several times ($k + 1$ times, in fact), we can see that line $n+k$ is shiny. Hence the derived rule is rule-sound. 
-QED
-	
+É isso! Provamos que todas as regras (básicas ou não) são confiáveis, e assim completamos a prova do Lema da Inocência e finalizamos a demonstração do Teorema da Correção.
 
-And that's that! We have shown that every rule---basic or otherwise---is rule-sound, which is all that we required to establish the Shininess Lemma, and hence the Soundness Theorem.
 
-But it might help to round off this chapter if we repeat my informal explanation of what we have done. A formal proof is just a sequence---of arbitrary length---of applications of rules. We have shown that any application of any rule will not lead you astray. It follows (by induction)that no formal proof will lead you astray. That is: our proof system is sound. 
+\subsection{O fim e o começo...}
+Demonstramos que o sistema formal de provas da LVF que aprendemos neste livro é Correto. Isto significa que qualquer prova formal que fizermos nesse sistema será a prova de um argumento válido de acordo com a semântica das tabelas de verdade.
+O nosso sistema de provas é correto; ele jamais produzirá a prova de um argumento que não seja válido.
+
+E como fizemos a demonstração disso? Bem, lembre que uma prova formal é apenas uma seqüência (de comprimento arbitrário) de aplicações de regras.
+Mostramos que nenhuma aplicação individual de qualquer regra nos levará ao erro. Segue-se (por indução) que nenhuma prova formal (sequência finita de aplicações de regras) nos levará ao erro. Ou seja: nosso sistema de prova é correto.
+
+Fazer isso deu um pouco de trabalho.
+Tivemos que introduzir notações, definições, propor e demonstrar lemas e organizar tudo de um modo bastante detalhado, o que consumiu umas boas páginas deste texto e exigiu alguns de seus neurônios para acompanhar tudo.
+Mas a ideia geral da Correção de um sistema formal é simples e, no caso da LVF, além de simples ela, desde o princípio, pareceu plausível, quase óbvia.
+Este é um excelente exemplo do tipo de desafio geral que a lógica coloca a quem se atreve a estudá-la e, por isso, é um ótimo ponto para finalizar este livro.
+O livro termina aqui, mas a lógica não termina com ele. Ela está apenas começando. Esperamos por você nas nossas próximas aventuras. 
+
+
 
 \practiceproblems
 
 \problempart
 \label{pr.Soundness}
-Complete the Lemmas left as exercises in this chapter. That is, show that the following are rule-sound:
+Complete os Lemas deste capítulo que foram deixados como exercícios.
+Ou seja, mostre que as seguintes regras são confiáveis:
 	\begin{earg}
-		\item $\eor$I. (\emph{Hint}: this is  similar to the case of $\eand$E.)
-		\item X. (\emph{Hint}: this is similar to the case of $\enot$E.)
-		\item $\eif$I. (\emph{Hint}: this is similar to $\eor$E.)
+		\item $\eor$I. (\emph{Dica}: este é um caso similar ao da regra $\eand$E.)
+		\item X. (\emph{Dica}: este é um caso similar ao da regra $\enot$E.)
+		\item $\eif$I. (\emph{Dica}: este é um caso similar ao da regra $\eor$E.)
 		\item $\eif$E.
-		\item IP. (\emph{Hint}: this is similar to the case of $\enot$I.)
+		\item IP. (\emph{Dica}: este é um caso similar ao da regra $\enot$I.)
 	\end{earg}
 
