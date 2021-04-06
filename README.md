@@ -2,9 +2,9 @@
 
 ![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/paratodxscapa.png)
 
-# (OBS: este trabalho está em fase inicial, inclusive em relação a essa introdução) #
+# (OBS: este trabalho está em fase inicial)
 
-## Description
+## Descrição
 
 _Para Todxs: Natal_ é um livro didático completo sobre lógica formal.
  Ele aborda noções fundamentais da lógica, como consequência e validade 
@@ -26,7 +26,7 @@ em [proofs.openlogicproject.org](http://proofs.openlogicproject.org/).
 
 _Para Todxs: Natal_ é baseado no [_Forall x:
 Calgary_](https://github.com/rzach/forallx-yyc), mantido por 
-Richard Zach e ambos estão disponíveis sob licensas Creative Commons.
+Richard Zach, e ambos estão disponíveis sob licensas Creative Commons.
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/3.0/)
 
@@ -43,7 +43,7 @@ Vovê pode fazer o download do último pdf gerado aqui:
 ## Crie o PDF você mesmo!
 
 Clone o [repositório github](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal) em sua máquina 
-ou faça o download do arquivo ZIP compile o código usando o [LaTeX](http://www.latex-project.org/) a partir do arquivo
+ou faça o download do arquivo ZIP e compile o código usando o [LaTeX](http://www.latex-project.org/) a partir do arquivo
 
   - `forallxyyc-print.tex` (arquivo para impressão)
 
