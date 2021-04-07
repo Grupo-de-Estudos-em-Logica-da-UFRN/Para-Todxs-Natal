@@ -38,7 +38,7 @@ Os arquivos-fonte do projeto, em LaTeX, estão disponíveis em [Para Todxs: Nata
 
 Vovê pode fazer o download do último pdf gerado aqui:
 
-  - [`forallxyyc-print.pdf`](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/blob/fcd872d75926468fed9edaad6335d601fd77d507/forallxyyc-print.pdf) (arquivo para impressão)
+  - [`forallxyyc-print.pdf`](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/blob/e71cf92a3f3743fb52cdb1c6d65f6b1badb0e808/forallxyyc-print.pdf) (arquivo para impressão)
 
 ## Crie o PDF você mesmo!
 
