@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  2 APR 2021 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  6 APR 2021 20:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -7692,11 +7692,3689 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 19.
  [397]
+\openout2 = `forallx-yyc-ml.aux'.
+
+ (./forallx-yyc-ml.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 3.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 3.
  [398
+
+
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 10.
+
+! Undefined control sequence.
+l.14 ...idade}. Assim, você pode ler $\ebox\metav
+                                                  {A}$ como \emph{é necessa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.14 ...mph{é necessariamente o caso que} $\metav
+                                                  {A}$, e $\ediamond\metav{A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 ... caso que} $\metav{A}$, e $\ediamond\metav
+                                                  {A}$ como \emph{é possive...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.14 ...emph{é possivelmente o caso que}  $\metav
+                                                  {A}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 18.
+[399
+
+]
+! Undefined control sequence.
+l.20 ...monstrabilidade}, de modo que $\ebox\metav
+                                                  {A}$ significa   \emph{é ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.20 ...fica   \emph{é demonstrável que} $\metav
+                                                  {A}$, e $\ediamond\metav{A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ...ável que} $\metav{A}$, e $\ediamond\metav
+                                                  {A}$ significa \emph{não ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.20 ...ica \emph{não é refutável que}  $\metav
+                                                  {A}$. Da mesma forma, pode...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ...ma forma, podemos interpretar $\ebox\metav
+                                                  {A}$ como significando  $S...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.20 ...ificando  $S$ \emph{sabe que  $\metav{A}$}
+                                                   ou $S$ \emph{acredita que...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.20 ...}$} ou $S$ \emph{acredita que $\metav{A}$}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 ...rigação moral}. Neste caso $\ebox \metav
+                                                  {A}$ significa \emph{é mo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.21 ...ph{é moralmente obrigatório que} $\metav
+                                                  {A}$ e $\ediamond \metav{A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.21 ...ório que} $\metav{A}$ e $\ediamond \metav
+                                                  {A}$ significa \emph{é mo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.21 ...ph{é moralmente permissível que} $\metav
+                                                  {A}$. Tudo o que precisar�...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 27.
+[400]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.45 	\item[(2)]Se $\metav
+                          {A}$ é uma sentença, então $\enot\metav{A}$ é ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.45 ...{A}$ é uma sentença, então $\enot\metav
+                                                  {A}$ é uma sentença.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.46 	\item[(3)]Se $\metav
+                          {A}$ e $\metav{B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.46 	\item[(3)]Se $\metav{A}$ e $\metav
+                                        {B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.46 ...metav{B}$ são sentenças, então $(\metav
+                                                  {A}\eand\metav{B})$ é uma...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.46 ... sentenças, então $(\metav{A}\eand\metav
+                                                  {B})$ é uma sentença.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.47 	\item[(4)]Se $\metav
+                          {A}$ e $\metav{B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.47 	\item[(4)]Se $\metav{A}$ e $\metav
+                                        {B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...metav{B}$ são sentenças, então $(\metav
+                                                  {A}\eor\metav{B})$ é uma ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...o sentenças, então $(\metav{A}\eor\metav
+                                                  {B})$ é uma sentença.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.48 	\item[(5)]Se $\metav
+                          {A}$ e $\metav{B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.48 	\item[(5)]Se $\metav{A}$ e $\metav
+                                        {B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...metav{B}$ são sentenças, então $(\metav
+                                                  {A}\eif\metav{B})$ é uma ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...o sentenças, então $(\metav{A}\eif\metav
+                                                  {B})$ é uma sentença.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.49 	\item[(6)]Se $\metav
+                          {A}$ e $\metav{B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.49 	\item[(6)]Se $\metav{A}$ e $\metav
+                                        {B}$ são sentenças, então $(\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ...metav{B}$ são sentenças, então $(\metav
+                                                  {A}\eiff\metav{B})$ é uma...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ... sentenças, então $(\metav{A}\eiff\metav
+                                                  {B})$ é uma sentença.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 50.
+[401]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.50 	\item[(7)]Se $\metav
+                          {A}$ é uma sentença, então $\ebox\metav{A}$ é ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.50 ...{A}$ é uma sentença, então $\ebox\metav
+                                                  {A}$ é uma sentença.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.51 	\item[(8)]Se $\metav
+                          {A}$ é uma sentença, então $\ediamond\metav{A}$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.51 ... é uma sentença, então $\ediamond\metav
+                                                  {A}$ é uma sentença.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 61.
+[402]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 61.
+
+
+LaTeX Warning: Reference `ch.NDTFL' on page 403 undefined on input line 64.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.66 ...quisermos dizer que podemos provar $\metav
+                                                  {C}$ a partir de $\metav{A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.66 ...mos provar $\metav{C}$ a partir de $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 ...\metav{C}$ a partir de $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n$ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.66 ... de $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n$ \emph{no sistema}~\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.66 ...emph{no sistema}~\mlK, escrevemos: $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 ...ema}~\mlK, escrevemos: $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.66 ...os: $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n \proves_\mlK \metav{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.66 ...}_2, \dots \metav{A}_n \proves_\mlK \metav
+                                                  {C}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+[403
+
+]
+! Undefined control sequence.
+l.79 ...permite derivar uma fórmula $\ebox \metav
+                                                  {A}$ se pudermos derivar $...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.79 ...box \metav{A}$ se pudermos derivar $\metav
+                                                  {A}$ dentro de uma subprov...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.79 ...ia básica é bastante simples: se $\metav
+                                                  {A}$ é um teorema, então...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.79 ...v{A}$ é um teorema, então  $\ebox \metav
+                                                  {A}$ deve ser um teorema t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.79 ...a também (Lembre-se de que chamar $\metav
+                                                  {A}$ de teorema é dizer q...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.79 ...eorema é dizer que podemos provar $\metav
+                                                  {A}$ sem confiar em quaisq...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 93.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 93.
+[404]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.118 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.118 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 129.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 129.
+[405]
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.144 		}
+         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.144 		}
+         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.146 ...box E permite que você introduza $\metav
+                                                  {A}$ dentro de uma subprov...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.146 ...rova estrita se você tiver $\ebox \metav
+                                                  {A}$ fora dessa subprova e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 147.
+[406]
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.151 	\hypo
+            {2}{\ebox}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.155 \close
+            \close
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 192.
+[407]
+! Undefined control sequence.
+<argument>  $\ediamond \metav 
+                              {A}=_{df} \enot \ebox \enot \metav {A}$ 
+l.204 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... {A}=_{df} \enot \ebox \enot \metav 
+                                                  {A}$ 
+l.204 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.205 Em outras palavras, dizer que $\metav
+                                           {A}$ é \emph{possivelmente verda...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.205 ...elmente verdadeira}, é dizer que $\metav
+                                                  {A}$   \emph{não é neces...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ebox \enot \metav 
+                                     {A}$
+l.216 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ediamond \metav 
+                             {A}$
+l.216 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ediamond \metav 
+                             {A}$
+l.216 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ebox \enot \metav 
+                                     {A}$
+l.216 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 217.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 217.
+[408]
+! Undefined control sequence.
+<argument> $\enot \ebox \metav 
+                               {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ediamond \enot \metav 
+                                   {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ediamond \enot \metav 
+                                   {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ebox \metav 
+                               {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ediamond \metav 
+                                   {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \enot \metav 
+                               {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \enot \metav 
+                               {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ediamond \metav 
+                                   {A}$
+l.238 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.241 ...definido $\ebox$ como segue: $\ebox\metav
+                                                  {A} =_{df} \enot \ediamond...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.241 ...av{A} =_{df} \enot \ediamond \enot \metav
+                                                  {A}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 243.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 243.
+[409]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.247 ...nem mesmo permite que você prove $\metav
+                                                  {A}$  a partir de $\ebox\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.247 ...ove $\metav{A}$  a partir de $\ebox\metav
+                                                  {A}$.  Mas se estivermos p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.247 ...zes de fazer esta inferência: se $\metav
+                                                  {A}$ é \emph{necessariame...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.259 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.259 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.269 ...essidade de uma formula: de $\ebox \metav
+                                                  {A}$, você pode inferir $...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.269 ...ox \metav{A}$, você pode inferir $\metav
+                                                  {A}$. Mas, e se quiséssem...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.269 ...ras?  Ou seja, podemos ir de $\ebox\metav
+                                                  {A}$ para $\ebox\ebox\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.269 ...e $\ebox\metav{A}$ para $\ebox\ebox\metav
+                                                  {A}$? Bem, isso não seria...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.269 ...lema, se tivéssemos provado $\ebox\metav
+                                                  {A}$ aplicando \ebox I em ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.269 ...ebox I em uma subprova estrita de $\metav
+                                                  {A}$ que ela mesma não us...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.269 ...sma não usa \ebox E. Nesse caso, $\metav
+                                                  {A}$ seria uma tautologia ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.269 ...amente, podemos provar $\ebox\ebox \metav
+                                                  {A}$. Por exemplo, podemos...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 270.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 270.
+[410]
+! Undefined control sequence.
+l.289 Mas, se não provássemos $\ebox\metav
+                                            {A}$ dessa forma restrita e usá...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.289 ...x E dentro da subprova estrita de $\metav
+                                                  {A}$? Se colocarmos essa s...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.289 ...ão citar uma linha contendo $\ebox\metav
+                                                  {A}$ que se encontra em ou...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.289 ...ncluída, é violada. Ou, se $\ebox\metav
+                                                  {A}$ fosse apenas uma supo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.289 ... podemos então inferir $\ebox\ebox\metav
+                                                  {A}$? Em \mlT{} não poder...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.289 ...sidade}. Parece intuitivo que, se $\metav
+                                                  {A}$ for necessariamente v...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.305 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.305 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 306.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 306.
+[411]
+! Undefined control sequence.
+l.308 ...erença é que  a partir de $\ebox \metav
+                                                  {A}$,  obtemos dentro de u...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.308 ...ro de uma  subprova estrita $\ebox \metav
+                                                  {A}$ no lugar de   $\metav...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.308 ...a $\ebox \metav{A}$ no lugar de   $\metav
+                                                  {A}$.  A restrição é a ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.308 ...não permite “importar” $\ebox \metav
+                                                  {A}$ para dentro de uma su...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.323 ...s extras} : de $\ediamond\ediamond \metav
+                                                  {A}$, você sempre pode in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.323 ...ocê sempre pode inferir $\ediamond\metav
+                                                  {A}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.329 ...permite a inferência de $\ediamond\metav
+                                                  {A}$ para $\ebox\ediamond\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.329 ...mond\metav{A}$ para $\ebox\ediamond\metav
+                                                  {A}$. Isso pode lhe parece...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.329 ...ivamente. Parece intuitivo que se $\metav
+                                                  {A}$  é possivelmente ver...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 331.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 331.
+[412]
+! Undefined control sequence.
+<argument> $\enot \ebox \metav 
+                               {A}$
+l.341 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ebox \metav 
+                               {A}$
+l.341 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...a $m$ (contendo $\enot \ebox \metav 
+                                                  {A}$) estiver fora da subp...
+l.341 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
+[413]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 387.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 387.
+ [414]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 399.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 399.
+ [415]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 445.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 445.
+ [416]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 445.
+
+! Undefined control sequence.
+l.452 ...s. Grosso modo, dizemos que $\ebox \metav
+                                                  {A}$ é verdadeira   se e ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.452 ...$ é verdadeira   se e somente se $\metav
+                                                  {A}$ é verdadeira em \emp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.452 ... os mundos possíveis, e $\ediamond\metav
+                                                  {A}$ é verdadeira se e so...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.452 ...}$ é verdadeira se e somente se  $\metav
+                                                  {A}$ é verdadeira em \emp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 455.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 455.
+[417
+
+]
+! Undefined control sequence.
+l.459 ...w$ é um mundo possível,   $\nu_w(\metav
+                                                  {A})=F$  se e somente se $...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.459 ..._w(\metav{A})=F$  se e somente se $\metav
+                                                  {A}$ é falsa no mundo $w$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.459 ...$w$ na valoração $\nu$; e $\nu_w(\metav
+                                                  {A})=V$  se e somente se $...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.459 ..._w(\metav{A})=V$  se e somente se $\metav
+                                                  {A}$  é verdadeira no mun...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 462.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 462.
+[418]
+! Undefined control sequence.
+l.464 	\item[(1)]$\nu_w(\enot\metav
+                                   {A})=V$ se e somente se $\nu_w(\metav{A})=F$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.464 ...etav{A})=V$ se e somente se $\nu_w(\metav
+                                                  {A})=F$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.465 	\item[(2)]$\nu_w(\metav
+                              {A}\eand\metav{B})=V$ se e somente se $\nu_w(\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.465 	\item[(2)]$\nu_w(\metav{A}\eand\metav
+                                            {B})=V$ se e somente se $\nu_w(\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.465 ...etav{B})=V$ se e somente se $\nu_w(\metav
+                                                  {A})=V$ e $\nu_w(\metav{B}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.465 ...e se $\nu_w(\metav{A})=V$ e $\nu_w(\metav
+                                                  {B})=V$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.466 	\item[(3)]$\nu_w(\metav
+                              {A}\eor\metav{B})=V$ se e somente se $\nu_w(\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.466 	\item[(3)]$\nu_w(\metav{A}\eor\metav
+                                           {B})=V$ se e somente se $\nu_w(\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.466 ...etav{B})=V$ se e somente se $\nu_w(\metav
+                                                  {A})=V$ ou $\nu_w(\metav{B...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.466 ... se $\nu_w(\metav{A})=V$ ou $\nu_w(\metav
+                                                  {B})=V$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.467 	\item[(4)]$\nu_w(\metav
+                              {A}\eif\metav{B})=V$ se e somente se $\nu_w(\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.467 	\item[(4)]$\nu_w(\metav{A}\eif\metav
+                                           {B})=V$ se e somente se $\nu_w(\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.467 ...etav{B})=V$ se e somente se $\nu_w(\metav
+                                                  {A})=F$ ou $\nu_w(\metav{B...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.467 ... se $\nu_w(\metav{A})=F$ ou $\nu_w(\metav
+                                                  {B})=V$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.468 	\item[(5)]$\nu_w(\metav
+                              {A}\eiff\metav{B})=V$ se e somente se $\nu_w(\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.468 	\item[(5)]$\nu_w(\metav{A}\eiff\metav
+                                            {B})=V$ se e somente se $\nu_w(\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.468 ...etav{B})=V$ se e somente se $\nu_w(\metav
+                                                  {A})=\nu_w(\metav{B})$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.468 ...somente se $\nu_w(\metav{A})=\nu_w(\metav
+                                                  {B})$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.475 	\item[]$\nu_w(\ebox \metav
+                                 {A})=V$ se e somente se $\forall w' (\nu_{w...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.475 ...e somente se $\forall w' (\nu_{w'}(\metav
+                                                  {A})=V)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.476 	\item[]$\nu_w(\ediamond \metav
+                                     {A})=V $ se e somente se $\exists w' (\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.476 ...e somente se $\exists w' (\nu_{w'}(\metav
+                                                  {A})=V)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.478 ...a de escrever a ideia de que $\ebox\metav
+                                                  {A}$ é verdadeira em $w$ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.478 ...rdadeira em $w$ apenas no caso de $\metav
+                                                  {A}$ ser verdadeira em \em...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.478 ...emph{todos} os mundos, e $\ediamond\metav
+                                                  {A}$ é verdadeira em $w$ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.478 ...rdadeira em $w$ apenas no caso de $\metav
+                                                  {A}$ ser verdadeira em \em...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 484.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 484.
+[419]
+! Undefined control sequence.
+l.487 	\item[(6)]$\nu_{w_1}(\ebox \metav
+                                        {A})=V$ se e somente se  $\forall w_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.487 ...\forall w_2 (Rw_1w_2\eif \nu_{w_2}(\metav
+                                                  {A})=V)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.488 	\item[(7)]$\nu_{w_1}(\ediamond \metav
+                                            {A})=V$ se e somente se  $\exist...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.488 ...exists w_2 (Rw_1w_2\eand \nu_{w_2}(\metav
+                                                  {A})=V)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.490 Isto significa que $\ebox\metav
+                                     {A}$ é verdadeira no mundo  $w_1$ se e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.490 ...a no mundo  $w_1$ se e somente se $\metav
+                                                  {A}$ é verdadeira em todo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.490 ... acessíveis a  $w_1$; e $\ediamond\metav
+                                                  {A}$ é verdadeira no mund...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.490 ...a no mundo  $w_1$ se e somente se $\metav
+                                                  {A}$ é verdadeira em algu...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 510.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 510.
+[420]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...itemize} \item $\metav {A}_1,\metav 
+                                                  {A}_2, \dots \metav {A}_n\...
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...\dots \metav {A}_n\therefore \metav 
+                                                  {C}$ é \define {modalment...
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...tação em que $\metav {A}_1,\metav 
+                                                  {A}_2, \dots \metav {A}_n$...
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.539 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 540.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 540.
+[421]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.543 ...Assim, quando quisermos dizer que $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.543 ...o quisermos dizer que $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.543 ...ue $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\therefore\metav{C}$ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.543 ...v{A}_2, \dots \metav{A}_n\therefore\metav
+                                                  {C}$  é válido em \mlK, ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.543 ...é válido em \mlK, escreveremos: $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.543 ...m \mlK, escreveremos: $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.543 ...s: $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlK\metav{C}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.543 ...}_2, \dots \metav{A}_n\entails_\mlK\metav
+                                                  {C}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 564.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 564.
+[422]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.571 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\proves_\mlK\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.571 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\proves_\mlK\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.571 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlK\metav{C}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.571 ...A}_2, \dots \metav{A}_n\proves_\mlK\metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.571 ...}_n\proves_\mlK\metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.571 ...mlK\metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.571 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlK\metav{C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.571 ...}_2, \dots \metav{A}_n\entails_\mlK\metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.572 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlK\met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.572 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\entails_\mlK\met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.572 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlK\metav{C...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.572 ...}_2, \dots \metav{A}_n\entails_\mlK\metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.572 ..._n\entails_\mlK\metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.572 ...mlK\metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.572 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlK\metav{C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.572 ...A}_2, \dots \metav{A}_n\proves_\mlK\metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.579 ...ivermos assumido ou provado $\ebox \metav
+                                                  {A}$, então por \ebox E  ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.579 ... então por \ebox E  podemos usar $\metav
+                                                  {A}$ dentro de uma subprov...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.579 ...seguir a partir de uma  fórmula  $\metav
+                                                  {A}$ onde fora da subprova...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.579 ...a da subprova estrita temos $\ebox \metav
+                                                  {A}$. Vamos imaginar que e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.579 ...erpretação. Se sabemos que $\ebox\metav
+                                                  {A}$ é verdadeira em um m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.579 ...ndo possível, então sabemos que $\metav
+                                                  {A}$ é verdadeira em todo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 580.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 580.
+[423]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 592.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 592.
+ [424]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  $\metav {A}_1,\metav 
+                                 {A}_2, \dots \metav {A}_n\entails _\mlT \me...
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...s \metav {A}_n\entails _\mlT \metav 
+                                                  {C}$ se e somente se não ...
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...xiva}, na qual $\metav {A}_1,\metav 
+                                                  {A}_2, \dots \metav {A}_n$...
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.596 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.599 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\proves_\mlT\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.599 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\proves_\mlT\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.599 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlT\metav{C}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.599 ...A}_2, \dots \metav{A}_n\proves_\mlT\metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.599 ...}_n\proves_\mlT\metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.599 ...mlT\metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.599 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlT\metav{C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.599 ...}_2, \dots \metav{A}_n\entails_\mlT\metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.600 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlT\met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.600 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\entails_\mlT\met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.600 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlT\metav{C...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.600 ...}_2, \dots \metav{A}_n\entails_\mlT\metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.600 ..._n\entails_\mlT\metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.600 ...mlT\metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.600 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlT\metav{C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.600 ...A}_2, \dots \metav{A}_n\proves_\mlT\metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.610 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.610 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.613 	\ebox \metav
+                   {A}\entails_\mlT \metav{A}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.613 	\ebox \metav{A}\entails_\mlT \metav
+                                          {A}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.617 ...ma interpretação  na qual $\ebox \metav
+                                                  {A}$ fosse verdadeira em a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.617 ...dadeira em algum  mundo  $w$, mas $\metav
+                                                  {A}$ fosse falsa nesse mun...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.617 ...alsa nesse mundo. Agora, se $\ebox \metav
+                                                  {A}$ é verdadeira em $w$,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.617 ...{A}$ é verdadeira em $w$, então $\metav
+                                                  {A}$ deve ser verdadeira e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.617 ... reflexiva, $w$ acessa $w$. Logo, $\metav
+                                                  {A}$ deve ser verdadeira t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.619   $\metav
+               {A}$ era falsa em $w$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 621.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 621.
+[425]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  $\metav {A}_1,\metav 
+                                 {A}_2, \dots \metav {A}_n\entails _\mlSfour...
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...etav {A}_n\entails _\mlSfour \metav 
+                                                  {C}$ se e somente se não ...
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...tiva}, na qual $\metav {A}_1,\metav 
+                                                  {A}_2, \dots \metav {A}_n$...
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.631 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.634 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\proves_\mlSfour\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.634 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\proves_\mlSfour\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.634 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlSfour\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.634 ..., \dots \metav{A}_n\proves_\mlSfour\metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.634 ...proves_\mlSfour\metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.634 ...our\metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.634 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlSfour\met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.634 ... \dots \metav{A}_n\entails_\mlSfour\metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.635 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlSfour...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.635 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\entails_\mlSfour...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.635 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlSfour\met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.635 ... \dots \metav{A}_n\entails_\mlSfour\metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.635 ...ntails_\mlSfour\metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.635 ...our\metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.635 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlSfour\meta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.635 ..., \dots \metav{A}_n\proves_\mlSfour\metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.646 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\ebox \metav 
+                         {A}$
+l.646 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 647.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 647.
+[426]
+! Undefined control sequence.
+l.647 ...$  significa que sempre que $\ebox \metav
+                                                  {A}$ for verdadeira em um ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.647 ...for verdadeira em um mundo, $\ebox \metav
+                                                  {A}$ também deve ser verd...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.647 ...ste mundo. Logo, devemos ter $\ebox\metav
+                                                  {A} \entails_\mlSfour \ebo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.647 ...tav{A} \entails_\mlSfour \ebox\ebox\metav
+                                                  {A}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.651 	\item[]$\ebox\metav
+                          {A} \entails_\mlSfour \ebox \ebox \metav{A}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.651 ...v{A} \entails_\mlSfour \ebox \ebox \metav
+                                                  {A}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.653 ... uma interpretação na qual $\ebox\metav
+                                                  {A}$ seja verdadeira em um...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.653 ...um mundo  $w_1$, mas  $\ebox \ebox \metav
+                                                  {A}$  falsa nesse mundo. A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.653 ...esse mundo. Agora, se $\ebox \ebox \metav
+                                                  {A}$  é falsa em  $w_1$, ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.653 ... algum mundo, $w_2$, no qual $\ebox\metav
+                                                  {A}$ é falsa. Da mesma fo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.653 ...� falsa. Da mesma forma, se $\ebox \metav
+                                                  {A}$ é falsa em $w_2$, en...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.653 ...essar algum mundo, $w_3$, no qual $\metav
+                                                  {A}$ é falsa. Acabamos de...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.653 ...  Por outro lado, do fato de $\ebox\metav
+                                                  {A}$  ser verdadeira em $w...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.653 ... verdadeira em $w_1$, segue que   $\metav
+                                                  {A}$  é verdadeira em tod...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.653 ..., verdadeira em $w_3$.  Portanto, $\metav
+                                                  {A}$ é verdadeira e falsa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 663.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 663.
+[427]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  $\metav {A}_1,\metav 
+                                 {A}_2, \dots \metav {A}_n\entails _\mlSfive...
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...etav {A}_n\entails _\mlSfive \metav 
+                                                  {C}$ se e somente se não ...
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ncia}, na qual $\metav {A}_1,\metav 
+                                                  {A}_2, \dots \metav {A}_n$...
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.668 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.672 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\proves_\mlSfive ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.672 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\proves_\mlSfive ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.672 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlSfive \met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.672 ... \dots \metav{A}_n\proves_\mlSfive \metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.672 ...roves_\mlSfive \metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.672 ...ve \metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.672 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlSfive \me...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.672 ...\dots \metav{A}_n\entails_\mlSfive \metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.673 	\item Se $\metav
+                       {A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlSfive...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.673 	\item Se $\metav{A}_1,\metav
+                                   {A}_2, \dots \metav{A}_n\entails_\mlSfive...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.673 ...Se $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\entails_\mlSfive \me...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.673 ...\dots \metav{A}_n\entails_\mlSfive \metav
+                                                  {C}$, então $\metav{A}_1,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.673 ...tails_\mlSfive \metav{C}$, então $\metav
+                                                  {A}_1,\metav{A}_2, \dots \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.673 ...ve \metav{C}$, então $\metav{A}_1,\metav
+                                                  {A}_2, \dots \metav{A}_n\p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.673 ...�o $\metav{A}_1,\metav{A}_2, \dots \metav
+                                                  {A}_n\proves_\mlSfive \met...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.673 ... \dots \metav{A}_n\proves_\mlSfive \metav
+                                                  {C}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ebox \metav 
+                               {A}$
+l.684 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> $\enot \ebox \metav 
+                               {A}$
+l.684 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.685 Essa regra diz que se $\metav
+                                   {A}$ não é necessária, ou seja, falsa ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.685 ...essível. Temos então $\enot\ebox \metav
+                                                  {A} \entails_\mlSfive  \eb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.685 ...\entails_\mlSfive  \ebox\enot\ebox \metav
+                                                  {A}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.689 	\enot\ebox\metav
+                       {A} \entails_\mlSfive  \ebox \enot\ebox \metav{A}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.689 ...entails_\mlSfive  \ebox \enot\ebox \metav
+                                                  {A}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.693 ...terpretação  na qual  $\enot\ebox\metav
+                                                  {A}$ é verdadeira em um m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.693 ...undo $w_1$, mas  $\ebox \enot\ebox \metav
+                                                  {A}$  é falsa nesse mundo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.693 ...nesse mundo.  Agora, se $\enot\ebox\metav
+                                                  {A}$ é verdadeira em  $w_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.693 ...essar algum mundo, $w_2$, no qual $\metav
+                                                  {A}$ é falsa. Da mesma fo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.693 ... mesma forma, se $\ebox \enot\ebox \metav
+                                                  {A}$ é falsa em  $w_1$, e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.693 ... mundo, $w_3$, no qual $\enot\ebox \metav
+                                                  {A}$ é falsa. Como agora ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.693 ...Mas antes dissemos que $\enot\ebox \metav
+                                                  {A}$ é falsa em $w_3$, o ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.693 ...falsa em $w_3$, o que implica que $\metav
+                                                  {A}$ é verdadeira em todo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.693 ...undos que $w_3$ acessa. Portanto, $\metav
+                                                  {A}$ é verdadeira e falsa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 694.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 694.
+[428]
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  $\metav {A}_1,\metav 
+                                 {A}_2, \dots \metav {A}_n\entails _\mlSfive...
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...etav {A}_n\entails _\mlSfive \metav 
+                                                  {C}$ se e somente se não ...
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...rsal}, na qual $\metav {A}_1,\metav 
+                                                  {A}_2, \dots \metav {A}_n$...
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \metav 
+                       
+l.701 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 703.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 703.
+[429]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 738.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 738.
+ [430])
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+ [431]
+\openout2 = `forallx-yyc-metatheory.aux'.
+
+ (./forallx-yyc-metatheory.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+ [432
+
+
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 6.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+ [433
+
+]
+! Undefined control sequence.
+l.40 \newglossaryentry
+                      {disjunctive normal form}{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 46.
+[434]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 65.
+ [435]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 98.
+ [436]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 131.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 131.
+ [437]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 162.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 162.
+ [438]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 182.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 182.
+ [439]
+! Undefined control sequence.
+l.203 \newglossaryentry
+                       {forma normal conjuntiva}{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 210.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 210.
+[440]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 234.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 234.
+ [441]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 268.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 268.
+ [442]
+! Undefined control sequence.
+l.274 \newglossaryentry
+                       {expressively adequate}{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 290.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 290.
+[443]
+
+LaTeX Warning: Reference `expressive:eor' on page 444 undefined on input line 2
+98.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 311.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 311.
+[444]
+
+LaTeX Warning: Reference `expressive:eand' on page 445 undefined on input line 
+311.
+
+
+LaTeX Warning: Reference `expressive:eif' on page 445 undefined on input line 3
+18.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 336.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 336.
+[445]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 356.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 356.
+ [446]
+
+LaTeX Warning: Reference `expressive:eor' on page 447 undefined on input line 3
+66.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 387.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 387.
+[447]
+
+LaTeX Warning: Reference `expressive:eand' on page 448 undefined on input line 
+388.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 417.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 417.
+[448]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 428.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 428.
+ [449]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 428.
+
+
+LaTeX Warning: Reference `ch.TruthTables' on page 450 undefined on input line 4
+30.
+
+
+LaTeX Warning: Reference `ch.NDTFL' on page 450 undefined on input line 430.
+
+
+LaTeX Warning: Reference `ch.NDTFL' on page 450 undefined on input line 436.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 444.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 444.
+[450
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 464.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 464.
+ [451]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 501.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 501.
+ [452]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 520.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 520.
+ [453]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 538.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 538.
+ [454]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 552.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 552.
+ [455]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 577.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 577.
+ [456]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 618.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 618.
+ [457]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 645.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 645.
+ [458]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 687.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 687.
+ [459]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 721.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 721.
+ [460]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 754.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 754.
+ [461]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 778.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 778.
+
+[462]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 806.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 806.
+ [463]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 847.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 847.
+ [464]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 891.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 891.
+ [465]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 917.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 917.
+ [466])
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 21.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 21.
+ [467]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 25.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 25.
+ [468
 
 
 ]
@@ -7709,28 +11387,28 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 21.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 21.
- [399
+ [469
 
 ]
 
-LaTeX Warning: Reference `s:TFLSentences' on page 400 undefined on input line 2
+LaTeX Warning: Reference `s:TFLSentences' on page 470 undefined on input line 2
 4.
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 48.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 48.
-[400]
+[470]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 62.
- [401])
+ [471])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [402]
+ [472]
 \openout2 = `forallx-yyc-alternatives.aux'.
 
  (./forallx-yyc-alternatives.tex
@@ -7740,7 +11418,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 35.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 35.
- [403
+ [473
 
 
 ]
@@ -7748,30 +11426,30 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 42.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 42.
- [404]
+ [474]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 71.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 71.
- [405]
+ [475]
 
-LaTeX Warning: Reference `s:BasicFOL' on page 406 undefined on input line 81.
+LaTeX Warning: Reference `s:BasicFOL' on page 476 undefined on input line 81.
 
 
-LaTeX Warning: Reference `s:BasicFOL' on page 406 undefined on input line 84.
+LaTeX Warning: Reference `s:BasicFOL' on page 476 undefined on input line 84.
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 86.
-[406]
+[476]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 120.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 120.
- [407]
+ [477]
 
-LaTeX Warning: Reference `s:DerivedFOL' on page 408 undefined on input line 141
+LaTeX Warning: Reference `s:DerivedFOL' on page 478 undefined on input line 141
 .
 
 )
@@ -7779,12 +11457,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [408]
+ [478]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [409]
+ [479]
 \openout2 = `forallx-yyc-quickreference.aux'.
 
  (./forallx-yyc-quickreference.tex
@@ -7799,7 +11477,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
-[410
+[480
 
 
 
@@ -7808,7 +11486,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 105.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 105.
- [411]
+ [481]
 Underfull \hbox (badness 10000) in alignment at lines 113--123
 [][] 
  []
@@ -7827,27 +11505,27 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
-[412]
+[482]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
- [413]
+ [483]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 261.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 261.
- [414]
+ [484]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 285.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 285.
- [415]
+ [485]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 352.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 352.
- [416]
+ [486]
 Overfull \hbox (6.64511pt too wide) in paragraph at lines 359--363
 $[]$ 
  []
@@ -7886,7 +11564,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 403.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 403.
-[417]
+[487]
 Overfull \hbox (4.98007pt too wide) in paragraph at lines 415--420
 $[]$ 
  []
@@ -7905,7 +11583,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
-[418]
+[488]
 ! Undefined control sequence.
 l.35 \glsaddall
                
@@ -7931,7 +11609,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
- [419
+ [489
 
 
 
@@ -7946,9 +11624,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
 (./forallx-yyc-frontmatter.aux) (./forallx-yyc-preface.aux)
 (./forallx-yyc-what.aux) (./forallx-yyc-tfl.aux) (./forallx-yyc-truthtables.aux
 ) (./forallx-yyc-fol.aux) (./forallx-yyc-interpretations.aux)
-(./forallx-yyc-prooftfl.aux) (./forallx-yyc-prooffol.aux)
-(./forallx-yyc-alternatives.aux) (./forallx-yyc-quickreference.aux)
-(./forallx-yyc-backmatter.aux))
+(./forallx-yyc-prooftfl.aux) (./forallx-yyc-prooffol.aux) (./forallx-yyc-ml.aux
+) (./forallx-yyc-metatheory.aux) (./forallx-yyc-alternatives.aux)
+(./forallx-yyc-quickreference.aux) (./forallx-yyc-backmatter.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 
@@ -7959,7 +11637,7 @@ Package rerunfilecheck Warning: File `forallxyyc.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `forallxyyc.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  F6115025C91E79345FF79E98309381BA;3598.
+(rerunfilecheck)             After:  2703CCE7730A036A11D4B90E0D18652E;4069.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.97499pt have occurred.
@@ -7975,11 +11653,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 38566 strings out of 494789
- 660619 string characters out of 6177363
+ 38848 strings out of 494789
+ 663808 string characters out of 6177363
  730011 words of memory out of 5000000
- 39408 multiletter control sequences out of 15000+600000
- 242973 words of font info for 381 fonts, out of 8000000 for 9000
+ 39497 multiletter control sequences out of 15000+600000
+ 249072 words of font info for 388 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  67i,22n,94p,1545b,2309s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_2bp5ef.enc}{/u
@@ -7994,25 +11672,28 @@ ype1/public/baskervaldx/Baskervaldx-BolIta.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/baskervaldx/Baskervaldx-Ita.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/baskervaldx/Baskervaldx-Reg.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/n
-txsyralt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/newtx/txexas.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/
-txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
-lvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on forallxyyc.pdf (431 pages, 1441087 bytes).
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txe
+xas.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on forallxyyc.pdf (501 pages, 1666346 bytes).
 PDF statistics:
- 3589 PDF objects out of 4296 (max. 8388607)
- 1665 named destinations out of 1728 (max. 500000)
+ 4060 PDF objects out of 4296 (max. 8388607)
+ 1843 named destinations out of 2073 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

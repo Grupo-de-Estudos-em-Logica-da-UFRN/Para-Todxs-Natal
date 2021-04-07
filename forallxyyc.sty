@@ -10,6 +10,8 @@
 %\PassOptionsToPackage{numbered}{bookmark}
 %\usepackage{mdframed}
 
+\RequirePackage{mathrsfs} % para o capítulo de lógica modal, usado no comando \metav
+
 % Adaptações para o Português
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -123,6 +125,7 @@
 \def\enot{\ensuremath{\neg}}
 \def\ered{\ensuremath{\bot}}% TB: added to give an absurdity sign
 \newcommand*{\ebox}{\ensuremath{\Box}}
+%\def\ebox{\ensuremath{\Box}}
 \def\ediamond{\ensuremath{\Diamond}}
 \def\maththe{\rotatebox[origin=c]{180}{$\iota$}} % TB: added to give definite description operator
 \def\proves{\ensuremath{\vdash}}
@@ -178,6 +181,7 @@
 
 \newcommand*{\script}[1]{\ensuremath{\mathcal{#1}}}
 \renewcommand*{\meta}[1]{\ensuremath{\mathcal{#1}}} % TB: used for all metavariables
+\newcommand*{\metav}[1]{\ensuremath{\mathscr{#1}}}
 % create a blank
 \newcommand*{\blank}{\underline{\hspace*{2.5em}}}
 \newcommand*{\gap}[1]{\blank$_{#1}$} % TB: used for keys, to avoid use/mention confusion

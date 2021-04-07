@@ -205,56 +205,74 @@
 \contentsline {chapter}{\chapternumberline {37}Regras derivadas}{388}{chapter.37}
 \contentsline {section}{Exerc\IeC {\'\i }cios}{389}{section*.64}
 \contentsline {chapter}{\chapternumberline {38}Provas e sem\^antica}{390}{chapter.38}
-\contentsline {part}{\partnumberline {VIII}Metateoria}{394}{part.8}
+\contentsline {part}{\partnumberline {VIII}L\IeC {\'o}gica Modal}{394}{part.8}
 \mbox {}\hrulefill \par 
-\contentsline {chapter}{\chapternumberline {39}Formas normais e expressividade}{395}{chapter.39}
-\contentsline {section}{\numberline {39.1}Forma Normal Disjuntiva}{395}{section.39.1}
-\contentsline {section}{\numberline {39.2}Prova do Teorema FND}{398}{section.39.2}
-\contentsline {subsection}{Explicitando a prova do teorema da FND}{400}{section*.67}
-\contentsline {section}{\numberline {39.3}Forma Normal Conjuntiva}{402}{section.39.3}
-\contentsline {section}{Exerc\IeC {\'\i }cios}{403}{section*.68}
-\contentsline {section}{\numberline {39.4}Adequa\IeC {\c c}\IeC {\~a}o Expressiva da LVF}{403}{section.39.4}
-\contentsline {subsubsection}{Resultado subsidi\IeC {\'a}rio \ref {expressive:eor}: adequa\IeC {\c c}\IeC {\~a}o expressiva de `$\ensuremath {\neg }$' e `$\ensuremath {\vee }$'}{405}{section*.69}
-\contentsline {subsubsection}{Resultado subsidi\IeC {\'a}rio \ref {expressive:eand}: adequa\IeC {\c c}\IeC {\~a}o expressiva de `$\ensuremath {\neg }$' e `$\ensuremath {\wedge }$'}{406}{section*.70}
-\contentsline {subsubsection}{Resultado subsidi\IeC {\'a}rio \ref {expressive:eif}: adequa\IeC {\c c}\IeC {\~a}o expressiva de `$\ensuremath {\neg }$' e `$\ensuremath {\rightarrow }$'}{406}{section*.71}
-\contentsline {section}{\numberline {39.5}Adequa\IeC {\c c}\IeC {\~a}o expressiva com um \IeC {\'u}nico conectivo}{407}{section.39.5}
-\contentsline {section}{\numberline {39.6}Identificando a inadequa\IeC {\c c}\IeC {\~a}o expressiva}{409}{section.39.6}
-\contentsline {chapter}{\chapternumberline {40}Corre\IeC {\c c}\IeC {\~a}o}{411}{chapter.40}
-\contentsline {subsection}{Um r\IeC {\'a}pido desvio: senten\IeC {\c c}as vacuamente verdadeiras}{423}{section*.72}
-\contentsline {subsection}{De volta \IeC {\`a} confiabilidade das regras de infer\IeC {\^e}ncia}{424}{section*.73}
-\contentsline {subsection}{O fim e o come\IeC {\c c}o...}{427}{section*.74}
-\contentsline {section}{Exerc\IeC {\'\i }cios}{428}{section*.75}
-\contentsline {part}{Ap\IeC {\^e}ndices}{430}{section*.77}
+\contentsline {chapter}{\chapternumberline {39}Introduzindo a L\'ogica Modal}{395}{chapter.39}
+\contentsline {section}{\numberline {39.1}A linguagem da LM}{397}{section.39.1}
+\contentsline {chapter}{\chapternumberline {40}Dedu\IeC {\c c}\IeC {\~a}o natural para a LM}{399}{chapter.40}
+\contentsline {section}{\numberline {40.1}Sistema \ensuremath {\mathbf {K}}}{400}{section.40.1}
+\contentsline {section}{\numberline {40.2}Possibilidade}{404}{section.40.2}
+\contentsline {section}{\numberline {40.3}Sistema \ensuremath {\mathbf {T}}}{406}{section.40.3}
+\contentsline {section}{\numberline {40.4}Sistema \ensuremath {\mathbf {S4}}}{406}{section.40.4}
+\contentsline {section}{\numberline {40.5}Sistema \ensuremath {\mathbf {S5}}}{409}{section.40.5}
+\contentsline {section}{Exerc\IeC {\'\i }cios}{411}{section*.67}
+\contentsline {chapter}{\chapternumberline {41}Sem\IeC {\^a}ntica para a LM}{413}{chapter.41}
+\contentsline {section}{\numberline {41.1}Interpreta\IeC {\c c}\IeC {\~o}es da LM}{413}{section.41.1}
+\contentsline {section}{\numberline {41.2}Uma sem\IeC {\^a}ntica para o Sistema \ensuremath {\mathbf {K}}}{417}{section.41.2}
+\contentsline {section}{\numberline {41.3}Uma sem\IeC {\^a}ntica para o sistema \ensuremath {\mathbf {T}}}{420}{section.41.3}
+\contentsline {section}{\numberline {41.4}Uma sem\IeC {\^a}ntica para \ensuremath {\mathbf {S4}}}{422}{section.41.4}
+\contentsline {section}{\numberline {41.5}Uma sem\IeC {\^a}ntica para \ensuremath {\mathbf {S5}}}{423}{section.41.5}
+\contentsline {section}{Exerc\IeC {\'\i }cios}{426}{section*.68}
+\contentsline {part}{\partnumberline {IX}Metateoria}{428}{part.9}
 \mbox {}\hrulefill \par 
-\contentsline {appendix}{\chapternumberline {A}Nota\IeC {\c c}\IeC {\~a}o simb\IeC {\'o}lica}{430}{appendix.A}
-\contentsline {section}{\numberline {1.1}Nomemclatura alternativa}{430}{section.A.1}
-\contentsline {paragraph}{L\IeC {\'o}gica verofuncional.}{430}{section*.78}
-\contentsline {paragraph}{L\IeC {\'o}gica de primeira ordem.}{430}{section*.79}
-\contentsline {paragraph}{F\IeC {\'o}rmulas.}{430}{section*.80}
-\contentsline {paragraph}{Valora\IeC {\c c}\IeC {\~o}es.}{431}{section*.81}
-\contentsline {paragraph}{Adequa\IeC {\c c}\IeC {\~a}o expressiva.}{431}{section*.82}
-\contentsline {paragraph}{Predicados $n$-\IeC {\'a}rios.}{431}{section*.83}
-\contentsline {paragraph}{Nomes.}{431}{section*.84}
-\contentsline {paragraph}{Dom\IeC {\'\i }nios.}{431}{section*.85}
-\contentsline {section}{\numberline {1.2}S\IeC {\'\i }mbolos alternativos}{431}{section.A.2}
-\contentsline {paragraph}{Nega\IeC {\c c}\IeC {\~a}o.}{432}{section*.86}
-\contentsline {paragraph}{Disjun\IeC {\c c}\IeC {\~a}o.}{432}{section*.87}
-\contentsline {paragraph}{Conjun\IeC {\c c}\IeC {\~a}o.}{432}{section*.88}
-\contentsline {paragraph}{Condicional Material.}{432}{section*.89}
-\contentsline {paragraph}{Bicondicional Material.}{432}{section*.90}
-\contentsline {paragraph}{Quantificadores.}{433}{section*.91}
-\contentsline {appendix}{\chapternumberline {B}Sistemas formais alternativos}{434}{appendix.B}
-\contentsline {section}{\numberline {2.1}Elimina\IeC {\c c}\IeC {\~a}o da disjun\IeC {\c c}\IeC {\~a}o alternativa}{434}{section.B.1}
-\contentsline {section}{\numberline {2.2}Regras de nega\IeC {\c c}\IeC {\~a}o alternativas}{436}{section.B.2}
-\contentsline {section}{\numberline {2.3}Regras alternativas de quantifica\IeC {\c c}\IeC {\~a}o}{437}{section.B.3}
-\contentsline {appendix}{\chapternumberline {C}Refer\IeC {\^e}ncia r\IeC {\'a}pida}{441}{appendix.C}
-\contentsline {section}{\numberline {3.1}Tabelas-verdade t\IeC {\'\i }picas}{441}{section.C.1}
-\contentsline {section}{\numberline {3.2}Uso dos s\IeC {\'\i }mbolos}{442}{section.C.2}
-\contentsline {section}{\numberline {3.3}Usando identidade para simbolizar quantidades}{443}{section.C.3}
-\contentsline {section}{\numberline {3.4}Regras de dedu\IeC {\c c}\IeC {\~a}o b\IeC {\'a}sicas para LVF}{445}{section.C.4}
-\contentsline {section}{\numberline {3.5}Regras derivadas para LVF}{447}{section.C.5}
-\contentsline {section}{\numberline {3.6}Regras de dedu\IeC {\c c}\IeC {\~a}o b\IeC {\'a}sica para LPO}{448}{section.C.6}
-\contentsline {section}{\numberline {3.7}Regras derivadas para LPO}{449}{section.C.7}
+\contentsline {chapter}{\chapternumberline {42}Formas normais e expressividade}{429}{chapter.42}
+\contentsline {section}{\numberline {42.1}Forma Normal Disjuntiva}{429}{section.42.1}
+\contentsline {section}{\numberline {42.2}Prova do Teorema FND}{432}{section.42.2}
+\contentsline {subsection}{Explicitando a prova do teorema da FND}{434}{section*.71}
+\contentsline {section}{\numberline {42.3}Forma Normal Conjuntiva}{436}{section.42.3}
+\contentsline {section}{Exerc\IeC {\'\i }cios}{437}{section*.72}
+\contentsline {section}{\numberline {42.4}Adequa\IeC {\c c}\IeC {\~a}o Expressiva da LVF}{437}{section.42.4}
+\contentsline {subsubsection}{Resultado subsidi\IeC {\'a}rio \ref {expressive:eor}: adequa\IeC {\c c}\IeC {\~a}o expressiva de `$\ensuremath {\neg }$' e `$\ensuremath {\vee }$'}{439}{section*.73}
+\contentsline {subsubsection}{Resultado subsidi\IeC {\'a}rio \ref {expressive:eand}: adequa\IeC {\c c}\IeC {\~a}o expressiva de `$\ensuremath {\neg }$' e `$\ensuremath {\wedge }$'}{440}{section*.74}
+\contentsline {subsubsection}{Resultado subsidi\IeC {\'a}rio \ref {expressive:eif}: adequa\IeC {\c c}\IeC {\~a}o expressiva de `$\ensuremath {\neg }$' e `$\ensuremath {\rightarrow }$'}{440}{section*.75}
+\contentsline {section}{\numberline {42.5}Adequa\IeC {\c c}\IeC {\~a}o expressiva com um \IeC {\'u}nico conectivo}{441}{section.42.5}
+\contentsline {section}{\numberline {42.6}Identificando a inadequa\IeC {\c c}\IeC {\~a}o expressiva}{443}{section.42.6}
+\contentsline {chapter}{\chapternumberline {43}Corre\IeC {\c c}\IeC {\~a}o}{445}{chapter.43}
+\contentsline {subsection}{Um r\IeC {\'a}pido desvio: senten\IeC {\c c}as vacuamente verdadeiras}{457}{section*.76}
+\contentsline {subsection}{De volta \IeC {\`a} confiabilidade das regras de infer\IeC {\^e}ncia}{458}{section*.77}
+\contentsline {subsection}{O fim e o come\IeC {\c c}o...}{461}{section*.78}
+\contentsline {section}{Exerc\IeC {\'\i }cios}{462}{section*.79}
+\contentsline {part}{Ap\IeC {\^e}ndices}{464}{section*.81}
 \mbox {}\hrulefill \par 
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{451}{section*.114}
-\contentsline {chapter}{Siglas}{456}{section*.116}
+\contentsline {appendix}{\chapternumberline {A}Nota\IeC {\c c}\IeC {\~a}o simb\IeC {\'o}lica}{464}{appendix.A}
+\contentsline {section}{\numberline {1.1}Nomemclatura alternativa}{464}{section.A.1}
+\contentsline {paragraph}{L\IeC {\'o}gica verofuncional.}{464}{section*.82}
+\contentsline {paragraph}{L\IeC {\'o}gica de primeira ordem.}{464}{section*.83}
+\contentsline {paragraph}{F\IeC {\'o}rmulas.}{464}{section*.84}
+\contentsline {paragraph}{Valora\IeC {\c c}\IeC {\~o}es.}{465}{section*.85}
+\contentsline {paragraph}{Adequa\IeC {\c c}\IeC {\~a}o expressiva.}{465}{section*.86}
+\contentsline {paragraph}{Predicados $n$-\IeC {\'a}rios.}{465}{section*.87}
+\contentsline {paragraph}{Nomes.}{465}{section*.88}
+\contentsline {paragraph}{Dom\IeC {\'\i }nios.}{465}{section*.89}
+\contentsline {section}{\numberline {1.2}S\IeC {\'\i }mbolos alternativos}{465}{section.A.2}
+\contentsline {paragraph}{Nega\IeC {\c c}\IeC {\~a}o.}{466}{section*.90}
+\contentsline {paragraph}{Disjun\IeC {\c c}\IeC {\~a}o.}{466}{section*.91}
+\contentsline {paragraph}{Conjun\IeC {\c c}\IeC {\~a}o.}{466}{section*.92}
+\contentsline {paragraph}{Condicional Material.}{466}{section*.93}
+\contentsline {paragraph}{Bicondicional Material.}{466}{section*.94}
+\contentsline {paragraph}{Quantificadores.}{467}{section*.95}
+\contentsline {appendix}{\chapternumberline {B}Sistemas formais alternativos}{468}{appendix.B}
+\contentsline {section}{\numberline {2.1}Elimina\IeC {\c c}\IeC {\~a}o da disjun\IeC {\c c}\IeC {\~a}o alternativa}{468}{section.B.1}
+\contentsline {section}{\numberline {2.2}Regras de nega\IeC {\c c}\IeC {\~a}o alternativas}{470}{section.B.2}
+\contentsline {section}{\numberline {2.3}Regras alternativas de quantifica\IeC {\c c}\IeC {\~a}o}{471}{section.B.3}
+\contentsline {appendix}{\chapternumberline {C}Refer\IeC {\^e}ncia r\IeC {\'a}pida}{475}{appendix.C}
+\contentsline {section}{\numberline {3.1}Tabelas-verdade t\IeC {\'\i }picas}{475}{section.C.1}
+\contentsline {section}{\numberline {3.2}Uso dos s\IeC {\'\i }mbolos}{476}{section.C.2}
+\contentsline {section}{\numberline {3.3}Usando identidade para simbolizar quantidades}{477}{section.C.3}
+\contentsline {section}{\numberline {3.4}Regras de dedu\IeC {\c c}\IeC {\~a}o b\IeC {\'a}sicas para LVF}{479}{section.C.4}
+\contentsline {section}{\numberline {3.5}Regras derivadas para LVF}{481}{section.C.5}
+\contentsline {section}{\numberline {3.6}Regras de dedu\IeC {\c c}\IeC {\~a}o b\IeC {\'a}sica para LPO}{482}{section.C.6}
+\contentsline {section}{\numberline {3.7}Regras derivadas para LPO}{483}{section.C.7}
+\mbox {}\hrulefill \par 
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{485}{section*.118}
+\contentsline {chapter}{Siglas}{490}{section*.120}

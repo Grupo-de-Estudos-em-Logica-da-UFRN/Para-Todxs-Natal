@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  5 APR 2021 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  6 APR 2021 21:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -517,6 +517,10 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
@@ -1254,7 +1258,7 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 (Font)                  OML/cmm/b/it --> OML/ntxmi/m/it on input line 221.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 (Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 222.
-\symlettersA=\mathgroup6
+\symlettersA=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
 (Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 238.
 LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 240.
@@ -1271,10 +1275,10 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 259.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 260.
-\symAMSm=\mathgroup7
+\symAMSm=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
 (Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 283.
-\symsymbolsC=\mathgroup8
+\symsymbolsC=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
 (Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 304.
 Now handling font encoding LMX ...
@@ -1292,7 +1296,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 317.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 318.
-\symlargesymbolsTXA=\mathgroup9
+\symlargesymbolsTXA=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
 
 (Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 332.
@@ -1780,11 +1784,11 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 824.
+(hyperref)                setting the option has no effect on input line 828.
 
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 824.
-Package hyperref Info: Option `colorlinks' set `true' on input line 824.
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 824
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 828.
+Package hyperref Info: Option `colorlinks' set `true' on input line 828.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 828
 .
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
@@ -3243,9 +3247,9 @@ ne 48.
 (./forallx-yyc-preface.aux) (./forallx-yyc-what.aux) (./forallx-yyc-tfl.aux)
 (./forallx-yyc-truthtables.aux) (./forallx-yyc-fol.aux)
 (./forallx-yyc-interpretations.aux) (./forallx-yyc-prooftfl.aux)
-(./forallx-yyc-prooffol.aux) (./forallx-yyc-metatheory.aux)
-(./forallx-yyc-alternatives.aux) (./forallx-yyc-quickreference.aux)
-(./forallx-yyc-backmatter.aux))
+(./forallx-yyc-prooffol.aux) (./forallx-yyc-ml.aux)
+(./forallx-yyc-metatheory.aux) (./forallx-yyc-alternatives.aux)
+(./forallx-yyc-quickreference.aux) (./forallx-yyc-backmatter.aux))
 \openout1 = `forallxyyc-print.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 320.
@@ -3424,6 +3428,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 67.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 67.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
 LaTeX Font Info:    Try loading font information for U+ntxmia on input line 67.
 
 
@@ -3522,6 +3531,10 @@ LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
 
 LaTeX Font Warning: Font shape `OT1/Baskervaldx-TLF/m/n' in size <5.5> not avai
 lable
+(Font)              size <5> substituted on input line 38.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
 (Font)              size <5> substituted on input line 38.
 
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
@@ -4290,6 +4303,10 @@ Package babel Info: Redefining portuges shorthand "|
 
 LaTeX Font Warning: Font shape `OT1/Baskervaldx-TLF/m/n' in size <10.5> not ava
 ilable
+(Font)              size <10.95> substituted on input line 1163.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 1163.
 
 
@@ -5968,13 +5985,13 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 19.
  [393]
-\openout2 = `forallx-yyc-metatheory.aux'.
+\openout2 = `forallx-yyc-ml.aux'.
 
- (./forallx-yyc-metatheory.tex
+ (./forallx-yyc-ml.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 3.
  [394
 
 
@@ -5983,192 +6000,403 @@ Package babel Info: Redefining portuges shorthand "|
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 18.
  [395
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 27.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 27.
 
 [396]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 50.
  [397]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 61.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 61.
  [398]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 140.
- [399]
+(babel)             in language  on input line 72.
+ [399
+
+]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 93.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 165.
- [400]
+(babel)             in language  on input line 93.
+
+[400]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 197.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 197.
+(babel)             in language  on input line 129.
  [401]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
- [402]
+(babel)             in language  on input line 147.
+
+[402]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 192.
  [403]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 217.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 289.
- [404]
+(babel)             in language  on input line 217.
+
+[404]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 243.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 243.
  [405]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 329.
+(babel)             in language  on input line 270.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 329.
- [406]
+(babel)             in language  on input line 270.
+
+[406]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 355.
+(babel)             in language  on input line 306.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 355.
+(babel)             in language  on input line 306.
  [407]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 331.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 331.
+ [408]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
+ [409]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 387.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 387.
+ [410]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 399.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 399.
+
+[411]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 445.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 445.
+ [412]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 455.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 455.
+ [413
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 462.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 462.
+ [414]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 484.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 484.
+ [415]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 510.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 510.
+ [416]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 540.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 540.
+ [417]
+Underfull \vbox (badness 1292) has occurred while \output is active []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 564.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 564.
+ [418]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 580.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 580.
+
+[419]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 592.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 592.
+ [420]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 621.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 621.
+ [421]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 647.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 647.
+ [422]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 663.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 663.
+ [423]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 694.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 694.
+ [424]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 703.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 703.
+ [425]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 738.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 738.
+ [426])
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+ [427]
+\openout2 = `forallx-yyc-metatheory.aux'.
+
+
+(./forallx-yyc-metatheory.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+ [428
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+ [429
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 46.
+
+[430]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 68.
+ [431]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 114.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 114.
+ [432]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 140.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 140.
+ [433]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 165.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 165.
+ [434]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 197.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 197.
+ [435]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 220.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 220.
+ [436]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 249.
+ [437]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 289.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 289.
+ [438]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 302.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 302.
+ [439]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 329.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 329.
+ [440]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 355.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 355.
+ [441]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 382.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 382.
 
-[408]
+[442]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 417.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 417.
- [409]
+ [443]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 428.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 428.
- [410]
+ [444]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 444.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 444.
- [411
+ [445
 
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 464.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 464.
- [412]
+ [446]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 501.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 501.
- [413]
+ [447]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 520.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 520.
- [414]
+ [448]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 538.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 538.
 
-[415]
+[449]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 552.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 552.
- [416]
+ [450]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 577.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 577.
- [417]
+ [451]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 618.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 618.
- [418]
+ [452]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 645.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 645.
- [419]
+ [453]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 687.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 687.
- [420]
+ [454]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 721.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 721.
- [421]
+ [455]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 754.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 754.
- [422]
+ [456]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 778.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 778.
- [423]
+ [457]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 806.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 806.
- [424]
+ [458]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 847.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 847.
- [425]
+ [459]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 891.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 891.
- [426]
+ [460]
 Underfull \vbox (badness 3333) has occurred while \output is active []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 917.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 917.
- [427])
+ [461])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 21.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 21.
 
-[428]
+[462]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 25.
- [429
+ [463
 
 
 ] (./forallx-yyc-notation.tex
@@ -6176,24 +6404,24 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 21.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 21.
- [430
+ [464
 
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 48.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 48.
- [431]
+ [465]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 62.
- [432])
+ [466])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [433]
+ [467]
 \openout2 = `forallx-yyc-alternatives.aux'.
 
 
@@ -6204,7 +6432,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 35.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 35.
- [434
+ [468
 
 
 ]
@@ -6214,33 +6442,33 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 42.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 42.
- [435]
+ [469]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 71.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 71.
 
-[436]
+[470]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 86.
- [437]
+ [471]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 120.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 120.
- [438])
+ [472])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [439]
+ [473]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
- [440]
+ [474]
 \openout2 = `forallx-yyc-quickreference.aux'.
 
  (./forallx-yyc-quickreference.tex
@@ -6252,7 +6480,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
-[441
+[475
 
 
 
@@ -6261,7 +6489,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 105.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 105.
- [442]
+ [476]
 Underfull \hbox (badness 10000) in alignment at lines 113--123
 [][] 
  []
@@ -6283,28 +6511,28 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
- [443]
+ [477]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 166.
 
-[444]
+[478]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 261.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 261.
- [445]
+ [479]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 285.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 285.
- [446]
+ [480]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 352.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 352.
- [447]
+ [481]
 Overfull \hbox (6.64511pt too wide) in paragraph at lines 359--363
 $[]$ 
  []
@@ -6343,7 +6571,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 403.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 403.
-[448]
+[482]
 Overfull \hbox (4.98007pt too wide) in paragraph at lines 415--420
 $[]$ 
  []
@@ -6362,12 +6590,12 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
-[449] (./forallxyyc-print.gls
+[483] (./forallxyyc-print.gls
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [450
+ [484
 
 
 ]
@@ -6375,7 +6603,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 64.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 64.
- [451
+ [485
 
 
 ]
@@ -6383,28 +6611,28 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
- [452]
+ [486]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 135.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 135.
- [453]
+ [487]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 181.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 184.
- [454])
+(babel)             in language  on input line 181.
+ [488])
 (./forallxyyc-print.acr
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [455])
+ [489])
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
- [456
+ [490
 
 
 ]
@@ -6415,7 +6643,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 39.
- [457
+ [491
 
 
 ])
@@ -6434,9 +6662,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
 (./forallx-yyc-preface.aux) (./forallx-yyc-what.aux) (./forallx-yyc-tfl.aux)
 (./forallx-yyc-truthtables.aux) (./forallx-yyc-fol.aux)
 (./forallx-yyc-interpretations.aux) (./forallx-yyc-prooftfl.aux)
-(./forallx-yyc-prooffol.aux) (./forallx-yyc-metatheory.aux)
-(./forallx-yyc-alternatives.aux) (./forallx-yyc-quickreference.aux)
-(./forallx-yyc-backmatter.aux))
+(./forallx-yyc-prooffol.aux) (./forallx-yyc-ml.aux)
+(./forallx-yyc-metatheory.aux) (./forallx-yyc-alternatives.aux)
+(./forallx-yyc-quickreference.aux) (./forallx-yyc-backmatter.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 329.
 
@@ -6449,11 +6677,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 44439 strings out of 494789
- 803527 string characters out of 6177363
- 943981 words of memory out of 5000000
- 46798 multiletter control sequences out of 15000+600000
- 226053 words of font info for 372 fonts, out of 8000000 for 9000
+ 44542 strings out of 494789
+ 805185 string characters out of 6177363
+ 947345 words of memory out of 5000000
+ 46882 multiletter control sequences out of 15000+600000
+ 228121 words of font info for 383 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  67i,22n,94p,1981b,2402s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_2bp5ef.enc}{/u
@@ -6468,27 +6696,29 @@ ype1/public/baskervaldx/Baskervaldx-BolIta.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/baskervaldx/Baskervaldx-Ita.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/baskervaldx/Baskervaldx-Reg.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ntxsyralt
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ne
-wtx/txexas.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
-/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on forallxyyc-print.pdf (471 pages, 2080239 bytes).
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rt
+xr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexas.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/t
+xfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on forallxyyc-print.pdf (505 pages, 2183953 bytes).
 PDF statistics:
- 1668 PDF objects out of 1728 (max. 8388607)
+ 1787 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
