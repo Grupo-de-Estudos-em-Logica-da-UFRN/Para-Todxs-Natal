@@ -1,4 +1,4 @@
-\babel@toc {brazil}{}
+\babel@toc {brazilian}{}
 \contentsline {chapter}{Pref\IeC {\'a}cio}{viii}{chapter*.1}
 \contentsline {part}{\partnumberline {I}No\IeC {\c c}\IeC {\~o}es-chave da l\IeC {\'o}gica}{1}{part.1}
 \mbox {}\hrulefill \par 
@@ -96,7 +96,7 @@
 \contentsline {chapter}{\chapternumberline {16}Senten\IeC {\c c}as com um quantificador}{160}{chapter.16}
 \contentsline {section}{\numberline {16.1}Senten\IeC {\c c}as quantificacionais comuns}{160}{section.16.1}
 \contentsline {section}{\numberline {16.2}Predicados vazios}{163}{section.16.2}
-\contentsline {section}{\numberline {16.3}Escolhendo um dom\IeC {\'\i }nio}{166}{section.16.3}
+\contentsline {section}{\numberline {16.3}Escolhendo um dom\IeC {\'\i }nio}{165}{section.16.3}
 \contentsline {section}{\numberline {16.4}A utilidade das par\IeC {\'a}frases}{167}{section.16.4}
 \contentsline {section}{\numberline {16.5}O \IeC {\^a}mbito dos quantificadores}{170}{section.16.5}
 \contentsline {section}{\numberline {16.6}Predicados amb\IeC {\'\i }guos}{172}{section.16.6}
@@ -263,7 +263,7 @@
 \contentsline {paragraph}{Quantificadores.}{467}{section*.95}
 \contentsline {appendix}{\chapternumberline {B}Sistemas formais alternativos}{468}{appendix.B}
 \contentsline {section}{\numberline {2.1}Elimina\IeC {\c c}\IeC {\~a}o da disjun\IeC {\c c}\IeC {\~a}o alternativa}{468}{section.B.1}
-\contentsline {section}{\numberline {2.2}Regras de nega\IeC {\c c}\IeC {\~a}o alternativas}{470}{section.B.2}
+\contentsline {section}{\numberline {2.2}Regras de nega\IeC {\c c}\IeC {\~a}o alternativas}{469}{section.B.2}
 \contentsline {section}{\numberline {2.3}Regras alternativas de quantifica\IeC {\c c}\IeC {\~a}o}{471}{section.B.3}
 \contentsline {appendix}{\chapternumberline {C}Refer\IeC {\^e}ncia r\IeC {\'a}pida}{475}{appendix.C}
 \contentsline {section}{\numberline {3.1}Tabelas-verdade t\IeC {\'\i }picas}{475}{section.C.1}
@@ -274,5 +274,4 @@
 \contentsline {section}{\numberline {3.6}Regras de dedu\IeC {\c c}\IeC {\~a}o b\IeC {\'a}sica para LPO}{482}{section.C.6}
 \contentsline {section}{\numberline {3.7}Regras derivadas para LPO}{483}{section.C.7}
 \mbox {}\hrulefill \par 
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{485}{section*.118}
-\contentsline {chapter}{Siglas}{490}{section*.120}
+\contentsline {chapter}{Gloss\'ario}{485}{section*.118}

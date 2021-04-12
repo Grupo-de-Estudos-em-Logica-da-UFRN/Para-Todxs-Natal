@@ -5,48 +5,33 @@
 \def\forallxversion{Fall 2019}
 \def\forallxshortversion{F19}
 
-\RequirePackage{amssymb,amsmath,multicol,ifthen,graphicx,pifont,rotating,xcolor}
-%\RequirePackage{bookmark} %TB: added for speedy navigation
-%\PassOptionsToPackage{numbered}{bookmark}
+\RequirePackage{amssymb,amsmath,hyperref,multicol,ifthen,graphicx,pifont,rotating,xcolor}
+\usepackage[numbered]{bookmark} %TB: added for speedy navigation
 %\usepackage{mdframed}
+\usepackage[nonumberlist,toc,style=index]{glossaries}
+\makeglossaries
+\usepackage{tabu}
 
 \RequirePackage{mathrsfs} % para o capítulo de lógica modal, usado no comando \metav
 
-% Adaptações para o Português
+% % Adaptações para o Português
+\usepackage[english,brazilian]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[brazil]{babel}
 
 %RZ: typefaces 
 
-\RequirePackage{helvet}
+\usepackage{helvet}
+\usepackage[osf]{Baskervaldx} % oldstyle figures
+\usepackage[bigdelims,baskervaldx]{newtxmath} 
+\usepackage[cal=boondoxo]{mathalfa}
 
-\RequirePackage{Baskervaldx} % oldstyle figures
-\PassOptionsToPackage{osf}{Baskervaldx}
+%RZ: Make sure we have a copyright symbol
 
-\RequirePackage{newtxmath}
-\PassOptionsToPackage{bigdelims,baskervaldx}{newtxmath}
+\def\copyright{\textcircled{C}}
 
-\RequirePackage{mathalfa}
-\PassOptionsToPackage{cal=boondoxo}{mathalfa}
+%RZ: Include git revision info
 
-\def\copyright{\textcircled{C}} %RZ: Make sure we have a copyright symbol
-
-\RequirePackage{gitinfo2} %RZ: Include git revision info
-
-\RequirePackage{tabu}
-
-\RequirePackage{atbegshi}  % to kill the blank page after the titling page
-\RequirePackage{caption}
-\PassOptionsToPackage{font={small,it}}{caption}
-
-\RequirePackage{hyperref}
-\PassOptionsToPackage{colorlinks=true,linkcolor=blue,linktocpage}{hyperref}
-
-% Transferido pro print.tex (\usepackage)
-%\RequirePackage{glossaries}
-%\PassOptionsToPackage{acronym,xindy,nonumberlist,toc,style=index}{glossaries}
-%\makeglossaries
+\usepackage{gitinfo2}
 
 % RZ: TOC widths
 
@@ -93,7 +78,9 @@
 \makeevenhead{leadbeater}{\small\sffamily\color{leadbeater}\leftmark}{}
             {\color{leadbeater}\sffamily\bfseries\thepage}
 
+\usepackage{atbegshi}  % to kill the blank page after the titling page
 
+\usepackage[font={small,it}]{caption}
 
 
 % The original forallx.sty was written in 2005
@@ -125,7 +112,6 @@
 \def\enot{\ensuremath{\neg}}
 \def\ered{\ensuremath{\bot}}% TB: added to give an absurdity sign
 \newcommand*{\ebox}{\ensuremath{\Box}}
-%\def\ebox{\ensuremath{\Box}}
 \def\ediamond{\ensuremath{\Diamond}}
 \def\maththe{\rotatebox[origin=c]{180}{$\iota$}} % TB: added to give definite description operator
 \def\proves{\ensuremath{\vdash}}
@@ -182,6 +168,7 @@
 \newcommand*{\script}[1]{\ensuremath{\mathcal{#1}}}
 \renewcommand*{\meta}[1]{\ensuremath{\mathcal{#1}}} % TB: used for all metavariables
 \newcommand*{\metav}[1]{\ensuremath{\mathscr{#1}}}
+
 % create a blank
 \newcommand*{\blank}{\underline{\hspace*{2.5em}}}
 \newcommand*{\gap}[1]{\blank$_{#1}$} % TB: used for keys, to avoid use/mention confusion
@@ -234,7 +221,7 @@
 % \factoidbox{...} produces an inset paragraph of text with a line around it
 % Neither for lists nor an environment, but it really didn't
 % belong anywhere else.
-\RequirePackage{tcolorbox}
+\usepackage{tcolorbox}
 \newcommand{\factoidbox}[1]{\begin{factoidboxe}#1\end{factoidboxe}}
 \newenvironment{factoidboxe}{%
   \begin{tcolorbox}[%width=.9\textwidth,
@@ -836,7 +823,7 @@
 %   A. To illustrate an argument for the truth table of the material conditional
 %   B. To draw graphs illustrating small finite interpretations. 
 % All these drawings are done using tikz
-\RequirePackage{tikz}
+\usepackage{tikz}
 \usetikzlibrary{arrows,positioning,shapes} 
 
 \tikzset{phantom_shape/.style={thick, fill=black!0, minimum width=30pt, minimum height=30pt}, % TB: renders the shape invisible
@@ -845,4 +832,4 @@
 		}
 
 
-\IfFileExists{forallxyyc-local.sty}{\RequirePackage{forallxyyc-local}}{}
+\IfFileExists{forallxyyc-local.sty}{\usepackage{forallxyyc-local}}{}

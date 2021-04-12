@@ -11,11 +11,9 @@
 \label{Intro}
 
 A lógica modal (LM) é a lógica que trata de modalidades, maneiras pelas quais uma afirmação pode ser verdadeira. As duas modalidades mais conhecidas são   \emph{Necessidade} e \emph{Possibilidade}.   Uma afirmação pode ser verdadeira, mas também pode ser necessariamente verdadeira (verdadeira não importando como o mundo possa ser). Por exemplo, verdades lógicas não são apenas verdadeiras por causa de alguma característica acidental do mundo, mas verdadeiras em qualquer circunstância. Uma dada afirmação pode não ser realmente verdadeira, mas pode ter sido verdadeira. 
-Usamos o operador modal $\ebox$ para expressar \emph{necessidade} e $\ediamond$ para expressar \emph{possibilidade}. Assim, você pode ler $\ebox\metav{A}$ como \emph{é necessariamente o caso que} $\metav{A}$, e $\ediamond\metav{A}$ como \emph{é possivelmente o caso que}  $\metav{A}$.
-
+Usamos o operador modal $\ebox$ para expressar \emph{necessidade} e $\ediamond$ para expressar \emph{possibilidade}. Assim, você pode ler $\ebox \metav{A}$ como \emph{é necessariamente o caso que} $\metav{A}$, e $\ediamond \metav{A}$ como \emph{é possivelmente o caso que}  $\metav{A}$.
 
 Existem muitos tipos diferentes de necessidade e possibilidade.  Por exemplo, é    \emph{humanamente impossível} para mim correr a 200 Km/h.  Dado o tipo de criaturas que somos, nenhum ser humano pode fazer isso. Mas,  ainda assim, não é  \emph{fisicamente impossível} para mim correr tão rápido. Ainda não temos a tecnologia para fazer isso, mas certamente é fisicamente possível trocar minhas pernas biológicas por pernas robóticas que possam funcionar a 200 Km/h. Por outro lado, é fisicamente impossível para mim correr mais rápido do que a velocidade da luz, pois isso contrariaria as leis da física. Entretanto, isso não é  \emph{logicamente} impossível, pois não é uma contradição imaginar que as leis da física possam ser diferentes e que possam permitir que os objetos se movam mais rápido que a luz.
-
 
 Com que tipo de modalidade a LM lida? \emph{Todos eles}! A LM é uma ferramenta muito flexível. Começamos com um conjunto básico de regras que regem os operadores modais $\ebox$ e $\ediamond$. Em seguida,  adicionamos mais regras para  adequar qualquer tipo de modalidade que estamos interessados.  Na verdade, a LM é tão flexível que nem precisamos pensar sempre  $\ebox$ e $\ediamond$ como expressando \emph{necessidade} e \emph{possibilidade} respectivamente. Em vez disso, podemos ler $\ebox$ como expressando \emph{demonstrabilidade}, de modo que $\ebox\metav{A}$ significa   \emph{é demonstrável que} $\metav{A}$, e $\ediamond\metav{A}$ significa \emph{não é refutável que}  $\metav{A}$. Da mesma forma, podemos interpretar $\ebox\metav{A}$ como significando  $S$ \emph{sabe que  $\metav{A}$} ou $S$ \emph{acredita que $\metav{A}$}. 
 Ou, ainda podemos ler $\ebox$ como expressando  \emph{obrigação moral}. Neste caso $\ebox \metav{A}$ significa \emph{é moralmente obrigatório que} $\metav{A}$ e $\ediamond \metav{A}$ significa \emph{é moralmente permissível que} $\metav{A}$. Tudo o que precisaríamos fazer é elaborar as regras corretas para essas diferentes leituras de  $\ebox$ e $\ediamond$.
@@ -34,7 +32,6 @@ Veremos que a sentença  $\ebox A \eif A$   não é provada em \mlK, mas sim em 
 
 
 A linguagem da LM é uma extensão da LVF. Tem um estoque infinito de \emph{letras sentenciais} (sentenças atômicas); os conectivos lógicos $\enot$, $\eand$,  $\eor$,    $\eif$  e $\eiff$; além dos  operadores modais  $\ebox$ e $\ediamond$.
-
 
 Poderíamos ter começado com a LPO, o que nos teria dado a Lógica Modal Quantificada (LMQ). A LMQ é muito mais poderosa do que a LM, mas também é muito, muito mais complicada. Assim,  vamos manter as coisas simples e começar com uma extensão da LVF. 
 
@@ -57,27 +54,23 @@ Aqui estão alguns exemplos de sentenças  da LM:
 	\item[]$\ebox\ediamond (S\eand (Z\eiff (\ebox W \eor \ediamond Q)))$
 \end{itemize}
 
-
 \chapter{Dedução natural para a LM}
 \label{Proof}
 
 Na Parte~\ref{ch.NDTFL},  apresentamos um sistema em dedução natural para a LVF, no qual, explicitamos as regras de inferência que regem os conetivos lógicos da  LVF.  Agora, sabendo que a linguagem da LM é uma extensão da LVF,  que além dos conectivos lógicos tem os operadores modais   $\ebox$ e $\ediamond$,  precisamos especificar as regras de inferência para tais operadores modais. Ora, é exatamente isso o que faremos neste capítulo. Vamos apresentar os sistemas em dedução  natural  para as lógicas modais  \mlK, \mlT, \mlSfour{} e \mlSfive.
 
- Como  antes,  usaremos $\proves$ para expressar dedutibilidade. Entretanto, será útil adicionar um subscrito para indicar em qual sistema modal estamos trabalhando. Assim,  por exemplo, se quisermos dizer que podemos provar $\metav{C}$ a partir de $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ \emph{no sistema}~\mlK, escrevemos: $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n \proves_\mlK \metav{C}$.
+Como  antes,  usaremos $\proves$ para expressar dedutibilidade. Entretanto, será útil adicionar um subscrito para indicar em qual sistema modal estamos trabalhando. Assim,  por exemplo, se quisermos dizer que podemos provar $\metav{C}$ a partir de $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ \emph{no sistema}~\mlK, escrevemos: $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n \proves_\mlK \metav{C}$.
 
 \section{Sistema \mlK}
 \label{K}
 
 Começamos com um sistema modal particularmente simples, chamado \mlK{} em homenagem ao filósofo e lógico Saul Kripke. O sistema \mlK{} tem todas as regras de dedução natural da  LVF, incluindo as regras  básicas e as derivadas, além de  duas novas regras básicas para o operador modal   \ebox{}  e um tipo especial de subprova.   
 
-
 Esse  tipo especial de subprova, que chamamremos de  \emph{subprova estrita}, parece uma subprova comum, exceto que tem um~\ebox{} em sua linha de suposição em vez de uma fórmula. Ela nos permite provar coisas e raciocinar sobre possibilidades alternativas. 
  
  O que podemos provar dentro de uma subprova estrita vale para qualquer possibilidade alternativa, em particular, em possibilidades alternativas onde as suposições em vigor em nossa prova podem não valer. Em uma subprova estrita, todas as suposições são desconsideradas, e não estamos autorizados a apelar para quaisquer linhas fora da subprova estrita (exceto conforme permitido pelas regras modais fornecidas abaixo).
 
-
 A regra \ebox I nos permite derivar uma fórmula $\ebox \metav{A}$ se pudermos derivar $\metav{A}$ dentro de uma subprova estrita. Esse é  nosso método fundamental para introduzir \ebox{} nas provas. A ideia básica é bastante simples: se $\metav{A}$ é um teorema, então  $\ebox \metav{A}$ deve ser um teorema também (Lembre-se de que chamar $\metav{A}$ de teorema é dizer que podemos provar $\metav{A}$ sem confiar em quaisquer suposições não descartadas).
-
 
 Suponha que queremos provar $\ebox(A\eif A)$. A primeira coisa que precisamos fazer é provar que $A\eif A$ é um teorema. Isso você já sabe como fazer na LVF,  simplesmente apresentando uma prova de $A\eif A$  como esta:
 \[
@@ -194,7 +187,6 @@ Esta é chamada  de \emph{regra de distribuição}, porque nos diz que $\ebox$ `
 
 As regras \ebox I e \ebox E parecem bastante simples e, de fato, \mlK{} é um sistema muito simples! Mas \mlK{} é mais poderoso do que você poderia imaginar. Você também pode  provar outras coisas nele.
 
-
 \section{Possibilidade}
 \label{possibility}
 
@@ -246,8 +238,6 @@ Assim,  não há nenhum sentido em que a necessidade seja de alguma forma mais \
 
 O sistema  \mlK{}   é um sistema modal muito simples e  tão fraco que nem mesmo permite que você prove $\metav{A}$  a partir de $\ebox\metav{A}$.  Mas se estivermos pensando em $\ebox$ como expressando \emph{necessidade}, deveríamos ser capazes de fazer esta inferência: se $\metav{A}$ é \emph{necessariamente verdadeira}, então ela certamente deve ser  \emph{verdadeira}!
 
- 
-
 Isso nos leva a um novo sistema modal, \mlT, que obtemos adicionando a
 seguinte regra, R\mlT, ao sistema \mlK:
 \factoidbox{
@@ -259,7 +249,6 @@ seguinte regra, R\mlT, ao sistema \mlK:
 }
 
 A restrição da regra R\mlT{} é, de certa forma, oposta à restrição em \ebox E.  Ao contrario da restrição de  \ebox E, você  não pode usar  a regra R\mlT{} em uma subprova estrita aninhada.
-
 
 Com a inclusão da regra R\mlT{}, podemos provar coisas em \mlT{} que não poderíamos provar em \mlK, como por exemplo:  $\ebox A \eif A$.
 
@@ -322,7 +311,6 @@ Agora podemos provar ainda mais resultados. Por exemplo:
 \end{nd}\]
 Da mesma forma, podemos provar $\ediamond\ediamond A \eif \ediamond A$. Isso nos mostra que, além ser possível \emph{adicionar}  \emph{caixas extras}, no sistema \mlSfour{} também podemos \emph{excluir losangos extras} : de $\ediamond\ediamond \metav{A}$, você sempre pode inferir $\ediamond\metav{A}$.
 
-
 \section{Sistema \mlSfive}
 \label{S5}
 
@@ -358,7 +346,6 @@ Esta regra nos permite mostrar que $\ediamond\ebox A\proves_\mlSfive  \ebox A$:
 
 Assim, além de adicionar caixas na frente de losangos, também podemos excluir os losangos que estão na frente das caixas.
 
-
 Obtemos \mlSfive{} apenas adicionando a regra R$\mathbf{5}$  a \mlSfour. Na verdade, poderíamos ter adicionado a regra R$\mathbf{5}$ a \mlT{} sozinha, e deixar de fora a regra R$\mathbf{4}$. Tudo o que podemos provar com a regra R$\mathbf{4}$ também pode ser provado usando R\mlT{} junto com R$\mathbf{5}$. Por exemplo, aqui está uma prova que mostra $\ebox A \proves_\mlSfive  \ebox\ebox A$ sem usar R$\mathbf{4}$:
 
 \[\begin{nd}
@@ -388,7 +375,6 @@ Obtemos \mlSfive{} apenas adicionando a regra R$\mathbf{5}$  a \mlSfour. Na verd
 Acabamos de ver que o sistema \mlSfive{} é \emph{estritamente mais forte} que \mlSfour, pois há coisas que podem ser provadas em \mlSfive{}, mas não podem em \mlSfour{}  como por exemplo: $\ediamond\ebox A \eif \ebox A$.  
 
 O ponto importante sobre \mlSfive{} pode ser colocado assim: se você tiver uma longa sequência de caixas e losangos em qualquer combinação, você pode excluir todos, exceto o último. Por exemplo, a sentença $\ediamond\ebox\ediamond\ediamond\ebox\ebox\ediamond\ebox A$ pode ser simplificada para   $\ebox A$ com apenas um operador.
-
 
 \practiceproblems
 
@@ -432,7 +418,6 @@ Forneça provas em  \mlSfour{}  para as seguintes asserções:
 	\item $\ebox A \proves_\mlSfour \ebox(\ebox A \eor B)$
 	\item $\ediamond \ediamond A \proves_\mlSfour \ediamond A$
 \end{earg}
-
 
 \problempart
 Forneça provas em \mlSfive{} para as seguintes asserções:
@@ -479,7 +464,6 @@ Esta é apenas a maneira formal sofisticada de escrever a ideia de que $\ebox\me
 
 No entanto, embora essas regras sejam boas e simples, elas acabam não sendo tão úteis quanto gostaríamos. Como mencionamos, a LM deve ser uma ferramenta muito flexível. Pretende ser uma estrutura geral para lidar com muitos tipos diferentes de necessidade. Como resultado, queremos que nossas regras semânticas para  $\ebox$ e $\ediamond$ sejam um pouco menos rígidas. Podemos fazer isso introduzindo outra ideia nova: \emph{relação de acessibilidade}.
 
-
 Uma relação de acessibilidade, $R$, é uma relação entre mundos possíveis. Grosso modo, dizer que $Rw_1w_2$ (em português: o mundo $w_1$ \emph{acessa} o mundo $w_2$) é dizer que $w_2$ é possível  \emph{em relação a} $w_1$. Em outras palavras, ao introduzir relações de acessibilidade, ampliamos a ideia de que um determinado mundo pode ser possível em relação a alguns mundos, mas não a outros. Isso acaba sendo uma ideia muito frutífera quando se trata de sistemas modais. Agora podemos fornecer as seguintes regras semânticas para os operadores modais $\ebox$ e $\ediamond$:
 
 
@@ -488,7 +472,6 @@ Uma relação de acessibilidade, $R$, é uma relação entre mundos possíveis. 
 	\item[(7)]$\nu_{w_1}(\ediamond \metav{A})=V$ se e somente se  $\exists w_2 (Rw_1w_2\eand \nu_{w_2}(\metav{A})=V)$
 \end{itemize}
 Isto significa que $\ebox\metav{A}$ é verdadeira no mundo  $w_1$ se e somente se $\metav{A}$ é verdadeira em todos os mundos acessíveis a  $w_1$; e $\ediamond\metav{A}$ é verdadeira no mundo  $w_1$ se e somente se $\metav{A}$ é verdadeira em algum mundo acessível a  $w_1$.
-
 
 O que sabemos até agora com respeito à semântica da LM?  Uma interpretação para a LM consiste em três coisas: uma coleção não vazia de mundos possíveis, $W$; uma relação de acessibilidade, $R$; e uma função de valoração, $\nu$. A coleção de 'mundos possíveis' pode realmente ser uma coleção de qualquer coisa que você quiser. Realmente não importa, contanto que $W$ não seja vazio. (Para muitos propósitos, é útil apenas considerar uma coleção de números como sua coleção de mundos.) E por enquanto, pelo menos, $R$ pode ser qualquer relação entre os mundos de $W$ que você desejar. Pode ser uma relação que todos os mundos de $W$ têm com todos os mundos de $W$, ou que nenhum mundo tem com nenhum mundo, ou qualquer coisa intermediária. E, por último, $\nu$ é uma função que pode mapear qualquer sentença atômica da LM em qualquer valor de verdade em qualquer mundo. Tudo o que importa é que ela siga as regras (1) - (7) quando se tratar de sentenças mais complexas.
 
@@ -613,7 +596,6 @@ Para mostrar isto é suficiente mostrar que não existe uma  contra-interpretaç
 	\ebox \metav{A}\entails_\mlT \metav{A}
 \]
  
-
 Caso existisse,  precisaríamos construir  uma interpretação  na qual $\ebox \metav{A}$ fosse verdadeira em algum  mundo  $w$, mas $\metav{A}$ fosse falsa nesse mundo. Agora, se $\ebox \metav{A}$ é verdadeira em $w$, então $\metav{A}$ deve ser verdadeira em todos os mundos acessíveis a $w$. Mas como a relação de acessibilidade é reflexiva, $w$ acessa $w$. Logo, $\metav{A}$ deve ser verdadeira também em $w$. 
 Chegamos assim a uma contradição,  pois assumimos que
   $\metav{A}$ era falsa em $w$. 
@@ -661,8 +643,6 @@ Vamos acrescentar mais uma restrição à relação de acessibilidade. Desta vez
 \end{itemize}
 Isto significa que se  $w_1$ acessa $w_2$, então $w_2$ acessa  $w_1$. Ou em termos de possibilidade relativa: se $w_2$ é possível em relação a  $w_1$, então  $w_1$ é possível em relação a $w_2$. Os lógicos chamam uma relação que é reflexiva, simétrica e transitiva de \emph{relação de equivalência}. Agora podemos  definir uma nova relação de consequência, $\entails_\mlSfive $, como segue:
 
- 
-
 \factoidbox{
 	$\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlSfive  \metav{C}$ se e somente se  não existe nenhum mundo em qualquer interpretação \emph{cuja relação de acessibilidade seja uma relação de equivalência}, na qual $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ são todas verdadeiras e $\metav{C}$ é falsa.
 }
@@ -689,7 +669,6 @@ Para ver isso, tente construir uma contra-interpretação para esta afirmação:
 	\enot\ebox\metav{A} \entails_\mlSfive  \ebox \enot\ebox \metav{A}
 \]
  
-
 Precisaríamos construir uma interpretação  na qual  $\enot\ebox\metav{A}$ é verdadeira em um mundo $w_1$, mas  $\ebox \enot\ebox \metav{A}$  é falsa nesse mundo.  Agora, se $\enot\ebox\metav{A}$ é verdadeira em  $w_1$, então  $w_1$ deve acessar algum mundo, $w_2$, no qual $\metav{A}$ é falsa. Da mesma forma, se $\ebox \enot\ebox \metav{A}$ é falsa em  $w_1$, então  $w_1$ deve acessar algum mundo, $w_3$, no qual $\enot\ebox \metav{A}$ é falsa. Como agora temos a restrição que a relação de acessibilidade é uma relação de equivalência e, portanto, simétrica, podemos inferir que $w_3$ acessa  $w_1$. Assim, $w_3$ acessa  $w_1$, e  $w_1$ acessa $w_2$. Novamente, como a relação de acessibilidade é uma relação de equivalência e, portanto, transitiva, podemos inferir que $w_3$ acessa $w_2$. Mas antes dissemos que $\enot\ebox \metav{A}$ é falsa em $w_3$, o que implica que $\metav{A}$ é verdadeira em todos os mundos que $w_3$ acessa. Portanto, $\metav{A}$ é verdadeira e falsa em $w_2$. Contradição!
 
 Na definição de  $\entails_\mlSfive $, estipulamos que a relação de acessibilidade deve ser uma relação de equivalência. Mas acontece que há outra maneira de obter uma noção de validade adequada para \mlSfive. Em vez de estipular que a relação de acessibilidade seja uma relação de equivalência, podemos estipular que seja uma relação \emph{universal}:

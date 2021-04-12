@@ -1,126 +1,128 @@
-(indexentry :tkey (("correção" "\\glossentry{correcao}") ) :locref "{}{348}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("completude" "\\glossentry{completude}") ) :locref "{}{351}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("premise indicator" "\\glossentry{premise indicator word}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conclusion indicator" "\\glossentry{conclusion indicator word}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("argument" "\\glossentry{argument}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("premise" "\\glossentry{premise}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conclusion" "\\glossentry{conclusion}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("correção" "\\glossentry{correcao}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("joint possibility" "\\glossentry{possibility}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("contingent sentence" "\\glossentry{contingent sentence}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("necessary truth" "\\glossentry{necessary truth}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("necessary falsehood" "\\glossentry{necessary falsehood}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("necessary equivalence" "\\glossentry{necessary equivalence}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence letter" "\\glossentry{sentence letter}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("atomic sentence" "\\glossentry{atomic sentence}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("symbolization key" "\\glossentry{symbolization key}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("connective" "\\glossentry{connective}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("negation" "\\glossentry{negation}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conjunction" "\\glossentry{conjunction}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conjunct" "\\glossentry{conjunct}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("disjunction" "\\glossentry{disjunction}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("disjunct" "\\glossentry{disjunct}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conditional" "\\glossentry{conditional}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("antecedent" "\\glossentry{antecedent}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("consequent" "\\glossentry{consequent}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("biconditional" "\\glossentry{biconditional}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of TFL)" "\\glossentry{sentence of TFL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("main connective" "\\glossentry{main logical operator}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("object language" "\\glossentry{object language}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("metalanguage" "\\glossentry{metalanguage}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("metavariables" "\\glossentry{metavariables}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("truth value" "\\glossentry{truth value}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("truth-functional connective" "\\glossentry{truth-functional connective}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("valuation" "\\glossentry{valuation}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("complete truth table" "\\glossentry{complete truth table}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("tautology" "\\glossentry{tautology}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("contradiction (of TFL)" "\\glossentry{contradiction of TFL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("equivalence (in TFL)" "\\glossentry{equivalent}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("satisfiability (in TFL)" "\\glossentry{satisfiability in TFL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("validity of arguments (in TFL)" "\\glossentry{valid in TFL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("name" "\\glossentry{name}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("predicate" "\\glossentry{predicate}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("universal quantifier" "\\glossentry{universal quantifier}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("variable" "\\glossentry{variable}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("existential quantifier" "\\glossentry{existential quantifier}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("domain" "\\glossentry{domain}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("empty predicate" "\\glossentry{empty predicate}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("term" "\\glossentry{term}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("formula" "\\glossentry{formula}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("scope" "\\glossentry{scope}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("bound variable" "\\glossentry{bound variable}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("free variable" "\\glossentry{free variable}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of FOL)" "\\glossentry{sentence of FOL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("interpretation" "\\glossentry{interpretation}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("substitution instance" "\\glossentry{substitution instance}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("validity" "\\glossentry{validity}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("contradiction (of FOL)" "\\glossentry{contradiction of FOL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("validity of arguments (in FOL)" "\\glossentry{valid in FOL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("equivalence (in FOL)" "\\glossentry{equivalent in FOL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("satisfiability (in FOL)" "\\glossentry{satisfiable in FOL}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("teorema" "\\glossentry{teorema}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("dedutivamente equivalente" "\\glossentry{dedutivamente equivalente}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("dedutivamente inconsistente" "\\glossentry{dedutivamente inconsistente}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("completude" "\\glossentry{completude}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("disjunctive normal form (DNF)" "\\glossentry{disjunctive normal form}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conjunctive normal form (DNF)" "\\glossentry{forma normal conjuntiva}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("expressive adequacy" "\\glossentry{expressively adequate}") ) :locref "{}{484}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conditional" "\\glossentry{conditional}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("premise" "\\glossentry{premise}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conclusion" "\\glossentry{conclusion}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("formula" "\\glossentry{formula}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("truth value" "\\glossentry{truth value}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of TFL)" "\\glossentry{sentence of TFL}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("valuation" "\\glossentry{valuation}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("argument" "\\glossentry{argument}") ) :locref "{}{485}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conjunction" "\\glossentry{conjunction}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence letter" "\\glossentry{sentence letter}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conditional" "\\glossentry{conditional}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("necessary truth" "\\glossentry{necessary truth}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("necessary falsehood" "\\glossentry{necessary falsehood}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of FOL)" "\\glossentry{sentence of FOL}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("interpretation" "\\glossentry{interpretation}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("complete truth table" "\\glossentry{complete truth table}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("valuation" "\\glossentry{valuation}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("disjunction" "\\glossentry{disjunction}") ) :locref "{}{486}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("interpretation" "\\glossentry{interpretation}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("predicate" "\\glossentry{predicate}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("domain" "\\glossentry{domain}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of FOL)" "\\glossentry{sentence of FOL}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("interpretation" "\\glossentry{interpretation}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("complete truth table" "\\glossentry{complete truth table}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("formula" "\\glossentry{formula}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("bound variable" "\\glossentry{bound variable}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("domain" "\\glossentry{domain}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("name" "\\glossentry{name}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("predicate" "\\glossentry{predicate}") ) :locref "{}{487}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("domain" "\\glossentry{domain}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("argument" "\\glossentry{argument}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conclusion" "\\glossentry{conclusion}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of FOL)" "\\glossentry{sentence of FOL}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("interpretation" "\\glossentry{interpretation}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("complete truth table" "\\glossentry{complete truth table}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("valuation" "\\glossentry{valuation}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of TFL)" "\\glossentry{sentence of TFL}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("formula" "\\glossentry{formula}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("main connective" "\\glossentry{main logical operator}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("formula" "\\glossentry{formula}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("bound variable" "\\glossentry{bound variable}") ) :locref "{}{488}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("variable" "\\glossentry{variable}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("formula" "\\glossentry{formula}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("name" "\\glossentry{name}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence letter" "\\glossentry{sentence letter}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("complete truth table" "\\glossentry{complete truth table}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("valuation" "\\glossentry{valuation}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("name" "\\glossentry{name}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("variable" "\\glossentry{variable}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("truth value" "\\glossentry{truth value}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence (of FOL)" "\\glossentry{sentence of FOL}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("interpretation" "\\glossentry{interpretation}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("interpretation" "\\glossentry{interpretation}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("complete truth table" "\\glossentry{complete truth table}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("premise" "\\glossentry{premise}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("conclusion" "\\glossentry{conclusion}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("valuation" "\\glossentry{valuation}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("truth value" "\\glossentry{truth value}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("sentence letter" "\\glossentry{sentence letter}") ) :locref "{}{489}" :attr "pageglsnumberformat" ) 
+\glossaryentry{correção?\glossentry{correcao}|setentrycounter[]{page}\glsnumberformat}{348}
+\glossaryentry{completude?\glossentry{completude}|setentrycounter[]{page}\glsnumberformat}{351}
+\glossaryentry{premise indicator?\glossentry{premise indicator word}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{conclusion indicator?\glossentry{conclusion indicator word}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{argument?\glossentry{argument}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{premise?\glossentry{premise}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{conclusion?\glossentry{conclusion}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{correção?\glossentry{correcao}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{joint possibility?\glossentry{possibility}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{contingent sentence?\glossentry{contingent sentence}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{necessary truth?\glossentry{necessary truth}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{necessary falsehood?\glossentry{necessary falsehood}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{necessary equivalence?\glossentry{necessary equivalence}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{sentence letter?\glossentry{sentence letter}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{atomic sentence?\glossentry{atomic sentence}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{symbolization key?\glossentry{symbolization key}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{connective?\glossentry{connective}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{negation?\glossentry{negation}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{conjunction?\glossentry{conjunction}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{conjunct?\glossentry{conjunct}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{disjunction?\glossentry{disjunction}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{disjunct?\glossentry{disjunct}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{conditional?\glossentry{conditional}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{antecedent?\glossentry{antecedent}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{consequent?\glossentry{consequent}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{biconditional?\glossentry{biconditional}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{sentence (of TFL)?\glossentry{sentence of TFL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{main connective?\glossentry{main logical operator}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{object language?\glossentry{object language}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{metalanguage?\glossentry{metalanguage}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{metavariables?\glossentry{metavariables}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{truth value?\glossentry{truth value}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{truth-functional connective?\glossentry{truth-functional connective}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{valuation?\glossentry{valuation}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{complete truth table?\glossentry{complete truth table}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{tautology?\glossentry{tautology}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{contradiction (of TFL)?\glossentry{contradiction of TFL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{equivalence (in TFL)?\glossentry{equivalent}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{satisfiability (in TFL)?\glossentry{satisfiability in TFL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{validity of arguments (in TFL)?\glossentry{valid in TFL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{name?\glossentry{name}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{predicate?\glossentry{predicate}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{universal quantifier?\glossentry{universal quantifier}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{variable?\glossentry{variable}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{LVF?\glossentry{lvf}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{LPO?\glossentry{lpo}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{existential quantifier?\glossentry{existential quantifier}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{domain?\glossentry{domain}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{empty predicate?\glossentry{empty predicate}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{term?\glossentry{term}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{formula?\glossentry{formula}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{scope?\glossentry{scope}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{bound variable?\glossentry{bound variable}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{free variable?\glossentry{free variable}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{sentence (of FOL)?\glossentry{sentence of FOL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{interpretation?\glossentry{interpretation}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{substitution instance?\glossentry{substitution instance}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{validity?\glossentry{validity}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{contradiction (of FOL)?\glossentry{contradiction of FOL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{validity of arguments (in FOL)?\glossentry{valid in FOL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{equivalence (in FOL)?\glossentry{equivalent in FOL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{satisfiability (in FOL)?\glossentry{satisfiable in FOL}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{teorema?\glossentry{teorema}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{dedutivamente equivalente?\glossentry{dedutivamente equivalente}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{dedutivamente inconsistente?\glossentry{dedutivamente inconsistente}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{completude?\glossentry{completude}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{disjunctive normal form (DNF)?\glossentry{disjunctive normal form}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{conjunctive normal form (DNF)?\glossentry{forma normal conjuntiva}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{expressive adequacy?\glossentry{expressively adequate}|setentrycounter[]{page}\glsnumberformat}{484}
+\glossaryentry{conditional?\glossentry{conditional}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{premise?\glossentry{premise}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{conclusion?\glossentry{conclusion}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{formula?\glossentry{formula}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{truth value?\glossentry{truth value}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{sentence (of TFL)?\glossentry{sentence of TFL}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{valuation?\glossentry{valuation}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{argument?\glossentry{argument}|setentrycounter[]{page}\glsnumberformat}{485}
+\glossaryentry{conjunction?\glossentry{conjunction}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{sentence letter?\glossentry{sentence letter}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{conditional?\glossentry{conditional}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{necessary truth?\glossentry{necessary truth}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{necessary falsehood?\glossentry{necessary falsehood}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{sentence (of FOL)?\glossentry{sentence of FOL}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{interpretation?\glossentry{interpretation}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{complete truth table?\glossentry{complete truth table}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{valuation?\glossentry{valuation}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{disjunction?\glossentry{disjunction}|setentrycounter[]{page}\glsnumberformat}{486}
+\glossaryentry{interpretation?\glossentry{interpretation}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{predicate?\glossentry{predicate}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{domain?\glossentry{domain}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{sentence (of FOL)?\glossentry{sentence of FOL}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{interpretation?\glossentry{interpretation}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{complete truth table?\glossentry{complete truth table}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{formula?\glossentry{formula}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{bound variable?\glossentry{bound variable}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{domain?\glossentry{domain}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{name?\glossentry{name}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{predicate?\glossentry{predicate}|setentrycounter[]{page}\glsnumberformat}{487}
+\glossaryentry{domain?\glossentry{domain}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{argument?\glossentry{argument}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{conclusion?\glossentry{conclusion}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{sentence (of FOL)?\glossentry{sentence of FOL}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{interpretation?\glossentry{interpretation}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{complete truth table?\glossentry{complete truth table}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{valuation?\glossentry{valuation}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{sentence (of TFL)?\glossentry{sentence of TFL}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{formula?\glossentry{formula}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{main connective?\glossentry{main logical operator}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{formula?\glossentry{formula}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{bound variable?\glossentry{bound variable}|setentrycounter[]{page}\glsnumberformat}{488}
+\glossaryentry{variable?\glossentry{variable}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{formula?\glossentry{formula}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{name?\glossentry{name}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{sentence letter?\glossentry{sentence letter}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{complete truth table?\glossentry{complete truth table}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{valuation?\glossentry{valuation}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{name?\glossentry{name}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{variable?\glossentry{variable}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{truth value?\glossentry{truth value}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{sentence (of FOL)?\glossentry{sentence of FOL}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{interpretation?\glossentry{interpretation}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{interpretation?\glossentry{interpretation}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{complete truth table?\glossentry{complete truth table}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{premise?\glossentry{premise}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{conclusion?\glossentry{conclusion}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{valuation?\glossentry{valuation}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{truth value?\glossentry{truth value}|setentrycounter[]{page}\glsnumberformat}{489}
+\glossaryentry{sentence letter?\glossentry{sentence letter}|setentrycounter[]{page}\glsnumberformat}{489}
