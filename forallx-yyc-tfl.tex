@@ -471,7 +471,7 @@ A sentença \ref{if1} tem aproximadamente esta forma: `se C, então R'.
 Usaremos um símbolo novo, `\eif', para simbolizar essa estrutura `se\ldots, então\ldots'.
 Deste modo, simbolizamos a sentença \ref{if1} como:
 $$(C \eif R)$$
-O conectivo `\eif' é chamado de \define{o condicional}.
+O conectivo `\eif' é chamado de \define{condicional}.
 Na sentença condicional `$(C \eif R)$', `$C$' é chamado de \define{antecedente} e `$R$' é chamado de \define{consequente}.
 
 A sentença \ref{if2} também é um condicional.
@@ -570,7 +570,7 @@ Mas nada é dito sobre o que acontece se a filha come toda a verdura.
 No entanto, ao ouvir a sentença \ref{if_iff1}, a filha espera do pai não só o compromisso condicional que a sentença literalmente expressa, mas ela espera também o compromisso de que `ela não ganhará sobremesa \emph{apenas se} não comer toda a verdura'.
 E como vimos na Seção anterior, este compromisso pode ser parafraseado na sentença
 \begin{earg}
-		\item[\ex{if_iff2}] Se você não ganhar sobremesa, então você não comeu toda a verdura.
+		\item[\ex{if_iff2}] Se você não ganhou sobremesa, então você não comeu toda a verdura.
 	\end{earg}
 %É importante notarmos que a pressuposição deste compromisso dado pela sentença \ref{if_iff2} e não explícito na fala do pai não é um erro lógico da filha.
 É importante notarmos que quando a filha ouve a sentença \ref{if_iff1} e pressupõe que o pai também se compromete com a sentença \ref{if_iff2}, ela não está cometendo um erro lógico.
@@ -950,13 +950,13 @@ Por exemplo, a sentença `$\enot\enot\enot D$' é verdadeira se e somente se a s
 Nós estudaremos detalhadamente este ponto mais adiante, nos capítulos da Parte \ref{ch.TruthTables} deste livro.
 
 A estrutura indutiva das sentenças da LVF também nos permite dar uma definição formal da noção de \emph{escopo} de uma negação (mencionado na Seção  \ref{s:ConnectiveConjunction}).
-O escopo de um `$\enot$' é a subsentença da qual `$\enot$' é o conectivo principal.
+O escopo de `$\enot$' é a subsentença da qual `$\enot$' é o conectivo principal.
 Considere, por exemplo, a sentença:
 $$(P \eand (\enot (R \eand B) \eiff Q))$$
 que foi construída fazendo-se a conjunção de `$P$' com \mbox{`$(\enot(R \eand B) \eiff Q)$'}.
 Esta última sentença, por sua vez, foi construída colocando um bicondicional entre `$\enot(R \eand B)$' e `$Q$'.
 A primeira dessas duas sentenças---uma subsentença da sentença original---tem o `\enot' como seu conectivo principal.
-Portanto, o escopo desta negação é apenas `$\enot(R \eand B)$'.
+Portanto, o escopo desta negação é apenas `$(R \eand B)$'.
 De forma geral:
 	\factoidbox{O \define{escopo} de um conectivo (em uma sentença) é a subsentença da qual esse conectivo é o conectivo principal.}
 
@@ -1046,10 +1046,10 @@ Quando a frase é pronunciada, geralmente apenas um significado é pretendido. �
 A ambiguidade está relacionada à vagueza, mas elas não são a mesma coisa. Um adjetivo, como `rico' ou `alto', é \define{vago} quando nem sempre é possível determinar se eles se aplicam ou não. Por exemplo, uma pessoa com 1,9m de altura é claramente alta, mas um prédio desse tamanho é minúsculo. Aqui, o contexto tem um papel a desempenhar na determinação de quais são os casos claros de aplicação e de não-aplicação do adjetivo (`alto para uma pessoa', `alto para um jogador de basquete', `alto para um edifício'). Mesmo quando o contexto é claro, no entanto, ainda haverá casos que se enquadram em uma faixa intermediária.
 
 %In TFL, we generally aim to avoid ambiguity. We will try to give our symbolization keys in such a way that they do not use ambiguous words or  disambiguate them if a word has different meanings. So, e.g., your symbolization key will need two different sentence letters for `Rebecca went to the (money) bank' and `Rebecca went to the (river) bank.' Vagueness is harder to avoid. Since we have stipulated that every case (and later, every valuation) must make every basic sentence (or sentence letter) either true or false and nothing in between, we cannot accommodate borderline cases in TFL.
-Em LVF, geralmente buscamos evitar ambiguidades. Tentaremos fazer com que nossas chaves de simbolização não usem palavras ambíguas ou que eliminem a ambiguidade quando a palavra usada tiver significados diferentes. Então, por exemplo, a chave de simbolização precisará de duas letras sentenciais diferentes para `Ivo está trabalhando no banco (instituição financeira)' e `Ivo está trabalhando no banco (de dados)'. A imprecisão é mais difícil de evitar. Uma vez que estipulamos que cada caso (e posteriormente, cada valoração) deve tornar cada sentença básica (ou letra sentencial) verdadeira ou falsa, sem meio-termo, não podemos acomodar casos limítrofes em LVF. 
+Na LVF, geralmente buscamos evitar ambiguidades. Tentaremos fazer com que nossas chaves de simbolização não usem palavras ambíguas ou que eliminem a ambiguidade quando a palavra usada tiver significados diferentes. Então, por exemplo, a chave de simbolização precisará de duas letras sentenciais diferentes para `Ivo está trabalhando no banco (instituição financeira)' e `Ivo está trabalhando no banco (de dados)'. A imprecisão é mais difícil de evitar. Uma vez que estipulamos que cada caso (e posteriormente, cada valoração) deve tornar cada sentença básica (ou letra sentencial) verdadeira ou falsa, sem meio-termo, não podemos acomodar casos limítrofes na LVF. 
 
 %It is an important feature of sentences of TFL that they \emph{cannot} be structurally ambiguous. Every sentence of TFL can be read in one, and only one, way. This feature of TFL is also a strength. If an English sentence is ambiguous, TFL can help us make clear what the different meanings are.  Although we are pretty good at dealing with ambiguity in everyday conversation, avoiding it can sometimes be terribly important. Logic can then be usefully applied: it helps philosopher express their thoughts clearly, mathematicians to state their theorems rigorously, and software engineers to specify loop conditions, database queries, or verification criteria unambiguously. 
-Uma característica importante das sentenças em LVF é que elas \emph{não podem} ser estruturalmente ambíguas. Cada sentença em LVF pode ser lida de uma, e apenas uma, maneira. Essa característica da LVF é um ponto forte. Se uma frase em português for ambígua, a LVF pode nos ajudar a esclarecer quais são os diferentes significados. Embora sejamos bons em lidar com a ambiguidade na conversa do dia-a-dia, evitá-la pode às vezes ser extremamente importante. Nesse caso, a lógica pode ser aplicada de maneira útil: ajuda o filósofo a expressar seus pensamentos com clareza, os matemáticos a expor seus teoremas rigorosamente e os engenheiros de software a especificar sem ambiguidade as condições de laços (\textit{loops}), as consultas a bancos de dados ou critérios de verificação. 
+Uma característica importante das sentenças na LVF é que elas \emph{não podem} ser estruturalmente ambíguas. Cada sentença em LVF pode ser lida de uma, e apenas uma, maneira. Essa característica da LVF é um ponto forte. Se uma frase em português for ambígua, a LVF pode nos ajudar a esclarecer quais são os diferentes significados. Embora sejamos bons em lidar com a ambiguidade na conversa do dia-a-dia, evitá-la pode às vezes ser extremamente importante. Nesse caso, a lógica pode ser aplicada de maneira útil: ajuda o filósofo a expressar seus pensamentos com clareza, os matemáticos a expor seus teoremas rigorosamente e os engenheiros de software a especificar sem ambiguidade as condições de laços (\textit{loops}), as consultas a bancos de dados ou critérios de verificação. 
 
 %Stating things without ambiguity is of crucial importance in the law as well. Here, ambiguity can, without exaggeration, be a matter of life and death. Here is a famous example of where a death sentence hinged on the interpretation of an ambiguity in the law. Roger Casement (1864--1916) was a British diplomat who was famous in his time for publicizing human-rights violations in the Congo and Peru (for which he was knighted in 1911). He was also an Irish nationalist. In 1914--16, Casement secretly travelled to Germany, with which Britain was at war at the time, and tried to recruit Irish prisoners of war to fight against Britain and for Irish independence. Upon his return to Ireland, he was captured by the British and tried for high treason.
 Afirmar coisas sem ambiguidade também é de importância crucial na legislação. Nela, a ambiguidade pode, sem exagero, ser uma questão de vida ou morte. Aqui está um exemplo conhecido em que uma sentença de morte dependia da interpretação de uma ambiguidade na lei. Roger Casement (1864--1916) foi um diplomata britânico famoso por divulgar as violações dos direitos humanos no Congo e no Peru (motivo pelo qual foi nomeado cavaleiro em 1911). Ele também era um nacionalista irlandês. Entre 1914--1916, Casement viajou secretamente para a Alemanha, à época em guerra com a Grã-Bretanha, e tentou recrutar prisioneiros de guerra irlandeses para lutar contra a Grã-Bretanha e pela independência irlandesa. Ao retornar à Irlanda, ele foi capturado pelos britânicos e julgado por alta traição.
@@ -1084,7 +1084,7 @@ A defesa de Casement girou em torno da última vírgula da sentença, que não e
 %	\item[] $(A \lor B) \lor (G \lor H)$
 %\end{earg}
 %Remember that in the case we're dealing with Casement, was adherent to the King's enemies abroad ($B$ is true), but not in the realm, and he did not give the King's enemies aid or comfort in or outside the realm ($A$, $G$, and~$H$ are false).
-Podemos usar LVF para simbolizar ambas as leituras da passagem e, assim, fornecer uma desambiguação. Primeiro, precisamos de uma chave de simbolização:
+Podemos usar a LVF para simbolizar ambas as leituras da passagem e, assim, fornecer uma desambiguação. Primeiro, precisamos de uma chave de simbolização:
 \begin{ekey}
 	\item [A] Casement associou-se aos inimigos do Rei no reino.
 	\item [G] Casement deu ajuda e conforto aos inimigos do Rei no reino.
@@ -1102,10 +1102,10 @@ Já a interpretação que o levou a ser executado pode ser simbolizada por:
 Lembre-se de que no caso de Casement com que estamos lidando ele associou-se aos inimigos do Rei no exterior ($B$ é verdade), mas não no reino, e ele não deu ajuda ou conforto aos inimigos do Rei dentro ou fora do reino ($A$, $G$ e~$H$ são falsos). 
 
 %One common source of structural ambiguity in English arises from its lack of parentheses. For instance, if I say `I like movies that are not long and boring', you will most likely think that what I dislike are movies that are long and boring. A less likely, but possible, interpretation is that I like movies that are both (a) not long and (b) boring. The first reading is more likely because who likes boring movies? But what about `I like dishes that are not sweet and flavorful'? Here, the more likely interpretation is that I like savory, flavorful dishes.  (Of course, I could have said that better, e.g., `I like dishes that are not sweet, yet flavorful'.) Similar ambiguities result from the interaction of `and' with `or'. For instance, suppose I ask you to send me a picture of a small and dangerous or stealthy animal.  Would a leopard count? It's stealthy, but not small. So it depends whether I'm looking for small animals that are dangerous or stealthy (leopard doesn't count), or whether I'm after either a small, dangerous animal or a stealthy animal (of any size).
-Uma fonte comum de ambiguidade estrutural em português surge da falta de parênteses. Por exemplo, se eu disser `Gosto de filmes que não sejam longos e enfadonhos', você provavelmente pensará que o que eu não gosto são filmes longos e enfadonhos. Uma interpretação menos provável, mas possível, é que eu gosto de filmes que são (a) não longos e (b) enfadonhos. A primeira leitura é mais provável porque, afinal, quem gosta de filmes chatos? Mas e quanto a `gosto de pratos que não são doces e saborosos'?<<obs>> Aqui, a interpretação mais provável é que gosto de pratos saborosos (claro, eu poderia ter dito isso melhor, por exemplo, `Gosto de pratos que não são doces, mas saborosos'). Ambiguidades semelhantes resultam da interação de `e' com `ou'. Por exemplo, suponha que eu lhe peça para me enviar a foto de um animal pequeno e perigoso ou furtivo. Um leopardo contaria? É furtivo, mas não pequeno. Portanto, depende se procuro pequenos animais perigosos ou furtivos (o leopardo não conta), ou se procuro um animal pequeno e perigoso ou um que seja furtivo (de qualquer tamanho).
+Uma fonte comum de ambiguidade estrutural em português surge da falta de parênteses. Por exemplo, se eu disser `Gosto de filmes que não sejam longos e enfadonhos', você provavelmente pensará que o que eu não gosto são filmes longos e enfadonhos. Uma interpretação menos provável, mas possível, é que eu gosto de filmes que são (a) não longos e (b) enfadonhos. A primeira leitura é mais provável porque, afinal, quem gosta de filmes chatos? Mas e quanto a `gosto de pratos que não são doces e saborosos'? Aqui, a interpretação mais provável é que gosto de pratos saborosos (claro, eu poderia ter dito isso melhor, por exemplo, `Gosto de pratos que não são doces, mas saborosos'). Ambiguidades semelhantes resultam da interação de `e' com `ou'. Por exemplo, suponha que eu lhe peça para me enviar a foto de um animal pequeno e perigoso ou furtivo. Um leopardo contaria? É furtivo, mas não pequeno. Portanto, depende se procuro pequenos animais perigosos ou furtivos (o leopardo não conta), ou se procuro um animal pequeno e perigoso ou um que seja furtivo (de qualquer tamanho).
 
 %These kinds of ambiguities are called \emph{scope ambiguities}, since they depend on whether or not a connective is in the scope of another. For instance, the sentence, `\emph{Avengers: Endgame} is not long and boring' is ambiguous between:
-Esses tipos de ambiguidades são chamados de \emph{ambiguidades de escopo}, pois dependem de um conectivo estar ou não no escopo de outro. Por exemplo, a frase `\emph{Vingadores: Ultimato} é um filme que não é longo e chato'<<obs>> é ambígua entre:
+Esses tipos de ambiguidades são chamados de \emph{ambiguidades de escopo}, pois dependem de um conectivo estar ou não no escopo de outro. Por exemplo, a frase `\emph{Vingadores: Ultimato} é um filme que não é longo e chato' é ambígua entre:
 
 %\begin{earg}
 %	\item[\ex{scamb1}] \emph{Avengers: Endgame} is not: both long and boring.
@@ -1113,7 +1113,7 @@ Esses tipos de ambiguidades são chamados de \emph{ambiguidades de escopo}, pois
 %\end{earg}
 \begin{earg}
 	\item[\ex{scamb1}] \emph{Vingadores: Ultimato} não é ao mesmo tempo: longo e chato.
-	\item[\ex{scamb2}] \emph{Vingadores: Ultimato} é ao mesmo tempo: não longo e chato<<obs>>.
+	\item[\ex{scamb2}] \emph{Vingadores: Ultimato} é ao mesmo tempo: não longo e chato.
 \end{earg}
 
 %Sentence~\ref{scamb2} is certainly false, since \emph{Avengers: Endgame} is over three hours long. Whether you think~\ref{scamb1} is true depends on if you think it is boring or not. We can use the symbolization key:
@@ -1136,7 +1136,7 @@ A sentença `Tai Lung é pequeno e perigoso ou furtivo' é ambígua entre:
 %\end{earg}
 \begin{earg}
 	\item[\ex{scamb3}] Tai Lung é pequeno e perigoso ou é furtivo.
-	\item[\ex{scamb4}] Tai Lung é pequeno e é ou perigoso ou furtivo<<obs>>.
+	\item[\ex{scamb4}] Tai Lung é pequeno e é ou perigoso ou furtivo.
 \end{earg} 
 
 %We can use the following symbolization key:

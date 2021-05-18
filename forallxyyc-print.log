@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  12 APR 2021 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  18 MAY 2021 16:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3597,9 +3597,9 @@ Underfull \vbox (badness 2213) has occurred while \output is active []
 ]
 [38] [39] [40] [41] [42] [43] [44] [45] [46]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 437.
+(Font)              scaled to size 9.0pt on input line 438.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 437.
+(Font)              scaled to size 9.0pt on input line 438.
  [47] [48] [49] [50] [51] [52]
 [53] [54] [55] [56] [57] [58] [59] [60]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3608,7 +3608,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [62] [63] [64] [65] [66]
-Underfull \hbox (badness 5161) in paragraph at lines 954--960
+Underfull \hbox (badness 5161) in paragraph at lines 955--961
 \T1/Baskervaldx-TOsF/m/n/10.95 que foi cons-truída fazendo-se a con-jun-ção de 
 `$\OML/zbvmi/m/it/10.95 P$\T1/Baskervaldx-TOsF/m/n/10.95 ' com
  []
@@ -4259,10 +4259,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
  ) 
 Here is how much of TeX's memory you used:
- 42849 strings out of 494789
- 758931 string characters out of 6177363
- 906521 words of memory out of 5000000
- 45137 multiletter control sequences out of 15000+600000
+ 42850 strings out of 494789
+ 758953 string characters out of 6177363
+ 906619 words of memory out of 5000000
+ 45138 multiletter control sequences out of 15000+600000
  319447 words of font info for 459 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  67i,22n,94p,1997b,2393s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4470,7 +4470,7 @@ ive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/b
 oondox/zxxrw8a.pfb>
-Output written on forallxyyc-print.pdf (504 pages, 2131078 bytes).
+Output written on forallxyyc-print.pdf (504 pages, 2131030 bytes).
 PDF statistics:
  2000 PDF objects out of 2073 (max. 8388607)
  59 named destinations out of 1000 (max. 500000)
