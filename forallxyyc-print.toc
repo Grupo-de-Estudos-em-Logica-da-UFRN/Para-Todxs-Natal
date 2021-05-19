@@ -134,7 +134,7 @@
 \contentsline {section}{\numberline {21.4}A sem\IeC {\^a}ntica da identidade}{232}{section.21.4}
 \contentsline {section}{\numberline {21.5}Interpreta\IeC {\c c}\IeC {\~o}es}{235}{section.21.5}
 \contentsline {chapter}{\chapternumberline {22}A verdade na LPO}{237}{chapter.22}
-\contentsline {section}{\numberline {22.1}Senten\IeC {\c c}as at\IeC {\^o}micas}{239}{section.22.1}
+\contentsline {section}{\numberline {22.1}Senten\IeC {\c c}as at\IeC {\^o}micas}{240}{section.22.1}
 \contentsline {section}{\numberline {22.2}Conectivos sentenciais}{242}{section.22.2}
 \contentsline {section}{\numberline {22.3}Quantificadores}{243}{section.22.3}
 \contentsline {section}{Exerc\IeC {\'\i }cios}{250}{section*.40}

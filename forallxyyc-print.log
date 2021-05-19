@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  18 MAY 2021 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  19 MAY 2021 14:43
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3757,12 +3757,12 @@ Underfull \vbox (badness 7047) has occurred while \output is active []
  [234]
 [235] [236] [237
 
-] [238] [239] [240] [241]
+] [238] [239] [240] [241] [242]
 Underfull \hbox (badness 10000) in paragraph at lines 481--483
 
  []
 
-[242]
+
 Underfull \hbox (badness 10000) in paragraph at lines 483--485
 
  []
@@ -3784,7 +3784,11 @@ LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 586.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
 (Font)              scaled to size 6.1pt on input line 586.
- [247] [248] [249]
+ [247]
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [248]
+[249]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 674.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
@@ -3793,8 +3797,7 @@ LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
 (Font)              scaled to size 5.5pt on input line 674.
  [250] [251] [252] [253
 
-] [254]
-[255
+] [254] [255
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 887--887
@@ -4470,7 +4473,7 @@ ive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/b
 oondox/zxxrw8a.pfb>
-Output written on forallxyyc-print.pdf (504 pages, 2131030 bytes).
+Output written on forallxyyc-print.pdf (504 pages, 2131168 bytes).
 PDF statistics:
  2000 PDF objects out of 2073 (max. 8388607)
  59 named destinations out of 1000 (max. 500000)
