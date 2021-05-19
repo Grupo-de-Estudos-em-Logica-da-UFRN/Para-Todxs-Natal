@@ -172,7 +172,7 @@ Para obter uma sentença na FND que seja logicamente equivalente a $\meta{S}$, h
 		
 		Considere agora  $i_1$, $i_2$, \dots, $i_m$ os números das linhas da tabela verdade onde $\meta{S}$ é \emph{verdadeira} e seja $\meta{D}$ a seguinte sentença:
 		$$\meta{B}_{i_1} \eor \meta{B}_{i_2} \eor \ldots \eor \meta{B}_{i_m}$$
-		Como estamos considerando o caso 2, em que $\meta{S}$ é verdadeiro em pelo menos uma linha de sua tabela de verdade, a sentença $\meta{D}$ está, por isso, bem definida.
+		Como estamos considerando o caso 2, em que $\meta{S}$ é verdadeira em pelo menos uma linha de sua tabela de verdade, a sentença $\meta{D}$ está, por isso, bem definida.
 		$\meta{D}$ é, em geral, uma disjunção de conjunções de literais e no caso limite, quando $\meta{S}$ é verdadeira em apenas uma linha de sua tabela, $\meta{D}$ é uma conjunção de literais.
 		Seja qual for o caso, $\meta{D}$ está na FND.
 		
@@ -303,7 +303,7 @@ E para mostrar isso, basta mostrar que
 		(\meta{A} \eand \meta{B}) & \text{\quad \ e \quad} \enot(\enot \meta{A} \eor\enot \meta{B})
 		\end{align*}
 		são logicamente equivalentes.\footnote{
-			Considere, por exemplo, uma sentença com os três tipos de conectivos, tal como$((\enot A \eand B) \eor \enot C)$.
+			Considere, por exemplo, uma sentença com os três tipos de conectivos, tal como $((\enot A \eand B) \eor \enot C)$.
 			É fácil ver como a aplicação desta equivalência transforma esta sentença em uma que contém apenas disjunção e negação:
 			$$((\enot A \eand B) \eor \enot C) \ \ \iff \ \ (\enot(\enot\enot A \eor\enot B) \eor \enot C)$$
 			a sentença da direita é equivalente à da esquerda e só emprega `$\enot$' e `$\eor$'.}
@@ -542,7 +542,7 @@ Antes de fazer isso, vejamos como a prova do Lema da Inocência fica simples qua
 			\item Ou seja, todas as linhas de todas as provas de três linhas são inocentes.
 		\end{itemize}
 	\item Bem, acho que você já pegou o espírito da coisa. A mesma situação vai acontecer com as provas de $4$ linhas, com as de $5$ linhas,... e com as de $n$ linhas, para qualquer número finito $n$ de linhas. Ou seja, todas as linhas de todas as provas da LVF são inocentes, o que demonstra o Lema da Inocência.$\blacklozenge$\footnote{
-		Esta prova do Lema da Inocência poderia ser apresentada de modo mais preciso e conciso se explicitássemos o uso que fazemos do \textit{princípio da indução finita} (PIF). O PIF fornece um poderoso método de prova muito empregado nas demonstrações de resultados metatetóricos sobre a lógica. Optamos por ocultar a referência explícita ao PIF nesta prova por razões de economia didática. Nós mencionamos este princípio anterioremente no \textit{Capítulo 31 - Correção e Completude}, quando falamos ali de \textit{provas indutivas}. Vale apena rever.}
+		Esta prova do Lema da Inocência poderia ser apresentada de modo mais preciso e conciso se explicitássemos o uso que fazemos do \textit{princípio da indução finita} (PIF). O PIF fornece um poderoso método de prova muito empregado nas demonstrações de resultados metatetóricos sobre a lógica. Optamos por ocultar a referência explícita ao PIF nesta prova por razões de economia didática. Nós mencionamos este princípio anterioremente no \textit{Capítulo \ref{sec:soundness_and_completeness} - Correção e Completude}, quando falamos ali de \textit{provas indutivas}. Vale apena rever.}
 \end{itemize}
 
 O único passo que ainda falta para completarmos de vez a prova do Teorema da Correção é provar que todas as regras de inferência da LVF são mesmo confiáveis.
@@ -582,7 +582,7 @@ Esta aplicação genérica pode ser representada esquematicamente como:
 	\have[j]{b}{\meta{B}}
 	\have[n]{c}{\meta{A}\eand\meta{B}} \ai{a, b}
 \end{proof}\noindent
-Aplicando a a notação recém introduzida nesta representação, o que temos que demonstrar é:
+Aplicando a notação recém introduzida nesta representação, o que temos que demonstrar é:
 \begin{itemize}
 	\item[(*)]  Se  \ ({para todo}  $k<n$, $\Delta_k \entails \meta{S}_k$) \ \ então \ \ $\Delta_n \entails \meta{A} \eand \meta{B}$
 \end{itemize}
@@ -897,7 +897,7 @@ Demonstramos que o sistema formal de provas da LVF que aprendemos neste livro é
 O nosso sistema de provas é correto; ele jamais produzirá a prova de um argumento que não seja válido.
 
 E como fizemos a demonstração disso? Bem, lembre que uma prova formal é apenas uma seqüência (de comprimento arbitrário) de aplicações de regras.
-Mostramos que nenhuma aplicação individual de qualquer regra nos levará ao erro. Segue-se (por indução) que nenhuma prova formal (sequência finita de aplicações de regras) nos levará ao erro. Ou seja: nosso sistema de prova é correto.
+Mostramos que nenhuma aplicação individual de qualquer regra nos levará ao erro. Segue-se (por indução) que nenhuma prova formal (sequência finita de aplicações de regras) nos levará ao erro. Ou seja: nosso sistema de provas é correto.
 
 Fazer isso deu um pouco de trabalho.
 Tivemos que introduzir notações, definições, propor e demonstrar lemas e organizar tudo de um modo bastante detalhado, o que consumiu umas boas páginas deste texto e exigiu alguns de seus neurônios para acompanhar tudo.

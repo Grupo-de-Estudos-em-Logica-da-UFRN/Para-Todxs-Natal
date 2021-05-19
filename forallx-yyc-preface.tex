@@ -1,14 +1,15 @@
 \chapter{Prefácio}
 
-Como o título indica, este é um livro sobre lógica formal.
-A lógica formal diz respeito ao estudo de um certo tipo de linguagem que, como qualquer linguagem, pode servir para expressar situações, estados de coisas.
-O caráter formal do tipo de linguagem estudada na lógica a torna uma ferramenta muito útil, devido à precisão com a qual suas sentenças descrevem as situações.
-Em particular, é bem difícil ser ambíguo na lógica formal.
-O foco do estudo da lógica é a relação de consequência entre as sentenças, ou seja, a determinação e identificação de quais sentenças se seguem de quais outras sentenças.
+O principal objetivo da lógica é avaliar argumentos e separar os bons, chamados válidos, dos maus, os inválidos.
+Um argumento é um grupo de sentenças que corresponde à expressão linguística de um raciocínio.
+Uma das sentenças, a conclusão, é o ponto final do raciocínio, aquilo que se conclui.
+As outras, as premissas, são o ponto inicial, as informações das quais se parte para chegar à conclusão.
+A ideia é que os argumentos bons do ponto de vista lógico, os válidos, são aqueles que expressam raciocínios infalíveis; raciocínios em que a conclusão a que se chega está infalivelmente justificada a partir das premissas de que se parte.
+A lógica enquanto disciplina busca caracterizar os raciocínios infalíveis através de uma relação formal entre as sentenças dos argumentos que os expressam: a consequência lógica.
+Esta relação não depende do assunto sobre o qual as sentenças tratam e, ao vigorar entre as premissas e a conclusão de todo argumento válido, realiza o objetivo da lógica de identificar os raciocínios infalíveis.
 
-Mas o que exatamente isso significa?
-Vamos, obviamente, tratar da relação de consequência lógica com a devida minúnica no decorrer deste livro.
-No entanto, para você ter uma primeira ideia de onde está pisando ao iniciar o estudo da lógica, vejamos aqui um exemplo ilustrativo.
+Vamos, no decorrer deste livro, examinar detidamente a relação de consequência e aprender alguns dos principais métodos formais da lógica.
+No entanto, para você ter uma primeira ideia de onde está pisando ao iniciar seus estudos, vejamos aqui um exemplo ilustrativo.
 Suponha que Virgínia more em Ponta Negra, mas que você não saiba disso.
 De que modo você poderia ficar sabendo?
 Bem, você pode ficar sabendo que Virgínia mora em Ponta Negra diretamente, caso você venha a conhecer a casa de Virgínia, ou seu endereço, pelo menos.
@@ -40,7 +41,7 @@ Não é possível que Virgínia não more em Ponta Negra se as sentenças 1 a 4 
 A relação de consequência é fundamental porque ela nos ajuda a reconhecer a verdade.
 Entendendo-a melhor, poderemos identificar situações que inevitavelmente ocorreriam sempre que certas outras situações tivessem ocorrido.
 Além do reconhecimento da verdade, a lógica nos ajuda também a reconhecer a mentira (ou a falsidade).
-A satisfatoriedade conjunta, uma outra noção importante que estudaremos, nos ajudará a identificar se as sentenças de um dado grupo podem ou não ser todas conjuntamente verdadeiras.
+A compatibilidade, uma outra noção importante que estudaremos, nos ajudará a identificar se as sentenças de um dado grupo podem ou não ser todas conjuntamente verdadeiras.
 Se elas não podem, qualquer um que as tenha afirmado todas ou está mentindo ou está equivocado.
 %Também consideraremos a relação de satisfatoriedade conjunta entre sentenças, ou seja,
 %também faz parte dos interesses da lógica saber identificar se as sentenças de um dado grupo são ou não mutuamente contraditórias; 
@@ -51,7 +52,7 @@ Se elas não podem, qualquer um que as tenha afirmado todas ou está mentindo ou
 
 A lógica formal ocupa posição privilegiada na metodologia da filosofia. 
 As suposições especulativas, explicações e sistemas que os filósofos propõem  são, quase sempre, abstratos demais para que possam ser avaliados diretamente. 
-Sua profundidade, relevância, veracidade, consistência e plausibilidade são avaliadas e comparadas principalmente através daquelas suas consequências lógicas que nos são mais imediatamente acessíveis.
+Sua profundidade, relevância, veracidade, consistência e plausibilidade são avaliadas e comparadas principalmente através das suas consequências lógicas que nos são mais imediatamente acessíveis.
 Um recurso comum dos diálogos platônicos, por exemplo, é a proposição especulativa de algum princípio moral ou metafísico abstrato que posteriormente é descartado quando se demonstra que sua admissão tem consequências (lógicas) mais imediatamente percebidas como inaceitáveis.
 
 Mas a lógica não é importante para a filosofia apenas como instrumento metodológico.
@@ -66,7 +67,7 @@ Talvez a justificativa dessa escolha pedagógica seja a disputável ideia de que
 Não cabe discutir aqui os defeitos e méritos desta abordagem. 
 No entanto, o que nossa experiência ao longo dos anos com o ensino da lógica para estudantes de filosofia nos sugere é que os alunos e alunas naturalmente se interessam pelas questões filosóficas que a lógica suscita e tendem a aproveitar melhor a disciplina quando são introduzidos simultaneamente à lógica e à filosofia da lógica.
 
-O livro \forallx: \emph{Calgary}, base deste, foi o primeiro manual de lógica com o qual nos deparamos que não esconde nem evita as dificuldades filosóficas da lógica, e a apresenta de um modo que nos parece melhor tanto para ajudar o estudante que se especializará em outra área da filosofia a entender o caráter da lógica como disciplina filosófica, quanto a preparar a estudante que se especializará em lógica a compreender o ambiente plural das pesquisas contemporâneas, no qual não há mais nenhum protagonismo para a lógica clássica, e onde o debate e a divergência são tão ou mais intensos que nas outras áreas da filosofia.
+O livro \forallx: \emph{Calgary}, base deste, foi o primeiro manual de lógica com o qual nos deparamos que não esconde nem evita as dificuldades filosóficas da lógica, e a apresenta de um modo que nos parece melhor tanto para ajudar o estudante que se especializará em outra área da filosofia a entender o caráter da lógica como disciplina filosófica, quanto para preparar a estudante que se especializará em lógica a compreender o ambiente plural das pesquisas contemporâneas, no qual não há mais nenhum protagonismo para a lógica clássica, e onde o debate e a divergência são tão ou mais intensos que nas outras áreas da filosofia.
 
 A principal diretriz que guiou esta nossa adaptação do livro \forallx: \emph{Calgary} foi uma tentativa de aprofundar o tratamento dos pontos de filosofia da lógica, juntamente com adaptações contextuais à realidade de nossos estudantes.
 
@@ -78,23 +79,23 @@ Ela também tem papel privilegiado tanto na matemática quanto na ciência da co
 Em matemática, as linguagens formais são usadas para descrever não estados de coisas ``do dia a dia'', mas estados de coisas matemáticos.
 Os matemáticos também se interessam pelas consequências de definições e suposições e, para eles, também é importante estabelecer essas consequências (que eles chamam de ``teoremas'') usando métodos completamente precisos e rigorosos.
 A lógica formal fornece esses métodos.
-Na ciência da computação, a lógica formal é aplicada para descrever o estado e os comportamentos dos sistemas computacionais, tais como circuitos, programas, bancos de dados, etc.
+Na ciência da computação, a lógica formal é aplicada para descrever o estado e o comportamento dos sistemas computacionais, tais como circuitos, programas, bancos de dados, etc.
 Os métodos da lógica formal também podem ser usados para estabelecer as consequências de tais descrições, como, por exemplo, se um dado circuito está ou não livre de erros, ou se um programa faz o que se pretende que ele faça, ou se um banco de dados é consistente, ou se algo é verdadeiro a partir dos dados nele contidos.
 
 Este livro está dividido em nove partes.
 A parte~\ref{ch.intro} introduz o assunto e as noções da lógica de maneira informal, ainda sem utilizar uma linguagem formal.
-As partes \ref{ch.TFL}, \ref{ch.TruthTables} e \ref{ch.NDTFL} tratam das linguagens verofuncionais.  Em tais linguagens as sentenças são formadas a partir de sentenças básicas através de certos termos (`ou', `e', `não', `se \dots então') que conectam sentenças mais simples de modo a formar outras sentenças mais complexas.
+As partes \ref{ch.TFL}, \ref{ch.TruthTables} e \ref{ch.NDTFL} tratam da linguagem verofuncional.  Nesta linguagem as sentenças são formadas a partir de sentenças básicas através de certos termos (`ou', `e', `não', `se \dots então') que conectam sentenças mais simples de modo a formar outras sentenças mais complexas.
 Noções lógicas tais como a relação de consequência são discutidas de duas maneiras:
 semanticamente, usando o método das tabelas de verdade (na Parte~\ref{ch.TruthTables}) e demonstrativamente, usando um sistema de derivações formais (na Parte~\ref{ch.NDTFL}).
 As partes \ref{ch.FOL}, \ref{ch.semantics} e \ref{ch.NDFOL} lidam com uma linguagem mais complexa, a da lógica de primeira ordem.
-Além dos conectivos da lógica verofuncional, esta linguagem inclui também nomes, predicados, a relação de identidade e os chamados quantificadores.
+Além dos conectivos da lógica verofuncional, esta linguagem inclui também nomes, predicados, a relação de identidade e os quantificadores.
 Esses elementos adicionais da linguagem a tornam muito mais expressiva do que a linguagem verofuncional, e passaremos um bom tempo investigando quanto se pode expressar nela.
 As noções da lógica de primeira ordem também são definidas tanto semanticamente, através interpretações (na Parte \ref{ch.semantics}), quanto demonstrativamente (na Parte \ref{ch.NDFOL}), usando uma versão mais complexa do sistema de derivação formal introduzido na Parte~\ref{ch.NDTFL}.
 %\ref{ch.ML}
 A Parte VIII discute uma extensão da LVF (a lógica verofuncional) obtida a partir de operadores não verofuncionais para a possibilidade e a necessidade, conhecida como lógica modal.
 %\ref{ch.normalform}
 A Parte IX abrange dois tópicos avançados:
-o tópico das formas normais conjuntivas e disjuntivas e da adequação expressiva dos conectivos verofuncionais, e o tópico da correção do sistema de dedução natural para a LVF.
+o tópico das formas normais (conjuntiva e disjuntiva) e da adequação expressiva dos conectivos verofuncionais, e o tópico da correção do sistema de dedução natural para a LVF.
 
 Nos apêndices, você encontrará uma discussão sobre notações alternativas para as linguagens tratadas neste texto, uma outra sobre sistemas de derivação alternativos, além  de um guia de referência rápida listando a maioria das regras e definições importantes.
 Os termos principais estão listados em um glossário no final.
@@ -103,6 +104,6 @@ Este livro  é uma versão adaptada e ampliada do livro \forallx: \emph{Calgary}
 Além disso, a editoração gráfica desta edição se baseia na estrutura e digramação de Mark Lyall para a versão de Thomas-Bolduc e Zach, que está livremente disponível em \hbox{\href{https://forallx.openlogicproject.org}{forallx.openlogicproject.org}}.
 
 Este livro é mesmo Para Tod$x$s (para todas e para todos).
-Você é livre para copiar e redistribuir gratuitamente este material em qualquer meio ou formato, remixar, transformar e desenvolvê-lo para qualquer finalidade, mesmo comercialmente, desde que respeite as restrições da licença  \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0} descritas na página iii.
+Você é livre para copiar e redistribuir gratuitamente este material em qualquer meio ou formato, remixar, transformar e desenvolvê-lo para qualquer finalidade, mesmo comercialmente, desde que respeite as restrições da licença  \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0} descritas na página \pageref{cc4by}.
 
 

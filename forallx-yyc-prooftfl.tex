@@ -1,5 +1,5 @@
 %!TEX root = forallxyyc.tex
-\part{Dedu\c c\~ao Natural para LVF}
+\part{Dedu\c c\~ao Natural para a LVF}
 \label{ch.NDTFL}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
 
@@ -16,26 +16,29 @@ P \eif Q, P & \therefore Q
 
 Claramente, esses argumentos s\~ao v\'alidos. Voc\^e  pode verificar que ele s\~ao v\'alidos construindo tabelas de verdade de quatro linhas, mas podemos dizer que eles fazem uso de diferentes \emph{formas}  de recioc\'inio. Seria bom ter controle dessas diferentes \emph{formas}  de infer\^encia.
 
-Um dos  objetivos de um  \emph{sistema em dedu\c c\~ao natural} \'e de mostrar que argumentos particulares s\~ao  v\'alidos de um modo que nos permita entender o racioc\'inio que os argumentos possam envolver.  Vamos come\c car com regras de infer\^encias muito b\'asicas. Essas regras podem ser combinadas para oferecer  argumentos mais complexos.  De fato,  a partir de uma pequena quantidade  de regras de infer\^encia, esperamos capturar todos argumentos v\'alidos.
+Um dos  objetivos de um  \emph{sistema em dedu\c c\~ao natural} \'e de mostrar que argumentos particulares s\~ao  v\'alidos de um modo que nos permita entender o racioc\'inio que os argumentos possam envolver.  Vamos come\c car com regras de infer\^encias muito b\'asicas. Essas regras podem ser combinadas para oferecer  argumentos mais complexos.  De fato,  a partir de uma pequena quantidade  de regras de infer\^encia, esperamos capturar todos os argumentos v\'alidos.
 
 
 \emph{Essa \'e uma maneira muito diferente de pensar sobre argumentos.} 
 
-Com tabelas de verdade,  consideramos diferentes maneiras  para obter senten\c cas verdadeiras ou falsas. Com sistemas de dedu\c c\~ao natural, manipulamos  senten\c cas de acordo com as regras que estabelecemos como boas regras e isto nos possibilita um melhor insight, ou pelo menos, um insight diferente,  de como os argumentos funcionam. 
+Com tabelas de verdade,  consideramos diferentes maneiras  para obter senten\c cas verdadeiras ou falsas. Com sistemas de dedu\c c\~ao natural, manipulamos  senten\c cas de acordo com as regras que estabelecemos como boas regras e isto nos possibilita um melhor discernimento, ou pelo menos, um discernimento diferente,  de como os argumentos funcionam. 
 
-A mudan\c ca para dedu\c c\~ao natural pode ser motivada por mais do que uma simples busca por um insight. Ela pode ser motivada por  \emph{necessidade}. Considere o seguinte argumento:
+A mudan\c ca para dedu\c c\~ao natural pode ser motivada por mais do que uma simples busca por discernimento. Ela pode ser motivada por  \emph{necessidade}. Considere o seguinte argumento:
 $$A_1 \eif C_1 \therefore (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5) \eif (C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5)$$
 Para verificar a validade deste argumento, voc\^e   pode usar uma tabela de verdade com 1024 linhas. Se voc\^e fizer isto corretamente, ent\~ao voc\^e ver\'a que  n\~ao existe nenhuma linha na qual todas as premissas s\~ao verdadeiras e a conclus\~ao seja falsa.  Assim, voc\^e saber\'a que o argumento \'e v\'alido.  (Mas,  como  j\'a mencionamos antes, existe um sentido no qual voc\^e n\~ao saber\'a porque o argumento \'e v\'alido). Mas agora considere: 
 \begin{align*}
 A_1 \eif C_1 \therefore\ & (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5 \eand A_6 \eand A_7 \eand A_8 \eand A_9 \eand A_{10}) \eif \phantom{(}\\
 &(C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5 \eor C_6 \eor C_7 \eor C_8 \eor C_9 \eor C_{10})
 \end{align*}
-Este argumento tamb\'em \'e v\'alido - voc\^e pode provavelmente dizer - mas para test\'a-lo \'e preciso uma tabela de verdade com
- $2^{20} = 1048576$ inhas.  A princ\'ipio, podemos configurar uma m\'aquina para gerar tabelas de verdade e nos relatar quando o processo terminar. Na pr\'atica, argumentos mais complexos na LVF pode torna-se \emph{intrat\'avel} se usamos tabelas de verdades. 
+Este argumento tamb\'em \'e v\'alido---voc\^e pode provavelmente dizer---mas para test\'a-lo \'e preciso uma tabela de verdade com
+ $2^{20} = 1048576$ linhas.  A princ\'ipio, podemos configurar uma m\'aquina para gerar tabelas de verdade e nos relatar quando o processo terminar. Na pr\'atica, argumentos mais complexos na LVF pode torna-se \emph{intrat\'avel} se usamos tabelas de verdades. 
  
- Quando chegarmos \`a l\'ogica de primeira ordem (LPO) (in\'icio do cap\'itulo   \ref{s:FOLBuildingBlocks}),   o problema torna-se dramaticamente pior.  N\~ao existe nada como teste de tabela de verdade para a LPO.  Para assegurar se um argumento \'e v\'alido ou n\~ao,  temos que raciocinar sobre  \emph{todas}   as interpreta\c c\~oes,  mas, como iremos ver, existem  infinitas interpreta\c c\~oes  poss\'iveis.   Em princ\'ipio, n\~ao podemos configurar uma m\'aquina para tratar as infinitas interpreta\c c\~oes poss\'iveis e relatar quando estiver  concluido:  isto  \emph{nunca}  terminar\'a. Ou precisamos desenvolver modos de racioc\'inios mais eficientes para tratar todas as interpreta\c c\~oes, ou precisamos procurar algo diferente. 
+%Quando chegarmos \`a l\'ogica de primeira ordem (LPO) (in\'icio do cap\'itulo   \ref{s:FOLBuildingBlocks}),   o problema torna-se dramaticamente pior.  N\~ao existe nada como teste de tabela de verdade para a LPO.  Para assegurar se um argumento \'e v\'alido ou n\~ao,  temos que raciocinar sobre  \emph{todas}   as interpreta\c c\~oes,  mas, como vimos no Capítulo \ref{s:InfinitInterpret}, existem  infinitas interpreta\c c\~oes  poss\'iveis.
+  
+No caso da lógia de primeira ordem (LPO), este problema é ainda pior, porque não existe um teste como o das tabelas de verdade e, conforme vimos no Capítulo \ref{s:InfinitInterpret}, para decidir se um argumento é válido precisamos raciocinar sobre uma quantidade infinita de interpretações possíveis.
+Em princ\'ipio, n\~ao podemos configurar uma m\'aquina para tratar as infinitas interpreta\c c\~oes poss\'iveis e relatar quando estiver  concluido:  isto  \emph{nunca}  terminar\'a. Ou precisamos desenvolver modos de racioc\'inios mais eficientes para tratar todas as interpreta\c c\~oes, ou precisamos procurar algo diferente. 
 
-Existem de fato, sistemas que  codificam modos de raciocinar sobre todas as interpreta\c c\~oes poss\'iveis. Eles foram desenvolvidos nos ano 1950s por Evert Beth e  Jaakko Hintikka.  Mas n\~ao iremos segui este caminho.  Ao inv\'es disto,  nossa aten\c c\~ao ser\'a voltada para dedu\c c\~ao natural. 
+Existem de fato, sistemas que  codificam modos de raciocinar sobre todas as interpreta\c c\~oes poss\'iveis. Eles foram desenvolvidos nos ano 1950s por Evert Beth e  Jaakko Hintikka.  Mas n\~ao iremos seguir este caminho.  Ao inv\'es disto,  nossa aten\c c\~ao ser\'a voltada para dedu\c c\~ao natural. 
  
 Antes de raciocinar diretamente sobre todas as valora\c c\~oes  (no caso da LVF) tentaremos selecionar algumas poucas regras b\'asicas de infer\^encia.  Algumas dessas regras  ir\~ao governar o comportamento dos conectivos sentenciais. Outras ir\~ao governar o comportamento dos quantificadores e identidade que s\~ao marcas da LPO.  
 O sistema resultante de regras nos dar\'a um novo modo de pensar sobre a validade de argumentos.  O desenvolvimento moderno de dedu\c c\~ao  natural data dos simult\^aneos  e n\~ao relacionadas artigos de  
@@ -95,7 +98,7 @@ Se voc\^e j\'a mostrou alguma coisa ao longo de uma prova, a  \emph{regra de  re
 	\have[$\vdots$]{}{\vdots}
 	\have[10]{a2}{A \eand B} \by{R}{a1}
 \end{fitchproof}
-Isto indica que temos escrito `$A \eand B$' na linha~$4$. Agora, em uma linha posterior - linha~$10$, por exemplo - decidimos que queremos repetir esta senten\c ca na prova. Assim, a escrevemos abaixo novamente.  Tamb\'em adicionamos uma cita\c c\~ao que justifica o que temos escrito. Neste caso, escrevemos  `R',  para indicar que estamos usando a regra de reitera\c c\~ao,  e escrevemos  $4$ para indicar  que ela j\'a foi usada na linha $4$.
+Isto indica que temos escrito `$A \eand B$' na linha~$4$. Agora, em uma linha posterior---linha~$10$, por exemplo---decidimos que queremos repetir esta senten\c ca na prova. Assim, a escrevemos abaixo novamente.  Tamb\'em adicionamos uma cita\c c\~ao que justifica o que temos escrito. Neste caso, escrevemos  `R',  para indicar que estamos usando a regra de reitera\c c\~ao,  e escrevemos  $4$ para indicar  que ela j\'a foi usada na linha $4$.
 
  Aqui est\'a uma ilustra\c c\~ao generalizada da regra:
 
@@ -106,7 +109,7 @@ Isto indica que temos escrito `$A \eand B$' na linha~$4$. Agora, em uma linha po
 O importante \'e que, se qualquer senten\c ca $\meta{A}$ ocorre em alguma linha, ent\~ao podemos repetir $\meta{A}$ em linhas posteriores. Cada linha de nossa prova deve  ser justificada por alguma regra, e aqui temos `R $m$'.   Isto significa:  Reitera\c c\~ao, aplicada a linha~$m$. 
 
  Precisamos enfatizar duas coisa.  Primeiro,   `$\meta{A}$'   n\~ao   \'e uma senten\c ca da LVF,   mas um s\'imbolo da metalinguagem que usamos quando queremos falar sobre qualquer senten\c ca da LVF
- (veja cap\'itulo \ref{s:UseMention}).   Segundo, similarmente,  `$m$'  n\~ao \'e um s\'imbolo que ir\'a aparecer em uma prova.  Ele tamb\'em \'e um s\'imbolo da metalinguagem, o qual usamos quando queremos falar sobre qualquer n\'umero linha  de uma prova. Na prova apresentada, as linhas  est\~ao numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos vari\'aveis como   `$m$' para destacar o ponto em que a regra pode ser aplicada a qualquer momento. 
+ (veja Cap\'itulo \ref{s:UseMention}).   Segundo, similarmente,  `$m$'  n\~ao \'e um s\'imbolo que ir\'a aparecer em uma prova.  Ele tamb\'em \'e um s\'imbolo da metalinguagem, o qual usamos quando queremos falar sobre qualquer n\'umero linha  de uma prova. Na prova apresentada, as linhas  est\~ao numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos vari\'aveis como   `$m$' para destacar o ponto em que a regra pode ser aplicada a qualquer momento. 
 
  %%%%%% --------------------------------------------------------------  26.3  Conjuncao
 \section{Conjun\c c\~ao}
@@ -139,11 +142,11 @@ De maneira mais geral, aqui est\'a  a nossa regra de introdu\c c\~ao da  conjun\
 	\have[n]{b}{\meta{B}}
 	\have[\ ]{c}{\meta{A}\eand\meta{B}} \ai{a, b}
 \end{fitchproof}}
-Para ser claro, o enunciado da regra \'e esquem\'atico.  Isto n\~ao \'e propriamente uma prova,      `$\meta{A}$'  e `$\meta{B}$'  n\~ao s\~ao senten\c cas da LVF, mas s\'imbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentenca da LVF (veja cap\'itulo \ref{s:UseMention}). 
+Para ser claro, o enunciado da regra \'e esquem\'atico.  Isto n\~ao \'e propriamente uma prova,      `$\meta{A}$'  e `$\meta{B}$'  n\~ao s\~ao senten\c cas da LVF, mas s\'imbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentenca da LVF (veja Cap\'itulo \ref{s:UseMention}). 
 
-Similarmente,  `$m$' e `$n$' n\~ao s\~ao numerais  que ir\~ao aparecer em uma prova real. Eles tamb\'em s\~ao s\'imbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero linha  de uma prova. Em uma  prova real, as linhas  s\~ao numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos vari\'aveis   para destacar o ponto que a regra pode ser aplicada a qualquer momento.  A regra requer somente que temos ambos os conjuntos dispon\'iveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
+Similarmente,  `$m$' e `$n$' n\~ao s\~ao numerais  que ir\~ao aparecer em uma prova real. Eles tamb\'em s\~ao s\'imbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  s\~ao numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos vari\'aveis   para destacar o ponto que a regra pode ser aplicada a qualquer momento.  A regra requer somente que temos ambos os conjuntos dispon\'iveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
 
-A regra \'e chamada `\emph{introdu\c c\~ao} da conjun\c c\~ao'  porque  ela introduz  o s\'imbolo `$\eand$' na nossa  prova onde ele pode ter sido ausente.  Correspondentemente,  temos uma regra que \emph{elimina}  este  s\'imbolo.  Vamos supor que temos mostrado que Louis \'e ambos  reservado e  leal.  Voc\^e   est\'a autorizado a concluir que Louis   \'e reservado. Igualmente voc\^e   est\'a autorizado a concluir que Louis   \'e leal.  Juntando tudo isto, obtemos nossa(s) regra(s) de elimina\c c\~ao da conjun\c c\~ao:
+A regra \'e chamada `\emph{introdu\c c\~ao} da conjun\c c\~ao'  porque  ela introduz  o s\'imbolo `$\eand$' na nossa  prova onde ele pode ter sido ausente.  Correspondentemente,  temos uma regra que \emph{elimina}  este  s\'imbolo.  Vamos supor que já foi mostrado que Louis \'e ambos  reservado e  leal.  Voc\^e   est\'a autorizado a concluir que Louis   \'e reservado. Igualmente voc\^e   est\'a autorizado a concluir que Louis   \'e leal.  Juntando tudo isto, obtemos nossa(s) regra(s) de elimina\c c\~ao da conjun\c c\~ao:
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eand\meta{B}}
@@ -157,14 +160,14 @@ e igualmente,
 	\have[\ ]{b}{\meta{B}} \ae{ab}
 \end{fitchproof}}
  
-O prop\'osito \'e simplesmente este,  quando temos uma conjun\c c\~ao em alguma linha da prova, voc\^e pode obter qualquer um dos conjuntos  por {\eand}E.  Uma coisa importante a enfatizar:  voc\^e s\'o pode aplicar essa regra quando a conjun\c c\~ao \'e o operador l\'ogico principal. Assim voc\^e n\~ao pode inferir `$D$'  apenas de `$C \eor (D \eand E)$'!
+O prop\'osito \'e simplesmente este,  quando temos uma conjun\c c\~ao em alguma linha da prova, voc\^e pode obter qualquer um dos conjuntos  por {\eand}E.  Uma coisa importante a enfatizar:  voc\^e s\'o pode aplicar essa regra quando a conjun\c c\~ao \'e o operador l\'ogico principal. Logo, voc\^e n\~ao pode inferir `$D$' a partir de `$C \eor (D \eand E)$' usando a regra {\eand}E.
 
 Com apenas essas duas regras, j\'a podemos come\c car a ver parte do poder do nosso sistema formal de provas.  Considere: 
 \begin{earg}
 \item[] $[(A\eor B)\eif(C\eor D)] \eand [(E \eor F) \eif (G\eor H)]$
 \item[\therefore] $[(E \eor F) \eif (G\eor H)] \eand [(A\eor B)\eif(C\eor D)]$
 \end{earg}
-Note que o operador l\'ogico principal em ambas a premissa e conclus\~ao  desse argumento \'e `$\eand$'.  Para construir uma prova, come\c camos escrevendo a premissa, que \'e nossa suposi\c c\~ao. Tra\c camos uma linha abaixo dela. Tudo ap\'os essa linha deve seguir de nossas suposi\c c\~oes por  (repetidas aplica\c c\~oes de) nossas regras de infer\^encia. Assim, o in\'icio da prova \'e da seguinte forma: 
+Note que o operador l\'ogico principal da premissa assim como o da conclus\~ao  desse argumento \'e `$\eand$'.  Para construir uma prova, come\c camos escrevendo a premissa, que \'e nossa suposi\c c\~ao. Tra\c camos uma linha abaixo dela. Tudo ap\'os essa linha deve seguir de nossas suposi\c c\~oes por  (repetidas aplica\c c\~oes de) nossas regras de infer\^encia. Assim, o in\'icio da prova \'e da seguinte forma: 
 \begin{fitchproof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
 \end{fitchproof}
@@ -300,7 +303,8 @@ Pode haver tantas linhas quantas voc\^e quiser entre as linhas $i$ and $j$.
 
 Apresentaremos uma segunda ilustra\c c\~ao da regra $\eif$I em ac\~ao. Vamos considerar  agora o seguinte argumento:
 	$$P \eif Q, Q \eif R \therefore P \eif R$$
-Vamos come\c car listando \emph{ambas} as nossas premissas. Ent\~ao, como queremos chegar a um condicional (nomeadamente `$P \eif R$'),  assumimos adicionalmente o antecedente deste condicional. Assim nossa prova principal come\c ca: 
+Vamos come\c car listando \emph{ambas} as nossas premissas. Ent\~ao, como queremos chegar a um condicional (nomeadamente `$P \eif R$'),  assumimos adicionalmente o antecedente deste condicional.
+Nossa prova começa da seguinte forma:
 
 \begin{fitchproof}
 	\hypo{pq}{P \eif Q}
@@ -310,7 +314,7 @@ Vamos come\c car listando \emph{ambas} as nossas premissas. Ent\~ao, como querem
 	\close
 \end{fitchproof}
 Observe que disponibilizamos `$P$',  tratando-a como uma suposi\c c\~ao adicional.  
-Agora, podemos usar a regra  {\eif}E na primeira premissa e obter `$Q$'. Novamente, podemos usar  a regra {\eif}E na segunda premissa e obter R. Assim, assumindo `$P$'  conseguimos provar `$R$',   ent\~ao aplicamos a regra {\eif}I  - descartando `$P$' - com isso, conclu\'imos a prova.  Considerando tudo isso junto, temos: 
+Agora, podemos usar a regra  {\eif}E na primeira premissa e obter `$Q$'. Novamente, podemos usar  a regra {\eif}E na segunda premissa e obter `$R$'. Assim, assumindo `$P$'  conseguimos provar `$R$',   ent\~ao aplicamos a regra {\eif}I  - descartando `$P$' - com isso, conclu\'imos a prova.  Considerando tudo isso junto, temos: 
 
 
 \label{HSproof}
@@ -368,7 +372,7 @@ Esta estipula\c c\~ao exclui a desastrosa tentativa da prova acima. A regra $\ei
 
 O fechamento de uma subprova \'e chamado de \define{descarte} da suposi\c c\~ao desta subprova. Assim, fica estabelecido: \emph{voc\^e n\~ao pode se referir a nada que foi obtido usando suposi\c c\~oes descartadas}. 
 
-Subprovas, ent\~ao, nos permitem pensar sobre o que poder\'iamos mostrar,  se fizermos suposi\c c\~oes adicionais.  O que podemos  tirar disso n\~ao \'e surpreendente: no curso de uma prova, temos que acompanhar com muito cuidado as suposi\c c\~oes que estamos fazendo uso, em qualquer momento.  Nosso sistema de prova faz isso graficamente bem. (De fato, \'e exatamente por isso que escolhemos usar  \emph{este}  sistema de prova.)
+Subprovas, ent\~ao, nos permitem pensar sobre o que poder\'iamos mostrar,  se fizermos suposi\c c\~oes adicionais.  O que podemos  tirar disso n\~ao \'e surpreendente: no curso de uma prova, temos que acompanhar com muito cuidado as suposi\c c\~oes que estamos fazendo uso, em qualquer momento.  Nosso sistema de provas faz isso graficamente bem. (De fato, \'e exatamente por isso que escolhemos usar  \emph{este}  sistema de provas.)
 
 Uma vez que come\c camos a pensar sobre o que podemos mostrar fazendo suposi\c c\~oes adicionais, nada nos impede de perguntar  o que poder\'iamos mostrar se fiz\'essemos  \emph{ainda mais}  suposi\c c\~oes?  Isso pode nos motivar a introduzir uma subprova dentro de uma subprova.  Aqui est\'a um exemplo usando apenas as regras que consideramos at\'e agora:
 
@@ -428,7 +432,7 @@ Aqui, estamos tentando citar uma subprova que come\c ca na linha~$2$ e termina n
 \begin{enumerate} 
 \item a subprova citada deve vir inteiramente antes da aplica\c c\~ao da regra em que \'e citada,
 \item a subprova citada n\~ao deve estar dentro de outra subprova fechada, que foi fechada na linha em que \'e citada, e
-\item  A \'ultima linha da subprova  citada n\~ao deve ocorrer dentro de uma subprova aninhada. 
+\item  a \'ultima linha da subprova  citada n\~ao deve ocorrer dentro de uma subprova aninhada. 
 \end{enumerate}}
 
 Um \'ultimo ponto a enfatizar como as regras podem ser aplicadas: onde uma regra exige que voc\^e cite uma linha individual, n\~ao \'e poss\'ivel citar uma subprova; e onde for necess\'ario citar uma subprova, n\~ao ser\'a poss\'ivel citar uma linha individual.  Assim, por exemplo, isso est\'a incorreto:
@@ -446,8 +450,8 @@ Um \'ultimo ponto a enfatizar como as regras podem ser aplicadas: onde uma regra
 \close
 \have[7]{bcab}{B \eif C}\ci{b-c3}
 \end{fitchproof}
-Aqui, tentamos justificar $C$ na linha~$6$ como a regra de reitera\c c\~ao, mas citamos a subprova das linhas $3$--$5$. Esta subprova est\'a fechada e pode, em princ\'ipio, ser citada na linha 6.  (Por exemplo, poder\'iamos us\'a-la para justificar 
- $C \eif C$ por $\eif$I.) Por\'em,  a regra de reitera\c c\~ao~R exige que voc\^e cite uma linha individual, assim, \'e inadmiss\'ivel citar a subprova inteira (mesmo que essa subprova  contenha a sentan\c ca~$C$  que queremos reiterar).
+Aqui, tentamos justificar `$C$' na linha~$6$ com a regra de reitera\c c\~ao, mas citamos a subprova das linhas $3$--$5$. Esta subprova est\'a fechada e pode, em princ\'ipio, ser citada na linha 6.  (Por exemplo, poder\'iamos us\'a-la para justificar 
+ `$C \eif C$' por $\eif$I.) Por\'em,  a regra de reitera\c c\~ao~R exige que voc\^e cite uma linha individual, assim, \'e inadmiss\'ivel citar a subprova inteira (mesmo que essa subprova  contenha a sentan\c ca~`$C$'  que queremos reiterar).
 
  
 
@@ -479,7 +483,7 @@ Para provar `$F \eiff G$',  por exemplo, voc\^e deve ser capaz de provar `$G$' a
 \end{fitchproof}}
 Pode haver tantas linhas quantas voc\^e quiser entre $i$ e $j$, e tantas linhas quantas voc\^e quiser entre $k$ e $l$.  Al\'em disso, as subprovas podem vir em qualquer ordem, e a segunda subprova n\~ao precisa vir imediatamente ap\'os a primeira.
 
-A regra de elimina\c c\~ao do bicondicional({\eiff}E) permite fazer um pouco mais do que a regra do condicional.  Se voc\^e tem a senten\c ca do lado esquerdo do bicondicional, voc\^e pode obter a senten\c ca que est\'a no lado direito. E inversamente, se voc\^e tem a senten\c ca que est\'a no lado direito do bicondicional, pode obter a senten\c ca que est\'a no lado esquerdo. Assim temos:
+A regra de elimina\c c\~ao do bicondicional ({\eiff}E) permite fazer um pouco mais do que a regra do condicional.  Se voc\^e tem a senten\c ca do lado esquerdo do bicondicional, voc\^e pode obter a senten\c ca que est\'a no lado direito. E inversamente, se voc\^e tem a senten\c ca que est\'a no lado direito do bicondicional, pode obter a senten\c ca que est\'a no lado esquerdo. Assim temos:
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eiff\meta{B}}
@@ -524,7 +528,7 @@ Observe que $\meta{B}$ pode ser \emph{qualquer} senten\c ca, ent\~ao a seguir te
 
 Observamos que a tabela de verdade para mostrar isso teria 128 linhas.
 
-A regra da elimina\c c\~ao da disjun\c c\~ao \'e, no entanto, um pouco mais complicada Vamos supor que  Louis \'e reservado ou leal.  O que voc\^e pode concluir? Caso  Louis  n\~ao seja reservado; pode ser que ele seja leal.   Igualmente, caso  Louis  n\~ao seja leal; pode ser que ele seja reservado.  Disjun\c c\~oes, por si s\'o, s\~ao dif\'iceis de trabalhar.
+A regra da elimina\c c\~ao da disjun\c c\~ao \'e, no entanto, um pouco mais complicada. Vamos supor que  Louis \'e reservado ou leal.  O que voc\^e pode concluir? Caso  Louis  n\~ao seja reservado; pode ser que ele seja leal.   Igualmente, caso  Louis  n\~ao seja leal; pode ser que ele seja reservado.  Disjun\c c\~oes, por si s\'o, s\~ao dif\'iceis de trabalhar.
 
 Mas suponha que, de alguma forma, possamos mostrar os dois seguinte fatos: primeiro, que sendo Louis reservado implica que ele seja um economista; segundo, que sendo Louis leal implica que ele seja um economista.
 Ent\~ao, se sabemos que Louis \'e reservado ou leal, ent\~ao sabemos que, seja ele o que for, Louis \'e um economista.   Esse insight pode ser expresso na regra a seguir, que \'e a regra de elimina\c c\~ao da disjun\c c\~ao  ($\eor$E):
@@ -546,7 +550,7 @@ Obviamente, isso \'e um pouco mais complicado do que as regras anteriores, mas o
 
 Alguns exemplos podem ajudar a ilustrar isso. Considere este argumento:
 $$(P \eand Q) \eor (P \eand R) \therefore P$$
-A prova desse exemplo pode ser executada assim:
+A prova desse exemplo pode ser feita assim:
 	\begin{fitchproof}
 		\hypo{prem}{(P \eand Q) \eor (P \eand R) }
 			\open
@@ -580,7 +584,7 @@ Aqui est\'a uma prova correspondente a este argumento:
 	\end{fitchproof}
  
 
-N\~ao se assuste se voc\^e acha que n\~ao seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a pr\'atica, e abordaremos algumas estrat\'egias para construuir provas no cap\'itulo \ref{s:stratTFL}. A quest\~ao principal nesta fase \'e se, olhando a prova, voc\^e pode reconhecer que ela est\'a em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
+N\~ao se assuste se voc\^e acha que n\~ao seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a pr\'atica, e abordaremos algumas estrat\'egias para construuir provas no Cap\'itulo \ref{s:stratTFL}. A quest\~ao principal nesta fase \'e se, olhando a prova, voc\^e pode reconhecer que ela est\'a em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
 
 %%%%%% -------- ------------- ---------- ------- ------ ------  26..8  Contradicao e negacao
 
@@ -588,14 +592,16 @@ N\~ao se assuste se voc\^e acha que n\~ao seria capaz de fazer essa prova. A hab
 
 Trataremos agora da nega\c c\~ao, o nosso  último conectivo. Entretanto, temos que fazer mais esfor\c cos para lidar com ele, pois precisamos conectar nega\c c\~ao e  \emph{contradi\c c\~ao}. 
 
-Uma forma eficaz de argumentar \'e demonstrar que o seus oponentes se contradizem. Nesse ponto, voc\^e os tem sob controle. Eles t\^em que desistir de pelo menos uma de suas suposi\c c\~oes. Vamos usar essa ideia em nosso sistema de prova, adicionando um novo s\'imbolo, `$\ered$', \`as nossas provas. Esse s\'imbolo deve ser lido como algo como `contradi\c c\~ao!'\ ou `redu\c c\~ao!'\ ou `isto \'e um absurdo!'  Podemos usar   a regra para a introdu\c c\~ao desse s\'imbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma senten\c ca e sua nega\c c\~ao aparecendo em nossa prova:
+Uma forma eficaz de argumentar \'e demonstrar que o seus oponentes se contradizem. Nesse ponto, voc\^e os tem sob controle. Eles t\^em que desistir de pelo menos uma de suas suposi\c c\~oes. Vamos usar essa ideia em nosso sistema de provas, adicionando um novo s\'imbolo, `$\ered$', \`as nossas provas. Esse s\'imbolo deve ser lido como algo como `contradi\c c\~ao!'\ ou `redu\c c\~ao!'\ ou `isto \'e um absurdo!'  Podemos usar   a regra para a introdu\c c\~ao desse s\'imbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma senten\c ca e sua nega\c c\~ao aparecendo em nossa prova:
 \factoidbox{
 \begin{fitchproof}
   \have[m]{na}{\enot\meta{A}}
   \have[n]{a}{\meta{A}}
   \have[ ]{bot}{\ered}\ne{na, a}
 \end{fitchproof}}
-N\~ao importa em que ordem a senten\c ca e sua nega\c c\~ao aparecem, e elas n\~ao precisam aparecer em linhas vizinhas. No entanto, sempre citamos o n\'umero da linha da nega\c c\~ao primeiro, seguido pelo da senten\c ca em que foi negada.
+As sentenças citadas não precisam estar em linhas vizinhas, nem importa a ordem em que aparecem na prova. O único que importa é que citemos primeiro a linha da sentença negada ($\enot\meta{A}$) e depois a da afirmada ($\meta{A}$). 
+
+%N\~ao importa em que ordem a senten\c ca e sua nega\c c\~ao aparecem, e elas n\~ao precisam aparecer em linhas vizinhas. No entanto, sempre citamos o n\'umero da linha da nega\c c\~ao primeiro, seguido pelo da senten\c ca em que foi negada.
 
 Obviamente, existe um v\'inculo estreito entre contradi\c c\~ao e nega\c c\~ao. 
 A regra $\enot$E permite obter uma contradi\c c\~ao expl\'icita, ~$\ered$,  
@@ -607,11 +613,11 @@ para uma senten\c ca que n\~ao a contenha, ou seja,  $\ered$.  Portanto, \'e uma
 Dissemos que  `$\ered$'  deve ser visto como uma  `contradi\c c\~ao!', mas isso n\~ao nos diz muito sobre este s\'imbolo. Existem, aproximadamente, tr\^es maneiras de abordar o s\'imbolo `$\ered$'.
 	\begin{ebullet}
 		\item Podemos considerar `$\ered$'. como uma nova senten\c ca at\^omica da LVF, mas que s\'o pode ter o valor de verdade Falso.  
-		\item Podemos considerar  `$\ered$' como uma abrevia\c c\~ao de alguma contradi\c c\~ao can\^onica, como `$A \eand \enot A$'. Isso ter\'a o mesmo efeito que o descrito acima - obviamente, `$A \eand \enot A$' sempre tem o valor de verdade Falso - mas significa que, oficialmente, n\~ao precisamos adicionar um novo s\'imbolo a LVF.
+		\item Podemos considerar  `$\ered$' como uma abrevia\c c\~ao de alguma contradi\c c\~ao can\^onica, como `$A \eand \enot A$'. Isso ter\'a o mesmo efeito que o descrito acima---obviamente, `$A \eand \enot A$' sempre tem o valor de verdade Falso---mas significa que, oficialmente, n\~ao precisamos adicionar um novo s\'imbolo a LVF.
 		\item Podemos considerar `$\ered$', n\~ao como um s\'imbolo da LVF, mas como um \emph{sinal de pontua\c c\~ao} que aparece em nossas provas.  (Digamos que \'e compar\'avel aos n\'umeros das linhas e \`as linhas verticais.)
 			\end{ebullet}
 			
-Existe algo filosoficamente  muito atraente na terceira op\c c\~ao, mas aqui adotaremos \emph{oficialmente} a primeira. `$\ered$'  deve ser lido como uma letra sentencial que \'e sempre falsa. Isso significa que podemos manipul\'a-lo, em nossas provas, como qualquer outra senten\c ca.
+Existe algo filosoficamente  muito atraente na terceira op\c c\~ao, mas aqui adotaremos \emph{oficialmente} a primeira. `$\ered$'  deve ser lido como uma letra sentencial que \'e sempre falsa. Isso significa que podemos tratá-lo, em nossas provas, como qualquer outra senten\c ca.
 
 Ainda precisamos estabelecer uma regra para a introdu\c c\~ao da nega\c c\~ao. A regra \'e muito simples: se assumirmos algo que leva a uma contradi\c c\~ao, a suposi\c c\~ao deve estar errada. Esse pensamento motiva a seguinte regra:
 
@@ -640,7 +646,7 @@ Se a suposi\c c\~ao de que $\meta{A}$ \'e verdadeira leva a uma contradi\c c\~ao
 \close
 \have[\ ]{na}{\meta{A}}\ip{a-nb}
 \end{fitchproof}}
-Essa regra \'e chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua nega\c c\~ao. Formalmente, a regra \'e muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ n\~ao \'e a conclus\~ao da regra, n\~ao estamos introduzindo~$\enot$, ent\~ao  IP n\~ao \'e uma regra que introduz qualquer conectivo. Tamb\'em n\~ao elimina um conectivo, pois n\~ao possui premissas aut\^onomas que contenham~$\enot$, apenas uma subprova com uma suposi\c c\~ao da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: \'e por isso que $\enot$E elimina~$\enot$, mas a regra IP n\~ao.\footnote{Existem l\'ogicos que n\~ao aceitam a regra IP, mas aceitam $\enot$E. Eles s\~ao chamados de "intuicionistas". Os intuicionistas n\~ao aceitam nossa suposi\c c\~ao b\'asica de que cada senten\c ca tem um dos dois valores de verdade, verdadeiro ou falso. Eles tamb\'em acham que $\enot$ funciona diferentemente - para eles, uma prova do $\ered$ a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do $\ered$ a partir de $\enot\meta{A}$ n\~ao garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ n\~ao s\~ao equivalentes.}
+Essa regra \'e chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua nega\c c\~ao. Formalmente, a regra \'e muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ n\~ao \'e a conclus\~ao da regra, n\~ao estamos introduzindo~$\enot$, ent\~ao  IP n\~ao \'e uma regra que introduz qualquer conectivo. Tamb\'em n\~ao elimina um conectivo, pois n\~ao possui premissas aut\^onomas que contenham~$\enot$, apenas uma subprova com uma suposi\c c\~ao da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: \'e por isso que $\enot$E elimina~$\enot$, mas a regra IP n\~ao.\footnote{Existem l\'ogicos que n\~ao aceitam a regra IP, mas aceitam $\enot$E. Eles s\~ao chamados de "intuicionistas". Os intuicionistas n\~ao aceitam nossa suposi\c c\~ao b\'asica de que cada senten\c ca tem um dos dois valores de verdade, verdadeiro ou falso. Eles tamb\'em acham que $\enot$ funciona diferentemente. Para eles, uma prova do $\ered$ a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do $\ered$ a partir de $\enot\meta{A}$ n\~ao garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ n\~ao s\~ao equivalentes.}
 
 
 Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir de $\meta{D}$. Usando IP, podemos ir na outra dire\c c\~ao (com essencialmente a mesma prova).
@@ -660,12 +666,12 @@ Precisamos de uma \'ultima regra. \'E uma esp\'ecie de regra de elimina\c c\~ao 
 \end{fitchproof}}
 Observe que  \meta{A} pode ser \emph{qualquer} senten\c ca.
 
-A regra de explos\~ao \'e um pouco estranha. Parece que  \meta{A}  chega em nossa prova como um coelho que sai de uma cartola. Ao tentar encontrar provas, \'e muito tentador tentar us\'a-lo em qualquer lugar, pois parece muito poderoso. Resista a essa tenta\c c\~ao: voc\^e s\'o pode aplic\'a-la quando j\'a tiver~$\ered$!   E voc\^e obt\'em $\ered$   somente quando suas suposi\c c\~oes s\~ao contradit\'orias.
+A regra de explos\~ao \'e um pouco estranha. Parece que  \meta{A}  chega em nossa prova como um coelho que sai de uma cartola. Ao tentar encontrar provas, \'e muito tentador querer us\'a-la em qualquer lugar, pois parece muito poderosa. Resista a essa tenta\c c\~ao: voc\^e s\'o pode aplic\'a-la quando j\'a tiver~$\ered$!   E voc\^e obt\'em $\ered$   somente quando suas suposi\c c\~oes s\~ao contradit\'orias.
  
 
 Ainda assim, n\~ao \'e estranho que, de uma contradi\c c\~ao, alguma coisa deva seguir? N\~ao de acordo com nossa no\c c\~ao de sustenta\c c\~ao e validade. Para, \meta{A} sustenta \meta{B} se e somente se  n\~ao exise nenhuma valora\c c\~ao de letras sentenciais que  tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas $\ered$  \'e uma contradi\c c\~ao, nunca \'e verdadeiro, seja qual for a valora\c c\~ao das letras sentenciais.  Como n\~ao existe nenhuma valora\c c\~ao que faz $\ered$ verdadeiro, claro que tamb\'em n\~ao existe nenhuma valora\c c\~ao que faz  $\ered$  verdadeiro e \meta{B} falsa! Ent\~ao, de acordo com a nossa defini\c c\~ao de sustenta\c c\~ao,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradi\c c\~ao sustenta qualquer coisa.\footnote{Existem alguns l\'ogicos que n\~ao aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conex\~ao relevante} entre \meta{A} e \meta{B}, mas n\~ao h\'a uma entre $\ered$ e alguma senten\c ca arbitr\'aria~\meta{B}. Portanto, esses l\'ogicos desenvolvem outras l\'ogicas "relevantes" nas quais  a regra de explos\~ao \'e n\~ao permitida.}
 
-\emph{Estas s\~ao todas as regras b\'asicas para o sistema de prova da LVF.}
+\emph{Estas s\~ao todas as regras b\'asicas para o sistema de provas da LVF.}
 
 %%%%%% ----------------------------------------——-CAP 26 -  EXERCICIOS   ------- -------   
 
@@ -765,11 +771,11 @@ Apresente uma prova para cada um dos doze seguintes argumentos:
 %%%%%% ----------------  27.1  Trabalhando do fim para o come\c co para chegar onde queremos. 
 \section{Trabalhando do fim para o come\c co para chegar onde queremos}
 
- Voc\^e est\'a tentando encontrar uma prova de alguma conclus\~ao~$\meta{C}$, que ser\'a a \'ultima linha da sua prova. A primeira coisa que voc\^e faz \'e olhar para~$\meta{C}$ e perguntar qual \'e a regra de introdu\c c\~ao para seu principal operador l\'ogico. Isso lhe d\'a uma ideia do que deve acontecer \emph{antes} da \'ultima linha da prova. 
+ Voc\^e est\'a tentando encontrar uma prova de alguma conclus\~ao~$\meta{C}$, que ser\'a a \'ultima linha da sua prova. A primeira coisa que voc\^e faz \'e olhar para~$\meta{C}$ e perguntar qual \'e a regra de introdu\c c\~ao para seu operador l\'ogico principal. Isso lhe d\'a uma ideia do que deve acontecer \emph{antes} da \'ultima linha da prova. 
 
  As justificativas para a regra de introdu\c c\~ao requerem uma ou duas outras senten\c cas acima da \'ultima linha, ou uma ou duas subprovas. Al\'em disso, voc\^e pode dizer a partir de~$\meta{C}$ quais s\~ao essas senten\c cas ou quais s\~ao as suposi\c c\~oes e conclus\~oes das subprovas. Em seguida, voc\^e pode escrever essas senten\c cas ou delinear as subprovas acima da \'ultima linha e trat\'a-las como seus novos objetivos.
 
- Por exemplo: se sua conclus\~ao \'e um condicional $\meta{A}\eif\meta{B}$,  planeje usar a regra {\eif}I.  Isso requer iniciar uma subprova na qual voc\^e assume~\meta{A}. A subprova deve terminar com~\meta{B}. Depois, continue pensando no que voc\^e deve fazer para obter $\meta{B}$ dentro dessa subprova,  e como voc\^e pode usar a suposi\c c\~ao~$\meta{A}$.
+ Por exemplo, se sua conclus\~ao \'e um condicional $\meta{A}\eif\meta{B}$,  tente usar a regra {\eif}I.  Isso requer iniciar uma subprova na qual voc\^e assume~\meta{A}. A subprova deve terminar com~\meta{B}. Depois, continue pensando no que voc\^e deve fazer para obter $\meta{B}$ dentro dessa subprova,  e como voc\^e pode usar a suposi\c c\~ao~$\meta{A}$.
 
  Se seu objetivo for provar uma conjun\c c\~ao, um condicional ou uma senten\c ca negada, voc\^e deve come\c car trabalhando dessa maneira, do fim para o come\c co. Descreveremos o que voc\^e deve fazer em cada um desses casos em detalhes.
  
@@ -786,7 +792,8 @@ Se quisermos provar  $\meta{A} \eand \meta{B}$,  trabalhando do fim para o come\
 	\have[m]{m}{\meta{B}}
     \have{4}{\meta{A} \eand \meta{B}}\ai{n,m}
   \end{fitchproof}
-Para $\eand$I, precisamos provar primeiro $\meta{A}$, depois provar $\meta{B}$. Na \'ultima linha, temos que citar as linhas em que provamos $\meta{A}$ e  $\meta{B}$, e usar~$\eand$I. As partes da prova marcadas por $\vdots$ ainda precisam ser preenchidas. Vamos marcar os n\'umeros de linha $m$, $n$ e $k$ por enquanto. Quando a prova estiver conclu\'ida, esses espa\c cos reservados podem ser substitu\'idos por n\'umeros reais.
+Para $\eand$I, precisamos provar primeiro $\meta{A}$, depois provar $\meta{B}$. Na \'ultima linha, temos que citar as linhas em que provamos $\meta{A}$ e  $\meta{B}$, e usar~$\eand$I. As partes da prova marcadas por $\vdots$ ainda precisam ser preenchidas.
+Por enquanto vamos marcar os n\'umeros de linha $m$, $n$ e $k$, e quando a prova estiver conclu\'ida, esses espa\c cos reservados podem ser substitu\'idos por n\'umeros reais.
  
 
 \subsection*{Provando um condicional do fim para o come\c co}
@@ -821,7 +828,7 @@ Aconselhamos a trabalhar do fim para o come\c co,  o m\'aximo que puder. Assim, 
 \subsection*{Provando uma  disjun\c c\~ao do fim para o come\c co}
 
 Obviamente, voc\^e tamb\'em pode trabalhar do fim para o come\c co para provar  uma disjun\c c\~ao $\meta{A} \eor \meta{B}$, se esse for seu objetivo. A regra
- $\eor$I exige que voc\^e tenha um dos disjuntos para deduzir $\meta{A} \eor \meta{B}$.
+ $\eor$I exige que voc\^e tenha um dos disjuntos para obter $\meta{A} \eor \meta{B}$.
  Assim, escolha um dos disjuntos e,  em seguida,  procure uma prova para esse  disjunto  que voc\^e escolheu:
 \begin{fitchproof}
 	\ellipsesline
@@ -845,7 +852,7 @@ Sua prova pode ter premissas. E se voc\^e trabalhou de tr\'as para frente para p
 
 \subsection*{Trabalhando do come\c co para o fim a partir de uma conjun\c c\~ao}
 
-Para usar a estrat\'egia de provar do  come\c co para fim a partir de uma senten\c ca da forma $\meta{A} \eand \meta{B}$, usamos $\eand$E. Essa regra nos permite fazer duas coisas: inferir $\meta{A}$, e inferir $\meta{B}$. Assim, em uma prova em que temos $\meta{A} \eand \meta{B}$, podemos avan\c car escrevendo $\meta{A}$ e/ou $\meta{B}$  imediatamente abaixo da conjun\c c\~ao:
+Para usar a estrat\'egia de provar do  come\c co para fim a partir de uma senten\c ca da forma $\meta{A} \eand \meta{B}$, usamos $\eand$E. Essa regra nos permite fazer duas coisas: deduzir $\meta{A}$, e deduzir $\meta{B}$. Assim, em uma prova em que temos $\meta{A} \eand \meta{B}$, podemos avan\c car escrevendo $\meta{A}$ e/ou $\meta{B}$  imediatamente abaixo da conjun\c c\~ao:
 
 \begin{fitchproof}
   \have[n]{1}{\meta{A} \eand \meta{B}}
@@ -889,7 +896,7 @@ Para usar um condicional $\meta{A} \eif \meta{B}$, voc\^e tamb\'em precisa do an
 
 \subsection*{ Trabalhando do come\c co para o fim a partir de uma senten\c ca negada}
 
-Finalmente, para usar uma senten\c ca negada $\enot \meta{A}$, voc\^e deve aplicar a regra $\enot$E. Isto requer, al\'em de  $\enot \meta{A}$,  tamb\'em a senten\c ca correspondente~$\meta{A}$ sem a nega\c c\~ao. A senten\c ca que voc\^e ir\'a obter \'e sempre a mesma: $\ered$. Assim, trabalhar do come\c co para o fim a partir de uma senten\c ca negada funciona especialmente bem dentro de uma subprova que voc\^e deseja usar em uma aplica\c c~ao da regra $\enot$I (ou IP).  Voc\^e trabalha a partir de $\enot \meta{A}$ se voc\^e j\'a tem $\enot \meta{A}$ e deseja provar~$\ered$. Para isso, voc\^e estabelece $\meta{A}$ como um novo subobjetivo.
+Finalmente, para usar uma senten\c ca negada $\enot \meta{A}$, voc\^e deve aplicar a regra $\enot$E. Isto requer, al\'em de  $\enot \meta{A}$,  tamb\'em a senten\c ca correspondente~$\meta{A}$ sem a nega\c c\~ao. A senten\c ca que voc\^e ir\'a obter \'e sempre a mesma: $\ered$. Assim, trabalhar do come\c co para o fim a partir de uma senten\c ca negada funciona especialmente bem dentro de uma subprova que voc\^e deseja usar em uma aplicação da regra $\enot$I (ou IP).  Voc\^e trabalha a partir de $\enot \meta{A}$ se voc\^e j\'a tem $\enot \meta{A}$ e deseja provar~$\ered$. Para isso, voc\^e estabelece $\meta{A}$ como um novo subobjetivo.
 \begin{fitchproof}
 	\have[n]{1}{\enot \meta{A}}
 	\ellipsesline 
@@ -907,8 +914,8 @@ Vamos supor que queremos mostrar que o argumento $(A \eand B) \eor (A \eand C) \
 \ellipsesline
   \have[n]{2}{A \eand (B \eor C)}
 \end{fitchproof}
-Agora, temos duas op\c c\~oes: trabalhar do fim para o come\c co a partir da conclus\~ao ou trabalhar come\c co para o fim a partir da partir da premissa. Escolheremos a segunda estrat\'egia: usamos a disjun\c c\~ao na linha~$1$ e configuramos as subprovas que precisamos para  $\eor$E. A disjun\c c\~ao na linha~$1$ tem dois disjuntos, $A \eand B$ e $A \eand C$. 
-O nosso objetivo \'e provar a senten\c ca $A \eand (B \eor C)$. Assim, neste caso, voc\^e  deve criar duas subprovas:  uma com a suposi\c c\~ao $A \eand B$ e a \'ultima linha $A \eand (B \eor C)$, e a  outra com a suposi\c c\~ao $A \eand C$ e a \'ultima linha $A \eand (B \eor C)$. A justificativa para a conclus\~ao na linha $n$  ser\'a  $\eor$E,  citando a disjun\c c\~ao na linha~$1$ e as duas subprovas. Assim, sua prova at\'e  agora \'e esta :
+Agora, temos duas op\c c\~oes: trabalhar do fim para o come\c co a partir da conclus\~ao ou trabalhar come\c co para o fim a partir da partir da premissa. Escolheremos a segunda estrat\'egia: usamos a disjun\c c\~ao na linha~$1$ e configuramos as subprovas que precisamos para  $\eor$E. A disjun\c c\~ao na linha~$1$ tem dois disjuntos, `$A \eand B$' e `$A \eand C$'. 
+O nosso objetivo \'e provar a senten\c ca `$A \eand (B \eor C)$'. Assim, neste caso, voc\^e  deve criar duas subprovas:  uma com a suposi\c c\~ao `$A \eand B$' e a \'ultima linha `$A \eand (B \eor C)$', e a  outra com a suposi\c c\~ao `$A \eand C$' e a \'ultima linha `$A \eand (B \eor C)$'. A justificativa para a conclus\~ao na linha $n$  ser\'a  $\eor$E,  citando a disjun\c c\~ao na linha~$1$ e as duas subprovas. Assim, sua prova at\'e  agora \'e esta :
  
 
 \begin{fitchproof}
@@ -945,9 +952,9 @@ Agora voc\^e tem duas tarefas separadas, a saber,  preencher cada uma das duas s
 	\close
 	\have{12}{A \eand (B \eor C)}\oe{1,2-6,(7)-11}
 \end{fitchproof}
-Vimos imediatamente que podemos obter a linha $i$ a partir da linha~$2$ por $\eand$E. No entanto, a linha $i$ \'e na verdade a linha~$3$ e pode ser justificada com $\eand$E  da linha~$2$. O outro subobjetivo $B \eor C$ \'e uma disjun\c c\~ao.
-Aplicaremos a estrat\'egia de trabalhar do fim para o come\c co a partir de uma disjun\c c\~ao at\'e a linha $n-1$. Temos que escolher um dos disjuntos, $B$ ou~$C$. 
-Escolhendo $C$  n\~ao funcionaria e ter\'iamos que voltar atr\'as. Agora voc\^e j\'a pode ver que, se voc\^e escolheu $B$ como subobjetivo, poder\'a conseguir isso trabalhando novamente do come\c co para o fim a partir da conjun\c c\~ao $A \eand B$ na linha~$2$. Assim, podemos concluir a primeira subprova como segue:
+Vimos imediatamente que podemos obter a linha $i$ a partir da linha~$2$ por $\eand$E. No entanto, a linha $i$ \'e na verdade a linha~$3$ e pode ser justificada com $\eand$E  da linha~$2$. O outro subobjetivo `$B \eor C$' \'e uma disjun\c c\~ao.
+Aplicaremos a estrat\'egia de trabalhar do fim para o come\c co a partir de uma disjun\c c\~ao at\'e a linha $n-1$. Temos que escolher um dos disjuntos, `$B$' ou~`$C$'. 
+Escolhendo `$C$'  n\~ao funcionaria e ter\'iamos que voltar atr\'as. Agora voc\^e j\'a pode ver que, se voc\^e escolheu `$B$' como subobjetivo, poder\'a conseguir isso trabalhando novamente do come\c co para o fim a partir da conjun\c c\~ao `$A \eand B$' na linha~$2$. Assim, podemos concluir a primeira subprova como segue:
  
 
 \begin{fitchproof}
@@ -970,7 +977,7 @@ Na primeira subprova, obtemos as linha $3$ e $4$ da mesma forma, i.e.,  de $2$ p
 
 A segunda subprova \'e quase exatamente a mesma. Vamos deixar isso como um exerc\'icio.
 
-Lembre-se de que, quando come\c camos, t\'inhamos a op\c c\~ao de come\c car a partir da premissa ou come\c car pela conclus\~ao, e escolhemos a primeira op\c c\~ao. A segunda op\c c\~ao tamb\'em leva a uma prova, mas ser\'a diferente. Os primeiros passos seriam trabalhar a partir da conclus\~ao e estabelecer dois subobjetivos, $A$ e $B \eor C$, e depois trabalhar a partir da premissa para prov\'a-las, por exemplo:
+Lembre-se de que, quando come\c camos, t\'inhamos a op\c c\~ao de come\c car a partir da premissa ou come\c car pela conclus\~ao, e escolhemos a primeira op\c c\~ao. A segunda op\c c\~ao tamb\'em leva a uma prova, mas ser\'a diferente. Os primeiros passos seriam trabalhar a partir da conclus\~ao e estabelecer dois subobjetivos, `$A$' e `$B \eor C$', e depois trabalhar a partir da premissa para prov\'a-las, por exemplo:
  
 
 \begin{fitchproof}
@@ -1001,8 +1008,8 @@ Lembre-se de que, quando come\c camos, t\'inhamos a op\c c\~ao de come\c car a p
 \end{fitchproof}
 Deixaremos que voc\^e preencha as linhas ausentes indicadas por ~$\vdots$.
 
-Vamos dar outro exemplo para ilustrar como aplicar as estrat\'egias ao lidar com condicionais e nega\c c\~ao. A senten\c ca $(A \eif B) \eif (\enot B \eif \enot A)$ \'e uma tautologia. 
-Vamos ver se conseguimos encontrar uma prova disso, sem premissas, usando as estrat\'egias. Primeiro escrevemos a senten\c ca no final de uma folha de papel. Como trabalhar do come\c co para o fim n\~ao \'e uma boa op\c c\~ao (n\~ao h\'a nada a partir do qual trabalhar), trabalhamos do fim para o come\c co e criamos uma subprova para obter a  senten\c ca que queremos $(A \eif B) \eif (\enot B \eif \enot A)$ usando a regra  $\eif$I. A sua suposi\c c\~ao deve ser o antecedente do condicional que queremos provar, ou seja, $A \eif B$, e sua \'ultima linha, o consequente $\enot B \eif \enot A$.
+Vamos dar outro exemplo para ilustrar como aplicar as estrat\'egias ao lidar com condicionais e nega\c c\~ao. A senten\c ca `$(A \eif B) \eif (\enot B \eif \enot A)$' \'e uma tautologia. 
+Vamos ver se conseguimos encontrar uma prova disso, sem premissas, usando as estrat\'egias. Primeiro escrevemos a senten\c ca no final de uma folha de papel. Como trabalhar do come\c co para o fim n\~ao \'e uma boa op\c c\~ao (n\~ao h\'a nada a partir do qual trabalhar), trabalhamos do fim para o come\c co e criamos uma subprova para obter a  senten\c ca que queremos `$(A \eif B) \eif (\enot B \eif \enot A)$' usando a regra  $\eif$I. A sua suposi\c c\~ao deve ser o antecedente do condicional que queremos provar, ou seja, `$A \eif B$', e sua \'ultima linha, o consequente `$\enot B \eif \enot A$'.
  
 
 \begin{fitchproof}
@@ -1013,7 +1020,7 @@ Vamos ver se conseguimos encontrar uma prova disso, sem premissas, usando as est
 \close
 \have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
-O novo objetivo, $\enot B \eif \enot A$ \'e  tamb\'em  um  condicional, assim, trabalhando do fim para o come\c co, criamos outra subprova:
+O novo objetivo, `$\enot B \eif \enot A$' \'e  tamb\'em  um  condicional, assim, trabalhando do fim para o come\c co, criamos outra subprova:
 
 \begin{fitchproof}
 	\open
@@ -1027,7 +1034,7 @@ O novo objetivo, $\enot B \eif \enot A$ \'e  tamb\'em  um  condicional, assim, t
 	\close
 	\have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
-Trabalhamos novamente do fim para o come\c co a partir de $\enot A$.  Para fazer isso, veja a regra $\enot$I. Ela requer uma subprova com~$A$ como suposi\c c\~ao, e $\ered$ como sua \'ultima linha. Ent\~ao a prova agora \'e:
+Trabalhamos novamente do fim para o come\c co a partir de `$\enot A$'.  Para fazer isso, veja a regra $\enot$I. Ela requer uma subprova com~`$A$' como suposi\c c\~ao, e `$\ered$' como sua \'ultima linha. Ent\~ao a prova agora \'e:
  
 \begin{fitchproof}
 	\open
@@ -1044,7 +1051,7 @@ Trabalhamos novamente do fim para o come\c co a partir de $\enot A$.  Para fazer
 	\close
 	\have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
-Agora nosso objetivo \'e provar~$\ered$. Dissemos acima, ao discutir como trabalhar a partir de uma senten\c ca negada, que a regra $\enot$E permite que voc\^e prove~$\ered$, o qual \'e o nosso objetivo na subprova interior. Ent\~ao, procuramos uma senten\c ca negada  que a partir da qual possamos trabalhar do come\c co para o fim: esta senten\c ca seria $\enot B$ da linha~$2$. Isso significa que temos que derivar $B$ dentro da subprova, pois $\enot$E requer n\~ao apenas $\enot B$ (o que j\'a temos), mas tamb\'em~$B$. E $B$, por sua vez, conseguimos a partir de $A \eif B$, j\'a que $\eif$E nos permitir\'a justificar o consequente~$B$ do condicional por $\eif$E. A regra $\eif$E tamb\'em requer o antecedente~$A$ do condicional, mas isso tamb\'em j\'a est\'a dispon\'ivel (na linha~$3$). Ent\~ao, conclu\'imos  com:
+Agora nosso objetivo \'e provar~$\ered$. Dissemos acima, ao explicar como trabalhar a partir de uma senten\c ca negada, que a regra $\enot$E permite que voc\^e prove~$\ered$, o qual \'e o nosso objetivo na subprova interior. Ent\~ao, procuramos uma senten\c ca negada  que a partir da qual possamos trabalhar do come\c co para o fim: esta senten\c ca seria $\enot B$ da linha~$2$. Isso significa que temos que derivar $B$ dentro da subprova, pois $\enot$E requer n\~ao apenas $\enot B$ (o que j\'a temos), mas tamb\'em~$B$. E $B$, por sua vez, conseguimos a partir de $A \eif B$, j\'a que $\eif$E nos permitir\'a justificar o consequente~$B$ do condicional por $\eif$E. A regra $\eif$E tamb\'em requer o antecedente~$A$ do condicional, mas isso tamb\'em j\'a est\'a dispon\'ivel (na linha~$3$). Ent\~ao, conclu\'imos  com:
 
 
 \begin{fitchproof}
@@ -1067,7 +1074,7 @@ Agora nosso objetivo \'e provar~$\ered$. Dissemos acima, ao discutir como trabal
 
 \section{Trabalhando do come\c co para o fim a partir de $\ered$}\label{sec:backred}
 
-Ao aplicar as estrat\'egias, \`as vezes voc\^e se encontra em uma situa\c c\~ao em que pode justificar~$\ered$. Usando a regra de explos\~ao, isso permitiria justificar \emph{qualquer coisa}. Assim $\ered$ funciona como um curinga nas provas. Por exemplo, suponha que voc\^e queira fornecer uma prova do argumento $A \eor B, \enot A \therefore B$. Voc\^e configura sua prova, escrevendo as premissas $A \eor B$ e $\enot A$ na parte superior das linhas $1$ e $2$ e a conclus\~ao $B$ na parte inferior da p\'agina. $B$ n\~ao tem conectivo principal, ent\~ao voc\^e n\~ao pode usar a estrat\'egia do fim para o come\c co. Em vez disso, voc\^e deve trabalhar a partir de $A \eor B$: Isso requer duas subprovas,  tais como:
+Ao aplicar as estrat\'egias, \`as vezes voc\^e se encontra em uma situa\c c\~ao em que pode justificar~$\ered$. Usando a regra de explos\~ao, isso permitiria justificar \emph{qualquer coisa}. Assim $\ered$ funciona como um curinga nas provas. Por exemplo, suponha que voc\^e queira fornecer uma prova do argumento $A \eor B, \enot A \therefore B$. Voc\^e configura sua prova, escrevendo as premissas `$A \eor B$' e `$\enot A$' na parte superior das linhas $1$ e $2$ e a conclus\~ao $B$ na parte inferior da p\'agina. `$B$' n\~ao tem conectivo principal, ent\~ao voc\^e n\~ao pode usar a estrat\'egia do fim para o come\c co. Em vez disso, voc\^e deve trabalhar a partir de `$A \eor B$': Isso requer duas subprovas,  tais como:
 
 
 \begin{fitchproof}
@@ -1085,7 +1092,7 @@ Ao aplicar as estrat\'egias, \`as vezes voc\^e se encontra em uma situa\c c\~ao 
 	\close
 	\have{6}{B}\oe{1,2-3,(4)-5} 
 \end{fitchproof} 
-Observe que voc\^e possui   $\enot A$ na linha~$2$ e $A$ como suposi\c c\~ao da sua primeira subprova. Isso lhe d\'a  $\ered$  usando $\enot$E, e de $\ered$ voc\^e obt\'em a conclus\~ao~$B$ da primeira subprova usando~X. Lembre-se de que voc\^e pode repetir uma senten\c ca que j\'a apareceu na prova  usando a regra de reitera\c c\~ao~R. Portanto, nossa prova seria:
+Observe que voc\^e possui   `$\enot A$' na linha~$2$ e `$A$' como suposi\c c\~ao da sua primeira subprova. Isso lhe d\'a  $\ered$  usando $\enot$E, e de $\ered$ voc\^e obt\'em a conclus\~ao~`$B$' da primeira subprova usando~X. Lembre-se de que voc\^e pode repetir uma senten\c ca que j\'a apareceu na prova  usando a regra de reitera\c c\~ao~R. Portanto, nossa prova seria:
 \begin{fitchproof}
 	\hypo{1}{A \eor B}
 	\hypo{7}{\enot A}
@@ -1107,7 +1114,7 @@ Em muitos casos, as estrat\'egias de trabalhar do come\c co para o fim  e do fim
 
 \begin{fitchproof}
 \open
-\hypo[n]{2}{\enot A}
+\hypo[n]{2}{\enot\meta{A}}
 \ellipsesline 
 \have[m]{3}{\ered}
 \close
@@ -1117,7 +1124,7 @@ Aqui, temos que iniciar uma subprova com a suposi\c c\~ao $\enot \meta{A}$;
 a \'ultima linha da subprova deve ser~$\ered$. Vamos citar a subprova e usar  IP como regra. Na subprova, agora temos uma suposi\c c\~ao adicional (na linha $n$) para trabalhar.
 
 Suponha que usamos a estrat\'egia de prova indireta ou estamos em outra situa\c c\~ao em que procuramos uma prova para  $\ered$.   O que \'e um bom candidato? \'e claro que o candidato \'obvio seria usar uma senten\c ca negada, pois (como vimos acima) com $\enot$E podemos obter~$\ered$. 
- Se voc\^e configurar uma prova como acima, tentando provar \meta{A} usando~IP, voc\^e ter\'a $\enot \meta{A}$ como suposi\c c\~ao de sua subprova - ent\~ao trabalhando a partir dela para justificar $\ered$ dentro de sua subprova, voc\^e estabelece \meta{A} como uma meta dentro de sua subprova. Assim, se voc\^e estiver usando  IP, voc\^e se encontrar\'a na seguinte situa\c c\~ao:
+ Se voc\^e configurar uma prova como acima, tentando provar \meta{A} usando~IP, voc\^e ter\'a $\enot \meta{A}$ como suposi\c c\~ao de sua subprova. Ent\~ao trabalhando a partir dela para justificar $\ered$ dentro de sua subprova, voc\^e estabelece \meta{A} como uma meta dentro de sua subprova. Assim, se voc\^e estiver usando  IP, voc\^e se encontrar\'a na seguinte situa\c c\~ao:
 \begin{fitchproof}
 \open
 \hypo[n]{2}{\enot \meta{A}}
@@ -1171,7 +1178,7 @@ No in\'icio, trabalhando  do come\c co par o fim para provar $A \eor\enot A$ com
 	\close
 	\have{9}{A \eor \enot A}\ip{2-8}
 \end{fitchproof}
-Dentro dessa nova subprova, precisamos novamente justificar $\ered$. A melhor maneira de fazer isso \'e come\c car com uma senten\c ca negada; $\enot(A \eor \enot A)$ na linha~$1$ \'e a \'unica senten\c ca negada que podemos usar. A senten\c ca n\~ao negada correspondente,  $A \eor \enot A$, no entanto, segue diretamente de $A$ (que temos na linha~$2$) por $\eor$I. Nossa prova completa \'e:
+Dentro dessa nova subprova, precisamos novamente justificar $\ered$. A melhor maneira de fazer isso \'e come\c car com uma senten\c ca negada; `$\enot(A \eor \enot A)$' na linha~$1$ \'e a \'unica senten\c ca negada que podemos usar. A senten\c ca n\~ao negada correspondente,  `$A \eor \enot A$', no entanto, segue diretamente de `$A$' (que temos na linha~$2$) por $\eor$I. Nossa prova completa \'e:
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1221,7 +1228,7 @@ Use as estrat\'egias para encontrar provas para cada uma das cinco seguintes sen
 Como essas devem ser provas de senten\c cas a partir de nenhuma premissa, voc\^e come\c car\'a com a respectiva senten\c ca \emph{na parte inferior} da prova, as quais n\~ao ter\~ao premissas.
 
 \problempart
-Use as estrat\'egias para encontrar provas para cada um dos seguintes argumentos e senten\c cas:
+Use as estrat\'egias para encontrar provas para cada um dos sete seguintes argumentos e senten\c cas:
 \begin{earg}
 \item $\enot\enot A \eif A$
 \item $\enot A \eif \enot B \therefore B \eif A$
@@ -1236,7 +1243,7 @@ Todos exigir\~ao a estrat\'egia de IP. Os \'ultimos tr\^es especialmente s\~ao b
 %%%%%%------------------------   CAPITULO  28  -   Regras adicionais da LVF    --------------------- 
 
 \chapter{Regras adicionais da LVF}\label{s:Further}
-No Cap\'itulo \ref{s:BasicTFL}, introduzimos as regras b\'asicas de nosso sistema de provas para a LVF e nesta se\c c\~ao, apresentaremos algumas regras adicionais a esse sistema.  Veremos que em  nosso sistema de prova estendido \'e um pouco mais f\'acil de trabalhar.  No entanto, veremos, no Cap\'itulo \ref{s:Derived} que essas regras adicionais n\~ao s\~ao, estritamente falando,\emph{necess\'arias}.
+No Cap\'itulo \ref{s:BasicTFL}, introduzimos as regras b\'asicas de nosso sistema de provas para a LVF e nesta se\c c\~ao, apresentaremos algumas regras adicionais a esse sistema.  Veremos que em  nosso sistema de provas estendido \'e um pouco mais f\'acil de trabalhar.  No entanto, veremos, no Cap\'itulo \ref{s:Derived} que essas regras adicionais n\~ao s\~ao, estritamente falando, \emph{necess\'arias}.
 
 % \section{Reiteration}
 % The first additional rule is \emph{reiteration} (R). This just allows us to repeat ourselves:
@@ -1267,7 +1274,7 @@ Vejamos uma forma de argumento muito natural.
 	\begin{quote}
 		Maria est\'a em Natal ou em Lisboa. Ela n\~ao est\'a em Lisboa. Portanto, ela est\'a em Natal.
 	\end{quote}
-Isso \'e chamado  \emph{silogismo disjuntivo}. N\'os o adicionamos ao nosso sistema de prova da seguinte maneira:
+Isso \'e chamado  \emph{silogismo disjuntivo}. N\'os o adicionamos ao nosso sistema de provas da seguinte maneira:
 \factoidbox{\begin{fitchproof}
 	\have[m]{ab}{\meta{A} \eor \meta{B}}
 	\have[n]{nb}{\enot \meta{A}}
@@ -1386,7 +1393,7 @@ E a quarta regra de De~Morgan \'e o inverso da terceira:
 	\have[m]{ab}{\enot \meta{A} \eand \enot \meta{B}}
 	\have[\ ]{dm}{\enot (\meta{A} \eor \meta{B})}\dem{ab}
 \end{fitchproof}}
-\emph{Essas s\~ao todas as regras adicionais do nosso sistema de prova para a  LVF.}
+\emph{Essas s\~ao todas as regras adicionais do nosso sistema de provas para a  LVF.}
 
  %%%%%% -------------------------CAP 28  - EXERCICIOS   ------------------------------------------------ 
 \practiceproblems
@@ -1395,8 +1402,8 @@ E a quarta regra de De~Morgan \'e o inverso da terceira:
 \label{pr.justifyTFLproof}
 As provas a seguir est\~ao sem cita\c c\~oes (n\'umeros de regra e linha). Adicione-os sempre que necess\'ario:
 
-\begin{earg}
-\item 
+\begin{itemize}
+\item[1.] 
 	\begin{fitchproof}
 \hypo{1}{W \eif \enot B}
 \hypo{2}{A \eand W}
@@ -1406,7 +1413,11 @@ As provas a seguir est\~ao sem cita\c c\~oes (n\'umeros de regra e linha). Adici
 \have{5}{J \eand K} {}
 \have{6}{K}{}
 \end{fitchproof}
-\item\begin{fitchproof}
+
+\item[]
+
+\item[2.]
+\begin{fitchproof}
 \hypo{1}{L \eiff \enot O}
 \hypo{2}{L \eor \enot O}
 \open
@@ -1418,7 +1429,11 @@ As provas a seguir est\~ao sem cita\c c\~oes (n\'umeros de regra e linha). Adici
 \have{3b}{\enot\enot L}{}
 \have{3}{L}{}
 \end{fitchproof}
-\item\begin{fitchproof}
+
+\item[]
+
+\item[3.]
+\begin{fitchproof}
 \hypo{1}{Z \eif (C \eand \enot N)}
 \hypo{2}{\enot Z \eif (N \eand \enot C)}
 \open
@@ -1440,10 +1455,10 @@ As provas a seguir est\~ao sem cita\c c\~oes (n\'umeros de regra e linha). Adici
 \have{3b}{\enot\enot(N \eor C)}{}
 \have{3}{N \eor C}{}
 \end{fitchproof}
-\end{earg}
+\end{itemize}
 
 \problempart 
-D\^e uma prova para cada um desses argumentos:
+Faça uma prova para cada um dos quatro argumentos seguintes:
 \begin{earg}
 \item $E\eor F$, $F\eor G$, $\enot F \therefore E \eand G$
 \item $M\eor(N\eif M) \therefore \enot M \eif \enot N$
@@ -1533,7 +1548,7 @@ consistente? & todas as provas poss\'iveis & uma prova\\
  %%%%%% ------------------------CAP  29  - EXERCICIOS   ------------------------------------------------ 
 \practiceproblems
 \problempart
-Mostre que cada uma das seguintes senten\c cas \'e um teorema:
+Mostre que cada uma das quatro seguintes senten\c cas \'e um teorema:
 \begin{earg}
 \item $O \eif O$
 \item $N \eor \enot N$
@@ -1542,7 +1557,7 @@ Mostre que cada uma das seguintes senten\c cas \'e um teorema:
 \end{earg}
 
 \problempart
-Forne\c ca provas para mostrar cada um dos seguintes argumentos:
+Forne\c ca provas para cada um dos quatro argumentos seguintes:
 \begin{earg}
 \item $C\eif(E\eand G), \enot C \eif G \proves G$
 \item $M \eand (\enot N \eif \enot M) \proves (N \eand M) \eor \enot M$
@@ -1551,7 +1566,7 @@ Forne\c ca provas para mostrar cada um dos seguintes argumentos:
 \end{earg}
 
 \problempart
-Mostre que cada um dos seguintes pares de senten\c cas \'e dedutivamente equivalente:
+Mostre que as sentenças de cada um dos seguintes seis pares são dedutivamente equivalentes:
 \begin{earg}
 \item $R \eiff E$, $E \eiff R$
 \item $G$, $\enot\enot\enot\enot G$
@@ -1571,7 +1586,7 @@ Mostre que cada um dos seguintes pares de senten\c cas \'e dedutivamente equival
 %%%%%% --------------------------  CAP  30  -   Regras derivadas--------------------------------------
 
 \chapter{Regras derivadas}\label{s:Derived}
-Nesta se\c c\~ao, veremos por que introduzimos as regras do nosso sistema de prova em dois lotes separados. Em particular, queremos mostrar que as regras adicionais do cap\'itulo \ref{s:Further} n\~ao s\~ao estritamente necess\'arias, mas podem ser derivadas das regras b\'asicas aprestadas no cap\'itulo \ref{s:BasicTFL}. 
+Nesta se\c c\~ao, veremos por que introduzimos as regras do nosso sistema de provas em dois lotes separados. Em particular, queremos mostrar que as regras adicionais do Capítulo \ref{s:Further} n\~ao s\~ao estritamente necess\'arias, mas podem ser derivadas das regras b\'asicas aprestadas no Capítulo \ref{s:BasicTFL}. 
 
 %%%%%% ———— -- - - - - -  -  —  30.1  Derivcao de reiteracao  - ---- - - - -  ---- 
 \section{Deriva\c c\~ao da Reitera\c c\~ao}
@@ -1579,7 +1594,7 @@ Para ilustrar o que significa derivar uma   \emph{regra} de outras regras, prime
 \begin{fitchproof}
 	\have[m]{a}{\meta{A}}
 \end{fitchproof}
-Agora voc\^e deseja repeti-la em alguma linha~$k$. Voc\^e poderia simplesmente invocar a regra~R. Mas igualmente bem, voc\^e pode fazer isso com outras regras b\'asicas do cap\'itulo \ref{s:BasicTFL}:
+Agora voc\^e deseja repeti-la em alguma linha~$k$. Voc\^e poderia simplesmente invocar a regra~R. Mas igualmente bem, voc\^e pode fazer isso com outras regras b\'asicas do Capítulo \ref{s:BasicTFL}:
 \begin{fitchproof}
 	\have[m]{a}{\meta{A}}
 	\have[k]{aa}{\meta{A} \eand \meta{A}}\ai{a, a}
@@ -1587,9 +1602,9 @@ Agora voc\^e deseja repeti-la em alguma linha~$k$. Voc\^e poderia simplesmente i
 \end{fitchproof}
 
 
-Para ser claro: isso n\~ao \'e uma prova, mas um \emph{esquema} de prova. Afinal, foi usada  uma vari\'avel, `$\meta{A}$',  em vez de uma senten\c ca da LVF, entretanto o ponto \'e simples: quaisquer que sejam as senten\c cas da LVF que atribu\'imos \`a `$\meta{A}$', e quaisquer que sejam as linhas em que estiv\'essemos trabalhando, poder\'iamos produzir uma  prova genu\'ina. Assim, voc\^e pode pensar nisso como uma receita para produzir provas.
+Para ser claro: isso n\~ao \'e uma prova, mas um \emph{esquema} de prova. Afinal, foi usada  uma vari\'avel, `$\meta{A}$', da metalinguagem  em vez de uma senten\c ca da LVF, entretanto o ponto \'e simples: quaisquer que sejam as senten\c cas da LVF que atribu\'imos \`a $\meta{A}$, e quaisquer que sejam as linhas em que estiv\'essemos trabalhando, poder\'iamos produzir uma  prova genu\'ina. Assim, voc\^e pode pensar nisso como uma receita para produzir provas.
 
-De fato, \'e uma receita que nos mostra o seguinte: qualquer coisa que possamos provar usando a regra R, podemos provar (com mais uma linha) usando apenas as regras b\'asicas do cap\'itulo \ref{s:BasicTFL} sem R. \'E isso que significa dizer que a regra R pode ser derivada de outras regras b\'asicas: qualquer coisa que possa ser justificada usando R pode ser justificada usando apenas as outras regras b\'asicas.
+De fato, \'e uma receita que nos mostra o seguinte: qualquer coisa que possamos provar usando a regra R, podemos provar (com mais uma linha) usando apenas as regras b\'asicas do Capítulo \ref{s:BasicTFL} sem R. \'E isso que significa dizer que a regra R pode ser derivada de outras regras b\'asicas: qualquer coisa que possa ser justificada usando R pode ser justificada usando apenas as outras regras b\'asicas.
 
 %%%%%% ——— - - - ——-------------——  30.2  Derivacao de silogismo disjuntivo  -------
 \section{Deriva\c c\~ao do Silogismo Disjuntivo}
@@ -1598,7 +1613,7 @@ Suponha que voc\^e esteja em uma prova e tenha algo desta forma:
 	\have[m]{ab}{\meta{A}\eor\meta{B}}
 	\have[n]{na}{\enot \meta{A}}
 \end{fitchproof}
-Agora voc\^e deseja, na linha~$k$, provar $\meta{B}$. Voc\^e pode fazer isso com a regra DS, introduzida no cap\'itulo \ref{s:Further}, mas igualmente, voc\^e pode fazer isso com as regras  \emph{b\'asicas} do cap\'itulo \ref{s:BasicTFL}:
+Agora voc\^e deseja, na linha~$k$, provar $\meta{B}$. Voc\^e pode fazer isso com a regra DS, introduzida no Capítulo \ref{s:Further}, mas igualmente, voc\^e pode fazer isso com as regras  \emph{b\'asicas} do Capítulo \ref{s:BasicTFL}:
  
 
 	\begin{fitchproof}
@@ -1624,7 +1639,7 @@ Suponha que voc\^e tenha o seguinte em sua prova:
 	\have[m]{ab}{\meta{A}\eif\meta{B}}
 	\have[n]{a}{\enot\meta{B}}
 \end{fitchproof}
-Agora voc\^e deseja, na linha~$k$, provar $\enot \meta{A}$. Voc\^e pode fazer isso com a regra  MT, introduzida no cap\'itulo \ref{s:Further}.  Igualmente aqui, voc\^e pode fazer isso com as regras  \emph{b\'asicas} do cap\'itulo \ref{s:BasicTFL}:
+Agora voc\^e deseja, na linha~$k$, provar $\enot \meta{A}$. Voc\^e pode fazer isso com a regra  MT, introduzida no Capítulo \ref{s:Further}.  Igualmente aqui, voc\^e pode fazer isso com as regras  \emph{b\'asicas} do Capítulo \ref{s:BasicTFL}:
  
 \begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eif\meta{B}}
@@ -1636,7 +1651,7 @@ Agora voc\^e deseja, na linha~$k$, provar $\enot \meta{A}$. Voc\^e pode fazer is
 		\close
 	\have{no}{\enot\meta{A}}\ni{a-nb1}
 \end{fitchproof}
-Novamente, a regra  MT pode ser derivada das regras  \emph{b\'asicas} do cap\'itulo \ref{s:BasicTFL}.
+Novamente, a regra  MT pode ser derivada das regras  \emph{b\'asicas} do Capítulo \ref{s:BasicTFL}.
 
 %%%%%% ——— - - - ——  30.4  Derivacao da Eliminacao da dupla negacao
 
@@ -1650,7 +1665,7 @@ Considere o seguinte esquema de dedu\c c\~ao:
 	\close
 	\have{con}{\meta{A}}\ip{a-a1}
 \end{fitchproof}
-Aqui tamb\'em podemos derivar a regra DNE das regras \emph{b\'asicas} do cap\'itulo \ref{s:BasicTFL}.
+Aqui tamb\'em podemos derivar a regra DNE das regras \emph{b\'asicas} do Capítulo \ref{s:BasicTFL}.
 
 %%%%%% ——— - - - ——  30.5   Derivacao do terceiro excluido  ----------------------
 \section{Deriva\c c\~ao do terceiro exclu\'ido}
@@ -1666,7 +1681,7 @@ Suponha que voc\^e queira provar algo usando a regra LEM, ou seja, voc\^e tem em
   \have[l]{bbb}{\meta{B}}
   \close
 \end{fitchproof}
-Agora voc\^e deseja, na linha~$l+1$, provar $\meta{B}$. A regra LEM do cap\'itulo \ref{s:Further} permitiria que voc\^e fizesse isso. Mas, voc\^e pode obter $\meta{B}$ usando apenas as regras  \emph{b\'asicas} do Cap\'itulo \ref{s:BasicTFL}.
+Agora voc\^e deseja, na linha~$l+1$, provar $\meta{B}$. A regra LEM do Capítulo \ref{s:Further} permitiria que voc\^e fizesse isso. Mas, voc\^e pode obter $\meta{B}$ usando apenas as regras  \emph{b\'asicas} do Cap\'itulo \ref{s:BasicTFL}.
 
 Uma op\c c\~ao \'e primeiro provar  $\meta{A} \eor \enot\meta{A}$, e depois aplicar a regra $\eor$E, ou seja, provar por casos:
 \begin{fitchproof}
@@ -1707,7 +1722,7 @@ Aqui est\'a outra maneira que \'e um pouco mais complicada do que as anteriores.
   \close
   \have{B}{\meta{B}}\ip{nb-(bot)}
 \end{fitchproof}
-Observe que, como adicionamos uma suposi\c c\~ao na parte superior e conclus\~oes adicionais dentro das subprovas, os n\'umeros das linhas mudam. Voc\^e pode ter que aceitar isso por enquanto at\'e entender o que est\'a acontecendo.
+Observe que, como adicionamos uma suposi\c c\~ao na parte superior e conclus\~oes adicionais dentro das subprovas, os n\'umeros das linhas mudam. Voc\^e pode aceitar isso por enquanto at\'e entender o que est\'a acontecendo.
 
 %%%%%% ——— - - - ——  30.6  Derivacao das regras de De Morgan ___________
 \section{Deriva\c c\~ao das regras de De Morgan}
@@ -1762,7 +1777,7 @@ Forne\c ca esquemas de prova que justifiquem a adi\c c\~ao da terceira e quarta 
 \
 
 \problempart
-As provas que voc\^e ofereceu em resposta aos exerc\'icios dos cap\'itulos  \ref{s:Further} e \ref{s:ProofTheoreticConcepts} usavam regras derivadas. Substitua o uso de regras derivadas, nessas provas, por apenas regras b\'asicas. Voc\^e encontrar\'a algumas `repeti\c c\~oes' nas provas resultantes; nesses casos, apresentar uma prova simplificada usando apenas regras b\'asicas. (Isso lhe dar\'a uma id\'eia, do poder das regras derivadas e de como todas as regras interagem.)
+As provas que voc\^e ofereceu em resposta aos exerc\'icios dos Capítulos  \ref{s:Further} e \ref{s:ProofTheoreticConcepts} usavam regras derivadas. Substitua o uso de regras derivadas, nessas provas, por apenas regras b\'asicas. Voc\^e encontrar\'a algumas `repeti\c c\~oes' nas provas resultantes; nesses casos, apresentar uma prova simplificada usando apenas regras b\'asicas. (Isso lhe dar\'a uma id\'eia, do poder das regras derivadas e de como todas as regras interagem.)
 
 \
 
@@ -1793,14 +1808,14 @@ D\^e uma prova da primeira regra de De Morgan, mas usando apenas as regras b\'as
 \chapter{Corre\c c\~ao e completude}
 \label{sec:soundness_and_completeness}
 
-No cap\'itulo \ref{s:ProofTheoreticConcepts}, vimos que poder\'iamos usar deriva\c c\~oes para testar os mesmos conceitos testados antes com tabelas de verdade. Poder\'iamos, al\'em de usar deriva\c c\~oes para provar que um argumento \'e v\'alido, tamb\'em poder\'iamos us\'a-las para testar se uma senten\c ca \'e uma tautologia ou se um par de senten\c cas \'e equivalente. Tamb\'em come\c camos a usar o roleta \'unica da mesma maneira que usamos a roleta  dupla.  Se pud\'essemos provar que \meta{A} era uma tautologia com uma tabela de verdade,  escrever\'iamos  $\entails \meta{A}$, e se pud\'essemos prov\'a-la usando uma deriva\c c\~ao, escrever\'iamos $\proves \meta{A}.$ 
+No Capítulo \ref{s:ProofTheoreticConcepts}, vimos que poder\'iamos usar deriva\c c\~oes para testar os mesmos conceitos testados antes com tabelas de verdade. Poder\'iamos, al\'em de usar deriva\c c\~oes para provar que um argumento \'e v\'alido, tamb\'em poder\'iamos us\'a-las para testar se uma senten\c ca \'e uma tautologia ou se um par de senten\c cas \'e equivalente. Tamb\'em come\c camos a usar o roleta \'unica da mesma maneira que usamos a roleta  dupla.  Se pud\'essemos provar que \meta{A} era uma tautologia com uma tabela de verdade,  escrever\'iamos  $\entails \meta{A}$, e se pud\'essemos prov\'a-la usando uma deriva\c c\~ao, escrever\'iamos $\proves \meta{A}.$ 
 
 Voc\^e pode ter se perguntado naquele momento se os dois tipos de roletas sempre funcionavam da mesma maneira. Se voc\^e pode mostrar que \meta{A} \'e uma tautologia usando tabelas de verdade, tamb\'em pode sempre mostrar que \'e um teorema usando uma deriva\c c\~ao? O inverso \'e verdadeiro? Essas coisas tamb\'em s\~ao verdadeiras para argumentos v\'alidos e pares de senten\c cas equivalentes? Como se v\^e, a resposta para todas essas perguntas e muitas outras como essas \'e sim. Podemos mostrar isso definindo todos esses conceitos separadamente e depois provar que eles s\~ao equivalentes.  Isto \'e, imaginamos que realmente temos duas no\c c\~oes de validade, validade$_{\entails}$ e validade$_{\proves}$ e, em seguida, mostramos que os dois conceitos sempre funcionam da mesma maneira.
 
 
-Para come\c car, precisamos definir todos os nossos conceitos l\'ogicos separadamente para tabelas de verdade e  para deriva\c c\~oes. Muito deste trabalho j\'a foi feito.  Manuseamos com todas as defini\c c\~oes de tabela de verdade no cap\'itulo \ref{s:SemanticConcepts}. Tamb\'em j\'a fornecemos defini\c c\~oes sint\'aticas para tautologias (teoremas) e pares de senten\c cas logicamente equivalentes. As outras defini\c c\~oes seguem naturalmente. Para a maioria das propriedades l\'ogicas, podemos test\'a-las usando deriva\c c\~oes, e aquelas que n\~ao podemos testar diretamente podem ser definidas em termos dos conceitos que podemos definir.
+Para come\c car, precisamos definir todos os nossos conceitos l\'ogicos separadamente para tabelas de verdade e  para deriva\c c\~oes. Muito deste trabalho j\'a foi feito.  Manuseamos com todas as defini\c c\~oes de tabela de verdade no Capítulo \ref{s:SemanticConcepts}. Tamb\'em j\'a fornecemos defini\c c\~oes sint\'aticas para tautologias (teoremas) e pares de senten\c cas logicamente equivalentes. As outras defini\c c\~oes seguem naturalmente. Para a maioria das propriedades l\'ogicas, podemos test\'a-las usando deriva\c c\~oes, e aquelas que n\~ao podemos testar diretamente podem ser definidas em termos dos conceitos que podemos definir.
 
-Por exemplo, definimos um teorema como uma senten\c ca que pode ser derivada sem quaisquer premissas (p.~\pageref{def:syntactic_tautology_in_sl}). Como a nega\c c\~ao de uma contradi\c c\~ao \'e uma tautologia, podemos definir uma \define{CONTRADI\c C\~AO SINT\'ATICA NA LVF} \label{def:syntactic_contradiction_in_sl} como uma senten\c ca cuja nega\c c\~ao pode ser derivada sem quaisquer premissas. A defini\c c\~ao sint\'atica de uma senten\c ca contingente \'e um pouco diferente. N\~ao temos nenhum m\'etodo pr\'atico e finito para provar que uma senten\c ca \'e contingente usando deriva\c c\~oes, da mesma maneira que fizemos usando tabelas de verdade. Portanto, precisamos nos contentar em definir "senten\c ca contingente" negativamente. Uma senten\c ca \'e \define{{SINTATICAMENTE CONTINGENTE NA LVF}} \label{def:syntactically_contingent_in_sl} se ela  n\~ao for um teorema ou uma contradi\c c\~ao. 
+Por exemplo, definimos um teorema como uma senten\c ca que pode ser derivada sem quaisquer premissas (p.~\pageref{def:syntactic_tautology_in_sl}). Como a nega\c c\~ao de uma contradi\c c\~ao \'e uma tautologia, podemos definir uma \define{CONTRADI\c C\~AO SINT\'ATICA NA LVF} \label{def:syntactic_contradiction_in_sl} como uma senten\c ca cuja nega\c c\~ao pode ser derivada sem quaisquer premissas. A defini\c c\~ao sint\'atica de uma senten\c ca contingente \'e um pouco diferente. N\~ao temos nenhum m\'etodo pr\'atico e finito para provar que uma senten\c ca \'e contingente usando deriva\c c\~oes, da mesma maneira que fizemos usando tabelas de verdade. Portanto, precisamos nos contentar em definir ``senten\c ca contingente'' negativamente. Uma senten\c ca \'e \define{{SINTATICAMENTE CONTINGENTE NA LVF}} \label{def:syntactically_contingent_in_sl} se ela  n\~ao for um teorema ou uma contradi\c c\~ao. 
  
 
 Um  conjunto de senten\c cas \'e \define{DEDUTIVAMENTE INCONSISTENTE NA LVF} \label{def:syntactically_inconsistent_ in_sl}  se e somente se pode-se derivar uma contradi\c c\~ao dele. A consist\^encia, por outro lado, \'e como conting\^encia na medida em que n\~ao temos um m\'etodo finito pr\'atico para test\'a-la diretamente. Ent\~ao, novamente, temos que definir um termo negativamente. Um  conjunto de senten\c cas \'e \define{DEDUTIVAMENTE CONSISTENTE NA LVF} \label{def:syntactically consistent in SL} se e somente se ele n\~ao for dedutivamente inconsistente.
@@ -1842,23 +1857,23 @@ name=correcao,
 description={A property held by logical systems if and only if $\proves $ implies $\entails $}
 }
 
-Mostrar que $\proves $ implica  $\entails $  \'e  o problema da \define{\gls{correcao}}. \label{def:soundness} Um sistema de prova \'e  \define{CORRETO} se n\~ao houver deriva\c c\~oes de argumentos que possam ser mostrados inv\'alidos pelas tabelas de verdade. 
+Mostrar que $\proves $ implica  $\entails $  \'e  o problema da \define{\gls{correcao}}. \label{def:soundness} Um sistema de provas \'e  \define{CORRETO} se n\~ao houver deriva\c c\~oes de argumentos que possam ser mostrados inv\'alidos pelas tabelas de verdade. 
  \label{def_Soundness} 
 
-Demonstrar que o sistema de prova \'e correto exigiria mostrar que  \emph{qualquer} prova poss\'ivel \'e a prova de um argumento v\'alido. N\~ao seria suficiente ter sucesso ao tentar provar muitos argumentos v\'alidos e falhar ao tentar provar argumentos inv\'alidos.
+Demonstrar que o sistema de provas \'e correto exigiria mostrar que  \emph{qualquer} prova poss\'ivel \'e a prova de um argumento v\'alido. N\~ao seria suficiente ter sucesso ao tentar provar muitos argumentos v\'alidos e falhar ao tentar provar argumentos inv\'alidos.
 
 A prova que iremos esbo\c car depende do fato de que inicialmente definimos uma senten\c ca da LVF usando uma defini\c c\~ao indutiva (ver p.~\pageref{TFLsentences}). Tamb\'em poder\'iamos ter usado defini\c c\~oes indutivas para definir uma prova na LVF e uma tabela de verdade \nix{Later this will be a truth assignment}(mas n\~ao o fizemos.)  Se tiv\'essemos essas defini\c c\~oes, poder\'iamos usar uma \emph{prova indutiva} para mostrar a corre\c c\~ao da LVF. Uma prova indutiva funciona da mesma maneira que uma defini\c c\~ao indutiva. Com a defini\c c\~ao indutiva, identificamos um grupo de elementos b\'asicos que foram estipulados como exemplos da coisa que est\'avamos tentando definir. No caso de uma senten\c ca da LVF, a classe base foi o conjunto de letras sentenciais $A$, $B$, $C$, \dots. 
 
-Apenas anunciamos que existiam essas senten\c cas. O segundo passo de uma defini\c c\~ao indutiva \'e dizer que qualquer coisa constru\'ida a partir da sua classe base usando certas regras tamb\'em conta como um exemplo do que voc\^e est\'a definindo. No caso da defini\c c\~ao de uma senten\c ca, as regras correspondiam aos cinco conectivos sentenciais (ver  p.~\pageref{TFLsentences}).Uma vez  estabelecida uma defini\c c\~ao indutiva, voc\^e pode us\'a-la para mostrar que todos os membros da classe que voc\^e definiu possuem uma determinada propriedade. Voc\^e simplesmente prova que a propriedade \'e verdadeira para os membros da classe base e depois prova que as regras para estender a classe base n\~ao alteram a propriedade. Isto \'e o que significa dar uma prova indutiva.
+Apenas anunciamos que existiam essas senten\c cas. O segundo passo de uma defini\c c\~ao indutiva \'e dizer que qualquer coisa constru\'ida a partir da sua classe base usando certas regras tamb\'em conta como um exemplo do que voc\^e est\'a definindo. No caso da defini\c c\~ao de uma senten\c ca, as regras correspondiam aos cinco conectivos sentenciais (ver  p.~\pageref{TFLsentences}). Uma vez  estabelecida uma defini\c c\~ao indutiva, voc\^e pode us\'a-la para mostrar que todos os membros da classe que voc\^e definiu possuem uma determinada propriedade. Voc\^e simplesmente prova que a propriedade \'e verdadeira para os membros da classe base e depois prova que as regras para estender a classe base n\~ao alteram a propriedade. Isto \'e o que significa dar uma prova indutiva.
  
  Mesmo que n\~ao tenhamos uma defini\c c\~ao indutiva de prova na LVF, podemos esbo\c car como seria uma prova indutiva da corre\c c\~ao da LVF. Imagine uma classe base de provas de uma linha, uma para cada uma das nossas onze regras de infer\^encia. Os membros dessa classe seriam da forma $\meta{A}, \meta{B} \proves  \meta{A} \eand \meta{B}$; $\meta{A} \eand \meta{B} \proves \meta{A}$; $\meta{A} \eor \meta{B}, \enot\meta{A} \proves  \meta{B}$ \ldots{} etc. Como algumas regras t\^em duas formas diferentes, ter\'iamos que adicionar alguns membros a essa classe base, por exemplo $\meta{A} \eand \meta{B} \proves  \meta{B}$.  Observe que essas s\~ao todas declara\c c\~oes na metalinguagem. A prova  que a LVF \'e correta n\~ao faz parte da LVF, porque a LVF n\~ao tem o poder de falar sobre si mesma.
 
 Voc\^e pode usar as tabelas de verdade para mostrar que cada uma dessas provas de uma linha  nesta classe base \'e v\'alida$_{\entails}$. Por exemplo, a prova de $\meta{A}, \meta{B} \proves \meta{A} \eand \meta{B}$ corresponde a uma tabela de verdade que mostra, $\meta{A}, \meta{B} \entails  \meta{A} \eand \meta{B}$. Isso estabelece a primeira parte de nossa prova indutiva.  
 
-O pr\'oximo passo \'e mostrar que a adi\c c\~ao de linhas em qualquer prova nunca transformar\'a uma prova v\'alida$_{\entails}$ em uma inv\'alida$_{\entails}$. Precisar\'iamos fazer isso para cada uma das nossas onze regras b\'asicas de infer\^encia. Assim, por exemplo, para  \eand{I} precisamos mostrar que, para qualquer prova $\meta{A}_{1}$, \dots, $\meta{A}_{n} \proves  \meta {B}$ adicionando uma linha onde usamos a  regra \eand{I} para inferir $\meta{C} \eand \meta{D}$, onde $\meta{C} \eand \meta{D}$ pode ser legitimamente derivada de $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta{B}$,  n\~ao transformaria uma prova v\'alida em uma prova inv\'alida. Mas aten\c c\~ao, se podemos derivar legitimamente $\meta{C} \eand \meta{D}$ dessas premissas, ent\~ao $\meta{C}$ e $\meta{D}$  j\'a estavam dispon\'iveis na prova. Elas j\'a estavam entre $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta {B}$, ou foram legitimamente derivadas delas.  Assim sendo, qualquer linha da tabela  de verdade na qual as premissas s\~ao verdadeiras deve ser uma linha da tabela de verdade na qual \meta{C} e \meta{D} s\~ao verdadeiras. De acordo com a tabela de verdade caracter\'istica de \eand, isso significa que $\meta{C} \eand \meta{D}$ tamb\'em \'e verdadeira nessa linha. Portanto,  $\meta{C} \eand \meta{D}$ segue validamente a partir das premissas. Isso significa que o uso da regra {\eand}E rule para estender uma prova v\'alida produz outra prova v\'alida.
+O pr\'oximo passo \'e mostrar que a adi\c c\~ao de linhas em qualquer prova nunca transformar\'a uma prova v\'alida$_{\entails}$ em uma inv\'alida$_{\entails}$. Precisar\'iamos fazer isso para cada uma das nossas onze regras b\'asicas de infer\^encia. Assim, por exemplo, para  \eand{I} precisamos mostrar que, para qualquer prova $\meta{A}_{1}$, \dots, $\meta{A}_{n} \proves  \meta {B}$ adicionando uma linha onde usamos a  regra \eand{I} para deduzir $\meta{C} \eand \meta{D}$, onde $\meta{C} \eand \meta{D}$ pode ser legitimamente derivada de $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta{B}$,  n\~ao transformaria uma prova v\'alida em uma prova inv\'alida. Mas aten\c c\~ao, se podemos derivar legitimamente $\meta{C} \eand \meta{D}$ dessas premissas, ent\~ao $\meta{C}$ e $\meta{D}$  j\'a estavam dispon\'iveis na prova. Elas j\'a estavam entre $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta {B}$, ou foram legitimamente derivadas delas.  Assim sendo, qualquer linha da tabela  de verdade na qual as premissas s\~ao verdadeiras deve ser uma linha da tabela de verdade na qual \meta{C} e \meta{D} s\~ao verdadeiras. De acordo com a tabela de verdade caracter\'istica de \eand, isso significa que $\meta{C} \eand \meta{D}$ tamb\'em \'e verdadeira nessa linha. Portanto,  $\meta{C} \eand \meta{D}$ segue validamente a partir das premissas. Isso significa que o uso da regra {\eand}E rule para estender uma prova v\'alida produz outra prova v\'alida.
 
 
-Para mostrar que o sistema de prova \'e coreto, precisar\'iamos mostrar isso para as outras regras de infer\^encia. Como as regras derivadas s\~ao consequ\^encias das regras b\'asicas, seria suficiente fornecer argumentos semelhantes para as 11 outras regras b\'asicas. Este exerc\'icio tedioso est\'a al\'em do escopo deste livro.
+Para mostrar que o sistema de provas \'e coreto, precisar\'iamos mostrar isso para as outras regras de infer\^encia. Como as regras derivadas s\~ao consequ\^encias das regras b\'asicas, seria suficiente fornecer argumentos semelhantes para as 11 outras regras b\'asicas. Este exerc\'icio tedioso est\'a al\'em do escopo deste livro.
 
 
 Assim, mostramos que $\meta{A} \proves  \meta{B}$ implica $\meta{A} \entails \meta{B}.$ A outra dire\c c\~ao seria pensar que \emph{todo} argumento que pode ser mostrado v\'alido usando tabelas de verdade tamb\'em pode ser mostrado usando uma deriva\c c\~ao.
@@ -1869,10 +1884,10 @@ name=completude,
 description={A property held by logical systems if and only if $\entails $ implies $\proves $}
 }
 
-Esse \'e o problema da completude. Um sistema de prova tem a propriedade da   \define{\gls{completude}} \label{def:completeness} se e somente se houver uma deriva\c c\~ao de todo argumento semanticamente v\'alido. Provar que um sistema \'e completo \'e geralmente mais dif\'icil do que provar que \'e correto. Provar que um sistema \'e correto significa mostrar que todas as regras do seu sistema de prova funcionam da maneira como deveriam.
-Mostrar que um sistema \'e completo significa mostrar que voc\^e incluiu \emph{todas} as regras necess\'arias e que n\~ao deixou nada de fora. Mostrar isso est\'a al\'em do escopo deste livro. O ponto importante \'e que, felizmente, o sistema de prova da LVF \'e coreto e completo. Este n\~ao \'e o caso de todos os sistemas de prova ou todas as linguagens formais. Por ser o caso da LVF, podemos optar por fornecer provas ou fornecer tabelas de verdade, o que for mais f\'acil para a tarefa em quest\~ao.
+Esse \'e o problema da completude. Um sistema de provas tem a propriedade da   \define{\gls{completude}} \label{def:completeness} se e somente se houver uma deriva\c c\~ao de todo argumento semanticamente v\'alido. Provar que um sistema \'e completo \'e geralmente mais dif\'icil do que provar que \'e correto. Provar que um sistema \'e correto significa mostrar que todas as regras do seu sistema de provas funcionam da maneira como deveriam.
+Mostrar que um sistema \'e completo significa mostrar que voc\^e incluiu \emph{todas} as regras necess\'arias e que n\~ao deixou nada de fora. Mostrar isso est\'a al\'em do escopo deste livro. O ponto importante \'e que, felizmente, o sistema de provas da LVF \'e coreto e completo. Este n\~ao \'e o caso de todos os sistemas de prova ou todas as linguagens formais. Por ser o caso da LVF, podemos optar por fornecer provas ou fornecer tabelas de verdade, o que for mais f\'acil para a tarefa em quest\~ao.
 
-Agora que sabemos que o m\'etodo da tabela de verdade \'e intercambi\'avel com o m\'etodo de deriva\c c\~oes, voc\^e pode escolher qual m\'etodo deseja usar para qualquer problema. Os alunos geralmente preferem usar tabelas de verdade, porque elas podem ser produzidas apenas mecanicamente, e isso parece 'mais f\'acil'. No entanto, j\'a vimos que as tabelas de verdade se tornam impossivelmente grandes com um pouco mais de letras sentenciais.
+Agora que sabemos que o m\'etodo da tabela de verdade \'e intercambi\'avel com o m\'etodo de deriva\c c\~oes, voc\^e pode escolher qual m\'etodo deseja usar para qualquer problema. Os alunos geralmente preferem usar tabelas de verdade, porque elas podem ser produzidas apenas mecanicamente, e isso parece ``mais f\'acil''. No entanto, j\'a vimos que as tabelas de verdade se tornam impossivelmente grandes com um pouco mais de letras sentenciais.
 Por outro lado, existem algumas situa\c c\~oes em que o uso de provas simplesmente n\~ao \'e poss\'ivel. Definimos sintaticamente uma senten\c ca contingente como uma senten\c ca que n\~ao pode ser provada ser uma tautologia ou uma contradi\c c\~ao. N\~ao existe um modo pr\'atica de provar esse tipo de declara\c c\~ao negativa. Nunca saberemos se n\~ao existe alguma prova de que uma declara\c c\~ao \'e uma contradi\c c\~ao e ainda n\~ao a encontramos. N\~ao temos nada a fazer nessa situa\c c\~ao, se n\~ao recorrer a tabelas de verdade. Da mesma forma, podemos usar deriva\c c\~oes para provar que duas senten\c cas s\~ao equivalentes, mas e se quisermos provar que elas \emph{n\~ao} s\~ao equivalentes? N\~ao temos como provar que nunca encontraremos a prova relevante. Ent\~ao, temos que voltar \`as tabelas de verdade de novo.
 
 A tabela \ref{table.ProofOrModel} resume quando \'e melhor usar provas e quando \'e melhor usar tabelas de verdade. 
@@ -1896,7 +1911,7 @@ Validade				&  Derivar a conclus\~ao a partir das premissas & Encontrar uma linh
  %%%%%% ---------------------------CAP  31   EXECICIOS  -----------------------------------------------  
  
 \practiceproblems
-\noindent\problempart Em cada um dos casos abaixo, use uma  deriva\c c\~ao ou uma tabela de verdade para mostrar que: 
+\noindent\problempart Em cada um dos doze casos abaixo, use uma  deriva\c c\~ao ou uma tabela de verdade para mostrar que: 
 \begin{enumerate}%[label=(\arabic*)]
 \item  A senten\c ca $A \eif [((B \eand C) \eor D) \eif A]$  \'e um teorema.
 \item  A senten\c ca $A \eif (A \eif B)$  n\~ao \'e um teorema.
@@ -1914,9 +1929,9 @@ Validade				&  Derivar a conclus\~ao a partir das premissas & Encontrar uma linh
 \end{enumerate}
 
 
-\noindent\problempart Em cada um dos casos abaixo, use uma  deriva\c c\~ao ou uma tabela de verdade para mostrar que:
+\noindent\problempart Em cada um dos doze casos abaixo, use uma  deriva\c c\~ao ou uma tabela de verdade para mostrar que:
 \begin{enumerate}%[label=(\arabic*)]
-\item A senten\c ca $A \eif (B \eif A)$ \'e um teorema
+\item A senten\c ca $A \eif (B \eif A)$ \'e um teorema.
 \item A senten\c ca$\enot (((N \eiff Q) \eor Q) \eor N)$ n\~ao \'e um teorema.
 \item A senten\c ca $ Z \eor (\enot Z \eiff Z) $ \'e contingente.
 \item A senten\c ca $ (L \eiff ((N \eif N) \eif L)) \eor H $ n\~ao \'e contingente.

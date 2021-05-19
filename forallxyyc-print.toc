@@ -147,7 +147,7 @@
 \contentsline {chapter}{\chapternumberline {25}Infinitas interpreta\IeC {\c c}\IeC {\~o}es}{264}{chapter.25}
 \contentsline {section}{\numberline {25.1}Validades e contradi\IeC {\c c}\IeC {\~o}es}{264}{section.25.1}
 \contentsline {section}{\numberline {25.2}Outros casos}{267}{section.25.2}
-\contentsline {part}{\partnumberline {VI}Dedu\c c\~ao Natural para LVF}{270}{part.6}
+\contentsline {part}{\partnumberline {VI}Dedu\c c\~ao Natural para a LVF}{270}{part.6}
 \mbox {}\hrulefill \par 
 \contentsline {chapter}{\chapternumberline {26}A ideia de dedu\c c\~ao natural}{271}{chapter.26}
 \contentsline {chapter}{\chapternumberline {27}As regras b\'asicas da LVF}{274}{chapter.27}
@@ -163,7 +163,7 @@
 \contentsline {chapter}{\chapternumberline {28}Construindo provas}{304}{chapter.28}
 \contentsline {section}{\numberline {28.1}Trabalhando do fim para o come\c co para chegar onde queremos}{304}{section.28.1}
 \contentsline {section}{\numberline {28.2}Trabalhando do come\c co para o fim a partir do que voc\^e tem}{308}{section.28.2}
-\contentsline {section}{\numberline {28.3}Estrat\'egias }{310}{section.28.3}
+\contentsline {section}{\numberline {28.3}Estrat\'egias }{311}{section.28.3}
 \contentsline {section}{\numberline {28.4}Trabalhando do come\c co para o fim a partir de $\ensuremath {\bot }$}{317}{section.28.4}
 \contentsline {section}{\numberline {28.5}Seguindo indiretamente}{319}{section.28.5}
 \contentsline {section}{\numberline {28.6}Prova indireta do terceiro exclu\'ido}{320}{section.28.6}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  19 MAY 2021 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.21)  19 MAY 2021 15:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2105,14 +2105,14 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 \pgfnodepartfivebox=\box106
 ))))
 LaTeX Font Info:    Try loading font information for T1+Baskervaldx-TLF on inpu
-t line 23.
+t line 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/baskervaldx/T1Baskervaldx-TLF.fd
 File: T1Baskervaldx-TLF.fd 2014/03/31 (autoinst) Font definitions for T1/Basker
 valdx-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 23.
+(Font)              scaled to size 10.0pt on input line 37.
 
 
 ******************************************************
@@ -3239,14 +3239,14 @@ Using XMP template file: pdfx.xmp
 
 <<pdfx.xmpi>>)
 LaTeX Font Info:    Try loading font information for T1+Baskervaldx-TOsF on inp
-ut line 320.
+ut line 334.
 
 (/usr/share/texlive/texmf-dist/tex/latex/baskervaldx/T1Baskervaldx-TOsF.fd
 File: T1Baskervaldx-TOsF.fd 2014/03/31 (autoinst) Font definitions for T1/Baske
 rvaldx-TOsF.
 )
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 320.
+(Font)              scaled to size 10.0pt on input line 334.
 
 (./forallxyyc-print.aux (./forallx-yyc-frontmatter.aux)
 (./forallx-yyc-preface.aux) (./forallx-yyc-what.aux) (./forallx-yyc-tfl.aux)
@@ -3257,74 +3257,74 @@ LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
 (./forallx-yyc-quickreference.aux) (./forallx-yyc-backmatter.aux))
 \openout1 = `forallxyyc-print.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/zbvmi/m/it on input line 320.
-LaTeX Font Info:    Try loading font information for OML+zbvmi on input line 32
-0.
+LaTeX Font Info:    Checking defaults for OML/zbvmi/m/it on input line 334.
+LaTeX Font Info:    Try loading font information for OML+zbvmi on input line 33
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlzbvmi.fd
 File: omlzbvmi.fd 2014/04/06 Fontinst v1.933 font definitions for OML/zbvmi.
 )
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 320.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 320
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 334.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 334.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 334.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 334.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 334.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 334
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 320.
-LaTeX Font Info:    Try loading font information for LY1+ptm on input line 320.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 334.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 334.
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 334.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 320.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 320.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 334.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 334.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 320.
-LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 32
-0.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 334.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 33
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 320.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 334.
 LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 3
-20.
+34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 320.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 320.
-LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    ... okay on input line 334.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 334.
+LaTeX Font Info:    ... okay on input line 334.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 320.
+(Font)              scaled to size 10.95pt on input line 334.
 \AtBeginShipoutBox=\box107
 
 
 Package hyperref Warning: Draft mode on.
 
-Package hyperref Info: Link coloring ON on input line 320.
+Package hyperref Info: Link coloring OFF on input line 334.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -3335,10 +3335,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 320.
-LaTeX Info: Redefining \ref on input line 320.
-LaTeX Info: Redefining \pageref on input line 320.
-LaTeX Info: Redefining \nameref on input line 320.
+LaTeX Info: Redefining \nameref on input line 334.
+LaTeX Info: Redefining \ref on input line 334.
+LaTeX Info: Redefining \pageref on input line 334.
+LaTeX Info: Redefining \nameref on input line 334.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count315
@@ -3398,6 +3398,10 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 39.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 39.
  [1
 
 \openout4 = `forallxyyc-print.ist'.
@@ -3406,39 +3410,39 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 69.
+(Font)              scaled to size 10.95pt on input line 62.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 69.
+(Font)              scaled to size 8.0pt on input line 62.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.1pt on input line 69.
-LaTeX Font Info:    Try loading font information for U+msa on input line 69.
+(Font)              scaled to size 6.1pt on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 69.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 69.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 69.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2016/01/31 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 69.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 69.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
@@ -3446,16 +3450,18 @@ File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 ) [2
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 73.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 73.
+(Font)              scaled to size 10.95pt on input line 66.
  [3]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 112.
+(Font)              scaled to size 8.0pt on input line 105.
+LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 111.
 ) [4]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
 (Font)              scaled to size 48.0pt on input line 7.
@@ -3488,25 +3494,26 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 [7]
 \openout2 = `forallx-yyc-preface.aux'.
 
- (./forallx-yyc-preface.tex [8
+ (./forallx-yyc-preface.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8
 
 
 ]
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 38.
+(Font)              scaled to size 9.0pt on input line 39.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 38.
+(Font)              scaled to size 7.3pt on input line 39.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 38.
+(Font)              scaled to size 5.5pt on input line 39.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 38.
+(Font)              size <5> substituted on input line 39.
 
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 38.
+(Font)              scaled to size 7.3pt on input line 39.
 [9] [10] [11] [12]) [13] [14
 
 
@@ -3834,7 +3841,12 @@ Overfull \hbox (14.42256pt too wide) detected at line 32
 []
  []
 
-[272] [273]
+[272]
+
+LaTeX Warning: Reference `s:InfinitInterpret' on page 273 undefined on input li
+ne 38.
+
+[273]
 Underfull \vbox (badness 1137) has occurred while \output is active []
 
  [274
@@ -3873,38 +3885,34 @@ Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
 [307] [308]
+Underfull \vbox (badness 6157) has occurred while \output is active []
+
+
 Overfull \vbox (13.59999pt too high) has occurred while \output is active []
 
 
-[309]
-Underfull \vbox (badness 1127) has occurred while \output is active []
-
- [310]
-[311]
-Underfull \vbox (badness 7012) has occurred while \output is active []
-
- [312]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[309] [310] [311] [312]
+Underfull \vbox (badness 3343) has occurred while \output is active []
 
  [313]
 [314]
-Underfull \vbox (badness 4634) has occurred while \output is active []
+Underfull \vbox (badness 4556) has occurred while \output is active []
 
  [315]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [316]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 1068.
+(Font)              scaled to size 14.4pt on input line 1075.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 10.5pt on input line 1068.
+(Font)              scaled to size 10.5pt on input line 1075.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 7.9pt on input line 1068.
+(Font)              scaled to size 7.9pt on input line 1075.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [317]
-Underfull \vbox (badness 4353) has occurred while \output is active []
+Underfull \vbox (badness 4279) has occurred while \output is active []
 
  [318]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3931,7 +3939,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [331] [332
 
 ] [333]
-Overfull \hbox (32.86484pt too wide) in paragraph at lines 1521--1531
+Overfull \hbox (32.86484pt too wide) in paragraph at lines 1536--1546
  [] 
  []
 
@@ -3956,7 +3964,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TOsF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 1829.
+(Font)              scaled to size 10.0pt on input line 1844.
  [347] [348] [349] [350] [351] [352] [353]) [354]
 \openout2 = `forallx-yyc-prooffol.aux'.
 
@@ -3976,7 +3984,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [365]
 [366]
-Overfull \hbox (7.85974pt too wide) in paragraph at lines 265--273
+Overfull \hbox (7.85974pt too wide) in paragraph at lines 266--274
 []$[]$ 
  []
 
@@ -4002,7 +4010,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [376]
 [377] [378] [379] [380]
-Overfull \hbox (3.21593pt too wide) in paragraph at lines 574--574
+Overfull \hbox (3.21593pt too wide) in paragraph at lines 576--576
 []\T1/Baskervaldx-TOsF/b/it/48 Transformação 
  []
 
@@ -4018,7 +4026,7 @@ Underfull \vbox (badness 1127) has occurred while \output is active []
  [384
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 658--663
+Underfull \hbox (badness 10000) in paragraph at lines 660--665
 []\T1/Baskervaldx-TOsF/m/n/10.95 A no-ta-ção aqui é si-mi-lar à da re-gra $\U/n
 txmia/m/it/10.95 \$\T1/Baskervaldx-TOsF/m/n/10.95 I. As-sim,
  []
@@ -4028,7 +4036,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [385]
 [386]
-Underfull \hbox (badness 10000) in paragraph at lines 720--721
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
 
  []
 
@@ -4037,7 +4045,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 720--721
 ] [389] [390
 
 ] [391]
-Underfull \hbox (badness 10000) in alignment at lines 823--848
+Underfull \hbox (badness 10000) in alignment at lines 825--850
 [][][] 
  []
 
@@ -4238,13 +4246,13 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 427--31
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 329.
+(in both cases you will find help in the memoir manual). on input line 343.
 
 \tf@toc=\write12
 \openout12 = `forallxyyc-print.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
 (./forallxyyc-print.aux (./forallx-yyc-frontmatter.aux)
 (./forallx-yyc-preface.aux) (./forallx-yyc-what.aux) (./forallx-yyc-tfl.aux)
 (./forallx-yyc-truthtables.aux) (./forallx-yyc-fol.aux)
@@ -4252,21 +4260,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
 (./forallx-yyc-prooffol.aux) (./forallx-yyc-ml.aux)
 (./forallx-yyc-metatheory.aux) (./forallx-yyc-alternatives.aux)
 (./forallx-yyc-quickreference.aux) (./forallx-yyc-backmatter.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 329.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 343.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.97499pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
  ) 
 Here is how much of TeX's memory you used:
- 42850 strings out of 494789
- 758953 string characters out of 6177363
- 906619 words of memory out of 5000000
- 45138 multiletter control sequences out of 15000+600000
- 319447 words of font info for 459 fonts, out of 8000000 for 9000
+ 42853 strings out of 494789
+ 758972 string characters out of 6177363
+ 906736 words of memory out of 5000000
+ 45139 multiletter control sequences out of 15000+600000
+ 322303 words of font info for 461 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  67i,22n,94p,1997b,2393s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{section*.118} has been referenced but does not ex
@@ -4451,11 +4462,11 @@ laced by a fixed one
 e/texlive/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_krjs6b.enc}{/usr/share/tex
 live/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_6tdhgo.enc}{/usr/share/texlive/
 texmf-dist/fonts/enc/dvips/baskervaldx/bvalph.enc}{/usr/share/texlive/texmf-dis
-t/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ba
-skervaldx/zbv_6rwo65.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/baskerv
-aldx/zbv_3lvabu.enc} </home/rhalah/.texlive2017/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ectt1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/baskervald
-x/zbv_rzwiio.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/baskervaldx/
+t/fonts/enc/dvips/baskervaldx/zbv_6rwo65.enc}{/usr/share/texlive/texmf-dist/fon
+ts/enc/dvips/baskervaldx/zbv_3lvabu.enc} </home/rhalah/.texlive2017/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ectt1095.600pk>{/usr/share/texlive/texmf-dist/fonts/
+enc/dvips/baskervaldx/zbv_rzwiio.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/baskervaldx/
 Baskervaldx-Bol.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/baskerval
 dx/Baskervaldx-BolIta.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bas
 kervaldx/Baskervaldx-Ita.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
@@ -4470,12 +4481,13 @@ ype1/public/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 syb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/b
-oondox/zxxrw8a.pfb>
-Output written on forallxyyc-print.pdf (504 pages, 2131168 bytes).
+st/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helv
+etic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxr
+w8a.pfb>
+Output written on forallxyyc-print.pdf (504 pages, 2142113 bytes).
 PDF statistics:
- 2000 PDF objects out of 2073 (max. 8388607)
+ 2005 PDF objects out of 2073 (max. 8388607)
  59 named destinations out of 1000 (max. 500000)
  493 words of extra memory for PDF output out of 10000 (max. 10000000)
 
