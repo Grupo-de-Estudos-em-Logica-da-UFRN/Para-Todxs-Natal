@@ -1051,7 +1051,7 @@ Trabalhamos novamente do fim para o come\c co a partir de `$\enot A$'.  Para faz
 	\close
 	\have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
-Agora nosso objetivo \'e provar~$\ered$. Dissemos acima, ao explicar como trabalhar a partir de uma senten\c ca negada, que a regra $\enot$E permite que voc\^e prove~$\ered$, o qual \'e o nosso objetivo na subprova interior. Ent\~ao, procuramos uma senten\c ca negada  que a partir da qual possamos trabalhar do come\c co para o fim: esta senten\c ca seria $\enot B$ da linha~$2$. Isso significa que temos que derivar $B$ dentro da subprova, pois $\enot$E requer n\~ao apenas $\enot B$ (o que j\'a temos), mas tamb\'em~$B$. E $B$, por sua vez, conseguimos a partir de $A \eif B$, j\'a que $\eif$E nos permitir\'a justificar o consequente~$B$ do condicional por $\eif$E. A regra $\eif$E tamb\'em requer o antecedente~$A$ do condicional, mas isso tamb\'em j\'a est\'a dispon\'ivel (na linha~$3$). Ent\~ao, conclu\'imos  com:
+Agora nosso objetivo \'e provar~$\ered$. Dissemos acima, ao explicar como trabalhar a partir de uma senten\c ca negada, que a regra $\enot$E permite que voc\^e prove~$\ered$, o qual \'e o nosso objetivo na subprova interior. Ent\~ao, procuramos uma senten\c ca negada  que a partir da qual possamos trabalhar do come\c co para o fim: esta senten\c ca seria `$\enot B$' da linha~$2$. Isso significa que temos que derivar `$B$' dentro da subprova, pois $\enot$E requer n\~ao apenas `$\enot B$' (o que j\'a temos), mas tamb\'em~`$B$'. E `$B$', por sua vez, conseguimos a partir de `$A \eif B$', j\'a que $\eif$E nos permitir\'a justificar o consequente~`$B$' do condicional por $\eif$E. A regra $\eif$E tamb\'em requer o antecedente~`$A$' do condicional, mas isso tamb\'em j\'a est\'a dispon\'ivel (na linha~$3$). Ent\~ao, conclu\'imos  com:
 
 
 \begin{fitchproof}
@@ -1142,7 +1142,7 @@ Isso parece estranho: quer\'iamos provar $\meta{A}$ e as estrat\'egias fracassar
 
 \section{Prova indireta do terceiro exclu\'ido}\label{s:proofLEM}
 
-A senten\c ca $A \eor \enot A$ \'e uma tautologia e, portanto, deve ter uma prova mesmo sem quaisquer premissas. Mas trabalhar do fim para o come\c co falha nessa situa\c c\~ao: para obter $A \eor \enot A$ usando $\eor$I ter\'iamos que provar $A$ ou $\enot A$; novamente, sem premissas. Nenhuma dessas \'e uma tautologia, portanto tamb\'em n\~ao podemos provar. Trabalhar  do come\c co para o fim tamb\'em n\~ao funciona, j\'a que n\~ao h\'a nada para assumir. Portanto, a \'unica op\c c\~ao \'e a prova indireta.
+A senten\c ca `$A \eor \enot A$' \'e uma tautologia e, portanto, deve ter uma prova mesmo sem quaisquer premissas. Mas trabalhar do fim para o come\c co falha nessa situa\c c\~ao: para obter `$A \eor \enot A$' usando $\eor$I ter\'iamos que provar `$A$' ou `$\enot A$'; novamente, sem premissas. Nenhuma dessas \'e uma tautologia, portanto tamb\'em n\~ao podemos provar. Trabalhar  do come\c co para o fim tamb\'em n\~ao funciona, j\'a que n\~ao h\'a nada para assumir. Portanto, a \'unica op\c c\~ao \'e a prova indireta.
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1151,7 +1151,7 @@ A senten\c ca $A \eor \enot A$ \'e uma tautologia e, portanto, deve ter uma prov
 	\close
 	\have{9}{A \eor \enot A}\ip{2-8}
 \end{fitchproof}
-Agora temos algo a partir do qual trabalhar: a suposi\c c\~ao  $\enot(A \eor \enot A)$. Para us\'a-la, justificamos $\ered$ com a regra $\enot$E, citando o pressuposto na linha~$1$, e tamb\'em a senten\c ca n\~ao negada correspondente $A \eor \enot A$, ainda a ser provada
+Agora temos algo a partir do qual trabalhar: a suposi\c c\~ao  `$\enot(A \eor \enot A)$'. Para us\'a-la, justificamos `$\ered$' com a regra $\enot$E, citando o pressuposto na linha~$1$, e tamb\'em a senten\c ca n\~ao negada correspondente `$A \eor \enot A$', ainda a ser provada
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1163,7 +1163,7 @@ Agora temos algo a partir do qual trabalhar: a suposi\c c\~ao  $\enot(A \eor \en
 \end{fitchproof}
 
 
-No in\'icio, trabalhando  do come\c co par o fim para provar $A \eor\enot A$ com a regra $\eor$I n\~ao funcionou. Mas agora estamos em uma situa\c c\~ao diferente: queremos provar $A \eor\enot A$ dentro de uma subprova. Em geral, ao lidar com novas metas, devemos voltar e come\c car com as estrat\'egias b\'asicas. Nesse caso, devemos primeiro tentar trabalhar do fim para o come\c co a partir da disjun\c c\~ao $A \eor \enot A$, ou seja, precisamos escolher um dos disjuntos  e tentar prov\'a-lo. Vamos escolher~$\enot A$. Isso permitiria justificar $A \eor \enot A$ na linha~$m - 1$ usando $\eor$I. Ent\~ao, trabalhando novamente de fim para o come\c co a partir de $\enot A$, iniciamos outra subprova a fim de justificar  $\enot A$ usando $\enot$I. Essa subprova deve ter $A$ acomo suposi\c c\~ao e~$\ered$ como sua \'ultima linha.
+No in\'icio, trabalhando  do come\c co par o fim para provar `$A \eor\enot A$' com a regra $\eor$I n\~ao funcionou. Mas agora estamos em uma situa\c c\~ao diferente: queremos provar `$A \eor\enot A$' dentro de uma subprova. Em geral, ao lidar com novas metas, devemos voltar e come\c car com as estrat\'egias b\'asicas. Nesse caso, devemos primeiro tentar trabalhar do fim para o come\c co a partir da disjun\c c\~ao `$A \eor \enot A$', ou seja, precisamos escolher um dos disjuntos  e tentar prov\'a-lo. Vamos escolher~`$\enot A$'. Isso permitiria justificar `$A \eor \enot A$' na linha~$m - 1$ usando $\eor$I. Ent\~ao, trabalhando novamente de fim para o come\c co a partir de `$\enot A$', iniciamos outra subprova a fim de justificar  `$\enot A$' usando $\enot$I. Essa subprova deve ter `$A$' acomo suposi\c c\~ao e~`$\ered$' como sua \'ultima linha.
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1178,7 +1178,7 @@ No in\'icio, trabalhando  do come\c co par o fim para provar $A \eor\enot A$ com
 	\close
 	\have{9}{A \eor \enot A}\ip{2-8}
 \end{fitchproof}
-Dentro dessa nova subprova, precisamos novamente justificar $\ered$. A melhor maneira de fazer isso \'e come\c car com uma senten\c ca negada; `$\enot(A \eor \enot A)$' na linha~$1$ \'e a \'unica senten\c ca negada que podemos usar. A senten\c ca n\~ao negada correspondente,  `$A \eor \enot A$', no entanto, segue diretamente de `$A$' (que temos na linha~$2$) por $\eor$I. Nossa prova completa \'e:
+Dentro dessa nova subprova, precisamos novamente justificar `$\ered$'. A melhor maneira de fazer isso \'e come\c car com uma senten\c ca negada; `$\enot(A \eor \enot A)$' na linha~$1$ \'e a \'unica senten\c ca negada que podemos usar. A senten\c ca n\~ao negada correspondente,  `$A \eor \enot A$', no entanto, segue diretamente de `$A$' (que temos na linha~$2$) por $\eor$I. Nossa prova completa \'e:
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1513,17 +1513,18 @@ Um pouco mais de terminologia:
 \
 \\
 Esta tabela resume se uma ou duas provas s\~ao bem sucedidas ou se devemos raciocinar sobre todas as provas poss\'iveis.
-{\small
+{ %\small
 \begin{center}
 \begin{tabular}{l l l}
-%\cline{2-3}
- & \textbf{Sim} & \textbf{ N\~ao}\\
+\cline{1-3}
+ \textbf{Teste}& \textbf{Sim} & \textbf{ N\~ao}\\
  \hline
 %\cline{2-3}
 teorema? & uma prova & todas as provas poss\'iveis\\
 inconsistente? &  uma prova  & todas as provas poss\'iveis\\
 equivalente? & duas provas & todas as provas poss\'iveis\\
 consistente? & todas as provas poss\'iveis & uma prova\\
+\cline{1-3}
 \end{tabular}
 \end{center}}
 
@@ -1868,7 +1869,7 @@ Por outro lado, existem algumas situa\c c\~oes em que o uso de provas simplesmen
 
 A tabela \ref{table.ProofOrModel} resume quando \'e melhor usar provas e quando \'e melhor usar tabelas de verdade. 
 
-\begin{table}\small
+\begin{table}[H]\scriptsize
 \tabulinesep=1ex
 \begin{tabu}{X[.7,c,m] ||X[1,l,m] |X[1,l,m]}
 \textbf{Propriedade l\'ogica} 	&	\textbf{Para provar que est\'a presente} 	&	\textbf{Para provar que est\'a ausente} \\ \hline \hline
@@ -1893,10 +1894,9 @@ Validade				&  Derivar a conclus\~ao a partir das premissas & Encontrar uma linh
 \item  A senten\c ca $A \eif (A \eif B)$  n\~ao \'e um teorema.
 \item  A senten\c ca $A \eif \enot{A}$ n\~ao \'e uma contradi\c c\~ao. 
 \item  A senten\c ca $A \eiff \enot A$ \'e uma contradi\c c\~ao.  
-
 \item  A senten\c ca $ \enot (W \eif (J \eor J)) $  \'e contingente.
 \item  A senten\c ca $ \enot(X \eor (Y \eor Z)) \eor (X \eor (Y \eor Z))$  n\~ao \'e contingente
- \item  A senten\c ca $B \eif \enot S$  \'e equivalente \`a senten\c ca $\enot \enot B \eif \enot S$.
+\item  A senten\c ca $B \eif \enot S$  \'e equivalente \`a senten\c ca $\enot \enot B \eif \enot S$.
 \item  A senten\c ca $ \enot (X \eor O) $ n\~ao \'e equivalente \`a senten\c ca $X \eand O$.
 \item  As senten\c cas $\enot(A \eor B)$, $C$, $C \eif A$  s\~ao conjuntamente inconsistentes
 \item  As senten\c cas $\enot(A \eor B)$, $\enot{B}$, $B \eif A$ s\~ao conjuntamente consistentes.
