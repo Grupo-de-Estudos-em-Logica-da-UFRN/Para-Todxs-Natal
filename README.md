@@ -36,13 +36,17 @@ Os arquivos-fonte do projeto, em LaTeX, estão disponíveis em [Para Todxs: Nata
 
 Vovê pode fazer o download do último pdf gerado aqui:
 
-  - [`forallxyyc-print.pdf`](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/blob/7d1eee2e03454badedb724fd4316ef795c79d6ea/forallxyyc-print.pdf) (arquivo para impressão)
+  - [`forallxyyc.pdf`](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/forallxyyc.pdf)
 
 ## Crie o PDF você mesmo!
 
 Clone o [repositório github](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal) em sua máquina 
 ou faça o download do arquivo ZIP e compile o código usando o [LaTeX](http://www.latex-project.org/) a partir do arquivo
 
-  - `forallxyyc-print.tex` (arquivo para impressão)
+  - `forallxyyc.tex`
+
+ou
+
+  -  `forallxyyc-print.tex` (otimizado para impressão)
 
 É necessário executar `makeglossaries` para gerar o glossário.
