@@ -18,7 +18,7 @@ dispositivos eletrônicos, além de uma versão com fonte especial para disléxi
 Um editor/checador de provas para o sistema usado no livro está disponível online 
 em [proofs.openlogicproject.org](http://proofs.openlogicproject.org/).
 
-[Download](#download) links below.
+Link para download [aqui](#download).
 
 ## Créditos e licença
 
