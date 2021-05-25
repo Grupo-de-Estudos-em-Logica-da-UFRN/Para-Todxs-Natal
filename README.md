@@ -2,8 +2,6 @@
 
 ![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/assets/forallx-cover-readme_md.png)
 
-# (OBS: este trabalho está em fase inicial)
-
 ## Descrição
 
 _Para Todxs: Natal_ é um livro didático completo sobre lógica formal.
