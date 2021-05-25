@@ -21,6 +21,7 @@
 %RZ: typefaces 
 
 \usepackage{helvet}
+%\usepackage{charter}
 \usepackage[osf]{Baskervaldx} % oldstyle figures
 \usepackage[bigdelims,baskervaldx]{newtxmath} 
 \usepackage[cal=boondoxo]{mathalfa}
@@ -167,7 +168,7 @@
 
 \newcommand*{\script}[1]{\ensuremath{\mathcal{#1}}}
 \renewcommand*{\meta}[1]{\ensuremath{\mathcal{#1}}} % TB: used for all metavariables
-\newcommand*{\metav}[1]{\ensuremath{\mathscr{#1}}}
+\newcommand*{\metav}[1]{\ensuremath{\mathcal{#1}}}
 
 % create a blank
 \newcommand*{\blank}{\underline{\hspace*{2.5em}}}
@@ -184,7 +185,11 @@
 \newcommand*{\closentuple}{\rangle}
 \newcommand*{\ntuple}[1]{\ensuremath{\mathopen{\openntuple}}#1\ensuremath{\mathclose{\closentuple}}} 
 % definitions
-\newcommand*{\define}[1]{\textsc{\lowercase{\color{leadbeater}#1}}}
+\newcommand*{\xdefine}[1]{\textsc{\lowercase{\color{leadbeater}#1}}}
+%\newcommand*{\define}[1]{\textsc{\lowercase{\color{leadbeater}#1}}}
+\newcommand*{\definepl}[1]{\textsc{\glspl{#1}}}
+\newcommand*{\define}[1]{\textsc{\gls{#1}}}
+
 
 %    ****************************************
 %    *          LIST  ENVIRONMENTS          *

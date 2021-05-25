@@ -49,7 +49,7 @@ O sistema resultante de regras nos dar\'a um novo modo de pensar sobre a validad
 
  
 
-Neste cap\'itulo,  apresentaremos um sistema em  \define{dedu\c  c\~ao natural}. Para cada conectivo, teremos regras de  \define{introdu\c  c\~ao},  que nos permite provar uma senten\c ca que tenha esse conectivo como operador l\'ogico principal, e regras de \define{elimina\c  c\~ao}, que nos permite provar  algo a partir de  uma senten\c ca que tenha esse  conectivo como operador l\'ogico principal. 
+Neste cap\'itulo,  apresentaremos um sistema em  \xdefine{dedu\c  c\~ao natural}. Para cada conectivo, teremos regras de  \xdefine{introdu\c  c\~ao},  que nos permite provar uma senten\c ca que tenha esse conectivo como operador l\'ogico principal, e regras de \xdefine{elimina\c  c\~ao}, que nos permite provar  algo a partir de  uma senten\c ca que tenha esse  conectivo como operador l\'ogico principal. 
 
  %%%%%% --------------------------------  26.1 A  ideia de uma prova formal
 
@@ -360,7 +360,7 @@ Se pud\'essemos fazer isso, seria um desastre. Poder\'iamos provar qualquer  let
 
 Podemos descrever o processo de fazer uma suposi\c c\~ao adicional como um de efetuar  uma \emph{subprova}: uma prova subsidi\'aria dentro da prova principal. Quando come\c camos a subprova, tra\c camos uma outra linha vertical para indicar que n\~ao estamos mais na prova principal. Ent\~ao, escrevemos uma suposi\c c\~ao sobre qual a subprova ser\'a baseada.  Uma subprova pode ser essencialmente pensada como esta quest\~ao: \emph{o que poder\'iamos mostrar se tamb\'em fizermos esta suposi\c c\~ao adicional?}
 
-Quando estamos trabalhando dentro da subprova, podemos nos referir a suposi\c c\~ao adicional que colocamos ao introduzir a subprova,  e a qualquer coisa que obtivemos de nossas suposi\c c\~oes originais (afinal de contas, essas suposi\c c\~oes originais ainda est\~ao em vigor). Entretanto, em algum momento,  queremos parar de usar a suposi\c c\~ao adicional: queremos sair da subprova e retornar a prova principal. Para indicar que retornamos a prova principal, a linha vertical da subprova chega ao fim.  Neste ponto, dizemos que a subprova est\'a \define{fechada}. Com a subprova fechada, deixamos de lado a suposi\c c\~ao.  Logo ser\'a ileg\'itimo recorrer a qualquer coisa que dependa dessa suposi\c c\~ao adicional. Assim, estipulamos:
+Quando estamos trabalhando dentro da subprova, podemos nos referir a suposi\c c\~ao adicional que colocamos ao introduzir a subprova,  e a qualquer coisa que obtivemos de nossas suposi\c c\~oes originais (afinal de contas, essas suposi\c c\~oes originais ainda est\~ao em vigor). Entretanto, em algum momento,  queremos parar de usar a suposi\c c\~ao adicional: queremos sair da subprova e retornar a prova principal. Para indicar que retornamos a prova principal, a linha vertical da subprova chega ao fim.  Neste ponto, dizemos que a subprova est\'a \xdefine{fechada}. Com a subprova fechada, deixamos de lado a suposi\c c\~ao.  Logo ser\'a ileg\'itimo recorrer a qualquer coisa que dependa dessa suposi\c c\~ao adicional. Assim, estipulamos:
 
 
 \factoidbox{Para citar uma linha individual quando aplicamos uma regra:
@@ -370,7 +370,7 @@ Quando estamos trabalhando dentro da subprova, podemos nos referir a suposi\c c\
 \end{enumerate}}
 Esta estipula\c c\~ao exclui a desastrosa tentativa da prova acima. A regra $\eif$E exige que citemos duas linhas anteriores da prova. Na prova pretendida, acima, uma dessas linhas (nomeadamente, linha~$4$)  ocorre dentro de uma subprova que (pela linha~$5$) j\'a tinha sido fechada. Isto \'e ileg\'itimo. 
 
-O fechamento de uma subprova \'e chamado de \define{descarte} da suposi\c c\~ao desta subprova. Assim, fica estabelecido: \emph{voc\^e n\~ao pode se referir a nada que foi obtido usando suposi\c c\~oes descartadas}. 
+O fechamento de uma subprova \'e chamado de \xdefine{descarte} da suposi\c c\~ao desta subprova. Assim, fica estabelecido: \emph{voc\^e n\~ao pode se referir a nada que foi obtido usando suposi\c c\~oes descartadas}. 
 
 Subprovas, ent\~ao, nos permitem pensar sobre o que poder\'iamos mostrar,  se fizermos suposi\c c\~oes adicionais.  O que podemos  tirar disso n\~ao \'e surpreendente: no curso de uma prova, temos que acompanhar com muito cuidado as suposi\c c\~oes que estamos fazendo uso, em qualquer momento.  Nosso sistema de provas faz isso graficamente bem. (De fato, \'e exatamente por isso que escolhemos usar  \emph{este}  sistema de provas.)
 
@@ -1006,7 +1006,7 @@ Lembre-se de que, quando come\c camos, t\'inhamos a op\c c\~ao de come\c car a p
 	\have{11}{B \eor C}\oe{1,(7)-8,(9)-(10)}	
 	\have{12}{A \eand (B \eor C)}\ai{6,11}
 \end{fitchproof}
-Deixaremos que voc\^e preencha as linhas ausentes indicadas por ~$\vdots$.
+Deixaremos que voc\^e preencha as linhas ausentes indicadas por~$\vdots$
 
 Vamos dar outro exemplo para ilustrar como aplicar as estrat\'egias ao lidar com condicionais e nega\c c\~ao. A senten\c ca `$(A \eif B) \eif (\enot B \eif \enot A)$' \'e uma tautologia. 
 Vamos ver se conseguimos encontrar uma prova disso, sem premissas, usando as estrat\'egias. Primeiro escrevemos a senten\c ca no final de uma folha de papel. Como trabalhar do come\c co para o fim n\~ao \'e uma boa op\c c\~ao (n\~ao h\'a nada a partir do qual trabalhar), trabalhamos do fim para o come\c co e criamos uma subprova para obter a  senten\c ca que queremos `$(A \eif B) \eif (\enot B \eif \enot A)$' usando a regra  $\eif$I. A sua suposi\c c\~ao deve ser o antecedente do condicional que queremos provar, ou seja, `$A \eif B$', e sua \'ultima linha, o consequente `$\enot B \eif \enot A$'.
@@ -1481,11 +1481,6 @@ Com o nosso s\'imbolo  `$\proves$',  podemos introduzir um pouco mais de termino
 	\factoidbox{\label{def:syntactic_tautology_in_sl}
 		$\meta{A}$ \'e um  \define{teorema} se e somente se $\proves \meta{A}$
 	}
-\newglossaryentry{teorema}
-{
-name=teorema,
-description={Uma senten\c ca que \'e provada sem nenhuma premissa}
-}
 
 Para ilustrar isso, suponha que desejamos mostrar que `$\enot (A \eand \enot A)$' \'e um teorema. Assim, precisamos de uma prova de `$\enot(A \eand \enot A)$' que \emph{n\~ao} tenha suposi\c c\~oes n\~ao descartadas. No entanto, como queremos provar uma senten\c ca cujo operador l\'ogico principal \'e uma nega\c c\~ao, vamos come\c car com uma \emph{subprova}  dentro da qual assumimos `$A \eand \enot A$', e mostrar que essa suposi\c c\~ao leva a uma contradi\c c\~ao. Levando em considera\c c\~ao tudo isso, a prova \'e assim:
 	\begin{fitchproof}
@@ -1503,35 +1498,22 @@ Para mostrar que algo \'e um teorema, voc\^e apenas precisa encontrar uma prova 
 
 Aqui temos um pouco mais de terminologia:
 	\factoidbox{
-		Duas senten\c cas \meta{A} e \meta{B} s\~ao \define{dedutivamente equivalentes} se e somente se cada  uma puder ser provada a partir da outra.   i.e,  ambas $\meta{A}\proves\meta{B}$ e $\meta{B}\proves\meta{A}$.
+		Duas senten\c cas \meta{A} e \meta{B} s\~ao \definepl{dedutivamente equivalente} se e somente se cada  uma puder ser provada a partir da outra.   i.e,  ambas $\meta{A}\proves\meta{B}$ e $\meta{B}\proves\meta{A}$.
 	}
-        
-\newglossaryentry{dedutivamente equivalente}
-{
-  name=dedutivamente equivalente,
-  text = dedutivamente equivalente,
-description={Duas senten\c cas A e B s\~ao  dedutivamente equivalentes  se e somente se cada  uma puder ser provada a partir da outra.}
-}
-
 
 Assim como no caso de mostrar que uma senten\c ca \'e um teorema, \'e relativamente f\'acil mostrar que duas senten\c cas s\~ao dedutivamente equivalentes: isto requer apenas um par de provas. Entretanto, mostrar que senten\c cas \emph{n\~ao} s\~ao dedutivamente equivalentes seria muito mais dif\'icil: \'e t\~ao dif\'icil quanto mostrar que uma senten\c ca n\~ao \'e um teorema.
 
 Um pouco mais de terminologia:
 	\factoidbox{
-		As senten\c cas  $\meta{A}_1,\meta{A}_2,\ldots, \meta{A}_n$  s\~ao \define{DEDUTIVAMENTE INCONSISTENTES} se e somente se uma  contradi\c c\~ao puder ser provada a partir delas, ou seja, $\meta{A}_1,\meta{A}_2,\ldots, \meta{A}_n \proves \ered$. Se elas n\~ao s\~ao \define{inconsistentes}, dizemos que elas s\~ao \define{DEDUTIVAMENTE CONSISTENTES}.
+		As senten\c cas  $\meta{A}_1,\meta{A}_2,\ldots, \meta{A}_n$  s\~ao \definepl{dedutivamente inconsistente} se e somente se uma  contradi\c c\~ao puder ser provada a partir delas, ou seja, $\meta{A}_1,\meta{A}_2,\ldots, \meta{A}_n \proves \ered$. Se elas n\~ao s\~ao inconsistentes, dizemos que elas s\~ao \xdefine{dedutivamente consistentes}.
 	}
         
-\newglossaryentry{dedutivamente inconsistente}
-{    name={dedutivamente inconsistente}, 
-  description={Senten\c cas  s\~ao dedutivamente inconsistentes  se e somente se uma  contradi\c c\~ao puder ser provada a partir delas}
-}
-
         \'E f\'acil mostrar que um conjunto de senten\c cas \'e dedutivamente inconsistente: voc\^e s\'o precisa provar uma contradi\c c\~ao a partir delas.  Entretanto,  mostrar que um conjunto de senten\c cas n\~ao \'e dedutivamente inconsistentes \'e muito mais dif\'icil. Exigiria mais do que apenas fornecer uma ou duas provas; exigiria mostrar que nenhuma prova de um determinado tipo \'e \emph{poss\'ivel}.
 
 \
 \\
 Esta tabela resume se uma ou duas provas s\~ao bem sucedidas ou se devemos raciocinar sobre todas as provas poss\'iveis.
-
+{\small
 \begin{center}
 \begin{tabular}{l l l}
 %\cline{2-3}
@@ -1543,7 +1525,7 @@ inconsistente? &  uma prova  & todas as provas poss\'iveis\\
 equivalente? & duas provas & todas as provas poss\'iveis\\
 consistente? & todas as provas poss\'iveis & uma prova\\
 \end{tabular}
-\end{center}
+\end{center}}
 
  %%%%%% ------------------------CAP  29  - EXERCICIOS   ------------------------------------------------ 
 \practiceproblems
@@ -1815,12 +1797,12 @@ Voc\^e pode ter se perguntado naquele momento se os dois tipos de roletas sempre
 
 Para come\c car, precisamos definir todos os nossos conceitos l\'ogicos separadamente para tabelas de verdade e  para deriva\c c\~oes. Muito deste trabalho j\'a foi feito.  Manuseamos com todas as defini\c c\~oes de tabela de verdade no Capítulo \ref{s:SemanticConcepts}. Tamb\'em j\'a fornecemos defini\c c\~oes sint\'aticas para tautologias (teoremas) e pares de senten\c cas logicamente equivalentes. As outras defini\c c\~oes seguem naturalmente. Para a maioria das propriedades l\'ogicas, podemos test\'a-las usando deriva\c c\~oes, e aquelas que n\~ao podemos testar diretamente podem ser definidas em termos dos conceitos que podemos definir.
 
-Por exemplo, definimos um teorema como uma senten\c ca que pode ser derivada sem quaisquer premissas (p.~\pageref{def:syntactic_tautology_in_sl}). Como a nega\c c\~ao de uma contradi\c c\~ao \'e uma tautologia, podemos definir uma \define{CONTRADI\c C\~AO SINT\'ATICA NA LVF} \label{def:syntactic_contradiction_in_sl} como uma senten\c ca cuja nega\c c\~ao pode ser derivada sem quaisquer premissas. A defini\c c\~ao sint\'atica de uma senten\c ca contingente \'e um pouco diferente. N\~ao temos nenhum m\'etodo pr\'atico e finito para provar que uma senten\c ca \'e contingente usando deriva\c c\~oes, da mesma maneira que fizemos usando tabelas de verdade. Portanto, precisamos nos contentar em definir ``senten\c ca contingente'' negativamente. Uma senten\c ca \'e \define{{SINTATICAMENTE CONTINGENTE NA LVF}} \label{def:syntactically_contingent_in_sl} se ela  n\~ao for um teorema ou uma contradi\c c\~ao. 
+Por exemplo, definimos um teorema como uma senten\c ca que pode ser derivada sem quaisquer premissas (p.~\pageref{def:syntactic_tautology_in_sl}). Como a nega\c c\~ao de uma contradi\c c\~ao \'e uma tautologia, podemos definir uma \xdefine{CONTRADI\c C\~AO SINT\'ATICA NA LVF} \label{def:syntactic_contradiction_in_sl} como uma senten\c ca cuja nega\c c\~ao pode ser derivada sem quaisquer premissas. A defini\c c\~ao sint\'atica de uma senten\c ca contingente \'e um pouco diferente. N\~ao temos nenhum m\'etodo pr\'atico e finito para provar que uma senten\c ca \'e contingente usando deriva\c c\~oes, da mesma maneira que fizemos usando tabelas de verdade. Portanto, precisamos nos contentar em definir ``senten\c ca contingente'' negativamente. Uma senten\c ca \'e \xdefine{{SINTATICAMENTE CONTINGENTE NA LVF}} \label{def:syntactically_contingent_in_sl} se ela  n\~ao for um teorema ou uma contradi\c c\~ao. 
  
 
-Um  conjunto de senten\c cas \'e \define{DEDUTIVAMENTE INCONSISTENTE NA LVF} \label{def:syntactically_inconsistent_ in_sl}  se e somente se pode-se derivar uma contradi\c c\~ao dele. A consist\^encia, por outro lado, \'e como conting\^encia na medida em que n\~ao temos um m\'etodo finito pr\'atico para test\'a-la diretamente. Ent\~ao, novamente, temos que definir um termo negativamente. Um  conjunto de senten\c cas \'e \define{DEDUTIVAMENTE CONSISTENTE NA LVF} \label{def:syntactically consistent in SL} se e somente se ele n\~ao for dedutivamente inconsistente.
+Um  conjunto de senten\c cas \'e \define{dedutivamente inconsistente} na LVF \label{def:syntactically_inconsistent_ in_sl}  se e somente se pode-se derivar uma contradi\c c\~ao dele. A consist\^encia, por outro lado, \'e como conting\^encia na medida em que n\~ao temos um m\'etodo finito pr\'atico para test\'a-la diretamente. Ent\~ao, novamente, temos que definir um termo negativamente. Um  conjunto de senten\c cas \'e \xdefine{DEDUTIVAMENTE CONSISTENTE NA LVF} \label{def:syntactically consistent in SL} se e somente se ele n\~ao for dedutivamente inconsistente.
     
-Finalmente, um argumento \'e  \define{DEDUTIVAMENTE V\'ALIDO NA LVF} \label{def:syntactically_valid_in_SL}se e somente se houver uma deriva\c c\~ao de sua conclus\~ao a partir de suas premissas. Todas essas defini\c c\~oes s\~ao apresentadas na Tabela \ref{table:truth_tables_or_derivations}.
+Finalmente, um argumento \'e  \xdefine{DEDUTIVAMENTE V\'ALIDO NA LVF} \label{def:syntactically_valid_in_SL}se e somente se houver uma deriva\c c\~ao de sua conclus\~ao a partir de suas premissas. Todas essas defini\c c\~oes s\~ao apresentadas na Tabela \ref{table:truth_tables_or_derivations}.
 
 \begin{sidewaystable}\small
 \tabulinesep=1ex
@@ -1851,13 +1833,7 @@ Todos os nossos conceitos foram definidos agora sem\^antica e sintaticamente. Co
   
 %%%%%% ---------------CORRECAO  ???????-----------------  
 
-\newglossaryentry{correcao}
-{
-name=correcao,
-description={A property held by logical systems if and only if $\proves $ implies $\entails $}
-}
-
-Mostrar que $\proves $ implica  $\entails $  \'e  o problema da \define{\gls{correcao}}. \label{def:soundness} Um sistema de provas \'e  \define{CORRETO} se n\~ao houver deriva\c c\~oes de argumentos que possam ser mostrados inv\'alidos pelas tabelas de verdade. 
+Mostrar que $\proves $ implica  $\entails $  \'e  o problema da \define{soundness}. \label{def:soundness} Um sistema de provas \'e  \definepl{soundness} se n\~ao houver deriva\c c\~oes de argumentos que possam ser mostrados inv\'alidos pelas tabelas de verdade. 
  \label{def_Soundness} 
 
 Demonstrar que o sistema de provas \'e correto exigiria mostrar que  \emph{qualquer} prova poss\'ivel \'e a prova de um argumento v\'alido. N\~ao seria suficiente ter sucesso ao tentar provar muitos argumentos v\'alidos e falhar ao tentar provar argumentos inv\'alidos.
@@ -1884,7 +1860,7 @@ name=completude,
 description={A property held by logical systems if and only if $\entails $ implies $\proves $}
 }
 
-Esse \'e o problema da completude. Um sistema de provas tem a propriedade da   \define{\gls{completude}} \label{def:completeness} se e somente se houver uma deriva\c c\~ao de todo argumento semanticamente v\'alido. Provar que um sistema \'e completo \'e geralmente mais dif\'icil do que provar que \'e correto. Provar que um sistema \'e correto significa mostrar que todas as regras do seu sistema de provas funcionam da maneira como deveriam.
+Esse \'e o problema da completude. Um sistema de provas tem a propriedade da   \define{completude} \label{def:completeness} se e somente se houver uma deriva\c c\~ao de todo argumento semanticamente v\'alido. Provar que um sistema \'e completo \'e geralmente mais dif\'icil do que provar que \'e correto. Provar que um sistema \'e correto significa mostrar que todas as regras do seu sistema de provas funcionam da maneira como deveriam.
 Mostrar que um sistema \'e completo significa mostrar que voc\^e incluiu \emph{todas} as regras necess\'arias e que n\~ao deixou nada de fora. Mostrar isso est\'a al\'em do escopo deste livro. O ponto importante \'e que, felizmente, o sistema de provas da LVF \'e coreto e completo. Este n\~ao \'e o caso de todos os sistemas de prova ou todas as linguagens formais. Por ser o caso da LVF, podemos optar por fornecer provas ou fornecer tabelas de verdade, o que for mais f\'acil para a tarefa em quest\~ao.
 
 Agora que sabemos que o m\'etodo da tabela de verdade \'e intercambi\'avel com o m\'etodo de deriva\c c\~oes, voc\^e pode escolher qual m\'etodo deseja usar para qualquer problema. Os alunos geralmente preferem usar tabelas de verdade, porque elas podem ser produzidas apenas mecanicamente, e isso parece ``mais f\'acil''. No entanto, j\'a vimos que as tabelas de verdade se tornam impossivelmente grandes com um pouco mais de letras sentenciais.

@@ -112,7 +112,7 @@ Quando `Ivani' é usado como um termo singular, você pode achar que se refere a
 Mas você pode estar cometendo um erro.
 `Ivani' pode ser nome de um homem, pode nem ser o nome de uma pessoa, mas de um gato, ou de uma gata, ou uma tartaruga.
 
-Na LPO, os \define{nomes} são letras minúsculas de `$a$' a `$r$'.
+Na LPO, os \definepl{name} são letras minúsculas de `$a$' a `$r$'.
 Podemos adicionar índices numéricos se quisermos usar a mesma letra para nomes diferentes.
 Aqui estão alguns termos singulares distintos da LPO:
 	$$a,\ b,\ c,\ldots, r, \ a_1, \ f_{32}, \ j_{390}, \ m_{12}$$
@@ -153,7 +153,7 @@ Ao remover um termo singular desta sentença, podemos obter qualquer um dos trê
 		Viviane pegou emprestado \blank\ de Nelson\\
 		Viviane pegou emprestado o carro da família de \blank
 	\end{quote}
-Os \define{predicados} na LPO são letras maiúsculas de $A$ a $Z$, com ou sem índices numéricos.
+Os \definepl{predicate} na LPO são letras maiúsculas de $A$ a $Z$, com ou sem índices numéricos.
 Podemos apresentar uma chave de simbolização para predicados assim:
 	\begin{ekey}
 		\item[\atom{B}{x}] \gap{x} está bravo
@@ -208,9 +208,9 @@ $$\atom{A}{e} \eand \atom{A}{g} \eand \atom{A}{m}$$
 No entanto, isso diria apenas que Emília, Glória e Marcelo estão alegres.
 Mas não é isso exatamente o que queremos dizer com a sentença \ref{q.a}.
 Queremos dizer que \emph{todos} estão alegres, mesmo aqueles a quem não demos nome.
-Para fazer isso, utilizaremos o símbolo `$\forall$', que é chamado de \define{quantificador universal}.
+Para fazer isso, utilizaremos o símbolo `$\forall$', que é chamado de \define{universal quantifier}.
 
-Um quantificador deve ser seguido sempre por uma \define{variavel}.
+Um quantificador deve ser seguido sempre por uma \define{variable}.
 Na LPO, as variáveis são as letras minúsculas de `$s$' a `$z$', em itálico, com ou sem índices numéricos.
 Podemos, assim, simbolizar a sentença \ref{q.a} como:
 $$\forall x\, \atom{A}{x}$$
@@ -221,17 +221,13 @@ A expressão que a segue, `$\atom{A}{x}$', indica, desta coisa que você escolhe
 Deve-se ressaltar que não há qualquer razão especial para usarmos `$x$' em vez de alguma outra variável.
 As sentenças `$\forall x\, \atom{A}{x}$', `$\forall y\, \atom{A}{y}$', `$\forall z\, \atom{A}{z}$' e `$\forall x_5 \atom{A}{x_5}$' usam variáveis diferentes, mas todas são simbolizações logicamente equivalentes da sentença \ref{q.a}.
 
-Para simbolizar a sentença \ref{q.e}, introduzimos mais um símbolo novo: o \define{quantificador existencial}, `$\exists$'.
+Para simbolizar a sentença \ref{q.e}, introduzimos mais um símbolo novo: o \define{existential quantifier}, `$\exists$'.
 Assim como o quantificador universal, o quantificador existencial também requer uma variável.
 A sentença \ref{q.e} pode ser simbolizada por:
 $$\exists x\,\atom{B}{x}$$
 Enquanto `$\forall x\,\atom{B}{x}$' deve ser lida como `para todo $x$, $x$ está bravo', `$\exists x\,\atom{B}{x}$' deve ser lida como `existe algo, $x$, tal que $x$ está bravo'.
 Aqui também a variável serve apenas para reservar um espaço; poderíamos facilmente simbolizar a sentença~\ref{q.e} por `$\exists z\, \atom{B}{z}$', `$\exists w_{256}\, \atom{B}{w_{256}}$', ou com qualquer outra variável.
 
-\newglossaryentry{existential quantifier}{
-  name = existential quantifier,
-  description = {The symbol $\exists$ of FOL used to symbolize existence; $\exists x\, \atom{F}{x}$ is true iff at least one member of the domain is~$F$}
-}
 
 Mais alguns exemplos ajudarão. Considere estas outras sentenças:
 	\begin{earg}
@@ -271,7 +267,7 @@ Certamente também não queremos dizer todos que já estiveram vivos ou que um d
 Normalmente, queremos dizer algo mais modesto, tal como:
 todos nesta sala, ou todos que atualmente fazem o curso de dança contemporânea da professora Rita, ou todas as filhas de dona Arlete, ou algo do gênero.
 
-Para eliminar essa ambiguidade, precisaremos especificar um \define{dominio}.
+Para eliminar essa ambiguidade, precisaremos especificar um \define{domain}.
 O domínio é a coleção das coisas sobre as quais estamos falando; e por isso é também chamado de \emph{domínio do discurso}.
 Assim, se quisermos falar sobre as pessoas em Caicó, definimos nosso domínio como as pessoas em Caicó.
 Anotamos o domínio no início da chave de simbolização, assim:
@@ -283,11 +279,6 @@ Anotamos o domínio no início da chave de simbolização, assim:
 O alcance dos quantificadores fica, então, limitado ao domínio estabelecido.
 Para expressar isso costuma-se dizer que os quantificadores \emph{variam sobre} o domínio.
 Dado, então, o domínio especificado na chave acima, `$\forall x$' deve ser lido, aproximadamente, como  `Toda pessoa em Caicó é tal que \ldots' e `$\exists x $' deve ser lido aproximadamente como `alguma pessoa em Caicó é tal que \ldots'. 
-
-\newglossaryentry{domain}{
-  name = domain,
-  description = {The collection of objects assumed for a symbolization in FOL, or that gives the range of the quantifiers in an \gls{interpretation}}
-}
 
 Na LPO, o domínio nunca será vazio, deve sempre incluir pelo menos uma coisa. Além disso, nós, em português, normalmente podemos concluir `alguém está bravo' a partir de `Glória está brava'.
 Se transferirmos isso para a LPO, devemos ser capazes de deduzir `$\exists x\, \atom{B}{x}$' a partir de `$\atom{B}{g}$'.
@@ -451,12 +442,7 @@ Novamente, as duas simbolizações são logicamente equivalentes; ambas são sim
 
 No Capítulo \ref{s:FOLBuildingBlocks}, enfatizamos que um nome deve selecionar exatamente um objeto no domínio.
 No entanto, um predicado não precisa se aplicar a nada no domínio.
-Um predicado que não se aplica a nada no domínio é chamado de \define{predicado vazio}.
-
-\newglossaryentry{empty predicate}{
-  name = {empty predicate},
-  description = {A \gls{predicate} that applies to no object in the \gls{domain}}
-}
+Um predicado que não se aplica a nada no domínio é chamado de \define{empty predicate}.
 
 Suponha que estejamos interessados em  simbolizar as duas sentenças seguintes:
 	\begin{earg}
@@ -782,7 +768,7 @@ Mas se o domínio incluir cães e ratos, no entanto, é provavelmente melhor esp
 \label{pr.BarbaraEtc}
 Abaixo estão as quinze figuras da famosa \textbf{Lógica Silogística}, proposta por Aristóteles na Grécia antiga, com os nomes que cada figura recebeu dos lógicos medievais.
 Cada uma destas `figuras', veremos mais adiante neste livro, é um argumento válido na LPO:
-\begin{earg}\footnotesize 
+\begin{earg}\small 
 	\item \textbf{Barbara.} Todo G é F. Todo H é G. Portanto:  Todo H é F
 	\item \textbf{Celarent.} Nenhum G é F. Todo H é G. Portanto: Nenhum H é F
 	\item \textbf{Ferio.} Nenhum G é F. Algum H é G. Portanto: Algum H não é F
@@ -889,7 +875,7 @@ As inovadoras ideias gerais e o primeiro desenvolvimento sistemático da LPO for
 \section{Relações: predicados com muitos lugares}
 Todos os predicados que consideramos até agora dizem respeito a propriedades que os objetos possam ter.
 Esses predicados têm uma única lacuna que precisa ser preenchida para gerar uma sentença completa.
-Por causa disso eles são chamados de \define{predicados de um lugar} ou simplesmente \define{predicados}.
+Por causa disso eles são chamados de \xdefine{predicados de um lugar} ou simplesmente \define{predicate}.
 
 No entanto, outros predicados dizem respeito a \emph{relações} entre duas ou mais coisas.
 Aqui estão alguns exemplos de predicados relacionais em português:
@@ -898,7 +884,7 @@ Aqui estão alguns exemplos de predicados relacionais em português:
 		\blank\ está à esquerda de \blank\\
 		\blank\ está em dívida com \blank
 	\end{quote}
-Estes são \define{predicados de dois lugares}, também chamados de \define{relacoes binarias}.
+Estes são \xdefine{predicados de dois lugares}, também chamados de \xdefine{relacoes binarias}.
 Para formar uma sentença completa a partir deles, precisamos preencher com um termo singular cada uma de suas duas lacunas.
 Nós também podemos começar com uma sentença em português que contenha muitos termos singulares e remover dois deles; como resultado obteremos predicados de dois lugares.
 Considere a sentença:
@@ -911,7 +897,7 @@ Ao excluir dois termos singulares desta sentença, podemos obter qualquer um dos
 		\blank\ pegou emprestado o carro da família de \blank\\
 		\blank\ pegou emprestado \blank\ de Nelson
 	\end{quote}
-e se removermos todos os três termos singulares das sentenças, obtemos um \define{predicado de tres lugares} ou \define{relacao ternaria}:
+e se removermos todos os três termos singulares das sentenças, obtemos um \xdefine{predicado de tres lugares} ou \xdefine{relacao ternaria}:
 	\begin{quote}
 		\blank\ pegou emprestado \blank\ de \blank
 	\end{quote}
@@ -1971,7 +1957,7 @@ Existem seis tipos de símbolos na LPO:
 \item[Parênteses] ( , )
 \item[Quantificadores]  $\forall, \exists$
 \end{description}
-Definimos uma \define{expressao da LPO} como qualquer sequência de símbolos da LPO.
+Definimos uma \xdefine{expressao da LPO} como qualquer sequência de símbolos da LPO.
 Se você pegar quaisquer dos símbolos da LPO e escrevê-los sequencialmente, em qualquer ordem, você terá uma expressão.
 
 
@@ -1987,7 +1973,7 @@ Antes de definirmos fórmulas, precisamos  definir o que é um termo e o que é 
 
 Começamos definindo a noção de termo.
 	\factoidbox{
-		Um \define{termo} é qualquer nome ou qualquer variável. }
+		Um \define{term} é qualquer nome ou qualquer variável. }
 Aqui estão alguns termos:
 	$$a, \ b, \ x, \ x_1, \ x_2, \ y, \ y_{254}, \ z$$
 Em seguida, precisamos definir fórmulas atômicas.
@@ -2000,16 +1986,6 @@ Em seguida, precisamos definir fórmulas atômicas.
 		\end{enumerate}
 	}
 Repare que no item 1 do quadro acima consideramos as letras sentenciais (da LVF) como fórmulas atômicas da LPO; ao final de nossa definição veremos que toda sentença LVF também será uma sentença da LPO.
-
-\newglossaryentry{term}{
-  name = term,
-  description = {Either a \gls{name} or a \gls{variable}}
-}
-
-\newglossaryentry{formula}{
-  name = formula,
-  description = {An expression of FOL built according to the inductive rules in \S\ref{s:TermsFormulas}}
-}
 
 O uso de metavariáveis em letras cursivas no quadro acima ($\meta{R}$ e $\meta{t}$) segue as convenções estabelecidas no Capítulo \ref{s:UseMention}.
 Portanto, `$\meta{R}$' não é, ela própria, um predicado da LPO.
@@ -2063,24 +2039,15 @@ Supondo novamente que `$F$' é um predicado de um lugar, que `$G$' é uma relaç
 Podemos, agora, oferecer uma definição formal de escopo (ou âmbito), que incorpora a definição de escopo de um quantificador.
 Aqui seguimos o caso da LVF, com a observação de que a noção de operador lógico principal corresponde ao acréscimo dos quantificadores à noção de conectivo principal definida no Capítulo \ref{s:TFLSentences}.
 	\factoidbox{
-		O \define{operador logico principal} de uma fórmula corresponde ao último operador introduzido, quando se considera a construção da fórmula através das nove cláusulas recursivas do quadro acima.
+		O \define{main logical operator} de uma fórmula corresponde ao último operador introduzido, quando se considera a construção da fórmula através das nove cláusulas recursivas do quadro acima.
 		
 \bigskip
 
-O \define{escopo} ou \define{ambito} de um operador lógico em uma fórmula é a subfórmula para a qual esse operador é o operador lógico principal.
+O \define{scope} ou \emph{ambito} de um operador lógico em uma fórmula é a subfórmula para a qual esse operador é o operador lógico principal.
 	}
 Abaixo uma ilustração gráfica do escopo dos quantifidadores da última fórmula apresentada no exemplo anterior:
 	$$\overbrace{\forall x \overbrace{\exists y \bigl[(\atom{F}{x} \eand \overbrace{\forall z (\atom{G}{a,y,z} \eif \atom{S}{y,z,y,a,y,x})}^{\text{escopo de `}\forall z\text{'}}}^{\text{escopo de `}\exists y\text{'}}\bigr]}^{\text{escopo de `$\forall x$'}}$$
 
-\newglossaryentry{main logical operator}{
-  name = main logical operator,
-  description = {The operator used last in the construction of a \gls{sentence of TFL} or a \gls{formula} of FOL}
-}
-
-\newglossaryentry{scope}{
-  name = scope,
-  description = {the subformula of a \gls{sentence of TFL} or a \gls{formula} of FOL for which the \gls{main logical operator} is the operator}
-}
 
 
 \section{Sentenças}
@@ -2114,17 +2081,6 @@ Vamos tornar esta ideia mais precisa.
 		
 		Qualquer ocorrência de variável que não seja ligada, é uma \define{ocorrencia livre}.
 	}
-
-\newglossaryentry{bound variable}{
-  name = bound variable,
-  description = {An occurrence of a variable in a \gls{formula} which is in the scope of a quantifier followed by the same variable}
-}
-
-\newglossaryentry{free variable}{
-  name = free variable,
-  description = {An occurrence of a variable in a \gls{formula} which is not a \gls{bound variable}}
-}
-
         
 Considere, por exemplo, a seguinte fórmula:
 	$$\forall x(\atom{E}{x} \eor \atom{D}{y}) \eif \exists z(\atom{E}{x} \eif \atom{L}{z,x})$$
@@ -2135,14 +2091,8 @@ O escopo do quantificador existencial `$\exists z$' é `$(\atom{E}{x} \eif \atom
 
 Podemos agora, finalmente, completar a nossa definição de sentença da LPO.
 	\factoidbox{	
-		Uma \define{sentenca} da LPO é qualquer fórmula que não contém ocorrências livres de variáveis.
+		Uma \define{sentence of FOL} da LPO é qualquer fórmula que não contém ocorrências livres de variáveis.
 	}
-
-\newglossaryentry{sentence of FOL}{
-	name = sentence (of FOL),
-	text = sentence of FOL,
-	description = {A \gls{formula} of FOL which has no \glspl{bound variable}}
-}
 
 
 \section{Convenções sobre parênteses}

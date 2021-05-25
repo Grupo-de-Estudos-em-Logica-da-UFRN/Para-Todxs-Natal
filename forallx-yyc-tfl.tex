@@ -111,7 +111,7 @@ Obtemos novas letras sentenciais adicionando subíndices às letras do alfabeto.
 Por exemplo, abaixo temos cinco letras sentenciais diferentes:
 	$$A, P, P_1, P_2, A_{234}$$
 Usaremos as letras sentenciais para representar ou \emph{simbolizar} certas sentenças em português.
-Para fazer isso, precisamos fornecer uma \define{chave de simbolizacao}, tal como a seguinte
+Para fazer isso, precisamos fornecer uma \define{symbolization key}, tal como a seguinte
 	\begin{ekey}
 		\item[A] Chove lá fora
 		\item[C] Sheila está melancólica
@@ -258,10 +258,10 @@ Nossa chave de simbolização pode ser:
 A sentença \ref{and1} pode, então, ser simbolizada como `$S$' e a sentença \ref{and2} como `$B$'.
 A sentença \ref{and3} diz, aproximadamente, `A e B'.
 Usaremos um outro conectivo da lógica para lidar com este `e'.
-Vamos usar, para isso, o símbolo `\eand', que chamamos na tabela da p. 31 de \define{conjuncao}.
+Vamos usar, para isso, o símbolo `\eand', que chamamos na tabela da p. 31 de \define{conjunction}.
 Assim, simbolizaremos a sentença \ref{and3} como:
 $$(S \eand B)$$
-Dizemos que `$S$' e `$B$' são os dois \define{conjuntos} da conjunção `$(S \eand B)$'.
+Dizemos que `$S$' e `$B$' são os dois \definepl{conjunct} da conjunção `$(S \eand B)$'.
 
 Resumindo, simbolizamos as sentenças  \ref{and1} a \ref{and3} acima como:
 	\begin{ekey}
@@ -384,10 +384,10 @@ Podemos, para estas sentenças, usar a seguinte chave de simbolização:
 	\end{ekey}
 A sentença \ref{or1} diz, aproximadamente, que `$F$ ou $T$'.
 Usaremos um símbolo novo da LVF para simbolizar este `ou'.
-É o símbolo `$\eor$' que na tabela da página \pageref{table:TFLConnectives} foi chamado de \define{disjuncao}. 
+É o símbolo `$\eor$' que na tabela da página \pageref{table:TFLConnectives} foi chamado de \define{disjunction}. 
 A sentença \ref{or1} é, então, simbolizada como:
 $$(F \eor T)$$
-Além disso, dizemos que `$F$' e `$T$' são os \define{disjuntos} da disjunção `$(F \eor T)$'.
+Além disso, dizemos que `$F$' e `$T$' são os \definepl{disjunct} da disjunção `$(F \eor T)$'.
 
 A sentença \ref{or2} é apenas um pouco mais complicada.
 Há dois sujeitos (ou, como dizem os gramáticos, um sujeito composto) para os quais uma única predicação é feita.
@@ -401,14 +401,14 @@ A regra para saber se usamos a disjunção ($\eor$) na simbolização de uma sen
 		Cada um dos disjuntos deve ser uma sentença.
 	}
 Às vezes, em português, a palavra `ou' é usada de uma maneira que exclui a possibilidade de que ambos os disjuntos sejam verdadeiros.
-Isso é chamado de \define{ou exclusivo}.
+Isso é chamado de \xdefine{ou exclusivo}.
 Um caso claro de uso do ou exclusivo ocorre quando no cardápio de uma lanchonete você lê ``todos os sanduíches vêm acompanhados de um refrigerante \emph{ou} um suco''.
 Você pode beber o refrigerante, pode beber o suco, mas se quiser beber \emph{os dois}, terá que pagar a mais por isso.
 
 Outras vezes, a palavra `ou' permite a possibilidade de ambos os disjuntos serem verdadeiros.
 Este é provavelmente o caso da sentença \ref{or2}, acima.
 Fátima pode jogar sozinha, Omar pode jogar sozinho, ou os dois podem jogar.
-A sentença \ref{or2} apenas diz que \emph{pelo menos} um deles vai jogar videogame. Isso é chamado de \define{ou inclusivo}.
+A sentença \ref{or2} apenas diz que \emph{pelo menos} um deles vai jogar videogame. Isso é chamado de \xdefine{ou inclusivo}.
 Na lógica, adotou-se a convenção de que o símbolo `\eor' da LVF sempre simboliza um \emph{ou inclusivo}.
 Abaixo veremos como simbolizar um ou exclusivo na LVF usando os símbolos que já vimos `$\eor$', `$\eand$' e `$\enot$'.
 
@@ -471,8 +471,8 @@ A sentença \ref{if1} tem aproximadamente esta forma: `se C, então R'.
 Usaremos um símbolo novo, `\eif', para simbolizar essa estrutura `se\ldots, então\ldots'.
 Deste modo, simbolizamos a sentença \ref{if1} como:
 $$(C \eif R)$$
-O conectivo `\eif' é chamado de \define{condicional}.
-Na sentença condicional `$(C \eif R)$', `$C$' é chamado de \define{antecedente} e `$R$' é chamado de \define{consequente}.
+O conectivo `\eif' é chamado de \define{conditional}.
+Na sentença condicional `$(C \eif R)$', `$C$' é chamado de \define{antecedent} e `$R$' é chamado de \define{consequent}.
 
 A sentença \ref{if2} também é um condicional.
 Como a palavra ``se'' aparece na segunda metade da frase, pode ser tentador simbolizá-la da mesma maneira que a sentença \ref{if1}, como `$(C \eif R)$'.
@@ -533,7 +533,7 @@ Ela pode ser parafraseada como ``Olavo é um asno se Olavo for um mamífero, e O
 Esta paráfrase nada mais é do que a conjunção das sentenças \ref{iff1} e \ref{iff2}.
 Portanto, podemos simbolizá-la como:
 $$((A_3 \eif M_3) \eand (M_3 \eif A_3))$$
-Nós chamamos uma sentença deste tipo de \define{bicondicional}, porque corresponde ao condicional em ambas as direções.
+Nós chamamos uma sentença deste tipo de \define{biconditional}, porque corresponde ao condicional em ambas as direções.
 
 Poderíamos simbolizar todos os bicondicionais dessa maneira.
 Portanto, assim como não precisamos de um novo símbolo da LVF para lidar com o \emph{ou exclusivo}, também não precisamos de um novo símbolo da LVF para lidar com os bicondicionais.
@@ -543,7 +543,7 @@ $$(A_3 \eiff M_3)$$
 A expressão ``se e somente se'' é bastante usada em filosofia, matemática e lógica.
 Por uma questão de economia, ela é costumeiramente abreviada por `sse'.
 Nós vamos seguir esta prática neste livro.
-Portanto, `se' com apenas \emph {um} `s' é o condicional.
+Portanto, `se' com apenas \emph{um} `s' é o condicional.
 Mas `sse' com \emph{dois} `s's é o bicondicional.
 Diante disso, podemos apresentar a regra que indica se usamos o bicondicional (\eiff) na simbolização de uma sentença como:
 	\factoidbox{
@@ -830,7 +830,7 @@ Conectivos: & $\enot,\eand,\eor,\eif,\eiff$\\
 Parênteses: &( , )\\
 \end{tabular}
 \end{center}
-Definimos uma \define{expressao da LVF} como qualquer sequência de símbolos da LVF.
+Definimos uma \xdefine{expressao da LVF} como qualquer sequência de símbolos da LVF.
 Pegue uma quantidade qualquer de símbolos da LVF e escreva-os, em qualquer ordem, e você terá uma expressão da LVF.
 
 
@@ -853,7 +853,7 @@ Considere a negação: dada qualquer sentença \meta{A} da LVF, $\enot\meta{A}$ 
 
 Podemos fazer o mesmo para cada um dos outros conectivos da LVF.
 Por exemplo, se \meta{A} e \meta{B} são sentenças da LVF, então $(\meta{A}\eand\meta{B})$ é uma sentença da LVF.
-Fornecendo cláusulas como essa para todos os conectivos, chegamos à seguinte definição formal para uma \define{sentenca da LVF}:
+Fornecendo cláusulas como essa para todos os conectivos, chegamos à seguinte definição formal para uma \define{sentence of TFL}:
 {\small 
 	\factoidbox{\label{TFLsentences}
 	\begin{enumerate}
@@ -906,7 +906,7 @@ Pois de acordo com a quarta cláusula da definição `$(\enot Q \eor R)$' é uma
 
 Cada sentença é harmoniosamente construída a partir de letras sentenciais.
 Quando estamos diante de uma \emph{sentença} diferente de uma letra sentencial, vemos que sempre há um conectivo que é o \emph{último} que foi introduzido na construção dessa sentença.
-Chamamos este conectivo de o \define{conectivo principal} da sentença.
+Chamamos este conectivo de o \define{main logical operator} da sentença.
 No caso de `$\enot\enot\enot D$', por exemplo, o conectivo principal é o primeiro `$\enot$' (o mais à esquerda).
 No caso de `$(P \eand \enot (\enot Q \eor R))$', o conectivo principal é o `$\eand$'.
 Já no caso de `$((\enot E \eor F) \eif \enot\enot G)$', o conectivo principal  é `$\eif$'.
@@ -958,7 +958,7 @@ Esta última sentença, por sua vez, foi construída colocando um bicondicional 
 A primeira dessas duas sentenças---uma subsentença da sentença original---tem o `\enot' como seu conectivo principal.
 Portanto, o escopo desta negação é apenas `$(R \eand B)$'.
 De forma geral:
-	\factoidbox{O \define{escopo} de um conectivo (em uma sentença) é a subsentença da qual esse conectivo é o conectivo principal.}
+	\factoidbox{O \define{scope} de um conectivo (em uma sentença) é a subsentença da qual esse conectivo é o conectivo principal.}
 
 \section{Convenções sobre o uso de parênteses}
 \label{TFLconventions}
@@ -1018,7 +1018,7 @@ $$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$
 \chapter{Ambiguidade}\label{s:AbmbiguityTFL}
 
 %In English, sentences can be \define{ambiguous}, i.e., they can have more than one meaning.  There are many sources of ambiguity. One is \emph{lexical ambiguity:} a sentence can contain words which have more than one meaning.  For instance, `bank' can mean the bank of a river, or a financial institution. So I might say that `I went to the bank' when I took a stroll along the river, or when I went to deposit a check.  Depending on the situation, a different meaning of `bank' is intended, and so the sentence, when uttered in these different contexts, expresses different meanings.
-Em português as sentenças podem ser \define{ambiguas}, ou seja, podem ter mais de um significado. Existem muitas fontes de ambiguidade. Uma delas é a \emph{ambiguidade lexical:} uma sentença pode conter palavras que têm mais de um significado. Por exemplo, `banco' pode significar um móvel que serve como assento ou uma instituição financeira. Assim, posso dizer que `estava no banco aqui perto', apontando para onde estava sentado ou para a instituição financeira no outro lado da rua. Dependendo da situação, um significado diferente de `banco' é pretendido e, portanto, a sentença expressa diferentes significados.
+Em português as sentenças podem ser \xdefine{ambiguas}, ou seja, podem ter mais de um significado. Existem muitas fontes de ambiguidade. Uma delas é a \emph{ambiguidade lexical:} uma sentença pode conter palavras que têm mais de um significado. Por exemplo, `banco' pode significar um móvel que serve como assento ou uma instituição financeira. Assim, posso dizer que `estava no banco aqui perto', apontando para onde estava sentado ou para a instituição financeira no outro lado da rua. Dependendo da situação, um significado diferente de `banco' é pretendido e, portanto, a sentença expressa diferentes significados.
 
 %A different kind of ambiguity is \emph{structural ambiguity}.  This arises when a sentence can be interpreted in different ways, and depending on the interpretation, a different meaning is selected.  A famous example due to Noam Chomsky is the following:
 %\begin{earg}
@@ -1043,7 +1043,7 @@ Quando a frase é pronunciada, geralmente apenas um significado é pretendido. �
 \end{earg} 
 
 %Ambiguity is related to, but not the same as, vagueness. An adjective, for instance `rich' or `tall,' is \define{vague} when it is not always possible to determine if it applies or not.  For instance, a person who's 6~ft 4~in (1.9~m) tall is pretty clearly tall, but a building that size is tiny.  Here, context has a role to play in determining what the clear cases and clear non-cases are (`tall for a person,' `tall for a basketball player,' `tall for a building'). Even when the context is clear, however, there will still be cases that fall in a middle range.
-A ambiguidade está relacionada à vagueza, mas elas não são a mesma coisa. Um adjetivo, como `rico' ou `alto', é \define{vago} quando nem sempre é possível determinar se eles se aplicam ou não. Por exemplo, uma pessoa com 1,9m de altura é claramente alta, mas um prédio desse tamanho é minúsculo. Aqui, o contexto tem um papel a desempenhar na determinação de quais são os casos claros de aplicação e de não-aplicação do adjetivo (`alto para uma pessoa', `alto para um jogador de basquete', `alto para um edifício'). Mesmo quando o contexto é claro, no entanto, ainda haverá casos que se enquadram em uma faixa intermediária.
+A ambiguidade está relacionada à vagueza, mas elas não são a mesma coisa. Um adjetivo, como `rico' ou `alto', é \xdefine{vago} quando nem sempre é possível determinar se eles se aplicam ou não. Por exemplo, uma pessoa com 1,9m de altura é claramente alta, mas um prédio desse tamanho é minúsculo. Aqui, o contexto tem um papel a desempenhar na determinação de quais são os casos claros de aplicação e de não-aplicação do adjetivo (`alto para uma pessoa', `alto para um jogador de basquete', `alto para um edifício'). Mesmo quando o contexto é claro, no entanto, ainda haverá casos que se enquadram em uma faixa intermediária.
 
 %In TFL, we generally aim to avoid ambiguity. We will try to give our symbolization keys in such a way that they do not use ambiguous words or  disambiguate them if a word has different meanings. So, e.g., your symbolization key will need two different sentence letters for `Rebecca went to the (money) bank' and `Rebecca went to the (river) bank.' Vagueness is harder to avoid. Since we have stipulated that every case (and later, every valuation) must make every basic sentence (or sentence letter) either true or false and nothing in between, we cannot accommodate borderline cases in TFL.
 Na LVF, geralmente buscamos evitar ambiguidades. Tentaremos fazer com que nossas chaves de simbolização não usem palavras ambíguas ou que eliminem a ambiguidade quando a palavra usada tiver significados diferentes. Então, por exemplo, a chave de simbolização precisará de duas letras sentenciais diferentes para `Ivo está trabalhando no banco (instituição financeira)' e `Ivo está trabalhando no banco (de dados)'. A imprecisão é mais difícil de evitar. Uma vez que estipulamos que cada caso (e posteriormente, cada valoração) deve tornar cada sentença básica (ou letra sentencial) verdadeira ou falsa, sem meio-termo, não podemos acomodar casos limítrofes na LVF. 
@@ -1222,8 +1222,8 @@ As aspas simples, em nosso contexto aqui, indicam que você está deixando de fa
 Essas convenções gerais sobre o uso de aspas são de particular importância para nós.
 Afinal, estamos descrevendo uma linguagem formal aqui, a LVF, e, portanto, muito frequentemente \emph{mencionaremos} as expressões da LVF.
 
-Quando falamos sobre uma linguagem, a linguagem \emph{sobre a qual} estamos falando é chamada de \define {linguagem objeto}.
-E a linguagem \emph{que usamos para falar sobre} a linguagem objeto é chamada de \define{metalinguagem}.
+Quando falamos sobre uma linguagem, a linguagem \emph{sobre a qual} estamos falando é chamada de \define{object language}.
+E a linguagem \emph{que usamos para falar sobre} a linguagem objeto é chamada de \define{metalanguage}.
 \label{def.metalanguage}
 
 A linguagem objeto que tem nos ocupado até aqui e também nas próximas Partes deste livro é a linguagem formal que estamos desenvolvendo: a LVF.
@@ -1284,10 +1284,10 @@ nós não poderíamos, com esta formulação, determinar se `$\enot B$' ou `$\en
 Fazendo uma analogia com a matemática, é como se as letras sentencias tais como `$A$', `$D_3$',\ldots\ fossem os números, tais como $2$, $17$, \ldots\ e as metavariáveis tais como \meta{A}, \meta{B}, \ldots\ fossem as variáveis, tais como $n$, $x$, \ldots\ que podem assumir quaisquer valores entre os números.
 Para enfatizar:
 	\factoidbox{
-`$\meta{A}$' é um símbolo, que chamamos de \define{metavariavel} e que usamos para falar sobre qualquer expressão da LVF.
+`$\meta{A}$' é um símbolo, que chamamos de \define{metavariables} e que usamos para falar sobre qualquer expressão da LVF.}
 
 `$A$' é apenas uma letra sentencial específica da LVF.
-Nós incluímos as metavariáveis `$\meta{A}$', `$\meta{B}$', `$\meta{C}$',\ldots\ ao português, para construir nossa metalinguagem, o \emph{português aumentado}, que usamos para falar da LVF.}
+Nós incluímos as metavariáveis `$\meta{A}$', `$\meta{B}$', `$\meta{C}$',\ldots\ ao português, para construir nossa metalinguagem, o \emph{português aumentado}, que usamos para falar da LVF.
 
 Mas este último exemplo suscita uma complicação adicional para nossas convenções sobre o uso das aspas.
 Nós não incluímos aspas na segunda cláusula de nossa definição indutiva. Deveríamos ter feito isso?

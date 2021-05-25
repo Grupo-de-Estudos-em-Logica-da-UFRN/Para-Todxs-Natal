@@ -11,7 +11,7 @@
 Às vezes é útil considerar grupos restritos de sentenças com formas particularmente simples.
 Por exemplo, podemos considerar o grupo restrito formado pelas sentenças atômicas e pelas sentenças que são negações de sentenças atômicas:
 $$A, \enot B, A_3, \enot F_2, ...$$
-As sentenças deste grupo  são comumente chamadas de \define{literais}.
+As sentenças deste grupo  são comumente chamadas de \xdefine{literais}.
 Podemos criar um grupo mais amplo, acrescentando aos literais sentenças que são conjunções arbitrárias de literais:
 	\begin{align*}
 			& A_3 \\
@@ -30,18 +30,13 @@ Podemos ampliar mais um pouco este grupo e acrescentar a ele sentenças que são
   		& A \eor (C \eand \enot P_{234} \eand P_{233} \eand Q) \eor \enot B\\
   		& \ \ \vdots
 	\end{align*}
-Dizemos que as sentenças deste grupo mais amplo estão na \define{forma normal disjuntiva}, cuja definição formal pode ser assim apresentada:
+Dizemos que as sentenças deste grupo mais amplo estão na \define{disjunctive normal form}, cuja definição formal pode ser assim apresentada:
 uma sentença está na \textit{forma normal disjuntiva} se e somente se ela satisfezer todas as seguintes condições:
 	\begin{earg}
 		\item[(\textsc{fnd 1})] Nenhum conectivo que não seja negação, conjunção ou disjunção ocorre na sentença;
 		\item[(\textsc{fnd 2})] Qualquer negação que ocorra na sentença é a negação de uma letra sentencial;
 		\item[(\textsc{fnd 3})] Qualquer conjunção que ocorra na sentença é conjunção de literais; ou seja, apenas sentenças atômicas ou negações de sentenças atômicas podem ser conjuntos das conjunções.
 	\end{earg}
-\newglossaryentry{disjunctive normal form}{
-  name = disjunctive normal form (DNF),
-  text = disjunctive normal form,
-  description = {a sentence which is a disjunction of conjunctions of atomic sentences or negated atomic sentences}
-}
 Um outro modo de entender o grupo de sentenças que estão na forma normal disjuntiva é definindo-o como o grupo composto pelas sentenças que pertencem a qualquer um dos seguintes 4 grupos:
 \begin{earg}
 		\item[\textsc{grupo 1} - letras sentenciais:] \ \\
@@ -200,11 +195,6 @@ Uma sentença está na FNC se e somente se ela satisfaz todas as seguintes condi
 		\item[(\textsc{fnc 3})] Qualquer disjunção que ocorra na sentença tem literais como disjuntos; ou seja, apenas sentenças atômicas ou negações de sentenças atômicas podem ser disjuntos das disjunções.
 	\end{earg}
 
-\newglossaryentry{forma normal conjuntiva}{
-  name = conjunctive normal form (DNF),
-  text = conjunctive normal form,
-  description = {a sentence which is a conjunction of disjunctions of atomic sentences or negated atomic sentences}
-}
 \noindent A definição da FNC é, portanto, absolutamente análoga à definição da FND, com a única diferença de que as conjunções e as disjunções trocaram de papel.
 Ou seja, enquanto a forma geral das sentenças na FND é a de uma \textit{disjunção de conjunções} de literais, o aspecto mais geral de uma sentença na FNC será o de uma \textit{conjunção de disjunções} de literais:
 $$(\pm \meta{A}_1 \lor \ldots \lor \pm \meta{A}_i) \land (\pm \meta{A}_{i+1} \lor \ldots \lor \pm\meta{A}_j) \land \ldots \land (\pm\meta{A}_{m+1} \lor\ldots \lor \pm \meta{A}_n)$$
@@ -270,11 +260,6 @@ Vamos refazer esta pergunta de um modo mais geral e preciso.
 Antes disso, aqui vai um pouco de vocabulário.
 Chamaremos um conjunto de conectivos de \define{expressivamente adequado} se e somente se as sentenças construídas apenas com estes conectivos são capazes de nos dar todas as tabelas de verdade possíveis.
 Dito de outro modo, um conjunto de conectivos é \emph{expressivamente adequado} se e somente se dada qualquer tabela de verdade, existe alguma sentença com todos os seus conectivos pertencentes a este grupo e que tem exatamente esta tabela de verdade.
-
-\newglossaryentry{expressively adequate}{
-  name = {expressive adequacy},
-  text = {expressively adequate},
-  description = {property of a collection of connectives which holds iff every possible truth table is the truth table of a sentence involving only those connectives}}
 
 O ponto geral aqui é que quando um conjunto de conectivos é expressivamente adequado, podemos, com ele, construir sentenças que nos dão qualquer tabela de verdade.
 Todas as tabelas de verdade são alcançáveis através de um conjunto de conectivos expressivamente adequado.
@@ -443,7 +428,7 @@ Em primeiro lugar, um pouco de notação.
 		Dito de um modo ainda mais detalhado, `$\Gamma \entails \meta{C}$' denota que qualquer valoração (linha de tabela de verdade) na qual todas as sentenças de $\Gamma$ são verdadeiras também torna $\meta{C}$ verdadeira.}
 	\item Por fim, vamos nos lembrar que símbolo `$\proves$' indica a existência de uma \textit{prova} formal. Ou seja, $\Gamma \proves \meta{C}$ denota que há uma prova que termina com $\meta{C}$ cujas suposições não descartadas estão todas entre as sentenças de $\Gamma$.	
 \end{itemize}
-Dizemos, então, que um sistema formal de provas é \define{correto} (com relação a uma dada semântica) \emph{se e somente se}, sempre que houver uma prova formal de $\meta{C}$ cujas suposições não descartadas estão todas em $\Gamma$, então $\Gamma$ sustenta $\meta{C}$ (na semântica considerada). 
+Dizemos, então, que um sistema formal de provas é \define{soundness} (com relação a uma dada semântica) \emph{se e somente se}, sempre que houver uma prova formal de $\meta{C}$ cujas suposições não descartadas estão todas em $\Gamma$, então $\Gamma$ sustenta $\meta{C}$ (na semântica considerada). 
 Usando as notações de metalinguagem que acabamos de relembrar, podemos dizer, então, que provar que o sistema formal da LVF é correto equivale a provar o seguinte teorema:
 
 \begin{factoidboxe}\textbf
@@ -456,7 +441,7 @@ Como uma prova envolve apenas repetidas aplicações destas regras, esta verific
 
 %====== versão modificada em 04-04-2021 ======%
 Em primeiro lugar, precisamos tornar mais precisa essa idéia de ``levar ao erro''.
-Vamos chamar uma linha de uma prova de \define{inocente} se a sentença desta linha é \textit{sustentada} pelas suposições das quais esta linha \textit{depende}.
+Vamos chamar uma linha de uma prova de \xdefine{inocente} se a sentença desta linha é \textit{sustentada} pelas suposições das quais esta linha \textit{depende}.
 
 Lembremos que uma linha depende de todas as suposições ainda não descartadas em linhas anteriores da prova.
 Considere, por exemplo, que $\meta{S}_1, \ldots, \meta{S}_k$ sejam todas as suposições ainda não descartadas por linhas anteriores à linha $n$ em uma prova, e que $\meta{A}_n$ seja a sentença da linha $n$.
@@ -511,7 +496,7 @@ Veja que partimos de $\Gamma \proves \meta{C}$ e chegamos em $\Gamma \entails \m
 Resta agora provar o Lema da Inocência.
 Para fazer isso começamos observando que cada linha de qualquer prova da LVF ou é uma suposição, ou é obtida aplicando-se alguma regra.
 Como todas as suposições são por definição inocentes, o que precisamos mostrar é que nenhuma aplicação de qualquer regra de inferência nos levará ao erro.
-Para tornar essa ideia mais precisa, vamos definir mais uma noção, a de \define{regra confiavel}.
+Para tornar essa ideia mais precisa, vamos definir mais uma noção, a de \xdefine{regra confiavel}.
 Dada uma prova qualquer da LVF e uma aplicação de regra qualquer (digamos que a linha $n$ de uma prova contém a sentença $\meta{A}$ obtida pela aplicação de uma regra qualquer G)
 		   \begin{proof}
 			   \have[\vdots]{ab}{\ \vdots}

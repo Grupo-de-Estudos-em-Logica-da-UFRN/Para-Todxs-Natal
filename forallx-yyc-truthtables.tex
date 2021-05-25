@@ -108,7 +108,7 @@ Sem surpresa, o bicondicional é simétrico.
 \section{A ideia da verofuncionalidade}
 Vamos introduzir uma ideia importante.
 	\factoidbox{
-		Um conectivo é \define{verofuncional} (também chamado de \define{funcao de verdade}) se o valor de verdade de uma sentença em que esse conectivo é o conectivo principal for determinado exclusivamente pelos valores de verdade das sentenças que a constituem.
+		Um conectivo é \define{truth-functional connective} (também chamado de \xdefine{funcao de verdade}) se o valor de verdade de uma sentença em que esse conectivo é o conectivo principal for determinado exclusivamente pelos valores de verdade das sentenças que a constituem.
 	}
         
 Todos os conectivos da LVF são realmente verofuncionais (funções de verdade).
@@ -260,7 +260,7 @@ Dissemos, por exemplo, que uma sentença LVF como `$C$' deve ter o mesmo valor d
 Mas também podemos atribuir valores de verdade \emph{diretamente} às letras sentenciais da LVF.
 Podemos simplesmente estipular que `$C$' deve ser verdadeira, ou estipular que deve ser falsa.
 	\factoidbox{
-		Uma \define{valoracao} é qualquer atribuição de valores de verdade a um grupo particular de sentenças da LVF.
+		Uma \define{valuation} é qualquer atribuição de valores de verdade a um grupo particular de sentenças da LVF.
 	}
 
 O poder das tabelas de verdade consiste no seguinte:
@@ -351,7 +351,7 @@ Quando você trabalhar nas suas tabelas da verdade, enfatize-as da mesma forma (
 
 
 \section{Construindo tabelas de verdade completas}
-Uma \define{tabela de verdade completa} para uma sentença \meta{A} tem uma linha para cada atribuição possível de Verdadeiro ou Falso para as letras sentencias presentes na sentença.
+Uma \define{complete truth table} para uma sentença \meta{A} tem uma linha para cada atribuição possível de Verdadeiro ou Falso para as letras sentencias presentes na sentença.
 Cada linha da tabela corresponde a uma \emph{valoração} das letras sentencias de \meta{A}, e uma tabela de verdade completa possuirá, portanto, uma linha para cada uma destas valorações.
 
 Então o tamanho (a quantidade de linhas) de uma tabela de verdade completa depende do número de letras sentenciais diferentes na tabela.
@@ -708,7 +708,7 @@ No Capítulo \ref{s:BasicNotions}, introduzimos as noções gerais de \emph{verd
 Estas duas noções têm representantes mais específicas na LVF.
 Comecemos com um representante para a noção de verdade necessária.
 	\factoidbox{
-		Uma sentença $\meta{A}$ é uma \define{tautologia} se e somente se ela for verdadeira em todas as valorações.
+		Uma sentença $\meta{A}$ é uma \define{tautology} se e somente se ela for verdadeira em todas as valorações.
 	}
 
 Podemos usar as tabelas de verdade para determinar se uma sentença é uma tautologia ou não.
@@ -741,7 +741,7 @@ algumas verdades necessárias não são tautologias, mas todas as tautologias s�
 
 De modo semelhante, temos também um representante na LVF para a noção de falsidade necessária:
 	\factoidbox{
-		Uma sentença $\meta{A}$ é uma \define{contradicao} (na LVF) se e somente se ela for falsa em todas as valorações.
+		Uma sentença $\meta{A}$ é uma \define{contradiction of TFL} (na LVF) se e somente se ela for falsa em todas as valorações.
 	}
 
 Aqui também podemos usar as tabelas de verdade para determinar se uma sentença é uma contradição ou não.
@@ -762,7 +762,7 @@ $C$&$[($&$C$&\eiff&$C$&$)$&\eif&$C$&$]$&\eand&\enot&$($&$C$&\eif&$C$&$)$\\
 \section{Equivalência}
 Eis aqui uma noção bastante útil:
 	\factoidbox{
-		$\meta{A}$ e $\meta{B}$ são sentenças \define{equivalentes} (na LVF) se e somente se, em todas as valorações, seus valores de verdade são idênticos, ou seja, se e somente se não há valoração na qual o valor de verdade de $\meta{A}$ seja distinto do valor de verdade de $\meta{B}$.
+		$\meta{A}$ e $\meta{B}$ são sentenças \definepl{equivalent} (na LVF) se e somente se, em todas as valorações, seus valores de verdade são idênticos, ou seja, se e somente se não há valoração na qual o valor de verdade de $\meta{A}$ seja distinto do valor de verdade de $\meta{B}$.
 	}
 
 Essa noção já foi utilizada por nós na Seção \ref{s:MoreBracketingConventions}, quando dissemos que as sentenças `$(A \eand B) \eand C$' e `$A \eand (B \eand C)$' são equivalentes.
@@ -798,10 +798,10 @@ Como em cada linha os valores são os mesmos, as duas sentenças são equivalent
 No Capítulo \ref{s:BasicNotions}, dissemos que as sentenças de um grupo são compatíveis (conjuntamente possíveis) se for possível que todas elas sejam conjuntamente verdadeiras (verdadeiras ao mesmo tempo, na mesma circunstância).
 Também para esta noção podemos oferecer um representante na LVF:
 	\factoidbox{
-		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são \define{conjuntamente satisfatorias} (na LVF) se e somente se há alguma valoração na qual todas elas são verdadeiras.
+		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são \define{satisfiability in TFL} (na LVF) se e somente se há alguma valoração na qual todas elas são verdadeiras.
 	}
 
-Derivativamente, podemos definir que as sentenças de um grupo são \define{conjuntamente insatisfatorias} se não houver nenhuma valoração na qual todas elas sejam verdadeiras.
+Derivativamente, podemos definir que as sentenças de um grupo são \xdefine{conjuntamente insatisfatorias} se não houver nenhuma valoração na qual todas elas sejam verdadeiras.
 Novamente, é fácil testar a satisfação e a insatisfação conjuntas usando tabelas de verdade. 
 Por exemplo, a tabela de verdade abaixo mostra que as sentenças
 \begin{center}
@@ -838,7 +838,7 @@ $A$&$B$&$A$&\eand&$B$&\enot&$A$&\eand&$B$\\
 \section{Sustentação e validade}\label{s:SustentValid}
 A ideia a seguir está intimamente ligada à noção de satisfação conjunta:
 	\factoidbox{
-		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \define{sustentam} (na LVF) a sentença $\meta{C}$ se não há valoração na qual $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são todas verdadeiras e $\meta{C}$ é falsa.
+		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \xdefine{sustentam} (na LVF) a sentença $\meta{C}$ se não há valoração na qual $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são todas verdadeiras e $\meta{C}$ é falsa.
 	}
  
 Novamente, não é difícil verificar a sustentação com uma tabela de verdade.
@@ -1703,7 +1703,7 @@ Podemos fazer isso  com uma \emph{tabela de verdade parcial}.
 Suponha que queiramos mostrar que a sentença
 $$(U \eand T) \eif (S \eand W)$$
 \emph{não} é uma tautologia.
-Montamos, para isso, uma \define{tabela de verdade parcial}:
+Montamos, para isso, uma \xdefine{tabela de verdade parcial}:
 \begin{center}
 \begin{tabular}{c c c c |d e e e e e f}
 $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\

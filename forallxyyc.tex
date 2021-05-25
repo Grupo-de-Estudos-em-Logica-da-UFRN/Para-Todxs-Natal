@@ -1,5 +1,5 @@
 %\triangleright\bullet\leftthreetimes% !TeX root = ./forallxyyc.tex
-\documentclass[openany,oneside,11pt]{memoir}
+\documentclass[openany,oneside,10pt]{memoir}
 
 \usepackage{forallxyyc}
 \usepackage[absolute,overlay]{textpos}
@@ -29,11 +29,14 @@
 
 \checkandfixthelayout
 
-\definecolor{lyallpink}{RGB}{222,31,149}
+%\definecolor{lyallpink}{RGB}{222,31,149}
+\definecolor{lyallpink}{RGB}{22,79,192}
 \colorlet{leadbeater}{lyallpink}
 \colorlet{dkleadbeater}{lyallpink!80!black}
 \colorlet{ltleadbeater}{lyallpink!50}
 \colorlet{vltleadbeater}{lyallpink!3}
+
+\input{forallx-yyc-glossario}
 
 \begin{document}
 
@@ -47,46 +50,48 @@
 \thispagestyle{empty}
 
 \begin{textblock*}{\stockwidth}(0in,3.5in)
-  \noindent\includegraphics{forallx-coverart-screen.pdf}
+  \noindent\includegraphics{assets/forallx-coverart-screen.png}
 \end{textblock*}
 
 % make front cover
 \begin{textblock*}{0in}(0in,0in)
+
+
   \noindent\hfill
   \begin{minipage}[b][\stockheight][s]{.9\stockwidth}
     \begin{raggedleft}
       \vspace*{1.7cm}
       \hfill
-      \sffamily\fontsize{66pt}{0pt}\selectfont
+     \sffamily\fontsize{46pt}{0pt}\selectfont %V2
       \color{lyallpink}
-      \textbf{forall}%
-      \fontsize{80pt}{0pt}\selectfont\rmfamily\textit{\textbf{x}\/}
-                    
+      %\textbf{Para Tod{\fontsize{56pt}{0pt}\selectfont\rmfamily\hspace{-2pt}\textit{x}}\hspace{-3.5pt}s} %V1
+      \textbf{Para Tod{\fontsize{56pt}{0pt}\selectfont\rmfamily\hspace{-3.5pt}\textit{x}}\hspace{-1.5pt}s}                   
       \vskip.5cm
           
-      \sffamily\fontsize{24pt}{0pt}\selectfont
+      \sffamily\fontsize{32pt}{0pt}\selectfont %V1
+      \uppercase{\textbf{Natal}} %V2
+      
+      %\definecolor{beaublue}{rgb}{0.33, 0.33, 0.33}
       \color{black}
-      \textbf{\uppercase{Calgary}}
-
-      \vspace*{1cm}
-      \color{black}
+      \vspace*{1.3cm}
       \sffamily
-      \fontsize{20pt}{22pt}\selectfont
-      \textbf{An Introduction to\\ Formal Logic}
+      \fontsize{24pt}{23pt}\selectfont
+      \textbf{uma introdução à\\ lógica formal}
 
       \vfill
       \fontsize{11pt}{14pt}\selectfont
-      \color{white}
-      \textbf{P.~D. Magnus}\\
-      \textbf{Tim Button}\\
-      \textit{with additions by}\\
-      \textbf{J.~Robert Loftis}\\
-      \textbf{Robert Trueman}\\
-      \textit{remixed and revised by}\\
-      \textbf{Aaron Thomas-Bolduc}\\ \textbf{Richard Zach}\par
-      \vspace{1cm}
-      \textbf{\forallxversion}\par
-      \vspace{1cm}
+      %\color{white}
+     % \textbf{P.~D. Magnus}\\
+      %\textbf{Tim Button}\\
+      %\textit{with additions by}\\
+      %\textbf{J.~Robert Loftis}\\
+      %\textbf{Robert Trueman}\\
+      %\textit{remixed and revised by}\\
+      %\textbf{Aaron Thomas-Bolduc}\\ \textbf{Richard Zach}\par
+      %\vspace{1cm}
+      %\textbf{\forallxversion}\par
+      %\textbf{\today}\par
+     % \vspace{1cm}
     \end{raggedleft}
   \end{minipage}
   \hspace*{1cm}

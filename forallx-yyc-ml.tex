@@ -449,7 +449,7 @@ Neste capítulo vamos tratar dos aspectos \emph{semânticos} da Lógica modal.  
 
 A grande ideia por trás da semântica da LM é que as sentenças não são apenas verdadeiras ou falsas e ponto final.  Dizemos que uma  sentença é verdadeira ou falsa em \emph{um dado mundo possível}. Assim,  a mesma sentença pode muito bem ser verdadeira em alguns mundos,  mas falsa em outros. Grosso modo, dizemos que $\ebox \metav{A}$ é verdadeira   se e somente se $\metav{A}$ é verdadeira em \emph{todos} os mundos possíveis, e $\ediamond\metav{A}$ é verdadeira se e somente se  $\metav{A}$ é verdadeira em \emph{algum} mundo.
 
-Precisamos refinar essa ideia e torná-la mais precisa. Para fazer isso,  vamos especificar o que é uma  \emph{interpretação} para a LM. A primeira coisa que você precisa incluir em uma interpretação é uma coleção de \emph{mundos possíveis}. Mas, o que exatamente é um mundo possível? A ideia intuitiva é que um mundo possível é outra maneira que este mundo poderia ter sido. Há uma grande discussão filosófica sobre  essa questão que examinaremos com mais detalhes posteriormente. Agora, no entanto,  não precisamos nos preocupar muito com isso, pois no que diz respeito à lógica formal, os mundos possíveis podem ser o que você quiser. Tudo o que importa é que você forneça a cada interpretação uma coleção não vazia de coisas rotuladas \define{mundos possiveis}.
+Precisamos refinar essa ideia e torná-la mais precisa. Para fazer isso,  vamos especificar o que é uma  \emph{interpretação} para a LM. A primeira coisa que você precisa incluir em uma interpretação é uma coleção de \emph{mundos possíveis}. Mas, o que exatamente é um mundo possível? A ideia intuitiva é que um mundo possível é outra maneira que este mundo poderia ter sido. Há uma grande discussão filosófica sobre  essa questão que examinaremos com mais detalhes posteriormente. Agora, no entanto,  não precisamos nos preocupar muito com isso, pois no que diz respeito à lógica formal, os mundos possíveis podem ser o que você quiser. Tudo o que importa é que você forneça a cada interpretação uma coleção não vazia de coisas rotuladas \xdefine{mundos possiveis}.
  
 Uma vez escolhida  a  sua coleção de mundos possíveis, você precisa encontrar uma maneira de determinar quais sentenças da LM são verdadeiras em quais mundos possíveis. Para fazer isso, precisamos introduzir a noção de uma \emph{função de valoração}. Aqueles que estudaram matemática já estão familiarizados com a ideia geral de uma função. Mas, para aqueles que não o fizeram, uma função é uma entidade matemática que mapeia argumentos em valores. Isso pode parecer um pouco abstrato, mas alguns exemplos familiares ajudarão. Considere a função $x + 1$. Esta é uma função que recebe um número como argumento e, em seguida, fornece um número como valor. Portanto, se você inserir o número $1$ como um argumento, a função $x + 1$ fornecerá o número $2$ como valor; se você inserir o número  $2$, ela fornecerá $3$; se você inserir o número  $3$, ela fornecerá $4$ \dots{}  No caso da função $x + y$, você deve inserir dois argumentos, se quiser que ela retorne um valor: se você inserir $2$ e $3$ como seus argumentos, ela produzirá $5$; se você inserir os números  $1003$ e $2005$, ela fornecerá como resultado $3008$; e assim por diante.
 
@@ -524,13 +524,13 @@ em breve, quando começarmos a olhar para \emph{contra-interpretações}.
 Agora podemos estender todos os conceitos semânticos da  LVF para cobrir também a LM:
 \factoidbox{
 	\begin{itemize}
-		\item  $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\therefore\metav{C}$ é \define{modalmente valido }se e somente se não há nenhum mundo em qualquer interpretação em que $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ são todas verdadeiras e $\metav{C}$ é falsa.
+		\item  $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\therefore\metav{C}$ é \xdefine{modalmente valido }se e somente se não há nenhum mundo em qualquer interpretação em que $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ são todas verdadeiras e $\metav{C}$ é falsa.
 
-		\item $\metav{A}$ é uma \define{verdade modal} se e somente se $\metav{A}$ é verdadeira em todos os  mundos e   em todas as interpretações
+		\item $\metav{A}$ é uma \xdefine{verdade modal} se e somente se $\metav{A}$ é verdadeira em todos os  mundos e   em todas as interpretações
 
-		\item $\metav{A}$ é uma \define{contradicao modal} se e somente se $\metav{A}$ é falsa em todos os mundos e em todas as interpretações.
+		\item $\metav{A}$ é uma \xdefine{contradicao modal} se e somente se $\metav{A}$ é falsa em todos os mundos e em todas as interpretações.
 
-		\item $\metav{A}$ is \define{modalmente satisfatoria} se e somente se $\metav{A}$ é verdadeira  em algum mundo em alguma interpretação.
+		\item $\metav{A}$ is \xdefine{modalmente satisfatoria} se e somente se $\metav{A}$ é verdadeira  em algum mundo em alguma interpretação.
 	\end{itemize}
 }
 (De agora em diante, deixaremos de lado as qualificações "modais"  explícitas, uma vez que podem ser consideradas como lidas.)

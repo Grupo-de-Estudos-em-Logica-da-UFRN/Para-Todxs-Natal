@@ -278,8 +278,9 @@ Explique por que essas duas `provas' est\~ao \emph{incorretas}. Al\'em disso, fo
 \label{pr.justifyFOLproof}
 Nas tr\^es provas a seguir est\~ao faltando as cita\c c\~oes (regra e
 n\'umeros de linha). Adicione-as, para transform\'a-las em provas fidedignas.
-\begin{earg}
-\item \begin{fitchproof}
+
+\begin{itemize}
+\item[1.] \begin{fitchproof}
 \hypo{p1}{\forall x\exists y(\atom{R}{x,y} \eor \atom{R}{y,x})}
 \hypo{p2}{\forall x\,\enot \atom{R}{m,x}}
 \have{3}{\exists y(\atom{R}{m,y} \eor \atom{R}{y,m})}{}
@@ -292,7 +293,9 @@ n\'umeros de linha). Adicione-as, para transform\'a-las em provas fidedignas.
 \have{n}{\exists x\, \atom{R}{x,m}} {}
 \end{fitchproof}
 
-\item \begin{fitchproof}
+\item[] \
+
+\item[2.] \begin{fitchproof}
 \hypo{1}{\forall x(\exists y\,\atom{L}{x,y} \eif \forall z\,\atom{L}{z,x})}
 \hypo{2}{\atom{L}{a,b}}
 \have{3}{\exists y\,\atom{L}{a,y} \eif \forall z\atom{L}{z,a}}{}
@@ -306,7 +309,9 @@ n\'umeros de linha). Adicione-as, para transform\'a-las em provas fidedignas.
 \have{11}{\forall x\, \atom{L}{x,x}}{}
 \end{fitchproof}
 
-\item \begin{fitchproof}
+\item[] \ 
+
+\item[3.] \begin{fitchproof}
 \hypo{a}{\forall x(\atom{J}{x} \eif \atom{K}{x})}
 \hypo{b}{\exists x\,\forall y\, \atom{L}{x,y}}
 \hypo{c}{\forall x\, \atom{J}{x}}
@@ -321,7 +326,7 @@ n\'umeros de linha). Adicione-as, para transform\'a-las em provas fidedignas.
 \close
 \have{j}{\exists x(\atom{K}{x} \eand \atom{L}{x,x})}{}
 \end{fitchproof}
-\end{earg}
+\end{itemize}
  
 \problempart
 \label{pr.BarbaraEtc.proof1}
@@ -332,16 +337,17 @@ No problema A do Capítulo  \ref{s:MoreMonadic}, consideramos quinze figuras sil
 \problempart
 \label{pr.BarbaraEtc.proof2}
 Arist\'oteles e seus sucessores identificaram outras formas silog\'isticas que dependiam da "importa\c c\~ao existencial". Simbolize cada uma dessas formas de argumento na LPO e  forne\c ca suas respectivas  provas.
+
 \begin{earg}
-	\item \textbf{Barbari.} Algo \'e H. Todo G \'e F. Todo H \'e G. Portanto: Algum H \'e F.
-	\item \textbf{Celaront.} Algo \'e H. Nenhum G \'e F. Todo H \'e G. Portanto: Algum H n\~ao \'e F
-	\item \textbf{Cesaro.} Algo \'e H. Nenhum F \'e G. Todo H \'e G. Portanto: Algum H n\~ao \'e  F.
-	\item \textbf{Camestros.} Algo \'e H. Todo F \'e G. Nenhum H \'e G. Portanto: Algum H n\~ao \'e F.
-	\item \textbf{Felapton.} Algo \'e G. Nenhum G \'e F. Todo G \'e H. Portanto: Algum H n\~ao \'e F.
-	\item \textbf{Darapti.} Algo \'e G. Todo G \'e F. Todo G \'e H. Portanto: Algum H \'e F.
-	\item \textbf{Calemos.} Algo \'e H. Todo F \'e G. Nenhum G \'e H. Portanto: Algum H n\~ao \'e F.
-	\item \textbf{Fesapo.} Algo \'e G. Nenhum F is G. Todo G \'e H. Portanto: Algum H n\~ao \'e F.
-	\item \textbf{Bamalip.} Algo \'e F. Todo F \'e G. Todo G \'e H. Portanto: Algum H \'e F.
+	\item \textbf{Barbari.} Algo \'e H. Todo G \'e F. Todo H \'e G. \\  Portanto: Algum H \'e F.
+	\item \textbf{Celaront.} Algo \'e H. Nenhum G \'e F. Todo H \'e G. \\ Portanto: Algum H n\~ao \'e F
+	\item \textbf{Cesaro.} Algo \'e H. Nenhum F \'e G. Todo H \'e G. \\ Portanto: Algum H n\~ao \'e  F.
+	\item \textbf{Camestros.} Algo \'e H. Todo F \'e G. Nenhum H \'e G. \\  Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Felapton.} Algo \'e G. Nenhum G \'e F. Todo G \'e H. \\ Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Darapti.} Algo \'e G. Todo G \'e F. Todo G \'e H.  \\ Portanto: Algum H \'e F.
+	\item \textbf{Calemos.} Algo \'e H. Todo F \'e G. Nenhum G \'e H. \\ Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Fesapo.} Algo \'e G. Nenhum F is G. Todo G \'e H. \\ Portanto: Algum H n\~ao \'e F.
+	\item \textbf{Bamalip.} Algo \'e F. Todo F \'e G. Todo G \'e H. \\ Portanto: Algum H \'e F.
 \end{earg}
 
 \problempart

@@ -60,8 +60,8 @@ têm significados muito diferentes!
 O ponto aqui é que a LPO não nos fornece nenhum recurso para lidar com nuances de significado.
 O único modo no qual dois predicados da LPO podem ser distintos um do outro é sendo verdadeiros de coisas diferentes.
 %Tudo o que conseguimos dizer na LPO através de predicados é de que coisas eles  são verdadeiros, seja estipulando diretamente (listando explicitamente as coisas), seja indiretamente, via chave de simbolização.
-As coisas das quais um predicado é verdadeiro são conhecidas como a \define{extensao} desse predicado.
-Nós dizemos que a LPO é uma \define{linguagem extensional} porque ela reduz os predicados a suas extensões.
+As coisas das quais um predicado é verdadeiro são conhecidas como a \xdefine{extensao} desse predicado.
+Nós dizemos que a LPO é uma \xdefine{linguagem extensional} porque ela reduz os predicados a suas extensões.
 Ou seja, não conseguimos, com a LPO, exprimir as diferenças de significado entre predicados que tenham a mesma extensão.    
 
 Apenas para fixar este ponto importante, vejamos mais um exemplo.
@@ -240,8 +240,8 @@ No entanto, Bruno Vaz e Bertrand Russell não são a mesma pessoa.
 
 
 \section{Interpretações}\label{s:Interpret}
-Na LVF definimos uma \define{valoracao} como qualquer atribuição de verdade e falsidade às letras sentenciais.
-Na LPO, vamos definir uma \define{interpretacao} como consistindo dos seguintes elementos:
+Na LVF definimos uma \define{valuation} como qualquer atribuição de verdade e falsidade às letras sentenciais.
+Na LPO, vamos definir uma \define{interpretation} como consistindo dos seguintes elementos:
 	\begin{ebullet}	
 		\item a especificação de um domínio;
 		\item a definição de um valor de verdade para cada letra sentencial que considerarmos;
@@ -254,11 +254,6 @@ E nós continuaremos a usá-las ao longo desta Parte.
 Sendo um pouco mais precisos aqui, podemos dizer que uma \emph{interpretação é exatamente uma chave de simbolização} que contempla todos estes elementos acima.\footnote{
 	Alguns destes elementos podem ficar de fora de algumas interpretações caso o contexto de sua utilização não os exija. Por exemplo, não há necessidade de uma interpretação ter letras sentenciais, se não simbolizarmos nenhuma sentença com letras sentenciais. Da mesma forma, se nenhum indivíduo do domínio do discurso tem nome, os nomes podem ficar de fora de uma interpretação; ou se não estamos interessados em relações, mas apenas em predicados de um lugar, então as relações também podem ficar de fora.}
 No entanto, às vezes também é conveniente apresentar uma interpretação \emph{diagramaticamente}.
-
-\newglossaryentry{interpretation}{
-  name = {interpretation},
-  description = {A specification of a \gls{domain} together with the objects the \glspl{name} pick out and which objects the \glspl{predicate} are true of}
-}
 
 Suponha que queiramos considerar apenas um predicado de dois lugares, `$\atom{R}{x,y}$'.
 Nós podemos representá-lo traçando setas, cada uma ligando dois objetos, e estipular que a extensão de `$\atom{R}{x,y}$' deve conter $\ntuple{a,b}$ (ou seja, que `$\atom{R}{a,b}$' é verdadeira) apenas se há uma seta partindo de $a$ e chegando em $b$.
@@ -558,8 +553,8 @@ Seja \meta{c} um nome.
 A expressão:
 $$\meta{A}(\meta{c})$$
 será usada para denotar na metalinguagem a fórmula obtida quando substituímos por $\meta{c}$ \emph{todas} as ocorrências livres de $\meta{x}$ em \meta{A}.
-A fórmula resultante, $\meta{A}(\meta{c})$, é chamada de \define{instancia de substituicao} de $\forall \meta{x} \meta{A}$ e $\exists \meta{x} \meta{A}$.
-Além disso, $\meta{c}$ é chamado de \define{nome de instanciacao}.
+A fórmula resultante, $\meta{A}(\meta{c})$, é chamada de \define{substitution instance} de $\forall \meta{x} \meta{A}$ e $\exists \meta{x} \meta{A}$.
+Além disso, $\meta{c}$ é chamado de \xdefine{nome de instanciacao}.
 
 Vejamos um exemplo.
 Considere a sentença da LPO:
@@ -578,11 +573,6 @@ Esta sentença nada mais é do que uma instância de substituição de
 	$$\forall y \exists x (\atom{R}{y,x} \eiff \atom{F}{x})$$
 onde `$e$' é o nome de instanciação, e `$y$' é a variável instanciada.
 
-\newglossaryentry{substitution instance}{
-  name = substitution instance,
-  description = {The result of replacing every free occurrence of a \gls{variable} in a \gls{formula} with a \gls{name}}
-}
-
 Seja $\mathbf{I}$ o nome de uma interpretação que estejamos considerando.
 $\mathbf{I}$ inclui uma especificação de quais nomes correspondem a quais objetos no domínio.
 Considere um objeto  qualquer do domínio, digamos, $d$, e um nome $\meta{c}$ que não esteja sendo usado em $\mathbf{I}$.
@@ -590,14 +580,14 @@ Usaremos a notação
 $$\mathbf{I}[d/\meta{c}]$$
 para nos referirmos à interpretação que é igual a $\mathbf{I}$, com um acréscimo:
 $\mathbf{I}[d/\meta{c}]$ atribui o nome $\meta{c}$ ao objeto $d$.
-Então podemos dizer que $d$ \define{satisfaz} a fórmula $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ se e somente se $\meta{A}(\meta{c})$ é verdadeira em $\mathbf{I}[d/\meta{c}]$.
+Então podemos dizer que $d$ \xdefine{satisfaz} a fórmula $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ se e somente se $\meta{A}(\meta{c})$ é verdadeira em $\mathbf{I}[d/\meta{c}]$.
 (Quando $d$ satisfaz $\meta{A}(\meta{x})$, nós dizemos também que $\meta{A}(\meta{x})$ é \emph{verdadeira de} $d$.
 
 \factoidbox{A interpretação $\mathbf{I}[d/\meta{c}]$ é igual à interpretação $\mathbf{I}$, com o acréscimo de que atribui o nome $\meta{c}$ ao objeto $d$.
 
 \
 \\
-Um objeto $d$ \define{satisfaz} $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ \\
+Um objeto $d$ \xdefine{satisfaz} $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ \\
 \hbox{\textbf{se e somente se}} $\meta{A}(\meta{c})$ é verdadeira em $\mathbf{I}[d/\meta{c}]$.
 }
 
@@ -772,55 +762,24 @@ As outras noções lógicas que vimos, também têm definições correspondentes
 Aqui estão elas:
 
 \begin{itemize}
-\item Uma sentença  $\meta{A}$ é uma \define{validade} na LPO se e somente se $\meta{A}$ for verdadeira em todas as interpretações; ou seja, se
+\item Uma sentença  $\meta{A}$ é uma \define{validity} na LPO se e somente se $\meta{A}$ for verdadeira em todas as interpretações; ou seja, se
 $$\entails\meta{A}$$
-\newglossaryentry{validity}
-{
-name=validity,
-description={A \gls{sentence of FOL} that is true in every \gls{interpretation}}
-}
-\item $\meta{A}$ é uma \define{contradicao} na LPO se e somente se $\meta{A}$ for falsa em todas as interpretações; ou seja, se
+\item $\meta{A}$ é uma \define{contradiction of FOL} na LPO se e somente se $\meta{A}$ for falsa em todas as interpretações; ou seja, se
 $$\entails\enot\meta{A}$$
-\newglossaryentry{contradiction of FOL}
-{
-  name=contradiction (of FOL),
-  text=contradiction,
-description={A \gls{sentence of FOL} that is false in every \gls{interpretation}}
-}  
-\item $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é um argumento \define{valido na LPO} se e somente se não houver interpretação em que todas as premissas são verdadeiras e a conclusão é falsa; ou seja, se
+\item $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é um argumento \define{valid in FOL} (na LPO) se e somente se não houver interpretação em que todas as premissas são verdadeiras e a conclusão é falsa; ou seja, se
 $$\meta{A}_1,\meta{A}_2,\ldots \meta{A}_n \entails\meta{C}$$
 
-\item Um argumento $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é \define{invalido na LPO} se e somente se ele não é válido, ou seja, quando há alguma interpretação na qual todas as suas premissas são verdadeiras e a conclusão é falsa.
+\item Um argumento $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é \xdefine{invalido na LPO} se e somente se ele não é válido, ou seja, quando há alguma interpretação na qual todas as suas premissas são verdadeiras e a conclusão é falsa.
 Denotamos isso por:
 $$\meta{A}_1,\meta{A}_2,\ldots \meta{A}_n \nvDash\meta{C}$$
  
-\newglossaryentry{valid in FOL}
-{
-  name=validity of arguments (in FOL),
-  text = valid,
-description={A property held by arguments; an argument is valid if and only if no \gls{interpretation} makes all premises true and the conclusion false}
-}
-
-\item Duas sentenças da LPO \meta{A} e \meta{B} são \define{equivalentes} se e somente se em toda interpretação na qual uma é verdadeira, a outra também é; ou seja, se
+\item Duas sentenças da LPO \meta{A} e \meta{B} são \define{equivalent in FOL} se e somente se em toda interpretação na qual uma é verdadeira, a outra também é; ou seja, se
 \begin{center}
 	$\meta{A}\entails\meta{B}$ \ \ \ e \ \ \ $\meta{B}\entails\meta{A}$
 \end{center}
 
-\newglossaryentry{equivalent in FOL}
-{
-  name=equivalence (in FOL),
-  text = equivalent,
-description={A property held by pairs of \glspl{sentence of FOL} if and only if the sentences have the same truth value in every \gls{interpretation}}
-}
-
-\item As sentenças $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$ são \define{conjuntamente satisfatorias} na LPO se e somente se há alguma interpretação na qual todas são verdadeiras.
-Eles são \define{conjuntamente insatisfatorias} se não houver tal interpretação.
-\newglossaryentry{satisfiable in FOL}
-{
-  name=satisfiability (in FOL),
-  text=jointly satisfiable,
-description={A property held by \glspl{sentence of FOL} if and only if some \gls{interpretation} makes all the sentences true}
-}
+\item As sentenças $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$ são \define{satisfiable in FOL} na LPO se e somente se há alguma interpretação na qual todas são verdadeiras.
+Eles são \xdefine{conjuntamente insatisfatorias} se não houver tal interpretação.
 \end{itemize}
 
 
@@ -1118,7 +1077,7 @@ Mostre que cada um dos dez argumentos abaixo é inválido.
 \end{earg}
 
 
-\chapter[Infinitas interpretações]{Raciocinando sobre uma infinidade de interpretações}
+\chapter[Infinitas interpretações]{Raciocinando sobre uma infinidade de interpretações}\label{s:InfinitInterpret}
 
 \section{Validades e contradições}
 Para mostrar que uma sentença não é uma validade basta apresentarmos uma única interpretação na qual a sentença é falsa.

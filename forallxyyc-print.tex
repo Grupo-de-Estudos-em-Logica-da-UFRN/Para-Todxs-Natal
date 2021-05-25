@@ -1,6 +1,6 @@
 %\pdfminorversion=3
 
-\documentclass[openany,11pt]{memoir}
+\documentclass[openany,10pt]{memoir}
 
 % Carrega pacote feito para o livro de lógica
 \usepackage{forallxyyc}
@@ -10,6 +10,7 @@
 \colorlet{ltleadbeater}{black!50}
 \colorlet{vltleadbeater}{black!3}
 
+\hypersetup{hidelinks}
 
 \makeevenhead{leadbeater}{\color{leadbeater}\sffamily\bfseries\thepage}{}
              {\small\sffamily\color{leadbeater}\leftmark}
@@ -20,7 +21,9 @@
 
 % Configurações do pacote hyperref
 %\hypersetup{hidelinks}
-\hypersetup{colorlinks=true,linkcolor=blue} % opção extra: linktocpage
+
+% (Daniel - 2021-05-20)--comentei o blue. Penso nesta versão toda black e na versão "de tela" com cores. 
+%\hypersetup{colorlinks=true,linkcolor=blue} % opção extra: linktocpage
 
 
 
@@ -59,277 +62,7 @@
 \makeoddhead{leadbeater}{\small\sffamily\color{leadbeater}\rightmark}{}
             {\color{leadbeater}\sffamily\bfseries\thepage}
 
-\makeglossaries
-
-\newglossaryentry{premise indicator word}
-{
-name=premise indicator,
-description={a word or phrase such as ``because'' used to indicate that what follows is the premise of an argument}
-}
-
-\newglossaryentry{conclusion indicator word}
-{
-name=conclusion indicator,
-description={a word or phrase such as ``therefore'' used to indicate that what follows is the conclusion of an argument}
-}
-
-\newglossaryentry{argument}
-{
-name=argument,
-description={a connected series of sentences, divided into \gls{premise}s and \gls{conclusion}}
-}
-
-\newglossaryentry{premise}
-{
-name=premise,
-description={a sentence in an \gls{argument} other than the \gls{conclusion}}
-}
-
-\newglossaryentry{conclusion}
-{
-name=conclusion,
-description={the last sentence in an \gls{argument}}
-}
-
-%\newglossaryentry{valid}
-%{
-%name=valid,
-%description={A property of arguments where there conclusion is a consequence of the premises}
-%}
-
-%\newglossaryentry{invalid}
-%{
-%name=invalid,
-%description={A property of arguments that holds when the conclusion is not a conseqeucne of the premises; the opposite of %\gls{valid}} 
-%}
-
-\newglossaryentry{correcao}
-{
-name=correção,
-description={Propriedade possuída pelos argumentos que são válidos e têm todas as premissas verdadeiras.}
-}
-
-\newglossaryentry{possibility}
-{
-name=joint possibility,
-text={jointly possible},
-description={A property possessed by some sentences when they are all true in a single case}
-}
-
-\newglossaryentry{contingent sentence}
-{
-name=contingent sentence,
-description={A sentence that is neither a \gls{necessary truth} nor a \gls{necessary falsehood}; a sentence that in some case is true and in some other case, false}
-}
-
-\newglossaryentry{necessary truth}
-{
-name={necessary truth},
-description={A sentence that is true in every case}
-}
-
-\newglossaryentry{necessary falsehood}
-{
-name={necessary falsehood},
-description={A sentence that is false in every case}
-}
-
-\newglossaryentry{necessary equivalence}
-{
-name={necessary equivalence},
-text={necessarily equivalent},
-description={A property held by a pair of sentences that, in every case, are either both true or both false}
-}
-
-\newglossaryentry{sentence letter}
-{
-name=sentence letter,
-description={An letter used to represent a basic sentence in TFL}
-}
-\newglossaryentry{atomic sentence}
-{
-name=atomic sentence,
-description={An expression used to represent a basic sentence; a sentence letter in TFL, or a predicate symbol followed by names in FOL}
-}
-
-\newglossaryentry{symbolization key}
-{
-name=symbolization key,
-description={A list that shows which English sentences are represented by which \glspl{sentence letter} in TFL}
-}
-
-\newglossaryentry{connective}
-{
-name=connective,
-description={A logical operator in TFL used to combine \glspl{sentence letter} into larger sentences}
-}
-
-\newglossaryentry{negation}
-{
-name=negation,
-description={The symbol \enot, used to represent words and phrases that function like the English word ``not''}
-}
-
-\newglossaryentry{conjunction}
-{
-name=conjunction,
-description={The symbol \eand, used to represent words and phrases that function like the English word ``and''; or a sentence formed using that symbol}
-}
-
-\newglossaryentry{conjunct}
-{
-name=conjunct,
-description={A sentence joined to another by a \gls{conjunction}}
-}
-
-\newglossaryentry{disjunction}
-{
-name=disjunction,
-description={The connective \eor, used to represent words and phrases that function like the English word ``or'' in its inclusive sense; or a sentence formed by using this connective}
-}
-
-\newglossaryentry{disjunct}
-{
-name=disjunct,
-description={A sentence joined to another by a \gls{disjunction}}
-}
-
-\newglossaryentry{conditional}
-{
-name=conditional,
-description={The symbol \eif, used to represent words and phrases that function like the English phrase ``if \dots{} then \dots''; a sentence formed by using this symbol}
-}
-
-\newglossaryentry{antecedent}
-{
-name=antecedent,
-description={The sentence on the left side of a \gls{conditional}}
-}
-
-\newglossaryentry{consequent}
-{
-name=consequent,
-description={The sentence on the right side of a \gls{conditional}}
-}
-
-\newglossaryentry{biconditional}
-{
-name=biconditional,
-description={The symbol \eiff, used to represent words and phrases that function like the English phrase ``if and only if''; or a sentence formed using this connective}
-}
-
-\newglossaryentry{sentence of TFL}
-{
-name=sentence (of TFL),
-description={A string of symbols in TFL that can be built up according to the inductive rules given on p.~\pageref{TFLsentences}}
-}
-
-\newglossaryentry{main logical operator}
-{
-name=main connective,
-description={The last connective that you add when you assemble a sentence using the inductive definition}
-}
-
-\newglossaryentry{object language}
-{
-name=object language,
-description={A language that is constructed and studied by logicians. In this textbook,
- the object languages are TFL and FOL}
-}
-
-\newglossaryentry{metalanguage}
-{
-name=metalanguage,
-description={The language logicians use to talk about the object language. In this textbook, the metalanguage is English, supplemented by certain symbols like metavariables and technical terms like ``valid''}
-}
-
-\newglossaryentry{metavariables}
-{
-name=metavariables,
-description={A variable in the metalanguage that can represent any sentence in the object language}
-}
-
-\newglossaryentry{truth value}
-{
-name = truth value,
-description = {One of the two logical values sentences can have: True and False}
-}
-
-\newglossaryentry{truth-functional connective}
-{
-name=truth-functional connective,
-description={an operator that builds larger sentences out of smaller ones and fixes the \gls{truth value} of the resulting sentence based only on the truth value of the component sentences}
-}
-
-\newglossaryentry{valuation}
-{
-name=valuation,
-description={An assignment of \glspl{truth value} to particular \glspl{sentence letter}}
-}
-
-\newglossaryentry{complete truth table}
-{
-name=complete truth table,
-description={A table that gives all the possible \glspl{truth value} for a \gls{sentence of TFL} or sentences in TFL, with a line for every possible \gls{valuation} of all sentence letters}
-}
-
-\newglossaryentry{tautology}
-{
-name=tautology,
-description={A sentence that has only Ts in the column under the main logical operator of its \gls{complete truth table}; a sentence that is true on every \gls{valuation}}
-}
-
-\newglossaryentry{contradiction of TFL}
-{
-  name=contradiction (of TFL),
-  text = contradiction,
-description={A sentence that has only Fs in the column under the main logical operator of its \gls{complete truth table}; a sentence that is false on every \gls{valuation}}
-}
-
-\newglossaryentry{equivalent}
-{
-  name=equivalence (in TFL),
-  text = equivalent,
-description={A property held by pairs of sentences if and only if the \gls{complete truth table} for those sentences has identical columns under the two main logical operators, i.e., if the sentences have the same truth value on every valuation}
-}
-
-\newglossaryentry{satisfiability in TFL}
-{
-  name=satisfiability (in TFL),
-  text=jointly satisfiable,
-description={A property held by sentences if and only if the \gls{complete truth table} for those sentences contains one line on which all the sentences are true, i.e., if some \gls{valuation} makes all the sentences true}
-}
-
-\newglossaryentry{valid in TFL}
-{
-name= validity of arguments (in TFL),
-text = valid,
-description={A property held by arguments if and only if the \gls{complete truth table} for the argument contains no rows where the \glspl{premise} are all true and the \gls{conclusion} false, i.e., if no \gls{valuation} makes all premises true and the conclusion false}
-}
-
-\newglossaryentry{name}{
-name = name,
-description = {A symbol of FOL used to pick out an object of the \gls{domain}}
-}
-
-\newglossaryentry{predicate}{
-name = predicate,
-description = {A symbol of FOL used to symbolize a property or relation}
-}
-
-\newglossaryentry{universal quantifier}{
-name = universal quantifier,
-description = {The symbol $\forall$ of FOL used to symbolize generality; $\forall x\, \atom{F}{x}$ is true iff every member of the domain is~$F$}
-}
-
-\newglossaryentry{variable}{
-name = variable,
-description = {A symbol of FOL used following quantifiers and as placeholders in atomic formulas; lowercase letters between $s$ and~$z$}
-}
-
-\newacronym{lvf}{LVF}{Lógica Verofuncional}
-
-\newacronym{lpo}{LPO}{Lógica de Primeira Ordem}
+\input{forallx-yyc-glossario}
 
 \begin{document}
 
@@ -337,6 +70,7 @@ description = {A symbol of FOL used following quantifiers and as placeholders in
 %\AtBeginShipoutNext{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 \midsloppy
+
 
 \input{forallx-yyc-content}
 
