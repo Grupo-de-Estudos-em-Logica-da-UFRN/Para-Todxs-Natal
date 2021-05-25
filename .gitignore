@@ -12,6 +12,9 @@
 *.cb2
 .*.lb
 
+## Makeindex auxiliary file
+*.ist
+
 ## Intermediate documents:
 *.dvi
 *.xdv
@@ -31,6 +34,9 @@
 *-blx.aux
 *-blx.bib
 *.run.xml
+
+## Temporary Mark Down file
+*.md~
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
