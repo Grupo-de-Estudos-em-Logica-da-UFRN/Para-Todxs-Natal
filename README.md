@@ -1,6 +1,6 @@
 # Para Todxs: Natal
 
-![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/forallx-coverart-screen.png)
+![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/assets/forallx-coverart-screen.png)
 
 # (OBS: este trabalho está em fase inicial)
 
