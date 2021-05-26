@@ -67,10 +67,10 @@ Outra maneira de lidar com a negação é usar LEM ou DNE como regra básica e i
 Então, por que escolhemos nossas regras de negação e contradição?
 
 %Our first reason is that adding the symbol `$\ered$' to our natural deduction system makes proofs considerably easier to work with. For instance, in our system it's always clear what the conclusion of a subproof is: the sentence on the last line, e.g.\ $\ered$ in IP or $\enot$I. In $\enot$I* and $\enot$E*, subproofs have two conclusions, so you can't check at one glance if an application of them is correct. 
-Nossa primeira razão é que adicionar o símbolo `$\ered$' ao nosso sistema de dedução natural torna consideravelmente mais fácil trabalhar com as provas. Por exemplo, em nosso sistema é sempre claro qual é a conclusão de uma subprova: a frase na última linha, por exemplo, $\ered$ em IP ou $\enot$I. Em $\enot$I* e $\enot$E*, as subprovas têm duas conclusões, portanto, não dá pra checar numa rápida olhada se uma aplicação delas está correta.
+Nossa primeira razão é que adicionar o símbolo `$\ered$' ao nosso sistema de dedução natural torna consideravelmente mais fácil trabalhar com as provas. Por exemplo, em nosso sistema é sempre claro qual é a conclusão de uma subprova: a sentença na última linha, por exemplo,       `$\ered$` em IP ou $\enot$I. Em $\enot$I* e $\enot$E*, as subprovas têm duas conclusões, portanto, não dá pra checar numa rápida olhada se uma aplicação delas está correta.
 
 %Our second reason is that a lot of fascinating philosophical discussion has focussed on the acceptability or otherwise of indirect proof IP (equivalently, excluded middle, i.e.\ LEM, or double negation elimination DNE) and explosion (i.e. X). By treating these as separate rules in the proof system, you will be  in a better position to engage with that philosophical discussion. In particular: having invoked these rules explicitly, it would be much easier for us to know what a system which lacked these rules would look like.
-Nossa segunda razão é que muitas discussões filosóficas fascinantes se concentraram na aceitabilidade ou não da prova indireta IP (equivalentemente, terceiro excluído, ou seja, LEM, ou eliminação da dupla negação DNE) e da explosão (ou seja, X). Ao tratá-las como regras separadas no sistema de prova, você estará em uma posição melhor para se envolver com essa discussão filosófica. Em particular: tendo invocado essas regras explicitamente, torna-se mais fácil saber como seria um sistema que não fizesse uso delas.
+Nossa segunda razão é que muitas discussões filosóficas fascinantes se concentraram na aceitabilidade ou não da prova indireta IP (equivalentemente, terceiro excluído, ou seja, LEM, ou eliminação da dupla negação DNE) e da explosão (ou seja, X). Ao tratá-las como regras separadas no sistema de provas, você estará em uma posição melhor para se envolver com essa discussão filosófica. Em particular: tendo invocado essas regras explicitamente, torna-se mais fácil saber como seria um sistema que não fizesse uso delas.
 
 %This discussion, and in fact the vast majority of mathematical study on applications of natural deduction proofs beyond introductory courses, makes reference to a different version of natural deduction. This version was invented by Gerhard Gentzen in 1935 as refined by Dag Prawitz in 1965. Our set of basic rules coincides with theirs. In other words, the rules we use are those that are standard in philosophical and mathematical discussion of natural deduction proofs outside of introductory courses.
 Esta discussão, e de fato a grande maioria dos estudos matemáticos sobre aplicações de provas de dedução natural para além dos cursos introdutórios, faz referência a uma versão diferente da dedução natural. Esta versão foi inventada por Gerhard Gentzen em 1935 e aperfeiçoada por Dag Prawitz em 1965. Nosso conjunto de regras básicas coincide com o deles. Em outras palavras, as regras que usamos são o padrão nas discussões filosóficas e matemáticas de provas de dedução natural fora dos cursos introdutórios. 
@@ -78,10 +78,10 @@ Esta discussão, e de fato a grande maioria dos estudos matemáticos sobre aplic
 
 \section{Regras alternativas de quantificação}
 %An alternative approach to the quantifiers is to take as basic the rules for $\forall$I and $\forall$E from \S\ref{s:BasicFOL}, and also two CQ rule which allow us to move from $\forall \meta{x} \enot \meta{A}$ to $\enot \exists \meta{x} \meta{A}$ and vice versa.\footnote{Warren Goldfarb follows this line in \emph{Deductive Logic}, 2003, Hackett Publishing Co.}
-Uma abordagem alternativa para os quantificadores é tomar como básicas as regras para $\forall$I e $\forall$E de \S\ref{s:BasicFOL}, e também duas regras CQ que nos permitem partir de $\forall \meta{x} \enot \meta{A}$ e chegar a $\enot \exists \meta{x} \meta{A}$ e vice-versa.\footnote{Warren Goldfarb segue esta linha em \emph{Deductive Logic}, 2003, Hackett Publishing Co.}
+Uma abordagem alternativa para os quantificadores é tomar como básicas as regras para $\forall$I e $\forall$E do Capítulo \ref{s:BasicFOL}, e também duas regras CQ que nos permitem partir de $\forall \meta{x} \enot \meta{A}$ e chegar a $\enot \exists \meta{x} \meta{A}$ e vice-versa.\footnote{Warren Goldfarb segue esta linha em \emph{Deductive Logic}, 2003, Hackett Publishing Co.}
 
 %Taking only these rules as basic, we could have derived the  $\exists$I and $\exists$E rules provided in \S\ref{s:BasicFOL}. To derive the $\exists$I rule is fairly simple. Suppose $\meta{A}$ contains the name $\meta{c}$, and contains no instances of the variable $\meta{x}$, and that we want to do the following:
-Tomando apenas essas regras como básicas, poderíamos ter derivado as regras $\exists$I e $\exists$E fornecidas em \S\ref{s:BasicFOL}. Derivar a regra $\exists$I é bastante simples. Suponha que $\meta{A}$ contém o nome $\meta{c}$, e não contém instâncias da variável $\meta{x}$, e que queremos fazer o seguinte: 
+Tomando apenas essas regras como básicas, poderíamos ter derivado as regras $\exists$I e $\exists$E fornecidas no Capítulo \ref{s:BasicFOL}. Derivar a regra $\exists$I é bastante simples. Suponha que $\meta{A}$ contém o nome $\meta{c}$, e não contém instâncias da variável $\meta{x}$, e que queremos fazer o seguinte: 
 
 \begin{proof}
 	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
@@ -115,7 +115,7 @@ Derivar a regra $\exists$E é um pouco mais sutil. Isso ocorre porque a regra $\
 \end{proof}\noindent
 
 %where $\meta{c}$ does not occur in any undischarged assumptions, or in $\meta{B}$, or in $\exists \meta{x} \meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$. Ordinarily, we would be allowed to use the $\exists$E rule; but we are not here assuming that we have access to this rule as a basic rule. Nevertheless, we could offer the following, more complicated derivation:
-onde $\meta{c}$ não ocorre em nenhuma suposição não descarregada<<obs>>, ou em $\meta{B}$, ou em $\exists \meta{x} \meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$. Normalmente, teríamos permissão para usar a regra $\exists$E; mas não estamos aqui assumindo que temos acesso a essa regra como uma regra básica. No entanto, poderíamos oferecer a seguinte derivação mais complicada:
+onde $\meta{c}$ não ocorre em nenhuma suposição não descarregada, ou em $\meta{B}$, ou em $\exists \meta{x} \meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$. Normalmente, teríamos permissão para usar a regra $\exists$E; mas não estamos aqui assumindo que temos acesso a essa regra como uma regra básica. No entanto, poderíamos oferecer a seguinte derivação mais complicada:
  
 \begin{proof}
 	\have[m]{ExA}{\exists \meta{x} \meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
@@ -138,7 +138,7 @@ onde $\meta{c}$ não ocorre em nenhuma suposição não descarregada<<obs>>, ou 
 Estamos autorizados a usar $\forall$I na linha $k+3$ porque $\meta{c}$ não ocorre em nenhuma suposição não descarregada ou em $\meta{B}$. As entradas nas linhas $k+4$ e $k+1$ se contradizem, porque $\meta{c}$ não ocorre em $\exists \meta{x} \meta{A} (\ldots \meta{x} \ldots \meta{x} \ldots)$.
 
 %Armed with these derived rules, we could now go on to derive the two remaining CQ rules, exactly as in \S\ref{s:DerivedFOL}.
-Armados com essas regras derivadas, poderíamos agora derivar as duas regras CQ restantes, exatamente como em \S\ref{s:DerivedFOL}.
+Armados com essas regras derivadas, poderíamos agora derivar as duas regras CQ restantes, exatamente como no Capítulo  \ref{s:DerivedFOL}.
 
 %So, why did we start with all of the quantifier rules as basic, and then derive the CQ rules? 
 Então, por que começamos com todas as regras do quantificador como básicas e, em seguida, derivamos as regras CQ?

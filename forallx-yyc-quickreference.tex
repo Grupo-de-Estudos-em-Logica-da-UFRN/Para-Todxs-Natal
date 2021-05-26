@@ -16,8 +16,8 @@
 \begin{tabular}{c|c}
 \meta{A} & \enot\meta{A}\\
 \hline
-T & F\\
-F & T \\
+V & F\\
+F & V \\
 \phantom{.}\\
 \phantom{.}
 \end{tabular}
@@ -25,10 +25,10 @@ F & T \\
 \begin{tabular}{c c|c|c|c|c}
 \meta{A} & \meta{B} & $\meta{A}\eand\meta{B}$ & $\meta{A}\eor\meta{B}$ & $\meta{A}\eif\meta{B}$ & $\meta{A}\eiff\meta{B}$\\
 \hline
-T & T & T & T & T & T\\
-T & F & F & T & F & F\\
-F & T & F & T & T & F\\
-F & F & F & F & T & T
+V & V & V & V & V &V\\
+V & F & F & V & F & F\\
+F & V & F & V & V & F\\
+F & F & F & F & V & V
 \end{tabular}
 
 
@@ -71,7 +71,7 @@ F & F & F & F & T & T
 \multicolumn{2}{c}{\textsc{Conectivos Sentenciais}}\\ \\
 Não é o caso que $P$ & $\enot P$\\
 Ou $P$, ou $Q$ & $(P \eor Q)$\\
-Nem $P$, nem $Q$ & $\enot(P \eor Q)$\ or \ $(\enot P \eand \enot Q)$\\
+Nem $P$, nem $Q$ & $\enot(P \eor Q)$\ ou \ $(\enot P \eand \enot Q)$\\
 Tanto $P$ quanto $Q$ & $(P \eand Q)$\\
 Se $P$, então $Q$ & $(P \eif Q)$\\
 $P$ somente se $Q$ & $(P \eif Q)$\\
@@ -177,7 +177,7 @@ $n$ & $\exists x_1\ldots\exists x_n\bigl[\atom{F}{x_1} \eand\ldots\eand \atom{F}
 	\have[\ ]{c}{\meta{A}} \by{R}{a}
 \end{proof}
 
-\subsection*{Cconjunção}
+\subsection*{Conjunção}
 
 \begin{proof}
 	\have[m]{a}{\meta{A}}
@@ -369,7 +369,7 @@ $n$ & $\exists x_1\ldots\exists x_n\bigl[\atom{F}{x_1} \eand\ldots\eand \atom{F}
 \end{proof}
 
 \medskip\begin{raggedright}
-\meta{c} não pode ocorrer em nenhuma undischarged assumption<<obs>>
+\meta{c} não pode ocorrer em nenhuma suposição não descartada
 
 \meta{x} não pode ocorrer em\\ $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$
 \end{raggedright}
@@ -398,7 +398,7 @@ $n$ & $\exists x_1\ldots\exists x_n\bigl[\atom{F}{x_1} \eand\ldots\eand \atom{F}
 \end{proof}
 
 \medskip\begin{raggedright}
-\noindent \meta{c} não pode ocorrer em nenhuma undischarged assumption<<obs>>, em $\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$, ou em \meta{B}\end{raggedright}\vfill\columnbreak
+\noindent \meta{c} não pode ocorrer em nenhuma suposição não descartada, em $\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$, ou em \meta{B}\end{raggedright}\vfill\columnbreak
 
 \end{multicols}
 
