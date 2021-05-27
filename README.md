@@ -1,7 +1,7 @@
 # Para Todxs: Natal
 
 ![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/assets/forallx-cover-readme_md.png)
-## ATENÇÃO: estamos recrutando coautores e coautoras!!
+## OPORTUNIDADE: estamos recrutando coautores e coautoras!!
 Veja mais informações [aqui](#oportunidade).
 
 ## Descrição
