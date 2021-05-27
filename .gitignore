@@ -38,9 +38,6 @@
 ## Temporary Mark Down file
 *.md~
 
-## Apple DS file
-.DS_Store
-
 ## Build tool auxiliary files:
 *.fdb_latexmk
 *.synctex
