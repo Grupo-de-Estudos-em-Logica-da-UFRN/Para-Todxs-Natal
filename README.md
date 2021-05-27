@@ -1,6 +1,8 @@
 # Para Todxs: Natal
 
 ![Book Cover](https://raw.githubusercontent.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal/main/assets/forallx-cover-readme_md.png)
+## OPORTUNIDADE: estamos recrutando coautores e coautoras!!
+Veja mais informações [aqui](#oportunidade).
 
 ## Descrição
 
@@ -48,3 +50,19 @@ ou
   -  `forallxyyc-print.tex` (otimizado para impressão)
 
 É necessário executar `makeglossaries` para gerar o glossário.
+
+## OPORTUNIDADE
+
+Este livro ainda está em processo de revisão para sua publicação oficial. Se você tiver críticas,
+ sugestões de reescrita, de uso de jargão, de exemplos, comentários e, principalmente, se você encontrar 
+ erros de digitação ou de português, nós incentivamos fortemente você a colaborar conosco.
+
+O link abaixo é de um formulário google onde você pode inserir todas as suas sugestões,
+correções e críticas. Se pelo menos uma de suas colaborações for incorporada, você, caso queira,
+se tornará coautor ou coautora do Para Todxs: Natal.
+
+[Link do formulário de revisão.](https://forms.gle/yd4yH9WAo6TxAiSj8)
+
+Pretendemos finalizar a revisão até o final deste ano (2021) e sua colaboração é muito bem vinda. 
+Como se trata de uma obra gratuita, de circulação livre, nossa retribuição por sua ajuda é te oferecer 
+coautoria do livro, incluindo você no resgistro oficial do ISBN.
