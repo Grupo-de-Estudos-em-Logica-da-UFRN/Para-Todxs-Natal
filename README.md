@@ -5,18 +5,16 @@
 ## Descrição
 
 _Para Todxs: Natal_ é um livro didático completo sobre lógica formal.
- Ele aborda noções fundamentais da lógica, como consequência e validade 
-de argumentos, a sintaxe da lógica proposicional verofuncional (LVF) e 
+ Ele aborda noções fundamentais como consequência lógica e validade 
+de argumentos, a sintaxe da lógica proposicional verofuncional (LVF) e a 
 semântica de tabelas-verdade, a sintaxe da lógica de predicados de primeira 
 ordem (LPO) com identidade (interpretações de primeira ordem), traduções 
 (formalizações) do português para LVF e LPO, além de sistemas de prova em 
 dedução natural (estilo Fitch) para LVF e LPO. Também são abordados alguns 
-tópicos avançados, como completude verofuncional. São disponibilizados exercícios 
-com soluções. O livro será disponibilizado inicialmente em LaTeX, em PDF para 
-impressão e, posteriormente, em versões especiais para visualização em tela de 
-dispositivos eletrônicos, além de uma versão com fonte especial para disléxicos. 
-Um editor/checador de provas para o sistema usado no livro está disponível online 
-em [proofs.openlogicproject.org](http://proofs.openlogicproject.org/).
+tópicos avançados, como completude verofuncional. São disponibilizados exercícios com soluções.
+O livro está disponível em PDF otimizado para visualização em tela, com links coloridos. Também estão disponíveis os arquivos fonte em LaTeX que podem ser utilizados para gerar também outra versão PDF, otimizadas para impressão. Posteriormente, versões especiais para visualização em tela de 
+dispositivos eletrônicos, versões em folha preta, além de uma versão com fonte especial para disléxicos também serão produzidas. 
+Um editor/verificador de provas para o sistema usado no livro está disponível online em [andersonnakano.hyperphp.com/](http://andersonnakano.hyperphp.com/) em versão traduzida ao português por Anderson Luis Nakano do original disponível em [Open Logic Project](http://proofs.openlogicproject.org/).
 
 Link para download [aqui](#download).
 
