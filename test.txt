@@ -1,3 +1,4 @@
+Esta linha não deveria esta aqui.
 forallx-yyc-alternatives.aux
 forallx-yyc-alternatives.tex
 forallxyyc.aux
