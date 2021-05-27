@@ -13,10 +13,10 @@ semântica de tabelas-verdade, a sintaxe da lógica de predicados de primeira
 ordem (LPO) com identidade (interpretações de primeira ordem), traduções 
 (formalizações) do português para LVF e LPO, além de sistemas de prova em 
 dedução natural (estilo Fitch) para LVF e LPO. Também são abordados alguns 
-tópicos avançados, como completude verofuncional. São disponibilizados exercícios com soluções.
-O livro está disponível em PDF otimizado para visualização em tela, com links coloridos. Também estão disponíveis os arquivos fonte em LaTeX que podem ser utilizados para gerar também outra versão PDF, otimizadas para impressão. Posteriormente, versões especiais para visualização em tela de 
-dispositivos eletrônicos, versões em folha preta, além de uma versão com fonte especial para disléxicos também serão produzidas. 
-Um editor/verificador de provas para o sistema usado no livro está disponível online em [andersonnakano.hyperphp.com/](http://andersonnakano.hyperphp.com) em versão traduzida ao português por Anderson Luis Nakano do original disponível em [Open Logic Project](http://proofs.openlogicproject.org/).
+tópicos mais avançados, como a correção da LVF e uma introdução à lógica modal. 
+O livro está disponível em PDF otimizado para visualização em tela, com links coloridos. Todos os arquivos fonte em LaTeX estão disponíveis, e podem ser também utilizados para gerar uma outra versão PDF otimizada para impressão. Posteriormente, versões especiais para visualização em tela de 
+dispositivos eletrônicos, versões em folha preta, uma versão com fonte especial para disléxicos, além de um caderno com as soluções dos exercícios também serão produzidos. 
+Um editor/verificador de provas para o sistema usado no livro está disponível online em [andersonnakano.hyperphp.com](http://andersonnakano.hyperphp.com), em versão traduzida ao português por Anderson Luis Nakano do editor original disponível em [Open Logic Project](http://proofs.openlogicproject.org/).
 
 Link para download [aqui](#download).
 
