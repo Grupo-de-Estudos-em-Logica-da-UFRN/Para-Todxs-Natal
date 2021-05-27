@@ -37,6 +37,7 @@
 
 ## Temporary Mark Down file
 *.md~
+.DS_Store
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
