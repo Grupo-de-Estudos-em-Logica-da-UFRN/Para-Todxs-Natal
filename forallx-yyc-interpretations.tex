@@ -7,7 +7,7 @@
 \chapter[Extensionalidade]{Extensionali- dade}\label{s:Interpretations}
 
 A lógica verofuncional (LVF) recebeu este nome porque todos os seus conectivos são verofuncionais, ou seja, são funções de verdade.
-Dizer que um conecitvo da LVF, a conjunção (\eand) por exemplo, é uma função de verdade, é dizer algo análogo ao que os matemáticos dizem quando afirmam que a adição ($+$) é uma função numérica.
+Dizer que um conectivo da LVF, a conjunção (\eand) por exemplo, é uma função de verdade, é dizer algo análogo ao que os matemáticos dizem quando afirmam que a adição ($+$) é uma função numérica.
 A adição é uma função numérica porque ela leva números em números através de uma operação.
 Por exemplo, em  `$2+3$', a adição ($+$) toma dois números como argumentos (o $2$ e o $3$) e através de uma operação os leva a um número (o $5$) que é o resultado da adição de $2$ com $3$.
 Suponha agora que `$A$' é verdadeira e `$B$' é falsa. A conjunção `$A\eand B$' faz algo análogo ao exemplo da adição.
@@ -79,7 +79,7 @@ No entanto, considerando o domínio dos seres vivos, estes dois predicados são 
 os seres humanos.
 Eles têm, portanto, a mesma extensão.
 No domínio dos seres vivos, suas simbolizações na LPO `$\atom{R}{x}$' e `$\atom{P}{x}$' não captam esta variação de significado e são equivalentes.
-A LPO é extensional porque ela não enxerga os significados (instensões) dos predicados, apenas suas extensões e, por isso, no domínio dos seres vivos, identifica `$\atom{R}{x}$' e `$\atom{P}{x}$'.
+A LPO é extensional porque ela não enxerga os significados (intensões) dos predicados, apenas suas extensões e, por isso, no domínio dos seres vivos, identifica `$\atom{R}{x}$' e `$\atom{P}{x}$'.
 
 É por esse motivo que dizemos que as sentenças da LPO apenas \emph{simbolizam} sentenças do português.
 É duvidoso que haja \emph{traduções} do português para a LPO, pois as traduções deveriam preservar significados, e não apenas extensões.
@@ -325,7 +325,7 @@ Vimos ali que uma interpretação é uma chave de simbolização composta por:
 	\item um domínio do discurso;
 	\item uma atribuição (direta ou indireta) de valores de verdade para cada letra sentencial;
 	\item a definição de uma referência, no domínio, para cada nome;
-	\item a definição (dierta ou indireta) de uma extensão para cada predicado e relação.
+	\item a definição (direta ou indireta) de uma extensão para cada predicado e relação.
 \end{ebullet}
 Uma chave de simbolização com todos esses componentes constitui uma interpretação e nos fornece tudo o que precisamos para decidir se uma sentença qualquer da LPO é verdadeira ou falsa.
 Entender como utilizar interpretações para classificar as sentenças da LPO como verdadeiras ou falsas é o primeiro passo para conseguirmos avaliar argumentos na LPO, e será nossa tarefa neste capítulo.
@@ -361,7 +361,7 @@ No entanto, para facilitar a compreensão, usaremos a seguinte interpretação c
 		\item[a] {\small Aristóteles}
 		\item[b] {\small Simona Talma}
 		\item[C] {\small Simona Talma é uma artista potiguar\,}\footnote{
-			Poderíamos aqui ter criado um predicado tal como `$\atom{P}{x}$' para `\gap{x}~é uma artista portiguar' e simbolizar `Simona Talma é uma artista potiguar' como `$\atom{P}{b}$'.
+			Poderíamos aqui ter criado um predicado tal como `$\atom{P}{x}$' para `\gap{x}~é uma artista potiguar' e simbolizar `Simona Talma é uma artista potiguar' como `$\atom{P}{b}$'.
 			Não fizemos isso porque queremos que a interpretação de nosso exemplo tenha também uma letra sentencial `$C$' que, tal  como na LVF, tem exatamente o mesmo valor de verdade que a sentença `Simona Talma é uma artista potiguar'.}
 		\item[D] {\small é F (uma sentença falsa)}\footnote{
 			Aqui estamos apenas indicando diretamente, sem nenhuma sentença em português intermediária, que a letra sentencial `$D$' é uma sentença falsa.}
@@ -505,12 +505,12 @@ Uma primeira proposta é a seguinte:
 se, como vimos, `$\forall x\,\atom{F}{x}$' deve ser verdadeira se e somente se `$\atom{F}{x}$' é verdadeira para tudo no domínio,
 então poderíamos simplesmente considerar que uma sentença universal é verdadeira quando a extensão do predicado que a segue compreende todo o domínio do discurso.
 
-Esta idéia funciona quando o que vem após o quantificador inicial é um predicado, como em  `$\forall x\,\atom{F}{x}$'.
+Esta ideia funciona quando o que vem após o quantificador inicial é um predicado, como em  `$\forall x\,\atom{F}{x}$'.
 Mas, infelizmente, essa ideia não é geral o suficiente para especificar as condições de verdade de sentenças onde o que segue o quantificador inicial não é um predicado, mas outra expressão quantificada, tal como ocorre em:
 $$\forall x \exists y\,\atom{L}{x,y}$$
 Não conseguimos aplicar esta ideia aqui, porque o que segue o quantificador não é um predicado, mas a expressão quantificada `$\exists y\,\atom{L}{x,y}$'.
 E as interpretações não têm cláusulas que indicam se `$\exists y\,\atom{L}{x,y}$' é verdadeira de tudo no domínio.
-As cláusulas das intepretações especificam apenas a referência de nomes e a extensão de predicados e relações.
+As cláusulas das interpretações especificam apenas a referência de nomes e a extensão de predicados e relações.
 
 Para tentar corrigir isso poderíamos então sugerir que `$\forall x \exists y\, \atom{L}{x,y}$' deve ser verdadeira em uma interpretação se e somente se $\exists y\, \atom{L}{\meta{a},y}$ for verdadeira para \emph{todo} nome \meta{a} da interpretação.
 E, de modo similar, diríamos que $\exists y\, \atom{L}{\meta{a},y}$ é verdadeira se e somente se $\atom{L}{\meta{a}, \meta{b}}$ for verdadeira para \emph{algum} nome \meta{b}.
@@ -623,13 +623,13 @@ Em outras palavras, $\forall \meta{x} \meta{A}(\meta{x})$ é verdadeira apenas q
 Similarmente, a sentença $\exists \meta{x}\meta{A}(\meta{x})$ será verdadeira se e somente se houver \emph{algum} objeto no domínio que satisfaça $\meta{A}(\meta{x})$.
 Ou seja, $\exists \meta{x}\meta{A}(\meta{x})$ é verdadeira em $\mathbf{I}$ se e somente se  $\meta{A}(\meta{c})$ é verdadeira em $\mathbf{I}[d/\meta{c}]$ para pelo menos um objeto $d$.
 	\factoidbox{
-		$\forall \meta{x}\meta{A}(\meta{x})$ é \underline{verdadeira} em uma interpretação \textbf{se e somente se} todo objeto no domínio \underline{satisfiaz} $\meta{A}(\meta{x})$.
+		$\forall \meta{x}\meta{A}(\meta{x})$ é \underline{verdadeira} em uma interpretação \textbf{se e somente se} todo objeto no domínio \underline{satisfaz} $\meta{A}(\meta{x})$.
 		
 		\
 		\\
 		$\exists \meta{x}\meta{A}(\meta{x})$ é \underline{verdadeira} em uma interpretação \textbf{se e somente se} pelo menos um objeto no domínio \underline{satisfaz} $\meta{A}(\meta{x})$.
 	}
-Para ficar claro: tudo o que estamos fazendo aqui é formalizar (de um modo bastante preciso) a ideia intuitiva de que para que uma sentença quantifidada universalmente seja verdadeira, todos os objetos do domínio precisam satisfazê-la; e para que uma sentença quantificada existencialmente seja verdadeira, basta que um objeto do domínio a satisfaça. 
+Para ficar claro: tudo o que estamos fazendo aqui é formalizar (de um modo bastante preciso) a ideia intuitiva de que para que uma sentença quantificada universalmente seja verdadeira, todos os objetos do domínio precisam satisfazê-la; e para que uma sentença quantificada existencialmente seja verdadeira, basta que um objeto do domínio a satisfaça. 
 
 Finalmente, vale notar que o conceito de um objeto satisfazer uma fórmula com uma variável livre também pode ser estendido a fórmulas com mais de uma variável livre.
 Por exemplo, se tivermos uma fórmula $\meta{A}(\meta{x},\meta{y})$ com duas variáveis livres $\meta{x}$ e $\meta{y}$, podemos dizer que um par de objetos $\langle a, b\rangle$ satisfaz $\meta{A}(\meta{x},\meta{y})$ se e somente se $\meta{A}(\meta{c},\meta{d})$ for verdadeira na interpretação estendida por dois nomes $\meta{c}$ e $\meta{d}$, onde $\meta{c}$ é o nome de $a$ e $\meta{d}$ é o nome de $b$.
@@ -905,7 +905,7 @@ Vamos tentar:
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] Karl Marx, Pelé
-		\item[\atom{G}{x}] \gap{x} é co-autor de `O Manifesto Comunista'
+		\item[\atom{G}{x}] \gap{x} é coautor de `O Manifesto Comunista' % coautor: sem hifen segundo o VOLP
 		\item[a] Pelé
 	\end{ekey}
 	\end{center}
@@ -980,8 +980,8 @@ Aqui estão algumas sentenças verdadeiras nesta interpretação:
 		\item `$\exists x \forall y\, \enot \atom{R}{x,y}$' \hfill {\footnotesize 3 é uma testemunha}
 		\item `$\exists x (\exists y\, \atom{R}{y,x} \eand \enot \exists y\, \atom{R}{x,y})$' \hfill {\footnotesize 3 é uma testemunha}
 	\end{ebullet}
-Examíne-as com cuidado e certifieque-se de entender por que elas são todas verdadeiras na interpretação descrita pelo diagrama acima.\footnote{
-	À direita de cada sentença existencial está indicada uma \textit{testemunha}, um elemento do domínio que satisfaz a fórmula existêncialmente quantificada.
+Examine-as com cuidado e certifique-se de entender por que elas são todas verdadeiras na interpretação descrita pelo diagrama acima.\footnote{
+	À direita de cada sentença existencial está indicada uma \textit{testemunha}, um elemento do domínio que satisfaz a fórmula existencialmente quantificada.
 	Ou seja, cada uma destas sentenças é do tipo $\exists x \atom{\meta{A}}{x}$ e cada testemunha indicada corresponde a um indivíduo $\meta{c}$ do domínio para o qual $\atom{\meta{A}}{\meta{c}}$ é verdadeira na interpretação.}	
 	
 Isso também mostra que essas seis sentenças são conjuntamente satisfatórias.
@@ -1085,10 +1085,10 @@ Mas para mostrar que uma sentença é uma validade, não é suficiente propor de
 Uma sentença é uma validade apenas se for verdadeira em \emph{todas} as interpretações; e há infinitas delas.
 Precisamos ser capazes de raciocinar sobre todas elas, e não conseguiremos fazer isso lidando com elas uma de cada vez!
 
-Raciocinar sobre todas as infinitas interpetações pode soar uma tarefa impossível.
+Raciocinar sobre todas as infinitas interpretações pode soar uma tarefa impossível.
 Mas não é.
 Algumas vezes nem  é tão complicado.
-Veja como podemos mostar que a sentença \mbox{`$\atom{R}{a,a}\eor\enot \atom{R}{a,a}$'} é uma validade:
+Veja como podemos mostrar que a sentença \mbox{`$\atom{R}{a,a}\eor\enot \atom{R}{a,a}$'} é uma validade:
 	\begin{quote}
 		\label{allmodels1}
 		Qualquer interpretação relevante (ou seja que leve em consideração a relação `$R$' e o nome `$a$') atribui um valor de verdade à sentença `$\atom{R}{a,a}$', que será verdadeira ou falsa.
@@ -1119,7 +1119,7 @@ Temos, então, que ser um pouco mais espertos.
 		$a$ satisfaz $\meta{A}(\meta{x}) \lor \meta{B}(\meta{x})$ se e somente se $a$ satisfaz $\meta{A}(\meta{x})$ ou $\meta{B}(\meta{x})$, etc.
 		}
 		Então, em qualquer dos casos Zé satisfaz `$\atom{R}{x,x} \eor\enot \atom{R}{x,x}$'.
-		Como não levamos em conta nenhuma característica específica de Zé---poderímos ter escolhido qualquer outro indivíduo do domínio---o que dissemos sobre Zé vale também para qualquer outro objeto do domínio.
+		Como não levamos em conta nenhuma característica específica de Zé---poderíamos ter escolhido qualquer outro indivíduo do domínio---o que dissemos sobre Zé vale também para qualquer outro objeto do domínio.
 		Então, todo objeto no domínio satisfaz `$\atom{R}{x,x}\eor\enot\atom{R}{x,x}$'.
 		Portanto, `$\forall x (\atom{R}{x,x} \eor\enot \atom{R}{x,x})$' é verdadeira em nossa interpretação.
 		Mas também escolhemos nossa interpretação arbitrariamente, portanto `$\forall x (\atom{R}{x,x} \eor\enot \atom{R}{x,x})$' é verdadeira em todas as interpretações.
