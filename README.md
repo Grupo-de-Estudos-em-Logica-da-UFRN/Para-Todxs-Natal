@@ -65,4 +65,4 @@ se tornará coautor ou coautora do Para Todxs: Natal.
 
 Pretendemos finalizar a revisão até o final deste ano (2021) e sua colaboração é muito bem vinda. 
 Como se trata de uma obra gratuita, de circulação livre, nossa retribuição por sua ajuda é te oferecer 
-coautoria do livro, incluindo você no resgistro oficial do ISBN.
+coautoria do livro, incluindo você no registro oficial do ISBN.
