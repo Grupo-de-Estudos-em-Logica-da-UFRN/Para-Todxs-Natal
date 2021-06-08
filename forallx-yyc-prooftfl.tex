@@ -35,7 +35,7 @@ Este argumento tamb\'em \'e v\'alido---voc\^e pode provavelmente dizer---mas par
  
 %Quando chegarmos \`a l\'ogica de primeira ordem (LPO) (in\'icio do cap\'itulo   \ref{s:FOLBuildingBlocks}),   o problema torna-se dramaticamente pior.  N\~ao existe nada como teste de tabela de verdade para a LPO.  Para assegurar se um argumento \'e v\'alido ou n\~ao,  temos que raciocinar sobre  \emph{todas}   as interpreta\c c\~oes,  mas, como vimos no Capítulo \ref{s:InfinitInterpret}, existem  infinitas interpreta\c c\~oes  poss\'iveis.
   
-No caso da lógia de primeira ordem (LPO), este problema é ainda pior, porque não existe um teste como o das tabelas de verdade e, conforme vimos no Capítulo \ref{s:InfinitInterpret}, para decidir se um argumento é válido precisamos raciocinar sobre uma quantidade infinita de interpretações possíveis.
+No caso da lógica de primeira ordem (LPO), este problema é ainda pior, porque não existe um teste como o das tabelas de verdade e, conforme vimos no Capítulo \ref{s:InfinitInterpret}, para decidir se um argumento é válido precisamos raciocinar sobre uma quantidade infinita de interpretações possíveis.
 Em princ\'ipio, n\~ao podemos configurar uma m\'aquina para tratar as infinitas interpreta\c c\~oes poss\'iveis e relatar quando estiver  concluido:  isto  \emph{nunca}  terminar\'a. Ou precisamos desenvolver modos de racioc\'inios mais eficientes para tratar todas as interpreta\c c\~oes, ou precisamos procurar algo diferente. 
 
 Existem de fato, sistemas que  codificam modos de raciocinar sobre todas as interpreta\c c\~oes poss\'iveis. Eles foram desenvolvidos nos ano 1950s por Evert Beth e  Jaakko Hintikka.  Mas n\~ao iremos seguir este caminho.  Ao inv\'es disto,  nossa aten\c c\~ao ser\'a voltada para dedu\c c\~ao natural. 
@@ -142,7 +142,7 @@ De maneira mais geral, aqui est\'a  a nossa regra de introdu\c c\~ao da  conjun\
 	\have[n]{b}{\meta{B}}
 	\have[\ ]{c}{\meta{A}\eand\meta{B}} \ai{a, b}
 \end{fitchproof}}
-Para ser claro, o enunciado da regra \'e esquem\'atico.  Isto n\~ao \'e propriamente uma prova,      `$\meta{A}$'  e `$\meta{B}$'  n\~ao s\~ao senten\c cas da LVF, mas s\'imbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentenca da LVF (veja Cap\'itulo \ref{s:UseMention}). 
+Para ser claro, o enunciado da regra \'e esquem\'atico.  Isto n\~ao \'e propriamente uma prova,      `$\meta{A}$'  e `$\meta{B}$'  n\~ao s\~ao senten\c cas da LVF, mas s\'imbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentença da LVF (veja Cap\'itulo \ref{s:UseMention}). 
 
 Similarmente,  `$m$' e `$n$' n\~ao s\~ao numerais  que ir\~ao aparecer em uma prova real. Eles tamb\'em s\~ao s\'imbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  s\~ao numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos vari\'aveis   para destacar o ponto que a regra pode ser aplicada a qualquer momento.  A regra requer somente que temos ambos os conjuntos dispon\'iveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
 
@@ -584,7 +584,7 @@ Aqui est\'a uma prova correspondente a este argumento:
 	\end{fitchproof}
  
 
-N\~ao se assuste se voc\^e acha que n\~ao seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a pr\'atica, e abordaremos algumas estrat\'egias para construuir provas no Cap\'itulo \ref{s:stratTFL}. A quest\~ao principal nesta fase \'e se, olhando a prova, voc\^e pode reconhecer que ela est\'a em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
+N\~ao se assuste se voc\^e acha que n\~ao seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a pr\'atica, e abordaremos algumas estrat\'egias para construir provas no Cap\'itulo \ref{s:stratTFL}. A quest\~ao principal nesta fase \'e se, olhando a prova, voc\^e pode reconhecer que ela est\'a em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
 
 %%%%%% -------- ------------- ---------- ------- ------ ------  26..8  Contradicao e negacao
 
@@ -669,7 +669,7 @@ Observe que  \meta{A} pode ser \emph{qualquer} senten\c ca.
 A regra de explos\~ao \'e um pouco estranha. Parece que  \meta{A}  chega em nossa prova como um coelho que sai de uma cartola. Ao tentar encontrar provas, \'e muito tentador querer us\'a-la em qualquer lugar, pois parece muito poderosa. Resista a essa tenta\c c\~ao: voc\^e s\'o pode aplic\'a-la quando j\'a tiver~$\ered$!   E voc\^e obt\'em $\ered$   somente quando suas suposi\c c\~oes s\~ao contradit\'orias.
  
 
-Ainda assim, n\~ao \'e estranho que, de uma contradi\c c\~ao, alguma coisa deva seguir? N\~ao de acordo com nossa no\c c\~ao de sustenta\c c\~ao e validade. Para, \meta{A} sustenta \meta{B} se e somente se  n\~ao exise nenhuma valora\c c\~ao de letras sentenciais que  tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas $\ered$  \'e uma contradi\c c\~ao, nunca \'e verdadeiro, seja qual for a valora\c c\~ao das letras sentenciais.  Como n\~ao existe nenhuma valora\c c\~ao que faz $\ered$ verdadeiro, claro que tamb\'em n\~ao existe nenhuma valora\c c\~ao que faz  $\ered$  verdadeiro e \meta{B} falsa! Ent\~ao, de acordo com a nossa defini\c c\~ao de sustenta\c c\~ao,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradi\c c\~ao sustenta qualquer coisa.\footnote{Existem alguns l\'ogicos que n\~ao aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conex\~ao relevante} entre \meta{A} e \meta{B}, mas n\~ao h\'a uma entre $\ered$ e alguma senten\c ca arbitr\'aria~\meta{B}. Portanto, esses l\'ogicos desenvolvem outras l\'ogicas "relevantes" nas quais  a regra de explos\~ao \'e n\~ao permitida.}
+Ainda assim, n\~ao \'e estranho que, de uma contradi\c c\~ao, alguma coisa deva seguir? N\~ao de acordo com nossa no\c c\~ao de sustenta\c c\~ao e validade. Para, \meta{A} sustenta \meta{B} se e somente se  n\~ao exige nenhuma valora\c c\~ao de letras sentenciais que  tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas $\ered$  \'e uma contradi\c c\~ao, nunca \'e verdadeiro, seja qual for a valora\c c\~ao das letras sentenciais.  Como n\~ao existe nenhuma valora\c c\~ao que faz $\ered$ verdadeiro, claro que tamb\'em n\~ao existe nenhuma valora\c c\~ao que faz  $\ered$  verdadeiro e \meta{B} falsa! Ent\~ao, de acordo com a nossa defini\c c\~ao de sustenta\c c\~ao,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradi\c c\~ao sustenta qualquer coisa.\footnote{Existem alguns l\'ogicos que n\~ao aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conex\~ao relevante} entre \meta{A} e \meta{B}, mas n\~ao h\'a uma entre $\ered$ e alguma senten\c ca arbitr\'aria~\meta{B}. Portanto, esses l\'ogicos desenvolvem outras l\'ogicas "relevantes" nas quais  a regra de explos\~ao \'e n\~ao permitida.}
 
 \emph{Estas s\~ao todas as regras b\'asicas para o sistema de provas da LVF.}
 
@@ -1287,7 +1287,8 @@ e
 	\have[\ ]{con}{\meta{A}}\by{SD}{ab, nb}
 \end{fitchproof}}
 
-Como usual, a disjun\c c\~ao e a nega\c c\~ao de um dos disjuntos podem ocorrer em qualquer ordem e n\~ao precisam estar visinhos. No entanto, sempre citamos a disjun\c c\~ao primeiro.
+Como usual, a disjun\c c\~ao e a nega\c c\~ao de um dos disjuntos podem ocorrer em qualquer ordem e n\~ao precisam estar vizinhos. % XXX: "próximos" seria melhor? <29-05-21, hbenevides> %
+No entanto, sempre citamos a disjun\c c\~ao primeiro.
 
  %%%%%% ----------------------------------  28.2 Modus tollens   ---------------------
 \section{Modus tollens}

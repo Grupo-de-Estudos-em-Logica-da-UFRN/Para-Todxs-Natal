@@ -31,7 +31,7 @@ Podemos ampliar mais um pouco este grupo e acrescentar a ele sentenças que são
   		& \ \ \vdots
 	\end{align*}
 Dizemos que as sentenças deste grupo mais amplo estão na \define{disjunctive normal form}, cuja definição formal pode ser assim apresentada:
-uma sentença está na \textit{forma normal disjuntiva} se e somente se ela satisfezer todas as seguintes condições:
+uma sentença está na \textit{forma normal disjuntiva} se e somente se ela satisfizer todas as seguintes condições:
 	\begin{earg}
 		\item[(\textsc{fnd 1})] Nenhum conectivo que não seja negação, conjunção ou disjunção ocorre na sentença;
 		\item[(\textsc{fnd 2})] Qualquer negação que ocorra na sentença é a negação de uma letra sentencial;
@@ -201,7 +201,7 @@ $$(\pm \meta{A}_1 \lor \ldots \lor \pm \meta{A}_i) \land (\pm \meta{A}_{i+1} \lo
 lembrando que a notação $\pm\meta{A}_k$ indica que $\meta{A}_k$ é um literal, ou seja, uma letra sentencial ou a negação de uma letra sentencial.
 
 Podemos agora propor e provar outro teorema sobre forma normal:
-	\factoidbox{\label{thm:cnf}\textbf{Teorma da Forma Normal Conjuntiva.} Dada qualquer sentença da LVF, existe uma sentença logicamente equivalente a ela que está na forma normal conjuntiva.}
+	\factoidbox{\label{thm:cnf}\textbf{Teorema da Forma Normal Conjuntiva.} Dada qualquer sentença da LVF, existe uma sentença logicamente equivalente a ela que está na forma normal conjuntiva.}
 
 Seja $\meta{S}$ uma sentença LVF.
 	\begin{itemize}
@@ -233,7 +233,7 @@ Uma delas na FND e outra na FNC.
         
 \section{Adequação Expressiva da LVF}  
 
-Dos conectivos da LVF, a engação, `$\enot$', é um conectivo de um lugar (unário), ou seja, liga-se a uma única sentença, e todos os outros são conectivos de dois lugares (binários) que ligam-se a exatamente duas sentenças.
+Dos conectivos da LVF, a negação, `$\enot$', é um conectivo de um lugar (unário), ou seja, liga-se a uma única sentença, e todos os outros são conectivos de dois lugares (binários) que ligam-se a exatamente duas sentenças.
 Mas nós podemos cogitar sobre conectivos de \textit{n} lugares (\textit{n}-ários), que ligam-se a $n$ sentenças.
 Por exemplo, poderíamos propor um conectivo de três lugares, cujo símbolo poderia ser um coração, `$\heartsuit$', e estipular que ele tem a seguinte tabela de verdade característica:
 \begin{center}
@@ -335,7 +335,7 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
  Este conectivo costuma ser chamado de `o traço de Sheffer'\footnote{ em inglês: `\emph{the Sheffer stroke}'.}, em homenagem a Henry Sheffer, que o propôs e usou para mostrar como reduzir o número de conectivos lógicos da versão da LVF introduzida por Russell e Whitehead na famosa obra  \emph{Principia Mathematica}.\footnote{
  Confira Sheffer, `A Set of Five Independent Postulates for Boolean Algebras, with application to logical constants' (1913, \emph{Transactions of the American Mathematical Society} 14.4)}
  (Na verdade, Charles Sanders Peirce antecipou Sheffer em cerca de 30 anos, mas nunca publicou seus resultados.)\footnote{
- Veja Peirce, `A Boolian Algebra with One Constant', que data de1880. Veja também, de Peirce, os seus  \emph{Collected Papers}, 4. 264--5.}
+ Veja Peirce, `A Boolean Algebra with One Constant', que data de 1880. Veja também, de Peirce, os seus  \emph{Collected Papers}, 4. 264--5.}
  É bastante comum, também, chamar este conectivo de `\emph{nand}', já que sua tabela característica é equivalente à tabela da negação da conjunção (em inglês: \emph{not} $+$ \emph{and} $=$ \emph{nand}).
 \factoidbox{O conectivo \label{prop:upexpressive}`$\uparrow$' é, sozinho, expressivamente adequado.}
 
@@ -440,7 +440,7 @@ verificaremos individualmente cada uma das regras do sistema formal da LVF e mos
 Como uma prova envolve apenas repetidas aplicações destas regras, esta verificação será suficiente para mostrar que nenhuma prova jamais nos levará ao erro.
 
 %====== versão modificada em 04-04-2021 ======%
-Em primeiro lugar, precisamos tornar mais precisa essa idéia de ``levar ao erro''.
+Em primeiro lugar, precisamos tornar mais precisa essa ideia de ``levar ao erro''.
 Vamos chamar uma linha de uma prova de \xdefine{inocente} se a sentença desta linha é \textit{sustentada} pelas suposições das quais esta linha \textit{depende}.
 
 Lembremos que uma linha depende de todas as suposições ainda não descartadas em linhas anteriores da prova.
@@ -450,6 +450,7 @@ Dizer que a linha $n$ é inocente, ou seja, que ela é sustentada pelas suposiç
 Vale a pena, também, notar que uma suposição sempre depende dela mesma e, por isso, como toda sentença sustenta a si mesma (para qualquer $\meta{A}$ e $\Gamma$, vale $\Gamma, \meta{A} \entails \meta{A}$), a linha de qualquer suposição em qualquer prova sempre é uma linha inocente.
 
 Para ilustrar essa ideia de inocência das linhas, considere a seguinte prova:
+% XXX: trecho comentado abandonado? <29-05-21, hbenevides> %
 %======  04-04-2021 ======%
 %====== versão até 04-04-2021 ======% 
 %Em primeiro lugar, precisamos tornar mais precisa essa idéia de ``levar ao erro''.
@@ -472,7 +473,7 @@ Como as linhas $1$ e $2$ são suposições, cada uma delas depende de si e são,
 	$$F \eif (G \eand H) \ \entails \ F \eif (G \eand H)$$
 	$$F \eif (G \eand H), \ F \ \entails \ F$$ 
 As linhas $3$ e $4$, por sua vez, serão inocentes se elas forem sustentadas pelas suposições não descartadas neste setor da prova.
-Ou seja, as linhas $3$ e $4$ serão inocentes, respectivmente, se
+Ou seja, as linhas $3$ e $4$ serão inocentes, respectivamente, se
 	$$F \eif (G \eand H), \ F \ \entails \ G \eand F$$
 	$$F \eif (G \eand H), \ F \ \entails \ G$$
 Não é difícil verificar que isso de fato se dá nos dois casos.
@@ -480,7 +481,7 @@ Com relação à linha $5$, repare que ela depende apenas da suposição da linh
 Então a linha $5$ será inocente se
 	$$F \eif (G \eand H) \entails F \eif G$$
 o que, novamente, não é difícil de verificar em uma tabela de verdade.
-O que nós queremos mostrar é que não é por mera coinciência que todas as linhas desta prova são inocentes.
+O que nós queremos mostrar é que não é por mera coincidência que todas as linhas desta prova são inocentes.
 	\begin{factoidboxe}\textbf{Lema da Inocência.}
 		Todas as linhas de qualquer prova formal da LVF são inocentes.
 	\end{factoidboxe}\noindent
@@ -527,7 +528,7 @@ Antes de fazer isso, vejamos como a prova do Lema da Inocência fica simples qua
 			\item Ou seja, todas as linhas de todas as provas de três linhas são inocentes.
 		\end{itemize}
 	\item Bem, acho que você já pegou o espírito da coisa. A mesma situação vai acontecer com as provas de $4$ linhas, com as de $5$ linhas,... e com as de $n$ linhas, para qualquer número finito $n$ de linhas. Ou seja, todas as linhas de todas as provas da LVF são inocentes, o que demonstra o Lema da Inocência.$\blacklozenge$\footnote{
-		Esta prova do Lema da Inocência poderia ser apresentada de modo mais preciso e conciso se explicitássemos o uso que fazemos do \textit{princípio da indução finita} (PIF). O PIF fornece um poderoso método de prova muito empregado nas demonstrações de resultados metatetóricos sobre a lógica. Optamos por ocultar a referência explícita ao PIF nesta prova por razões de economia didática. Nós mencionamos este princípio anterioremente no \textit{Capítulo \ref{sec:soundness_and_completeness} - Correção e Completude}, quando falamos ali de \textit{provas indutivas}. Vale apena rever.}
+		Esta prova do Lema da Inocência poderia ser apresentada de modo mais preciso e conciso se explicitássemos o uso que fazemos do \textit{princípio da indução finita} (PIF). O PIF fornece um poderoso método de prova muito empregado nas demonstrações de resultados metateóricos sobre a lógica. Optamos por ocultar a referência explícita ao PIF nesta prova por razões de economia didática. Nós mencionamos este princípio anteriormente no \textit{Capítulo \ref{sec:soundness_and_completeness} - Correção e Completude}, quando falamos ali de \textit{provas indutivas}. Vale apena rever.}
 \end{itemize}
 
 O único passo que ainda falta para completarmos de vez a prova do Teorema da Correção é provar que todas as regras de inferência da LVF são mesmo confiáveis.
@@ -724,7 +725,7 @@ De (2) e (3) podemos concluir que:
 \begin{itemize}
 	\item[(4)]  $\Delta_n \entails \meta{A} \eand \enot\meta{A}$ 
 \end{itemize}
-Mas lembre-se que a notação $\Delta_n \entails \meta{A} \eand \enot\meta{A}$ significa que toda valoração que faz verdadeiras todas as senças de $\Delta_n$ também faz $\meta{A} \eand \enot\meta{A}$ verdadeira.
+Mas lembre-se que a notação $\Delta_n \entails \meta{A} \eand \enot\meta{A}$ significa que toda valoração que faz verdadeiras todas as sentenças de $\Delta_n$ também faz $\meta{A} \eand \enot\meta{A}$ verdadeira.
 Só que nós sabemos que $\meta{A} \eand \enot\meta{A}$ é uma contradição, ou seja, nenhuma valoração a faz verdadeira. Então, de (4) e do fato de que nenhuma valoração faz $\meta{A} \eand \enot\meta{A}$ verdadeira, concluímos que:
 \begin{itemize}
 	\item[(5)] não há qualquer valoração que faz todas as sentenças de  $\Delta_n$ verdadeiras.\footnote{
@@ -739,7 +740,7 @@ Mas então, (5) nos autoriza a concluir a seguinte estranha afirmação:
 \end{itemize}
 A afirmação (6) é mesmo bem suspeita.
 Não só porque acabamos de dizer, em (5), que nenhuma valoração faz todas as sentenças de $\Delta_n$ verdadeiras, mas também porque sabemos que  `$\ered$' não é verdadeiro em nenhuma valoração; o que deixa esta passagem de (5) para (6) pelo menos duvidosa.
-Nós vamos refletir um pouco sobre isso, mas antes vamos apenas notar que, reescrita através de nossa notação, a afirmação (6) diz que $\Delta_n \entails \ered$, e isso, de acordomdo (*), admitindo que não cometemos nenhum erro, finaliza a prova do lema.$\blacklozenge$
+Nós vamos refletir um pouco sobre isso, mas antes vamos apenas notar que, reescrita através de nossa notação, a afirmação (6) diz que $\Delta_n \entails \ered$, e isso, de acordo com (*), admitindo que não cometemos nenhum erro, finaliza a prova do lema.$\blacklozenge$
 
 
 \subsection{Um rápido desvio: sentenças vacuamente verdadeiras}
@@ -830,7 +831,7 @@ De (4) e (5) temos que:
 \begin{itemize}
 	\item[(6)] $\Delta_n, \meta{A} \entails \ered$
 \end{itemize}
-Então, pelo mesmo racioncínio de contraposição usado no Lema da regra $\enot$E, de (6) nós podemos inferir que
+Então, pelo mesmo raciocínio de contraposição usado no Lema da regra $\enot$E, de (6) nós podemos inferir que
 \begin{itemize}
 	\item[(7)] nenhuma valoração faz todas as sentenças de $\Delta_n$ e $\meta{A}$ verdadeiras.
 \end{itemize}
@@ -872,7 +873,7 @@ Vamos agora demonstrar que qualquer regra derivada também é confiável.
 	Suponha que tenhamos usado uma regra derivada para obter alguma sentença, $\meta{A}$, na linha $n$ de alguma prova da LVF, e que todas as linhas anteriores da prova são inocentes.
 	Mas qualquer uso de uma regra derivada é, na verdade, uma abreviação de vários usos das regras básicas de inferência.
 	Ou seja, poderíamos ter usado apenas as regras básicas para obter a sentença $\meta{A}$ em alguma linha $n+k$, sem a introdução de quaisquer outras suposições.
-	Portanto, aplicando várias vezes (exatamente $k+1$ vezes) os resultados já demonstrados de que todas as regras básicas são confiáveis, concluímos que a linha $n+k$ é inocente. Conseqüentemente, a regra derivada é confiável.$\blacklozenge$
+	Portanto, aplicando várias vezes (exatamente $k+1$ vezes) os resultados já demonstrados de que todas as regras básicas são confiáveis, concluímos que a linha $n+k$ é inocente. Consequentemente, a regra derivada é confiável.$\blacklozenge$
 
 É isso! Provamos que todas as regras (básicas ou não) são confiáveis, e assim completamos a prova do Lema da Inocência e finalizamos a demonstração do Teorema da Correção.
 
@@ -881,7 +882,7 @@ Vamos agora demonstrar que qualquer regra derivada também é confiável.
 Demonstramos que o sistema formal de provas da LVF que aprendemos neste livro é Correto. Isto significa que qualquer prova formal que fizermos nesse sistema será a prova de um argumento válido de acordo com a semântica das tabelas de verdade.
 O nosso sistema de provas é correto; ele jamais produzirá a prova de um argumento que não seja válido.
 
-E como fizemos a demonstração disso? Bem, lembre que uma prova formal é apenas uma seqüência (de comprimento arbitrário) de aplicações de regras.
+E como fizemos a demonstração disso? Bem, lembre que uma prova formal é apenas uma sequência (de comprimento arbitrário) de aplicações de regras.
 Mostramos que nenhuma aplicação individual de qualquer regra nos levará ao erro. Segue-se (por indução) que nenhuma prova formal (sequência finita de aplicações de regras) nos levará ao erro. Ou seja: nosso sistema de provas é correto.
 
 Fazer isso deu um pouco de trabalho.

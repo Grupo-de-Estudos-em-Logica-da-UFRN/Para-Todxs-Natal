@@ -66,7 +66,7 @@ Como  antes,  usaremos `$\proves$' para expressar dedutibilidade. Entretanto, se
 
 Começamos com um sistema modal particularmente simples, chamado \mlK{} em homenagem ao filósofo e lógico Saul Kripke. O sistema \mlK{} tem todas as regras de dedução natural da  LVF, incluindo as regras  básicas e as derivadas, além de  duas novas regras básicas para o operador modal   \ebox{}  e um tipo especial de subprova.   
 
-Esse  tipo especial de subprova, que chamamremos de  \emph{subprova estrita}, parece uma subprova comum, exceto que tem um~\ebox{} em sua linha de suposição em vez de uma fórmula. Ela nos permite provar coisas e raciocinar sobre possibilidades alternativas. 
+Esse  tipo especial de subprova, que chamaremos de  \emph{subprova estrita}, parece uma subprova comum, exceto que tem um~\ebox{} em sua linha de suposição em vez de uma fórmula. Ela nos permite provar coisas e raciocinar sobre possibilidades alternativas. 
  
  O que podemos provar dentro de uma subprova estrita vale para qualquer possibilidade alternativa, em particular, em possibilidades alternativas onde as suposições em vigor em nossa prova podem não valer. Em uma subprova estrita, todas as suposições são desconsideradas, e não estamos autorizados a apelar para quaisquer linhas fora da subprova estrita (exceto conforme permitido pelas regras modais fornecidas abaixo).
 
@@ -516,7 +516,7 @@ Se você não gosta de pensar diagramaticamente, também pode apresentar uma int
 	\item[]$\nu_{1}(A)=V, \nu_{2}(B)=F, \nu_{2}(A)=F, \nu_{2}(B)=V$
 \end{itemize}
 Você terá a chance de preparar suas próprias interpretações 
-em breve, quando começarmos a olhar para \emph{contra-interpretações}.
+em breve, quando começarmos a olhar para \emph{contrainterpretações}. % XXX: contra + hífen apenas antes de "a" e "h" <29-05-21, hbenevides> %
 
 \section{Uma semântica para o Sistema \mlK}
 \label{SemanticsK}
@@ -538,7 +538,7 @@ Agora podemos estender todos os conceitos semânticos da  LVF para cobrir també
 
 Também podemos estender o uso de $\entails$. Para isso, precisamos adicionar subscritos da mesma forma como fizemos com $\proves$. Assim, quando quisermos dizer que $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\therefore\metav{C}$  é válido em \mlK, escreveremos: $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlK\metav{C}$. 
 
-Para se ter uma ideia melhor desses conceitos semânticos, vejamos algumas contra-interpretações. Considere a seguinte afirmação (falsa):
+Para se ter uma ideia melhor desses conceitos semânticos, vejamos algumas contrainterpretações. Considere a seguinte afirmação (falsa):
 
 \begin{itemize}
 	\item[]
@@ -546,7 +546,7 @@ Para se ter uma ideia melhor desses conceitos semânticos, vejamos algumas contr
 		      \item[]$\enot A\entails_\mlK \enot \ediamond A$
 	      \end{itemize}
 \end{itemize}
-Como obter uma contra-interpretação para essa afirmação? Precisamos construir uma interpretação na qual $\enot A$ é verdadeira em algum mundo $w$, e $\enot\ediamond A$ é falsa   nesse mundo $w$. Aqui está uma dessas interpretações, apresentada em um diagrama:
+Como obter uma contrainterpretação para essa afirmação? Precisamos construir uma interpretação na qual $\enot A$ é verdadeira em algum mundo $w$, e $\enot\ediamond A$ é falsa   nesse mundo $w$. Aqui está uma dessas interpretações, apresentada em um diagrama:
 \begin{center}
 	\begin{tikzpicture}
 		\node (atom1) at (0,1) {1};
@@ -558,7 +558,7 @@ Como obter uma contra-interpretação para essa afirmação? Precisamos construi
 		\draw (2.4,-0.6) rectangle (3.6,0.5);
 	\end{tikzpicture}
 \end{center}
-É fácil ver que isso funciona como uma contra-interpretação para  $\enot A\entails_\mlK\enot\ediamond A$. Em primeiro lugar, `$\enot A$' é verdadeira no mundo $1$. 
+É fácil ver que isso funciona como uma contrainterpretação para  $\enot A\entails_\mlK\enot\ediamond A$. Em primeiro lugar, `$\enot A$' é verdadeira no mundo $1$. 
 E, em segundo lugar, como `$A$' é verdadeira em $2$ e $2$ é acessível a partir de $1$, temos que `$\ediamond A$' é verdadeira em $1$, e consequentemente `$\enot\ediamond A$'   é falsa em $1$. 
 Portanto, há algum mundo nesta interpretação onde `$\enot A$` é verdadeira e `$\enot\ediamond A$`  falsa.  
 
@@ -604,7 +604,7 @@ reflexiva.
 			\have[\, ]{n}{\metav{A}}\rt{m}
 		\end{nd}\]
 }
-Para mostrar isto é suficiente mostrar que não existe uma  contra-interpretação para:
+Para mostrar isto é suficiente mostrar que não existe uma  contrainterpretação para:
 \[
 	\ebox \metav{A}\entails_\mlT \metav{A}
 \]
@@ -641,7 +641,7 @@ Como antes,  não  provaremos os resultados de correção e completude.  No enta
 }
 Lembramos que a ideia por trás das subprovas estritas é que elas são maneiras de provar coisas que devem ser verdadeiras em todos os mundos acessíveis. Assim, a regra R$\mathbf{4}$  significa que sempre que $\ebox \metav{A}$ for verdadeira em um mundo, $\ebox \metav{A}$ também deve ser verdadeira  em todos os mundos acessíveis  a este mundo. Logo, devemos ter $\ebox\metav{A} \entails_\mlSfour \ebox\ebox\metav{A}$.
 
-Para ver isso,  tente construir uma contra-interpretação para esta afirmação:
+Para ver isso,  tente construir uma contrainterpretação para esta afirmação:
 \begin{itemize}
 	\item[]$\ebox\metav{A} \entails_\mlSfour \ebox \ebox \metav{A}$
 \end{itemize}
@@ -677,7 +677,7 @@ Como antes,  não  provaremos os resultados de correção e completude.  No enta
 }
 Essa regra diz que se $\metav{A}$ não é necessária, ou seja, falsa em algum mundo acessível, também não é necessária em qualquer mundo possível acessível. Temos então $\enot\ebox \metav{A} \entails_\mlSfive  \ebox\enot\ebox \metav{A}$.
 
-Para ver isso, tente construir uma contra-interpretação para esta afirmação:
+Para ver isso, tente construir uma contrainterpretação para esta afirmação:
 \[
 	\enot\ebox\metav{A} \entails_\mlSfive  \ebox \enot\ebox \metav{A}
 \]
@@ -697,7 +697,7 @@ Se definíssemos $\entails_\mlSfive $ assim, ainda obteríamos os mesmos resulta
 \practiceproblems
 
 \problempart
-Apresente contra-interpretações para as quatro seguintes afirmações falsas:
+Apresente contrainterpretações para as quatro seguintes afirmações falsas:
 \begin{earg}
 	\item $\enot P \entails_\mlK \enot\ediamond P$
 	\item $\ebox(P \eor Q)\entails_\mlK \ebox P \eor \ebox Q$
@@ -706,14 +706,14 @@ Apresente contra-interpretações para as quatro seguintes afirmações falsas:
 \end{earg}
 
 \problempart
-Apresente contra-interpretações para as duas seguintes afirmações falsas:
+Apresente contrainterpretações para as duas seguintes afirmações falsas:
 \begin{earg}
 	\item $\ebox (M\eif O),\ediamond M\entails_\mlT O$
 	\item $\ebox A\entails_\mlT \ebox \ebox A$
 \end{earg}
 
 \problempart
-Apresente contra-interpretações para as duas seguintes afirmações falsas:
+Apresente contrainterpretações para as duas seguintes afirmações falsas:
 \begin{earg}
 	\item $\ediamond A\entails_\mlSfour \ebox\ediamond A$
 	\item $\ediamond A, \ebox (\ediamond A \eif B)\entails_\mlSfour\ebox B$
