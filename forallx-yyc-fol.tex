@@ -309,7 +309,7 @@ Portanto, com essa chave de simbolização, $\forall x\,\atom{P}{x}$ significa o
 Na LPO, cada nome refere-se a exatamente um membro do domínio.
 Isso significa que um nome não pode referir-se a mais de uma coisa (afinal, um nome é um termo \emph{singular}).
 Isso significa também que um nome não pode não se referir a nenhum membro do domínio.
-Todo nome tem que referir-se a \emph{algo}.
+Todo nome tem de referir-se a \emph{algo}.
 Este fato relaciona-se a um problema filosófico clássico: o chamado problema dos termos sem referência.
 
 Os filósofos medievais costumavam usar sentenças sobre a \emph{Quimera} para exemplificar esse problema.
@@ -414,7 +414,7 @@ Ou seja, `$\exists x (\atom{M}{x} \eif \atom{D}{x})$' é verdadeira se alguma mo
 Claro que há uma moeda que não está sobre a mesa: há moedas em muitos outros lugares.
 Portanto, é \emph{muito fácil} que `$\exists x(\atom{M}{x} \eif \atom{D}{x})$' seja verdadeira.
 Um condicional geralmente será o conectivo natural a ser usado com um quantificador universal, ao passo que um condicional no escopo de um quantificador existencial tende a dizer algo muito fraco.
-Como regra geral, não coloque condicionais no escopo dos quantificadores existenciais, a menos que você tenha certeza de que precisa de um.
+Como regra, não coloque condicionais no escopo dos quantificadores existenciais, a menos que você tenha certeza de que precisa de um.
 	\factoidbox{
 		Uma sentença pode ser simbolizada como $\exists x (\atom{\meta{F}}{x} \eand \atom{\meta{G}}{x})$ se puder ser parafraseada em português como `algum $F$ é~$G$'.
 	}		
@@ -497,7 +497,7 @@ Assim, o predicado `$G$' não seria vazio e a sentença `$\forall x(\atom{G}{x} 
 			Mas as coisas nem sempre foram assim.
 			Quando Aristóteles propôs seu sistema lógico, ele não admitia a hipótese de predicados vazios e, por isso, nenhuma sentença era vacuamente verdadeira.
 			Como consequência disso, na Lógica Silogística de Aristóteles (sobre a qual, mais adiante neste livro, falaremos um pouco), a sentença \ref{monkey1} sustenta a sentença \ref{monkey2}.
-			Esta característica da lógica aristotélica que é divergente da LPO é chamada de \emph{importação existêncial}.}
+			Esta característica da lógica aristotélica que é divergente da LPO é chamada de \emph{importação existencial}.}
 	\factoidbox{
 		Quando $\meta{F}$ for um predicado vazio, qualquer sentença com a forma $\forall x (\atom{\meta{F}}{x} \eif \ldots)$ será vacuamente verdadeira.
 	}
@@ -766,12 +766,12 @@ Mas se o domínio incluir cães e ratos, no entanto, é provavelmente melhor esp
 \practiceproblems
 \problempart
 \label{pr.BarbaraEtc}
-Abaixo estão as quinze figuras da famosa \textbf{Lógica Silogística}, proposta por Aristóteles na Grécia antiga, com os nomes que cada figura recebeu dos lógicos medievais.
+Abaixo estão as quinze figuras da famosa \textbf{Lógica Silogística}, proposta por Aristóteles na Grécia Antiga, com os nomes que cada figura recebeu dos lógicos medievais.
 Cada uma destas `figuras', veremos mais adiante neste livro, é um argumento válido na LPO:
 \begin{earg}\small 
-	\item \textbf{Barbara.} Todo G é F. Todo H é G. Portanto:  Todo H é F
-	\item \textbf{Celarent.} Nenhum G é F. Todo H é G. Portanto: Nenhum H é F
-	\item \textbf{Ferio.} Nenhum G é F. Algum H é G. Portanto: Algum H não é F
+	\item \textbf{Barbara.} Todo G é F. Todo H é G. Portanto:  Todo H é F.
+	\item \textbf{Celarent.} Nenhum G é F. Todo H é G. Portanto: Nenhum H é F.
+	\item \textbf{Ferio.} Nenhum G é F. Algum H é G. Portanto: Algum H não é F.
 	\item \textbf{Darii.} Todo G é F. Algum H é G. Portanto: Algum H é F.
 	\item \textbf{Camestres.} Todo F é G. Nenhum H é G. Portanto: Nenhum H é F.
 	\item \textbf{Cesare.} Nenhum F é G. Todo H é G. Portanto: Nenhum H é F.
@@ -993,7 +993,7 @@ $$\forall x \exists y\, \atom{A}{x,y}$$
 E isso seria verdade em um triângulo amoroso.
 Por exemplo, suponha que nosso domínio do discurso esteja restrito a Guto, Nico e Zeca.
 Suponha também que Guto ama Nico, mas não ama Zeca, que Nico ama Zeca, mas não ama Guto, e que Zeca ama Guto, mas não ama Nico.
-Então, nesta situação, a a sentença \ref{lovecycle} é verdadeira, porque cada um dos três indivíduos do domínio ama alguém.
+Então, nesta situação, a sentença \ref{lovecycle} é verdadeira, porque cada um dos três indivíduos do domínio ama alguém.
 
 A sentença \ref{loveconverge} pode ser simbolizada por
 $$\exists y \forall x\, \atom{A}{x,y}$$
@@ -1229,7 +1229,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das q
 Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das dezesseis sentenças abaixo.
 \begin{center}
 \begin{ekey}
-\item[\text{domínio}] all animals
+\item[\text{domínio}] todos os animais
 \item[\atom{C}{x}] \gap{x} é um cachorro
 \item[\atom{S}{x}] \gap{x} gosta de filmes de samurai
 \item[\atom{L}{x,y}] \gap{x} é maior que \gap{y}
@@ -1791,13 +1791,13 @@ A primeira delas se concentra no tratamento que Russell propõe para descriçõe
 Conforme vimos, de acordo com sua análise, quando não há $F$s, ou mesmo quando há mais de um $F$, tanto `o $F$ é $G$' quanto `o $F$ não é $G$' são falsas.
 Peter Strawson sugeriu que tais sentenças não deveriam ser consideradas falsas.\footnote{
 	P.F.\ Strawson, `On Referring', 1950, \emph{Mind 59}, pp.\ 320--34.}
-Em vez disso, o que ocorre é que ambas falham igualmente em atender uma pressuposição que faz parte de seus significados: a pressuposição de que há um e apenas um indivíduo do domínio que satisfaz $F$.
+Em vez disso, o que ocorre é que ambas falham igualmente em atender uma pressuposição que faz parte de seus significados: a pressuposição de que há, no domínio, um e apenas um indivíduo que satisfaz $F$.
 De acordo com Strawson, quem profere qualquer uma destas duas sentenças não está \emph{afirmando} que existe um e apenas um $F$, está \emph{pressupondo} isso. A única afirmação (ou declaração) que a sentença `o $F$ é $G$' faz é a de que este pressuposto único $F$ é um $G$.
-Para que esta declaração seja um evento comunicativo bem sucedido, a pressuposição de que existe um e apenas um $F$ tem que ser satisfeita.
+Para que esta declaração seja um evento comunicativo bem sucedido, a pressuposição de que existe um e apenas um $F$ tem de ser satisfeita.
 Quando ela não é satisfeita, ou porque não há qualquer $F$, ou porque há mais de um, o proferimento de `o $F$ é $G$' ou de `o $F$ não é $G$' é uma comunicação \emph{mal sucedida} e por isso não deveria ser considerada \emph{nem} como verdadeira, \emph{nem} como falsa.
 
 Se concordarmos com Strawson, precisaremos revisar nossa lógica.
-Pois, conforme veremos na próxima Parte do livro, assim como na LVF, na LPO também existem apenas dois valores de verdade (o Verdadeiro e o Falso), e toda sentença tem que ter um desses dois valores, não havendo qualquer outra alternativa.
+Pois, conforme veremos na próxima Parte do livro, assim como na LVF, na LPO também existem apenas dois valores de verdade (o Verdadeiro e o Falso), e toda sentença tem de ter um desses dois valores, não havendo qualquer outra alternativa.
 
 Mas é possível, também, discordarmos de Strawson.
 Ele está apelando para algumas intuições linguísticas, mas não está claro que elas sejam muito robustas.
@@ -2043,9 +2043,9 @@ Aqui seguimos o caso da LVF, com a observação de que a noção de operador ló
 		
 \bigskip
 
-O \define{scope} ou \emph{ambito} de um operador lógico em uma fórmula é a subfórmula para a qual esse operador é o operador lógico principal.
+O \define{scope} ou \emph{âmbito} de um operador lógico em uma fórmula é a subfórmula para a qual esse operador é o operador lógico principal.
 	}
-Abaixo uma ilustração gráfica do escopo dos quantifidadores da última fórmula apresentada no exemplo anterior:
+Abaixo uma ilustração gráfica do escopo dos quantificadores da última fórmula apresentada no exemplo anterior:
 	$$\overbrace{\forall x \overbrace{\exists y \bigl[(\atom{F}{x} \eand \overbrace{\forall z (\atom{G}{a,y,z} \eif \atom{S}{y,z,y,a,y,x})}^{\text{escopo de `}\forall z\text{'}}}^{\text{escopo de `}\exists y\text{'}}\bigr]}^{\text{escopo de `$\forall x$'}}$$
 
 
