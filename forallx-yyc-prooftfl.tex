@@ -1,4 +1,4 @@
-%!TEX root = forallxyyc.tex
+﻿%!TEX root = forallxyyc.tex
 \part{Dedução Natural para a LVF}
 \label{ch.NDTFL}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
@@ -67,12 +67,12 @@ Começaremos uma prova escrevendo a premissa:
 Note que numeramos a premissa, pois queremos nos referir  a ela depois. De fato, cada  linha  ao longo da prova  é numerada, assim poderemos sempre nos referir a ela novamente. 
 
  Note também que traçamos  uma linha sob a  premissa. Tudo que está escrito acima da linha é uma 
-\emph{suposição}.  Tudo que está escrito abaixo dessa linha é, ou algo que segue das suposições, ou será uma nova suposição.   No nosso exemplo, desejamos concluir 
+\emph{suposição}. Tudo o que está escrito abaixo dessa linha é algo que segue das suposições ou é uma nova suposição. No nosso exemplo, desejamos concluir 
  `$\enot A \eand \enot B$';  então esperamos por fim concluir nossa prova com
 \begin{fitchproof}
 	\have[n]{con}{\enot A \eand \enot B}
 \end{fitchproof}
-para algum número $n$.  Não importa que número linha a prova termina. Mas obviamente preferimos uma prova mais curta a  uma longa. 
+para algum número $n$. Não importa em que número de linha a prova termina, mas obviamente preferimos uma prova mais curta. 
 
 Similarmente,  suponha que queremos considerar:
 $$A\eor B, \enot (A\eand C), \enot (B \eand \enot D) \therefore \enot C\eor D$$
@@ -106,10 +106,10 @@ Isto indica que temos escrito `$A \eand B$' na linha~$4$. Agora, em uma linha po
 	\have[m]{a}{\meta{A}}
 	\have[\ ]{c}{\meta{A}} \by{R}{a}
 \end{fitchproof}
-O importante é que, se qualquer sentença $\meta{A}$ ocorre em alguma linha, então podemos repetir $\meta{A}$ em linhas posteriores. Cada linha de nossa prova deve  ser justificada por alguma regra, e aqui temos `R $m$'.   Isto significa:  Reiteração, aplicada a linha~$m$. 
+O importante é que, se qualquer sentença $\meta{A}$ ocorre em alguma linha, então podemos repetir $\meta{A}$ em linhas posteriores. Cada linha de nossa prova deve  ser justificada por alguma regra, e aqui temos `R $m$'.   Isto significa:  Reiteração, aplicada à linha~$m$. 
 
- Precisamos enfatizar duas coisa.  Primeiro,   `$\meta{A}$'   não   é uma sentença da LVF,   mas um símbolo da metalinguagem que usamos quando queremos falar sobre qualquer sentença da LVF
- (veja Capítulo \ref{s:UseMention}).   Segundo, similarmente,  `$m$'  não é um símbolo que irá aparecer em uma prova.  Ele também é um símbolo da metalinguagem, o qual usamos quando queremos falar sobre qualquer número linha  de uma prova. Na prova apresentada, as linhas  estão numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis como   `$m$' para destacar o ponto em que a regra pode ser aplicada a qualquer momento. 
+ Precisamos enfatizar duas coisas.  Primeiro,   `$\meta{A}$'   não   é uma sentença da LVF,   mas um símbolo da metalinguagem que usamos quando queremos falar sobre qualquer sentença da LVF
+ (veja o Capítulo \ref{s:UseMention}).   Segundo, similarmente,  `$m$'  não é um símbolo que irá aparecer em uma prova.  Ele também é um símbolo da metalinguagem, que usamos quando queremos falar sobre qualquer número de linha de uma prova. Na prova apresentada, as linhas  estão numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis como   `$m$' para destacar o ponto em que a regra pode ser aplicada a qualquer momento. 
 
  %%%%%% --------------------------------------------------------------  26.3  Conjuncao
 \section{Conjunção}
@@ -127,7 +127,7 @@ Nosso sistema de dedução natural  captura  essa ideia diretamente. No exemplo 
 	\have[\ ]{c}{R \eand L} \ai{a, b}
 \end{fitchproof}
 
- Note que cada linha de nossa prova  ou deve ser uma suposição, ou deve ser justificada por alguma regra.    Citamos  aqui   `$\eand$I 8, 15' para indicar que a linha obtida pela regra da introdução  da conjunção  ($\eand$I) aplicada as linhas 8 e 15.  Poderíamos igualmente obter:
+ Note que cada linha de nossa prova  ou deve ser uma suposição, ou deve ser justificada por alguma regra.    Citamos  aqui   `$\eand$I 8, 15' para indicar que a linha obtida pela regra da introdução  da conjunção  ($\eand$I) aplicada às linhas 8 e 15.  Poderíamos igualmente obter:
 \begin{fitchproof}
 	\have[8]{a}{R}
 	\have[15]{b}{L}
@@ -144,7 +144,7 @@ De maneira mais geral, aqui está  a nossa regra de introdução da  conjunção
 \end{fitchproof}}
 Para ser claro, o enunciado da regra é esquemático.  Isto não é propriamente uma prova,      `$\meta{A}$'  e `$\meta{B}$'  não são sentenças da LVF, mas símbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentenca da LVF (veja Capítulo \ref{s:UseMention}). 
 
-Similarmente,  `$m$' e `$n$' não são numerais  que irão aparecer em uma prova real. Eles também são símbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis   para destacar o ponto que a regra pode ser aplicada a qualquer momento.  A regra requer somente que temos ambos os conjuntos disponíveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
+Similarmente,  `$m$' e `$n$' não são numerais  que irão aparecer em uma prova real. Eles também são símbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis   para destacar o ponto em que a regra pode ser aplicada a qualquer momento.  A regra requer somente que tenhamos ambos os conjuntos disponíveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
 
 A regra é chamada `\emph{introdução} da conjunção'  porque  ela introduz  o símbolo `$\eand$' na nossa  prova onde ele pode ter sido ausente.  Correspondentemente,  temos uma regra que \emph{elimina}  este  símbolo.  Vamos supor que já foi mostrado que Louis é ambos  reservado e  leal.  Você   está autorizado a concluir que Louis   é reservado. Igualmente você   está autorizado a concluir que Louis   é leal.  Juntando tudo isto, obtemos nossa(s) regra(s) de eliminação da conjunção:
 \factoidbox{
@@ -160,7 +160,7 @@ e igualmente,
 	\have[\ ]{b}{\meta{B}} \ae{ab}
 \end{fitchproof}}
  
-O propósito é simplesmente este,  quando temos uma conjunção em alguma linha da prova, você pode obter qualquer um dos conjuntos  por {\eand}E.  Uma coisa importante a enfatizar:  você só pode aplicar essa regra quando a conjunção é o operador lógico principal. Logo, você não pode inferir `$D$' a partir de `$C \eor (D \eand E)$' usando a regra {\eand}E.
+O propósito é simplesmente este: quando temos uma conjunção em alguma linha da prova, você pode obter qualquer um dos conjuntos  por {\eand}E.  Uma coisa importante a enfatizar:  você só pode aplicar essa regra quando a conjunção é o operador lógico principal. Logo, você não pode inferir `$D$' a partir de `$C \eor (D \eand E)$' usando a regra {\eand}E.
 
 Com apenas essas duas regras, já podemos começar a ver parte do poder do nosso sistema formal de provas.  Considere: 
 \begin{earg}
@@ -177,7 +177,7 @@ A partir da premissa, podemos obter cada um dos conjuntos por  {\eand}E. A prova
 	\have{a}{{[}(A\eor B)\eif(C\eor D){]}} \ae{ab}
 	\have{b}{{[}(E \eor F) \eif (G\eor H){]}} \ae{ab}
 \end{fitchproof}
-Então, aplicando a regra {\eand}I  nas linhas 3 e 2 ( nesta ordem), chegamos a conclusão desejada. A  prova finalizada é como segue:
+Então, aplicando a regra {\eand}I  nas linhas 3 e 2 (nessa ordem), chegamos à conclusão desejada. A  prova finalizada é como segue:
 
 
 \begin{fitchproof}
@@ -215,7 +215,7 @@ Vale a pena ver um outro exemplo.  Na Seção   \ref{s:MoreBracketingConventions
 	\have{ab}{A \eand B}\ai{a, b}
 	\have{con}{(A \eand B) \eand C}\ai{ab, c}
 \end{fitchproof}
-Lembre-se que nossa definição oficial de sentenças na LVF somente admite conjunções com dois conjuntos.  A prova que acabamos de apresentar sugere que podemos abandonar  os parênteses em todas as nossas provas. Entretanto, isto não é o padrão e  não iremos fazer isto.  De fato, manteremos nossa convenção do uso de parênteses mais severa. (Entretanto, iremos permitir o abandono dos parênteses mais externos, por legitimidade.)  
+Lembre-se de que nossa definição oficial de sentenças na LVF somente admite conjunções com dois conjuntos.  A prova que acabamos de apresentar sugere que podemos abandonar  os parênteses em todas as nossas provas. Entretanto, isto não é o padrão e  não iremos fazer isto.  De fato, manteremos nossa convenção do uso de parênteses mais severa. (Entretanto, iremos permitir o abandono dos parênteses mais externos, por legitimidade.)  
 
 Vamos dar uma última ilustração. Ao usar a regra $\eand$I 
 não há necessidade de aplicá-la a sentenças diferentes.
@@ -1921,4 +1921,5 @@ Validade				&  Derivar a conclusão a partir das premissas & Encontrar uma linha
 \item O argumento $\enot \enot (C \eiff \enot C), ((G \eor C) \eor G) \therefore ((G \eif C) \eand G) $ é válido.
 \item O argumento $ \enot \enot L,  (C \eif \enot L) \eif C) \therefore \enot C$  é  inválido
 \end{enumerate}
+
 
