@@ -108,7 +108,7 @@ Sem surpresa, o bicondicional é simétrico.
 \section{A ideia da verofuncionalidade}
 Vamos introduzir uma ideia importante.
 	\factoidbox{
-		Um conectivo é \define{truth-functional connective} (também chamado de \xdefine{funcao de verdade}) se o valor de verdade de uma sentença em que esse conectivo é o conectivo principal for determinado exclusivamente pelos valores de verdade das sentenças que a constituem.
+		Um conectivo é \define{truth-functional connective} (também chamado de \textit{função de verdade}) se o valor de verdade de uma sentença em que esse conectivo é o conectivo principal for determinado exclusivamente pelos valores de verdade das sentenças que a constituem.
 	}
         
 Todos os conectivos da LVF são realmente verofuncionais (funções de verdade).
@@ -193,7 +193,7 @@ Suponha que Lara tenha feito os seguintes desenhos:
 Nesse caso, minha afirmação é certamente verdadeira.
 As formas C e D não são cinza e por isso não se constituem em \emph{contraexemplos} à minha afirmação.
 A forma A \emph{é} cinza, mas felizmente também é circular.
-Portanto, minha afirmação não tem contra-exemplos.
+Portanto, minha afirmação não tem contraexemplos.
 Deve, por isso, ser verdadeira.
 Isso significa que cada uma das seguintes \emph{instâncias} da minha afirmação também deve ser verdadeira:
 {\small 
@@ -493,7 +493,7 @@ A moral da estória é: \emph{nunca omita os parênteses} (exceto os mais extern
 \practiceproblems\label{pr.TT.TTorC}
 \problempart
 Faça as tabelas de verdade completas para cada uma das seguintes 9 sentenças:
-\begin{earg}
+\begin{earg}\label{pb.A.ttt}
 \item $A \eif A$ %taut
 \item $C \eif\enot C$ %contingent
 \item $(A \eiff B) \eiff \enot(A\eiff \enot B)$ %tautology
@@ -696,7 +696,7 @@ Para praticar mais, você pode construir tabelas de verdade para todas as senten
 \chapter{Conceitos semânticos}
 \label{s:SemanticConcepts}
 
-No Capítulo anterior, introduzimos a ideia de valoração e mostramos como determinar o valor de verdade de qualquer sentença da LVF, em qualquer valoração, usando as tabelas de verdade.
+No capítulo anterior, introduzimos a ideia de valoração e mostramos como determinar o valor de verdade de qualquer sentença da LVF, em qualquer valoração, usando as tabelas de verdade.
 Neste Capítulo, apresentaremos alguns conceitos importantes em lógica e mostraremos como usar tabelas de verdade para testar quando eles se aplicam ou não.
 
 Este é um capítulo muito importante, o mais importante sobre a LVF.
@@ -798,16 +798,16 @@ Como em cada linha os valores são os mesmos, as duas sentenças são equivalent
 No Capítulo \ref{s:BasicNotions}, dissemos que as sentenças de um grupo são compatíveis (conjuntamente possíveis) se for possível que todas elas sejam conjuntamente verdadeiras (verdadeiras ao mesmo tempo, na mesma circunstância).
 Também para esta noção podemos oferecer um representante na LVF:
 	\factoidbox{
-		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são \define{satisfiability in TFL} (na LVF) se e somente se há alguma valoração na qual todas elas são verdadeiras.
+		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são \define{satisfiability in TFL}  se e somente se há alguma valoração na qual todas elas são verdadeiras.
 	}
 
-Derivativamente, podemos definir que as sentenças de um grupo são \xdefine{conjuntamente insatisfatorias} se não houver nenhuma valoração na qual todas elas sejam verdadeiras.
-Novamente, é fácil testar a satisfação e a insatisfação conjuntas usando tabelas de verdade. 
+Derivativamente, podemos definir que as sentenças de um grupo são \define{insatisfiability in TFL} se não houver nenhuma valoração na qual todas elas sejam verdadeiras.
+Novamente, é fácil testar a compatibilidade e incompatibilidade na LVF usando tabelas de verdade. 
 Por exemplo, a tabela de verdade abaixo mostra que as sentenças
 \begin{center}
  $P \eor Q$\ \ \ \ \ \  e \ \ \ \ \ $\enot P \eor \enot Q$
 \end{center}
-são conjuntamente satisfatórias, porque há valorações (a segunda e a terceira linhas) nas quais ambas são verdadeiras.
+são compatíveis na LVF, porque há valorações (a segunda e a terceira linhas) nas quais ambas são verdadeiras.
 \begin{center}
 \begin{tabular}{c c|d e f |d e e e f}
 $P$&$Q$&$P$&\eor&$Q$&\enot&$P$&\eor&\enot&$Q$\\
@@ -822,7 +822,7 @@ Já na tabela seguinte, podemos ver que as sentenças
 \begin{center}
 $A \eand B$\ \ \ \ \ \  e \ \ \ \ \ $\enot A \eand B$
 \end{center}
-são conjuntamente insatisfatórias pois em nenhuma linha da tabela as sentenças são ambas verdadeiras. 
+são incompatíveis na LVF pois em nenhuma linha da tabela as sentenças são ambas verdadeiras. 
 \begin{center}
 \begin{tabular}{c c|d e f |d e e f}
 $A$&$B$&$A$&\eand&$B$&\enot&$A$&\eand&$B$\\
@@ -838,7 +838,7 @@ $A$&$B$&$A$&\eand&$B$&\enot&$A$&\eand&$B$\\
 \section{Sustentação e validade}\label{s:SustentValid}
 A ideia a seguir está intimamente ligada à noção de satisfação conjunta:
 	\factoidbox{
-		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \xdefine{sustentam} (na LVF) a sentença $\meta{C}$ se não há valoração na qual $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são todas verdadeiras e $\meta{C}$ é falsa.
+		As sentenças $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \define{support} a sentença $\meta{C}$ se não há valoração na qual $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são todas verdadeiras e $\meta{C}$ é falsa.
 	}
  
 Novamente, não é difícil verificar a sustentação com uma tabela de verdade.
@@ -966,9 +966,9 @@ Se elas sustentam, então podemos confiar que o argumento é válido.\footnote{
 
 
 \section{Alcance e limites da LVF}\label{s:ParadoxesOfMaterialConditional}
-Atingimos, na Seção anterior, um marco importante para os objetivos da lógica enquanto disciplina: um teste para a validade de argumentos!
+Atingimos, na seção anterior, um marco importante para os objetivos da lógica enquanto disciplina: um teste para a validade de argumentos!
 É fundamentalmente para fazer testes desse tipo que estudamos lógica.
-Estudamos lógica para saber distinguir os bons dos maus argumentos, e o teste de validade via tabelas de verdade, que aprendemos na Seção anterior, corresponde a uma das respostas que a lógica pode nos dar.
+Estudamos lógica para saber distinguir os bons dos maus argumentos, e o teste de validade via tabelas de verdade, que aprendemos na seção anterior, corresponde a uma das respostas que a lógica pode nos dar.
 %Há muitas outras que ainda não estudamos, claro.
 %\label{key}Este livro é apenas uma introdução ao estudo da lógica.
 É essencial, portanto, entendermos \emph{o alcance} e também \emph{os limites} desta nossa primeira conquista.
@@ -977,7 +977,7 @@ Um aspecto básico das limitações não só da LVF, mas da lógica como um todo
 Não conseguimos, com a LVF, testar diretamente a validade dos argumentos originais em português.
 Conseguimos apenas testar a validade de suas simbolizações.
 Então os resultados de nossos testes lógicos serão tão confiáveis quanto as simbolizações forem aceitáveis como substitutos fiéis para os argumentos originais.
-No exemplo da Seção anterior, não testamos diretamente a validade do argumento
+No exemplo da seção anterior, não testamos diretamente a validade do argumento
 	\begin{earg}
 		\item[] Se foi o motorista, então não foi a babá.
 		\item[] Não foi a babá.
@@ -1152,8 +1152,8 @@ De fato, podemos até considerar o caso limite:
 Para entendermos o que isto quer dizer, basta aplicarmos a definição de sustentação.
 %Vamos aplicar a definição de sustentação a esta afirmação para entender seu significado.
 De acordo com nossa definição, apresentada na Seção \ref{s:SustentValid}, quando afirmamos, por exemplo, `$\meta{A}_1, \meta{A}_2 \entails \meta{C}$', estamos dizendo que não há valoração na qual todas as sentenças do lado esquerdo de `$\entails$' são verdadeiras e $\meta{C}$ é falsa.
-Então, usando o mesmo princípio, quando dizemos `\ $\entails \meta{C}$', como não há qualquer sentença do lado esquerdo de `$\entails$', isto significa simplesmente que $\meta{C}$ não é falsa em nenhuma valoração.
-Em outras palavras, `\ $\entails \meta{C}$' corresponde à afirmação de que $\meta{C}$ é verdadeira em todas as valorações.
+Então, usando o mesmo princípio, `$\entails \meta{C}$' significa simplesmente que $\meta{C}$ não é falsa em nenhuma valoração, pois não há qualquer sentença do lado  esquerdo de `$\entails$'.
+Em outras palavras, `$\entails \meta{C}$' corresponde à afirmação de que $\meta{C}$ é verdadeira em todas as valorações.
 Em outras palavras ainda, corresponde a dizer que $\meta{C}$ é uma tautologia.
 Se raciocinarmos de modo similar, veremos que:
 	$$\meta{A} \entails$$
@@ -1252,14 +1252,14 @@ Aqui, sim, a lógica, a metafísica e a filosofia em geral serão os únicos ins
 
 \practiceproblems
 \problempart
-Examine as tabelas de verdade que você fez como resposta ao Exercício \ref{s:CompleteTruthTables} \textbf{A} e determine quais sentenças são tautologias, quais são contradições e quais são contingências (ou seja, nem tautologias, nem contradições).
+Examine as tabelas de verdade que você fez como resposta ao Exercício \ref{pb.A.ttt} do Capítulo \ref{s:CompleteTruthTables} e determine quais sentenças são tautologias, quais são contradições e quais são contingências (ou seja, nem tautologias, nem contradições).
 \solutions
 
 \
 
 \problempart
 \label{pr.TT.satisfiable}
-Use tabelas de verdade para determinar se as sentenças de cada um dos quatro itens abaixo são conjuntamente satisfatórias ou conjuntamente insatisfatórias:
+Use tabelas de verdade para determinar se as sentenças de cada um dos quatro itens abaixo são compatíveis ou incompatíveis na LVF:
 \begin{earg}
 \item $A\eif A$, $\enot A \eif \enot A$, $A\eand A$, $A\eor A$ %satisfiable
 \item $A\eor B$, $A\eif C$, $B\eif C$ %satisfiable
@@ -1327,7 +1327,7 @@ Determine, para cada um dos cinco pares de sentença abaixo, se as sentenças do
 
 \problempart
 \label{pr.TT.satisfiable2}
-Determine se as sentenças de cada uma das cinco coleções abaixo são conjuntamente satisfatórias ou conjuntamente insatisfatórias, usando, em cada caso, uma tabela de verdade completa.
+Determine se as sentenças de cada uma das cinco coleções abaixo são compatíveis ou incompatíveis na LVF, usando, em cada caso, uma tabela de verdade completa.
 \begin{earg}
 \item $A \eand \enot B$, $\enot(A \eif B)$, $B \eif A$\vspace{.5ex} %Consistent
 
@@ -1380,7 +1380,7 @@ Determine se as sentenças de cada uma das cinco coleções abaixo são conjunta
 
 \noindent\problempart
 \label{pr.TT.satisfiable3}
-Determine se as sentenças de cada uma das cinco coleções abaixo são conjuntamente satisfatórias ou conjuntamente insatisfatórias, usando, em cada caso, uma tabela de verdade completa.
+Determine se as sentenças de cada uma das cinco coleções abaixo são  compatíveis ou incompatíveis na LVF, usando, em cada caso, uma tabela de verdade completa.
 \begin{earg}
 \item $\enot B$, $A \eif B$, $A$ \vspace{.5ex}%unsatisfiable.
 \item $\enot(A \eor B)$, $A \eiff B$, $B \eif A$\vspace{.5ex} %Consistent
@@ -1428,7 +1428,7 @@ O que esta suposição nos diz a respeito de se $\meta{A}\eiff\meta{B}$ é uma t
 \item Suponha que $(\meta{A}\eand\meta{B})\eif\meta{C}$ não seja nem uma tautologia, nem uma contradição.
 O que esta suposição nos diz a respeito da validade ou não de $\meta{A}, \meta{B} \therefore\meta{C}$?
 %The sentence is false on some line of a complete truth table. On that line, \meta{A} and \meta{B} are true and \meta{C} is false. So the argument is invalid.
-\item Suponha que  $\meta{A}$, $\meta{B}$ e $\meta{C}$ sejam conjuntamente insatisfatórias.
+\item Suponha que  $\meta{A}$, $\meta{B}$ e $\meta{C}$ sejam incompatíveis na LVF.
 O que esta suposição nos diz a respeito de se $(\meta{A}\eand\meta{B}\eand\meta{C})$ é uma tautologia, uma contradição ou uma contingência?
 \item Suponha que \meta{A} seja uma contradição.
 O que esta suposição nos diz a respeito de $\meta{A}, \meta{B} \entails \meta{C}$?
@@ -1694,7 +1694,7 @@ Nem sempre precisamos das informações de todas as linhas de uma tabela de verd
 \paragraph{Tautologia.} 
 Para mostrar que uma sentença é uma tautologia, precisamos mostrar que ela é verdadeira em todas as valorações.
 Ou seja, precisamos saber que ela é verdadeira em todas as linhas da tabela de verdade.
-Então, mesmo que usemos os atalhos aprendidos no Capítulo anterior, para mostrar que uma sentença é uma tautologia precisamos de uma tabela de verdade completa, com o conectivo principal da sentença preenchido em todas as linhas.
+Então, mesmo que usemos os atalhos aprendidos no capítulo anterior, para mostrar que uma sentença é uma tautologia precisamos de uma tabela de verdade completa, com o conectivo principal da sentença preenchido em todas as linhas.
 
 Entretanto, para mostrar que uma sentença \emph{não} é uma tautologia, basta uma linha na qual a sentença seja falsa.
 Ou seja, não precisamos fazer uma tabela de verdade completa para mostrar que uma sentença não é uma tautologia.
@@ -1730,7 +1730,7 @@ $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
    &   &   &   &    &  V  &    &\TTbf{F}&    &   F &   
 \end{tabular}
 \end{center}
-Para que o `$(U\eand T)$' seja verdadeira,`$U$' e `$T$' devem ser ambos verdadeiros.
+Para que o antecedente `$(U\eand T)$' seja verdadeiro, as sentenças `$U$' e `$T$' devem ser ambas verdadeiras.
 Então, também preenchemos isso na tabela:
 \begin{center}
 \begin{tabular}{c c c c|d e e e e e f}
@@ -1740,7 +1740,7 @@ $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
 \end{tabular}
 \end{center}
 Agora, apenas precisamos tornar `$(S \eand W)$' falsa.
-Para fazer isso, pelo menos um entre `$S$' e `$W$' deve ser falso.
+Para fazer isso, pelo menos uma das partes da conjunção `$S$' e `$W$' deve ser falsa.
 Podemos tornar ambos `$S$' e `$W$' falsos, se quisermos; ou apenas o primeiro, ou apenas o segundo.
 Tanto faz.
 Tudo o que importa é que a sentença completa seja falsa nessa linha.

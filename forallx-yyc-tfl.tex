@@ -319,7 +319,7 @@ Agora, finalmente, usamos a paráfrase acima para simbolizar a sentença \ref{an
 $$(B_1 \eand \enot C_1)$$
 Observe que perdemos todas as nuances da sentença original em português nessa simbolização.
 Existe uma clara diferença de tom, ênfase, entre a sentença `Embora Bárbara seja saxofonista, ela não é canhota' (a sentença \ref{and6}) e `Bárbara é saxofonista e não é o caso de que Bárbara é canhota' (a paráfrase que fizemos para simbolizá-la na LVF).
-A LVF não preserva (e não pode) preservar esse tipo nuance.
+A LVF não preserva (e não pode) preservar esse tipo de nuance.
 
 A sentença \ref{and7} levanta questões semelhantes.
 Existe um claro contraste entre o que é dito de Romeu com o que é dito de Bárbara, mas isso não é algo com o qual a LVF consiga lidar.
@@ -520,7 +520,7 @@ Usaremos a seguinte chave de simbolização:
 		\item[A_3] Olavo é um asno.
 		\item[M_3] Olavo é um mamífero.
 	\end{ekey}
-A sentença \ref{iff1}, conforme acabamos de ver na Seção anterior, pode ser simbolizada como:
+A sentença \ref{iff1}, conforme acabamos de ver na seção anterior, pode ser simbolizada como:
 $$(A_3 \eif M_3)$$
 A sentença \ref{iff2}, apesar de muito parecida, difere de \ref{iff1} em um aspecto bastante importante:
 o sentido do condicional.
@@ -568,7 +568,7 @@ Ao proferir a sentença \ref{if_iff1} o pai se compromete com o que fará caso a
 A sentença diz apenas que se ela não comer toda a verdura, ela não ganhará sobremesa.
 Mas nada é dito sobre o que acontece se a filha come toda a verdura.
 No entanto, ao ouvir a sentença \ref{if_iff1}, a filha espera do pai não só o compromisso condicional que a sentença literalmente expressa, mas ela espera também o compromisso de que `ela não ganhará sobremesa \emph{apenas se} não comer toda a verdura'.
-E como vimos na Seção anterior, este compromisso pode ser parafraseado na sentença
+E como vimos na seção anterior, este compromisso pode ser parafraseado na sentença
 \begin{earg}
 		\item[\ex{if_iff2}] Se você não ganhou sobremesa, então você não comeu toda a verdura.
 	\end{earg}
@@ -811,9 +811,9 @@ Existe alguma maneira de simbolizar o \emph{ou exclusivo} usando apenas um conec
 
 
 \chapter{Sentenças da LVF}\label{s:TFLSentences}
-A expressão ``as maçãs são vermelhas ou as jaboticabas são pretas'' é uma sentença em português e a expressão ``$(M \eor J)$'' é uma sentença da LVF.
+A expressão `as maçãs são vermelhas ou as jaboticabas são pretas' é uma sentença em português e a expressão `$(M \eor J)$' é uma sentença da LVF.
 Embora não tenhamos em geral dificuldades em identificar uma expressão como sendo ou não uma sentença do português, não há uma definição formal que esclareça completamente o que conta como sentença na língua portuguesa.
-Neste capítulo, no entanto, ofereceremos uma \emph{definição} completa do que conta como uma sentença de LVF.
+Neste capítulo, no entanto, ofereceremos uma \emph{definição} completa do que conta como uma sentença da LVF.
 E esse é um dos motivos pelos quais dizemos que uma linguagem formal como a LVF é mais precisa do que uma linguagem natural como o português.
 
 
@@ -822,7 +822,7 @@ E esse é um dos motivos pelos quais dizemos que uma linguagem formal como a LVF
 Vimos que há três tipos diferentes de símbolos na LVF:
 \begin{center}
 \begin{tabular}{l l}
-Sentenças atômicas: & $A,B,C,\ldots,Z$\\
+Letras sentenciais: & $A,B,C,\ldots,Z$\\
 com subíndices, se necessário: & $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$\\
 \\
 Conectivos: & $\enot,\eand,\eor,\eif,\eiff$\\
@@ -839,7 +839,7 @@ Obviamente, muitas expressões de LVF serão totalmente sem sentido.
 Nós precisamos saber quando uma expressão de LVF constitui uma \emph{sentença}.
 
 Letras sentenciais individuais tais como `$A$' e `$G_{13}$' devem, claramente, contar como sentenças.
-(Nós as chamaremos de sentenças \emph{atômicas}.)
+(Nós as chamaremos de \definepl{atomic sentence}.)
 Podemos formar sentenças adicionais a partir das sentenças atômicas usando os vários conectivos.
 Usando negação, podemos obter `$\enot A$' e `$\enot G_{13} $'.
 Usando conjunção, podemos obter `$(A \eand G_{13})$', `$(G_{13} \eand A)$', `$(A \eand A)$' e `$(G_{13} \eand G_{13})$'.
@@ -1018,7 +1018,7 @@ $$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$
 \chapter{Ambiguidade}\label{s:AbmbiguityTFL}
 
 %In English, sentences can be \define{ambiguous}, i.e., they can have more than one meaning.  There are many sources of ambiguity. One is \emph{lexical ambiguity:} a sentence can contain words which have more than one meaning.  For instance, `bank' can mean the bank of a river, or a financial institution. So I might say that `I went to the bank' when I took a stroll along the river, or when I went to deposit a check.  Depending on the situation, a different meaning of `bank' is intended, and so the sentence, when uttered in these different contexts, expresses different meanings.
-Em português as sentenças podem ser \xdefine{ambiguas}, ou seja, podem ter mais de um significado. Existem muitas fontes de ambiguidade. Uma delas é a \emph{ambiguidade lexical:} uma sentença pode conter palavras que têm mais de um significado. Por exemplo, `banco' pode significar um móvel que serve como assento ou uma instituição financeira. Assim, posso dizer que `estava no banco aqui perto', apontando para onde estava sentado ou para a instituição financeira no outro lado da rua. Dependendo da situação, um significado diferente de `banco' é pretendido e, portanto, a sentença expressa diferentes significados.
+Em português as sentenças podem ser \textit{ambíguas}, ou seja, podem ter mais de um significado. Existem muitas fontes de ambiguidade. Uma delas é a \emph{ambiguidade lexical:} uma sentença pode conter palavras que têm mais de um significado. Por exemplo, `banco' pode significar um móvel que serve como assento ou uma instituição financeira. Assim, posso dizer que `estava no banco aqui perto', apontando para onde estava sentado ou para a instituição financeira no outro lado da rua. Dependendo da situação, um significado diferente de `banco' é pretendido e, portanto, a sentença expressa diferentes significados.
 
 %A different kind of ambiguity is \emph{structural ambiguity}.  This arises when a sentence can be interpreted in different ways, and depending on the interpretation, a different meaning is selected.  A famous example due to Noam Chomsky is the following:
 %\begin{earg}
@@ -1043,7 +1043,7 @@ Quando a frase é pronunciada, geralmente apenas um significado é pretendido. �
 \end{earg} 
 
 %Ambiguity is related to, but not the same as, vagueness. An adjective, for instance `rich' or `tall,' is \define{vague} when it is not always possible to determine if it applies or not.  For instance, a person who's 6~ft 4~in (1.9~m) tall is pretty clearly tall, but a building that size is tiny.  Here, context has a role to play in determining what the clear cases and clear non-cases are (`tall for a person,' `tall for a basketball player,' `tall for a building'). Even when the context is clear, however, there will still be cases that fall in a middle range.
-A ambiguidade está relacionada à vagueza, mas elas não são a mesma coisa. Um adjetivo, como `rico' ou `alto', é \xdefine{vago} quando nem sempre é possível determinar se eles se aplicam ou não. Por exemplo, uma pessoa com 1,9m de altura é claramente alta, mas um prédio desse tamanho é minúsculo. Aqui, o contexto tem um papel a desempenhar na determinação de quais são os casos claros de aplicação e de não-aplicação do adjetivo (`alto para uma pessoa', `alto para um jogador de basquete', `alto para um edifício'). Mesmo quando o contexto é claro, no entanto, ainda haverá casos que se enquadram em uma faixa intermediária.
+A ambiguidade está relacionada à vagueza, mas elas não são a mesma coisa. Um adjetivo, como `rico' ou `alto', é \textit{vago} quando nem sempre é possível determinar se eles se aplicam ou não. Por exemplo, uma pessoa com 1,9m de altura é claramente alta, mas um prédio desse tamanho é minúsculo. Aqui, o contexto tem um papel a desempenhar na determinação de quais são os casos claros de aplicação e de não-aplicação do adjetivo (`alto para uma pessoa', `alto para um jogador de basquete', `alto para um edifício'). Mesmo quando o contexto é claro, no entanto, ainda haverá casos que se enquadram em uma faixa intermediária.
 
 %In TFL, we generally aim to avoid ambiguity. We will try to give our symbolization keys in such a way that they do not use ambiguous words or  disambiguate them if a word has different meanings. So, e.g., your symbolization key will need two different sentence letters for `Rebecca went to the (money) bank' and `Rebecca went to the (river) bank.' Vagueness is harder to avoid. Since we have stipulated that every case (and later, every valuation) must make every basic sentence (or sentence letter) either true or false and nothing in between, we cannot accommodate borderline cases in TFL.
 Na LVF, geralmente buscamos evitar ambiguidades. Tentaremos fazer com que nossas chaves de simbolização não usem palavras ambíguas ou que eliminem a ambiguidade quando a palavra usada tiver significados diferentes. Então, por exemplo, a chave de simbolização precisará de duas letras sentenciais diferentes para `Ivo está trabalhando no banco (instituição financeira)' e `Ivo está trabalhando no banco (de dados)'. A imprecisão é mais difícil de evitar. Uma vez que estipulamos que cada caso (e posteriormente, cada valoração) deve tornar cada sentença básica (ou letra sentencial) verdadeira ou falsa, sem meio-termo, não podemos acomodar casos limítrofes na LVF. 

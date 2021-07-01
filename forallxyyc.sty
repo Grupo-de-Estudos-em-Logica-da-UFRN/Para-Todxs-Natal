@@ -18,6 +18,10 @@
 \usepackage[english,brazilian]{babel}
 \usepackage[utf8]{inputenc}
 
+% Data (Daniel)
+\def\mydate{\leavevmode\hbox{\twodigits\day/\twodigits\month/\the\year}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
 %RZ: typefaces 
 
 \usepackage{helvet}

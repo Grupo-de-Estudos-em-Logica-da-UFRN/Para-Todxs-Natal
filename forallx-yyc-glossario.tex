@@ -22,7 +22,7 @@ plural=expressões indicativas de conclusão,
 description={-- expressão ou palavra como ``portanto'' usada para indicar que o que se segue é a conclusão de um argumento}
 }
 
-\newglossaryentry{argumento}
+\newglossaryentry{argument}
 {
 name=argumento,
 plural=argumentos,
@@ -33,7 +33,7 @@ description={-- um grupo de sentenças que corresponde à expressão linguístic
 {
 name=premissa,
 plural=premissas,
-description={-- qualquer sentença de um argumento que não é a conclusão}
+description={-- (1) uma das sentenças de um argumento da qual se parte para inferir a conclusão; (2) qualquer sentença de um argumento que não é a conclusão.}
 }
 
 \newglossaryentry{conclusion}
@@ -67,14 +67,15 @@ description={-- (1) propriedade possuída pelos argumentos que são válidos e t
 name=compatibilidade,
 plural=compatíveis,
 text={conjuntamente possíveis}, %jointly possible
-description={-- propriedade de grupos de sentenças que não se contradizem mutuamente e podem ser todas verdadeiras em uma mesma situação}
+description={-- (ou \textit{possibilidade conjunta}) propriedade de grupos de sentenças que não se contradizem mutuamente e podem ser todas verdadeiras em uma mesma situação}
 }
 
-\newglossaryentry{contingent sentence}
+\newglossaryentry{contingent}
 {
-name=sentença contingente,
-plural=sentenças contingentes,
-description={-- uma sentença que não é nem uma verdade necessária, nem uma falsidade necessária, mas que é verdadeira em algumas situações e falsa em outras.}
+name=contingência,
+plural=contingentes,
+text=contingente,
+description={-- (ou \textit{sentença contingente}) uma sentença que pode ser verdadeira em algumas situações e falsa em outras. Ou seja, uma sentença que poderia ter um valor de verdade diferente do que tem; cuja verdade ou falsidade não é necessária}
 }
 
 
@@ -82,14 +83,14 @@ description={-- uma sentença que não é nem uma verdade necessária, nem uma f
 {
 name={verdade necessária},
 plural={verdades necessárias},
-description={-- uma sentença que é verdadeira em qualquer situação, que é impossível de ser falsa}
+description={-- uma sentença que é verdadeira em qualquer situação; que é impossível de ser falsa}
 }
 
 \newglossaryentry{necessary falsehood}
 {
 name={falsidade necessária},
 plural={falsidades necessárias},
-description={-- uma sentença que é falsa em qualquer situação, que é impossível de ser verdadeira}
+description={-- uma sentença que é falsa em qualquer situação; que é impossível de ser verdadeira}
 }
 
 \newglossaryentry{necessary equivalence}
@@ -97,7 +98,7 @@ description={-- uma sentença que é falsa em qualquer situação, que é imposs
 name={equivalência necessária},
 plural={equivalências necessárias},
 %text={necessariamente equivalente},
-description={-- propriedade de um grupo de sentenças que em qualquer situação têm sempre o mesmo valor de verdade, ou são todas verdadeiras, ou todas falsas}
+description={-- propriedade de um grupo de sentenças que em qualquer situação têm sempre o mesmo valor de verdade. Ou são todas verdadeiras, ou todas falsas}
 }
 
 \newglossaryentry{sentence letter}
@@ -189,8 +190,8 @@ description={-- (1) nome do conectivo `\eiff', usado para simbolizar expressões
 
 \newglossaryentry{sentence of TFL}
 {
-name=sentença (da LVF),
-plural=sentenças (da LVF),
+name=sentença da LVF,
+plural=sentenças da LVF,
 description={-- uma sequência de símbolos da LVF construída de acordo com as regras indutivas apresentadas na p.~\pageref{TFLsentences}}
 }
 
@@ -221,15 +222,23 @@ description={-- uma variável da metalinguagem que pode representar qualquer sen
 
 \newglossaryentry{truth value}
 {
-name = valor de verade,
+name = valor de verdade,
 plural= valores de verdade,
 description = {-- um dos dois valores lógicos que as sentenças podem ter: o Verdadeiro e o Falso}
+}
+
+\newglossaryentry{false}
+{
+name = falso,
+plural= falsos,
+text= falsa,
+description = {-- (ou \textit{falsidade}) um dos dois valores de verdade clássicos usados para classificar as sentenças; o outro é o verdadeiro. Uma sentença é classificada como falsa em uma situação quando o que ela declara não ocorre na situação}
 }
 
 \newglossaryentry{truth-functional connective}
 {
 name=verofuncional,
-description={-- qualquer conectivo em que o valor de verdade da sentença em que ele é o conectivo principal é determinado univocamente pelos valores de verdade das sentenças componentes}
+description={-- (ou \textit{função de verdade}) qualquer conectivo em que o valor de verdade da sentença em que ele é o conectivo principal é determinado univocamente pelos valores de verdade das sentenças componentes}
 }
 
 \newglossaryentry{valuation}
@@ -253,14 +262,14 @@ description={-- uma sentença que é verdadeira em todas as valorações; ou sej
 
 \newglossaryentry{contradiction of TFL}
 {
-  name=contradição (na LVF),
+  name=contradição na LVF,
   text = contradição,
 description={-- uma sentença que é falsa em todas as valorações; ou seja, uma sentença cuja tabela de verdade tem F em todas as linhas na coluna abaixo do conectivo principal}
 }
 
 \newglossaryentry{equivalent}
 {
-  name=equivalência (na LVF),
+  name=equivalência na LVF,
   text = equivalente,
   plural=equivalentes,
 description={-- propriedade de um grupo de sentenças que em uma tabela de verdade conjunta completa têm exatamente os mesmos valores de verdade sob a coluna do conectivo principal em cada linha da tabela. Se uma é V, todas as outras também são, e se uma é F, todas as outras também são; ou seja, a propriedade de um grupo de sentenças que em cada valoração têm valores de verdade idênticos umas aos das outras}
@@ -268,14 +277,21 @@ description={-- propriedade de um grupo de sentenças que em uma tabela de verda
 
 \newglossaryentry{satisfiability in TFL}
 {
-  name=compatibilidade (na LVF),
-  text=conjuntamente satisfatórias (ou compatíveis),
-description={-- (também designada de satisfatoriedade conjunta) propriedade de um grupo de sentenças da LVF para as quais em uma tabela de verdade conjunta há pelo menos uma linha em que todas as sentenças são verdadeiras; ou seja, a propriedade de um grupo de sentenças para o qual há pelo menos uma valoração na qual todas as sentenças são verdadeiras}
+  name=compatibilidade na LVF,
+  text=compatíveis na LVF,
+description={-- (ou \textit{satisfação conjunta na LVF}) propriedade de um grupo de sentenças da LVF cuja tabela de verdade conjunta contém pelo menos uma linha em que todas as sentenças são verdadeiras; ou seja, a propriedade de um grupo de sentenças para o qual há pelo menos uma valoração na qual todas as sentenças são verdadeiras}
+}
+
+\newglossaryentry{insatisfiability in TFL}
+{
+  name=incompatibilidade na LVF,
+  text=incompatíveis na LVF,
+description={-- (ou \textit{insatisfação conjunta na LVF}) propriedade de um grupo de sentenças da LVF cuja tabela de verdade conjunta não contém nenhuma linha com todas as sentenças verdadeiras; ou seja, a propriedade de um grupo de sentenças para o qual não há valoração na qual todas as sentenças são verdadeiras}
 }
 
 \newglossaryentry{valid in TFL}
 {
-name= validade de argumentos (na LVF),
+name= validade de argumentos na LVF,
 text = válido,
 description={-- propriedade de argumentos para os quais não há linha na tabela de verdade completa do argumento na qual todas as premissas sejam verdadeiras e a conclusão seja falsa; ou seja, a propriedade de argumentos para os quais não há valorações nas quais as premissas sejam todas verdadeiras e a conclusão seja falsa}
 }
@@ -340,7 +356,7 @@ description = {-- (1) um símbolo da LPO usado logo após os quantificadores e t
 % incluir também âmbito
 \newglossaryentry{scope}{
   name = escopo,
-  description = {-- dado um conectivo, seu escopo (ou âmbito) é(são) a(s) subfórmula(s) da fórmula em que este conectivo é o conectivo principal}
+  description = {-- (ou \textit{âmbito}, ou ainda \textit{alcance}) dado um conectivo, seu escopo são as subfórmulas da fórmula em que este conectivo é o conectivo principal}
 }
 
 \newglossaryentry{bound variable}{
@@ -368,7 +384,7 @@ description = {-- (1) um símbolo da LPO usado logo após os quantificadores e t
 }
 
 \newglossaryentry{sentence of FOL}{
-	name = sentença (da LPO),
+	name = sentença da LPO,
 	text = sentença da LPO,
 	description = {-- uma fórmula da LPO que não tem variáveis livres. Uma setença também é chamada de \textit{fórmula fechada}}
 }
@@ -385,27 +401,34 @@ description = {-- (1) um símbolo da LPO usado logo após os quantificadores e t
 
 \newglossaryentry{validity}
 {
-name=validade lógica (na LPO),
+name=validade lógica na LPO,
 description={-- uma sentença da LPO que é verdadeira em todas as interpretações}
 }
 
 \newglossaryentry{contradiction of FOL}
 {
-  name=contradição (na LPO),
+  name=contradição na LPO,
   text=contradição,
 description={--  uma sentença da LPO que é falsa em todas as interpretações}
 } 
 
 \newglossaryentry{valid in FOL}
 {
-  name=validade de argumentos (na LPO),
+  name=validade de argumentos na LPO,
   text = válido,
 description={-- a propriedade dos argumentos da LPO para os quais não há nenhuma interpretação na qual todas as suas premissas são verdadeiras e a conclusão é falsa}
 }
 
+\newglossaryentry{support}
+{
+  name=sustentação na LVF,
+  text = sustentam na LVF,
+description={-- as sentenças $\meta{A}_1, \ldots, \meta{A}_n$ sustentam na LVF a sentença $\meta{C}$ se não há valoração na qual $\meta{A}_1, \ldots, \meta{A}_n$ são todas verdadeiras e $\meta{C}$ é falsa}
+}
+
 \newglossaryentry{equivalent in FOL}
 {
-  name=equivalência (na LPO),
+  name=equivalência na LPO,
   text = equivalente,
   plural=equivalentes,
 description={-- a propriedade de um grupo de sentenças que, em qualquer interpretação, cada sentença do grupo tem sempre o mesmo valor de verdade que todas as demais}
@@ -413,9 +436,9 @@ description={-- a propriedade de um grupo de sentenças que, em qualquer interpr
 
 \newglossaryentry{satisfiable in FOL}
 {
-  name=compatibilidade (na LPO),
-  text=compatíveis ou conjuntamente satisfatórias,
-description={-- (ou satisfatoriedade conjunta) a propriedade de um grupo de sentenças da LPO para as quais há pelo menos uma interpretação na qual todas as sentenças do grupo são verdadeiras}
+  name=compatibilidade na LPO,
+  text=compatíveis na LPO,
+description={-- (ou \textit{satisfação conjunta na LPO}) a propriedade de um grupo de sentenças da LPO para as quais há pelo menos uma interpretação na qual todas as sentenças do grupo são verdadeiras}
 }
 
 \newglossaryentry{disjunctive normal form}
@@ -467,12 +490,12 @@ description={-- (ou satisfatoriedade conjunta) a propriedade de um grupo de sent
   {
   name=sentença,
   plural=sentenças,
-  description={-- frase ou expressão linguística completa, capaz de ser julgada como veradeira ou falsa}
+  description={-- (ou \textit{sentença declarativa}) frase ou expressão linguística completa, capaz de ser julgada como veradeira ou falsa}
   }
   
   \newglossaryentry{valid}
   {
-  name=argumento válido,
+  name=válido,
   plural=válidos,
   description={-- um argumento que não tem contraexemplo, no qual em qualquer situação na qual todas suas premissas são verdadeiras, sua conclusão também é}
   }
@@ -484,6 +507,13 @@ description={-- (ou satisfatoriedade conjunta) a propriedade de um grupo de sent
   description={-- um argumento que possui contraexemplo, para o qual existe alguma situação na qual suas premissas são verdadeiras e sua conclusão é falsa}
   }
   
+  \newglossaryentry{consequence}
+    {
+    name=consequência,
+    plural=conseuqências,
+    description={-- (ou \textit{consequência lógica}) uma sentença $A$ é consequencia das sentenças $B_1$, \dots, $B_n$ se e somente se não há situação em que $B_1$, \dots, $B_n$ sejam todas verdadeiras e $A$ seja falsa}
+    }
+  
   \newglossaryentry{counterexample}
   {
   name=contraexemplo,
@@ -493,23 +523,26 @@ description={-- (ou satisfatoriedade conjunta) a propriedade de um grupo de sent
   
   \newglossaryentry{nomologicamente valido}
   {
-  name=nomologicamente válido,
+  name=validade nomológica,
   plural=nomologicamente válidos,
-  description={-- um argumento para o qual não há contraexemplos que não violem alguma lei da natureza}
+  text=nomologicamente válido,
+  description={-- propriedade dos argumentos para os quais não há contraexemplos que não violem alguma lei da natureza}
   }
   
   \newglossaryentry{conceitualmente valido}
   {
-  name=conceitualmente válido,
+  name=validade conceitual,
   plural=conceitualmente válidos,
-  description={-- um argumento para o qual não há contraexemplos que não violem as conexões de nossos conceitos, ou seja, o significado das palavras}
+  text=conceitualmente válido,
+  description={-- (ou \textit{validade analítica}) propriedade dos argumentos para os quais não há contraexemplos que não violem as conexões de nossos conceitos, ou seja, o significado das palavras}
   }
   
   \newglossaryentry{formalmente valido}
   {
-  name=formalmente válido,
+  name=validade formal,
   plural=formalmente válidos,
-  description={-- o mesmo que argumento válido; um argumento que não tem contraexemplo}
+  text=formalmente válido,
+  description={-- propriedade dos argumentos válidos e cuja validade não depende do conteúdo de suas sentenças, mas apenas da sua forma lógica}
   }
   
   \newglossaryentry{indutivo}
