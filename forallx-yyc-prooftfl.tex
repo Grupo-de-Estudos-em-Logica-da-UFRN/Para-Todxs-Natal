@@ -1,4 +1,4 @@
-﻿%!TEX root = forallxyyc.tex
+%!TEX root = forallxyyc.tex
 \part{Dedução Natural para a LVF}
 \label{ch.NDTFL}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
@@ -49,7 +49,7 @@ O sistema resultante de regras nos dará um novo modo de pensar sobre a validade
 
  
 
-Neste capítulo,  apresentaremos um sistema em  \xdefine{dedução natural}. Para cada conectivo, teremos regras de  \xdefine{introdução},  que nos permitem provar uma sentença que tenha esse conectivo como operador lógico principal, e regras de \xdefine{eliminação}, que nos permitem provar algo a partir de uma sentença que tenha esse conectivo como operador lógico principal. 
+Neste capítulo,  apresentaremos um sistema em  \xdefine{deducao natural}. Para cada conectivo, teremos regras de  \xdefine{introducao},  que nos permitem provar uma sentença que tenha esse conectivo como operador lógico principal, e regras de \xdefine{eliminacao}, que nos permitem provar algo a partir de uma sentença que tenha esse conectivo como operador lógico principal. 
 
  %%%%%% --------------------------------  26.1 A  ideia de uma prova formal
 
@@ -1798,12 +1798,12 @@ Você pode ter se perguntado naquele momento se os dois tipos de roletas sempre 
 
 Para começar, precisamos definir todos os nossos conceitos lógicos separadamente para tabelas de verdade e  para derivações. Muito deste trabalho já foi feito.  Manuseamos com todas as definições de tabela de verdade no Capítulo \ref{s:SemanticConcepts}. Também já fornecemos definições sintáticas para tautologias (teoremas) e pares de sentenças logicamente equivalentes. As outras definições seguem naturalmente. Para a maioria das propriedades lógicas, podemos testá-las usando derivações, e aquelas que não podemos testar diretamente podem ser definidas em termos dos conceitos que podemos definir.
 
-Por exemplo, definimos um teorema como uma sentença que pode ser derivada sem quaisquer premissas (p.~\pageref{def:syntactic_tautology_in_sl}). Como a negação de uma contradição é uma tautologia, podemos definir uma \xdefine{CONTRADIçãO SINTáTICA NA LVF} \label{def:syntactic_contradiction_in_sl} como uma sentença cuja negação pode ser derivada sem quaisquer premissas. A definição sintática de uma sentença contingente é um pouco diferente. Não temos nenhum método prático e finito para provar que uma sentença é contingente usando derivações, da mesma maneira que fizemos usando tabelas de verdade. Portanto, precisamos nos contentar em definir ``sentença contingente'' negativamente. Uma sentença é \xdefine{{SINTATICAMENTE CONTINGENTE NA LVF}} \label{def:syntactically_contingent_in_sl} se ela  não for um teorema ou uma contradição. 
+Por exemplo, definimos um teorema como uma sentença que pode ser derivada sem quaisquer premissas (p.~\pageref{def:syntactic_tautology_in_sl}). Como a negação de uma contradição é uma tautologia, podemos definir uma \xdefine{CONTRADICAO SINTATICA NA LVF} \label{def:syntactic_contradiction_in_sl} como uma sentença cuja negação pode ser derivada sem quaisquer premissas. A definição sintática de uma sentença contingente é um pouco diferente. Não temos nenhum método prático e finito para provar que uma sentença é contingente usando derivações, da mesma maneira que fizemos usando tabelas de verdade. Portanto, precisamos nos contentar em definir ``sentença contingente'' negativamente. Uma sentença é \xdefine{{SINTATICAMENTE CONTINGENTE NA LVF}} \label{def:syntactically_contingent_in_sl} se ela  não for um teorema ou uma contradição. 
  
 
 Um  conjunto de sentenças é \define{dedutivamente inconsistente} na LVF \label{def:syntactically_inconsistent_ in_sl}  se e somente se pode-se derivar uma contradição dele. A consistência, por outro lado, é como contingência na medida em que não temos um método finito prático para testá-la diretamente. Então, novamente, temos que definir um termo negativamente. Um  conjunto de sentenças é \xdefine{DEDUTIVAMENTE CONSISTENTE NA LVF} \label{def:syntactically consistent in SL} se e somente se ele não for dedutivamente inconsistente.
     
-Finalmente, um argumento é  \xdefine{DEDUTIVAMENTE VáLIDO NA LVF} \label{def:syntactically_valid_in_SL}se e somente se houver uma derivação de sua conclusão a partir de suas premissas. Todas essas definições são apresentadas na Tabela \ref{table:truth_tables_or_derivations}.
+Finalmente, um argumento é  \xdefine{DEDUTIVAMENTE VALIDO NA LVF} \label{def:syntactically_valid_in_SL}se e somente se houver uma derivação de sua conclusão a partir de suas premissas. Todas essas definições são apresentadas na Tabela \ref{table:truth_tables_or_derivations}.
 
 \begin{sidewaystable}\small
 \tabulinesep=1ex
@@ -1921,5 +1921,4 @@ Validade				&  Derivar a conclusão a partir das premissas & Encontrar uma linha
 \item O argumento $\enot \enot (C \eiff \enot C), ((G \eor C) \eor G) \therefore ((G \eif C) \eand G) $ é válido.
 \item O argumento $ \enot \enot L,  (C \eif \enot L) \eif C) \therefore \enot C$  é  inválido
 \end{enumerate}
-
 
