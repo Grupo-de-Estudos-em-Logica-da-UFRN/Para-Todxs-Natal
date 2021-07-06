@@ -299,7 +299,7 @@ e desta suposição  adicional, provamos~$\meta{B}$. Neste caso, sabemos o segui
 		\close
 		\have[\ ]{ab}{\meta{A}\eif\meta{B}}\ci{a-b}
 	\end{fitchproof}}
-Pode haver tantas linhas quantas você quiser entre as linhas $i$ and $j$.  
+Pode haver tantas linhas quantas você quiser entre as linhas $i$ e $j$.  
 
 Apresentaremos uma segunda ilustração da regra $\eif$I em acão. Vamos considerar  agora o seguinte argumento:
 	$$P \eif Q, Q \eif R \therefore P \eif R$$
@@ -529,7 +529,7 @@ Observe que $\meta{B}$ pode ser \emph{qualquer} sentença, então a seguir temos
 
 Observamos que a tabela de verdade para mostrar isso teria 128 linhas.
 
-A regra da eliminação da disjunção é, no entanto, um pouco mais complicada. Vamos supor que  Louis é reservado ou leal.  O que você pode concluir? Caso  Louis  não seja reservado; pode ser que ele seja leal.   Igualmente, caso  Louis  não seja leal; pode ser que ele seja reservado.  Disjunções, por si só, são difíceis de trabalhar.
+A regra da eliminação da disjunção é, no entanto, um pouco mais complicada. Vamos supor que  Louis é reservado ou leal.  O que você pode concluir? Caso  Louis  não seja reservado; pode ser que ele seja leal.   Igualmente, caso  Louis  não seja leal, pode ser que ele seja reservado.  Disjunções, por si sós, são difíceis de trabalhar.
 
 Mas suponha que, de alguma forma, possamos mostrar os dois seguinte fatos: primeiro, que sendo Louis reservado implica que ele seja um economista; segundo, que sendo Louis leal implica que ele seja um economista.
 Então, se sabemos que Louis é reservado ou leal, então sabemos que, seja ele o que for, Louis é um economista.   Esse insight pode ser expresso na regra a seguir, que é a regra de eliminação da disjunção  ($\eor$E):
@@ -547,7 +547,7 @@ Então, se sabemos que Louis é reservado ou leal, então sabemos que, seja ele 
 		\have[ ]{c}{\meta{C}}\oe{ab, a-c1,b-c2}
 	\end{fitchproof}}
 Obviamente, isso é um pouco mais complicado do que as regras anteriores, mas o argumento é bastante simples. Suponha que temos uma disjunção, $\meta{A} \eor \meta{B}$. Suponha também que temos duas subprovas, mostrando que $\meta{C}$ segue da suposição $\meta{A}$, e que $\meta{C}$ segue da suposição $\meta{B}$. Então podemos deduzir o póprio $\meta{C}$. 
- Como sempre, pode haver  tantas linhas quantas  você quiser entre   $i$ and $j$,   e tantas linhas quantas você quiser entre $k$ and $l$. Além disso, as subprovas e a disjunção podem vir em qualquer ordem e não precisam ser vizinhas.
+ Como sempre, pode haver  tantas linhas quantas  você quiser entre   $i$ e $j$,   e tantas linhas quantas você quiser entre $k$ e $l$. Além disso, as subprovas e a disjunção podem vir em qualquer ordem e não precisam ser vizinhas.
 
 Alguns exemplos podem ajudar a ilustrar isso. Considere este argumento:
 $$(P \eand Q) \eor (P \eand R) \therefore P$$
@@ -585,7 +585,7 @@ Aqui está uma prova correspondente a este argumento:
 	\end{fitchproof}
  
 
-Não se assuste se você acha que não seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a prática, e abordaremos algumas estratégias para construuir provas no Capítulo \ref{s:stratTFL}. A questão principal nesta fase é se, olhando a prova, você pode reconhecer que ela está em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
+Não se assuste se você acha que não seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a prática, e abordaremos algumas estratégias para construir provas no Capítulo \ref{s:stratTFL}. A questão principal nesta fase é se, olhando a prova, você pode reconhecer que ela está em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
 
 %%%%%% -------- ------------- ---------- ------- ------ ------  26..8  Contradicao e negacao
 
@@ -593,14 +593,14 @@ Não se assuste se você acha que não seria capaz de fazer essa prova. A habili
 
 Trataremos agora da negação, o nosso  último conectivo. Entretanto, temos que fazer mais esforços para lidar com ele, pois precisamos conectar negação e  \emph{contradição}. 
 
-Uma forma eficaz de argumentar é demonstrar que o seus oponentes se contradizem. Nesse ponto, você os tem sob controle. Eles têm que desistir de pelo menos uma de suas suposições. Vamos usar essa ideia em nosso sistema de provas, adicionando um novo símbolo, `$\ered$', às nossas provas. Esse símbolo deve ser lido como algo como `contradição!'\ ou `redução!'\ ou `isto é um absurdo!'  Podemos usar   a regra para a introdução desse símbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma sentença e sua negação aparecendo em nossa prova:
+Uma forma eficaz de argumentar é demonstrar que o seus oponentes se contradizem. Nesse ponto, você os tem sob controle. Eles têm que desistir de pelo menos uma de suas suposições. Vamos usar essa ideia em nosso sistema de provas, adicionando um novo símbolo, `$\ered$', às nossas provas. Esse símbolo deve ser lido como algo como `contradição!'\ ou `redução!'\ ou `isso é um absurdo!'  Podemos usar   a regra para a introdução desse símbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma sentença e sua negação aparecendo em nossa prova:
 \factoidbox{
 \begin{fitchproof}
   \have[m]{na}{\enot\meta{A}}
   \have[n]{a}{\meta{A}}
   \have[ ]{bot}{\ered}\ne{na, a}
 \end{fitchproof}}
-As sentenças citadas não precisam estar em linhas vizinhas, nem importa a ordem em que aparecem na prova. O único que importa é que citemos primeiro a linha da sentença negada ($\enot\meta{A}$) e depois a da afirmada ($\meta{A}$). 
+As sentenças citadas não precisam estar em linhas vizinhas, nem importa a ordem em que aparecem na prova. O importante é que citemos primeiro a linha da sentença negada ($\enot\meta{A}$) e depois a da afirmada ($\meta{A}$). 
 
 %Não importa em que ordem a sentença e sua negação aparecem, e elas não precisam aparecer em linhas vizinhas. No entanto, sempre citamos o número da linha da negação primeiro, seguido pelo da sentença em que foi negada.
 
@@ -613,8 +613,8 @@ para uma sentença que não a contenha, ou seja,  $\ered$.  Portanto, é uma reg
 
 Dissemos que  `$\ered$'  deve ser visto como uma  `contradição!', mas isso não nos diz muito sobre este símbolo. Existem, aproximadamente, três maneiras de abordar o símbolo `$\ered$'.
 	\begin{ebullet}
-		\item Podemos considerar `$\ered$'. como uma nova sentença at\^omica da LVF, mas que só pode ter o valor de verdade Falso.  
-		\item Podemos considerar  `$\ered$' como uma abreviação de alguma contradição can\^onica, como `$A \eand \enot A$'. Isso terá o mesmo efeito que o descrito acima---obviamente, `$A \eand \enot A$' sempre tem o valor de verdade Falso---mas significa que, oficialmente, não precisamos adicionar um novo símbolo a LVF.
+		\item Podemos considerar `$\ered$' como uma nova sentença atômica da LVF, mas que só pode ter o valor de verdade Falso.  
+		\item Podemos considerar  `$\ered$' como uma abreviação de alguma contradição canônica, como `$A \eand \enot A$'. Isso terá o mesmo efeito que o descrito acima. Obviamente, `$A \eand \enot A$' sempre tem o valor de verdade Falso, mas, ao abordar `$\ered$' dessa forma, não precisamos adicionar um novo símbolo a LVF.
 		\item Podemos considerar `$\ered$', não como um símbolo da LVF, mas como um \emph{sinal de pontuação} que aparece em nossas provas.  (Digamos que é comparável aos números das linhas e às linhas verticais.)
 			\end{ebullet}
 			
@@ -629,7 +629,7 @@ Ainda precisamos estabelecer uma regra para a introdução da negação. A regra
 \close
 \have[\ ]{na}{\enot\meta{A}}\ni{a-nb}
 \end{fitchproof}}
-Pode haver tantas linhas quantas você desejar entre $i$ and $j$. Para ver isso na prática e interagir com a negação, considere esta prova: 
+Pode haver tantas linhas quantas você desejar entre $i$ e $j$. Para ver isso na prática e interagir com a negação, considere esta prova: 
 	\begin{fitchproof}
 		\hypo{d}{D}
 		\open
@@ -647,7 +647,7 @@ Se a suposição de que $\meta{A}$ é verdadeira leva a uma contradição, $\met
 \close
 \have[\ ]{na}{\meta{A}}\ip{a-nb}
 \end{fitchproof}}
-Essa regra é chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua negação. Formalmente, a regra é muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ não é a conclusão da regra, não estamos introduzindo~$\enot$, então  IP não é uma regra que introduz qualquer conectivo. Também não elimina um conectivo, pois não possui premissas aut\^onomas que contenham~$\enot$, apenas uma subprova com uma suposição da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: é por isso que $\enot$E elimina~$\enot$, mas a regra IP não.\footnote{Existem lógicos que não aceitam a regra IP, mas aceitam $\enot$E. Eles são chamados de "intuicionistas". Os intuicionistas não aceitam nossa suposição básica de que cada sentença tem um dos dois valores de verdade, verdadeiro ou falso. Eles também acham que $\enot$ funciona diferentemente. Para eles, uma prova do $\ered$ a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do $\ered$ a partir de $\enot\meta{A}$ não garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ não são equivalentes.}
+Essa regra é chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua negação. Formalmente, a regra é muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ não é a conclusão da regra, não estamos introduzindo~$\enot$, então  IP não é uma regra que introduz qualquer conectivo. Também não elimina um conectivo, pois não possui premissas autônomas que contenham~$\enot$, apenas uma subprova com uma suposição da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: é por isso que $\enot$E elimina~$\enot$, mas a regra IP não.\footnote{Existem lógicos que não aceitam a regra IP, mas aceitam $\enot$E. Eles são chamados de "intuicionistas". Os intuicionistas não aceitam nossa suposição básica de que cada sentença tem um dos dois valores de verdade, verdadeiro ou falso. Eles também acham que $\enot$ funciona diferentemente. Para eles, uma prova do $\ered$ a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do $\ered$ a partir de $\enot\meta{A}$ não garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ não são equivalentes.}
 
 
 Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir de $\meta{D}$. Usando IP, podemos ir na outra direção (com essencialmente a mesma prova).
@@ -660,7 +660,7 @@ Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir
 		\have{con}{D}\ip{nd-ndr}
 	\end{fitchproof}
 
-Precisamos de uma última regra. é uma espécie de regra de eliminação para `$\ered$', e conhecida como \emph{explosão}.\footnote{O nome latino para esse princípio é  \emph{ex contradictione quod libet}, ``da contradição, qualquer coisa.''}  Se obtemos uma contradição, simbolizada por `$\ered$', podemos concluir o que quisermos.  Como isso pode ser motivado, como uma regra de argumentação? Bem, considere o dispositivo retórico `\ldots e se \emph{isso for} verdade, eu comerei o meu chapéu'. Como as contradições simplesmente não podem ser verdadeiras, se isto \emph{for} verdadeiro, não apenas comerei o meu chapéu, como eu terei isto também. Aqui está a regra formal:
+Precisamos de uma última regra. é uma espécie de regra de eliminação para `$\ered$', e conhecida como \emph{explosão}.\footnote{O nome latino para esse princípio é  \emph{ex contradictione quod libet}, ``da contradição, qualquer coisa.''}  Se obtemos uma contradição, simbolizada por `$\ered$', podemos concluir o que quisermos.  Como isso pode ser motivado, como uma regra de argumentação? Bem, considere o dispositivo retórico `\ldots e se \emph{isso for} verdade, eu comerei o meu chapéu'. Como as contradições simplesmente não podem ser verdadeiras, se isso \emph{for} verdadeiro, não apenas comerei o meu chapéu, como eu terei isto também. Aqui está a regra formal:
 \factoidbox{\begin{fitchproof}
 \have[m]{bot}{\ered}
 \have[ ]{}{\meta{A}}\re{bot}
@@ -670,7 +670,7 @@ Observe que  \meta{A} pode ser \emph{qualquer} sentença.
 A regra de explosão é um pouco estranha. Parece que  \meta{A}  chega em nossa prova como um coelho que sai de uma cartola. Ao tentar encontrar provas, é muito tentador querer usá-la em qualquer lugar, pois parece muito poderosa. Resista a essa tentação: você só pode aplicá-la quando já tiver~$\ered$!   E você obtém $\ered$   somente quando suas suposições são contraditórias.
  
 
-Ainda assim, não é estranho que, de uma contradição, alguma coisa deva seguir? Não de acordo com nossa noção de sustentação e validade. Para, \meta{A} sustenta \meta{B} se e somente se  não exise nenhuma valoração de letras sentenciais que  tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas $\ered$  é uma contradição, nunca é verdadeiro, seja qual for a valoração das letras sentenciais.  Como não existe nenhuma valoração que faz $\ered$ verdadeiro, claro que também não existe nenhuma valoração que faz  $\ered$  verdadeiro e \meta{B} falsa! Então, de acordo com a nossa definição de sustentação,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradição sustenta qualquer coisa.\footnote{Existem alguns lógicos que não aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conexão relevante} entre \meta{A} e \meta{B}, mas não há uma entre $\ered$ e alguma sentença arbitrária~\meta{B}. Portanto, esses lógicos desenvolvem outras lógicas "relevantes" nas quais  a regra de explosão é não permitida.}
+Ainda assim, não é estranho que, de uma contradição, alguma coisa deva seguir? Não de acordo com nossa noção de sustentação e validade. \meta{A} sustenta \meta{B} se e somente se não existe nenhuma valoração de letras sentenciais que tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas $\ered$ é uma contradição, nunca é verdadeiro, seja qual for a valoração das letras sentenciais.  Como não existe nenhuma valoração que faz $\ered$ verdadeiro, claro que também não existe nenhuma valoração que faz  $\ered$  verdadeiro e \meta{B} falsa! Então, de acordo com a nossa definição de sustentação,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradição sustenta qualquer coisa.\footnote{Existem alguns lógicos que não aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conexão relevante} entre \meta{A} e \meta{B}, mas não há uma entre $\ered$ e alguma sentença arbitrária~\meta{B}. Portanto, esses lógicos desenvolvem outras lógicas "relevantes" nas quais  a regra de explosão é não permitida.}
 
 \emph{Estas são todas as regras básicas para o sistema de provas da LVF.}
 
