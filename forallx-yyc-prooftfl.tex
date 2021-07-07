@@ -679,7 +679,7 @@ Ainda assim, não é estranho que, de uma contradição, alguma coisa deva segui
 \practiceproblems
 
 \problempart
-As duas "provas" a seguir estão  \emph{incorretas}. Explique quais são os seus erros.
+As duas ``provas'' a seguir estão  \emph{incorretas}. Explique quais são os seus erros.
 \begin{fitchproof}
 \hypo{abc}{(\enot L \eand A) \eor L}
 \open
@@ -780,7 +780,7 @@ Apresente uma prova para cada um dos doze seguintes argumentos:
 
  Se seu objetivo for provar uma conjunção, um condicional ou uma sentença negada, você deve começar trabalhando dessa maneira, do fim para o começo. Descreveremos o que você deve fazer em cada um desses casos em detalhes.
  
-\subsection*{Provando uma conjnção do fim para o começo}
+\subsection*{Provando uma conjunção do fim para o começo}
 
 Se quisermos provar  $\meta{A} \eand \meta{B}$,  trabalhando do fim para o começo, significa que devemos escrever $\meta{A} \eand \meta{B}$ na parte inferior da prova e tentar prová-la usando a regra $\eand$I. No topo de uma folha de papel, escreveremos as premissas  da prova, se houver alguma. E  na parte inferior, escrevemos a sentença que queremos provar. Se for uma conjunção, vamos prová-la usando $\eand$I.
   \begin{fitchproof}
@@ -826,7 +826,7 @@ Para aplicar a regra $\enot$I, temos que iniciar uma subprova com a suposição 
 Aconselhamos a trabalhar do fim para o começo,  o máximo que puder. Assim, se você está trabalhando do fim para o começo, para provar $\meta{A} \eif \meta{B}$ e construiu uma subprova com o objetivo de  provar $\meta{B}$. Agora olhe para a sentença~$\meta{B}$. Se ela for uma conjunção, por exemplo, trabalhe do fim para o começo e insira na subprova os dois conjuntos dessa conjunção,  etc.
 
 
-\subsection*{Provando uma  disjunção do fim para o começo}
+\subsection*{Provando uma disjunção do fim para o começo}
 
 Obviamente, você também pode trabalhar do fim para o começo para provar  uma disjunção $\meta{A} \eor \meta{B}$, se esse for seu objetivo. A regra
  $\eor$I exige que você tenha um dos disjuntos para obter $\meta{A} \eor \meta{B}$.
@@ -848,7 +848,7 @@ Obviamente, você também pode trabalhar do fim para o começo para provar  uma 
 
 \section{Trabalhando do começo para o fim a partir do que você tem}
 
-Sua prova pode ter premissas. E se você trabalhou de trás para frente para provar um condicional ou uma sentença negada, você inseriu subprovas com uma suposição e tentou provar uma sentença final na subprova.  Essas premissas e suposições são sentenças as quais você pode trabalhar do começo para o fim para preencher as etapas ausentes na sua prova. Isso significa, aplicar regras de  eliminação para os principais operadores dessas sentenças. A forma das regras dirão o que você deverá fazer.
+Sua prova pode ter premissas. E se você trabalhou de trás para frente para provar um condicional ou uma sentença negada, você inseriu subprovas com uma suposição e tentou provar uma sentença final na subprova. Essas premissas e suposições são sentenças com que você pode trabalhar do começo para o fim para preencher as etapas ausentes na sua prova. Isso significa aplicar regras de eliminação para os principais operadores dessas sentenças. A forma das regras dirá o que você deverá fazer.
  
 
 \subsection*{Trabalhando do começo para o fim a partir de uma conjunção}
@@ -864,7 +864,7 @@ Geralmente fica claro a situação específica que você vai  precisar usar uma 
 
 \subsection*{Trabalhando do começo para o fim a partir de uma disjunção}
 
-Trabalhar do começo para o fim a partir de uma disjunção funciona um pouco diferente. Para usar uma disjunção, usamos a regra $\eor$E e para aplicar essa regra não basta saber quais são os disjuntos da disjunção que queremos usar. Também devemos ter em mente o que queremos provar. Suponha que queremos provar~$\meta{C}$,  e temos $\meta{A} \eor B$ para trabalhar. (Que $\meta{A} \eor B$ pode ser uma premissa da prova, uma suposição de uma subprova ou algo já provado.) Para poder aplicar a regra $\eor$E teremos de inserir duas subprovas:
+Trabalhar do começo para o fim a partir de uma disjunção funciona um pouco diferente. Para usar uma disjunção, usamos a regra $\eor$E e para aplicar essa regra não basta saber quais são os disjuntos da disjunção que queremos usar. Também devemos ter em mente o que queremos provar. Suponha que queremos provar~$\meta{C}$,  e temos $\meta{A} \eor \meta{B}$ para trabalhar. (Que $\meta{A} \eor \meta{B}$ pode ser uma premissa da prova, uma suposição de uma subprova ou algo já provado.) Para poder aplicar a regra $\eor$E teremos de inserir duas subprovas:
  
 
 \begin{fitchproof}
@@ -915,8 +915,8 @@ Vamos supor que queremos mostrar que o argumento $(A \eand B) \eor (A \eand C) \
 \ellipsesline
   \have[n]{2}{A \eand (B \eor C)}
 \end{fitchproof}
-Agora, temos duas opções: trabalhar do fim para o começo a partir da conclusão ou trabalhar começo para o fim a partir da partir da premissa. Escolheremos a segunda estratégia: usamos a disjunção na linha~$1$ e configuramos as subprovas que precisamos para  $\eor$E. A disjunção na linha~$1$ tem dois disjuntos, `$A \eand B$' e `$A \eand C$'. 
-O nosso objetivo é provar a sentença `$A \eand (B \eor C)$'. Assim, neste caso, você  deve criar duas subprovas:  uma com a suposição `$A \eand B$' e a última linha `$A \eand (B \eor C)$', e a  outra com a suposição `$A \eand C$' e a última linha `$A \eand (B \eor C)$'. A justificativa para a conclusão na linha $n$  será  $\eor$E,  citando a disjunção na linha~$1$ e as duas subprovas. Assim, sua prova até  agora é esta :
+Agora, temos duas opções: trabalhar do fim para o começo a partir da conclusão, ou do começo para o fim a partir da premissa. Escolheremos a segunda estratégia: usamos a disjunção na linha~$1$ e configuramos as subprovas que precisamos para  $\eor$E. A disjunção na linha~$1$ tem dois disjuntos, `$A \eand B$' e `$A \eand C$'. 
+O nosso objetivo é provar a sentença `$A \eand (B \eor C)$'. Assim, neste caso, você  deve criar duas subprovas:  uma com a suposição `$A \eand B$' e a última linha `$A \eand (B \eor C)$', e a  outra com a suposição `$A \eand C$' e a última linha `$A \eand (B \eor C)$'. A justificativa para a conclusão na linha $n$  será  $\eor$E,  citando a disjunção na linha~$1$ e as duas subprovas. Assim, sua prova até agora é esta:
  
 
 \begin{fitchproof}
@@ -955,7 +955,7 @@ Agora você tem duas tarefas separadas, a saber,  preencher cada uma das duas su
 \end{fitchproof}
 Vimos imediatamente que podemos obter a linha $i$ a partir da linha~$2$ por $\eand$E. No entanto, a linha $i$ é na verdade a linha~$3$ e pode ser justificada com $\eand$E  da linha~$2$. O outro subobjetivo `$B \eor C$' é uma disjunção.
 Aplicaremos a estratégia de trabalhar do fim para o começo a partir de uma disjunção até a linha $n-1$. Temos que escolher um dos disjuntos, `$B$' ou~`$C$'. 
-Escolhendo `$C$'  não funcionaria e teríamos que voltar atrás. Agora você já pode ver que, se você escolheu `$B$' como subobjetivo, poderá conseguir isso trabalhando novamente do começo para o fim a partir da conjunção `$A \eand B$' na linha~$2$. Assim, podemos concluir a primeira subprova como segue:
+Escolher `$C$' não funcionaria e teríamos de voltar atrás. Agora você já pode ver que, se você escolheu `$B$' como subobjetivo, poderá conseguir isso trabalhando novamente do começo para o fim a partir da conjunção `$A \eand B$' na linha~$2$. Assim, podemos concluir a primeira subprova como segue:
  
 
 \begin{fitchproof}
@@ -1052,7 +1052,7 @@ Trabalhamos novamente do fim para o começo a partir de `$\enot A$'.  Para fazer
 	\close
 	\have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
-Agora nosso objetivo é provar~$\ered$. Dissemos acima, ao explicar como trabalhar a partir de uma sentença negada, que a regra $\enot$E permite que você prove~$\ered$, o qual é o nosso objetivo na subprova interior. Então, procuramos uma sentença negada  que a partir da qual possamos trabalhar do começo para o fim: esta sentença seria `$\enot B$' da linha~$2$. Isso significa que temos que derivar `$B$' dentro da subprova, pois $\enot$E requer não apenas `$\enot B$' (o que já temos), mas também~`$B$'. E `$B$', por sua vez, conseguimos a partir de `$A \eif B$', já que $\eif$E nos permitirá justificar o consequente~`$B$' do condicional por $\eif$E. A regra $\eif$E também requer o antecedente~`$A$' do condicional, mas isso também já está disponível (na linha~$3$). Então, concluímos  com:
+Agora nosso objetivo é provar~$\ered$. Dissemos acima, ao explicar como trabalhar a partir de uma sentença negada, que a regra $\enot$E permite que você prove~$\ered$, o qual é o nosso objetivo na subprova interior. Então, procuramos uma sentença negada a partir da qual possamos trabalhar do começo para o fim: esta sentença seria `$\enot B$' da linha~$2$. Isso significa que temos que derivar `$B$' dentro da subprova, pois $\enot$E requer não apenas `$\enot B$' (o que já temos), mas também~`$B$'. E `$B$', por sua vez, conseguimos a partir de `$A \eif B$', já que $\eif$E nos permitirá justificar o consequente~`$B$' do condicional por $\eif$E. A regra $\eif$E também requer o antecedente~`$A$' do condicional, mas isso também já está disponível (na linha~$3$). Então, concluímos  com:
 
 
 \begin{fitchproof}
@@ -1075,7 +1075,7 @@ Agora nosso objetivo é provar~$\ered$. Dissemos acima, ao explicar como trabalh
 
 \section{Trabalhando do começo para o fim a partir de $\ered$}\label{sec:backred}
 
-Ao aplicar as estratégias, às vezes você se encontra em uma situação em que pode justificar~$\ered$. Usando a regra de explosão, isso permitiria justificar \emph{qualquer coisa}. Assim $\ered$ funciona como um curinga nas provas. Por exemplo, suponha que você queira fornecer uma prova do argumento $A \eor B, \enot A \therefore B$. Você configura sua prova, escrevendo as premissas `$A \eor B$' e `$\enot A$' na parte superior das linhas $1$ e $2$ e a conclusão $B$ na parte inferior da página. `$B$' não tem conectivo principal, então você não pode usar a estratégia do fim para o começo. Em vez disso, você deve trabalhar a partir de `$A \eor B$': Isso requer duas subprovas,  tais como:
+Ao aplicar as estratégias, às vezes você se encontra em uma situação em que pode justificar~$\ered$. Usando a regra de explosão, isso permitiria justificar \emph{qualquer coisa}. Assim $\ered$ funciona como um curinga nas provas. Por exemplo, suponha que você queira fornecer uma prova do argumento $A \eor B, \enot A \therefore B$. Você configura sua prova, escrevendo as premissas `$A \eor B$' e `$\enot A$' na parte superior das linhas $1$ e $2$ e a conclusão $B$ na parte inferior da página. `$B$' não tem conectivo principal, então você não pode usar a estratégia do fim para o começo. Em vez disso, você deve trabalhar a partir de `$A \eor B$', o que requer duas subprovas, tais como:
 
 
 \begin{fitchproof}
@@ -1124,7 +1124,7 @@ Em muitos casos, as estratégias de trabalhar do começo para o fim  e do fim pa
 Aqui, temos que iniciar uma subprova com a suposição $\enot \meta{A}$;
 a última linha da subprova deve ser~$\ered$. Vamos citar a subprova e usar  IP como regra. Na subprova, agora temos uma suposição adicional (na linha $n$) para trabalhar.
 
-Suponha que usamos a estratégia de prova indireta ou estamos em outra situação em que procuramos uma prova para  $\ered$.   O que é um bom candidato? é claro que o candidato óbvio seria usar uma sentença negada, pois (como vimos acima) com $\enot$E podemos obter~$\ered$. 
+Suponha que usamos a estratégia de prova indireta ou estamos em outra situação em que procuramos uma prova para  $\ered$. O que é um bom candidato? Uma escolha óbvia seria usar uma sentença negada, pois (como vimos acima) com $\enot$E podemos obter~$\ered$. 
  Se você configurar uma prova como acima, tentando provar \meta{A} usando~IP, você terá $\enot \meta{A}$ como suposição de sua subprova. Então trabalhando a partir dela para justificar $\ered$ dentro de sua subprova, você estabelece \meta{A} como uma meta dentro de sua subprova. Assim, se você estiver usando  IP, você se encontrará na seguinte situação:
 \begin{fitchproof}
 \open
