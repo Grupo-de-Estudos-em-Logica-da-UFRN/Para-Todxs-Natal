@@ -1164,7 +1164,7 @@ Agora temos algo a partir do qual trabalhar: a suposição  `$\enot(A \eor \enot
 \end{fitchproof}
 
 
-No início, trabalhando  do começo par o fim para provar `$A \eor\enot A$' com a regra $\eor$I não funcionou. Mas agora estamos em uma situação diferente: queremos provar `$A \eor\enot A$' dentro de uma subprova. Em geral, ao lidar com novas metas, devemos voltar e começar com as estratégias básicas. Nesse caso, devemos primeiro tentar trabalhar do fim para o começo a partir da disjunção `$A \eor \enot A$', ou seja, precisamos escolher um dos disjuntos  e tentar prová-lo. Vamos escolher~`$\enot A$'. Isso permitiria justificar `$A \eor \enot A$' na linha~$m - 1$ usando $\eor$I. Então, trabalhando novamente de fim para o começo a partir de `$\enot A$', iniciamos outra subprova a fim de justificar  `$\enot A$' usando $\enot$I. Essa subprova deve ter `$A$' acomo suposição e~`$\ered$' como sua última linha.
+No início, trabalhando do começo para o fim para provar `$A \eor\enot A$' com a regra $\eor$I não funcionou. Mas agora estamos em uma situação diferente: queremos provar `$A \eor\enot A$' dentro de uma subprova. Em geral, ao lidar com novas metas, devemos voltar e começar com as estratégias básicas. Nesse caso, devemos primeiro tentar trabalhar do fim para o começo a partir da disjunção `$A \eor \enot A$', ou seja, precisamos escolher um dos disjuntos  e tentar prová-lo. Vamos escolher~`$\enot A$'. Isso permitiria justificar `$A \eor \enot A$' na linha~$m - 1$ usando $\eor$I. Então, trabalhando novamente de fim para o começo a partir de `$\enot A$', iniciamos outra subprova a fim de justificar `$\enot A$' usando $\enot$I. Essa subprova deve ter `$A$' como suposição e~`$\ered$' como sua última linha.
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1179,7 +1179,7 @@ No início, trabalhando  do começo par o fim para provar `$A \eor\enot A$' com 
 	\close
 	\have{9}{A \eor \enot A}\ip{2-8}
 \end{fitchproof}
-Dentro dessa nova subprova, precisamos novamente justificar `$\ered$'. A melhor maneira de fazer isso é começar com uma sentença negada; `$\enot(A \eor \enot A)$' na linha~$1$ é a única sentença negada que podemos usar. A sentença não negada correspondente,  `$A \eor \enot A$', no entanto, segue diretamente de `$A$' (que temos na linha~$2$) por $\eor$I. Nossa prova completa é:
+Dentro dessa nova subprova, precisamos novamente justificar `$\ered$'. A melhor maneira de fazer isso é começar com uma sentença negada; `$\enot(A \eor \enot A)$' na linha~$1$ é a única sentença negada que podemos usar. A sentença não negada correspondente, `$A \eor \enot A$', no entanto, segue diretamente de `$A$' (que temos na linha~$2$) por $\eor$I. Nossa prova completa é:
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1288,7 +1288,7 @@ e
 	\have[\ ]{con}{\meta{A}}\by{SD}{ab, nb}
 \end{fitchproof}}
 
-Como usual, a disjunção e a negação de um dos disjuntos podem ocorrer em qualquer ordem e não precisam estar visinhos. No entanto, sempre citamos a disjunção primeiro.
+Como usual, a disjunção e a negação de um dos disjuntos podem ocorrer em qualquer ordem e não precisam estar vizinhos. No entanto, sempre citamos a disjunção primeiro.
 
  %%%%%% ----------------------------------  28.2 Modus tollens   ---------------------
 \section{Modus tollens}
@@ -1306,7 +1306,7 @@ Como sempre, as premissas podem ocorrer em qualquer ordem, mas sempre citamos o 
  %%%%%% ---------------------------------- 28.3    Eliminacao da dupla negacao
 
 \section{Eliminação da dupla negação}
-Outra regra  útil é a  \emph{eliminação da dupla negação}. Faz exatamente o que diz:
+Outra regra  útil é a  \emph{eliminação da dupla negação}. Faz exatamente o que seu nome diz:
 \factoidbox{\begin{fitchproof}
 		\have[m]{dna}{\enot \enot \meta{A}}
 		\have[ ]{a}{\meta{A}}\dne{dna}
@@ -1319,7 +1319,7 @@ Dito isto, você deve estar ciente de que o contexto e a ênfase podem impedi-lo
 %%%%%%———————————  28.4 Terceiro excluido
 \section{Terceiro excluído}
 
-Suponha que possamos mostrar que, se estiver ensolarado lá fora, Bento levará um guarda-chuva (por medo de se queimar). Suponha   também que possamos mostrar que, se não estiver ensolarado lá fora, Bento levará um guarda-chuva (por medo de se molhar). Bem, não há um terceiro caminho para o clima. Portanto, \emph{qualquer que seja}   o clima, Bento levará um guarda-chuva.
+Suponha que possamos mostrar que, se estiver ensolarado lá fora, Bento levará um guarda-chuva (por medo de se queimar). Suponha   também que possamos mostrar que, se não estiver ensolarado lá fora, Bento levará um guarda-chuva (por medo de se molhar). Bem, não há um terceiro caminho para o clima. Portanto, \emph{qualquer que seja} o clima, Bento levará um guarda-chuva.
 
 Essa linha de pensamento motiva a seguinte regra:
 
@@ -1334,7 +1334,7 @@ Essa linha de pensamento motiva a seguinte regra:
 		\close
 		\have[\ ]{ab}{\meta{B}}\tnd{a-c1,b-c2}
 	\end{fitchproof}}
- Essa regra   é  às vezes   chamada lei do  \emph{terceiro excluído}, pois encapsula a ideia de que \meta{A} pode ser verdadeira ou $\enot \meta{A}$ pode ser verdadeira, mas não há meio caminho em que nenhum dos dois seja verdadeira.\footnote{Você pode às vezes encontrar lógicos ou filósofos falando sobre "tertium non datur". Esse é o mesmo princípio que o terceiro excluído; significa "não há terceira via". Lógicos que têm dúvidas sobre provas indiretas também têm dúvidas sobre a LEM.} Pode haver tantas linhas quantas você quiser entre $i$ e $j$, e tantas linhas quantas quiser entre $k$ e $l$.  Além disso, as subprovas podem vir em qualquer ordem, e a segunda subprova não precisa vir imediatamente após a primeira.
+ Essa regra é às vezes chamada de lei do \emph{terceiro excluído}, pois encapsula a ideia de que \meta{A} pode ser verdadeira ou $\enot \meta{A}$ pode ser verdadeira, mas não há meio caminho em que nenhum dos dois seja verdadeira.\footnote{Você pode às vezes encontrar lógicos ou filósofos falando sobre ``tertium non datur''. Esse é o mesmo princípio que o terceiro excluído; significa ``não há terceira via''. Lógicos que têm dúvidas sobre provas indiretas também têm dúvidas sobre a LEM.} Pode haver tantas linhas quantas você quiser entre $i$ e $j$, e tantas linhas quantas quiser entre $k$ e $l$.  Além disso, as subprovas podem vir em qualquer ordem, e a segunda subprova não precisa vir imediatamente após a primeira.
 
 Para ver a regra em ação, considere:
  
@@ -1586,7 +1586,7 @@ Agora você deseja repeti-la em alguma linha~$k$. Você poderia simplesmente inv
 \end{fitchproof}
 
 
-Para ser claro: isso não é uma prova, mas um \emph{esquema} de prova. Afinal, foi usada  uma variável, `$\meta{A}$', da metalinguagem  em vez de uma sentença da LVF, entretanto o ponto é simples: quaisquer que sejam as sentenças da LVF que atribuímos à $\meta{A}$, e quaisquer que sejam as linhas em que estivéssemos trabalhando, poderíamos produzir uma  prova genuína. Assim, você pode pensar nisso como uma receita para produzir provas.
+Para ser claro: isso não é uma prova, mas um \emph{esquema} de prova. Afinal, foi usada  uma variável, `$\meta{A}$', da metalinguagem  em vez de uma sentença da LVF, entretanto o ponto é simples: quaisquer que sejam as sentenças da LVF que atribuímos a $\meta{A}$, e quaisquer que sejam as linhas em que estivéssemos trabalhando, poderíamos produzir uma  prova genuína. Assim, você pode pensar nisso como uma receita para produzir provas.
 
 De fato, é uma receita que nos mostra o seguinte: qualquer coisa que possamos provar usando a regra R, podemos provar (com mais uma linha) usando apenas as regras básicas do Capítulo \ref{s:BasicTFL} sem R. é isso que significa dizer que a regra R pode ser derivada de outras regras básicas: qualquer coisa que possa ser justificada usando R pode ser justificada usando apenas as outras regras básicas.
 
@@ -1842,13 +1842,13 @@ Demonstrar que o sistema de provas é correto exigiria mostrar que  \emph{qualqu
 
 A prova que iremos esboçar depende do fato de que inicialmente definimos uma sentença da LVF usando uma definição indutiva (ver p.~\pageref{TFLsentences}). Também poderíamos ter usado definições indutivas para definir uma prova na LVF e uma tabela de verdade \nix{Later this will be a truth assignment}(mas não o fizemos.)  Se tivéssemos essas definições, poderíamos usar uma \emph{prova indutiva} para mostrar a correção da LVF. Uma prova indutiva funciona da mesma maneira que uma definição indutiva. Com a definição indutiva, identificamos um grupo de elementos básicos que foram estipulados como exemplos da coisa que estávamos tentando definir. No caso de uma sentença da LVF, a classe base foi o conjunto de letras sentenciais $A$, $B$, $C$, \dots. 
 
-Apenas anunciamos que existiam essas sentenças. O segundo passo de uma definição indutiva é dizer que qualquer coisa construída a partir da sua classe base usando certas regras também conta como um exemplo do que você está definindo. No caso da definição de uma sentença, as regras correspondiam aos cinco conectivos sentenciais (ver  p.~\pageref{TFLsentences}). Uma vez  estabelecida uma definição indutiva, você pode usá-la para mostrar que todos os membros da classe que você definiu possuem uma determinada propriedade. Você simplesmente prova que a propriedade é verdadeira para os membros da classe base e depois prova que as regras para estender a classe base não alteram a propriedade. Isto é o que significa dar uma prova indutiva.
+Apenas anunciamos que existiam essas sentenças. O segundo passo de uma definição indutiva é dizer que qualquer coisa construída a partir da sua classe base usando certas regras também conta como um exemplo do que você está definindo. No caso da definição de uma sentença, as regras correspondiam aos cinco conectivos sentenciais (ver  p.~\pageref{TFLsentences}). Uma vez estabelecida uma definição indutiva, você pode usá-la para mostrar que todos os membros da classe que você definiu possuem determinada propriedade. Você simplesmente prova que a propriedade é verdadeira para os membros da classe base e depois prova que as regras para estender a classe base não alteram a propriedade. Isto é o que significa dar uma prova indutiva.
  
  Mesmo que não tenhamos uma definição indutiva de prova na LVF, podemos esboçar como seria uma prova indutiva da correção da LVF. Imagine uma classe base de provas de uma linha, uma para cada uma das nossas onze regras de inferência. Os membros dessa classe seriam da forma $\meta{A}, \meta{B} \proves  \meta{A} \eand \meta{B}$; $\meta{A} \eand \meta{B} \proves \meta{A}$; $\meta{A} \eor \meta{B}, \enot\meta{A} \proves  \meta{B}$ \ldots{} etc. Como algumas regras têm duas formas diferentes, teríamos que adicionar alguns membros a essa classe base, por exemplo $\meta{A} \eand \meta{B} \proves  \meta{B}$.  Observe que essas são todas declarações na metalinguagem. A prova  que a LVF é correta não faz parte da LVF, porque a LVF não tem o poder de falar sobre si mesma.
 
 Você pode usar as tabelas de verdade para mostrar que cada uma dessas provas de uma linha  nesta classe base é válida$_{\entails}$. Por exemplo, a prova de $\meta{A}, \meta{B} \proves \meta{A} \eand \meta{B}$ corresponde a uma tabela de verdade que mostra, $\meta{A}, \meta{B} \entails  \meta{A} \eand \meta{B}$. Isso estabelece a primeira parte de nossa prova indutiva.  
 
-O próximo passo é mostrar que a adição de linhas em qualquer prova nunca transformará uma prova válida$_{\entails}$ em uma inválida$_{\entails}$. Precisaríamos fazer isso para cada uma das nossas onze regras básicas de inferência. Assim, por exemplo, para  \eand{I} precisamos mostrar que, para qualquer prova $\meta{A}_{1}$, \dots, $\meta{A}_{n} \proves  \meta {B}$ adicionando uma linha onde usamos a  regra \eand{I} para deduzir $\meta{C} \eand \meta{D}$, onde $\meta{C} \eand \meta{D}$ pode ser legitimamente derivada de $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta{B}$,  não transformaria uma prova válida em uma prova inválida. Mas atenção, se podemos derivar legitimamente $\meta{C} \eand \meta{D}$ dessas premissas, então $\meta{C}$ e $\meta{D}$  já estavam disponíveis na prova. Elas já estavam entre $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta {B}$, ou foram legitimamente derivadas delas.  Assim sendo, qualquer linha da tabela  de verdade na qual as premissas são verdadeiras deve ser uma linha da tabela de verdade na qual \meta{C} e \meta{D} são verdadeiras. De acordo com a tabela de verdade característica de \eand, isso significa que $\meta{C} \eand \meta{D}$ também é verdadeira nessa linha. Portanto,  $\meta{C} \eand \meta{D}$ segue validamente a partir das premissas. Isso significa que o uso da regra {\eand}E rule para estender uma prova válida produz outra prova válida.
+O próximo passo é mostrar que a adição de linhas em qualquer prova nunca transformará uma prova válida$_{\entails}$ em uma inválida$_{\entails}$. Precisaríamos fazer isso para cada uma das nossas onze regras básicas de inferência. Assim, por exemplo, para  \eand{I} precisamos mostrar que, para qualquer prova $\meta{A}_{1}$, \dots, $\meta{A}_{n} \proves  \meta {B}$ adicionando uma linha onde usamos a  regra \eand{I} para deduzir $\meta{C} \eand \meta{D}$, onde $\meta{C} \eand \meta{D}$ pode ser legitimamente derivada de $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta{B}$,  não transformaria uma prova válida em uma prova inválida. Mas atenção, se podemos derivar legitimamente $\meta{C} \eand \meta{D}$ dessas premissas, então $\meta{C}$ e $\meta{D}$  já estavam disponíveis na prova. Elas já estavam entre $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta {B}$, ou foram legitimamente derivadas delas.  Assim sendo, qualquer linha da tabela  de verdade na qual as premissas são verdadeiras deve ser uma linha da tabela de verdade na qual \meta{C} e \meta{D} são verdadeiras. De acordo com a tabela de verdade característica de \eand, isso significa que $\meta{C} \eand \meta{D}$ também é verdadeira nessa linha. Portanto,  $\meta{C} \eand \meta{D}$ segue validamente a partir das premissas. Isso significa que o uso da regra $\eand$E rule para estender uma prova válida produz outra prova válida.
 
 
 Para mostrar que o sistema de provas é coreto, precisaríamos mostrar isso para as outras regras de inferência. Como as regras derivadas são consequências das regras básicas, seria suficiente fornecer argumentos semelhantes para as 11 outras regras básicas. Este exercício tedioso está além do escopo deste livro.
@@ -1860,7 +1860,7 @@ Esse é o problema da completude. Um sistema de provas tem a propriedade da   \d
 Mostrar que um sistema é completo significa mostrar que você incluiu \emph{todas} as regras necessárias e que não deixou nada de fora. Mostrar isso está além do escopo deste livro. O ponto importante é que, felizmente, o sistema de provas da LVF é coreto e completo. Este não é o caso de todos os sistemas de prova ou todas as linguagens formais. Por ser o caso da LVF, podemos optar por fornecer provas ou fornecer tabelas de verdade, o que for mais fácil para a tarefa em questão.
 
 Agora que sabemos que o método da tabela de verdade é intercambiável com o método de derivações, você pode escolher qual método deseja usar para qualquer problema. Os alunos geralmente preferem usar tabelas de verdade, porque elas podem ser produzidas apenas mecanicamente, e isso parece ``mais fácil''. No entanto, já vimos que as tabelas de verdade se tornam impossivelmente grandes com um pouco mais de letras sentenciais.
-Por outro lado, existem algumas situações em que o uso de provas simplesmente não é possível. Definimos sintaticamente uma sentença contingente como uma sentença que não pode ser provada ser uma tautologia ou uma contradição. Não existe um modo prática de provar esse tipo de declaração negativa. Nunca saberemos se não existe alguma prova de que uma declaração é uma contradição e ainda não a encontramos. Não temos nada a fazer nessa situação, se não recorrer a tabelas de verdade. Da mesma forma, podemos usar derivações para provar que duas sentenças são equivalentes, mas e se quisermos provar que elas \emph{não} são equivalentes? Não temos como provar que nunca encontraremos a prova relevante. Então, temos que voltar às tabelas de verdade de novo.
+Por outro lado, existem algumas situações em que o uso de provas simplesmente não é possível. Definimos sintaticamente uma sentença contingente como uma sentença que não pode ser provada ser uma tautologia ou uma contradição. Não existe um modo prático de provar esse tipo de declaração negativa. Nunca saberemos se não existe alguma prova de que uma declaração é uma contradição e ainda não a encontramos. Não temos nada a fazer nessa situação, se não recorrer a tabelas de verdade. Da mesma forma, podemos usar derivações para provar que duas sentenças são equivalentes, mas e se quisermos provar que elas \emph{não} são equivalentes? Não temos como provar que nunca encontraremos a prova relevante. Então, temos que voltar às tabelas de verdade de novo.
 
 A tabela \ref{table.ProofOrModel} resume quando é melhor usar provas e quando é melhor usar tabelas de verdade. 
 
