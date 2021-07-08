@@ -1860,7 +1860,7 @@ Esse é o problema da completude. Um sistema de provas tem a propriedade da   \d
 Mostrar que um sistema é completo significa mostrar que você incluiu \emph{todas} as regras necessárias e que não deixou nada de fora. Mostrar isso está além do escopo deste livro. O ponto importante é que, felizmente, o sistema de provas da LVF é coreto e completo. Este não é o caso de todos os sistemas de prova ou todas as linguagens formais. Por ser o caso da LVF, podemos optar por fornecer provas ou fornecer tabelas de verdade, o que for mais fácil para a tarefa em questão.
 
 Agora que sabemos que o método da tabela de verdade é intercambiável com o método de derivações, você pode escolher qual método deseja usar para qualquer problema. Os alunos geralmente preferem usar tabelas de verdade, porque elas podem ser produzidas apenas mecanicamente, e isso parece ``mais fácil''. No entanto, já vimos que as tabelas de verdade se tornam impossivelmente grandes com um pouco mais de letras sentenciais.
-Por outro lado, existem algumas situações em que o uso de provas simplesmente não é possível. Definimos sintaticamente uma sentença contingente como uma sentença que não pode ser provada ser uma tautologia ou uma contradição. Não existe um modo prático de provar esse tipo de declaração negativa. Nunca saberemos se não existe alguma prova de que uma declaração é uma contradição e ainda não a encontramos. Não temos nada a fazer nessa situação, se não recorrer a tabelas de verdade. Da mesma forma, podemos usar derivações para provar que duas sentenças são equivalentes, mas e se quisermos provar que elas \emph{não} são equivalentes? Não temos como provar que nunca encontraremos a prova relevante. Então, temos que voltar às tabelas de verdade de novo.
+Por outro lado, existem algumas situações em que o uso de provas simplesmente não é possível. Definimos sintaticamente uma sentença contingente como uma sentença que não pode ser provada ser uma tautologia ou uma contradição. Não existe um modo prático de provar esse tipo de declaração negativa. Nunca saberemos se não existe alguma prova de que uma declaração é uma contradição e ainda não a encontramos. Não temos nada a fazer nessa situação, senão recorrer a tabelas de verdade. Da mesma forma, podemos usar derivações para provar que duas sentenças são equivalentes, mas e se quisermos provar que elas \emph{não} são equivalentes? Não temos como provar que nunca encontraremos a prova relevante. Então, temos que voltar às tabelas de verdade de novo.
 
 A tabela \ref{table.ProofOrModel} resume quando é melhor usar provas e quando é melhor usar tabelas de verdade. 
 
@@ -1890,13 +1890,13 @@ Validade				&  Derivar a conclusão a partir das premissas & Encontrar uma linha
 \item  A sentença $A \eif \enot{A}$ não é uma contradição. 
 \item  A sentença $A \eiff \enot A$ é uma contradição.  
 \item  A sentença $ \enot (W \eif (J \eor J)) $  é contingente.
-\item  A sentença $ \enot(X \eor (Y \eor Z)) \eor (X \eor (Y \eor Z))$  não é contingente
+\item  A sentença $ \enot(X \eor (Y \eor Z)) \eor (X \eor (Y \eor Z))$  não é contingente.
 \item  A sentença $B \eif \enot S$  é equivalente à sentença $\enot \enot B \eif \enot S$.
 \item  A sentença $ \enot (X \eor O) $ não é equivalente à sentença $X \eand O$.
-\item  As sentenças $\enot(A \eor B)$, $C$, $C \eif A$  são conjuntamente inconsistentes
+\item  As sentenças $\enot(A \eor B)$, $C$, $C \eif A$  são conjuntamente inconsistentes.
 \item  As sentenças $\enot(A \eor B)$, $\enot{B}$, $B \eif A$ são conjuntamente consistentes.
 \item  O argumento $\enot(A \eor (B \eor C)) $ \therefore $ \enot{C}$ é válido.
-\item  O argumento $\enot(A \eand (B \eor C))$ \therefore $ \enot{C}$ é  inválido
+\item  O argumento $\enot(A \eand (B \eor C))$ \therefore $ \enot{C}$ é  inválido.
 \end{enumerate}
 
 
@@ -1909,11 +1909,11 @@ Validade				&  Derivar a conclusão a partir das premissas & Encontrar uma linha
 \item A sentença $ (A \eiff A) \eand (B \eand \enot B)$ é uma contradição.
 \item A sentença$ (B \eiff (C \eor B)) $ não é uma contradição. 
 \item A sentença$ ((\enot X \eiff X) \eor X) $  é equivalente à sentença $X$.
-\item A sentença $F \eand (K \eand R) $ não  é equivalente à sentença. $ (F \eiff (K \eiff R)) $.
+\item A sentença $F \eand (K \eand R) $ não  é equivalente à sentença $ (F \eiff (K \eiff R)) $.
 \item As sentenças $ \enot (W \eif W)$, $(W \eiff W) \eand W$, $E \eor (W \eif \enot (E \eand W))$ são conjuntamente inconsistentes. 
 
 \item As sentenças  $\enot R \eor C $, $(C \eand R) \eif \enot R$, $(\enot (R \eor R) \eif R) $ são conjuntamente consistentes.
 \item O argumento $\enot \enot (C \eiff \enot C), ((G \eor C) \eor G) \therefore ((G \eif C) \eand G) $ é válido.
-\item O argumento $ \enot \enot L,  (C \eif \enot L) \eif C) \therefore \enot C$  é  inválido
+\item O argumento $ \enot \enot L,  (C \eif \enot L) \eif C) \therefore \enot C$  é  inválido.
 \end{enumerate}
 

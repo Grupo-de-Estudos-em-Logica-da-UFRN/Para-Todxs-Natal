@@ -38,7 +38,7 @@ Devemos enfatizar que (como em todas as regras de elimina\c c\~ao), voc\^e s\'o 
 	\hypo{a}{\forall x\,\atom{B}{x} \eif \atom{B}{k}}
 	\have{c}{\atom{B}{b} \eif \atom{B}{k}}\by{tentativa impr\'opria de invocar  $\forall$E}{a}
 \end{fitchproof}
-Isso \'e ileg\'itimo, pois `$\forall x$' n\~ao \'e o  operador l\'ogico principal da linha ~1. (Se voc\^e precisar relembrar por que esse tipo de infer\^encia \'e impr\'opria, releia o  Capítulo \ref{s:MoreMonadic}.)
+Isso \'e ileg\'itimo, pois `$\forall x$' n\~ao \'e o  operador l\'ogico principal da linha ~1 (Se você precisar relembrar por que esse tipo de infer\^encia \'e impr\'opria, releia o  Capítulo \ref{s:MoreMonadic}).
 
 %%%%%% -----------------------  33.2    Introdu\c c\~ao existencial
 
@@ -101,7 +101,7 @@ certamente se segue que algo \'e~`$F$'.  Por\'em, e se \emph{nada} existir? Ent\
 Na verdade,  j\'a estamos comprometidos com essa estranheza. No Capítulo  \ref{s:FOLBuildingBlocks},  estipulamos que os dom\'inios na LPO devem ter pelo menos um membro. Definimos a validade    (da LPO)  como uma senten\c ca verdadeira em toda interpreta\c c\~ao. Como `$\exists x\, x=x$' ser\'a verdadeiro em toda interpreta\c c\~ao, isso \emph{tamb\'em} est\'a sob a condi\c c\~ao, por quest\~ao de l\'ogica,  que exista algo em vez de nada.
 
  
-Est\'a longe de ficar claro que a l\'ogica deveria nos dizer que deve haver algo em vez de nada. Entretanto, veremos que pagamos um pre\c co muito alto se recusarmos essa condi\c c\~ao. Para esclarecer melhor um pouco isso,  analisemos as tr\^es seguinte asser\c c\~oes:
+Est\'a longe de ficar claro que a l\'ogica deveria nos dizer que deve haver algo em vez de nada. Entretanto, veremos que pagamos um pre\c co muito alto se recusarmos essa condi\c c\~ao. Para esclarecer melhor um pouco isso, analisemos as tr\^es seguintes asser\c c\~oes:
 	\begin{ebullet}
 		\item $\forall x\,\atom{F}{x} \proves \atom{F}{a}$:  aplica\c c\~ao da regra  $\forall$E.
 		\item $\atom{F}{a} \proves \exists x\,\atom{F}{x}$:  aplica\c c\~ao da regra $\exists$I.
@@ -131,7 +131,7 @@ Este argumento deve \emph{obviamente} ser v\'alido. Afinal, a varia\c c\~ao alfa
 	\have{a}{\atom{F}{a}} \Ae{x}
 	\have{y}{\forall y\, \atom{F}{y}} \Ai{a}
 \end{fitchproof}
-O ponto crucial aqui \'e que `$a$' era apenas um nome   \emph{arbitr\'ario}. N\~ao havia nada de especial nisso - poder\'iamos ter escolhido qualquer outro nome - e ainda assim a prova seria boa. E esse ponto crucial motiva a regra de introdu\c c\~ao  universal ($\forall$I):
+O ponto crucial aqui \'e que `$a$' era apenas um nome \emph{arbitr\'ario}. N\~ao havia nada de especial nisso---poder\'iamos ter escolhido qualquer outro nome---e ainda assim a prova seria boa. E esse ponto crucial motiva a regra de introdu\c c\~ao  universal ($\forall$I):
 
 \factoidbox{
 \begin{fitchproof}
@@ -180,7 +180,7 @@ Mas agora suponha que tentamos justificar esse terr\'ivel argumento da seguinte 
 	\have{a}{\atom{O}{d,d}}\Ae{x}
 	\have{y}{\forall x\, \atom{O}{x,d}}\by{tentativa impr\'opria de invocar $\forall$I}{a}	
 \end{fitchproof}
-Felizmente, nossas regras n\~ao nos permitem fazer isso: a tentativa de prova \'e proibida, pois n\~ao  foi substitu\'ida   \emph{todas} as ocorr\^encias de `$d$' na linha~$2$ por um `$x$'.
+Felizmente, nossas regras n\~ao nos permitem fazer isso: a tentativa de prova \'e proibida, pois n\~ao foram substituídas \emph{todas} as ocorr\^encias de `$d$' na linha~$2$ por um `$x$'.
 
 %%%%%% ----------------------- 33.5 Elimina\c c\~ao  existencial  -------------
 \section{Elimina\c c\~ao  existencial}
@@ -791,7 +791,7 @@ Isso explica por que estas duas regras podem ser tratadas como derivadas. Semelh
 \problempart
 Mostre que a segunda e a quarta regra  CQ s\~ao regras derivadas.
 
-%%%%%% -----------------------  CAPITULO  38  -  Provas e sem\^antica  --------------------------  
+%%%%%% -----------------------  CAPITULO  38  -  Provas e sem\^antica  --------------------------  
 
 \chapter{Provas e sem\^antica}
 
