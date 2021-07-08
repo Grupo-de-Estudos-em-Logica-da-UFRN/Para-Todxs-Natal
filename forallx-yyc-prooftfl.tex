@@ -23,9 +23,9 @@ Um dos  objetivos de um  \emph{sistema em dedução natural} é de mostrar que a
 
 Com tabelas de verdade,  consideramos diferentes maneiras  para obter sentenças verdadeiras ou falsas. Com sistemas de dedução natural, manipulamos  sentenças de acordo com as regras que estabelecemos como boas regras e isto nos possibilita um melhor discernimento, ou pelo menos, um discernimento diferente,  de como os argumentos funcionam. 
 
-A mudança para dedução natural pode ser motivada por mais do que uma simples busca por discernimento. Ela pode ser motivada por  \emph{necessidade}. Considere o seguinte argumento:
+A mudança para dedução natural pode ser motivada por mais do que uma simples busca por discernimento. Ela pode ser motivada por \emph{necessidade}. Considere o seguinte argumento:
 $$A_1 \eif C_1 \therefore (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5) \eif (C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5)$$
-Para verificar a validade deste argumento, você   pode usar uma tabela de verdade com 1024 linhas. Se você fizer isto corretamente, então você verá que  não existe nenhuma linha na qual todas as premissas são verdadeiras e a conclusão seja falsa.  Assim, você saberá que o argumento é válido.  (Mas,  como  já mencionamos antes, existe um sentido no qual você não saberá por que o argumento é válido). Mas agora considere: 
+Para verificar a validade deste argumento, você   pode usar uma tabela de verdade com 1024 linhas. Se você fizer isto corretamente, então você verá que  não existe nenhuma linha na qual todas as premissas são verdadeiras e a conclusão seja falsa.  Assim, você saberá que o argumento é válido (como já mencionamos antes, existe um sentido no qual você não saberá por que o argumento é válido). Mas agora considere: 
 \begin{align*}
 A_1 \eif C_1 \therefore\ & (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5 \eand A_6 \eand A_7 \eand A_8 \eand A_9 \eand A_{10}) \eif \phantom{(}\\
 &(C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5 \eor C_6 \eor C_7 \eor C_8 \eor C_9 \eor C_{10})
@@ -92,13 +92,13 @@ e esperamos concluir com alguma linha $n$:
 \section{Reiteração}
  A primeira regra é tão incrivelmente óbvia que é surpreendente que nos importemos com ela.
 
-Se você já mostrou alguma coisa ao longo de uma prova, a  \emph{regra de  reiteração} permite você repeti-la em uma nova linha.  Por exemplo:
+Se você já mostrou alguma coisa ao longo de uma prova, a \emph{regra de reiteração} permite você repeti-la em uma nova linha. Por exemplo:
 \begin{fitchproof}
 	\have[4]{a1}{A \eand B}
 	\have[$\vdots$]{}{\vdots}
 	\have[10]{a2}{A \eand B} \by{R}{a1}
 \end{fitchproof}
-Isto indica que temos escrito `$A \eand B$' na linha~$4$. Agora, em uma linha posterior---linha~$10$, por exemplo---decidimos que queremos repetir esta sentença na prova. Assim, a escrevemos abaixo novamente.  Também adicionamos uma citação que justifica o que temos escrito. Neste caso, escrevemos  `R',  para indicar que estamos usando a regra de reiteração,  e escrevemos  $4$ para indicar  que ela já foi usada na linha $4$.
+Isto indica que temos escrito `$A \eand B$' na linha~$4$. Agora, em uma linha posterior---linha~$10$, por exemplo---decidimos que queremos repetir esta sentença na prova. Assim, a escrevemos abaixo novamente. Também adicionamos uma citação que justifica o que temos escrito. Neste caso, escrevemos `R', para indicar que estamos usando a regra de reiteração, e escrevemos $4$ para indicar que ela já foi usada na linha $4$.
 
  Aqui está uma ilustração generalizada da regra:
 
@@ -146,7 +146,7 @@ Para ser claro, o enunciado da regra é esquemático.  Isto não é propriamente
 
 Similarmente,  `$m$' e `$n$' não são numerais  que irão aparecer em uma prova real. Eles também são símbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis   para destacar o ponto em que a regra pode ser aplicada a qualquer momento.  A regra requer somente que tenhamos ambos os conjuntos disponíveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
 
-A regra é chamada `\emph{introdução} da conjunção'  porque  ela introduz  o símbolo `$\eand$' na nossa  prova onde ele pode ter sido ausente.  Correspondentemente,  temos uma regra que \emph{elimina}  este  símbolo.  Vamos supor que já foi mostrado que Louis é ambos  reservado e  leal.  Você   está autorizado a concluir que Louis   é reservado. Igualmente você   está autorizado a concluir que Louis   é leal.  Juntando tudo isto, obtemos nossa(s) regra(s) de eliminação da conjunção:
+A regra é chamada `\emph{introdução} da conjunção'  porque  ela introduz  o símbolo `$\eand$' na nossa  prova onde ele pode ter sido ausente.  Correspondentemente,  temos uma regra que \emph{elimina}  este  símbolo.  Vamos supor que já foi mostrado que Louis é ambos  reservado e  leal.  Você   está autorizado a concluir que Louis   é reservado. Igualmente você   está autorizado a concluir que Louis é leal. Juntando tudo isto, obtemos nossa(s) regra(s) de eliminação da conjunção:
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eand\meta{B}}
@@ -160,7 +160,7 @@ e igualmente,
 	\have[\ ]{b}{\meta{B}} \ae{ab}
 \end{fitchproof}}
  
-O propósito é simplesmente este: quando temos uma conjunção em alguma linha da prova, você pode obter qualquer um dos conjuntos  por {\eand}E.  Uma coisa importante a enfatizar:  você só pode aplicar essa regra quando a conjunção é o operador lógico principal. Logo, você não pode inferir `$D$' a partir de `$C \eor (D \eand E)$' usando a regra {\eand}E.
+O propósito é simplesmente este: quando temos uma conjunção em alguma linha da prova, você pode obter qualquer um dos conjuntos  por {\eand}E. Uma coisa importante a enfatizar: você só pode aplicar essa regra quando a conjunção é o operador lógico principal. Logo, você não pode inferir `$D$' a partir de `$C \eor (D \eand E)$' usando a regra {\eand}E.
 
 Com apenas essas duas regras, já podemos começar a ver parte do poder do nosso sistema formal de provas.  Considere: 
 \begin{earg}
