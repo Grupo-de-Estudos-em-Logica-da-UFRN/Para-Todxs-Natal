@@ -167,7 +167,7 @@ Embora o nome  não possa ocorrer em nenhuma suposição não \emph{descartada},
 \end{fitchproof}
 Isso nos diz que `$\forall z (\atom{G}{z} \eif \atom{G}{z})$' é um \emph{teorema}. E de fato é como deveria ser.
 
-Vamos enfatizar um último ponto. De acordo com as convenções da Seção \ref{s:MainLogicalOperatorQuantifier}, o uso de $\forall$I exige que devemos substituir  \emph{todas} as instâncias do nome \meta{c} em $\meta{A}(\ldots \meta{c}\ldots\meta{c}\ldots)$ pela variável \meta{x}. Se substituirmos apenas \emph{alguns} nomes e outros não, acabaríamos "provando" coisas tolas. Por exemplo, considere o argumento:
+Vamos enfatizar um último ponto. De acordo com as convenções da Seção \ref{s:MainLogicalOperatorQuantifier}, o uso de $\forall$I exige que devemos substituir  \emph{todas} as instâncias do nome \meta{c} em $\meta{A}(\ldots \meta{c}\ldots\meta{c}\ldots)$ pela variável \meta{x}. Se substituirmos apenas \emph{alguns} nomes e outros não, acabaríamos ``provando'' coisas tolas. Por exemplo, considere o argumento:
 	\begin{quote}
 	Todo mundo é tão velho quanto si mesmo; então todo mundo é tão velho quanto Matusalém
 	\end{quote}
@@ -249,7 +249,9 @@ A última linha da prova não é permitida. O nome que usamos em nossa instânci
 \end{fitchproof}
 A  inferência da última linha da prova ainda não é permitida. O nome que usamos em nossa instância de substituição para `$\exists x\, \enot \atom{L}{x}$', nomeadamente `$d$', ocorre em uma suposição não descartada, ou seja, na linha~$1$.
 
-A moral da história é essa. \emph{Se você deseja extrair informações de um quantificador existencial, escolha um novo nome para sua instância de substituição.} Dessa forma, você pode garantir que todas as restrições da regra  $\exists$E sejam atendidas.
+Moral da história: \emph{Se você deseja extrair informações de um quantificador existencial, escolha um novo nome para sua instância de substituição.}
+
+Dessa forma, você pode garantir que todas as restrições da regra  $\exists$E sejam atendidas.
 
 %%%%%% -----------------------  CAP  33 -  EXERCICIOS --------------------------  
 \practiceproblems
@@ -329,13 +331,13 @@ números de linha). Adicione-as, para transformá-las em provas fidedignas.
  
 \problempart
 \label{pr.BarbaraEtc.proof1}
-No problema A do Capítulo  \ref{s:MoreMonadic}, consideramos quinze figuras silogísticas da Lógica aristotélica. Forneça provas para cada uma dessas formas de argumento. NB: Será \emph{muito} mais fácil se você simbolizar (por exemplo) `Nenhum F é G' como `$\forall x (\atom{F}{x} \eif \enot \atom{G}{x})$'.
+No problema A do Capítulo  \ref{s:MoreMonadic}, consideramos quinze figuras silogísticas da lógica aristotélica. Forneça provas para cada uma dessas formas de argumento. NB: Será \emph{muito} mais fácil se você simbolizar (por exemplo) `Nenhum F é G' como `$\forall x (\atom{F}{x} \eif \enot \atom{G}{x})$'.
 
 \
  
 \problempart
 \label{pr.BarbaraEtc.proof2}
-Aristóteles e seus sucessores identificaram outras formas silogísticas que dependiam da "importação existencial". Simbolize cada uma dessas formas de argumento na LPO e  forneça suas respectivas  provas.
+Aristóteles e seus sucessores identificaram outras formas silogísticas que dependiam da ``importação existencial''. Simbolize cada uma dessas formas de argumento na LPO e  forneça suas respectivas  provas.
 
 \begin{earg}
 	\item \textbf{Barbari.} Algo é H. Todo G é F. Todo H é G. \\  Portanto: Algum H é F.
@@ -434,8 +436,8 @@ Para trabalhar do fim para o começo  a partir de uma sentença $\exists \meta{x
 \end{fitchproof}
 Isto é exatamente o que faríamos se estivéssemos trabalhando em uma sentença quantificada universalmente. A diferença é que, enquanto para $\forall$I temos que escolher um nome~$\meta{c}$ que não ocorreu na prova (até agora), para $\exists$I podemos e, em geral, devemos escolher um nome~$\meta{c}$ que já ocorre na prova. Assim como no caso da regra $\eor$I, muitas vezes não está claro qual $\meta{c}$ funcionará; portanto, para evitar ter que voltar atrás, você só deve usar a estratégia do fim para o começo a partir de sentenças quantificadas existencialmente quando todas as outras estratégias tiverem sido aplicadas.
 
-Por outro lado, usar a estratégia \emph{do começo para o fim} a partir de sentenças existenciais,  $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, geralmente funciona e você não precisa voltar atrás. Pois essa estratégia  leva em consideração não apenas
- $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$  mas também qualquer sentença $\meta{B}$ que voçê gostaria de provar. Isto exige que você configure uma subprova acima de $\meta{B}$, cuja suposição é uma instância de substituição $\atom{\meta{A}}{\meta{c}}$ de $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$ e $\meta{B}$  é a última linha dessa subprova. Escolha um nome $\meta{c}$ que ainda não ocorra na prova para garantir as restrições da regra $\exists$E.
+Por outro lado, usar a estratégia \emph{do começo para o fim} a partir de sentenças existenciais,  $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, geralmente funciona e você não precisa voltar atrás. Pois essa estratégia leva em consideração não apenas
+ $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, mas também qualquer sentença $\meta{B}$ que você gostaria de provar. Isto exige que você configure uma subprova acima de $\meta{B}$, cuja suposição é uma instância de substituição $\atom{\meta{A}}{\meta{c}}$ de $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$ e $\meta{B}$  é a última linha dessa subprova. Escolha um nome $\meta{c}$ que ainda não ocorra na prova para garantir as restrições da regra $\exists$E.
  
 \begin{fitchproof}
 	\ellipsesline
@@ -525,7 +527,7 @@ O próximo passo é usar outra vez a estratégia do fim para o começo a partir 
 	\have[n][-1]{6}{\atom{A}{d} \eif B}\ci{2-(5)}
 	\have[n]{7}{\forall x(\atom{A}{x} \eif B)}\Ai{6}
 \end{fitchproof}
-Agora podemos continuar a prova a partir da premissa da linha~$1$. Isso é um condicional e seu consequentemente é a sentença~`$B$' que estamos tentando justificar na linha~$n-2$. Assim, devemos procurar uma prova para o seu antecedente, `$\exists x\,\atom{A}{x}$'. Mas  como veremos a seguir, isso é obtido  facilmente aplicando a regra  $\exists$I.   Segue a prova completa:\begin{fitchproof}
+Agora podemos continuar a prova a partir da premissa da linha~$1$. Isso é um condicional e seu consequente é a sentença~`$B$' que estamos tentando justificar na linha~$n-2$. Assim, devemos procurar uma prova para o seu antecedente, `$\exists x\,\atom{A}{x}$'. Mas  como veremos a seguir, isso é obtido  facilmente aplicando a regra  $\exists$I.   Segue a prova completa:\begin{fitchproof}
 	\hypo{1}{\exists x\,\atom{A}{x} \eif B}
 	\open
 	\hypo{2}{\atom{A}{d}}
@@ -609,7 +611,7 @@ e
 		\have[m]{a}{\enot \forall \meta{x}\, \meta{A}}
 		\have[\ ]{con}{\exists \meta{x}\, \enot \meta{A}}\cq{a}
 	\end{fitchproof}}
-Essas são  as quatro regras de transformação de quantificadores,  CQ
+Essas são as quatro regras de transformação de quantificadores, CQ.
 
 %%%%%% -----------------------  CAP  35  - EXERCICIOS   --------------------------   
 
@@ -631,7 +633,7 @@ Mostre que cada par de sentenças é dedutivamente equivalente:
 \end{earg}
 
 \problempart
-No Capítulo \ref{s:MoreMonadic}, vimos o que acontece quando movemos quantificadores "entre  vários operadores lógicos. Mostre que cada um dos seis pares de sentenças é dedutivamente equivalente:
+No Capítulo \ref{s:MoreMonadic}, vimos o que acontece quando movemos quantificadores entre  vários operadores lógicos. Mostre que cada um dos seis pares de sentenças é dedutivamente equivalente:
 \begin{earg}
 \item $\forall x(\atom{F}{x} \eand \atom{G}{a}), \forall x\,\atom{F}{x} \eand \atom{G}{a}$
 \item $\exists x(\atom{F}{x} \eor \atom{G}{a}), \exists x\,\atom{F}{x} \eor \atom{G}{a}$
@@ -640,7 +642,7 @@ No Capítulo \ref{s:MoreMonadic}, vimos o que acontece quando movemos quantifica
 \item $\exists x(\atom{G}{a} \eif \atom{F}{x}), \atom{G}{a} \eif \exists x\,\atom{F}{x}$
 \item $\exists x(\atom{F}{x} \eif \atom{G}{a}), \forall x\,\atom{F}{x} \eif \atom{G}{a}$
 \end{earg}
-NB: a variável `$x$'  não ocorre em `$\atom{G}{a}$'. Quando todos os quantificadores ocorrem no início de uma sentença, diz-se que essa sentença está na  \emph{forma normal prenex}. Essas equivalências às vezes são chamadas de  \emph{regras prenex}, pois fornecem um meio para colocar qualquer sentença na forma normal prenex.
+NB: a variável `$x$' não ocorre em `$\atom{G}{a}$'. Quando todos os quantificadores ocorrem no início de uma sentença, diz-se que essa sentença está na \emph{forma normal prenex}. Essas equivalências às vezes são chamadas de \emph{regras prenex}, pois fornecem um meio para colocar qualquer sentença na forma normal prenex.
 
 %%%%%% -----------------------  CAPITULO  36 - As regras para a identidade -------------------------- 
 
