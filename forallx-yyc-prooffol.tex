@@ -426,7 +426,7 @@ Especificamente, suponha que você queira provar $\forall \meta{x}\, \atom{\meta
 	\have{m}{\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}}\Ai{n}
 \end{fitchproof}
  
-Como trabalhamos do fim para o começo,  $\atom{\meta{A}}{\meta{c}}$ é obtido de $\atom{\meta{A}}{\meta{x}}$ substituindo cada ocorrência livre de $\meta{x}$ em $\atom{\meta{A}}{\meta{x}}$ por~$\meta{c}$. Para que isso funcione, $\meta{c}$ deve satisfazer a condição especial da regra $\forall$I. Podemos garantir isso escolhendo sempre um nome que ainda não ocorreu na prova construída até o momento. (??? Obviamente, isso ocorrerá na prova que acabamos construindo---mas não em uma suposição que não é descartada na linha~$n + 1$.  ?????)
+Como trabalhamos do fim para o começo,  $\atom{\meta{A}}{\meta{c}}$ é obtido de $\atom{\meta{A}}{\meta{x}}$ substituindo cada ocorrência livre de $\meta{x}$ em $\atom{\meta{A}}{\meta{x}}$ por~$\meta{c}$. Para que isso funcione, $\meta{c}$ deve satisfazer a condição especial da regra $\forall$I. Podemos garantir isso escolhendo sempre um nome que ainda não ocorreu na prova construída até o momento.
 
 Para trabalhar do fim para o começo  a partir de uma sentença $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, escrevemos similarmente uma sentença acima dela que pode servir como justificativa para uma aplicação da regra $\exists$I, ou seja, uma sentença da forma $\atom{\meta{A}}{\meta{c}}$. 
 \begin{fitchproof}
@@ -647,16 +647,16 @@ NB: a variável `$x$' não ocorre em `$\atom{G}{a}$'. Quando todos os quantifica
 %%%%%% -----------------------  CAPITULO  36 - As regras para a identidade -------------------------- 
 
 \chapter{As regras para a identidade}
- No Capítulo  \ref{s:Interpretations},  mencionamos o filosoficamente controverso   principio da \emph{identidade dos indiscerníveis} que afirma que objetos que são indistinguíveis de todas as formas são, de fato, idênticos entre si. Entretanto, dissemos também que esse não é um princípio válido na LPO.  Daqui resulta que, não importa o quanto você saiba sobre dois objetos, não podemos provar que eles são idênticos. A menos que, é claro, você saiba que os dois objetos são de fato idênticos, mas a prova dificilmente será muito esclarecedora.
+No Capítulo  \ref{s:Interpretations}, mencionamos o filosoficamente controverso   princípio da \emph{identidade dos indiscerníveis}, que afirma que objetos que são indistinguíveis de todas as formas são, de fato, idênticos entre si. Entretanto, dissemos também que esse não é um princípio válido na LPO.  Daqui resulta que, não importa o quanto você saiba sobre dois objetos, não podemos provar que eles são idênticos. A menos que, é claro, você saiba que os dois objetos são de fato idênticos, mas a prova dificilmente será muito esclarecedora.
 
  O ponto geral, no entanto, é que \emph{nenhuma sentença} que ainda não contenha o predicado de identidade poderia justificar uma inferência para `$a=b$'. Portanto, nossa regra de introdução de identidade não pode permitir inferir uma reivindicação de identidade que contém dois nomes  \emph{diferentes}.
 
-No entanto, todo objeto é idêntico a si mesmo. Não são necessárias premissas para concluir que algo é idêntico a si mesmo. Portanto, esta será a regra de introdução de identidade:
+No entanto, todo objeto é idêntico a si mesmo. Não são necessárias premissas para concluir que algo é idêntico a si mesmo. Portanto, essa será a regra de introdução de identidade:
 \factoidbox{
 \begin{fitchproof}
 	\have[\ \,\,\,]{x}{\meta{c}=\meta{c}} \by{=I}{}
 \end{fitchproof}}
-Observe que esta regra não requer referência a nenhuma linha anterior da prova. Para qualquer nome \meta{c}, você pode escrever $\meta{c}=\meta{c}$ em qualquer ponto, justificando apenas com a regra  {=}I .
+Observe que essa regra não requer referência a nenhuma linha anterior da prova. Para qualquer nome \meta{c}, você pode escrever $\meta{c}=\meta{c}$ em qualquer ponto, justificando apenas com a regra  {=}I .
  
 Nossa regra de eliminação é mais divertida. Se você estabeleceu `$a=b$',  qualquer coisa que seja verdadeira para o objeto nomeado por `$a$' também deve ser verdadeira para o objeto nomeado por `$b$'. Para qualquer sentença com `$a$', você pode substituir algumas ou todas as ocorrências de `$a$' por `$b$' e produzir uma sentença equivalente. Por exemplo,  a partir de `$\atom{R}{a,a}$' e `$a = b$',  você pode deduzir `$\atom{R}{a,b}$', `$\atom{R}{b,a}$' ou `$\atom{R}{b,b}$'. De forma geral:
 \factoidbox{\begin{fitchproof}
@@ -684,7 +684,7 @@ Para ver as regras em ação, provaremos alguns resultados rápidos. Primeiro, p
 	\have{ayya}{\forall y (a = y \eif y = a)}\Ai{abba}
 	\have{xyyx}{\forall x\, \forall y (x = y \eif y = x)}\Ai{ayya}
 \end{fitchproof}
-Obtemos a linha~$3$ substituindo uma instância de `$a$'  na linha~$2$ por uma instância de `$b$', pois tínhamos `$a= b$' na linha~$1$.
+Obtivemos a linha~$3$ substituindo uma instância de `$a$' na linha~$2$ por uma instância de `$b$', pois tínhamos `$a= b$' na linha~$1$.
 
 Seguindo, provaremos que a identidade é  \emph{transitiva}:
 \begin{fitchproof}
@@ -699,7 +699,7 @@ Seguindo, provaremos que a identidade é  \emph{transitiva}:
 	\have{cony}{\forall y\,\forall z((a = y \eand y = z) \eif a = z)}\Ai{conz}
 	\have{conx}{\forall x\,\forall y \forall z((x = y \eand y = z) \eif x = z)}\Ai{cony}
 \end{fitchproof}
-Obtemos a linha~$4$ substituindo `$b$'  na linha~$3$ por `$a$'; uma vez que já tínhamos  `$a= b$' na  linha~$2$
+Obtivemos a linha~$4$ substituindo `$b$' na linha~$3$ por `$a$'; uma vez que já tínhamos `$a= b$' na linha~$2$.
 
 %%%%%% -----------------------  CAP  36  EXERCICIOS  --------------------------  
 \practiceproblems
@@ -735,7 +735,7 @@ No Capítulo   \ref{sec.identity}, dissemos que as três seguintes sentenças lo
 \item $\exists x \bigl[\atom{F}{x} \eand \forall y (\atom{F}{y} \eif x = y)\bigr]$
 \item $\exists x\, \forall y (\atom{F}{y} \eiff x = y)$
 \end{ebullet}
-Mostre que todas são dedutivamente equivalentes. (\emph{Dica}: para mostrar que três sentenças são dedutivamente equivalentes, basta mostrar que a  primeiro  prova a segunda, a segunda prova a terceira e a terceira prova a primeira; pense no porquê.)
+Mostre que todas são dedutivamente equivalentes. (\emph{Dica}: para mostrar que três sentenças são dedutivamente equivalentes, basta mostrar que a  primeiro  prova a segunda, a segunda prova a terceira e a terceira prova a primeira; pense no porquê).
 
 \
 \problempart
@@ -752,7 +752,7 @@ Simbolize e prove o seguinte argumento:
 
 
 \chapter{Regras derivadas}\label{s:DerivedFOL}
-Lembramos que na LVF  primeiro introduzimos às regras básicas do sistema de provas  e depois adicionamos outras regras.  Posteriormente mostramos que essas regras adicionais eram todas regras derivadas das regras básica da LVF.  Faremos o mesmo no caso caso da LPO.  No no Capítulo  \ref{s:BasicFOL} introduzimos algumas regras básicas para a LPO e no Capítulo  \ref{s:CQ} adicionamos  as  regras de transformação de quantificadores, CQ.  Veremos que todas as quatro regras CQ podem ser \emph{derivadas} das regras \emph{básicas} da LPO.  
+Lembramos que na LVF primeiro introduzimos as regras básicas do sistema de provas e depois adicionamos outras regras.  Posteriormente mostramos que essas regras adicionais eram todas regras derivadas das regras básica da LVF. Faremos o mesmo no caso caso da LPO.  No no Capítulo  \ref{s:BasicFOL} introduzimos algumas regras básicas para a LPO e no Capítulo  \ref{s:CQ} adicionamos  as  regras de transformação de quantificadores, CQ.  Veremos que todas as quatro regras CQ podem ser \emph{derivadas} das regras \emph{básicas} da LPO.  
 
 Justificativa da primeira regra CQ:
 \begin{fitchproof}
@@ -784,7 +784,7 @@ Justificativa da terceira regra CQ:
 	\close
 	\have{dada}{\enot \forall x\, \atom{A}{x}}\ni{Aa-con1}
 \end{fitchproof}
-Isso explica por que estas duas regras podem ser tratadas como derivadas. Semelhante justificativas podem ser oferecidas para as outras duas regras CQ.
+Isso explica por que essas duas regras podem ser tratadas como derivadas. Semelhante justificativas podem ser oferecidas para as outras duas regras CQ.
 
 %%%%%% -----------------------  CAP  37  EXERCICIOS  -------------------------- 
 \practiceproblems

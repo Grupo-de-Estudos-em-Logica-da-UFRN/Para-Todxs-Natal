@@ -7,18 +7,18 @@
 %\usepackage{gensymb}
 %\input{fitch1.sty}
 
-\chapter{Introduzindo a  L\'ogica Modal}
+\chapter{Introduzindo a  Lógica Modal}
 \label{Intro}
 
-A lógica modal (LM) é a lógica que trata de modalidades, maneiras pelas quais uma afirmação pode ser verdadeira. As duas modalidades mais conhecidas são   \emph{Necessidade} e \emph{Possibilidade}.   Uma afirmação pode ser verdadeira, mas também pode ser necessariamente verdadeira (verdadeira não importando como o mundo possa ser). Por exemplo, verdades lógicas não são apenas verdadeiras por causa de alguma característica acidental do mundo, mas verdadeiras em qualquer circunstância. Uma dada afirmação pode não ser realmente verdadeira, mas pode ter sido verdadeira. 
-Usamos o operador modal $\ebox$ para expressar \emph{necessidade} e $\ediamond$ para expressar \emph{possibilidade}. Assim, você pode ler $\ebox \metav{A}$ como \emph{é necessariamente o caso que} $\metav{A}$, e $\ediamond \metav{A}$ como \emph{é possivelmente o caso que}  $\metav{A}$.
+A lógica modal (LM) é a lógica que trata de modalidades, maneiras pelas quais uma afirmação pode ser verdadeira. As duas modalidades mais conhecidas são   \emph{Necessidade} e \emph{Possibilidade}. Uma afirmação pode ser verdadeira, mas também pode ser necessariamente verdadeira (verdadeira não importando como o mundo possa ser). Por exemplo, verdades lógicas não são apenas verdadeiras por causa de alguma característica acidental do mundo, mas verdadeiras em qualquer circunstância. Uma dada afirmação pode não ser realmente verdadeira, mas pode ter sido verdadeira. 
+Usamos o operador modal $\ebox$ para expressar \emph{necessidade} e $\ediamond$ para expressar \emph{possibilidade}. Assim, você pode ler $\ebox \metav{A}$ como \emph{é necessariamente o caso que} $\metav{A}$, e $\ediamond \metav{A}$ como \emph{é possivelmente o caso que} $\metav{A}$.
 
-Existem muitos tipos diferentes de necessidade e possibilidade.  Por exemplo, é    \emph{humanamente impossível} para mim correr a 200 Km/h.  Dado o tipo de criaturas que somos, nenhum ser humano pode fazer isso. Mas,  ainda assim, não é  \emph{fisicamente impossível} para mim correr tão rápido. Ainda não temos a tecnologia para fazer isso, mas certamente é fisicamente possível trocar minhas pernas biológicas por pernas robóticas que possam funcionar a 200 Km/h. Por outro lado, é fisicamente impossível para mim correr mais rápido do que a velocidade da luz, pois isso contrariaria as leis da física. Entretanto, isso não é  \emph{logicamente} impossível, pois não é uma contradição imaginar que as leis da física possam ser diferentes e que possam permitir que os objetos se movam mais rápido que a luz.
+Existem muitos tipos diferentes de necessidade e possibilidade. Por exemplo, é    \emph{humanamente impossível} correr a 200 km/h. Dado o tipo de criaturas que somos, nenhum ser humano pode fazer isso. Mas, ainda assim, não é \emph{fisicamente impossível} correr tão rápido. Ainda não temos a tecnologia para fazer isso, mas certamente é fisicamente possível trocar minhas pernas biológicas por pernas robóticas que possam funcionar a 200 km/h. Por outro lado, é fisicamente impossível correr a uma velocidade maior que a da luz, pois isso iria contra as leis da física. Entretanto, isso não é \emph{logicamente} impossível, pois não é uma contradição imaginar que as leis da física possam ser diferentes e que possam permitir que os objetos se movam mais rápido que a luz.
 
-Com que tipo de modalidade a LM lida? \emph{Todos eles}! A LM é uma ferramenta muito flexível. Começamos com um conjunto básico de regras que regem os operadores modais $\ebox$ e $\ediamond$. Em seguida,  adicionamos mais regras para  adequar qualquer tipo de modalidade que estamos interessados.  Na verdade, a LM é tão flexível que nem precisamos pensar sempre  $\ebox$ e $\ediamond$ como expressando \emph{necessidade} e \emph{possibilidade} respectivamente. Em vez disso, podemos ler $\ebox$ como expressando \emph{demonstrabilidade}, de modo que $\ebox\metav{A}$ significa   \emph{é demonstrável que} $\metav{A}$, e $\ediamond\metav{A}$ significa \emph{não é refutável que}  $\metav{A}$. Da mesma forma, podemos interpretar $\ebox\metav{A}$ como significando  $S$ \emph{sabe que  $\metav{A}$} ou $S$ \emph{acredita que $\metav{A}$}. 
-Ou, ainda podemos ler $\ebox$ como expressando  \emph{obrigação moral}. Neste caso $\ebox \metav{A}$ significa \emph{é moralmente obrigatório que} $\metav{A}$ e $\ediamond \metav{A}$ significa \emph{é moralmente permissível que} $\metav{A}$. Tudo o que precisaríamos fazer é elaborar as regras corretas para essas diferentes leituras de  $\ebox$ e $\ediamond$.
+Com que tipos de modalidade a LM lida? \emph{Todos eles}! A LM é uma ferramenta muito flexível. Começamos com um conjunto básico de regras que regem os operadores modais $\ebox$ e $\ediamond$. Em seguida, adicionamos mais regras para adequar qualquer tipo de modalidade em que estamos interessados. Na verdade, a LM é tão flexível que nem precisamos pensar sempre em $\ebox$ e $\ediamond$ como expressando \emph{necessidade} e \emph{possibilidade} respectivamente. Em vez disso, podemos ler $\ebox$ como expressando \emph{demonstrabilidade}, de modo que $\ebox\metav{A}$ significa   \emph{é demonstrável que} $\metav{A}$, e $\ediamond\metav{A}$ significa \emph{não é refutável que} $\metav{A}$. Da mesma forma, podemos interpretar $\ebox\metav{A}$ como significando $S$ \emph{sabe que  $\metav{A}$} ou $S$ \emph{acredita que $\metav{A}$}. 
+Ou ainda, podemos ler $\ebox$ como expressando \emph{obrigação moral}. Nesse caso, $\ebox \metav{A}$ significa \emph{é moralmente obrigatório que} $\metav{A}$ e $\ediamond \metav{A}$ significa \emph{é moralmente permissível que} $\metav{A}$. Tudo o que precisaríamos fazer é elaborar as regras corretas para essas diferentes leituras de $\ebox$ e $\ediamond$.
 
-  Dependendo da interpretação que atribuímos aos operadores $\ebox$ e $\ediamond$, certas sentenças modais serão provadas ou válidas. Por exemplo,  se $\ebox$ é interpretado como necessidade, a sentença  `$\ebox A \eif A$'  pode expressar  `se $A$ é necessária, é verdadeira',
+  Dependendo da interpretação que atribuímos aos operadores $\ebox$ e $\ediamond$, certas sentenças modais serão provadas ou válidas. Por exemplo, se $\ebox$ é interpretado como necessidade, a sentença `$\ebox A \eif A$' pode expressar `se $A$ é necessária, é verdadeira'.
   Sob essa  interpretação,  `$\ebox A \eif A$' é válida: todas as afirmações necessárias são verdadeiras aconteça o que acontecer, então são verdadeiras no mundo real. No entanto, quando   $\ebox$  é interpretado como “acredita-se que” ou “deveria ser o caso”,  a sentença 
   `$\ebox A \eif A$' não é válida: podemos acreditar em proposições falsas. Nem toda proposição que deveria ser verdadeira é de fato verdadeira como por exemplo, `Todo assassino será levado à justiça'. Isso \emph{deve}  ser verdadeiro, mas não o é.
 
@@ -59,18 +59,18 @@ Aqui estão alguns exemplos de sentenças  da LM:
 
 Na Parte~\ref{ch.NDTFL},  apresentamos um sistema em dedução natural para a LVF, no qual, explicitamos as regras de inferência que regem os conetivos lógicos da  LVF.  Agora, sabendo que a linguagem da LM é uma extensão da LVF,  que além dos conectivos lógicos tem os operadores modais   $\ebox$ e $\ediamond$,  precisamos especificar as regras de inferência para tais operadores modais. Ora, é exatamente isso o que faremos neste capítulo. Vamos apresentar os sistemas em dedução  natural  para as lógicas modais  \mlK, \mlT, \mlSfour{} e \mlSfive.
 
-Como  antes,  usaremos `$\proves$' para expressar dedutibilidade. Entretanto, será útil adicionar um subscrito para indicar em qual sistema modal estamos trabalhando. Assim,  por exemplo, se quisermos dizer que podemos provar $\metav{C}$ a partir de $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ \emph{no sistema}~\mlK, escrevemos: $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n \proves_\mlK \metav{C}$.
+Como  antes,  usaremos `$\proves$' para expressar dedutibilidade. Entretanto, será útil adicionar um subscrito para indicar em qual sistema modal estamos trabalhando. Assim, por exemplo, se quisermos dizer que podemos provar $\metav{C}$ a partir de $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ \emph{no sistema}~\mlK, escrevemos: $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n \proves_\mlK \metav{C}$.
 
 \section{Sistema \mlK}
 \label{K}
 
-Começamos com um sistema modal particularmente simples, chamado \mlK{} em homenagem ao filósofo e lógico Saul Kripke. O sistema \mlK{} tem todas as regras de dedução natural da  LVF, incluindo as regras  básicas e as derivadas, além de  duas novas regras básicas para o operador modal   \ebox{}  e um tipo especial de subprova.   
+Começamos com um sistema modal particularmente simples, chamado \mlK{} em homenagem ao filósofo e lógico Saul Kripke. O sistema \mlK{} tem todas as regras de dedução natural da  LVF, incluindo as regras  básicas e as derivadas, além de  duas novas regras básicas para o operador modal \ebox{} e um tipo especial de subprova.   
 
 Esse  tipo especial de subprova, que chamamremos de  \emph{subprova estrita}, parece uma subprova comum, exceto que tem um~\ebox{} em sua linha de suposição em vez de uma fórmula. Ela nos permite provar coisas e raciocinar sobre possibilidades alternativas. 
  
  O que podemos provar dentro de uma subprova estrita vale para qualquer possibilidade alternativa, em particular, em possibilidades alternativas onde as suposições em vigor em nossa prova podem não valer. Em uma subprova estrita, todas as suposições são desconsideradas, e não estamos autorizados a apelar para quaisquer linhas fora da subprova estrita (exceto conforme permitido pelas regras modais fornecidas abaixo).
 
-A regra \ebox I nos permite derivar uma fórmula $\ebox \metav{A}$ se pudermos derivar $\metav{A}$ dentro de uma subprova estrita. Esse é  nosso método fundamental para introduzir \ebox{} nas provas. A ideia básica é bastante simples: se $\metav{A}$ é um teorema, então  $\ebox \metav{A}$ deve ser um teorema também (Lembre-se de que chamar $\metav{A}$ de teorema é dizer que podemos provar $\metav{A}$ sem confiar em quaisquer suposições não descartadas).
+A regra \ebox I nos permite derivar uma fórmula $\ebox \metav{A}$ se pudermos derivar $\metav{A}$ dentro de uma subprova estrita. Esse é  nosso método fundamental para introduzir \ebox{} nas provas. A ideia básica é bastante simples: se $\metav{A}$ é um teorema, então  $\ebox \metav{A}$ deve ser um teorema também (lembre-se de que chamar $\metav{A}$ de teorema é dizer que podemos provar $\metav{A}$ sem confiar em quaisquer suposições não descartadas).
 
 Suponha que queremos provar `$\ebox(A\eif A)$'. A primeira coisa que precisamos fazer é provar que `$A\eif A$' é um teorema. Isso você já sabe como fazer na LVF,  simplesmente apresentando uma prova de `$A\eif A$'  como esta:
 \[
@@ -82,7 +82,7 @@ Suponha que queremos provar `$\ebox(A\eif A)$'. A primeira coisa que precisamos 
 		\have{3}{A\eif A}\ci{1-2}
 	\end{nd}
 \]
-Claramente, a prova de `$A \eif A$' não faz uso de nenhuma suposição não descartada.  Assim,  para aplicar a regra \ebox I, precisamos apenas inserir esta prova  dentro de uma subprova estrita como segue:
+Claramente, a prova de `$A \eif A$' não faz uso de nenhuma suposição não descartada.  Assim, para aplicar a regra \ebox I, precisamos apenas inserir essa prova dentro de uma subprova estrita, como segue:
 
 
 \[\begin{nd}
@@ -120,7 +120,7 @@ Apresentamos agora  a regra \ebox I, a regra de introdução para o operador mod
 		\have{4}{\ebox A}\boxi{2-3}
 	\end{nd}
 \]
-Esta não é uma prova legítima, porque na linha 3 apelamos para a linha 1, usando a regra de reiteração. Mas a linha  1 vem antes do início da subprova estrita na linha 2, contrariando assim a restrição da regra \ebox I
+Essa não é uma prova legítima, porque na linha 3 apelamos para a linha 1, usando a regra de reiteração. Mas a linha 1 vem antes do início da subprova estrita na linha 2, contrariando assim a restrição da regra \ebox I.
 
 Dissemos acima que uma subprova estrita nos permite raciocinar sobre possíveis situações alternativas arbitrárias. O que pode ser provado em uma subprova estrita vale em todas as situações alternativas possíveis e, portanto, é necessário. Essa é a ideia por trás da regra \ebox I. Por outro lado, se assumimos que algo é necessário, assumimos que isso é verdadeiro em todas as situações alternativas possíveis. Assim, temos a regra \ebox E:
 
@@ -133,7 +133,7 @@ Dissemos acima que uma subprova estrita nos permite raciocinar sobre possíveis 
 			\have[n]{n}{\metav{A}}\boxe{m}
 			\close
 		\end{nd}\]
-		 \ebox E só pode ser aplicada se a linha $m$ (contendo $\ebox A$) estiver \emph{fora} da subprova estrita na qual a linha $n$ cai, e esta subprova estrita não é ela própria parte de uma subprova estrita que não contém~$m$. 
+		 \ebox E só pode ser aplicada se a linha $m$ (contendo $\ebox A$) estiver \emph{fora} da subprova estrita na qual a linha $n$ cai, e essa subprova estrita não é ela própria parte de uma subprova estrita que não contém~$m$. 
 		}
 
 A regra \ebox E permite que você introduza $\metav{A}$ dentro de uma subprova estrita se você tiver $\ebox \metav{A}$ fora dessa subprova estrita. A restrição impõe que você só pode fazer isso na primeira subprova estrita,  não permitindo aplicar a regra \ebox E dentro de uma subprova estrita aninhada. Vejamos um exemplo de  uso incorreto de \ebox E.
@@ -183,9 +183,9 @@ Também podemos misturar subprovas regulares e subprovas estritas, como podemos 
 		\close
 		\have{8}{\ebox A \eif \ebox B} \ci{2-7}
 	\end{nd}\]
-Esta é chamada  de \emph{regra de distribuição}, porque nos diz que $\ebox$ `distribui' sobre $\eif$.
+Essa é chamada  de \emph{regra de distribuição}, porque nos diz que $\ebox$ `distribui' sobre $\eif$.
 
-As regras \ebox I e \ebox E parecem bastante simples e, de fato, \mlK{} é um sistema muito simples! Mas \mlK{} é mais poderoso do que você poderia imaginar. Você também pode  provar outras coisas nele.
+As regras \ebox I e \ebox E parecem bastante simples e, de fato, \mlK{} é um sistema muito simples! Mas \mlK{} é mais poderoso do que você pode imaginar. Você também pode  provar outras coisas nele.
 
 \section{Possibilidade}
 \label{possibility}
@@ -236,7 +236,7 @@ Assim,  não há nenhum sentido em que a necessidade seja de alguma forma mais \
 \section{Sistema \mlT}
 \label{T}
 
-O sistema  \mlK{}   é um sistema modal muito simples e  tão fraco que nem mesmo permite que você prove $\metav{A}$  a partir de $\ebox\metav{A}$.  Mas se estivermos pensando em $\ebox$ como expressando \emph{necessidade}, deveríamos ser capazes de fazer esta inferência: se $\metav{A}$ é \emph{necessariamente verdadeira}, então ela certamente deve ser  \emph{verdadeira}!
+O sistema  \mlK{}   é um sistema modal muito simples e  tão fraco que nem mesmo permite que você prove $\metav{A}$  a partir de $\ebox\metav{A}$.  Mas se estivermos pensando em $\ebox$ como expressando \emph{necessidade}, deveríamos ser capazes de fazer esta inferência: se $\metav{A}$ é \emph{necessariamente verdadeira}, então ela certamente deve ser \emph{verdadeira}!
 
 Isso nos leva a um novo sistema modal, \mlT, que obtemos adicionando a
 seguinte regra, R\mlT, ao sistema \mlK:
@@ -248,9 +248,9 @@ seguinte regra, R\mlT, ao sistema \mlK:
 	A linha $n$ na qual a regra R\mlT{} é aplicada  \emph{não deve} estar em uma subprova estrita que começa após a linha~$m$.
 }
 
-A restrição da regra R\mlT{} é, de certa forma, oposta à restrição em \ebox E.  Ao contrario da restrição de  \ebox E, você  não pode usar  a regra R\mlT{} em uma subprova estrita aninhada.
+A restrição da regra R\mlT{} é, de certa forma, oposta à restrição em \ebox E.  Ao contrário da restrição de \ebox E, você não pode usar a regra R\mlT{} em uma subprova estrita aninhada.
 
-Com a inclusão da regra R\mlT{}, podemos provar coisas em \mlT{} que não poderíamos provar em \mlK, como por exemplo:  `$\ebox A \eif A$'.
+Com a inclusão da regra R\mlT{}, podemos provar coisas em \mlT{} que não poderíamos provar em \mlK, como `$\ebox A \eif A$'.
 
 \section{Sistema \mlSfour}
 \label{S4}
@@ -289,7 +289,7 @@ Isso nos leva a outro novo sistema, \mlSfour, que obtemos adicionando a seguinte
 			\close
 		\end{nd}
 	\]
-	Observe que R$\mathbf{4}$ só pode ser aplicada se a linha $m$ (contendo $\ebox \metav{A}$ ) estiver fora da subprova estrita na qual a linha $n$ cai, e esta subprova estrita não é ela mesma parte de uma subprova estrita que não contém $m$.
+	Observe que R$\mathbf{4}$ só pode ser aplicada se a linha $m$ (contendo $\ebox \metav{A}$ ) estiver fora da subprova estrita na qual a linha $n$ cai, e essa subprova estrita não é ela mesma parte de uma subprova estrita que não contém $m$.
 
 }
 
@@ -325,7 +325,7 @@ Isso nos leva ao sistema modal \mlSfive{}, que obtemos adicionando a seguinte re
 			\have[n]{n}{\enot\ebox\metav{A}}\rfive{m}
 			\close
 	\end{nd}\]
-	A regra R$\mathbf{5}$ só pode ser aplicada se a linha $m$ (contendo $\enot \ebox\metav{A}$) estiver fora da subprova estrita na qual a linha $n$ cai, e esta subprova estrita não é ela mesma parte de uma subprova estrita que não contém a linha $m$.
+	A regra R$\mathbf{5}$ só pode ser aplicada se a linha $m$ (contendo $\enot \ebox\metav{A}$) estiver fora da subprova estrita na qual a linha $n$ cai, e essa subprova estrita não é ela mesma parte de uma subprova estrita que não contém a linha $m$.
 }
 
 Agora com a regra R$\mathbf{5}$ podemos adicionar uma caixa na frente de um losango, ou seja, podemos mostrar que  $\ediamond A\proves_\mlSfive  \ebox\ediamond A$:
@@ -451,7 +451,7 @@ A grande ideia por trás da semântica da LM é que as sentenças não são apen
 
 Precisamos refinar essa ideia e torná-la mais precisa. Para fazer isso,  vamos especificar o que é uma  \emph{interpretação} para a LM. A primeira coisa que você precisa incluir em uma interpretação é uma coleção de \emph{mundos possíveis}. Mas, o que exatamente é um mundo possível? A ideia intuitiva é que um mundo possível é outra maneira que este mundo poderia ter sido. Há uma grande discussão filosófica sobre  essa questão que examinaremos com mais detalhes posteriormente. Agora, no entanto,  não precisamos nos preocupar muito com isso, pois no que diz respeito à lógica formal, os mundos possíveis podem ser o que você quiser. Tudo o que importa é que você forneça a cada interpretação uma coleção não vazia de coisas rotuladas \xdefine{mundos possiveis}.
  
-Uma vez escolhida  a  sua coleção de mundos possíveis, você precisa encontrar uma maneira de determinar quais sentenças da LM são verdadeiras em quais mundos possíveis. Para fazer isso, precisamos introduzir a noção de uma \emph{função de valoração}. Aqueles que estudaram matemática já estão familiarizados com a ideia geral de uma função. Mas, para aqueles que não o fizeram, uma função é uma entidade matemática que mapeia argumentos em valores. Isso pode parecer um pouco abstrato, mas alguns exemplos familiares ajudarão. Considere a função $x + 1$. Esta é uma função que recebe um número como argumento e, em seguida, fornece um número como valor. Portanto, se você inserir o número $1$ como um argumento, a função $x + 1$ fornecerá o número $2$ como valor; se você inserir o número  $2$, ela fornecerá $3$; se você inserir o número  $3$, ela fornecerá $4$ \dots{}  No caso da função $x + y$, você deve inserir dois argumentos, se quiser que ela retorne um valor: se você inserir $2$ e $3$ como seus argumentos, ela produzirá $5$; se você inserir os números  $1003$ e $2005$, ela fornecerá como resultado $3008$; e assim por diante.
+Uma vez escolhida  a  sua coleção de mundos possíveis, você precisa encontrar uma maneira de determinar quais sentenças da LM são verdadeiras em quais mundos possíveis. Para fazer isso, precisamos introduzir a noção de uma \emph{função de valoração}. Aqueles que estudaram matemática já estão familiarizados com a ideia geral de função: uma entidade matemática que mapeia argumentos para valores. Isso pode parecer um pouco abstrato, mas alguns exemplos familiares ajudarão. Considere a função $x + 1$. Essa é uma função que recebe um número como argumento e, em seguida, fornece um número como valor. Portanto, se você inserir o número $1$ como um argumento, a função $x + 1$ fornecerá o número $2$ como valor; se você inserir o número  $2$, ela fornecerá $3$; se você inserir o número  $3$, ela fornecerá $4$ \dots{}  No caso da função $x + y$, você deve inserir dois argumentos, se quiser que ela retorne um valor: se você inserir $2$ e $3$ como seus argumentos, ela produzirá $5$; se você inserir os números  $1003$ e $2005$, ela fornecerá como resultado $3008$; e assim por diante.
 
 Uma função de valoração para a LM é uma função com dois argumentos:  uma sentença  e um mundo  possível;  e tem como resultado um valor de verdade.   
 Mais precisamente, se $\nu$   é uma função de valoração  e $w$ é um mundo possível,   $\nu_w(\metav{A})=F$  se e somente se $\metav{A}$ é falsa no mundo $w$ na valoração $\nu$; e $\nu_w(\metav{A})=V$  se e somente se $\metav{A}$  é verdadeira no mundo $w$ na valoração $\nu$.
@@ -473,11 +473,11 @@ Mas quais são as regras para os novos operadores modais, $\ebox$ e $\ediamond$?
 	\item[]$\nu_w(\ebox \metav{A})=V$ se e somente se $\forall w' (\nu_{w'}(\metav{A})=V)$
 	\item[]$\nu_w(\ediamond \metav{A})=V $ se e somente se $\exists w' (\nu_{w'}(\metav{A})=V)$
 \end{itemize}
-Esta é apenas a maneira formal sofisticada de escrever a ideia de que $\ebox\metav{A}$ é verdadeira em $w$ apenas no caso de $\metav{A}$ ser verdadeira em \emph{todos} os mundos, e $\ediamond\metav{A}$ é verdadeira em $w$ apenas no caso de $\metav{A}$ ser verdadeira em \emph{algum} mundo.
+Essa é apenas a maneira formal sofisticada de escrever a ideia de que $\ebox\metav{A}$ é verdadeira em $w$ apenas no caso de $\metav{A}$ ser verdadeira em \emph{todos} os mundos, e $\ediamond\metav{A}$ é verdadeira em $w$ apenas no caso de $\metav{A}$ ser verdadeira em \emph{algum} mundo.
 
 No entanto, embora essas regras sejam boas e simples, elas acabam não sendo tão úteis quanto gostaríamos. Como mencionamos, a LM deve ser uma ferramenta muito flexível. Pretende ser uma estrutura geral para lidar com muitos tipos diferentes de necessidade. Como resultado, queremos que nossas regras semânticas para  $\ebox$ e $\ediamond$ sejam um pouco menos rígidas. Podemos fazer isso introduzindo outra ideia nova: \emph{relação de acessibilidade}.
 
-Uma relação de acessibilidade, $R$, é uma relação entre mundos possíveis. Grosso modo, dizer que $Rw_1w_2$ (em português: o mundo $w_1$ \emph{acessa} o mundo $w_2$) é dizer que $w_2$ é possível  \emph{em relação a} $w_1$. Em outras palavras, ao introduzir relações de acessibilidade, ampliamos a ideia de que um determinado mundo pode ser possível em relação a alguns mundos, mas não a outros. Isso acaba sendo uma ideia muito frutífera quando se trata de sistemas modais. Agora podemos fornecer as seguintes regras semânticas para os operadores modais $\ebox$ e $\ediamond$:
+Uma relação de acessibilidade, $R$, é uma relação entre mundos possíveis. Grosso modo, dizer que $Rw_1w_2$ (em português: o mundo $w_1$ \emph{acessa} o mundo $w_2$) é dizer que $w_2$ é possível  \emph{em relação a} $w_1$. Em outras palavras, ao introduzir relações de acessibilidade, ampliamos a ideia de que determinado mundo pode ser possível em relação a alguns mundos, mas não a outros. Isso acaba sendo uma ideia muito frutífera quando se trata de sistemas modais. Agora podemos fornecer as seguintes regras semânticas para os operadores modais $\ebox$ e $\ediamond$:
 
 
 \begin{itemize}
@@ -486,7 +486,7 @@ Uma relação de acessibilidade, $R$, é uma relação entre mundos possíveis. 
 \end{itemize}
 Isto significa que $\ebox\metav{A}$ é verdadeira no mundo  $w_1$ se e somente se $\metav{A}$ é verdadeira em todos os mundos acessíveis a  $w_1$; e $\ediamond\metav{A}$ é verdadeira no mundo  $w_1$ se e somente se $\metav{A}$ é verdadeira em algum mundo acessível a  $w_1$.
 
-O que sabemos até agora com respeito à semântica da LM?  Uma interpretação para a LM consiste em três coisas: uma coleção não vazia de mundos possíveis, $W$; uma relação de acessibilidade, $R$; e uma função de valoração, $\nu$. A coleção de "mundos possíveis" pode realmente ser uma coleção de qualquer coisa que você quiser. Realmente não importa, contanto que $W$ não seja vazio. (Para muitos propósitos, é útil apenas considerar uma coleção de números como sua coleção de mundos.) E por enquanto, pelo menos, $R$ pode ser qualquer relação entre os mundos de $W$ que você desejar. Pode ser uma relação que todos os mundos de $W$ têm com todos os mundos de $W$, ou que nenhum mundo tem com nenhum mundo, ou qualquer coisa intermediária. E, por último, $\nu$ é uma função que pode mapear qualquer sentença atômica da LM em qualquer valor de verdade em qualquer mundo. Tudo o que importa é que ela siga as regras (1) - (7) quando se tratar de sentenças mais complexas.
+O que sabemos até agora com respeito à semântica da LM?  Uma interpretação para a LM consiste em três coisas: uma coleção não vazia de mundos possíveis, $W$; uma relação de acessibilidade, $R$; e uma função de valoração, $\nu$. A coleção de ``mundos possíveis'' pode realmente ser uma coleção de qualquer coisa que você quiser. Realmente não importa, contanto que $W$ não seja vazio. (Para muitos propósitos, é útil apenas considerar uma coleção de números como sua coleção de mundos.) E por enquanto, pelo menos, $R$ pode ser qualquer relação entre os mundos de $W$ que você desejar. Pode ser uma relação que todos os mundos de $W$ têm com todos os mundos de $W$, ou que nenhum mundo tem com nenhum mundo, ou qualquer coisa intermediária. E, por último, $\nu$ é uma função que pode mapear qualquer sentença atômica da LM em qualquer valor de verdade em qualquer mundo. Tudo o que importa é que ela siga as regras (1) - (7) quando se tratar de sentenças mais complexas.
 
  Muitas vezes é útil apresentar interpretações da LM como diagramas como este:
 \begin{center}
@@ -504,7 +504,7 @@ O que sabemos até agora com respeito à semântica da LM?  Uma interpretação 
 		\draw (2.4,-1.2) rectangle (3.6,0.5);
 	\end{tikzpicture}
 \end{center}
-Qual a interpretação deste diagrama? Ele contém apenas dois mundos,  1 e 2. As setas entre os mundos indicam a relação de acessibilidade. Os mundos 1 e  2 acessam o mundo 1, mas nem 1 nem 2 acessam o mundo 2. As caixas em cada mundo nos permitem saber quais sentenças atômicas são verdadeiras em cada mundo: `$A$' é verdadeira em  1 mas  falsa em 2; `$B$' é  falsa em 1 mas verdadeira em 2. Você só pode escrever uma sentença atômica ou a negação dela  em cada uma dessas caixas. A partir daí, podemos descobri facilmente  quais são   os valores de verdade das sentenças complexas em cada mundo. Por exemplo,  nesta interpretação, todas as sentenças a seguir são verdadeiras em  $w_1$: 
+Qual a interpretação deste diagrama? Ele contém apenas dois mundos, 1 e 2. As setas entre os mundos indicam a relação de acessibilidade. Os mundos 1 e 2 acessam o mundo 1, mas nem 1 nem 2 acessam o mundo 2. As caixas em cada mundo nos permitem saber quais sentenças atômicas são verdadeiras em cada mundo: `$A$' é verdadeira em 1 mas  falsa em 2; `$B$' é falsa em 1 mas verdadeira em 2. Você só pode escrever uma sentença atômica ou a negação dela  em cada uma dessas caixas. A partir daí, podemos descobrir facilmente quais são os valores de verdade das sentenças complexas em cada mundo. Por exemplo, nessa interpretação, todas as sentenças a seguir são verdadeiras em $w_1$: 
  
 \begin{itemize}
 	\item[]$A\eand\enot B$, $B\eif A$, $\ediamond A$, $\ebox\enot B$
@@ -516,7 +516,7 @@ Se você não gosta de pensar diagramaticamente, também pode apresentar uma int
 	\item[]$\nu_{1}(A)=V, \nu_{2}(B)=F, \nu_{2}(A)=F, \nu_{2}(B)=V$
 \end{itemize}
 Você terá a chance de preparar suas próprias interpretações 
-em breve, quando começarmos a olhar para \emph{contra-interpretações}.
+em breve, quando começarmos a olhar para \emph{contrainterpretações}.
 
 \section{Uma semântica para o Sistema \mlK}
 \label{SemanticsK}
@@ -533,12 +533,12 @@ Agora podemos estender todos os conceitos semânticos da  LVF para cobrir també
 		\item $\metav{A}$ is \xdefine{modalmente satisfatoria} se e somente se $\metav{A}$ é verdadeira  em algum mundo em alguma interpretação.
 	\end{itemize}
 }
-(De agora em diante, deixaremos de lado as qualificações "modais"  explícitas, uma vez que podem ser consideradas como lidas.)
+(De agora em diante, deixaremos de lado as qualificações ``modais'' explícitas, uma vez que podem ser consideradas como lidas.)
 
 
 Também podemos estender o uso de $\entails$. Para isso, precisamos adicionar subscritos da mesma forma como fizemos com $\proves$. Assim, quando quisermos dizer que $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\therefore\metav{C}$  é válido em \mlK, escreveremos: $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlK\metav{C}$. 
 
-Para se ter uma ideia melhor desses conceitos semânticos, vejamos algumas contra-interpretações. Considere a seguinte afirmação (falsa):
+Para se ter uma ideia melhor desses conceitos semânticos, vejamos algumas contrainterpretações. Considere a seguinte afirmação (falsa):
 
 \begin{itemize}
 	\item[]
@@ -546,7 +546,7 @@ Para se ter uma ideia melhor desses conceitos semânticos, vejamos algumas contr
 		      \item[]$\enot A\entails_\mlK \enot \ediamond A$
 	      \end{itemize}
 \end{itemize}
-Como obter uma contra-interpretação para essa afirmação? Precisamos construir uma interpretação na qual $\enot A$ é verdadeira em algum mundo $w$, e $\enot\ediamond A$ é falsa   nesse mundo $w$. Aqui está uma dessas interpretações, apresentada em um diagrama:
+Como obter uma contrainterpretação para essa afirmação? Precisamos construir uma interpretação na qual $\enot A$ é verdadeira em algum mundo $w$, e $\enot\ediamond A$ é falsa   nesse mundo $w$. Aqui está uma dessas interpretações, apresentada em um diagrama:
 \begin{center}
 	\begin{tikzpicture}
 		\node (atom1) at (0,1) {1};
@@ -558,9 +558,9 @@ Como obter uma contra-interpretação para essa afirmação? Precisamos construi
 		\draw (2.4,-0.6) rectangle (3.6,0.5);
 	\end{tikzpicture}
 \end{center}
-É fácil ver que isso funciona como uma contra-interpretação para  $\enot A\entails_\mlK\enot\ediamond A$. Em primeiro lugar, `$\enot A$' é verdadeira no mundo $1$. 
+É fácil ver que isso funciona como uma contrainterpretação para  $\enot A\entails_\mlK\enot\ediamond A$. Em primeiro lugar, `$\enot A$' é verdadeira no mundo $1$. 
 E, em segundo lugar, como `$A$' é verdadeira em $2$ e $2$ é acessível a partir de $1$, temos que `$\ediamond A$' é verdadeira em $1$, e consequentemente `$\enot\ediamond A$'   é falsa em $1$. 
-Portanto, há algum mundo nesta interpretação onde `$\enot A$` é verdadeira e `$\enot\ediamond A$`  falsa.  
+Portanto, há algum mundo nessa interpretação onde `$\enot A$` é verdadeira e `$\enot\ediamond A$`  falsa.  
 
 Por que escolhemos o subscrito \mlK? Existe uma relação importante entre o sistema \mlK{} e a definição de validade que acabamos de fornecer. Em particular, temos os dois resultados a seguir:
 \begin{itemize}
@@ -581,14 +581,14 @@ Dissemos que o sistema \mlK{} é correto e completo em relação à definição 
 
 Isso significa que esses sistemas são uma perda de tempo? De jeito nenhum! Esses sistemas são apenas incorretos \emph{em relação à definição de validade que demos acima}. (Ou, usando símbolos, eles não são corretos em relação a $\entails_\mlK$.) Assim, quando estamos lidando com esses sistemas modais mais fortes, precisamos apenas modificar nossa definição de validade. É aqui que as relações de acessibilidade são realmente úteis.
 
-Quando introduzimos a ideia de uma relação de acessibilidade, dissemos que poderia ser qualquer relação entre mundos que você goste: você poderia tê-la relacionando todos os mundos a todos os mundos,  nenhum mundo para nenhum mundo, ou qualquer coisa no meio. É assim que pensamos as relações de acessibilidade em nossa definição de $\entails_\mlK$. Mas se quiséssemos, poderíamos  colocar algumas restrições na relação de acessibilidade. Em particular, podemos impor que a relação de acessibilidade seja \emph{reflexiva}:
+Quando introduzimos a ideia de uma relação de acessibilidade, dissemos que poderia ser qualquer relação entre mundos de que você goste: você poderia tê-la relacionando todos os mundos a todos os mundos,  nenhum mundo para nenhum mundo, ou qualquer coisa no meio. É assim que pensamos as relações de acessibilidade em nossa definição de $\entails_\mlK$. Mas se quiséssemos, poderíamos  colocar algumas restrições na relação de acessibilidade. Em particular, podemos impor que a relação de acessibilidade seja \emph{reflexiva}:
 
 \begin{itemize}
 	\item $\forall wRww$
 \end{itemize}
 Isto significa que todo mundo acessa ele próprio. Ou em termos de possibilidade relativa: todo mundo é possível em relação a si mesmo. Com   essa restrição podemos introduzir uma nova relação de consequência, $\entails_\mlT$, como segue:
 \factoidbox{
-	$\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlT \metav{C}$  se e somente se  não existe nenhum mundo em qualquer interpretação \emph{que tenha uma relação de acessibilidade reflexiva}, na qual $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ são todas verdadeiras e $\metav{C}$ é  falsa
+	$\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlT \metav{C}$  se e somente se  não existe nenhum mundo em qualquer interpretação \emph{que tenha uma relação de acessibilidade reflexiva}, na qual $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ são todas verdadeiras e $\metav{C}$ é falsa.
 }
 Anexamos o subscrito \mlT{}  a $\entails$ porque verifica-se que o sistema \mlT{} é correto e completo em relação a esta nova definição de validade:
 \begin{itemize}
@@ -604,7 +604,7 @@ reflexiva.
 			\have[\, ]{n}{\metav{A}}\rt{m}
 		\end{nd}\]
 }
-Para mostrar isto é suficiente mostrar que não existe uma  contra-interpretação para:
+Para mostrar isto é suficiente mostrar que não existe uma  contrainterpretação para:
 \[
 	\ebox \metav{A}\entails_\mlT \metav{A}
 \]
@@ -620,11 +620,11 @@ De que outra forma podemos ajustar nossa definição de validade? Podemos també
 \begin{itemize}
 	\item $\forall w_1\forall w_2\forall w_3 ((Rw_1w_2 \eand Rw_2w_3)\eif Rw_1w_3)$
 \end{itemize}
-Isso significa que se  $w_1$ acessa $w_2$, e $w_2$ acessa $w_3$, então  $w_1$ acessa $w_3$. Ou em termos de possibilidade relativa: se $w_3$ é possível em relação a $w_2$, e $w_2$ é possível em relação a  $w_1$, então $w_3$ é possível em relação a  $w_1$. Com esta restrição imposta  à nossa relação de acessibilidade, temos uma nova relação de consequência, $\entails_\mlSfour$, como segue:
+Isso significa que se  $w_1$ acessa $w_2$, e $w_2$ acessa $w_3$, então  $w_1$ acessa $w_3$. Ou em termos de possibilidade relativa: se $w_3$ é possível em relação a $w_2$, e $w_2$ é possível em relação a  $w_1$, então $w_3$ é possível em relação a  $w_1$. Com essa restrição imposta  à nossa relação de acessibilidade, temos uma nova relação de consequência, $\entails_\mlSfour$, como segue:
 \factoidbox{
 	$\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlSfour \metav{C}$ se e somente se não existe nenhum mundo em qualquer interpretação \emph{que tenha uma relação de acessibilidade reflexiva e transitiva}, na qual $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ são todas verdadeiras e $\metav{C}$ é falsa
 }
-Anexamos o subscrito \mlSfour{}  a $\entails$ porque verifica-se que o sistema \mlSfour{}  é correto e completo em relação a esta nova definição de validade:
+Anexamos o subscrito \mlSfour{}  a $\entails$ porque verifica-se que o sistema \mlSfour{} é correto e completo em relação a esta nova definição de validade:
 \begin{itemize}
 	\item Se $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\proves_\mlSfour\metav{C}$, então $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlSfour\metav{C}$
 	\item Se $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlSfour\metav{C}$, então $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\proves_\mlSfour\metav{C}$
@@ -641,7 +641,7 @@ Como antes,  não  provaremos os resultados de correção e completude.  No enta
 }
 Lembramos que a ideia por trás das subprovas estritas é que elas são maneiras de provar coisas que devem ser verdadeiras em todos os mundos acessíveis. Assim, a regra R$\mathbf{4}$  significa que sempre que $\ebox \metav{A}$ for verdadeira em um mundo, $\ebox \metav{A}$ também deve ser verdadeira  em todos os mundos acessíveis  a este mundo. Logo, devemos ter $\ebox\metav{A} \entails_\mlSfour \ebox\ebox\metav{A}$.
 
-Para ver isso,  tente construir uma contra-interpretação para esta afirmação:
+Para constatar isso, tente construir uma contrainterpretação para esta afirmação:
 \begin{itemize}
 	\item[]$\ebox\metav{A} \entails_\mlSfour \ebox \ebox \metav{A}$
 \end{itemize}
@@ -677,7 +677,7 @@ Como antes,  não  provaremos os resultados de correção e completude.  No enta
 }
 Essa regra diz que se $\metav{A}$ não é necessária, ou seja, falsa em algum mundo acessível, também não é necessária em qualquer mundo possível acessível. Temos então $\enot\ebox \metav{A} \entails_\mlSfive  \ebox\enot\ebox \metav{A}$.
 
-Para ver isso, tente construir uma contra-interpretação para esta afirmação:
+Para constatar isso, tente construir uma contrainterpretação para esta afirmação:
 \[
 	\enot\ebox\metav{A} \entails_\mlSfive  \ebox \enot\ebox \metav{A}
 \]
@@ -688,7 +688,7 @@ Na definição de  $\entails_\mlSfive $, estipulamos que a relação de acessibi
 \begin{itemize}
 	\item $\forall w_1\forall w_2Rw_1w_2$
 \end{itemize}
-Isto significa  que todo mundo acessa todo mundo. Ou em termos de possibilidade relativa: todo mundo é possível em relação a todo mundo. Usando esta restrição na relação de acessibilidade, poderíamos ter definido  $\entails_\mlSfive $ assim:\factoidbox{
+Isto significa  que todo mundo acessa todo mundo. Ou em termos de possibilidade relativa: todo mundo é possível em relação a todo mundo. Usando essa restrição na relação de acessibilidade, poderíamos ter definido  $\entails_\mlSfive $ assim:\factoidbox{
 	$\metav{A}_1,\metav{A}_2, \dots \metav{A}_n\entails_\mlSfive  \metav{C}$ se e somente se  não existe nenhum mundo em qualquer interpretação  \emph{que tenha uma relação de acessibilidade universal}, na qual $\metav{A}_1,\metav{A}_2, \dots \metav{A}_n$ são todas verdadeiras e $\metav{C}$ é falsa.
 }
 Se definíssemos $\entails_\mlSfive $ assim, ainda obteríamos os mesmos resultados de correção e completude para \mlSfive{}. O que isso nos diz? Isso significa que se estamos lidando com uma noção de necessidade segundo a qual todo mundo é possível em relação a todo mundo, então devemos usar \mlSfive{}. Além disso, a maioria dos filósofos assume que as noções de necessidade com as quais estão mais preocupados, como a necessidade lógica e a \emph{necessidade metafísica}, são exatamente desse tipo. Portanto, \mlSfive{} é o sistema modal que a maioria dos filósofos usa na maior parte do tempo.
@@ -697,7 +697,7 @@ Se definíssemos $\entails_\mlSfive $ assim, ainda obteríamos os mesmos resulta
 \practiceproblems
 
 \problempart
-Apresente contra-interpretações para as quatro seguintes afirmações falsas:
+Apresente contrainterpretações para as quatro seguintes afirmações falsas:
 \begin{earg}
 	\item $\enot P \entails_\mlK \enot\ediamond P$
 	\item $\ebox(P \eor Q)\entails_\mlK \ebox P \eor \ebox Q$
@@ -706,14 +706,14 @@ Apresente contra-interpretações para as quatro seguintes afirmações falsas:
 \end{earg}
 
 \problempart
-Apresente contra-interpretações para as duas seguintes afirmações falsas:
+Apresente contrainterpretações para as duas seguintes afirmações falsas:
 \begin{earg}
 	\item $\ebox (M\eif O),\ediamond M\entails_\mlT O$
 	\item $\ebox A\entails_\mlT \ebox \ebox A$
 \end{earg}
 
 \problempart
-Apresente contra-interpretações para as duas seguintes afirmações falsas:
+Apresente contrainterpretações para as duas seguintes afirmações falsas:
 \begin{earg}
 	\item $\ediamond A\entails_\mlSfour \ebox\ediamond A$
 	\item $\ediamond A, \ebox (\ediamond A \eif B)\entails_\mlSfour\ebox B$

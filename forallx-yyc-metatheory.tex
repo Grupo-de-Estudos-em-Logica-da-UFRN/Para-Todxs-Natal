@@ -31,7 +31,7 @@ Podemos ampliar mais um pouco este grupo e acrescentar a ele sentenças que são
   		& \ \ \vdots
 	\end{align*}
 Dizemos que as sentenças deste grupo mais amplo estão na \define{disjunctive normal form}, cuja definição formal pode ser assim apresentada:
-uma sentença está na \textit{forma normal disjuntiva} se e somente se ela satisfezer todas as seguintes condições:
+uma sentença está na \textit{forma normal disjuntiva} se e somente se ela satisfizer todas as seguintes condições:
 	\begin{earg}
 		\item[(\textsc{fnd 1})] Nenhum conectivo que não seja negação, conjunção ou disjunção ocorre na sentença;
 		\item[(\textsc{fnd 2})] Qualquer negação que ocorra na sentença é a negação de uma letra sentencial;
@@ -171,8 +171,7 @@ Para obter uma sentença na FND que seja logicamente equivalente a $\meta{S}$, h
 		$\meta{D}$ é, em geral, uma disjunção de conjunções de literais e no caso limite, quando $\meta{S}$ é verdadeira em apenas uma linha de sua tabela, $\meta{D}$ é uma conjunção de literais.
 		Seja qual for o caso, $\meta{D}$ está na FND.
 		
-		Além disso, a construção de $\meta{D}$ assegura também que para cada linha~$i$ da tabela de verdade:
-		$\meta{S}$ é verdadeira na linha $i$ da tabela verdade \emph{se e somente se} um dos disjuntos de $\meta{D}$ (a saber, $\meta{B_i}$) é verdadeiro na, e somente na, linha $i$.
+		Além disso, a construção de $\meta{D}$ assegura também que, para cada linha~$i$ da tabela de verdade, $\meta{S}$ é verdadeira na linha $i$ da tabela verdade \emph{se e somente se} um dos disjuntos de $\meta{D}$ (a saber, $\meta{B_i}$) é verdadeiro na, e somente na, linha $i$.
 		Portanto, $\meta{S}$ e $\meta{D}$ têm a mesma tabela verdade e são, por isso, logicamente equivalentes.
 	\end{enumerate}
 	Esses dois casos esgotam todas as possibilidades para a tabela de $\meta{S}$ e em ambos obtivemos uma sentença na FND que é logicamente equivalente a $\meta{S}$.
@@ -233,7 +232,7 @@ Uma delas na FND e outra na FNC.
         
 \section{Adequação Expressiva da LVF}  
 
-Dos conectivos da LVF, a engação, `$\enot$', é um conectivo de um lugar (unário), ou seja, liga-se a uma única sentença, e todos os outros são conectivos de dois lugares (binários) que ligam-se a exatamente duas sentenças.
+Dos conectivos da LVF, a engação, `$\enot$', é um conectivo de um lugar (unário), ou seja, liga-se a uma única sentença, e todos os outros são conectivos de dois lugares (binários) que se ligam a exatamente duas sentenças.
 Mas nós podemos cogitar sobre conectivos de \textit{n} lugares (\textit{n}-ários), que ligam-se a $n$ sentenças.
 Por exemplo, poderíamos propor um conectivo de três lugares, cujo símbolo poderia ser um coração, `$\heartsuit$', e estipular que ele tem a seguinte tabela de verdade característica:
 \begin{center}
@@ -343,7 +342,7 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
 
 O Teorema da Adequação Expressiva garante que o conjunto $\{\enot, \eor\}$ é expressivamente adequado.
 Portanto, é suficiente mostrar que, dada qualquer sentença que contém apenas esses dois conectivos, podemos reescrevê-la como uma sentença logicamente equivalente que contém apenas o `$\uparrow$'.
-Assim como fizemos na prova dos casos subsidiários do Teorema da Adequação Expressiva, aqui também basta aplicamos as seguintes equivalências
+Assim como fizemos na prova dos casos subsidiários do Teorema da Adequação Expressiva, aqui também basta aplicarmos as seguintes equivalências
 		\begin{align*}
 			\enot \meta{A} &\text{\quad \ e \quad} (\meta{A} \uparrow \meta{A})\\
 			(\meta{A} \eor \meta{B}) & \text{\quad \ e \quad} ((\meta{A} \uparrow \meta{A}) \uparrow (\meta{B} \uparrow \meta{B}))
@@ -395,7 +394,7 @@ Não parece possível construir uma sentença que tenha apenas disjunções e cu
 				 F & V
 				\end{tabular}
 				\end{center}
-A razão intuitiva deste fato é simples: o valor da primeira linha da tabela de verdade da negação é o  Falso, mas o valor da primeira linha da tabela de qualquer sentença que tenha \emph{apenas} disjunções ($\eor$) sempre será o Verdadeiro.
+A razão intuitiva deste fato é simples: o valor da primeira linha da tabela de verdade da negação é o Falso, mas o valor da primeira linha da tabela de qualquer sentença que tenha \emph{apenas} disjunções ($\eor$) sempre será o Verdadeiro.
 A negação leva o Verdadeiro no Falso, mas nenhuma combinação de disjunções fará isso.
 As disjunções sempre levam o Verdadeiro no Verdadeiro.
 O mesmo raciocínio vale para a conjunção, o condicional e o bicondicional.
@@ -615,7 +614,7 @@ Uma aplicação genérica da regra $\eand$E pode ser representada esquematicamen
 		\have[i]{ab}{\meta{A}\eand\meta{B}}
 		\have[n]{a}{\meta{A}} \ae{ab}
 	\end{proof}\noindent
-(alternativamente poderíamos ter $\meta{B}$ na linha $n$; e um raciocínio semelhante ao que faremos aqui se aplicaria neste caso)
+(alternativamente poderíamos ter $\meta{B}$ na linha $n$; e um raciocínio semelhante ao que faremos aqui se aplicaria neste caso).
 Analogamente à prova do lema anterior, o que temos que demonstrar é:
 \begin{itemize}
 	\item[(*)]  Se  \ ({para todo}  $k<n$, $\Delta_k \entails \meta{S}_k$) \ \ então \ \ $\Delta_n \entails \meta{A}$
@@ -641,7 +640,7 @@ Ela é análoga aos lemas anteriores.
 	$\eor$E \ é uma regra de inferência confiável.
 \end{factoidboxe}
 \noindent\emph{Prova.}
-Uma aplicação genérica da regra$\eor$E pode ser representada esquematicamente por:
+Uma aplicação genérica da regra $\eor$E pode ser representada esquematicamente por:
    \begin{proof}
 	   \have[m]{aob}{\meta{A}\eor\meta{B}}
 	   \open
@@ -739,7 +738,7 @@ Mas então, (5) nos autoriza a concluir a seguinte estranha afirmação:
 \end{itemize}
 A afirmação (6) é mesmo bem suspeita.
 Não só porque acabamos de dizer, em (5), que nenhuma valoração faz todas as sentenças de $\Delta_n$ verdadeiras, mas também porque sabemos que  `$\ered$' não é verdadeiro em nenhuma valoração; o que deixa esta passagem de (5) para (6) pelo menos duvidosa.
-Nós vamos refletir um pouco sobre isso, mas antes vamos apenas notar que, reescrita através de nossa notação, a afirmação (6) diz que $\Delta_n \entails \ered$, e isso, de acordomdo (*), admitindo que não cometemos nenhum erro, finaliza a prova do lema.$\blacklozenge$
+Nós vamos refletir um pouco sobre isso, mas antes vamos apenas notar que, reescrita através de nossa notação, a afirmação (6) diz que $\Delta_n \entails \ered$, e isso, de acordo com (*), admitindo que não cometemos nenhum erro, finaliza a prova do lema.$\blacklozenge$
 
 
 \subsection{Um rápido desvio: sentenças vacuamente verdadeiras}
