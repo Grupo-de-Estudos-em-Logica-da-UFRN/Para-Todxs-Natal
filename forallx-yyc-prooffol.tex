@@ -426,7 +426,7 @@ Especificamente, suponha que você queira provar $\forall \meta{x}\, \atom{\meta
 	\have{m}{\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}}\Ai{n}
 \end{fitchproof}
  
-Como trabalhamos do fim para o começo,  $\atom{\meta{A}}{\meta{c}}$ é obtido de $\atom{\meta{A}}{\meta{x}}$ substituindo cada ocorrência livre de $\meta{x}$ em $\atom{\meta{A}}{\meta{x}}$ por~$\meta{c}$. Para que isso funcione, $\meta{c}$ deve satisfazer a condição especial da regra $\forall$I. Podemos garantir isso escolhendo sempre um nome que ainda não ocorreu na prova construída até o momento.
+Como trabalhamos do fim para o começo,  $\atom{\meta{A}}{\meta{c}}$ é obtido de $\atom{\meta{A}}{\meta{x}}$ substituindo cada ocorrência livre de $\meta{x}$ em $\atom{\meta{A}}{\meta{x}}$ por~$\meta{c}$. Para que isso funcione, $\meta{c}$ deve satisfazer a condição especial da regra $\forall$I. Podemos garantir isso escolhendo sempre um nome novo, que ainda não foi usado em nenhuma linha anterior da prova.
 
 Para trabalhar do fim para o começo  a partir de uma sentença $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, escrevemos similarmente uma sentença acima dela que pode servir como justificativa para uma aplicação da regra $\exists$I, ou seja, uma sentença da forma $\atom{\meta{A}}{\meta{c}}$. 
 \begin{fitchproof}
