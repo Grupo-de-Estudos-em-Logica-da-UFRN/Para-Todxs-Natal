@@ -43,11 +43,11 @@ Vovê pode fazer o download do último pdf gerado aqui:
 Clone o [repositório github](https://github.com/Grupo-de-Estudos-em-Logica-da-UFRN/Para-Todxs-Natal) em sua máquina 
 ou faça o download do arquivo ZIP e compile o código usando o [LaTeX](http://www.latex-project.org/) a partir do arquivo
 
-  - `forallxyyc.tex`
+  - `paratodxsnatal.tex`
 
 ou
 
-  -  `forallxyyc-print.tex` (otimizado para impressão)
+  -  `paratodxsnatal-print.tex` (otimizado para impressão)
 
 É necessário executar `makeglossaries` para gerar o glossário.
 
