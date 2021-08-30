@@ -3,10 +3,11 @@
 \label{ch.NDTFL}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
 
-%%%%%% ----------------------------- CAPITULO 25  --------------------------------------------------  
+ 
+%%%%%% ----------------------------- CAPITULO 26  --------------------------------------------------  
 \chapter{A ideia de dedução natural}\label{s:NDVeryIdea}
 
-No  Capítulo  \ref{s:Valid}, dissemos que um argumento é válido se e somente se não existe nenhuma situação na qual todas as premissas são verdadeiras e a conclusão é falsa. Posteriormente,  apresentamos as tabelas de verdade para as sentenças da LVF, onde  cada linha de uma tabela completa corresponde a uma valoração. Assim, diante de um argumento da LVF,  temos um modo direto para asserir se existe uma valoração na qual as premissas são todas verdadeiras e a conclusão falsa, isto é, apenas averiguando as tabelas de verdade. 
+No  Capítulo  \ref{s:Valid}, dissemos que um argumento é válido se e somente se não existe nenhuma situação na qual todas as premissas são verdadeiras e a conclusão é falsa. Posteriormente,  apresentamos as tabelas de verdade para as sentenças da LVF, onde  cada linha de uma tabela completa corresponde a uma valoração. E vimos que uma tabela de verdade conjunta para todas as sentenças de um argumento fornece um modo direto de verificar se ele é válido ou não: basta examinar se existe alguma linha na qual as premissas são todas verdadeiras e a conclusão é falsa.
 
 Entretanto, tabelas de verdade não nos dão necessariamente muito  \emph{insight}. Considere os dois seguintes argumentos na LVF:
 \begin{align*}
@@ -16,12 +17,13 @@ P \eif Q, P & \therefore Q
 
 Claramente, esses argumentos são válidos. Você  pode verificar que ele são válidos construindo tabelas de verdade de quatro linhas, mas podemos dizer que eles fazem uso de diferentes \emph{formas}  de raciocínio. Seria bom ter controle dessas diferentes \emph{formas}  de inferência.
 
-Um dos  objetivos de um  \emph{sistema em dedução natural} é de mostrar que argumentos particulares são  válidos de um modo que nos permita entender o raciocínio que os argumentos possam envolver.  Vamos começar com regras de inferências muito básicas. Essas regras podem ser combinadas para oferecer  argumentos mais complexos.  De fato,  a partir de uma pequena quantidade  de regras de inferência, esperamos capturar todos os argumentos válidos.
-
-
+Um dos objetivos de um \emph{sistema em dedução natural} é de mostrar que argumentos particulares são  válidos de um modo que nos permita entender o raciocínio que os argumentos possam envolver.  De fato, a ideia é que a partir de uma pequena quantidade de regras de inferência bem básicas consigamos capturar todos os argumentos válidos.
 \emph{Essa é uma maneira muito diferente de pensar sobre argumentos.} 
 
-Com tabelas de verdade,  consideramos diferentes maneiras  para obter sentenças verdadeiras ou falsas. Com sistemas de dedução natural, manipulamos  sentenças de acordo com as regras que estabelecemos como boas regras e isto nos possibilita um melhor discernimento, ou pelo menos, um discernimento diferente,  de como os argumentos funcionam. 
+Apesar de funcionarem como um método seguro para decidir sobre a validade, as tabelas de verdade não nos ajudam a entender o raciocínio por trás dos argumentos válidos. Elas simplesmente explicitam de um modo bem organizado todas as diferentes circunstâncias nas quais as sentenças de um argumento são verdadeiras ou falsas. É necessário um exame exaustivo destas circunstâncias (todas as linhas da tabela) para decidir se o argumento é ou não válido.
+
+Os sistemas de dedução natural, por sua vez, propiciam um método de verificação da validade de argumentos que nos aproxima de um entendimento de quais são os raciocínios que dão suporte aos argumentos válidos.
+Parte-se de um conjunto de regras de inferência previamente reconhecidas como boas e usa-se estas regras como um estoque de mini-raciocínios que podem ser aplicados nas premissas do argumento para passo a passo obter sua conclusão.
 
 A mudança para dedução natural pode ser motivada por mais do que uma simples busca por discernimento. Ela pode ser motivada por \emph{necessidade}. Considere o seguinte argumento:
 $$A_1 \eif C_1 \therefore (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5) \eif (C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5)$$
@@ -31,35 +33,36 @@ A_1 \eif C_1 \therefore\ & (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5 \eand A_
 &(C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5 \eor C_6 \eor C_7 \eor C_8 \eor C_9 \eor C_{10})
 \end{align*}
 Este argumento também é válido---você pode provavelmente dizer---mas para testá-lo é preciso uma tabela de verdade com
- $2^{20} = 1048576$ linhas.  A princípio, podemos configurar uma máquina para gerar tabelas de verdade e nos relatar quando o processo terminar. Na prática, argumentos mais complexos na LVF pode torna-se \emph{intratável} se usamos tabelas de verdades. 
+ $2^{20} = 1048576$ linhas.  A princípio, podemos configurar uma máquina para gerar tabelas de verdade e nos relatar quando o processo terminar. Na prática, argumentos mais complexos na LVF tornam-se \emph{intratável} se usamos tabelas de verdade. 
  
 %Quando chegarmos à lógica de primeira ordem (LPO) (início do capítulo   \ref{s:FOLBuildingBlocks}),   o problema torna-se dramaticamente pior.  Não existe nada como teste de tabela de verdade para a LPO.  Para assegurar se um argumento é válido ou não,  temos que raciocinar sobre  \emph{todas}   as interpretações,  mas, como vimos no Capítulo \ref{s:InfinitInterpret}, existem  infinitas interpretações  possíveis.
 
 No caso da lógica de primeira ordem (LPO), este problema é ainda pior, porque não existe um teste como o das tabelas de verdade e, conforme vimos no Capítulo \ref{s:InfinitInterpret}, para decidir se um argumento é válido precisamos raciocinar sobre uma quantidade infinita de interpretações possíveis.
 Em princípio, não podemos configurar uma máquina para tratar as infinitas interpretações possíveis e relatar quando tiver concluído:  isso \emph{nunca} terminará. Ou precisamos desenvolver modos de raciocínios mais eficientes para tratar todas as interpretações, ou precisamos procurar algo diferente. 
 
-Existem, de fato, sistemas que  codificam modos de raciocinar sobre todas as interpretações possíveis. Eles foram desenvolvidos nos ano 1950s por Evert Beth e  Jaakko Hintikka.  Mas não iremos seguir este caminho.  Ao invés disto,  nossa atenção será voltada para dedução natural. 
+Existem, de fato, sistemas que  codificam modos de raciocinar sobre todas as interpretações possíveis. Eles foram desenvolvidos na década de 1950 por Evert Beth e Jaakko Hintikka.  Mas não iremos seguir este caminho.  Ao invés disso,  nossa atenção será voltada para dedução natural. 
  
 Antes de raciocinar diretamente sobre todas as valorações  (no caso da LVF) tentaremos selecionar algumas poucas regras básicas de inferência.  Algumas dessas regras  irão governar o comportamento dos conectivos sentenciais. Outras irão governar o comportamento dos quantificadores e identidade que são marcas da LPO.  
-O sistema resultante de regras nos dará um novo modo de pensar sobre a validade de argumentos.  O desenvolvimento moderno de dedução  natural data dos simultâneos  e não relacionados artigos de  
- Gerhard Gentzen e Stanis\l{}aw Ja\'{s}kowski (1934).  Entretanto, o sistema de dedução natural que vamos usar  será  baseado largamente nos trabalhos de Frederic Fitch (publicado pela primeira vez em 1952). 
+O sistema resultante de regras nos dará um novo modo de pensar sobre a validade de argumentos.  O desenvolvimento moderno de dedução natural ocorreu de modo simultâneo e independente nos artigos de Gerhard Gentzen e Stanis\l{}aw Ja\'{s}kowski de 1934.  Entretanto, o sistema de dedução natural que vamos usar  será  baseado largamente nos trabalhos de Frederic Fitch (publicado pela primeira vez em 1952). 
 
- %%%%%% --------------------------------   CAPITULO  26 ----------------------------------------------
+ %%%%%% --------------------------------   CAPITULO  27 ----------------------------------------------
 \chapter{As regras básicas da LVF}\label{s:BasicTFL}
 
  
 
-Neste capítulo,  apresentaremos um sistema em  \xdefine{deducao natural}. Para cada conectivo, teremos regras de  \xdefine{introducao},  que nos permitem provar uma sentença que tenha esse conectivo como operador lógico principal, e regras de \xdefine{eliminacao}, que nos permitem provar algo a partir de uma sentença que tenha esse conectivo como operador lógico principal. 
+Neste capítulo,  apresentaremos um sistema em  \xdefine{deducao natural} para a LVF. Para cada conectivo, teremos  \xdefine{regras de introducao},  que nos permitem provar uma sentença que tenha esse conectivo como operador lógico principal, e \xdefine{regras de eliminacao}, que nos permitem provar algo a partir de uma sentença que tenha esse conectivo como operador lógico principal. 
 
- %%%%%% --------------------------------  26.1 A  ideia de uma prova formal
+ %%%%%% --------------------------------  27.1 A  ideia de uma prova formal
 
 \section{A  ideia de uma prova formal}
-Uma \emph{prova formal} é uma sequência de sentenças, entre as quais, algumas são  chamadas suposições iniciais (ou premissas).  A última linha da prova formal é a conclusão.  (A partir de agora, chamaremos simplesmente de `provas',  mas estejam cientes que existem \emph{provas informais} também.)
+ 
 
-Como uma ilustração, considere: 
+O objetivo dos sistemas de dedução natural é a construção de provas formais que funcionam como comprovação da validade dos argumentos. Ou seja, a ideia é que todo argumento válido tenha uma prova formal que comprova sua validade. Uma \emph{prova formal} é uma sequência de sentenças que começa com as premissas do argumento, que são as suposições iniciais da prova, e termina com a conclusão do argumento na última linha. Usaremos as expressões `provas' e `provas formais' como sinônimas, mas saiba que existem provas informais também, que não estudaremos aqui.
+
+Como uma ilustração, considere o seguinte argumento: 
  
 	$$\enot (A \eor B) \therefore \enot A \eand \enot B$$
-Começaremos uma prova escrevendo a premissa: 
+Os primeiros elementos de qualquer prova sempre são as premissas do argumento. Neste caso escrevemos: 
 \begin{fitchproof}
 	\hypo{a1}{\enot (A \eor B)}
 \end{fitchproof}
@@ -74,7 +77,7 @@ Note que numeramos a premissa, pois queremos nos referir  a ela depois. De fato,
 \end{fitchproof}
 para algum número $n$. Não importa em que número de linha a prova termina, mas obviamente preferimos uma prova mais curta. 
 
-Similarmente,  suponha que queremos considerar:
+Suponha agora que queremos comprovar a validade do seguinte argumento:
 $$A\eor B, \enot (A\eand C), \enot (B \eand \enot D) \therefore \enot C\eor D$$
 Esse argumento tem três premissas, então  começaremos escrevendo as premissas uma abaixo da outra, numeradas, e trançamos uma linha sob elas: 
 \begin{fitchproof}
@@ -86,67 +89,70 @@ e esperamos concluir com alguma linha $n$:
 \begin{fitchproof}
 	\have[n]{con}{\enot C \eor D}
 \end{fitchproof}
-  Tudo que resta a fazer é explicar cada uma das regras que podemos usar ao longo do caminho entre as premissas e a conclusão.  As regras são  discriminadas gradativamente  (broken down) por nossos conectivos lógicos. 
+  O que temos que fazer agora é entender cada uma das regras que poderemos utilizar neste caminho entre as premissas e a conclusão. Estas regras estão divididas de acordo com os conectivos lógicos. 
 
- %%%%%% -----------------------------------------------26.2 Reiteracao 
+ %%%%%% -----------------------------------------------27.2 Reiteracao 
 \section{Reiteração}
- A primeira regra é tão incrivelmente óbvia que é surpreendente que nos importemos com ela.
+ A primeira regra é tão incrivelmente óbvia que é surpreendente que nos importemos com ela.  Ela diz que uma sentença que já foi escrita em alguma linha anterior pode ser copiada (reiterada) em uma linha posterior. Por exemplo:
 
 Se você já mostrou alguma coisa ao longo de uma prova, a \emph{regra de reiteração} permite você repeti-la em uma nova linha. Por exemplo:
+
 \begin{fitchproof}
 	\have[4]{a1}{A \eand B}
 	\have[$\vdots$]{}{\vdots}
 	\have[10]{a2}{A \eand B} \by{R}{a1}
 \end{fitchproof}
-Isto indica que temos escrito `$A \eand B$' na linha~$4$. Agora, em uma linha posterior---linha~$10$, por exemplo---decidimos que queremos repetir esta sentença na prova. Assim, a escrevemos abaixo novamente. Também adicionamos uma citação que justifica o que temos escrito. Neste caso, escrevemos `R', para indicar que estamos usando a regra de reiteração, e escrevemos $4$ para indicar que ela já foi usada na linha $4$.
+Então reescrevemos a sentença `$A \eand B$'  na linha~$10$ e indicamos ao lado, como  justificativa, o rótulo `R 4', onde `R' indica que usamos a regra de reiteração (R), para reescrever a sentença da linha~$4$. Por isso `R 4'.
 
- Aqui está uma ilustração generalizada da regra:
+Abaixo uma representação esquemática desta regra:
 
 \begin{fitchproof}
 	\have[m]{a}{\meta{A}}
 	\have[\ ]{c}{\meta{A}} \by{R}{a}
 \end{fitchproof}
-O importante é que, se qualquer sentença $\meta{A}$ ocorre em alguma linha, então podemos repetir $\meta{A}$ em linhas posteriores. Cada linha de nossa prova deve  ser justificada por alguma regra, e aqui temos `R $m$'.   Isto significa:  Reiteração, aplicada à linha~$m$. 
+Em resumo, o que a regra de reiteração diz e esse esquema mostra é que, se qualquer sentença $\meta{A}$ ocorre em alguma linha, então podemos repetir $\meta{A}$ em linhas posteriores. Cada linha de nossa prova deve  ser justificada por alguma regra, e aqui temos `R $m$'.   Isto significa:  Reiteração, aplicada à linha~$m$. 
 
- Precisamos enfatizar duas coisas.  Primeiro,   `$\meta{A}$'   não   é uma sentença da LVF,   mas um símbolo da metalinguagem que usamos quando queremos falar sobre qualquer sentença da LVF
- (veja o Capítulo \ref{s:UseMention}).   Segundo, similarmente,  `$m$'  não é um símbolo que irá aparecer em uma prova.  Ele também é um símbolo da metalinguagem, que usamos quando queremos falar sobre qualquer número de linha de uma prova. Na prova apresentada, as linhas  estão numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis como   `$m$' para destacar o ponto em que a regra pode ser aplicada a qualquer momento. 
+ Precisamos enfatizar duas coisas.  Primeiro,   $\meta{A}$   não   é uma sentença da LVF,   mas um símbolo da metalinguagem que usamos quando queremos falar sobre qualquer sentença da LVF
+ (veja o Capítulo \ref{s:UseMention}).   Segundo, similarmente,  $m$  não é um símbolo que irá aparecer em uma prova.  Ele também é um símbolo da metalinguagem, que usamos quando queremos falar sobre qualquer número de linha de uma prova. Na prova apresentada, as linhas  estão numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis como   $m$ para destacar o ponto em que a regra pode ser aplicada a qualquer momento. 
 
- %%%%%% --------------------------------------------------------------  26.3  Conjuncao
+ %%%%%% --------------------------------------------------------------  27.3  Conjuncao
 \section{Conjunção}
   Vamos supor que queremos mostrar que Louis é reservado e leal. Um modo óbvio para fazer isto seria como segue: primeiro mostramos que Louis é reservado, em seguida mostramos que Louis é leal. Depois colocamos essas duas demonstrações juntas para obter a conjunção.
 
-Nosso sistema de dedução natural  captura  essa ideia diretamente. No exemplo dado, podemos adotar a seguinte simbolização:
+Nosso sistema de dedução natural  captura  essa ideia diretamente. No exemplo dado, podemos adotar a seguinte chave de simbolização:
 	\begin{ekey}
 		\item[R] Louis é reservado
 		\item[L] Louis é leal
 	\end{ekey}
- Talvez estejamos trabalhando em uma prova, e já temos obtido `$R$'  na linha 8 e `$L$' na linha 15. Então  em alguma linha subsequente podemos obter  `$R \eand L$' como segue:
+Se, por exemplo, estamos fazendo uma prova onde obtivemos `$R$'  na linha 8 e `$L$' na linha 15,  podemos em qualquer linha subsequente escrever `$R \eand L$' da seguinte maneira:
+
 \begin{fitchproof}
 	\have[8]{a}{R}
 	\have[15]{b}{L}
 	\have[\ ]{c}{R \eand L} \ai{a, b}
 \end{fitchproof}
 
- Note que cada linha de nossa prova  ou deve ser uma suposição, ou deve ser justificada por alguma regra.    Citamos  aqui   `$\eand$I 8, 15' para indicar que a linha obtida pela regra da introdução  da conjunção  ($\eand$I) aplicada às linhas 8 e 15.  Poderíamos igualmente obter:
+ Note que cada linha de nossa prova  ou deve ser uma suposição, ou deve ser justificada por alguma regra.    Citamos  aqui   `$\eand$I 8, 15' para indicar que esta linha foi obtida pela regra da introdução da conjunção  ($\eand$I) aplicada às linhas 8 e 15.  Poderíamos igualmente obter a conjunção com a ordem invertida:
 \begin{fitchproof}
 	\have[8]{a}{R}
 	\have[15]{b}{L}
 	\have[\ ]{c}{L \eand R} \ai{b, a}
 \end{fitchproof}
- 
  com a citação invertida para capturar a ordem  dos  conjuntos. 
-De maneira mais geral, aqui está  a nossa regra de introdução da  conjunção:
+Podemos representar o esquema geral da regra de introdução da conjunção assim:
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{a}{\meta{A}}
 	\have[n]{b}{\meta{B}}
 	\have[\ ]{c}{\meta{A}\eand\meta{B}} \ai{a, b}
 \end{fitchproof}}
-Para ser claro, o enunciado da regra é esquemático.  Isto não é propriamente uma prova,      `$\meta{A}$'  e `$\meta{B}$'  não são sentenças da LVF, mas símbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentenca da LVF (veja Capítulo \ref{s:UseMention}). 
+Para ser claro, o enunciado da regra é esquemático.  Isto não é propriamente uma prova,  $\meta{A}$  e $\meta{B}$ não são sentenças da LVF, mas símbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentenca da LVF (veja Capítulo \ref{s:UseMention}). 
 
-Similarmente,  `$m$' e `$n$' não são numerais  que irão aparecer em uma prova real. Eles também são símbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis   para destacar o ponto em que a regra pode ser aplicada a qualquer momento.  A regra requer somente que tenhamos ambos os conjuntos disponíveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
+Similarmente,  $m$  e $n$ não são numerais  que irão aparecer em uma prova real. Eles também são símbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis   para destacar o ponto em que a regra pode ser aplicada a qualquer momento.  A regra requer somente que tenhamos ambos os conjuntos disponíveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
 
-A regra é chamada `\emph{introdução} da conjunção'  porque  ela introduz  o símbolo `$\eand$' na nossa  prova onde ele pode ter sido ausente.  Correspondentemente,  temos uma regra que \emph{elimina}  este  símbolo.  Vamos supor que já foi mostrado que Louis é ambos  reservado e  leal.  Você   está autorizado a concluir que Louis   é reservado. Igualmente você   está autorizado a concluir que Louis é leal. Juntando tudo isto, obtemos nossa(s) regra(s) de eliminação da conjunção:
+A regra é chamada de `\emph{introdução} da conjunção'  porque  ela introduz   uma sentença cujo conectivo principal é a conjunção `$\eand$'.  Correspondentemente,  temos uma regra que \emph{elimina}  este conectivo. 
+
+ Vamos supor que já foi mostrado que Louis é ambos  reservado e  leal.  Você   está autorizado a concluir que Louis   é reservado. Igualmente você   está autorizado a concluir que Louis é leal. Juntando tudo isto, obtemos nossa(s) regra(s) de eliminação da conjunção:
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eand\meta{B}}
@@ -160,7 +166,8 @@ e igualmente,
 	\have[\ ]{b}{\meta{B}} \ae{ab}
 \end{fitchproof}}
  
-O propósito é simplesmente este: quando temos uma conjunção em alguma linha da prova, você pode obter qualquer um dos conjuntos  por {\eand}E. Uma coisa importante a enfatizar: você só pode aplicar essa regra quando a conjunção é o operador lógico principal. Logo, você não pode inferir `$D$' a partir de `$C \eor (D \eand E)$' usando a regra {\eand}E.
+O propósito é simplesmente este: quando temos uma conjunção em alguma linha da prova, você pode utilizar a regra {\eand}E  para obter qualquer um dos conjuntos. 
+Uma coisa importante a enfatizar: você só pode aplicar essa regra quando a conjunção é o operador lógico principal. Logo, você não pode inferir `$D$' a partir de `$C \eor (D \eand E)$' usando a regra {\eand}E.
 
 Com apenas essas duas regras, já podemos começar a ver parte do poder do nosso sistema formal de provas.  Considere: 
 \begin{earg}
@@ -196,7 +203,7 @@ Vale a pena ver um outro exemplo.  Na Seção   \ref{s:MoreBracketingConventions
 \begin{fitchproof}
 	\hypo{ab}{A \eand (B \eand C)}
 \end{fitchproof}
- A partir da premissa, podemos obter um dos conjuntos aplicando $\eand$E duas vezes. Podemos então aplicar $\eand$E mais duas vezes,  assim nossa prova é como segue: 
+ A partir da premissa, podemos obter um dos conjuntos aplicando a regra $\eand$E duas vezes. Podemos então aplicar a regra $\eand$E mais duas vezes,  assim nossa prova é como segue: 
 \begin{fitchproof}
 	\hypo{ab}{A \eand (B \eand C)}
 	\have{a}{A} \ae{ab}
@@ -215,7 +222,7 @@ Vale a pena ver um outro exemplo.  Na Seção   \ref{s:MoreBracketingConventions
 	\have{ab}{A \eand B}\ai{a, b}
 	\have{con}{(A \eand B) \eand C}\ai{ab, c}
 \end{fitchproof}
-Lembre-se de que nossa definição oficial de sentenças na LVF somente admite conjunções com dois conjuntos.  A prova que acabamos de apresentar sugere que podemos abandonar  os parênteses em todas as nossas provas. Entretanto, isto não é o padrão e  não iremos fazer isto.  De fato, manteremos nossa convenção do uso de parênteses mais severa. (Entretanto, iremos permitir o abandono dos parênteses mais externos, por legitimidade.)  
+Se você se lembrar, de acordo com nossa definição oficial das sentenças da LVF as conjunções são sempre de dois conjuntos. A prova que acabamos de apresentar sugere que poderíamos abandonar os parênteses internos em todas as conjunções com mais de dois conjuntos. Mas não vamos fazer isso. Continuaremos usar nossa convenção de parênteses, permitindo apenas a eliminação dos mais externos.
 
 Vamos dar uma última ilustração. Ao usar a regra $\eand$I 
 não há necessidade de aplicá-la a sentenças diferentes.
@@ -226,9 +233,9 @@ Assim, se quisermos, podemos provar formalmente  `$A \eand A$' a partir de `$A$'
 \end{fitchproof}
 Simples, porém eficaz.
 
- %%%%%% --------------------------------------------- 26.4 Condicional
+ %%%%%% --------------------------------------------- 27.4 Condicional
 \section{Condicional}
-Considere o seguinte argumento::
+Considere o seguinte argumento:
 \begin{earg}
 		\item[] Se Jane é inteligente, então ela é rápida.
 		\item[] Jane é inteligente.
@@ -242,16 +249,16 @@ Este argumento certamente é valido, e ele sugere diretamente uma aplicação da
 	\have[n]{a}{\meta{A}}
 	\have[\ ]{b}{\meta{B}} \ce{ab,a}
 \end{fitchproof}}
- Esta regra também é chamada  \emph{modus ponens}. 
-Novamente, esta é uma regra de eliminação porque ela nos permite obter uma sentença que pode não conter `$\eif$', tendo começado com uma sentença que continha este símbolo. Note que o condicional  $\meta{A}\eif\meta{B}$ e o antecedente~$\meta{A}$ podem estar separados um do outro na prova, e eles podem aparecer em qualquer ordem. Entretanto, na citação para $\eif$E, sempre citamos primeiro o condicional, seguido pelo antecedente. 
+ Esta regra também é chamada  \emph{modus ponens}. Novamente, esta é uma regra de eliminação porque ela nos permite quebrar uma sentença cujo conectivo principal é `$\eif$', eliminando este conectivo, e obtendo como resultado uma de suas partes: o consequente do condicional.
+ Note que o condicional  $\meta{A}\eif\meta{B}$ e o antecedente~$\meta{A}$ podem estar separados um do outro na prova, e eles podem aparecer em qualquer ordem. Entretanto, na citação para a regra $\eif$E, sempre citamos primeiro o condicional, seguido pelo antecedente. 
 
- A regra para introdução do condicional é também facilmente  motivada.  O seguinte argumento deve ser válido:
+A regra de introdução do condicional também é bastante simples de motivar.  O seguinte argumento deve ser válido:
 	\begin{quote}
 		Louis é reservado.    Portanto, se Louis é leal, então Louis é ambos  reservado \emph{e} leal.
 	\end{quote}
-Se alguém duvidou que este argumento era válido, podemos tentar convencê-lo o contrário, dando a seguinte explicação.
+Se alguém duvida que este argumento é válido, podemos tentar convencê-lo do contrário, dando a seguinte explicação.
 	\begin{quote}
-		Assuma que  Louis é reservado.  Agora, \emph{adicionalmente}, assuma que Louis é leal.  Então, pela introdução da conjunção---que acabamos de discutir---Louis é ambos: reservado e leal.  Claramente isso depende da suposição de que Louis é leal, mas significa apenas que se Louis é leal, então Louis é ambos: reservado e leal.
+		Assuma que  Louis é reservado.  Agora, \emph{adicionalmente}, assuma que Louis é leal.  Então, pela introdução da conjunção---que acabamos de discutir---Louis é ambos: reservado e leal.  Claramente só foi possível dizer isso porque antes assumimos que Louis é leal. E isso significa o mesmo que dizer que se Louis é leal, então Louis é ambos: reservado e leal.
 	\end{quote}
 Transferindo isto para o formato de dedução natural,  temos aqui o padrão do raciocínio  que acabamos de usar.  Começamos com a premissa, `Louis é reservado',  como segue: 
 
@@ -259,15 +266,16 @@ Transferindo isto para o formato de dedução natural,  temos aqui o padrão do 
 	\begin{fitchproof}
 		\hypo{r}{R}
 	\end{fitchproof}
-Em seguida, criamos uma suposição \emph{adicional} (`Louis é leal'),  por uma questão de argumento. Para indicar que não estamos mais lidando  \emph{meramente} com nossa suposição original, (`$R$'),  mas com alguma suposição adicional,  continuamos  nossa prova como segue:
+Em seguida, nós fizemos, apenas para efeito de argumentação, a suposição provisória adicional de que ‘Louis é leal’. Para indicar que tudo o que se segue na prova depende desta suposição provisória adicional, nós escrevemos:
+
 	\begin{fitchproof}
 		\hypo{r}{R}
 		\open
 			\hypo{l}{L}
 	\end{fitchproof}
-Note que \emph{não}  estamos reivindicando, na linha 2, ter provado  `$L$' a partir da linha 1, assim não escrevemos nela qualquer justificativa para a suposição inicial na linha 2. No entanto, precisamos destacar que é uma suposição adicional. Fazemos isto traçando uma linha sob ela (para indicar que ela é uma suposição), recuando-a com uma linha vertical adicional (para indicar que ela é adicional).
+Note que \emph{não}  estamos reivindicando, na linha $2$, ter provado  `$L$' a partir da linha 1, assim não escrevemos nela qualquer justificativa para a suposição inicial na linha 2. No entanto, precisamos destacar que é uma suposição adicional. Fazemos isto traçando uma linha sob ela (para indicar que ela é uma suposição), recuando-a com uma linha vertical adicional (para indicar que ela é adicional).
 
-Com essa  suposição extra posta, estamos prontos para usar  $\eand$I.  Assim, podemos continuar nossa prova: 
+Com essa  suposição extra posta, estamos prontos para usar a regra  $\eand$I.  Assim, podemos continuar nossa prova: 
 	\begin{fitchproof}
 		\hypo{r}{R}
 		\open
@@ -276,8 +284,9 @@ Com essa  suposição extra posta, estamos prontos para usar  $\eand$I.  Assim, 
 %			\close
 %		\have{con}{L \eif (R \eand L)}\ci{l-rl}
 	\end{fitchproof}
-Mostramos  agora  que,  com a suposição adicional `$L$', podemos obter `$R \eand L$'. Assim, podemos concluir que, se temos `$L$', então obtemos `$R \eand L$'. Ou, mais brevemente, podemos concluir  `$L \eif (R \eand L)$':
-	\begin{fitchproof}
+A suposição adicional `$L$’, juntamente com a premissa`$R$' nos permitiu obter `$R \eand L$'.  Isso nos autoriza a dizer que se `$L$’ vigora, então `$R \eand L$' também vigora. Ou, mais brevemente, podemos concluir que  `$L \eif (R \eand L)$':	
+
+\begin{fitchproof}
 		\hypo{r}{R}
 		\open
 			\hypo{l}{L}
@@ -285,10 +294,11 @@ Mostramos  agora  que,  com a suposição adicional `$L$', podemos obter `$R \ea
 			\close
 		\have{con}{L \eif (R \eand L)}\ci{l-rl}
 	\end{fitchproof}
-Observe que voltamos a usar uma linha vertical na esquerda.   \emph{Descartamos}   a suposição adicional, `$L$',  pois o condicional ele próprio segue apenas de nossa suposição original, `$R$'.
 
- O padrão geral usado aqui é o seguinte. Primeiro adicionamos uma suposição, $\meta{A}$; 
-e desta suposição  adicional, provamos~$\meta{B}$. Neste caso, sabemos o seguinte: se~$\meta{A}$ é verdadeira, então ~$\meta{B}$ também é verdadeira.  Isto está envolvido na regra de introdução do condicional:
+
+Observe que na linha $4$ voltamos a usar apenas uma linha vertical na esquerda. Fizemos isso para indicar que a suposição adicional `$L$' não vigora mais nesta linha. Ela foi descartada. Repare que a diferença entre as linhas $3$ e $4$ é que na linha $3$ há uma asserção  de `$R \eand L$' justificada por duas suposições:  `$R$' e `$L$'; e na linha $4$ há uma asserção de  `$L \eif (R \eand L)$' justificada por apenas uma suposição:  `$R$'. `$L$' passou de suposição em vigor na linha $3$, para antecedente do condicional na linha $4$.
+
+ O padrão geral usado aqui é o seguinte. Primeiro adicionamos uma suposição, $\meta{A}$;  e desta suposição  adicional, provamos~$\meta{B}$. Neste caso, sabemos o seguinte: se~$\meta{A}$ é verdadeira, então ~$\meta{B}$ também é verdadeira.  Isto está envolvido na regra de introdução do condicional:
 
 
 \factoidbox{
@@ -314,7 +324,7 @@ Nossa prova começa da seguinte forma:
 	\close
 \end{fitchproof}
 Observe que disponibilizamos `$P$',  tratando-a como uma suposição adicional.  
-Agora, podemos usar a regra  {\eif}E na primeira premissa e obter `$Q$'. Novamente, podemos usar  a regra {\eif}E na segunda premissa e obter `$R$'. Assim, assumindo `$P$'  conseguimos provar `$R$',   então aplicamos a regra {\eif}I  - descartando `$P$' - com isso, concluímos a prova.  Considerando tudo isso junto, temos: 
+Agora, podemos usar a regra  {\eif}E na primeira premissa e obter `$Q$'. Novamente, podemos usar  a regra {\eif}E na segunda premissa e obter `$R$'. Assim, assumindo `$P$'  conseguimos provar `$R$',   então aplicamos a regra {\eif}I, descartando `$P$'.  Com isso, concluímos a prova.  Considerando tudo isso junto, temos: 
 
 
 \label{HSproof}
@@ -329,7 +339,7 @@ Agora, podemos usar a regra  {\eif}E na primeira premissa e obter `$Q$'. Novamen
 	\have{pr}{P \eif R}\ci{p-r}
 \end{fitchproof}
 
-%%%%%% --------------------------------- 26.5   Suposicoes adicionais  e subprovas 
+%%%%%% --------------------------------- 27.5   Suposicoes adicionais  e subprovas 
 
 \section{Suposições adicionais  e subprovas}
 A regra $\eif$I invocou a ideia de criar  suposições adicionais.   Isto precisa ser manuseado com muito cuidado. Considere esta prova:
@@ -358,21 +368,23 @@ Vamos tentar agora continuar a prova como segue:
 \end{fitchproof}
 Se pudéssemos fazer isso, seria um desastre. Poderíamos provar qualquer  letra sentencial a partir de qualquer outra. Entretanto, se  você me diz que Ana é inteligente  (simbolizada por `$A$'),  não deveríamos ser capazes de concluir que a rainha bela estava feliz (simbolizada por `$B$')!   Devemos ser proibidos de fazer isso, mas como devemos implementar essa proibição?
 
-Podemos descrever o processo de fazer uma suposição adicional como um de efetuar  uma \emph{subprova}: uma prova subsidiária dentro da prova principal. Quando começamos a subprova, traçamos outra linha vertical para indicar que não estamos mais na prova principal. Então, escrevemos uma suposição sobre qual a subprova será baseada.  Uma subprova pode ser essencialmente pensada como esta questão: \emph{o que poderíamos mostrar se também fizermos esta suposição adicional?}
+Podemos descrever o processo de fazer uma suposição adicional através da noção de \emph{subprova}: uma prova subordinada dentro da prova principal. 
 
-Quando estamos trabalhando dentro da subprova, podemos nos referir à suposição adicional que acrescentamos ao introduzir a subprova,  e a qualquer coisa que obtivemos de nossas suposições originais (afinal de contas, essas suposições originais ainda estão em vigor). Entretanto, em algum momento,  queremos parar de usar a suposição adicional: queremos sair da subprova e retornar à prova principal. Para indicar que retornamos à prova principal, a linha vertical da subprova chega ao fim.  Neste ponto, dizemos que a subprova está \xdefine{fechada}. Com a subprova fechada, deixamos de lado a suposição.  Logo será ilegítimo recorrer a qualquer coisa que dependa dessa suposição adicional. Assim, estipulamos:
+Quando começamos a subprova, traçamos outra linha vertical para indicar que não estamos mais na prova principal. Então escrevemos a suposição sobre a qual a subprova será baseada.  Podemos entender o ato de iniciar uma subprova como similar ao de fazer a seguinte questão:  \emph{o que será que podemos concluir se também fizermos esta suposição adicional?}
+
+Quando estamos trabalhando dentro da subprova, podemos nos referir à suposição adicional que acrescentamos ao introduzir a subprova,  e a qualquer coisa que obtivemos de nossas suposições originais (afinal de contas, essas suposições originais ainda estão em vigor). Entretanto, em algum momento,  queremos parar de usar a suposição adicional: queremos sair da subprova e retornar à prova principal. Para indicar que retornamos à prova principal, a linha vertical da subprova chega ao fim.  Neste ponto, dizemos que a subprova está \xdefine{fechada}. Com a subprova fechada, deixamos de lado a suposição.  Logo, será ilegítimo recorrer a ela e a qualquer coisa que dependa dessa suposição adicional. Assim, estipulamos:
 
 
 \factoidbox{Para citar uma linha individual quando aplicamos uma regra:
 \begin{enumerate}
-\item a linha deve vir antes da linha onde a regra é aplicada, e
-\item não ocorrer dentro de uma subprova que já tenha sido fechada antes da linha onde a regra foi aplicada.
+\item A linha citada deve anteceder a linha da regra que a cita.
+\item A linha citada não pode ocorrer dentro de uma subprova que tenha sido fechada em linha anterior à linha da regra que a cita.
 \end{enumerate}}
 Esta estipulação exclui a desastrosa tentativa da prova acima. A regra $\eif$E exige que citemos duas linhas anteriores da prova. Na prova pretendida, acima, uma dessas linhas (nomeadamente, linha~$4$)  ocorre dentro de uma subprova que (pela linha~$5$) já tinha sido fechada. Isto é ilegítimo. 
 
 O fechamento de uma subprova é chamado de \xdefine{descarte} da suposição desta subprova. Assim, fica estabelecido: \emph{você não pode se referir a nada que foi obtido usando suposições descartadas}. 
 
-Subprovas, então, nos permitem pensar sobre o que poderíamos mostrar,  se fizermos suposições adicionais.  O que podemos  tirar disso não é surpreendente: no curso de uma prova, temos que acompanhar com muito cuidado as suposições que estamos fazendo uso, em qualquer momento.  Nosso sistema de provas faz isso graficamente bem. (De fato, é exatamente por isso que escolhemos usar  \emph{este}  sistema de provas.)
+Subprovas, então, nos permitem pensar sobre o que podemos mostrar,  se fizermos suposições adicionais.  O que podemos  tirar disso não é surpreendente: no curso de uma prova, temos que acompanhar com muito cuidado as suposições que estamos fazendo uso, em qualquer momento.  Nosso sistema de provas faz isso graficamente bem. (De fato, é exatamente por isso que escolhemos usar  \emph{este}  sistema de provas).
 
 Uma vez que começamos a pensar sobre o que podemos mostrar fazendo suposições adicionais, nada nos impede de perguntar  o que poderíamos mostrar se fizéssemos  \emph{ainda mais}  suposições?  Isso pode nos motivar a introduzir uma subprova dentro de uma subprova.  Aqui está um exemplo usando apenas as regras que consideramos até agora:
 
@@ -408,10 +420,10 @@ Mais uma vez, porém, precisamos acompanhar cuidadosamente o que estamos assumin
 \end{fitchproof}
  Isso seria terrível. Se tivéssemos dito  que Ana é inteligente, você não seria capaz de deduzir que, se Carla é inteligente (simbolizada por  `$C$') então \emph{ambas} Ana é inteligente  e a rainha Bela estava feliz. Mas isso é exatamente o que essa prova sugeriria, se fosse permissível.
 
-O problema essencial é que a subprova que começou com a suposição~`$C$' dependia crucialmente do fato de termos assumido `$B$' como uma suposição na linha~$2$.  Pela linha~$6$, \emph{descartamos} a suposição~`$B$': entretanto,  neste ponto questionamos  o que poderíamos mostrar, se assumíssemos também `$B$'. Tentar justificar a linha~$7$ com a subprova que começou com a suposição~`$C$', é simplesmente uma trapaça.  Assim estipulamos, como antes, que uma subprova só pode ser citada em uma linha se ela não ocorrer dentro de outra subprova que já esteja fechada nessa linha. A tentativa desastrosa da prova viola esta estipulação.  A subprova de linhas $3$--$4$ ocorre dentro de uma subprova que termina na linha~$5$. Portanto, não pode ser invocada na linha~$7$.
+O problema essencial é que a subprova que começou com a suposição~`$C$' dependia crucialmente do fato de termos assumido `$B$' como uma suposição na linha~$2$.  Mas na linha~$6$, \emph{descartamos} a suposição~`$B$'. Fazer isso é o mesmo que parar de perguntar sobre o que podemos concluir se também assumirmos `$B$’ como suposição adicional. Por isso, tentar justificar a linha~$7$ com a subprova das linhas $3-4$ é uma espécie de trapaça, porque a suposição adicional `$B$' que estava em vigor nas linhas $3$ e $4$, não está mais em vigor na linha~$7$, já que foi descartada na linha~$6$. Assim estipulamos, como antes, que uma subprova só pode ser citada em uma linha se ela não ocorrer dentro de outra subprova que já esteja fechada nessa linha. A tentativa desastrosa da prova viola esta estipulação.  A subprova de linhas $3$--$4$ ocorre dentro de uma subprova que termina na linha~$5$. Portanto, não pode ser invocada na linha~$7$.
 
 
-Aqui temos mais um caso que devemos excluir:
+Abaixo mais um exemplo de aplicação imprópria de regra:
 \begin{fitchproof}
 \hypo{a}{A}
 \open
@@ -425,43 +437,18 @@ Aqui temos mais um caso que devemos excluir:
 \have{bcab}{B \eif C}\by{tentativa imprópria}{}
 \have [\ ]{x}{} \by{de invocar $\eif$I}{b-c2}
 \end{fitchproof}
-Aqui, estamos tentando citar uma subprova que começa na linha~$2$ e termina na linha~$5$---mas a sentença na linha~$5$ depende não apenas da suposição da linha~$2$, mas também de uma outra suposição (linha~$3$) que não descartamos no final da subprova.  A subprova iniciada na linha~$3$ ainda está aberta na linha~$5$.  Mas $\eif$I requer que a última linha da subprova seja baseada \emph{apenas} na suposião da subprova  que está sendo citada, ou seja, a subprova começando na linha~$2$ (e qualquer coisa antes dela), e não nas suposiçõees de quaisquer subprovas dentro dela. Em particular, a última linha da subprova citada não deve estar, ela mesma, dentro de uma subprova
+Aqui, estamos tentando citar uma subprova que começa na linha~$2$ e termina na linha~$5$---mas a sentença na linha~$5$ depende não apenas da suposição da linha~$2$, mas também de uma outra suposição (linha~$3$) que não descartamos no final da subprova.  A subprova iniciada na linha~$3$ ainda está aberta na linha~$5$.  Mas a regra $\eif$I requer que a última linha da subprova seja baseada \emph{apenas} na suposião da subprova  que está sendo citada, ou seja, a subprova começando na linha~$2$ (e qualquer coisa antes dela), e não nas suposiçõees de quaisquer subprovas dentro dela. Em particular, a última linha da subprova citada não deve estar, ela mesma, dentro de uma subprova
 aninhada.
 
+%\factoidbox{Para citar uma subprova ao aplicar uma regra:
+%\begin{enumerate} 
+%\item a subprova citada deve vir inteiramente antes da aplicação da regra em que é citada,
+%\item a subprova citada não deve estar dentro de outra subprova fechada, que foi fechada na linha em que é citada, e
+%\item  a última linha da subprova  citada não deve ocorrer dentro de uma subprova aninhada. 
+%\end{enumerate}}
 
-\factoidbox{Para citar uma subprova ao aplicar uma regra:
-\begin{enumerate} 
-\item a subprova citada deve vir inteiramente antes da aplicação da regra em que é citada,
-\item a subprova citada não deve estar dentro de outra subprova fechada, que foi fechada na linha em que é citada, e
-\item  a última linha da subprova  citada não deve ocorrer dentro de uma subprova aninhada. 
-\end{enumerate}}
 
-Um último ponto a enfatizar: onde uma regra exige que você cite uma linha individual, não é possível citar uma subprova; e onde for necessário citar uma subprova, não será possível citar uma linha individual.  Assim, por exemplo, isso está incorreto:
-\begin{fitchproof}
-\hypo{a}{A}
-\open
-	\hypo{b}{B}
-	\open
-	\hypo{c}{C}
-	\have{bc}{B \eand C}\ai{b,c}
-	\have{c2}{C}\ae{bc}
-	\close
-	\have{c3}{C}\by{tentativa imprópria}{}
-\have [\ ]{x}{} \by{de invocar R}{c-c2}
-\close
-\have[7]{bcab}{B \eif C}\ci{b-c3}
-\end{fitchproof}
-Aqui, tentamos justificar `$C$' na linha~$6$ com a regra de reiteração, mas citamos a subprova das linhas $3$--$5$. Esta subprova está fechada e pode, em princípio, ser citada na linha 6.  (Por exemplo, poderíamos usá-la para justificar 
- `$C \eif C$' por $\eif$I.) Porém,  a regra de reiteração~R exige que você cite uma linha individual, assim, é inadmissível citar a subprova inteira (mesmo que essa subprova  contenha a sentança~`$C$'  que queremos reiterar).
-
- 
-
-é sempre permitido abrir uma subprova com qualquer suposição.  No entanto, existem algumas estratégias envolvidas na escolha eficiente de uma suposição.
-Iniciar uma subprova com uma suposição arbitrária e maluca apenas desperdiçaria as linhas da prova.  A fim de obter um condicional usando a regra {\eif}I, por exemplo, você deve assumir o antecedente do condicional em uma subprova.
-
-Igualmente, é sempre permitido fechar uma subprova (e descartar suas suposições). No entanto, não será útil fazê-lo até que você alcance algo eficiente.  Depois que a subprova for fechada, você poderá citar a subprova inteira em qualquer justificativa.  As regras aplicadas a uma subprova ou subprovas, por sua vez, exigem que  a última linha da subprova seja uma sentença de uma forma ou de outra.   Por exemplo, você só pode citar uma subprova para $\eif$I se a linha que você está justificando é da forma $\meta{A} \eif \meta{B}$, $\meta{A}$  é a suposião de sua subprova, e $\meta{B}$ é a útima linha da sua subprova.
-
-%%%%%% ---------------------------------------------------------- 26.6   Biconditional 
+%%%%%% ---------------------------------------------------------- 27.6   Biconditional 
 
 \section{Bicondicional}
 As regras para o bicondicional serão como versões de via de mão dupla das regras para o condicional. 
@@ -497,14 +484,15 @@ e igualmente:
 	\have[n]{a}{\meta{B}}
 	\have[\ ]{b}{\meta{A}} \be{ab,a}
 \end{fitchproof}}
-Observe que o bicondicional, e o lado  direito ou esquerdo podem ser separados um  do outro e podem aparecer em qualquer ordem. No entanto, na citação de $\eiff$E, sempre citamos o  bicondicional primeiro.
+Observe que as sentenças citadas (nas linhas $m$ e $n$ de ambos os esquemas) podem estar separadas uma da outra e podem ocorrer em qualquer ordem.
+ No entanto, na citação de $\eiff$E, sempre citamos o  bicondicional primeiro.
 
-%%%%%% --------------------------------------------------------------- 26.7 Disjunao
+%%%%%% --------------------------------------------------------------- 27.7 Disjunao
 
 \section{Disjunção}
 Vamos supor que Louis seja reservado.  Então Louis é reservado ou leal. Afinal, dizer que Louis é reservado ou leal é dizer algo mais fraco do que dizer que Louis é reservado. 
 
-Vamos enfatizar esse ponto. Suponha que Louis seja reservado. Disto segue que  Louis é \emph{ou} reservado \emph{ou} vegetariano.  Igualmente,  disto segue que \emph{ou} Louis   é reservado \emph{ou} estudante. Também   Igualmente segue que   \emph{ou} Louis é reservado ou a lua é redonda. Muitas dessas são inferências estranhas, mas não há nada \emph{logicamente} errado com elas, mesmo que eles violem todos os tipos de normas implícitas de conversação.
+Vamos enfatizar esse ponto. Suponha que Louis seja reservado. Disso se segue que  Louis é \emph{ou} reservado \emph{ou} vegetariano.  Igualmente,  disso se segue que \emph{ou} Louis   é reservado \emph{ou} estudante. Também  Igualmente se segue que   \emph{ou} Louis é reservado ou a lua é redonda. Muitas dessas são inferências estranhas, mas não há nada \emph{logicamente} errado com elas, mesmo que eles violem todos os tipos de normas implícitas de conversação.
 
 Munido com tudo isso, apresentamos as regras de introdução da disjunção:
 
@@ -529,7 +517,7 @@ Observe que $\meta{B}$ pode ser \emph{qualquer} sentença, então a seguir temos
 
 Observamos que a tabela de verdade para mostrar isso teria 128 linhas.
 
-A regra da eliminação da disjunção é, no entanto, um pouco mais complicada. Vamos supor que  Louis é reservado ou leal.  O que você pode concluir? Caso  Louis  não seja reservado; pode ser que ele seja leal.   Igualmente, caso  Louis  não seja leal, pode ser que ele seja reservado.  Disjunções, por si sós, são difíceis de trabalhar.
+A regra da eliminação da disjunção é, no entanto, um pouco mais complicada. Vamos supor que  Louis é reservado ou leal.  O que podemos concluir disso? Caso  Louis  não seja reservado; pode ser que ele seja leal.   Igualmente, caso  Louis  não seja leal, pode ser que ele seja reservado.  Disjunções, por si sós, são difíceis de trabalhar.
 
 Mas suponha que, de alguma forma, possamos mostrar os dois seguinte fatos: primeiro, que sendo Louis reservado implica que ele seja um economista; segundo, que sendo Louis leal implica que ele seja um economista.
 Então, se sabemos que Louis é reservado ou leal, então sabemos que, seja ele o que for, Louis é um economista.   Esse insight pode ser expresso na regra a seguir, que é a regra de eliminação da disjunção  ($\eor$E):
@@ -587,13 +575,13 @@ Aqui está uma prova correspondente a este argumento:
 
 Não se assuste se você acha que não seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a prática, e abordaremos algumas estratégias para construir provas no Capítulo \ref{s:stratTFL}. A questão principal nesta fase é se, olhando a prova, você pode reconhecer que ela está em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
 
-%%%%%% -------- ------------- ---------- ------- ------ ------  26..8  Contradicao e negacao
+%%%%%% -------- ------------- ---------- ------- ------ ------  27..8  Contradicao e negacao
 
-\section{Contradição e negação}
+\section{Contradição e negação}\label{s:contradiction}
 
 Trataremos agora da negação, o nosso  último conectivo. Entretanto, temos que fazer mais esforços para lidar com ele, pois precisamos conectar negação e  \emph{contradição}. 
 
-Uma forma eficaz de argumentar é demonstrar que o seus oponentes se contradizem. Nesse ponto, você os tem sob controle. Eles têm que desistir de pelo menos uma de suas suposições. Vamos usar essa ideia em nosso sistema de provas, adicionando um novo símbolo, `$\ered$', às nossas provas. Esse símbolo deve ser lido como algo como `contradição!'\ ou `redução!'\ ou `isso é um absurdo!'  Podemos usar   a regra para a introdução desse símbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma sentença e sua negação aparecendo em nossa prova:
+Uma forma eficaz de argumentar é demonstrar que o seus oponentes se contradizem. Nesse ponto, você os tem sob controle. Eles têm que desistir de pelo menos uma de suas suposições. Vamos usar essa ideia em nosso sistema de provas, adicionando um novo símbolo, `$\ered$', às nossas provas. Esse símbolo deve ser lido como algo como `contradição!'\ ou `isso é um absurdo!'  Podemos usar   a regra para a introdução desse símbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma sentença e sua negação aparecendo em nossa prova:
 \factoidbox{
 \begin{fitchproof}
   \have[m]{na}{\enot\meta{A}}
@@ -605,20 +593,20 @@ As sentenças citadas não precisam estar em linhas vizinhas, nem importa a orde
 %Não importa em que ordem a sentença e sua negação aparecem, e elas não precisam aparecer em linhas vizinhas. No entanto, sempre citamos o número da linha da negação primeiro, seguido pelo da sentença em que foi negada.
 
 Obviamente, existe um vínculo estreito entre contradição e negação. 
-A regra $\enot$E permite obter uma contradição explícita, ~$\ered$,  
+A regra $\enot$E permite obter uma contradição explícita, ~`$\ered$',  
  a partir de duas sentenças contraditórias, $\meta{A}$ e sua negação $\enot \meta{A}$. 
-Escolhemos essa regra como uma regra de eliminação pelo seguinte  motivo: é a regra mais básica que nos permite passar de uma premissa que contenha uma negação, ou seja $\enot\meta{A}$, 
-para uma sentença que não a contenha, ou seja,  $\ered$.  Portanto, é uma regra que \emph{elimina}~$\enot$.
+Escolhemos classificar essa regra como uma regra de eliminação pelo seguinte motivo: é a regra mais básica que nos permite passar de uma premissa que contenha uma negação, ou seja $\enot\meta{A}$, 
+para uma sentença que não a contenha, ou seja,  `$\ered$'.  Portanto, é uma regra que \emph{elimina}~`$\enot$'.
 
+Dissemos que o símbolo  `$\ered$'  deve ser lido como ‘contradição!’ ou `absurdo!', mas isso não nos diz muito sobre como este símbolo deve ser tratado na LVF. Existem, aproximadamente, três modos diferentes de abordá-lo:
 
-Dissemos que  `$\ered$'  deve ser visto como uma  `contradição!', mas isso não nos diz muito sobre este símbolo. Existem, aproximadamente, três maneiras de abordar o símbolo `$\ered$'.
 	\begin{ebullet}
 		\item Podemos considerar `$\ered$' como uma nova sentença atômica da LVF, mas que só pode ter o valor de verdade Falso.  
-		\item Podemos considerar  `$\ered$' como uma abreviação de alguma contradição canônica, como `$A \eand \enot A$'. Isso terá o mesmo efeito que o descrito acima. Obviamente, `$A \eand \enot A$' sempre tem o valor de verdade Falso, mas, ao abordar `$\ered$' dessa forma, não precisamos adicionar um novo símbolo a LVF.
+		\item Podemos considerar  `$\ered$' como uma abreviação de alguma contradição canônica, como `$A \eand \enot A$'. Isso terá o mesmo efeito que o descrito acima. Obviamente, `$A \eand \enot A$' sempre tem o valor de verdade Falso, mas, ao abordar `$\ered$' dessa forma, não precisamos adicionar um novo símbolo à LVF.
 		\item Podemos considerar `$\ered$', não como um símbolo da LVF, mas como um \emph{sinal de pontuação} que aparece em nossas provas.  (Digamos que é comparável aos números das linhas e às linhas verticais.)
 			\end{ebullet}
 			
-Existe algo filosoficamente  muito atraente na terceira opção, mas aqui adotaremos \emph{oficialmente} a primeira. `$\ered$'  deve ser lido como uma letra sentencial que é sempre falsa. Isso significa que podemos tratá-lo, em nossas provas, como qualquer outra sentença.
+Existe algo filosoficamente  muito atraente na terceira opção, mas aqui adotaremos \emph{oficialmente} a primeira. `$\ered$'  deve ser lido como uma letra sentencial que é sempre falsa. Isso significa que, em nossas provas, podemos manuseá-lo do mesmo modo como fazemos com qualquer outra letra sentencial.
 
 Ainda precisamos estabelecer uma regra para a introdução da negação. A regra é muito simples: se assumirmos algo que leva a uma contradição, a suposição deve estar errada. Esse pensamento motiva a seguinte regra:
 
@@ -629,7 +617,7 @@ Ainda precisamos estabelecer uma regra para a introdução da negação. A regra
 \close
 \have[\ ]{na}{\enot\meta{A}}\ni{a-nb}
 \end{fitchproof}}
-Pode haver tantas linhas quantas você desejar entre $i$ e $j$. Para ver isso na prática e interagir com a negação, considere esta prova: 
+Pode haver tantas linhas quantas você desejar entre $i$ e $j$. Para ver essa regra na prática e como ela interage com a negação, considere esta prova: 
 	\begin{fitchproof}
 		\hypo{d}{D}
 		\open
@@ -639,7 +627,8 @@ Pode haver tantas linhas quantas você desejar entre $i$ e $j$. Para ver isso na
 		\have{con}{\enot\enot D}\ni{nd-ndr}
 	\end{fitchproof}
 
-Se a suposição de que $\meta{A}$ é verdadeira leva a uma contradição, $\meta{A}$ não pode ser verdadeira, isto é, deve ser falsa, ou seja, $\enot\meta{A}$ deve ser verdadeira. Obviamente, se a suposição de que $\meta{A}$ é falsa (ou seja, a suposição de que $\enot\meta{A}$ é verdadeira)  leva a uma contradição, então $\meta{A}$ não pode ser falsa, ou seja, $\meta{A}$ deve ser verdadeira. Portanto, podemos considerar a seguinte regra:
+Se a suposição de que $\meta{A}$ é verdadeira leva a uma contradição, $\meta{A}$ não pode ser verdadeira, isto é, deve ser falsa, ou seja, $\enot\meta{A}$ deve ser verdadeira. Obviamente, se a suposição de que $\meta{A}$ é falsa (ou seja, a suposição de que $\enot\meta{A}$ é verdadeira)  leva a uma contradição, então $\meta{A}$ não pode ser falsa, ou seja, $\meta{A}$ deve ser verdadeira. Podemos, portanto, incluir ao nosso estoque a seguinte regra:
+
 \factoidbox{\begin{fitchproof}
 \open
 	\hypo[i]{a}{\enot\meta{A}}
@@ -647,7 +636,7 @@ Se a suposição de que $\meta{A}$ é verdadeira leva a uma contradição, $\met
 \close
 \have[\ ]{na}{\meta{A}}\ip{a-nb}
 \end{fitchproof}}
-Essa regra é chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua negação. Formalmente, a regra é muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ não é a conclusão da regra, não estamos introduzindo~$\enot$, então  IP não é uma regra que introduz qualquer conectivo. Também não elimina um conectivo, pois não possui premissas autônomas que contenham~$\enot$, apenas uma subprova com uma suposição da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: é por isso que $\enot$E elimina~$\enot$, mas a regra IP não.\footnote{Existem lógicos que não aceitam a regra IP, mas aceitam $\enot$E. Eles são chamados de ``intuicionistas''. Os intuicionistas não aceitam nossa suposição básica de que cada sentença tem um dos dois valores de verdade, verdadeiro ou falso. Eles também acham que $\enot$ funciona diferentemente. Para eles, uma prova do $\ered$ a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do $\ered$ a partir de $\enot\meta{A}$ não garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ não são equivalentes.}
+Essa regra é chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua negação. Formalmente, a regra é muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ não é a conclusão da regra, não estamos introduzindo~`$\enot$', então  IP não é uma regra que introduz qualquer conectivo. Também não elimina um conectivo, pois não possui premissas autônomas que contenham~`$\enot$', apenas uma subprova com uma suposição da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: é por isso que $\enot$E elimina~`$\enot$', mas a regra IP não.\footnote{Existem lógicos que não aceitam a regra IP, mas aceitam $\enot$E. Eles são chamados de ``intuicionistas''. Os intuicionistas não aceitam nossa suposição básica de que cada sentença tem um dos dois valores de verdade, verdadeiro ou falso. Eles também acham que  `$\enot$' funciona diferentemente. Para eles, uma prova do `$\ered$' a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do `$\ered$' a partir de $\enot\meta{A}$ não garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ não são equivalentes.}
 
 
 Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir de $\meta{D}$. Usando IP, podemos ir na outra direção (com essencialmente a mesma prova).
@@ -660,7 +649,7 @@ Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir
 		\have{con}{D}\ip{nd-ndr}
 	\end{fitchproof}
 
-A nossa última regra de inferência é uma espécie de regra de eliminação para `$\ered$', conhecida como \emph{explosão} ou \emph{trivialização}\footnote{O nome latino para esse princípio é  \emph{ex contradictione quod libet}, ``da contradição, qualquer coisa.''}.  Intuitivamente, ela nos permite concluir o que quisermos a partir de uma contradição. Mas, qual a motivação dessa regra de inferência? A expressão retórica `... e se isso for verdade, eu comerei o meu chapéu' captura, de certa forma, a ideia desse raciocínio. Ora, as contradições simplesmente não podem ser verdadeiras. Assim, se aceitarmos um absurdo, podemos aceitar qualquer coisa.
+A nossa última regra de inferência é uma espécie de regra de eliminação para `$\ered$', conhecida como \emph{explosão} ou \emph{trivialização}\footnote{O nome latino para esse princípio é  \emph{ex contradictione quod libet}, ``da contradição, qualquer coisa''.}.  Intuitivamente, ela nos permite concluir o que quisermos a partir de uma contradição. Mas, qual a motivação dessa regra de inferência? A expressão retórica `... e se isso for verdade, eu comerei o meu chapéu' captura, de certa forma, a ideia desse raciocínio. Ora, as contradições simplesmente não podem ser verdadeiras. A motivação da regra pode então ser descrita mais ou menos assim: como as contradições nunca ocorrem, aceitar uma contradição é aceitar o impossível. Mas quem aceita até o impossível, aceita qualquer coisa. Portanto, de uma contradição podemos inferir qualquer sentença.
 
 Agora apresentamos formalmente a regra da eliminação do absurdo ($\ered$E):
 
@@ -670,14 +659,14 @@ Agora apresentamos formalmente a regra da eliminação do absurdo ($\ered$E):
 \end{fitchproof}}
 Observe que  \meta{A} pode ser \emph{qualquer} sentença.
 
-A regra de explosão é um pouco estranha. Parece que  \meta{A}  chega em nossa prova como um coelho que sai de uma cartola. Ao tentar encontrar provas, é muito tentador querer usá-la em qualquer lugar, pois parece muito poderosa. Resista a essa tentação: você só pode aplicá-la quando já tiver~$\ered$!   E você obtém $\ered$   somente quando suas suposições são contraditórias.
+A regra de explosão é um pouco estranha. Parece que  \meta{A}  chega em nossa prova como um coelho que sai de uma cartola. Ao tentar encontrar provas, é muito tentador querer usá-la em qualquer lugar, pois parece muito poderosa. Resista a essa tentação: você só pode aplicá-la quando já tiver~`$\ered$'!   E você obtém `$\ered$'   somente quando suas suposições são contraditórias.
  
 
-Ainda assim, não é estranho que, de uma contradição, alguma coisa deva seguir? Não de acordo com nossa noção de sustentação e validade. \meta{A} sustenta \meta{B} se e somente se não existe nenhuma valoração de letras sentenciais que tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas $\ered$ é uma contradição, nunca é verdadeiro, seja qual for a valoração das letras sentenciais.  Como não existe nenhuma valoração que faz $\ered$ verdadeiro, claro que também não existe nenhuma valoração que faz  $\ered$  verdadeiro e \meta{B} falsa! Então, de acordo com a nossa definição de sustentação,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradição sustenta qualquer coisa.\footnote{Existem alguns lógicos que não aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conexão relevante} entre \meta{A} e \meta{B}, mas não há uma entre $\ered$ e alguma sentença arbitrária~\meta{B}. Portanto, esses lógicos desenvolvem outras lógicas "relevantes" nas quais  a regra de explosão é não permitida.}
+Ainda assim, não é estranho que, de uma contradição, alguma coisa deva seguir? Não de acordo com nossa noção de sustentação e validade. \meta{A} sustenta \meta{B} se e somente se não existe nenhuma valoração de letras sentenciais que tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas `$\ered$' é uma contradição, nunca é verdadeiro, seja qual for a valoração das letras sentenciais.  Como não existe nenhuma valoração que faz  `$\ered$' verdadeiro, claro que também não existe nenhuma valoração que faz  `$\ered$'  verdadeiro e \meta{B} falsa! Então, de acordo com a nossa definição de sustentação,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradição sustenta qualquer coisa.\footnote{Existem alguns lógicos que não aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conexão relevante} entre \meta{A} e \meta{B}, mas não há uma entre `$\ered$' e alguma sentença arbitrária~\meta{B}. Portanto, esses lógicos desenvolvem outras lógicas "relevantes" nas quais  a regra de explosão é não permitida.}
 
 \emph{Estas são todas as regras básicas para o sistema de provas da LVF.}
 
-%%%%%% ----------------------------------------——-CAP 26 -  EXERCICIOS   ------- -------   
+%%%%%% ----------------------------------------——-CAP 27 -  EXERCICIOS   ------- -------   
 
 \practiceproblems
 
@@ -766,13 +755,13 @@ Apresente uma prova para cada um dos doze seguintes argumentos:
 \item $\enot (P \eif Q) \therefore P$
 \end{earg}
 
-%%%%%% ---------------------------------------------------CAPITULO 27   -   Construindo provas 
+%%%%%% ---------------------------------------------------CAPITULO 28   -   Construindo provas 
 
 \chapter{Construindo provas}\label{s:stratTFL}
 
  Não existe uma receita simples para encontrar provas e não há substituto para a prática. Aqui, entretanto, apresentaremos algumas regras práticas e estratégias a serem lembradas.
 
-%%%%%% ----------------  27.1  Trabalhando do fim para o começo para chegar onde queremos. 
+%%%%%% ----------------  28.1  Trabalhando do fim para o começo para chegar onde queremos. 
 \section{Trabalhando do fim para o começo para chegar onde queremos}
 
  Você está tentando encontrar uma prova de alguma conclusão~$\meta{C}$, que será a última linha da sua prova. A primeira coisa que você faz é olhar para~$\meta{C}$ e perguntar qual é a regra de introdução para seu operador lógico principal. Isso lhe dá uma ideia do que deve acontecer \emph{antes} da última linha da prova. 
@@ -785,7 +774,8 @@ Apresente uma prova para cada um dos doze seguintes argumentos:
  
 \subsection*{Provando uma conjunção do fim para o começo}
 
-Se quisermos provar  $\meta{A} \eand \meta{B}$,  trabalhando do fim para o começo, significa que devemos escrever $\meta{A} \eand \meta{B}$ na parte inferior da prova e tentar prová-la usando a regra $\eand$I. No topo de uma folha de papel, escreveremos as premissas  da prova, se houver alguma. E  na parte inferior, escrevemos a sentença que queremos provar. Se for uma conjunção, vamos prová-la usando $\eand$I.
+Suponha que queremos provar $\meta{A} \eand \meta{B}$. Trabalhar do fim para o começo neste caso significa que temos que escrever $\meta{A} \eand \meta{B}$ na parte inferior da prova, e tentar provar esta conjunção usando a regra  $\eand$I.
+No topo de uma folha de papel, escreveremos as premissas  da prova, se houver alguma. E  na parte inferior, escrevemos a sentença que queremos provar. Se for uma conjunção, vamos prová-la usando $\eand$I.
   \begin{fitchproof}
 	\have{1}{\meta{P}_1}
 	\ellipsesline 
@@ -796,9 +786,8 @@ Se quisermos provar  $\meta{A} \eand \meta{B}$,  trabalhando do fim para o come�
 	\have[m]{m}{\meta{B}}
     \have{4}{\meta{A} \eand \meta{B}}\ai{n,m}
   \end{fitchproof}
-Para $\eand$I, precisamos provar primeiro $\meta{A}$, depois provar $\meta{B}$. Na última linha, temos que citar as linhas em que provamos $\meta{A}$ e  $\meta{B}$, e usar~$\eand$I. As partes da prova marcadas por $\vdots$ ainda precisam ser preenchidas.
-Por enquanto vamos marcar os números de linha $m$, $n$ e $k$, e quando a prova estiver concluída, esses espaços reservados podem ser substituídos por números reais.
- 
+Para usar a regra  $\eand$I, precisamos provar primeiro $\meta{A}$, depois provar $\meta{B}$. Na última linha, temos que citar as linhas em que provamos $\meta{A}$ e  $\meta{B}$, e usar a regra~$\eand$I. As partes da prova marcadas por $\vdots$ ainda precisam ser preenchidas.
+Por enquanto vamos marcar os números de linha $m$, $n$ e $k$, e quando a prova estiver concluída, essas letras serão substituídas por números.
 
 \subsection*{Provando um condicional do fim para o começo}
 
@@ -826,7 +815,7 @@ Se queremos provar $\enot \meta{A}$, devemos usar a regra $\enot$I.
 \end{fitchproof} 
 Para aplicar a regra $\enot$I, temos que iniciar uma subprova com a suposição $\meta{A}$; a última linha da subprova tem que ser $\ered$.  Vamos citar a subprova e usar~$\enot$I como regra.  
 
-Aconselhamos a trabalhar do fim para o começo,  o máximo que puder. Assim, se você está trabalhando do fim para o começo, para provar $\meta{A} \eif \meta{B}$ e construiu uma subprova com o objetivo de  provar $\meta{B}$. Agora olhe para a sentença~$\meta{B}$. Se ela for uma conjunção, por exemplo, trabalhe do fim para o começo e insira na subprova os dois conjuntos dessa conjunção,  etc.
+Aconselhamos a trabalhar do fim para o começo,  o máximo que puder. Assim, se você está trabalhando do fim para o começo para provar $\meta{A} \eif \meta{B}$ e construiu uma subprova com o objetivo de  provar $\meta{B}$,  olhe  agora para a sentença~$\meta{B}$. Se ela for uma conjunção, por exemplo, trabalhe do fim para o começo e insira na subprova os dois conjuntos dessa conjunção,  etc.
 
 
 \subsection*{Provando uma disjunção do fim para o começo}
@@ -839,24 +828,26 @@ Obviamente, você também pode trabalhar do fim para o começo para provar  uma 
 	\have[n]{2}{\meta{A}} 
 	\have{3}{\meta{A} \eor \meta{B}}\oi{2}
 \end{fitchproof}
- No entanto, você pode não conseguir provar o  disjunto que escolheu. Nesse caso, você precisa voltar atrás, quando você não conseguir preencher as linha anteriores a $n$, isto é, em $\vdots$, apague tudo e tente com o outro disjunto:
+ No entanto, você pode não conseguir provar o  disjunto que escolheu.  Neste caso você precisa voltar atrás e tentar com o outro disjunto. Apague tudo o que está acima da linha $n$ e tente novamente com o outro disjunto:
+
 \begin{fitchproof}
 	\ellipsesline 
 	\have[n]{2}{\meta{B}} 
 	\have{3}{\meta{A} \eor \meta{B}}\oi{2}
 \end{fitchproof}
- Obviamente, apagar tudo e recomeçar é frustrante;  assim, você deve evitar fazer isto. Se seu objetivo é  provar uma disjunção,  você \emph{não deve começar} trabalhando do fim para o começo: tente trabalhar primeiro do início para o fim e só use a estratégia  do fim para o começo para $\eor$I   quando essa última não funcionar mais (e trabalhar do fim para o começo quando aplicar as regras $\eand$I, $\eif$I, e $\enot$I) 
+ Obviamente, apagar tudo e recomeçar é um pouco frustrante. Ao invés de trabalhar do fim para o começo, uma tática melhor para provar uma disjunção é trabalhar do começo para o fim. Veremos logo mais os detalhes de como fazer isso.
 
-%%%%%% -------------------  27.2  Trabalhando do começo para o fim a partir do que você tem
+%(e trabalhar do fim para o começo quando aplicar as regras $\eand$I, $\eif$I, e $\enot$I) 
+
+%%%%%% -------------------  28.2  Trabalhando do começo para o fim a partir do que você tem
 
 \section{Trabalhando do começo para o fim a partir do que você tem}
 
-Sua prova pode ter premissas. E se você trabalhou de trás para frente para provar um condicional ou uma sentença negada, você inseriu subprovas com uma suposição e tentou provar uma sentença final na subprova. Essas premissas e suposições são sentenças com que você pode trabalhar do começo para o fim para preencher as etapas ausentes na sua prova. Isso significa aplicar regras de eliminação para os principais operadores dessas sentenças. A forma das regras dirá o que você deverá fazer.
- 
+Sua prova pode ter premissas. E se você trabalhou de trás para frente para provar um condicional ou uma sentença negada, você inseriu subprovas com uma suposição e tentou provar uma sentença final na subprova. Essas premissas e suposições são sentenças com que você pode trabalhar do começo para o fim para preencher as etapas ausentes na sua prova. Isso significa aplicar regras de eliminação para os principais operadores dessas sentenças. A forma das regras dirá o que você pode fazer. 
 
 \subsection*{Trabalhando do começo para o fim a partir de uma conjunção}
 
-Para usar a estratégia de provar do  começo para fim a partir de uma sentença da forma $\meta{A} \eand \meta{B}$, usamos $\eand$E. Essa regra nos permite fazer duas coisas: deduzir $\meta{A}$, e deduzir $\meta{B}$. Assim, em uma prova em que temos $\meta{A} \eand \meta{B}$, podemos avançar escrevendo $\meta{A}$ e/ou $\meta{B}$  imediatamente abaixo da conjunção:
+Para usar a estratégia de provar do  começo para fim a partir de uma sentença da forma $\meta{A} \eand \meta{B}$, usamos a regra $\eand$E. Essa regra nos permite fazer duas coisas: deduzir $\meta{A}$, e deduzir $\meta{B}$. Assim, em uma prova em que temos $\meta{A} \eand \meta{B}$, podemos avançar escrevendo $\meta{A}$ ou $\meta{B}$  imediatamente abaixo da conjunção:
 
 \begin{fitchproof}
   \have[n]{1}{\meta{A} \eand \meta{B}}
@@ -867,7 +858,7 @@ Geralmente fica claro a situação específica que você vai  precisar usar uma 
 
 \subsection*{Trabalhando do começo para o fim a partir de uma disjunção}
 
-Trabalhar do começo para o fim a partir de uma disjunção funciona um pouco diferente. Para usar uma disjunção, usamos a regra $\eor$E e para aplicar essa regra não basta saber quais são os disjuntos da disjunção que queremos usar. Também devemos ter em mente o que queremos provar. Suponha que queremos provar~$\meta{C}$,  e temos $\meta{A} \eor \meta{B}$ para trabalhar. (Que $\meta{A} \eor \meta{B}$ pode ser uma premissa da prova, uma suposição de uma subprova ou algo já provado.) Para poder aplicar a regra $\eor$E teremos de inserir duas subprovas:
+Trabalhar do começo para o fim a partir de uma disjunção funciona um pouco diferente. Para usar uma disjunção, usamos a regra $\eor$E e para aplicar essa regra não basta saber quais são os disjuntos da disjunção que queremos usar. Também devemos ter em mente o que queremos provar. Suponha que queremos provar~$\meta{C}$,  e temos $\meta{A} \eor \meta{B}$ para trabalhar. ($\meta{A} \eor \meta{B}$ pode ser uma premissa da prova, uma suposição de uma subprova ou algo já provado.) Para poder aplicar a regra $\eor$E teremos de inserir duas subprovas:
  
 
 \begin{fitchproof}
@@ -884,12 +875,12 @@ Trabalhar do começo para o fim a partir de uma disjunção funciona um pouco di
 	\close
 	\have{6}{\meta{C}}\oe{1,(2)-3,(4)-5} 
 \end{fitchproof} 
-A primeira subprova começa com o primeiro disjunto $\meta{A}$, e termina com a sentença que estamos procurando, $\meta{C}$. A segunda subprova começa com o outro disjunto $\meta{B}$, e também termina com  a sentença~$\meta{C}$. Cada uma dessas subprovas deve ser preenchida ainda mais. Podemos então justificar a sentença $\meta{C}$ usando $\eor$E, citando a linha com $\meta{A} \eor \meta{B}$ e as duas subprovas.
+A primeira subprova começa com o primeiro disjunto $\meta{A}$, e termina com a sentença que estamos procurando, $\meta{C}$. A segunda subprova começa com o outro disjunto $\meta{B}$, e também termina com  a sentença~$\meta{C}$. Cada uma dessas subprovas deve ser preenchida ainda mais. Podemos então justificar a sentença $\meta{C}$ usando a regra $\eor$E, citando a linha com $\meta{A} \eor \meta{B}$ e as duas subprovas.
 
 \subsection*{ Trabalhando do começo para o fim a partir de um condicional}
 
-Para usar um condicional $\meta{A} \eif \meta{B}$, você também precisa do antecedente $\meta{A}$ para aplicar a regra~$\eif$E. Assim, para trabalhar do começo para o fim a partir de um condicional, você obterá $\meta{B}$, justificando com a regra $\eif$E, e estabelecendo $\meta{A}$  como um  novo subobjetivo.
  
+Dado um condicional $\meta{A} \eif \meta{B}$, a regra~$\eif$E nos permite concluir o consequente $\meta{B}$ a partir do condicional $\meta{A} \eif \meta{B}$ e do antecedente $\meta{A}$. Então, para trabalhar do começo para o fim a partir de um condicional $\meta{A} \eif \meta{B}$ que ocorre em uma prova, devemos escrever na prova o antecedente $\meta{A}$ e aplicar a regra~$\eif$E para obter $\meta{B}$, conforme ilustrado neste esquema:
 
 \begin{fitchproof}
 	\have[n]{1}{\meta{A} \eif \meta{B}}
@@ -900,7 +891,8 @@ Para usar um condicional $\meta{A} \eif \meta{B}$, você também precisa do ante
 
 \subsection*{ Trabalhando do começo para o fim a partir de uma sentença negada}
 
-Finalmente, para usar uma sentença negada $\enot \meta{A}$, você deve aplicar a regra $\enot$E. Isto requer, além de  $\enot \meta{A}$,  também a sentença correspondente~$\meta{A}$ sem a negação. A sentença que você irá obter é sempre a mesma: $\ered$. Assim, trabalhar do começo para o fim a partir de uma sentença negada funciona especialmente bem dentro de uma subprova que você deseja usar em uma aplicação da regra $\enot$I (ou IP).  Você trabalha a partir de $\enot \meta{A}$ se você já tem $\enot \meta{A}$ e deseja provar~$\ered$. Para isso, você estabelece $\meta{A}$ como um novo subobjetivo.
+Finalmente, para usar uma sentença negada $\enot \meta{A}$, você deve aplicar a regra $\enot$E. Isto requer, além de  $\enot \meta{A}$,  também a sentença correspondente~$\meta{A}$ sem a negação. A sentença que você irá obter é sempre a mesma: `$\ered$'. Assim, trabalhar do começo para o fim a partir de uma sentença negada funciona especialmente bem dentro de uma subprova que você deseja usar em uma aplicação da regra $\enot$I (ou IP).  Se $\enot \meta{A}$ ocorre em sua prova e você quer provar~`$\ered$', então você insere $\meta{A}$ na prova e aplica a regra $\enot$E para concluir `$\ered$'. A tarefa agora passa a ser justificar $\meta{A}$.
+
 \begin{fitchproof}
 	\have[n]{1}{\enot \meta{A}}
 	\ellipsesline 
@@ -908,7 +900,7 @@ Finalmente, para usar uma sentença negada $\enot \meta{A}$, você deve aplicar 
 	\have{3}{\ered}\ne{1,2} 
 \end{fitchproof}
 
-%%%%%% -----------------------        27.3  Estratégias  -----------------------
+%%%%%% -----------------------        28.3  Estratégias  -----------------------
 
 \section{Estratégias }
 
@@ -918,8 +910,7 @@ Vamos supor que queremos mostrar que o argumento $(A \eand B) \eor (A \eand C) \
 \ellipsesline
   \have[n]{2}{A \eand (B \eor C)}
 \end{fitchproof}
-Agora, temos duas opções: trabalhar do fim para o começo a partir da conclusão, ou do começo para o fim a partir da premissa. Escolheremos a segunda estratégia: usamos a disjunção na linha~$1$ e configuramos as subprovas que precisamos para  $\eor$E. A disjunção na linha~$1$ tem dois disjuntos, `$A \eand B$' e `$A \eand C$'. 
-O nosso objetivo é provar a sentença `$A \eand (B \eor C)$'. Assim, neste caso, você  deve criar duas subprovas:  uma com a suposição `$A \eand B$' e a última linha `$A \eand (B \eor C)$', e a  outra com a suposição `$A \eand C$' e a última linha `$A \eand (B \eor C)$'. A justificativa para a conclusão na linha $n$  será  $\eor$E,  citando a disjunção na linha~$1$ e as duas subprovas. Assim, sua prova até agora é esta:
+Agora, temos duas opções: trabalhar do fim para o começo a partir da conclusão, ou do começo para o fim a partir da premissa. Escolheremos a segunda estratégia: usamos a disjunção na linha~$1$ e configuramos as subprovas que precisamos para usa a regra $\eor$E. A disjunção na linha~$1$ tem dois disjuntos, `$A \eand B$' e `$A \eand C$'.  O nosso objetivo é provar a sentença `$A \eand (B \eor C)$'. Assim, neste caso, você  deve criar duas subprovas:  uma com a suposição `$A \eand B$' e a última linha `$A \eand (B \eor C)$', e a  outra com a suposição `$A \eand C$' e a última linha `$A \eand (B \eor C)$'. A justificativa para a conclusão na linha $n$  será  $\eor$E,  citando a disjunção na linha~$1$ e as duas subprovas. Após fazer isso sua prova fica com o seguinte aspecto:
  
 
 \begin{fitchproof}
@@ -936,8 +927,7 @@ O nosso objetivo é provar a sentença `$A \eand (B \eor C)$'. Assim, neste caso
 	\close
 	\have{12}{A \eand (B \eor C)}\oe{1,2-6,7-11}
 \end{fitchproof}
-Agora você tem duas tarefas separadas, a saber,  preencher cada uma das duas subprovas. Na primeira subprova, trabalhamos do fim para o começo a partir da conclusão $A \eand (B \eor C)$. Isso é uma conjunção, assim dentro da primeira subprova, você terá dois subobjetivos separados: provar $A$, e provar $B \eor C$. Esses subobjetivos permitem justificar a linha $n$ usando~$\eand$I. A sua prova agora é assim:
- 
+Agora você tem duas tarefas separadas, a saber,  preencher cada uma das duas subprovas. Na primeira subprova, trabalhamos do fim para o começo a partir da conclusão $A \eand (B \eor C)$. Isso é uma conjunção, assim dentro da primeira subprova, você terá dois subobjetivos separados: provar $A$, e provar $B \eor C$. Esses subobjetivos permitem justificar a linha $n$ usando a regra~$\eand$I. A sua prova agora fica assim: 
 
 \begin{fitchproof}
 	\hypo{1}{(A \eand B) \eor (A \eand C)}
@@ -956,10 +946,14 @@ Agora você tem duas tarefas separadas, a saber,  preencher cada uma das duas su
 	\close
 	\have{12}{A \eand (B \eor C)}\oe{1,2-6,(7)-11}
 \end{fitchproof}
-Vimos imediatamente que podemos obter a linha $i$ a partir da linha~$2$ por $\eand$E. No entanto, a linha $i$ é na verdade a linha~$3$ e pode ser justificada com $\eand$E  da linha~$2$. O outro subobjetivo `$B \eor C$' é uma disjunção.
-Aplicaremos a estratégia de trabalhar do fim para o começo a partir de uma disjunção até a linha $n-1$. Temos que escolher um dos disjuntos, `$B$' ou~`$C$'. 
-Escolher `$C$' não funcionaria e teríamos de voltar atrás. Agora você já pode ver que, se você escolheu `$B$' como subobjetivo, poderá conseguir isso trabalhando novamente do começo para o fim a partir da conjunção `$A \eand B$' na linha~$2$. Assim, podemos concluir a primeira subprova como segue:
- 
+
+Note que nossa prova estará completa quando preenchermos todos os espaços marcados com os três pontos verticais, ou seja, quando justificarmos todas as linhas que não forem suposições.
+
+No esquema acima é fácil notar que podemos obter a linha $i$ a partir da linha~$2$ por $\eand$E.  Então, a linha $i$ é na verdade a linha~$3$ e pode ser justificada com $\eand$E  da linha~$2$. O outro subobjetivo desta subprova é a disjunção `$B \eor C$' na linha $n-1$. Usaremos aqui a estratégia de trabalhar do fim para o começo.
+Temos que escolher um dos disjuntos, `$B$' ou~`$C$'. 
+Escolher `$C$' não funcionaria e teríamos de voltar atrás. E já dá para ver que se você escolher `$B$' você vai conseguir justificá-lo, trabalhando do começo para o fim a partir da conjunção `$A \eand B$' da linha~$2$.
+
+
 
 \begin{fitchproof}
 	\hypo{1}{(A \eand B) \eor (A \eand C)}
@@ -977,12 +971,12 @@ Escolher `$C$' não funcionaria e teríamos de voltar atrás. Agora você já po
 	\close
 	\have{12}{A \eand (B \eor C)}\oe{1,2-6,7-11}
 \end{fitchproof}
-Na primeira subprova, obtemos as linha $3$ e $4$ da mesma forma, i.e.,  de $2$ por  $\eand$E. A linha $5$  é justificada por $\eor$I da linha~$4$, pois estamos trabalhando do fim para o começo a partir de uma disjunção.
+Na primeira subprova, obtivemos as linha $3$ e $4$ da mesma forma, i.e.,  de $2$ por       $\eand$E. 
+ A linha $5$  é justificada com a regra $\eor$I na linha~$4$, já que neste passo estamos trabalhando do fim para o começo a partir da disjunção `$B \eor C$'.
+Na linha $6$ apenas ajustamos o número da linha e as referências da justificativa, substituindo as indicações $i$, $n$ e $n-1$ respectivamente pelos números correspondentes das linhas de nossa prova: $3$, $6$ e $5$.
 
-A segunda subprova é quase exatamente a mesma. Vamos deixar isso como um exercício.
 
-Lembre-se de que, quando começamos, tínhamos a opção de começar a partir da premissa ou começar pela conclusão, e escolhemos a primeira opção. A segunda opção também leva a uma prova, mas será diferente. Os primeiros passos seriam trabalhar a partir da conclusão e estabelecer dois subobjetivos, `$A$' e `$B \eor C$', e depois trabalhar a partir da premissa para prová-las, por exemplo:
- 
+Lembre-se que quando começamos a fazer esta prova optamos por trabalhar do começo para o fim a partir da premissa. Se tivéssemos optado por trabalhar do fim para o começo a partir da conclusão, também conseguiríamos provar a validade do argumento, mas a prova resultante ficaria diferente. Se quisermos fazer isso nosso primeiro passo é escrever os dois conjuntos da conclusão  `$A$' e `$B \eor C$', justificar a conclusão a partir deles por $\eand$I e tentar prová-los a partir da premissa `$(A\eand B) \eor (A\eand C)$', que é uma disjunção. Após este início nossa prova fica com o seguinte aspecto:
 
 \begin{fitchproof}
 	\hypo{1}{(A \eand B) \eor (A \eand C)}
@@ -1010,10 +1004,10 @@ Lembre-se de que, quando começamos, tínhamos a opção de começar a partir da
 	\have{11}{B \eor C}\oe{1,(7)-8,(9)-(10)}	
 	\have{12}{A \eand (B \eor C)}\ai{6,11}
 \end{fitchproof}
-Deixaremos que você preencha as linhas ausentes indicadas por~$\vdots$
+Examine com calma o esquema acima e tente entender tudo o que foi feito. Deixaremos a tarefa de finalizar esta prova preenchendo as linhas ausentes indicadas por~$\vdots$ como um exercício para você. É importante tentar fazê-lo e, caso tenha problemas, procurar ajuda de professores, monitores e colegas.
 
-Vamos dar outro exemplo para ilustrar como aplicar as estratégias ao lidar com condicionais e negação. A sentença `$(A \eif B) \eif (\enot B \eif \enot A)$' é uma tautologia. 
-Vamos ver se conseguimos encontrar uma prova disso, sem premissas, usando as estratégias. Primeiro escrevemos a sentença no final de uma folha de papel. Como trabalhar do começo para o fim não é uma boa opção (não há nada a partir do qual trabalhar), trabalhamos do fim para o começo e criamos uma subprova para obter a  sentença que queremos `$(A \eif B) \eif (\enot B \eif \enot A)$' usando a regra  $\eif$I. A sua suposição deve ser o antecedente do condicional que queremos provar, ou seja, `$A \eif B$', e sua última linha, o consequente `$\enot B \eif \enot A$'.
+Vamos dar outro exemplo para ilustrar como aplicar as estratégias ao lidar com condicionais e negação. A sentença `$(A \eif B) \eif (\enot B \eif \enot A)$' é uma tautologia.  Vamos ver se conseguimos encontrar uma prova disso, sem premissas, usando as estratégias. Primeiro escrevemos a sentença no final de uma folha de papel. 
+Como não dá para trabalhar do começo para o fim, já que não há nenhuma premissa de onde partir, trabalhamos do fim para o começo e criamos uma subprova para obter a  sentença que queremos `$(A \eif B) \eif (\enot B \eif \enot A)$' usando a regra  $\eif$I. A sua suposição deve ser o antecedente do condicional que queremos provar, ou seja, `$A \eif B$', e sua última linha, o consequente `$\enot B \eif \enot A$'.
  
 
 \begin{fitchproof}
@@ -1038,7 +1032,7 @@ O novo objetivo, `$\enot B \eif \enot A$' é  também  um  condicional, assim, t
 	\close
 	\have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
-Trabalhamos novamente do fim para o começo a partir de `$\enot A$'.  Para fazer isso, veja a regra $\enot$I. Ela requer uma subprova com~`$A$' como suposição, e `$\ered$' como sua última linha. Então a prova agora é:
+Trabalhamos novamente do fim para o começo a partir de `$\enot A$'.  Para fazer isso, veja a regra $\enot$I. Ela requer uma subprova com~`$A$' como suposição, e `$\ered$' como sua última linha. Nossa prova fica, então, com a seguinte aparência:
  
 \begin{fitchproof}
 	\open
@@ -1055,8 +1049,9 @@ Trabalhamos novamente do fim para o começo a partir de `$\enot A$'.  Para fazer
 	\close
 	\have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
-Agora nosso objetivo é provar~$\ered$. Dissemos acima, ao explicar como trabalhar a partir de uma sentença negada, que a regra $\enot$E permite que você prove~$\ered$, o qual é o nosso objetivo na subprova interior. Então, procuramos uma sentença negada a partir da qual possamos trabalhar do começo para o fim: esta sentença seria `$\enot B$' da linha~$2$. Isso significa que temos que derivar `$B$' dentro da subprova, pois $\enot$E requer não apenas `$\enot B$' (o que já temos), mas também~`$B$'. E `$B$', por sua vez, conseguimos a partir de `$A \eif B$', já que $\eif$E nos permitirá justificar o consequente~`$B$' do condicional por $\eif$E. A regra $\eif$E também requer o antecedente~`$A$' do condicional, mas isso também já está disponível (na linha~$3$). Então, concluímos  com:
-
+ 
+Agora nosso objetivo é provar~`$\ered$'. E, conforme vimos na Seção Seção \ref{s:contradiction},  se obtivermos uma sentença e sua negação, podemos usar a regra $\enot$E e inferir `$\ered$'.
+Mas note que nas linhas~$1$ e $3$ temos `$A \eif B$' e `$A$', donde podemos obter `$B$' pela regra $\eif$E e na linha~$2$ temos `$\enot B$'. Então podemos concluir nossa prova, que ficará assim:
 
 \begin{fitchproof}
 	\open
@@ -1074,11 +1069,11 @@ Agora nosso objetivo é provar~$\ered$. Dissemos acima, ao explicar como trabalh
 	\have{8}{(A \eif B) \eif (\enot B \eif \enot A)}\ci{1-7}
 \end{fitchproof}
 
-%%%%%% -----------------------27.4 Trabalhando do começo para o fim a partir de absourdo
+%%%%%% -----------------------28.4 Trabalhando do começo para o fim a partir de absourdo
 
-\section{Trabalhando do começo para o fim a partir de $\ered$}\label{sec:backred}
+\section{Trabalhando do começo para o fim a partir de `$\ered$'}\label{sec:backred}
 
-Ao aplicar as estratégias, às vezes você se encontra em uma situação em que pode justificar~$\ered$. Usando a regra de explosão, isso permitiria justificar \emph{qualquer coisa}. Assim $\ered$ funciona como um curinga nas provas. Por exemplo, suponha que você queira fornecer uma prova do argumento $A \eor B, \enot A \therefore B$. Você configura sua prova, escrevendo as premissas `$A \eor B$' e `$\enot A$' na parte superior das linhas $1$ e $2$ e a conclusão $B$ na parte inferior da página. `$B$' não tem conectivo principal, então você não pode usar a estratégia do fim para o começo. Em vez disso, você deve trabalhar a partir de `$A \eor B$', o que requer duas subprovas, tais como:
+Ao aplicar as estratégias, às vezes você se encontra em uma situação em que pode justificar~`$\ered$'. Usando a regra de explosão, isso permitiria justificar \emph{qualquer coisa}. Assim `$\ered$' funciona como um curinga nas provas. Por exemplo, suponha que você queira fornecer uma prova do argumento $A \eor B, \enot A \therefore B$. Você configura sua prova, escrevendo as premissas `$A \eor B$' e `$\enot A$' na parte superior das linhas $1$ e $2$ e a conclusão `$B$' na parte inferior da página. `$B$' não tem conectivo principal, então você não pode usar a estratégia do fim para o começo. Em vez disso, você deve trabalhar a partir de `$A \eor B$', o que requer duas subprovas, tais como:
 
 
 \begin{fitchproof}
@@ -1096,7 +1091,7 @@ Ao aplicar as estratégias, às vezes você se encontra em uma situação em que
 	\close
 	\have{6}{B}\oe{1,2-3,(4)-5} 
 \end{fitchproof} 
-Observe que você possui   `$\enot A$' na linha~$2$ e `$A$' como suposição da sua primeira subprova. Isso lhe dá  $\ered$  usando $\enot$E, e de $\ered$ você obtém a conclusão~`$B$' da primeira subprova usando~X. Lembre-se de que você pode repetir uma sentença que já apareceu na prova  usando a regra de reiteração~R. Portanto, nossa prova seria:
+Observe que você possui   `$\enot A$' na linha~$2$ e `$A$' como suposição da sua primeira subprova. Isso lhe dá  `$\ered$'  usando $\enot$E, e de `$\ered$' você obtém a conclusão~`$B$' da primeira subprova usando a regra~X. Lembre-se de que você pode repetir uma sentença que já apareceu na prova  usando a regra de reiteração~R. Portanto, a prova completa fica:
 \begin{fitchproof}
 	\hypo{1}{A \eor B}
 	\hypo{7}{\enot A}
@@ -1111,10 +1106,10 @@ Observe que você possui   `$\enot A$' na linha~$2$ e `$A$' como suposição da 
 	\close
 	\have{6}{B}\oe{1,2-3,4-5} 
 \end{fitchproof} 
-%%%%%% -----------------------------------------------------27.5  Seguindo indiretamente
+%%%%%% -----------------------------------------------------28.5  Seguindo indiretamente
 \section{Seguindo indiretamente}
 
-Em muitos casos, as estratégias de trabalhar do começo para o fim  e do fim para o começo dão certo. Mas há casos em que elas não funcionam. Se você não conseguir encontrar uma maneira de mostrar $\meta{A}$ diretamente usando essas estratégias,  use a regra IP. Para fazer isso, configure uma subprova na qual você assume  $\enot\meta{A}$  e procure uma prova para $\ered$ dentro dessa subprova.
+Em muitos casos, as estratégias de trabalhar do começo para o fim  e do fim para o começo dão certo. Mas há casos em que elas não funcionam. Se você não conseguir encontrar uma maneira de mostrar $\meta{A}$ diretamente usando essas estratégias,  use a regra IP. Para fazer isso, configure uma subprova na qual você assume  $\enot\meta{A}$  e procure uma prova para `$\ered$' dentro dessa subprova.
 
 \begin{fitchproof}
 \open
@@ -1125,10 +1120,12 @@ Em muitos casos, as estratégias de trabalhar do começo para o fim  e do fim pa
 \have{4}{\meta{A}}\ip{2-3}
 \end{fitchproof}
 Aqui, temos que iniciar uma subprova com a suposição $\enot \meta{A}$;
-a última linha da subprova deve ser~$\ered$. Vamos citar a subprova e usar  IP como regra. Na subprova, agora temos uma suposição adicional (na linha $n$) para trabalhar.
+a última linha da subprova deve ser~`$\ered$'. Vamos citar a subprova e usar  IP como regra. Na subprova, agora temos uma suposição adicional (na linha $n$) para trabalhar.
+ 
 
-Suponha que usamos a estratégia de prova indireta ou estamos em outra situação em que procuramos uma prova para  $\ered$. O que é um bom candidato? Uma escolha óbvia seria usar uma sentença negada, pois (como vimos acima) com $\enot$E podemos obter~$\ered$. 
- Se você configurar uma prova como acima, tentando provar \meta{A} usando~IP, você terá $\enot \meta{A}$ como suposição de sua subprova. Então trabalhando a partir dela para justificar $\ered$ dentro de sua subprova, você estabelece \meta{A} como uma meta dentro de sua subprova. Assim, se você estiver usando  IP, você se encontrará na seguinte situação:
+Neste ponto, parece que uma estratégia óbvia para tentar justificar  `$\ered$' através da regra $\enot$E seria inserir $\meta{A}$ na prova, aplicar a regra $\enot$E para justificar  `$\ered$' e tentar agora provar $\meta{A}$. O esquema da sua prova ficaria, então, com a seguinte aparência:
+
+
 \begin{fitchproof}
 \open
 \hypo[n]{2}{\enot \meta{A}}
@@ -1139,14 +1136,17 @@ Suponha que usamos a estratégia de prova indireta ou estamos em outra situaçã
 \have{5}{\meta{A}}\ip{2-4}
 \end{fitchproof} 
 
+Isso parece bem estranho: lembre que estamos considerando uma situação onde as estratégias de trabalhar do começo para o fim e do fim para o começo não nos levaram a lugar nenhum e, por isso, propusemos uma nova estratégia: fazer uma prova indireta com a regra IP. A estratégia consiste em supor $\enot \meta{A}$ como hipótese de uma subprova e provar `$\ered$'. Aí, com IP, fechamos esta subprova e concluímos $\meta{A}$. Mas esta estratégia nos trouxe à situação (indicada na linha~$m - 1$ acima) onde o subobjetivo que temos que provar para completar a prova de `$\ered$' é o prórprio $\meta{A}$. Ou seja, parece que andamos em círculos. Queríamos, inicialmente, provar $\meta{A}$ e para para conseguir isso, nosso passo intermediário exige que provemos a mesma sentença $\meta{A}$.
 
-Isso parece estranho: queríamos provar $\meta{A}$ e as estratégias fracassaram; então usamos a regra  IP como último recurso. E agora nos encontramos na mesma situação: estamos novamente procurando uma prova de ~$\meta{A}$. Mas observe que agora estamos \emph{dentro} de uma subprova, e nessa subprova temos uma suposição adicional ($\enot \meta{A}$) para trabalhar a qual não tínhamos antes. Vamos ver um exemplo.
+Apesar desta situação parecer estranha e circular, ela não é. Note que a prova de $\meta{A}$ que precisamos fazer no passo intermediário está dentro de uma subprova onde temos uma suposição adicional ($\enot \meta{A}$) para trabalhar, que não estava disponível antes. Então a situação é diferente. Vamos ver na seção seguinte um famoso exemplo de uma prova onde isso ocorre.
 
-%%%%%% -----------------------27.6  Prova indireta do terceiro excluido ---------- ---------
+ 
+
+%%%%%% -----------------------28.6  Prova indireta do terceiro excluido ---------- ---------
 
 \section{Prova indireta do terceiro excluído}\label{s:proofLEM}
 
-A sentença `$A \eor \enot A$' é uma tautologia e, portanto, deve ter uma prova mesmo sem quaisquer premissas. Mas trabalhar do fim para o começo falha nessa situação: para obter `$A \eor \enot A$' usando $\eor$I teríamos que provar `$A$' ou `$\enot A$'; novamente, sem premissas. Nenhuma dessas é uma tautologia, portanto também não podemos provar. Trabalhar  do começo para o fim também não funciona, já que não há nada para assumir. Portanto, a única opção é a prova indireta.
+A sentença `$A \eor \enot A$' é uma tautologia e, portanto, deve ter uma prova mesmo sem quaisquer premissas. Mas trabalhar do fim para o começo falha nessa situação: para obter `$A \eor \enot A$' usando $\eor$I teríamos que provar `$A$' ou `$\enot A$'; novamente, sem premissas. Mas nem `$A$' nem  `$\enot A$' é tautologia, então não conseguimos provar nenhuma das duas sem premissas. Trabalhar  do começo para o fim também não funciona, já que não há nada para assumir. Portanto, a única opção é a prova indireta.
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1155,7 +1155,8 @@ A sentença `$A \eor \enot A$' é uma tautologia e, portanto, deve ter uma prova
 	\close
 	\have{9}{A \eor \enot A}\ip{2-8}
 \end{fitchproof}
-Agora temos algo a partir do qual trabalhar: a suposição  `$\enot(A \eor \enot A)$'. Para usá-la, justificamos `$\ered$' com a regra $\enot$E, citando o pressuposto na linha~$1$, e também a sentença não negada correspondente `$A \eor \enot A$', ainda a ser provada
+
+Precisamos agora justificar `$\ered$' a partir de `$\enot(A \eor \enot A)$'. Para fazer isso incluímos a sentença sem a negação   `$A \eor\enot A$' e usamos a regra  $\enot$E, obtendo o seguinte:
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1166,8 +1167,7 @@ Agora temos algo a partir do qual trabalhar: a suposição  `$\enot(A \eor \enot
 	\have{9}{A \eor \enot A}\ip{2-8}
 \end{fitchproof}
 
-
-No início, trabalhando do começo para o fim para provar `$A \eor\enot A$' com a regra $\eor$I não funcionou. Mas agora estamos em uma situação diferente: queremos provar `$A \eor\enot A$' dentro de uma subprova. Em geral, ao lidar com novas metas, devemos voltar e começar com as estratégias básicas. Nesse caso, devemos primeiro tentar trabalhar do fim para o começo a partir da disjunção `$A \eor \enot A$', ou seja, precisamos escolher um dos disjuntos  e tentar prová-lo. Vamos escolher~`$\enot A$'. Isso permitiria justificar `$A \eor \enot A$' na linha~$m - 1$ usando $\eor$I. Então, trabalhando novamente de fim para o começo a partir de `$\enot A$', iniciamos outra subprova a fim de justificar `$\enot A$' usando $\enot$I. Essa subprova deve ter `$A$' como suposição e~`$\ered$' como sua última linha.
+Note que o que temos que fazer agora é provar `$A \eor\enot A$', que é exatamente a sentença original que queremos provar. Só que agora estamos em uma situação diferente: queremos provar `$A \eor\enot A$’  dentro de uma subprova que tem uma suposição para nos auxiliar.   Em geral, ao lidar com novas metas, devemos voltar e começar com as estratégias básicas. Nesse caso, devemos primeiro tentar trabalhar do fim para o começo a partir da disjunção `$A \eor \enot A$', ou seja, precisamos escolher um dos disjuntos  e tentar prová-lo. Vamos escolher~`$\enot A$'. Isso permitiria justificar `$A \eor \enot A$' na linha~$m - 1$ usando a regra $\eor$I. Feito isso, trabalhando novamente de fim para o começo a partir de `$\enot A$', iniciamos outra subprova a fim de justificar `$\enot A$' usando a regra  $\enot$I. Essa subprova deve ter `$A$' como suposição e~`$\ered$' como sua última linha.
 \begin{fitchproof}
 	\open
 	\hypo{2}{\enot (A \eor \enot A)}
@@ -1198,7 +1198,7 @@ Dentro dessa nova subprova, precisamos novamente justificar `$\ered$'. A melhor 
 	\have{9}{A \eor \enot A}\ip{2-8}
 \end{fitchproof}
 
-%%%%%% ----------------------------- -CAP 27 -  EXERCICIOS  --------------------------------------------------  
+%%%%%% ----------------------------- -CAP 28 -  EXERCICIOS  --------------------------------------------------  
 
 \practiceproblems
 
@@ -1244,7 +1244,7 @@ Use as estratégias para encontrar provas para cada um dos sete seguintes argume
 \end{earg}
 Todos exigirão a estratégia de IP. Os últimos três especialmente são bastante difíceis!
 
-%%%%%%------------------------   CAPITULO  28  -   Regras adicionais da LVF    --------------------- 
+%%%%%%------------------------   CAPITULO  29  -   Regras adicionais da LVF    --------------------- 
 
 \chapter{Regras adicionais da LVF}\label{s:Further}
 No Capítulo \ref{s:BasicTFL}, introduzimos as regras básicas de nosso sistema de provas para a LVF e nesta seção, apresentaremos algumas regras adicionais a esse sistema.  Veremos que em  nosso sistema de provas estendido é um pouco mais fácil de trabalhar.  No entanto, veremos, no Capítulo \ref{s:Derived} que essas regras adicionais não são, estritamente falando, \emph{necessárias}.
@@ -1272,7 +1272,7 @@ No Capítulo \ref{s:BasicTFL}, introduzimos as regras básicas de nosso sistema 
 % \end{fitchproof}
 % This is a fairly typical use of the R rule.
 
-%%%%%%———————————  --------  28.1   Silogismo disjuntivo  ---------------------
+%%%%%%———————————  --------  29.1   Silogismo disjuntivo  ---------------------
 \section{Silogismo disjuntivo}
 Vejamos uma forma de argumento muito natural.
 	\begin{quote}
@@ -1291,9 +1291,9 @@ e
 	\have[\ ]{con}{\meta{A}}\by{SD}{ab, nb}
 \end{fitchproof}}
 
-Como usual, a disjunção e a negação de um dos disjuntos podem ocorrer em qualquer ordem e não precisam estar vizinhos. No entanto, sempre citamos a disjunção primeiro.
+Como usual, a disjunção e a negação de um dos disjuntos podem ocorrer em qualquer ordem e não precisam estar vizinhas. No entanto, sempre citamos a disjunção primeiro.
 
- %%%%%% ----------------------------------  28.2 Modus tollens   ---------------------
+ %%%%%% ----------------------------------  29.2 Modus tollens   ---------------------
 \section{Modus tollens}
 Outro padrão  útil de inferência é incorporado no seguinte argumento:
 	\begin{quote}
@@ -1306,7 +1306,7 @@ Este padrão de inferência é chamado \emph{modus tollens}. A regra corresponde
 	\have[\ ]{b}{\enot\meta{A}}\mt{ab,a}
 \end{fitchproof}}
 Como sempre, as premissas podem ocorrer em qualquer ordem, mas sempre citamos o condicional primeiro. 
- %%%%%% ---------------------------------- 28.3    Eliminacao da dupla negacao
+ %%%%%% ---------------------------------- 29.3    Eliminação da dupla negação
 
 \section{Eliminação da dupla negação}
 Outra regra  útil é a  \emph{eliminação da dupla negação}. Faz exatamente o que seu nome diz:
@@ -1316,10 +1316,10 @@ Outra regra  útil é a  \emph{eliminação da dupla negação}. Faz exatamente 
 	\end{fitchproof}}
 A justificativa para isso é que, em linguagem natural, as duplas negações tendem a se anular.
 
-Dito isto, você deve estar ciente de que o contexto e a ênfase podem impedi-los de fazê-lo. Considere a sentença `Jane \emph{não} é infeliz’.  A partir dessa afirmação  não podemos necessariamente concluir `Jane é feliz’, pois a primeira sentença deve ser entendida como  `Jane está em um estado de profunda indiferença’. 
+Mas, é bom lembrar que em algumas situações o contexto pode nos impedir de fazer isso. Considere a sentença `Jane \emph{não} é infeliz’.  A partir dessa afirmação  não podemos necessariamente concluir `Jane é feliz’, pois a primeira sentença deve ser entendida como  `Jane está em um estado de profunda indiferença’. 
   Como sempre, mudar para a LVF nos obriga a sacrificar certas nuances das expressões em português. 
 
-%%%%%%———————————  28.4 Terceiro excluido
+%%%%%%———————————  29.4 Terceiro excluido
 \section{Terceiro excluído}
 
 Suponha que possamos mostrar que, se estiver ensolarado lá fora, Bento levará um guarda-chuva (por medo de se queimar). Suponha   também que possamos mostrar que, se não estiver ensolarado lá fora, Bento levará um guarda-chuva (por medo de se molhar). Bem, não há um terceiro caminho para o clima. Portanto, \emph{qualquer que seja} o clima, Bento levará um guarda-chuva.
@@ -1337,7 +1337,7 @@ Essa linha de pensamento motiva a seguinte regra:
 		\close
 		\have[\ ]{ab}{\meta{B}}\tnd{a-c1,b-c2}
 	\end{fitchproof}}
- Essa regra é às vezes chamada de lei do \emph{terceiro excluído}, pois encapsula a ideia de que \meta{A} pode ser verdadeira ou $\enot \meta{A}$ pode ser verdadeira, mas não há meio caminho em que nenhum dos dois seja verdadeira.\footnote{Você pode às vezes encontrar lógicos ou filósofos falando sobre ``tertium non datur''. Esse é o mesmo princípio que o terceiro excluído; significa ``não há terceira via''. Lógicos que têm dúvidas sobre provas indiretas também têm dúvidas sobre a LEM.} Pode haver tantas linhas quantas você quiser entre $i$ e $j$, e tantas linhas quantas quiser entre $k$ e $l$.  Além disso, as subprovas podem vir em qualquer ordem, e a segunda subprova não precisa vir imediatamente após a primeira.
+ Essa regra é às vezes chamada de lei do \emph{terceiro excluído}, pois encapsula a ideia de que \meta{A} pode ser verdadeira ou $\enot \meta{A}$ pode ser verdadeira, mas não há meio caminho em que nenhuma das duas seja verdadeira.\footnote{Você pode às vezes encontrar lógicos ou filósofos falando sobre ``tertium non datur''. Esse é o mesmo princípio que o terceiro excluído; significa ``não há terceira via''. Lógicos que têm dúvidas sobre provas indiretas também têm dúvidas sobre a LEM.} Pode haver tantas linhas quantas você quiser entre $i$ e $j$, e tantas linhas quantas quiser entre $k$ e $l$.  Além disso, as subprovas podem vir em qualquer ordem, e a segunda subprova não precisa vir imediatamente após a primeira.
 
 Para ver a regra em ação, considere:
  
@@ -1371,7 +1371,7 @@ Aqui está outro exemplo:
 	\have{na3}{\enot A}\tnd{a-na, na1-na2}
 \end{fitchproof}
 
-%%%%%%———————--------------——  28.5 Regras De Morgan  --------- ---------
+%%%%%%———————--------------——  29.5 Regras De Morgan  --------- ---------
 
 \section{Regras de De Morgan}
 Nossas regras adicionais finais são chamadas de Leis de De~Morgan (em homenagem a Augustus De~Morgan). A forma das regras deve ser familiar nas tabelas de verdade.
@@ -1399,7 +1399,7 @@ E a quarta regra de De~Morgan é o inverso da terceira:
 \end{fitchproof}}
 \emph{Essas são todas as regras adicionais do nosso sistema de provas para a  LVF.}
 
- %%%%%% -------------------------CAP 28  - EXERCICIOS   ------------------------------------------------ 
+ %%%%%% -------------------------CAP 29  - EXERCICIOS   ------------------------------------------------ 
 \practiceproblems
 \solutions
 \problempart
@@ -1470,7 +1470,7 @@ Faça uma prova para cada um dos quatro argumentos seguintes:
 \item $(X\eand Y)\eor(X\eand Z)$, $\enot(X\eand D)$, $D\eor M \therefore M$
 \end{earg}
 
-%%%%%% ---------------------------CAP 29 -  Conceitos de teoria da prova ------------------
+%%%%%% ---------------------------CAP 30 -  Conceitos de teoria da prova ------------------
 
 \chapter{Conceitos de teoria da prova}\label{s:ProofTheoreticConcepts}
 
@@ -1479,7 +1479,7 @@ Faça uma prova para cada um dos quatro argumentos seguintes:
 $$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves \meta{C}$$
 significa que existe uma prova que termina com $\meta{C}$  cujas suposições não descartadas estão entre $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$. Quando queremos dizer que  \emph{não} é o caso que existe uma prova que termine com $\meta{C}$ a partir de $\meta{A}_1$, $\meta{A}_2$, \dots,~$\meta{A}_n$, escrevemos:  $$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \nproves \meta{C}$$  
 
-O símbolo `$\proves$'  é chamado de  \emph{roleta única}. Queremos enfatizar que este não é o símbolo do roleta dupla (`$\entails$') que introduzimos no capítulo~\ref{s:SemanticConcepts}  para simbolizar sustentação. O símbolo roleta única, `$\proves$', diz respeito à existência de provas; enquanto que a roleta dupla, `$\entails$', diz respeito à existência de valorações (ou interpretações, quando usadas para FOL). \emph{Elas são noções muito diferentes}.
+O símbolo `$\proves$'  é chamado de  \emph{roleta simples}. Queremos enfatizar que este não é o símbolo do roleta dupla (`$\entails$') que introduzimos no Capítulo~\ref{s:SemanticConcepts}  para simbolizar sustentação. O símbolo roleta simples, `$\proves$', diz respeito à existência de provas; enquanto que a roleta dupla, `$\entails$', diz respeito à existência de valorações (ou interpretações, quando usadas na FOL). \emph{Elas são noções muito diferentes}.
 
 Com o nosso símbolo  `$\proves$',  podemos introduzir um pouco mais de terminologia. Para dizer que existe uma prova de $\meta{A}$ sem suposições não descartadas, escrevemos: ${} \proves \meta{A}$. Nesse caso, dizemos que $\meta{A}$ é um \define{teorema}.
 	\factoidbox{\label{def:syntactic_tautology_in_sl}
@@ -1498,7 +1498,7 @@ Para ilustrar isso, suponha que desejamos mostrar que `$\enot (A \eand \enot A)$
 	\end{fitchproof}
 Provamos então `$\enot (A \eand \enot A)$' sem nenhuma suposição (não descartada).  Esse teorema em particular é uma instância do que às vezes é chamado de \emph{Lei da Não Contradição}.
 
-Para mostrar que algo é um teorema, você apenas precisa encontrar uma prova adequada. Normalmente, é muito mais difícil mostrar que algo \emph{não} é um teorema. Para fazer isso, você precisaria demonstrar, não apenas que certas estratégias de prova falham, mas que \emph{nenhuma} prova é possível. Mesmo que você não consiga provar uma sentença de mil maneiras diferentes, talvez a prova seja longa e complexa demais para você entender. Talvez você não tenha se esforçado o suficiente.
+Para mostrar que algo é um teorema, você apenas precisa encontrar uma prova adequada. Normalmente, é muito mais difícil mostrar que algo \emph{não} é um teorema. Para fazer isso, você precisaria demonstrar, não apenas que certas estratégias de prova falham, mas que \emph{nenhuma} prova é possível. Mesmo que você tente mil vezes e não consiga provar uma sentença, isso não significa que ela não é um teorema. Talvez sua prova seja longa e complexa demais para você entender ou talvez você não tenha se esforçado o suficiente.
 
 Aqui temos um pouco mais de terminologia:
 	\factoidbox{
@@ -1512,11 +1512,11 @@ Um pouco mais de terminologia:
 		As sentenças  $\meta{A}_1,\meta{A}_2,\ldots, \meta{A}_n$  são \definepl{dedutivamente inconsistente} se e somente se uma  contradição puder ser provada a partir delas, ou seja, $\meta{A}_1,\meta{A}_2,\ldots, \meta{A}_n \proves \ered$. Se elas não são inconsistentes, dizemos que elas são \xdefine{dedutivamente consistentes}.
 	}
         
-        é fácil mostrar que um conjunto de sentenças é dedutivamente inconsistente: você só precisa provar uma contradição a partir delas.  Entretanto,  mostrar que um conjunto de sentenças não é dedutivamente inconsistentes é muito mais difícil. Exigiria mais do que apenas fornecer uma ou duas provas; exigiria mostrar que nenhuma prova de um determinado tipo é \emph{possível}.
+        É fácil mostrar que um conjunto de sentenças é dedutivamente inconsistente: você só precisa provar uma contradição a partir delas.  Entretanto,  mostrar que um conjunto de sentenças não é dedutivamente inconsistente é muito mais difícil. Exigiria mais do que apenas fornecer uma ou duas provas; exigiria mostrar que nenhuma prova de um determinado tipo é \emph{possível}.
 
 \
 \\
-Esta tabela resume se uma ou duas provas são bem sucedidas ou se devemos raciocinar sobre todas as provas possíveis.
+A tabela abaixo resume se para responder afirmativamente ou negativamente às perguntas da esquerda, uma ou duas provas são suficientes ou se precisamos raciocinar sobre todas as provas possíveis.
 { %\small
 \begin{center}
 \begin{tabular}{l l l}
@@ -1532,7 +1532,9 @@ consistente? & todas as provas possíveis & uma prova\\
 \end{tabular}
 \end{center}}
 
- %%%%%% ------------------------CAP  29  - EXERCICIOS   ------------------------------------------------ 
+
+ 
+ %%%%%% ------------------------CAP  30  - EXERCICIOS   ------------------------------------------------ 
 \practiceproblems
 \problempart
 Mostre que cada uma das quatro seguintes sentenças é um teorema:
@@ -1546,10 +1548,10 @@ Mostre que cada uma das quatro seguintes sentenças é um teorema:
 \problempart
 Forneça provas para cada um dos quatro argumentos seguintes:
 \begin{earg}
-\item $C\eif(E\eand G), \enot C \eif G \proves G$
+\item $C\eif(E\eand G), \, \,  \enot C \eif G \proves G$
 \item $M \eand (\enot N \eif \enot M) \proves (N \eand M) \eor \enot M$
-\item $(Z\eand K)\eiff(Y\eand M), D\eand(D\eif M) \proves Y\eif Z$
-\item $(W \eor X) \eor (Y \eor Z), X\eif Y, \enot Z \proves W\eor Y$
+\item $(Z\eand K)\eiff(Y\eand M), \, \,  D\eand(D\eif M) \proves Y\eif Z$
+\item $(W \eor X) \eor (Y \eor Z), \, \, X\eif Y, \enot Z \proves W\eor Y$
 \end{earg}
 
 \problempart
@@ -1570,14 +1572,15 @@ Mostre que as sentenças de cada um dos seguintes seis pares são dedutivamente 
 
 \problempart Neste capítulo, alegamos que é muito difícil mostrar que duas sentenças não são dedutivamente equivalentes, assim como mostrar que uma sentença não é um teorema. Por que afirmamos isso? (\emph{Sugestão}: pense em uma sentença que seria um teorema se e somente se \meta{A} e \meta{B} fossem dedutivamente equivalentes.)
 
-%%%%%% --------------------------  CAP  30  -   Regras derivadas--------------------------------------
+%%%%%% --------------------------  CAP  31  -   Regras derivadas--------------------------------------
+ %%%%%% --------------------------  CAP  31  -   Regras derivadas--------------------------------------
 
 \chapter{Regras derivadas}\label{s:Derived}
 Nesta seção, veremos por que introduzimos as regras do nosso sistema de provas em dois lotes separados. Em particular, queremos mostrar que as regras adicionais do Capítulo \ref{s:Further} não são estritamente necessárias, mas podem ser derivadas das regras básicas aprestadas no Capítulo \ref{s:BasicTFL}. 
 
-%%%%%% ———— -- - - - - -  -  —  30.1  Derivcao de reiteracao  - ---- - - - -  ---- 
+%%%%%% ———— -- - - - - -  -  —  31.1  Derivcao de reiteracao  - ---- - - - -  ---- 
 \section{Derivação da Reiteração}
-Para ilustrar o que significa derivar uma   \emph{regra} de outras regras, primeiro considere a reiteração. é uma regra básica do nosso sistema, mas também não é necessária. Suponha que você tenha alguma sentença em alguma linha de sua dedução:
+Para ilustrar o que significa derivar uma   \emph{regra} de outras regras, primeiro considere a reiteração. Ela é uma regra básica do nosso sistema, mas também não é necessária. Suponha que você tenha alguma sentença em alguma linha de sua dedução:
 \begin{fitchproof}
 	\have[m]{a}{\meta{A}}
 \end{fitchproof}
@@ -1589,11 +1592,11 @@ Agora você deseja repeti-la em alguma linha~$k$. Você poderia simplesmente inv
 \end{fitchproof}
 
 
-Para ser claro: isso não é uma prova, mas um \emph{esquema} de prova. Afinal, foi usada  uma variável, `$\meta{A}$', da metalinguagem  em vez de uma sentença da LVF, entretanto o ponto é simples: quaisquer que sejam as sentenças da LVF que atribuímos a $\meta{A}$, e quaisquer que sejam as linhas em que estivéssemos trabalhando, poderíamos produzir uma  prova genuína. Assim, você pode pensar nisso como uma receita para produzir provas.
+Para ser claro: isso não é uma prova, mas um \emph{esquema} de prova. Afinal, foi usada  uma variável, $\meta{A}$, da metalinguagem  em vez de uma sentença da LVF, entretanto o ponto é simples: quaisquer que sejam as sentenças da LVF que atribuímos a $\meta{A}$, e quaisquer que sejam as linhas em que estivéssemos trabalhando, poderíamos produzir uma  prova genuína. Assim, você pode pensar nisso como uma receita para produzir provas.
 
-De fato, é uma receita que nos mostra o seguinte: qualquer coisa que possamos provar usando a regra R, podemos provar (com mais uma linha) usando apenas as regras básicas do Capítulo \ref{s:BasicTFL} sem R. é isso que significa dizer que a regra R pode ser derivada de outras regras básicas: qualquer coisa que possa ser justificada usando R pode ser justificada usando apenas as outras regras básicas.
+De fato, é uma receita que nos mostra o seguinte: qualquer coisa que possamos provar usando a regra R, podemos provar (com mais uma linha) usando apenas as regras básicas do Capítulo \ref{s:BasicTFL} sem R. É isso que significa dizer que a regra R pode ser derivada de outras regras básicas: qualquer coisa que possa ser justificada usando R pode ser justificada usando apenas as outras regras básicas.
 
-%%%%%% ——— - - - ——-------------——  30.2  Derivacao de silogismo disjuntivo  -------
+%%%%%% ——— - - - ——-------------——  31.2  Derivacao de silogismo disjuntivo  -------
 \section{Derivação do Silogismo Disjuntivo}
 Suponha que você esteja em uma prova e tenha algo desta forma:
 \begin{fitchproof}
@@ -1617,9 +1620,9 @@ Agora você deseja, na linha~$k$, provar $\meta{B}$. Você pode fazer isso com a
 		\close
 	\have{con}{\meta{B}}\oe{ab, a-b1, b-b2}
 \end{fitchproof}
-A regra DS, igualmente, pode ser derivada de nossas regras mais básicas. Adicioná-la ao nosso sistema não possibilitou novas provas. Sempre  que você usar a regra DS, você pode provar a mesma coisa usando algumas linhas extras aplicando apenas as nossas regras básicas. Assim, DS é uma regra \emph{derivada}.
+Esse esquema de prova mostra que a regra DS é desnecessária e pode ser derivada de nossas regras mais básicas. Adicioná-la ao nosso sistema não possibilita novas provas. Sempre  que você usar a regra DS, você pode provar a mesma coisa usando algumas linhas extras aplicando apenas as nossas regras básicas. Assim, DS é uma regra \emph{derivada}.
 
-%%%%%% ——— - - - ————  30.3  Derivacao de Modus Tollens  ----- - - ---  -- - - 
+%%%%%% ——— - - - ————  31.3  Derivacao de Modus Tollens  ----- - - ---  -- - - 
 \section{Derivação de Modus Tollens}
 Suponha que você tenha o seguinte em sua prova:
 \begin{fitchproof}
@@ -1638,9 +1641,9 @@ Agora você deseja, na linha~$k$, provar $\enot \meta{A}$. Você pode fazer isso
 		\close
 	\have{no}{\enot\meta{A}}\ni{a-nb1}
 \end{fitchproof}
-Novamente, a regra  MT pode ser derivada das regras  \emph{básicas} do Capítulo \ref{s:BasicTFL}.
+Novamente, esta prova esquemática mostra que a regra MT é desnecessária e pode ser derivada das regras  \emph{básicas} do Capítulo \ref{s:BasicTFL}.
 
-%%%%%% ——— - - - ——  30.4  Derivacao da Eliminacao da dupla negacao
+%%%%%% ——— - - - ——  31.4  Derivacao da Eliminacao da dupla negacao
 
 \section{Derivação da Eliminação da Dupla Negação}
 Considere o seguinte esquema de dedução:
@@ -1652,9 +1655,9 @@ Considere o seguinte esquema de dedução:
 	\close
 	\have{con}{\meta{A}}\ip{a-a1}
 \end{fitchproof}
-Aqui também podemos derivar a regra DNE das regras \emph{básicas} do Capítulo \ref{s:BasicTFL}.
+Aqui também conseguimos derivar a regra DNE das regras \emph{básicas} do Capítulo \ref{s:BasicTFL}.
 
-%%%%%% ——— - - - ——  30.5   Derivacao do terceiro excluido  ----------------------
+%%%%%% ——— - - - ——  31.5   Derivacao do terceiro excluido  ----------------------
 \section{Derivação do terceiro excluído}
 Suponha que você queira provar algo usando a regra LEM, ou seja, você tem em sua prova
  
@@ -1670,7 +1673,8 @@ Suponha que você queira provar algo usando a regra LEM, ou seja, você tem em s
 \end{fitchproof}
 Agora você deseja, na linha~$l+1$, provar $\meta{B}$. A regra LEM do Capítulo \ref{s:Further} permitiria que você fizesse isso. Mas, você pode obter $\meta{B}$ usando apenas as regras  \emph{básicas} do Capítulo \ref{s:BasicTFL}.
 
-Uma opção é primeiro provar  $\meta{A} \eor \enot\meta{A}$, e depois aplicar a regra $\eor$E, ou seja, provar por casos:
+Um modo de fazer isso é provar $\meta{A} \eor \enot\meta{A}$ e depois usar a regra $\eor$E citando $\meta{A} \eor \enot\meta{A}$ e as duas subprovas acima. Veja abaixo uma representação esquemática deste procedimento, onde no lugar dos três pontos você deve inserir a prova de $\meta{A} \eor \enot\meta{A}$ que fizemos na Seção \ref{s:proofLEM}:
+
 \begin{fitchproof}
   \open
   \hypo[m]{a}{\meta{A}}
@@ -1684,9 +1688,11 @@ Uma opção é primeiro provar  $\meta{A} \eor \enot\meta{A}$, e depois aplicar 
   \have[i]{tnd}{\meta{A} \eor \enot \meta{A}}
   \have[i+1]{fin}{\meta{B}}\oe{tnd, a-aaa,b-bbb}
 \end{fitchproof}
-(Na Seção \ref{s:proofLEM} fizemos uma prova de $\meta{A} \eor \enot\meta{A}$  usando apenas nossas regras básicas.)
 
-Aqui está outra maneira que é um pouco mais complicada do que as anteriores. O que você precisa fazer é incorporar suas duas subprovas dentro de outra subprova. A suposição da subprova será $\enot \meta{B}$, e a  última linha $\ered$. Assim,  para obter a subprova completa você precisa concluir \meta{B} usando IP. Dentro da prova, você precisa trabalhar um pouco mais para obter~$\ered$:
+ 
+
+
+Uma outra maneira um pouco mais complicada de obter o mesmo resultado da regra LEM (terceiro excluído) usando apenas as regras básicas é obtido incorporando as duas subprovas acima dentro de uma outra subprova cuja suposição é $\enot \meta{B}$ e a última linha é `$\ered$'. Se você fizer isso, você poderá concluir \meta{B} e completar sua prova usando IP. Dentro da subprova você precisa trabalhar um pouco para obter `$\ered$'. Todo este procedimento está explicitado no esquema abaixo. Examine-o com calma.
 
 \begin{fitchproof}
   \open
@@ -1709,9 +1715,9 @@ Aqui está outra maneira que é um pouco mais complicada do que as anteriores. O
   \close
   \have{B}{\meta{B}}\ip{nb-(bot)}
 \end{fitchproof}
-Observe que, como adicionamos uma suposição na parte superior e conclusões adicionais dentro das subprovas, os números das linhas mudam. Você pode aceitar isso por enquanto até entender o que está acontecendo.
+Observe que, como adicionamos uma suposição na parte superior e conclusões adicionais dentro das subprovas, os números das linhas mudam.
 
-%%%%%% ——— - - - ——  30.6  Derivacao das regras de De Morgan ___________
+%%%%%% ——— - - - ——  31.6  Derivacao das regras de De Morgan ___________
 \section{Derivação das regras de De Morgan}
 Aqui está uma demonstração de como poderíamos derivar a primeira regra de De Morgan:
  
@@ -1755,7 +1761,7 @@ E agora, veremos como poderíamos derivar a segunda regra de De Morgan:
  
 Demonstrações semelhantes podem ser apresentadas, explicando como poderíamos derivar a terceira e a quarta regra de De Morgan. Estas são deixadas como exercícios.
 
-%%%%%% ---------------------------CAP  30   EXECICIOS  -----------------------------------------------  
+%%%%%% ---------------------------CAP  31   EXECICIOS  -----------------------------------------------  
 \practiceproblems
 
 \problempart
@@ -1769,8 +1775,8 @@ As provas que você ofereceu em resposta aos exercícios dos Capítulos  \ref{s:
 \
 
 \problempart
-Dê uma prova para $\meta{A} \eor \enot\meta{A}$. Em seguida, faça uma prova que \emph{use apenas as regras básicas}.
-
+Faça uma prova para $\meta{A} \eor \enot\meta{A}$ usando a regra LEM. Em seguida faça outra prova de $\meta{A} \eor \enot\meta{A}$ que \emph{use apenas as regras básicas}.
+ 
 \
 
 \problempart
@@ -1782,25 +1788,28 @@ Mostre que se você tivesse LEM como regra básica, poderia justificar IP como r
   \have[n]{aaa}{\ered}
   \close
 \end{fitchproof}
-Como você pode usar isto para provar \meta{A} sem usar IP, mas usando
-LEM, bem como todas as outras regras básicas?
+Sua tarefa é tentar provar \meta{A}, a partir desta prova, com a seguinte restrição: você não pode usar a regra IP. Pode usar apenas a regra LEM e todas as outras regras básicas.
 
 \
 
 \problempart
 Dê uma prova da primeira regra de De Morgan, mas usando apenas as regras básicas, em particular,  \emph{sem} usar o LEM. (Obviamente, você pode combinar a prova usando LEM com a prova  \emph{do}~LEM. Tente encontrar uma prova diretamente.)
 
-%%%%%% ----------------------   CPA 31  -   Correcao e completude  --------------------------
+
+ 
+%%%%%% ----------------------   CPA 32  -   Correcao e completude  --------------------------
 
 \chapter{Correção e completude}
 \label{sec:soundness_and_completeness}
 
-No Capítulo \ref{s:ProofTheoreticConcepts}, vimos que poderíamos usar derivações para testar os mesmos conceitos testados antes com tabelas de verdade. Poderíamos, além de usar derivações para provar que um argumento é válido, também poderíamos usá-las para testar se uma sentença é uma tautologia ou se um par de sentenças é equivalente. Também começamos a usar o roleta única da mesma maneira que usamos a roleta  dupla.  Se pudéssemos provar que \meta{A} era uma tautologia com uma tabela de verdade,  escreveríamos  $\entails \meta{A}$, e se pudéssemos prová-la usando uma derivação, escreveríamos $\proves \meta{A}.$ 
 
-Você pode ter se perguntado naquele momento se os dois tipos de roletas sempre funcionavam da mesma maneira. Se você pode mostrar que \meta{A} é uma tautologia usando tabelas de verdade, também pode sempre mostrar que é um teorema usando uma derivação? O inverso é verdadeiro? Essas coisas também são verdadeiras para argumentos válidos e pares de sentenças equivalentes? Como se vê, a resposta para todas essas perguntas e muitas outras como essas é sim. Podemos mostrar isso definindo todos esses conceitos separadamente e depois provar que eles são equivalentes.  Isto é, imaginamos que realmente temos duas noções de validade, validade$_{\entails}$ e validade$_{\proves}$ e, em seguida, mostramos que os dois conceitos sempre funcionam da mesma maneira.
+No Capítulo \ref{s:ProofTheoreticConcepts}, vimos que podemos usar derivações para testar os mesmos conceitos que antes testávamos com tabelas de verdade. Vimos que podemos não apenas usar derivações para comprovar que um argumento é válido, como também para verificar se uma sentença é uma tautologia ou se duas sentenças são ou não equivalentes. Também começamos a usar a roleta simples de maneira análoga ao uso da roleta dupla. Por exemplo, do mesmo modo que  $\entails \meta{A}$ denota que temos uma tabela de verdade que mostra que \meta{A} é uma tautologia, de modo similar $\proves \meta{A}$ passou a denotar que temos uma derivação de \meta{A} sem premissas não descartadas.
 
+Você pode ter se perguntado naquele ponto se os dois tipos de roletas sempre funcionam da mesma maneira. Será que sempre que você consegue mostrar que \meta{A} é uma tautologia usando tabelas de verdade, conseguirá também mostrar que \meta{A} é um teorema usando uma derivação? E o inverso, também é verdadeiro? Será que essa correspondência entre os testes que fazemos com tabelas de verdade e aqueles feitos com provas em dedução natural vale também para as noções de argumentos válidos, ou de pares de sentenças equivalentes? O fato é que a resposta para todas essas perguntas e muitas outras questões semelhantes é sim. E isso pode ser demonstrado. Primeiro temos que definir cada uma destas noções de dois modos separados, um modo via valorações (tabelas de verdade) e outro via provas formais em dedução natural. Depois temos que provar que estas diferentes definições são equivalentes. Por exemplo, imaginamos que temos duas noções de validade, a validade$_{\entails}$ e a validade$_{\proves}$ e, em seguida, mostramos que essas duas validades aplicam-se exatamente aos mesmos argumentos.
 
-Para começar, precisamos definir todos os nossos conceitos lógicos separadamente para tabelas de verdade e  para derivações. Muito deste trabalho já foi feito.  Manuseamos com todas as definições de tabela de verdade no Capítulo \ref{s:SemanticConcepts}. Também já fornecemos definições sintáticas para tautologias (teoremas) e pares de sentenças logicamente equivalentes. As outras definições seguem naturalmente. Para a maioria das propriedades lógicas, podemos testá-las usando derivações, e aquelas que não podemos testar diretamente podem ser definidas em termos dos conceitos que podemos definir.
+Para começar, precisamos definir todos os nossos conceitos lógicos separadamente para tabelas de verdade e  para derivações. Muito deste trabalho já foi feito. 
+Todas as definições dessas noções lógicas feitas através de tabelas de verdade (chamadas de definições semânticas) foram apresentadas no  Capítulo \ref{s:SemanticConcepts}. Além disso também já vimos algumas definições correspondentes feitas via provas formais (chamadas de definições sintáticas), como a definição de teorema e de sentenças dedutivamente equivalentes que correspondem respectivamente às definições de tautologia e de sentenças logicamente equivalentes.
+Para a maioria das propriedades lógicas, podemos testá-las usando derivações, e aquelas que não podemos testar diretamente podem ser definidas em termos dos conceitos que podemos definir.
 
 Por exemplo, definimos um teorema como uma sentença que pode ser derivada sem quaisquer premissas (p.~\pageref{def:syntactic_tautology_in_sl}). Como a negação de uma contradição é uma tautologia, podemos definir uma \xdefine{CONTRADICAO SINTATICA NA LVF} \label{def:syntactic_contradiction_in_sl} como uma sentença cuja negação pode ser derivada sem quaisquer premissas. A definição sintática de uma sentença contingente é um pouco diferente. Não temos nenhum método prático e finito para provar que uma sentença é contingente usando derivações, da mesma maneira que fizemos usando tabelas de verdade. Portanto, precisamos nos contentar em definir ``sentença contingente'' negativamente. Uma sentença é \xdefine{{SINTATICAMENTE CONTINGENTE NA LVF}} \label{def:syntactically_contingent_in_sl} se ela  não for um teorema ou uma contradição. 
  
@@ -1814,7 +1823,7 @@ Finalmente, um argumento é  \xdefine{DEDUTIVAMENTE VALIDO NA LVF} \label{def:sy
 \begin{tabu}{X[.5,c,m] ||X[1,l,m] |X[1,l,m]}
 \textbf{Conceito} 		&	\textbf{Definição (semântica): tabela de verdade} 	&	\textbf{ Definição  (sintática):  teoria da prova} \\ \hline \hline
 
-Tautologia  &	Uma sentença cuja tabela de verdade só tem Vs sob o conectivo principal  & Uma sentença que pode ser derivada sem nenhuma premissa	 \\ \hline
+Tautologia / Teorema  &	Uma sentença cuja tabela de verdade só tem Vs sob o conectivo principal  & Uma sentença que pode ser derivada sem nenhuma premissa	 \\ \hline
  
 Contradição		&	Uma sentença cuja tabela de verdade só tem Fs sob o conectivo principal  &	Uma sentença cuja negação pode ser derivada sem quaisquer premissas\\ \hline
 
@@ -1833,36 +1842,20 @@ Argumento válido 		&	Um argumento cuja tabela de verdade não tem  nenhuma linh
 \end{sidewaystable}
 
 
-Todos os nossos conceitos foram definidos agora semântica e sintaticamente. Como podemos provar que essas definições sempre funcionam da mesma maneira? Uma prova completa aqui vai muito além do escopo deste livro. No entanto, podemos fazer um esboço de como ela seria. Vamos nos concentrar em mostrar que as duas noções de validade são equivalentes. A partir disso, os outros conceitos seguirão rapidamente. A prova vai em duas direções. Primeiro,  mostraremos que tudo que é sintaticamente válido também é semanticamente válido. Em outras palavras, tudo o que podemos provar usando derivações também pode ser comprovado usando tabelas de verdade. Simbolicamente,  queremos mostrar que  válido$_{\proves}$ implica válido$_{\entails}$. Depois, mostraremos a outra  direção, válido$_{\entails}$ implica válido$_{\proves}$
+Todos os nossos conceitos foram definidos agora semântica e sintaticamente. Como podemos provar que essas definições sempre funcionam da mesma maneira? Uma prova completa aqui vai muito além do escopo deste livro. No entanto, podemos dar uma ideia como ela seria. Vamos nos concentrar em mostrar que as duas noções de validade são equivalentes. A partir disso, os outros conceitos seguirão rapidamente. A  prova vai em duas direções. Primeiro, devemos mostrar que tudo que é sintaticamente válido também é semanticamente válido.  
+Em outras palavras, tudo o que podemos provar usando derivações também pode ser comprovado usando tabelas de verdade. Simbolicamente,  queremos mostrar que  válido$_{\proves}$ implica válido$_{\entails}$. Depois, mostraremos a outra  direção, válido$_{\entails}$ implica válido$_{\proves}$
 
-  
-%%%%%% ---------------CORRECAO  ???????-----------------  
 
 Mostrar que $\proves $ implica  $\entails $  é  o problema da \define{soundness}. \label{def:soundness} Um sistema de provas é  \definepl{soundness} se não houver derivações de argumentos que possam ser mostrados inválidos pelas tabelas de verdade. 
  \label{def_Soundness} 
 
-Demonstrar que o sistema de provas é correto exigiria mostrar que  \emph{qualquer} prova possível é a prova de um argumento válido. Não seria suficiente ter sucesso ao tentar provar muitos argumentos válidos e falhar ao tentar provar argumentos inválidos.
+Para garantir a correção de provas não é suficiente que você sempre tenha conseguido provar todos os argumentos válidos que já tentou e que nunca tenha conseguido provar os argumentos inválidos que já tentou. Demonstrar que o sistema de provas é correto exige mostrar que qualquer prova que possa ser produzida nele é a prova de um argumento válido.  No  Capítulo \ref{ch:Soundness}, apresentaremos uma prova detalhada de  que o sistema formal de provas da LVF é correto.  
 
-A prova que iremos esboçar depende do fato de que inicialmente definimos uma sentença da LVF usando uma definição indutiva (ver p.~\pageref{TFLsentences}). Também poderíamos ter usado definições indutivas para definir uma prova na LVF e uma tabela de verdade \nix{Later this will be a truth assignment}(mas não o fizemos.)  Se tivéssemos essas definições, poderíamos usar uma \emph{prova indutiva} para mostrar a correção da LVF. Uma prova indutiva funciona da mesma maneira que uma definição indutiva. Com a definição indutiva, identificamos um grupo de elementos básicos que foram estipulados como exemplos da coisa que estávamos tentando definir. No caso de uma sentença da LVF, a classe base foi o conjunto de letras sentenciais $A$, $B$, $C$, \dots. 
-
-Apenas anunciamos que existiam essas sentenças. O segundo passo de uma definição indutiva é dizer que qualquer coisa construída a partir da sua classe base usando certas regras também conta como um exemplo do que você está definindo. No caso da definição de uma sentença, as regras correspondiam aos cinco conectivos sentenciais (ver  p.~\pageref{TFLsentences}). Uma vez estabelecida uma definição indutiva, você pode usá-la para mostrar que todos os membros da classe que você definiu possuem determinada propriedade. Você simplesmente prova que a propriedade é verdadeira para os membros da classe base e depois prova que as regras para estender a classe base não alteram a propriedade. Isto é o que significa dar uma prova indutiva.
- 
- Mesmo que não tenhamos uma definição indutiva de prova na LVF, podemos esboçar como seria uma prova indutiva da correção da LVF. Imagine uma classe base de provas de uma linha, uma para cada uma das nossas onze regras de inferência. Os membros dessa classe seriam da forma $\meta{A}, \meta{B} \proves  \meta{A} \eand \meta{B}$; $\meta{A} \eand \meta{B} \proves \meta{A}$; $\meta{A} \eor \meta{B}, \enot\meta{A} \proves  \meta{B}$ \ldots{} etc. Como algumas regras têm duas formas diferentes, teríamos que adicionar alguns membros a essa classe base, por exemplo $\meta{A} \eand \meta{B} \proves  \meta{B}$.  Observe que essas são todas declarações na metalinguagem. A prova  que a LVF é correta não faz parte da LVF, porque a LVF não tem o poder de falar sobre si mesma.
-
-Você pode usar as tabelas de verdade para mostrar que cada uma dessas provas de uma linha  nesta classe base é válida$_{\entails}$. Por exemplo, a prova de $\meta{A}, \meta{B} \proves \meta{A} \eand \meta{B}$ corresponde a uma tabela de verdade que mostra, $\meta{A}, \meta{B} \entails  \meta{A} \eand \meta{B}$. Isso estabelece a primeira parte de nossa prova indutiva.  
-
-O próximo passo é mostrar que a adição de linhas em qualquer prova nunca transformará uma prova válida$_{\entails}$ em uma inválida$_{\entails}$. Precisaríamos fazer isso para cada uma das nossas onze regras básicas de inferência. Assim, por exemplo, para  \eand{I} precisamos mostrar que, para qualquer prova $\meta{A}_{1}$, \dots, $\meta{A}_{n} \proves  \meta {B}$ adicionando uma linha onde usamos a  regra \eand{I} para deduzir $\meta{C} \eand \meta{D}$, onde $\meta{C} \eand \meta{D}$ pode ser legitimamente derivada de $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta{B}$,  não transformaria uma prova válida em uma prova inválida. Mas atenção, se podemos derivar legitimamente $\meta{C} \eand \meta{D}$ dessas premissas, então $\meta{C}$ e $\meta{D}$  já estavam disponíveis na prova. Elas já estavam entre $\meta{A}_{1}$, \dots, $\meta{A}_{n}$,~$\meta {B}$, ou foram legitimamente derivadas delas.  Assim sendo, qualquer linha da tabela  de verdade na qual as premissas são verdadeiras deve ser uma linha da tabela de verdade na qual \meta{C} e \meta{D} são verdadeiras. De acordo com a tabela de verdade característica de \eand, isso significa que $\meta{C} \eand \meta{D}$ também é verdadeira nessa linha. Portanto,  $\meta{C} \eand \meta{D}$ segue validamente a partir das premissas. Isso significa que o uso da regra $\eand$E rule para estender uma prova válida produz outra prova válida.
-
-
-Para mostrar que o sistema de provas é coreto, precisaríamos mostrar isso para as outras regras de inferência. Como as regras derivadas são consequências das regras básicas, seria suficiente fornecer argumentos semelhantes para as 11 outras regras básicas. Este exercício tedioso está além do escopo deste livro.
-
-
-Assim, mostramos que $\meta{A} \proves  \meta{B}$ implica $\meta{A} \entails \meta{B}.$ A outra direção seria pensar que \emph{todo} argumento que pode ser mostrado válido usando tabelas de verdade também pode ser mostrado usando uma derivação.
-
+A outra direção seria pensar que \emph{todo} argumento que pode ser mostrado válido usando tabelas de verdade também pode ser mostrado usando uma derivação.
 Esse é o problema da completude. Um sistema de provas tem a propriedade da   \define{completude} \label{def:completeness} se e somente se houver uma derivação de todo argumento semanticamente válido. Provar que um sistema é completo é geralmente mais difícil do que provar que é correto. Provar que um sistema é correto significa mostrar que todas as regras do seu sistema de provas funcionam da maneira como deveriam.
-Mostrar que um sistema é completo significa mostrar que você incluiu \emph{todas} as regras necessárias e que não deixou nada de fora. Mostrar isso está além do escopo deste livro. O ponto importante é que, felizmente, o sistema de provas da LVF é coreto e completo. Este não é o caso de todos os sistemas de prova ou todas as linguagens formais. Por ser o caso da LVF, podemos optar por fornecer provas ou fornecer tabelas de verdade, o que for mais fácil para a tarefa em questão.
+Mostrar que um sistema é completo significa mostrar que você incluiu \emph{todas} as regras necessárias e que não deixou nada de fora. Mostrar isso está além do escopo deste livro. O ponto importante é que, felizmente, o sistema de provas da LVF é coreto e completo. Este não é o caso de todos os sistemas de prova ou todas as linguagens formais. Como a LVF satisfaz a completude e a correção,  podemos optar por fornecer provas ou fornecer tabelas de verdade, o que for mais fácil para a tarefa em questão.
 
-Agora que sabemos que o método da tabela de verdade é intercambiável com o método de derivações, você pode escolher qual método deseja usar para qualquer problema. Os alunos geralmente preferem usar tabelas de verdade, porque elas podem ser produzidas apenas mecanicamente, e isso parece ``mais fácil''. No entanto, já vimos que as tabelas de verdade se tornam impossivelmente grandes com um pouco mais de letras sentenciais.
+Agora que sabemos que o método das tabelas de verdade é intercambiável com o método de derivações, você pode escolher qual método deseja usar para qualquer problema. Os alunos geralmente preferem usar tabelas de verdade, porque elas podem ser produzidas apenas mecanicamente, e isso parece ``mais fácil''. No entanto, já vimos que as tabelas de verdade se tornam impossivelmente grandes com um pouco mais de letras sentenciais.
 Por outro lado, existem algumas situações em que o uso de provas simplesmente não é possível. Definimos sintaticamente uma sentença contingente como uma sentença que não pode ser provada ser uma tautologia ou uma contradição. Não existe um modo prático de provar esse tipo de declaração negativa. Nunca saberemos se não existe alguma prova de que uma declaração é uma contradição e ainda não a encontramos. Não temos nada a fazer nessa situação, senão recorrer a tabelas de verdade. Da mesma forma, podemos usar derivações para provar que duas sentenças são equivalentes, mas e se quisermos provar que elas \emph{não} são equivalentes? Não temos como provar que nunca encontraremos a prova relevante. Então, temos que voltar às tabelas de verdade de novo.
 
 A tabela \ref{table.ProofOrModel} resume quando é melhor usar provas e quando é melhor usar tabelas de verdade. 
@@ -1870,20 +1863,21 @@ A tabela \ref{table.ProofOrModel} resume quando é melhor usar provas e quando �
 \begin{table}[H]\scriptsize
 \tabulinesep=1ex
 \begin{tabu}{X[.7,c,m] ||X[1,l,m] |X[1,l,m]}
-\textbf{Propriedade lógica} 	&	\textbf{Para provar que está presente} 	&	\textbf{Para provar que está ausente} \\ \hline \hline
-Ser um teorema  &  Derivar a sentença 	& Encontrar uma linha falsa na tabela de verdade para a sentença \\ \hline
-Ser uma contradição  &  Derivar a negação da sentença   &  Encontrar uma linha verdadeira na tabela de verdade para a sentença\\ \hline
-Contingência 			&  Encontrar uma linha falsa e uma linha verdadeira na tabela de verdade para a sentença & Provar a sentença ou sua negação \\ \hline
+\textbf{Propriedade lógica} 	&	\textbf{Provar que é satisfeita} 	&	\textbf{Provar que não é satisfeita} \\ \hline \hline
+É um teorema ou uma tautologia  &  Derivar a sentença 	& Encontrar uma linha falsa na tabela de verdade para a sentença \\ \hline
+É uma contradição  &  Derivar a negação da sentença   &  Encontrar uma linha verdadeira na tabela de verdade para a sentença\\ \hline
+É uma contingência			&  Encontrar uma linha falsa e uma linha verdadeira na tabela de verdade para a sentença & Provar a sentença ou sua negação \\ \hline
 
-Equivalência	& Derivar cada sentença da outra 	 & Encontrar uma linha na tabelas de verdade  para a sentença onde elas tenham valores diferentes\\ \hline
-Consistência		& Encontrar uma linha na tabela de verdade para a sentença em que todas elas são verdadeiras & Derivar uma contradição das sentenças\\ \hline
-Validade				&  Derivar a conclusão a partir das premissas & Encontrar uma linha na tabela de verdade onde as premissas são todas verdadeiras e a conclusão é falsa. \\ 
+São sentenças equivalentes	& Fazer uma prova de cada uma das sentenças na qual a única hipótese é a outra sentença 	 & Encontrar uma linha na tabela de verdade conjunta para as sentenças na qual as sentenças tenham valores diferentes na coluna de seus conectivos principais. \\ \hline
+São sentenças incompatíveis ou inconsistentes		& Encontrar uma linha em uma tabela de verdade conjunta para as sentenças na qual a coluna do conectivo principal de todas elas tem valor verdadeiro.
+ & Fazer uma prova cuja última linha é uma contradição e cujas premissas não descartadas são as sentenças em questão. \\ \hline
+O argumento é válido &  Fazer uma prova da conclusão a partir das premissas & Encontrar uma linha em uma tabela de verdade conjunta para as sentenças do argumento na qual as premissas são todas verdadeiras e a conclusão é falsa. \\ 
 \end{tabu}
 \caption{Quando fornecer uma tabela de verdade e quando fornecer uma prova.}
 \label{table.ProofOrModel}
 \end{table}
 
- %%%%%% ---------------------------CAP  31   EXECICIOS  -----------------------------------------------  
+ %%%%%% ---------------------------CAP  32   EXECICIOS  -----------------------------------------------  
  
 \practiceproblems
 \noindent\problempart Em cada um dos doze casos abaixo, use uma  derivação ou uma tabela de verdade para mostrar que: 
