@@ -99,7 +99,7 @@ A LPO é significativamente mais complexa e sutil que a LVF e, por isso, vamos c
 
 
 \section{Nomes}
-Em português, um \emph{termo singular} é uma palavra ou frase que se refere a uma pessoa, lugar ou coisa \emph{específicos}.
+Em português, um \emph{termo singular} é uma palavra ou frase que se refere a uma coisa, pessoa ou lugar \emph{específicos}.
 A palavra `cachorro', por exemplo, não é um termo singular, porque existem muitos cachorros e a palavra `cachorro' não se refere especificamente a nenhum deles.
 Já a palavra `Beto' é termo singular, porque se refere a um vira-lata específico.
 Da mesma forma, a expressão `o cachorro de Felipe' também é um termo singular, porque se refere a este mesmo  pequeno vira-lata específico.
@@ -146,12 +146,12 @@ Aqui estão alguns exemplos de predicados em português:
 Em geral, você pode pensar nos predicados como as coisas que se combinam com os termos singulares para formar sentenças completas.
 Ou seja, ao combinar o predicado `\blank\ é um cachorro' com o termo singular `Beto', obtemos a sentença completa `Beto é um cachorro'.
 Por outro lado, você pode começar com as sentenças e criar predicados a partir delas, removendo termos singulares.
-Considere, por exemplo, a sentença `Viviane pegou emprestado o carro da família de Nelson'.
+Considere, por exemplo, a sentença `Viviane pegou emprestado o carro de Nelson'.
 Ao remover um termo singular desta sentença, podemos obter qualquer um dos três predicados diferentes abaixo:
 	\begin{quote}
-		\blank\ pegou emprestado o carro da família de Nelson\\
-		Viviane pegou emprestado \blank\ de Nelson\\
-		Viviane pegou emprestado o carro da família de \blank
+		\blank\ pegou emprestado o carro de Nelson\\
+			Viviane pegou emprestado o carro de \blank\\
+		Viviane pegou emprestado \blank\ de Nelson
 	\end{quote}
 Os \definepl{predicate} na LPO são letras maiúsculas de $A$ a $Z$, com ou sem índices numéricos.
 Podemos apresentar uma chave de simbolização para predicados assim:
@@ -721,8 +721,14 @@ Suponha, em seguida, que queiramos simbolizar o argumento abaixo:
 \label{surgeon3}
 Carol é uma cirurgiã habilidosa e é uma tenista. Portanto, Carol é uma tenista habilidosa.
 \end{quote}
-Assumindo a chave de simbolização do argumento anterior, podemos adicionar um predicado (faça `$\atom{J}{x}$' significar `$x$ é uma tenista') e um nome (seja `$c$' o nome de Carol na LPO).
-Este argumento pode, então, ser simbolizado por:
+Podemos adicionar um predicado e um nome à chave de simbolização do argumento anterior:
+\begin{center}
+\begin{ekey}
+	\item[\atom{J}{x}] \gap{x} é uma tenista.
+	\item[c] Carol
+\end{ekey}
+\end{center}
+Esse último argumento pode, agora, ser simbolizado por:
 \begin{earg}
 \item[] $(\atom{C}{c} \eand \atom{H}{c}) \eand \atom{J}{c}$
 \item[\therefore] $\atom{J}{c} \eand \atom{H}{c}$
@@ -889,12 +895,12 @@ Para formar uma sentença completa a partir deles, precisamos preencher com um t
 Nós também podemos começar com uma sentença em português que contenha muitos termos singulares e remover dois deles; como resultado obteremos predicados de dois lugares.
 Considere a sentença:
 \begin{quote}
-	Viviane pegou emprestado o carro da família de Nelson.
+	Viviane pegou emprestado o carro de Nelson.
 \end{quote}
 Ao excluir dois termos singulares desta sentença, podemos obter qualquer um dos  três predicados de dois lugares diferentes listados abaixo:
 	\begin{quote}
 		Viviane pegou emprestado \blank\ de \blank\\
-		\blank\ pegou emprestado o carro da família de \blank\\
+		\blank\ pegou emprestado o carro de \blank\\
 		\blank\ pegou emprestado \blank\ de Nelson
 	\end{quote}
 e se removermos todos os três termos singulares das sentenças, obtemos um \xdefine{predicado de tres lugares} ou \xdefine{relacao ternaria}:
@@ -995,7 +1001,7 @@ Por exemplo, suponha que nosso domínio do discurso esteja restrito a Guto, Nico
 Suponha também que Guto ama Nico, mas não ama Zeca, que Nico ama Zeca, mas não ama Guto, e que Zeca ama Guto, mas não ama Nico.
 Então, nesta situação, a sentença \ref{lovecycle} é verdadeira, porque cada um dos três indivíduos do domínio ama alguém.
 
-A sentença \ref{loveconverge} pode ser simbolizada por
+A sentença \ref{loveconverge} pode ser simbolizada por:
 $$\exists y \forall x\, \atom{A}{x,y}$$
 E isto \emph{não} é verdade na situação descrita por nosso triângulo amoroso.
 Para que esta sentença fosse verdadeira, precisaria haver pelo menos uma pessoa que todos amassem, o que não é o caso na situação de nosso exemplo (porque Guto não é amado por Nico, que não é amado por Zeca, que não é amado por Guto).
@@ -1053,21 +1059,21 @@ Vamos agora tentar simbolizar as seguintes sentenças:
 A sentença \ref{dog2} pode ser parafraseada como: `Existe algum cachorro que Geraldo é dono'.
 Isso pode ser simbolizado por:
 $$\exists x(\atom{C}{x} \eand \atom{D}{g,x})$$
-A sentença \ref{dog3}, em um primeiro passo, pode obviamente ser parafraseada como
+A sentença \ref{dog3}, em um primeiro passo, pode obviamente ser parafraseada como:
 \begin{center}
 	Alguém é dono de cachorro
 \end{center}
-e, em seguida, ser novamente parafraseada como
+e, em seguida, ser novamente parafraseada como:
 \begin{center}
 	Existe algum $y$ tal que $y$ é dono de cachorro.
 \end{center}
-Podemos, então, reescrever isso como
+Podemos, então, reescrever isso como:
 \begin{center}
 	$\exists y(y\ \text{é dono de cachorro})$.
 \end{center}
 Repare que, nessa expressão, o fragmento `$y$ é dono de cachorro' é muito parecido com a sentença \ref{dog2}, com a diferença de que ele não é especificamente sobre Geraldo, mas sobre algum `$y$'.
 Então, simbolizando este fragmento de modo semelhante à simbolização da sentença \ref{dog2} podemos, finalmente, simbolizar a sentença \ref{dog3} como:
-$$\exists y \exists x(\atom{C}{x} \eand \atom{D}{y,x})$$
+$$\exists y \exists x(\atom{C}{x} \eand \atom{D}{y,x}).$$
 Vamos, neste ponto, fazer uma pausa para esclarecer o sentido que a palavra `atalho' tem no título desta Seção.
 No processo passo-a-passo de simbolização da sentença \ref{dog3}, escrevemos a expressão `$\exists y(y\ \text{é dono de cachorro})$'.
 É importante termos clareza de que essa expressão não é uma sentença da LPO, também não é uma sentença do português, nem tampouco é uma sentença de nossa metalinguagem (o português aumentado---veja Seção \ref{s:LingObjMeta}---pois não a estamos utilizando para falar sobre as sentenças da LPO).
@@ -1079,10 +1085,10 @@ A sentença \ref{dog4} pode ser parafraseada como:
 \begin{center}
 	Todo mundo que é amigo de Geraldo é dono de cachorro.
 \end{center}
-Usando nossa tática de tomar atalhos, podemos escrever
+Usando nossa tática de tomar atalhos, podemos escrever:
 $$\forall x \bigl[\atom{A}{x,g} \eif x \text{ é dono de cachorro}\bigr]$$
 O fragmento que ainda falta ser simbolizado, `$x$ é dono de cachorro', é, como no caso anterior, similar estruturalmente à sentença \ref{dog2}.
-No entanto, seria um erro simbolizá-lo de modo exatamente idêntico ao caso anterior e simplesmente escrever
+No entanto, seria um erro simbolizá-lo de modo exatamente idêntico ao caso anterior e simplesmente escrever:
 $$\forall x \bigl[\atom{A}{x,g} \eif \exists x(\atom{C}{x} \eand \atom{D}{x,x})\bigr]$$
 pois se fizermos isso, teremos aqui um \emph{choque de variáveis}.
 O escopo do quantificador universal, `$\forall x$', é a sentença condicional inteira (o antecedente e o consequente) portanto, o `$x$' em `$\atom{C}{x}$' deve ser governado pelo `$\forall x$' do início da sentença.
@@ -1114,7 +1120,7 @@ $$\overbrace{\forall x\bigl[\overbrace{\exists z(\atom{C}{z} \eand \atom{D}{x,z}
 Isso mostra que nenhuma variável está sendo forçada a servir a dois senhores (quantificadores) simultaneamente!
 
 A sentença \ref{dog6} é ainda mais complicada.
-Nós primeiro a parafraseamos como
+Nós primeiro a parafraseamos como:
 \begin{quote}
 	Para qualquer $x$ que seja amigo de um dono de cachorro, $x$ é dono de um cachorro do qual um amigo de $x$ também é dono.
 \end{quote}
@@ -1788,13 +1794,13 @@ Essa questão gerou toda uma literatura filosófica, com muito material e ramifi
 Nós aqui nos restringiremos a apenas duas observações.
 
 A primeira delas se concentra no tratamento que Russell propõe para descrições definidas vazias.
-Conforme vimos, de acordo com sua análise, quando não há $F$s, ou mesmo quando há mais de um $F$, tanto `o $F$ é $G$' quanto `o $F$ não é $G$' são falsas.
+Conforme vimos, de acordo com sua análise, quando não há `$F$'s, ou mesmo quando há mais de um `$F$', tanto `o $F$ é $G$' quanto `o $F$ não é $G$' são falsas.
 Peter Strawson sugeriu que tais sentenças não deveriam ser consideradas falsas.\footnote{
 	P.F.\ Strawson, `On Referring', 1950, \emph{Mind 59}, pp.\ 320--34.}
-Em vez disso, o que ocorre é que ambas falham igualmente em atender uma pressuposição que faz parte de seus significados: a pressuposição de que há, no domínio, um e apenas um indivíduo que satisfaz $F$.
-De acordo com Strawson, quem profere qualquer uma destas duas sentenças não está \emph{afirmando} que existe um e apenas um $F$, está \emph{pressupondo} isso. A única afirmação (ou declaração) que a sentença `o $F$ é $G$' faz é a de que este pressuposto único $F$ é um $G$.
-Para que esta declaração seja um evento comunicativo bem sucedido, a pressuposição de que existe um e apenas um $F$ tem de ser satisfeita.
-Quando ela não é satisfeita, ou porque não há qualquer $F$, ou porque há mais de um, o proferimento de `o $F$ é $G$' ou de `o $F$ não é $G$' é uma comunicação \emph{mal sucedida} e por isso não deveria ser considerada \emph{nem} como verdadeira, \emph{nem} como falsa.
+Em vez disso, o que ocorre é que ambas falham igualmente em atender uma pressuposição que faz parte de seus significados: a pressuposição de que há, no domínio, um e apenas um indivíduo que satisfaz `$F$'.
+De acordo com Strawson, quem profere qualquer uma destas duas sentenças não está \emph{afirmando} que existe um e apenas um `$F$', está \emph{pressupondo} isso. A única afirmação (ou declaração) que a sentença `o $F$ é $G$' faz é a de que este pressuposto único `$F$' é um `$G$'.
+Para que esta declaração seja um evento comunicativo bem sucedido, a pressuposição de que existe um e apenas um `$F$' tem de ser satisfeita.
+Quando ela não é satisfeita, ou porque não há qualquer `$F$', ou porque há mais de um, o proferimento de `o $F$ é $G$' ou de `o $F$ não é $G$' é uma comunicação \emph{mal sucedida} e por isso não deveria ser considerada \emph{nem} como verdadeira, \emph{nem} como falsa.
 
 Se concordarmos com Strawson, precisaremos revisar nossa lógica.
 Pois, conforme veremos na próxima Parte do livro, assim como na LVF, na LPO também existem apenas dois valores de verdade (o Verdadeiro e o Falso), e toda sentença tem de ter um desses dois valores, não havendo qualquer outra alternativa.
@@ -2075,7 +2081,7 @@ O ponto é que sempre que há variáveis em nossas fórmulas, precisamos de algu
 
 Vamos tornar esta ideia mais precisa.
 	\factoidbox{
-		Uma ocorrência de uma variável \meta{x} é uma \define{ocorrencia ligada} se está dentro do escopo de $\forall \meta{x}$ ou de $\exists \meta{x}$. 
+		Uma ocorrência da variável \meta{x} em uma fórmula é uma \define{ocorrencia ligada} se está dentro do escopo de $\forall \meta{x}$ ou de $\exists \meta{x}$. 
 		
 		\bigskip
 		
@@ -2091,7 +2097,7 @@ O escopo do quantificador existencial `$\exists z$' é `$(\atom{E}{x} \eif \atom
 
 Podemos agora, finalmente, completar a nossa definição de sentença da LPO.
 	\factoidbox{	
-		Uma \define{sentence of FOL} da LPO é qualquer fórmula que não contém ocorrências livres de variáveis.
+		Uma \define{sentence of FOL} é qualquer fórmula que não contém ocorrências livres de variáveis.
 	}
 
 

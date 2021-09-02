@@ -33,16 +33,17 @@ A_1 \eif C_1 \therefore\ & (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5 \eand A_
 &(C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5 \eor C_6 \eor C_7 \eor C_8 \eor C_9 \eor C_{10})
 \end{align*}
 Este argumento também é válido---você pode provavelmente dizer---mas para testá-lo é preciso uma tabela de verdade com
- $2^{20} = 1048576$ linhas.  A princípio, podemos configurar uma máquina para gerar tabelas de verdade e nos relatar quando o processo terminar. Na prática, argumentos mais complexos na LVF tornam-se \emph{intratável} se usamos tabelas de verdade. 
+ $2^{20} = 1.048.576$ linhas. Podemos, em princpipio, programar um computador para gerar tabelas de verdade e nos avisar quando o processo terminar. Mas o crescimento exponencial das tabelas de verdade é um desafio até mesmo para os computadores. O que ocorre na prática é que argumentos mais complexos na LVF são \emph{intratáveis} via tabelas de verdade. 
  
 %Quando chegarmos à lógica de primeira ordem (LPO) (início do capítulo   \ref{s:FOLBuildingBlocks}),   o problema torna-se dramaticamente pior.  Não existe nada como teste de tabela de verdade para a LPO.  Para assegurar se um argumento é válido ou não,  temos que raciocinar sobre  \emph{todas}   as interpretações,  mas, como vimos no Capítulo \ref{s:InfinitInterpret}, existem  infinitas interpretações  possíveis.
 
 No caso da lógica de primeira ordem (LPO), este problema é ainda pior, porque não existe um teste como o das tabelas de verdade e, conforme vimos no Capítulo \ref{s:InfinitInterpret}, para decidir se um argumento é válido precisamos raciocinar sobre uma quantidade infinita de interpretações possíveis.
-Em princípio, não podemos configurar uma máquina para tratar as infinitas interpretações possíveis e relatar quando tiver concluído:  isso \emph{nunca} terminará. Ou precisamos desenvolver modos de raciocínios mais eficientes para tratar todas as interpretações, ou precisamos procurar algo diferente. 
+Não dará certo programarmos um computador para gerar e avaliar as infinitas interpretações possíveis, porque mesmo o computador mais rápido do mundo precisaria de um tempo infinito para fazer isso. 
 
-Existem, de fato, sistemas que  codificam modos de raciocinar sobre todas as interpretações possíveis. Eles foram desenvolvidos na década de 1950 por Evert Beth e Jaakko Hintikka.  Mas não iremos seguir este caminho.  Ao invés disso,  nossa atenção será voltada para dedução natural. 
+Temos então que fazer algo diferente: podemos tentar métodos heurísticos eficientes para lidar com ``todas'' as interpretações possíveis, como fizeram Evert Beth e Jaakko Hintikka, na década de 1950;  ou podemos tentar algo novo, um modo de avaliar argumentos que não usa interpretações.
+É este segundo caminho que seguiremos aqui através dos sistemas de dedução natural.
  
-Antes de raciocinar diretamente sobre todas as valorações  (no caso da LVF) tentaremos selecionar algumas poucas regras básicas de inferência.  Algumas dessas regras  irão governar o comportamento dos conectivos sentenciais. Outras irão governar o comportamento dos quantificadores e identidade que são marcas da LPO.  
+No caso da LVF, ao invés de raciocinar diretamente sobre todas as valorações tentaremos selecionar algumas poucas regras básicas de inferência.  Algumas dessas regras  irão governar o comportamento dos conectivos sentenciais. Outras irão governar o comportamento dos quantificadores e identidade que são marcas da LPO.  
 O sistema resultante de regras nos dará um novo modo de pensar sobre a validade de argumentos.  O desenvolvimento moderno de dedução natural ocorreu de modo simultâneo e independente nos artigos de Gerhard Gentzen e Stanis\l{}aw Ja\'{s}kowski de 1934.  Entretanto, o sistema de dedução natural que vamos usar  será  baseado largamente nos trabalhos de Frederic Fitch (publicado pela primeira vez em 1952). 
 
  %%%%%% --------------------------------   CAPITULO  27 ----------------------------------------------
@@ -106,10 +107,11 @@ Então reescrevemos a sentença `$A \eand B$'  na linha~$10$ e indicamos ao lado
 
 Abaixo uma representação esquemática desta regra:
 
+\factoidbox{
 \begin{fitchproof}
 	\have[m]{a}{\meta{A}}
 	\have[\ ]{c}{\meta{A}} \by{R}{a}
-\end{fitchproof}
+\end{fitchproof}}
 Em resumo, o que a regra de reiteração diz e esse esquema mostra é que, se qualquer sentença $\meta{A}$ ocorre em alguma linha, então podemos repetir $\meta{A}$ em linhas posteriores. Cada linha de nossa prova deve  ser justificada por alguma regra, e aqui temos `R $m$'.   Isto significa:  Reiteração, aplicada à linha~$m$. 
 
  Precisamos enfatizar duas coisas.  Primeiro,   $\meta{A}$   não   é uma sentença da LVF,   mas um símbolo da metalinguagem que usamos quando queremos falar sobre qualquer sentença da LVF
@@ -146,9 +148,10 @@ Podemos representar o esquema geral da regra de introdução da conjunção assi
 	\have[n]{b}{\meta{B}}
 	\have[\ ]{c}{\meta{A}\eand\meta{B}} \ai{a, b}
 \end{fitchproof}}
-Para ser claro, o enunciado da regra é esquemático.  Isto não é propriamente uma prova,  $\meta{A}$  e $\meta{B}$ não são sentenças da LVF, mas símbolos da metalinguagem, que usamos quando queremos falar sobre qualquer sentenca da LVF (veja Capítulo \ref{s:UseMention}). 
+Deixemos claro que o enunciado da regra não é uma prova, mas um esquema, afinal, `$\meta{A}$'  e `$\meta{B}$' não são sentenças da LVF, mas símbolos da metalinguagem (metavariáveis) que usamos quando queremos falar sobre qualquer sentenca da LVF (veja o Capítulo \ref{s:UseMention}). 
 
-Similarmente,  $m$  e $n$ não são numerais  que irão aparecer em uma prova real. Eles também são símbolos da metalinguagem, os quais usamos quando queremos falar sobre qualquer numero de linha  de uma prova. Em uma  prova real, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis   para destacar o ponto em que a regra pode ser aplicada a qualquer momento.  A regra requer somente que tenhamos ambos os conjuntos disponíveis para ser usados em qualquer parte da prova. Eles podem ser separados um do outro, e podem aparecer em qualquer ordem.
+Similarmente, as indicações `$m$' e `$n$' acima não são os numerais que usaríamos em uma prova propriamente dita. Elas também são símbolos da metalinguagem, que usamos quando queremos falar sobre um número de linha não identificado de uma prova. Em uma  prova específica da LVF, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis `$m$', `$n$',...  para fazer referência a linhas não especificadas em que as sentenças citadas pela regra ocorrem.
+A regra $\eand$I requer apenas que tenhamos ambos os conjuntos em linhas anteriores à aplicação da regra. Eles podem estar próximos ou distantes um do outro, e podem aparecer em qualquer ordem.
 
 A regra é chamada de `\emph{introdução} da conjunção'  porque  ela introduz   uma sentença cujo conectivo principal é a conjunção `$\eand$'.  Correspondentemente,  temos uma regra que \emph{elimina}  este conectivo. 
 
@@ -573,7 +576,8 @@ Aqui está uma prova correspondente a este argumento:
 	\end{fitchproof}
  
 
-Não se assuste se você acha que não seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a prática, e abordaremos algumas estratégias para construir provas no Capítulo \ref{s:stratTFL}. A questão principal nesta fase é se, olhando a prova, você pode reconhecer que ela está em conformidade com as regras que estabelecemos.  Isso envolve apenas verificar todas as linhas e garantir que elas sejam justificadas de acordo com as regras que estabelecemos.
+Não se assuste se você acha que não seria capaz de fazer essa prova. A habilidade de fazer novas provas vem com a prática, e abordaremos algumas estratégias para construir provas no Capítulo \ref{s:stratTFL}. A questão principal nesta fase é se, olhando a prova, você pode reconhecer que ela está em conformidade com as regras que estabelecemos.
+Fazer isso envolve apenas ser capaz de percorrer todas as linhas de uma prova e verificar se elas estão corretamente justificadas de acordo com as regras apresentadas.
 
 %%%%%% -------- ------------- ---------- ------- ------ ------  27..8  Contradicao e negacao
 
@@ -1144,7 +1148,7 @@ Apesar desta situação parecer estranha e circular, ela não é. Note que a pro
 
 %%%%%% -----------------------28.6  Prova indireta do terceiro excluido ---------- ---------
 
-\section{Prova indireta do terceiro excluído}\label{s:proofLEM}
+\section{Prova indireta da lei do terceiro excluído}\label{s:proofLEM}
 
 A sentença `$A \eor \enot A$' é uma tautologia e, portanto, deve ter uma prova mesmo sem quaisquer premissas. Mas trabalhar do fim para o começo falha nessa situação: para obter `$A \eor \enot A$' usando $\eor$I teríamos que provar `$A$' ou `$\enot A$'; novamente, sem premissas. Mas nem `$A$' nem  `$\enot A$' é tautologia, então não conseguimos provar nenhuma das duas sem premissas. Trabalhar  do começo para o fim também não funciona, já que não há nada para assumir. Portanto, a única opção é a prova indireta.
 \begin{fitchproof}

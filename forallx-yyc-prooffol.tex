@@ -355,15 +355,15 @@ Aristóteles e seus sucessores identificaram outras formas silogísticas que dep
 \label{pr.someFOLproofs}
 Forneça uma prova para cada uma das nove afirmações seguintes. 
 \begin{earg}
-\item $\proves \forall x\,\atom{F}{x} \eif \forall y(\atom{F}{y} \eand \atom{F}{y})$
-\item $\forall x(\atom{A}{x}\eif \atom{B}{x}), \exists x\,\atom{A}{x} \proves \exists x\,\atom{B}{x}$
-\item $\forall x(\atom{M}{x} \eiff \atom{N}{x}), \atom{M}{a} \eand \exists x\,\atom{R}{x,a} \proves \exists x\,\atom{N}{x}$
-\item $\forall x\, \forall y\,\atom{G}{x,y}\proves\exists x\,\atom{G}{x,x}$
-\item $\proves\forall x\,\atom{R}{x,x} \eif \exists x\, \exists y\,\atom{R}{x,y}$
+\item $\proves \ \forall x\,\atom{F}{x} \eif \forall y(\atom{F}{y} \eand \atom{F}{y})$
+\item $\forall x(\atom{A}{x}\eif \atom{B}{x}) \ , \ \exists x\,\atom{A}{x} \ \ \proves \ \ \exists x\,\atom{B}{x}$
+\item $\forall x(\atom{M}{x} \eiff \atom{N}{x}) \ , \ \atom{M}{a} \eand \exists x\,\atom{R}{x,a} \ \ \proves \ \ \exists x\,\atom{N}{x}$
+\item $\forall x\, \ \forall y\,\atom{G}{x,y} \ \ \proves \ \ \exists x\, \ \atom{G}{x,x}$
+\item $\proves \ \forall x\,\atom{R}{x,x} \eif \exists x\, \exists y\,\atom{R}{x,y}$
 \item $\proves\forall y\, \exists x (\atom{Q}{y} \eif \atom{Q}{x})$
-\item $\atom{N}{a} \eif \forall x(\atom{M}{x} \eiff \atom{M}{a}), \atom{M}{a}, \enot\atom{M}{b}\proves \enot \atom{N}{a}$
-\item $\forall x\, \forall y (\atom{G}{x,y} \eif \atom{G}{y,x}) \proves \forall x\forall y (\atom{G}{x,y} \eiff \atom{G}{y,x})$
-\item $\forall x(\enot\atom{M}{x} \eor \atom{L}{j,x}), \forall x(\atom{B}{x}\eif \atom{L}{j,x}), \forall x(\atom{M}{x}\eor \atom{B}{x})\proves \forall x\atom{L}{j,x}$
+\item $\atom{N}{a} \eif \forall x(\atom{M}{x} \eiff \atom{M}{a}) \ , \ \atom{M}{a} \ , \ \enot\atom{M}{b} \ \ \proves \ \ \enot \atom{N}{a}$
+\item $\forall x\, \forall y (\atom{G}{x,y} \eif \atom{G}{y,x})  \ \ \proves \ \  \forall x\forall y (\atom{G}{x,y} \eiff \atom{G}{y,x})$
+\item {\small $\forall x(\enot\atom{M}{x} \eor \atom{L}{j,x}) \ , \ \forall x(\atom{B}{x}\eif \atom{L}{j,x}) \ , \ \forall x(\atom{M}{x}\eor \atom{B}{x})  \ \ \proves \ \   \forall x\atom{L}{j,x}$}
 \end{earg}
  
 \solutions
@@ -371,28 +371,28 @@ Forneça uma prova para cada uma das nove afirmações seguintes.
 \label{pr.likes}
 Escreva uma chave de simbolização para o seguinte argumento, e forneça uma prova para ele:
 \begin{quote}
-Há alguém que gosta de todos que gosta de todos que ela gosta. Portanto, há alguém que gosta dela mesma.
+Há uma pessoa que gosta de todos os que gostam de todos que ela gosta. Portanto, há uma pessoa que gosta de si mesma.
 \end{quote}
 
 
 \problempart
 Mostre que cada par de sentenças é dedutivamente equivalente.
 \begin{earg}
-\item $\forall x (\atom{A}{x}\eif \enot \atom{B}{x})$, $\enot\exists x(\atom{A}{x} \eand \atom{B}{x})$
-\item $\forall x (\enot\atom{A}{x}\eif \atom{B}{d})$, $\forall x\,\atom{A}{x} \eor \atom{B}{d}$
-\item $\exists x\,\atom{P}{x} \eif \atom{Q}{c}$, $\forall x (\atom{P}{x} \eif \atom{Q}{c})$
+\item $\forall x (\atom{A}{x}\eif \enot \atom{B}{x})$ \ \ e \ \  $\enot\exists x(\atom{A}{x} \eand \atom{B}{x})$
+\item $\forall x (\enot\atom{A}{x}\eif \atom{B}{d})$ \ \ e \ \  $\forall x\,\atom{A}{x} \eor \atom{B}{d}$
+\item $\exists x\,\atom{P}{x} \eif \atom{Q}{c}$ \ \ e \ \  $\forall x (\atom{P}{x} \eif \atom{Q}{c})$
 \end{earg}
 
 \solutions
 \problempart
 \label{pr.FOLequivornot}
-Para cada um dos cinco seguintes pares de sentenças: Se forem dedutivamente equivalentes, dê provas para mostrar isso. Caso contrário, construa uma interpretação para mostrar que eles não são logicamente equivalentes.
+Para cada par de sentenças a seguir, construa uma prova de sua equivalência ou uma interpretação mostrando que não são equivalentes.
 \begin{earg}
-\item $\forall x\,\atom{P}{x} \eif \atom{Q}{c}, \forall x (\atom{P}{x} \eif \atom{Q}{c})$
-\item $\forall x\,\forall y\, \forall z\,\atom{B}{x,y,z}, \forall x\,\atom{B}{x,x}x$
-\item $\forall x\,\forall y\,\atom{D}{x,y}, \forall y\,\forall x\,\atom{D}{x,y}$
-\item $\exists x\,\forall y\,\atom{D}{x,y}, \forall y\,\exists x\,\atom{D}{x,y}$
-\item $\forall x (\atom{R}{c,a} \eiff \atom{R}{x,a}), \atom{R}{c,a} \eiff \forall x\,\atom{R}{x,a}$
+\item $\forall x\,\atom{P}{x} \eif \atom{Q}{c}$ \ \ e \ \  $\forall x (\atom{P}{x} \eif \atom{Q}{c})$
+\item $\forall x\,\forall y\, \forall z\,\atom{B}{x,y,z}$ \ \ e \ \  $ \forall x\,\atom{B}{x,x}x$
+\item $\forall x\,\forall y\,\atom{D}{x,y}$ \ \ e \ \  $ \forall y\,\forall x\,\atom{D}{x,y}$
+\item $\exists x\,\forall y\,\atom{D}{x,y}$ \ \ e \ \  $ \forall y\,\exists x\,\atom{D}{x,y}$
+\item $\forall x (\atom{R}{c,a} \eiff \atom{R}{x,a})$ \ \ e \ \  $ \atom{R}{c,a} \eiff \forall x\,\atom{R}{x,a}$
 \end{earg}
 
 \solutions
@@ -400,16 +400,16 @@ Para cada um dos cinco seguintes pares de sentenças: Se forem dedutivamente equ
 \label{pr.FOLvalidornot}
 Para cada um dos dez seguintes argumentos: Se for válido na LPO, forneça uma prova. Se for inválido, construa uma interpretação para mostrar que é inválido.
 \begin{earg}
-\item $\exists y\,\forall x\,\atom{R}{x,y} \therefore \forall x\,\exists y\,\atom{R}{x,y}$
-\item $\forall x\,\exists y\,\atom{R}{x,y} \therefore  \exists y\,\forall x\,\atom{R}{x,y}$
-\item $\exists x(\atom{P}{x} \eand \enot \atom{Q}{x}) \therefore \forall x(\atom{P}{x} \eif \enot \atom{Q}{x})$
-\item $\forall x(\atom{S}{x} \eif \atom{T}{a}), \atom{S}{d} \therefore \atom{T}{a}$
-\item $\forall x(\atom{A}{x}\eif \atom{B}{x}), \forall x(\atom{B}{x} \eif \atom{C}{x}) \therefore \forall x(\atom{A}{x} \eif \atom{C}{x})$
-\item $\exists x(\atom{D}{x} \eor \atom{E}{x}), \forall x(\atom{D}{x} \eif \atom{F}{x}) \therefore \exists x(\atom{D}{x} \eand \atom{F}{x})$
-\item $\forall x\,\forall y(\atom{R}{x,y} \eor \atom{R}{y,x}) \therefore \atom{R}{j,j}$
-\item $\exists x\,\exists y(\atom{R}{x,y} \eor \atom{R}{y,x}) \therefore \atom{R}{j,j}$
-\item $\forall x\,\atom{P}{x} \eif \forall x\,\atom{Q}{x}, \exists x\, \enot\atom{P}{x} \therefore \exists x\, \enot \atom{Q}{x}$
-\item $\exists x\,\atom{M}{x} \eif \exists x\,\atom{N}{x}$, $\enot \exists x\,\atom{N}{x}\therefore  \forall x\, \enot \atom{M}{x}$
+\item $\exists y\,\forall x\,\atom{R}{x,y} \ \ \therefore \ \ \forall x\,\exists y\,\atom{R}{x,y}$
+\item $\forall x\,\exists y\,\atom{R}{x,y} \ \ \therefore \ \   \exists y\,\forall x\,\atom{R}{x,y}$
+\item $\exists x(\atom{P}{x} \eand \enot \atom{Q}{x}) \ \ \therefore \ \  \forall x(\atom{P}{x} \eif \enot \atom{Q}{x})$
+\item $\forall x(\atom{S}{x} \eif \atom{T}{a}) \ , \ \atom{S}{d} \ \ \therefore \ \  \atom{T}{a}$
+\item $\forall x(\atom{A}{x}\eif \atom{B}{x}) \ , \ \forall x(\atom{B}{x} \eif \atom{C}{x}) \ \ \therefore \ \  \forall x(\atom{A}{x} \eif \atom{C}{x})$
+\item $\exists x(\atom{D}{x} \eor \atom{E}{x}), \forall x(\atom{D}{x} \eif \atom{F}{x}) \ \ \therefore \ \  \exists x(\atom{D}{x} \eand \atom{F}{x})$
+\item $\forall x\,\forall y(\atom{R}{x,y} \eor \atom{R}{y,x}) \ \ \therefore \ \  \atom{R}{j,j}$
+\item $\exists x\,\exists y(\atom{R}{x,y} \eor \atom{R}{y,x}) \ \ \therefore \ \  \atom{R}{j,j}$
+\item $\forall x\,\atom{P}{x} \eif \forall x\,\atom{Q}{x} \ , \ \exists x\, \enot\atom{P}{x} \ \ \therefore \ \  \exists x\, \enot \atom{Q}{x}$
+\item $\exists x\,\atom{M}{x} \eif \exists x\,\atom{N}{x}$ \ , \ $\enot \exists x\,\atom{N}{x} \ \ \therefore \ \   \forall x\, \enot \atom{M}{x}$
 \end{earg}
 
 %%%%%% -----------------------  CAPITULO   34  - Provas com quantificadores  --------------------------  
@@ -527,7 +527,11 @@ O próximo passo é usar outra vez a estratégia do fim para o começo a partir 
 	\have[n][-1]{6}{\atom{A}{d} \eif B}\ci{2-(5)}
 	\have[n]{7}{\forall x(\atom{A}{x} \eif B)}\Ai{6}
 \end{fitchproof}
-Agora podemos continuar a prova a partir da premissa da linha~$1$. Isso é um condicional e seu consequente é a sentença~`$B$' que estamos tentando justificar na linha~$n-2$. Assim, devemos procurar uma prova para o seu antecedente, `$\exists x\,\atom{A}{x}$'. Mas  como veremos a seguir, isso é obtido  facilmente aplicando a regra  $\exists$I.   Segue a prova completa:\begin{fitchproof}
+Agora podemos continuar a prova a partir da premissa da linha~$1$.
+Ela é uma sentença condicional cujo consequente é a sentença~`$B$', que estamos tentando justificar na linha~$n-2$.
+Assim, devemos procurar uma prova para o seu antecedente, `$\exists x\,\atom{A}{x}$', e isso é obtido  facilmente aplicando a regra  $\exists$I.
+Com isso, a prova completa fica assim:
+\begin{fitchproof}
 	\hypo{1}{\exists x\,\atom{A}{x} \eif B}
 	\open
 	\hypo{2}{\atom{A}{d}}
@@ -545,13 +549,13 @@ Agora podemos continuar a prova a partir da premissa da linha~$1$. Isso é um co
 Use as estratégias  para encontrar provas para cada um dos oito argumentos e teoremas seguintes:
  
 \begin{earg}
-\item $A \eif \forall x\,\atom{B}{x} \therefore \forall x(A \eif \atom{B}{x})$
-\item $\exists x(A \eif \atom{B}{x}) \therefore A \eif \exists x\, \atom{B}{x}$
+\item $A \eif \forall x\,\atom{B}{x} \ \ \therefore \ \  \forall x(A \eif \atom{B}{x})$
+\item $\exists x(A \eif \atom{B}{x}) \ \ \therefore \ \  A \eif \exists x\, \atom{B}{x}$
 \item $\forall x(\atom{A}{x} \eand \atom{B}{x}) \eiff (\forall x\,\atom{A}{x} \eand \forall x\,\atom{B}{x})$
 \item $\exists x(\atom{A}{x} \eor \atom{B}{x}) \eiff (\exists x\,\atom{A}{x} \eor \exists x\,\atom{B}{x})$
-\item $A \eor \forall x\,\atom{B}{x}) \therefore \forall x(A \eor \atom{B}{x})$
-\item $\forall x(\atom{A}{x} \eif B) \therefore \exists x\,\atom{A}{x} \eif B$
-\item $\exists x(\atom{A}{x} \eif B) \therefore \forall x\,\atom{A}{x} \eif B$
+\item $A \eor \forall x\,\atom{B}{x}) \ \ \therefore \ \  \forall x(A \eor \atom{B}{x})$
+\item $\forall x(\atom{A}{x} \eif B) \ \ \therefore \ \  \exists x\,\atom{A}{x} \eif B$
+\item $\exists x(\atom{A}{x} \eif B) \ \ \therefore \ \  \forall x\,\atom{A}{x} \eif B$
 \item $\forall x(\atom{A}{x} \eif \exists y\,\atom{A}{y})$
 \end{earg}
 Use somente as regras básicas da LVF, além das regras básicas dos quantificadores.
@@ -559,7 +563,7 @@ Use somente as regras básicas da LVF, além das regras básicas dos quantificad
 \problempart
 Use as estratégias para encontrar provas para cada um dos cinco seguintes argumentos e teoremas:
 \begin{earg}
-\item $\forall x\,\atom{R}{x,x} \therefore \forall x\,\exists y\,\atom{R}{x,y}$
+\item $\forall x\,\atom{R}{x,x}  \ \ \therefore \ \ \forall x\,\exists y\,\atom{R}{x,y}$
 \item $\forall x\,\forall y\,\forall z[(\atom{R}{x,y} \eand \atom{R}{y,z}) \eif \atom{R}{x,z}]$ \\
 $\therefore \forall x\,\forall y[\atom{R}{x,y} \eif \forall z(\atom{R}{y,z} \eif \atom{R}{x,z})]$
 \item $\forall x\,\forall y\,\forall z[(\atom{R}{x,y} \eand \atom{R}{y,z}) \eif \atom{R}{x,z}],$\\ $\forall x\,\forall y(\atom{R}{x,y} \eif \atom{R}{y, x})$ \\ $\therefore \forall x\,\forall y\,\forall z[(\atom{R}{x,y} \eand \atom{R}{x,z}) \eif \atom{R}{y,z}]$
@@ -570,9 +574,9 @@ $\therefore \forall x\,\forall y[\atom{R}{x,y} \eif \forall z(\atom{R}{y,z} \eif
 \problempart
 Use as estratégias para encontrar provas para cada um dos cinco seguintes argumentos e teoremas
 \begin{earg}
-\item $\forall x\,\atom{A}{x} \eif B \therefore \exists x(\atom{A}{x} \eif B)$
-\item $A \eif \exists x\, \atom{B}{x} \therefore \exists x(A \eif \atom{B}{x})$
-\item $\forall x(A \eor \atom{B}{x}) \therefore A \eor \forall x\,\atom{B}{x})$
+\item $\forall x\,\atom{A}{x} \eif B \ \ \therefore \ \  \exists x(\atom{A}{x} \eif B)$
+\item $A \eif \exists x\, \atom{B}{x} \ \ \therefore \ \  \exists x(A \eif \atom{B}{x})$
+\item $\forall x(A \eor \atom{B}{x}) \ \ \therefore \ \  A \eor \forall x\,\atom{B}{x})$
 \item $\exists x(\atom{A}{x} \eif \forall y\,\atom{A}{y})$
 \item $\exists x(\exists y\,\atom{A}{y} \eif \atom{A}{x})$
 \end{earg}
@@ -635,14 +639,14 @@ Mostre que cada par de sentenças é dedutivamente equivalente:
 \problempart
 No Capítulo \ref{s:MoreMonadic}, vimos o que acontece quando movemos quantificadores entre  vários operadores lógicos. Mostre que cada um dos seis pares de sentenças é dedutivamente equivalente:
 \begin{earg}
-\item $\forall x(\atom{F}{x} \eand \atom{G}{a}), \forall x\,\atom{F}{x} \eand \atom{G}{a}$
-\item $\exists x(\atom{F}{x} \eor \atom{G}{a}), \exists x\,\atom{F}{x} \eor \atom{G}{a}$
-\item $\forall x(\atom{G}{a} \eif \atom{F}{x}), \atom{G}{a} \eif \forall x\,\atom{F}{x}$
-\item $\forall x(\atom{F}{x} \eif \atom{G}{a}), \exists x\,\atom{F}{x} \eif \atom{G}{a}$
-\item $\exists x(\atom{G}{a} \eif \atom{F}{x}), \atom{G}{a} \eif \exists x\,\atom{F}{x}$
-\item $\exists x(\atom{F}{x} \eif \atom{G}{a}), \forall x\,\atom{F}{x} \eif \atom{G}{a}$
+\item $\forall x(\atom{F}{x} \eand \atom{G}{a}) \ , \ \forall x\,\atom{F}{x} \eand \atom{G}{a}$
+\item $\exists x(\atom{F}{x} \eor \atom{G}{a}) \ , \ \exists x\,\atom{F}{x} \eor \atom{G}{a}$
+\item $\forall x(\atom{G}{a} \eif \atom{F}{x}) \ , \ \atom{G}{a} \eif \forall x\,\atom{F}{x}$
+\item $\forall x(\atom{F}{x} \eif \atom{G}{a}) \ , \ \exists x\,\atom{F}{x} \eif \atom{G}{a}$
+\item $\exists x(\atom{G}{a} \eif \atom{F}{x}) \ , \ \atom{G}{a} \eif \exists x\,\atom{F}{x}$
+\item $\exists x(\atom{F}{x} \eif \atom{G}{a}) \ , \ \forall x\,\atom{F}{x} \eif \atom{G}{a}$
 \end{earg}
-NB: a variável `$x$' não ocorre em `$\atom{G}{a}$'. Quando todos os quantificadores ocorrem no início de uma sentença, diz-se que essa sentença está na \emph{forma normal prenex}. Essas equivalências às vezes são chamadas de \emph{regras prenex}, pois fornecem um meio para colocar qualquer sentença na forma normal prenex.
+OBSERVAÇÃO: em todas as sentenças do exercício C a variável `$x$' não ocorre em `$\atom{G}{a}$'. Quando todos os quantificadores ocorrem no início de uma sentença, diz-se que essa sentença está na \emph{forma normal prenex}. Essas equivalências às vezes são chamadas de \emph{regras prenex}, pois fornecem um meio para colocar qualquer sentença na forma normal prenex.
 
 %%%%%% -----------------------  CAPITULO  36 - As regras para a identidade -------------------------- 
 

@@ -762,7 +762,7 @@ As outras noções lógicas que vimos, também têm definições correspondentes
 Aqui estão elas:
 
 \begin{itemize}
-\item Uma sentença  $\meta{A}$ é uma \define{validity} na LPO se e somente se $\meta{A}$ for verdadeira em todas as interpretações; ou seja, se
+\item Uma sentença  $\meta{A}$ é uma \define{validity} se e somente se $\meta{A}$ for verdadeira em todas as interpretações; ou seja, se
 $$\entails\meta{A}$$
 \item $\meta{A}$ é uma \define{contradiction of FOL} na LPO se e somente se $\meta{A}$ for falsa em todas as interpretações; ou seja, se
 $$\entails\enot\meta{A}$$
@@ -778,7 +778,7 @@ $$\meta{A}_1,\meta{A}_2,\ldots \meta{A}_n \nvDash\meta{C}$$
 	$\meta{A}\entails\meta{B}$ \ \ \ e \ \ \ $\meta{B}\entails\meta{A}$
 \end{center}
 
-\item As sentenças $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$ são \define{satisfiable in FOL} na LPO se e somente se há alguma interpretação na qual todas são verdadeiras.
+\item As sentenças $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$ são \define{satisfiable in FOL} se e somente se há alguma interpretação na qual todas são verdadeiras.
 Eles são \xdefine{conjuntamente insatisfatorias} se não houver tal interpretação.
 \end{itemize}
 
@@ -793,7 +793,7 @@ $$\exists x\, \atom{A}{x,x} \eif \atom{B}{d}$$
 Conforme a definição vista no capítulo anterior, temos que mostrar que esta  sentença não é verdadeira em todas as interpretações; isto é, que ela é falsa em alguma interpretação.
 Então será suficiente fornecermos uma única interpretação na qual a sentença seja falsa.
 
-Para que `$\exists x\,\atom{A}{x,x} \eif \atom{B}{d}$' seja falsa, o antecedente do condicional (`$\exists x\, \atom{A}{x,x}$') deve ser verdadeiro, e o consequente (`$\atom{B}{d}$') deve ser falso.
+Para que `$\exists x\,\atom{A}{x,x} \eif \atom{B}{d}$' seja falsa, o antecedente do condicional `$\exists x\, \atom{A}{x,x}$' deve ser verdadeiro, e o consequente `$\atom{B}{d}$' deve ser falso.
 Para construir uma interpretação na qual isso ocorra, começamos especificando um domínio.
 Manter o domínio pequeno facilita a especificação da extensão dos predicados; portanto, começaremos com um domínio com apenas um indivíduo.
 Digamos, então, que o único indivíduo de nosso domínio seja a cidade de Fortaleza.
@@ -853,11 +853,10 @@ Suponha que queiramos mostrar que
 \end{center}
 \emph{não são} logicamente equivalentes.
 Precisamos construir uma interpretação na qual as duas sentenças tenham valores de verdade diferentes.
-Queremos que uma das sentenças seja verdadeira e o outra falsa.
+Queremos que uma das sentenças seja verdadeira e a outra falsa.
 Começamos especificando um domínio e, novamente, o menor possível, para facilitar as coisas.
-Vamos, no entanto, precisar de pelo menos dois objetos.
-(Se o domínio tiver um único objeto as sentenças terão o mesmo valor de verdade. 
-Para perceber por que, proponha algumas interpretações com domínios de um único indivíduo e veja o que ocorre com o valor de verdade das duas sentenças.)
+Vamos, no entanto, precisar de pelo menos dois objetos, pois se o domínio tiver um único objeto, as sentenças terão o mesmo valor de verdade. 
+Para perceber por que, proponha algumas interpretações com domínios de um único indivíduo e veja o que ocorre com o valor de verdade das duas sentenças.
 Considere, então, o seguinte domínio:
 	\begin{center}
 	\begin{ekey}
@@ -927,7 +926,7 @@ Observe que nossa interpretação mostra também que
 	`$\exists x(\atom{G}{x} \eif \atom{G}{a})$' \ \ \emph{não} sustenta \ \ `$\exists x\, \atom{G}{x} \eif \atom{G}{a}$'
 \end{center}
 já que nela a primeira sentenças é verdadeira e a segunda é falsa.
-Nossa interpretação também mostra que as sentenças abaixo são conjuntamente satisfatórias, já ambas são verdadeiras nela
+Nossa interpretação também mostra que as sentenças abaixo são compatíveis, já que ambas são verdadeiras nela
 \begin{center}
 	$\exists x (\atom{G}{x} \eif \atom{G}{a})$ \ \ e \ \ $\enot (\exists x\, \atom{G}{x} \eif \atom{G}{a})$
 \end{center}
@@ -973,18 +972,18 @@ De acordo com as convenções ali apresentadas, o domínio dessa interpretação
 Ou seja, `$\atom{R}{x,y}$' é verdadeira para $\langle x, y \rangle$ apenas caso haja uma seta partindo  de \textbf{x} e chegando em \textbf{y} em nosso diagrama.
 Aqui estão algumas sentenças verdadeiras nesta interpretação:
 	\begin{ebullet}
-		\item `$\forall x \exists y\, \atom{R}{y,x}$' 
-		\item `$\exists x \forall y\, \atom{R}{x,y}$' \hfill  {\footnotesize 1 é uma testemunha}
-		\item `$\exists x \forall y (\atom{R}{y,x} \eiff x = y)$' \hfill {\footnotesize 1 é uma testemunha}
-		\item `$\exists x \exists y \exists z ((\enot y = z \eand \atom{R}{x,y}) \eand \atom{R}{z,x})$' \hfill {\footnotesize 2 é uma testemunha}
-		\item `$\exists x \forall y\, \enot \atom{R}{x,y}$' \hfill {\footnotesize 3 é uma testemunha}
-		\item `$\exists x (\exists y\, \atom{R}{y,x} \eand \enot \exists y\, \atom{R}{x,y})$' \hfill {\footnotesize 3 é uma testemunha}
+		\item $\forall x \exists y\, \atom{R}{y,x}$ 
+		\item $\exists x \forall y\, \atom{R}{x,y}$ \hfill  {\footnotesize 1 é uma testemunha}
+		\item $\exists x \forall y (\atom{R}{y,x} \eiff x = y)$ \hfill {\footnotesize 1 é uma testemunha}
+		\item $\exists x \exists y \exists z ((\enot y = z \eand \atom{R}{x,y}) \eand \atom{R}{z,x})$ \hfill {\footnotesize 2 é uma testemunha}
+		\item $\exists x \forall y\, \enot \atom{R}{x,y}$ \hfill {\footnotesize 3 é uma testemunha}
+		\item $\exists x (\exists y\, \atom{R}{y,x} \eand \enot \exists y\, \atom{R}{x,y})$ \hfill {\footnotesize 3 é uma testemunha}
 	\end{ebullet}
 Examine-as com cuidado e certifique-se de entender por que elas são todas verdadeiras na interpretação descrita pelo diagrama acima.\footnote{
 	À direita de cada sentença existencial está indicada uma \textit{testemunha}, um elemento do domínio que satisfaz a fórmula existencialmente quantificada.
 	Ou seja, cada uma destas sentenças é do tipo $\exists x \atom{\meta{A}}{x}$ e cada testemunha indicada corresponde a um indivíduo $\meta{c}$ do domínio para o qual $\atom{\meta{A}}{\meta{c}}$ é verdadeira na interpretação.}	
 	
-Isso também mostra que essas seis sentenças são conjuntamente satisfatórias.
+Isso também mostra que essas seis sentenças são compatíveis.
 Podemos, então, usar esta observação para gerar argumentos \emph{inválidos}, tais como:
 \begin{earg}
 	\item[] $\forall x \exists y\, \atom{R}{y,x}$
@@ -1005,7 +1004,7 @@ e
 	\begin{ebullet}
 		\item o argumento $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$ é inválido.
 		\item $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$ não sustentam $\meta{C}$.
-		\item $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$, $\enot \meta{C}$ são conjuntamente satisfatórias.
+		\item $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$, $\enot \meta{C}$ são compatíveis.
 	\end{ebullet}}
 Uma interpretação que refuta uma proposta, ou seja, que mostra que um argumento \emph{não} é válido, ou que uma sentença \emph{não} é uma validade (logicamente necessária), ou que um conjunto de sentenças \emph{não} sustenta uma outra sentença, é chamada de \emph{contrainterpretação} ou \emph{contramodelo}.
 
@@ -1044,7 +1043,7 @@ Mostre que as sentenças de cada um dos nove pares seguintes não são logicamen
 \end{earg}
 
 \problempart
-Mostre que as sentenças de cada um dos treze grupos abaixo são conjuntamente satisfatórias.
+Mostre que as sentenças de cada um dos treze grupos abaixo são compatíveis.
 \begin{earg}
 \item  $\atom{M}{a}, \enot \atom{N}{a}, \atom{P}{a}, \enot \atom{Q}{a}$
 \item $\atom{L}{e,e}, \atom{L}{e,g}, \enot \atom{L}{g,e}, \enot \atom{L}{g,g}$
@@ -1068,7 +1067,7 @@ Mostre que cada um dos dez argumentos abaixo é inválido.
 \item $\forall x(\atom{R}{x} \eif \atom{D}{x}), \forall x(\atom{R}{x} \eif \atom{F}{x}) \therefore \exists x(\atom{D}{x} \eand \atom{F}{x})$
 \item $\exists x(\atom{P}{x}\eif \atom{Q}{x}) \therefore \exists x\, \atom{P}{x}$
 \item $\atom{N}{a} \eand \atom{N}{b} \eand \atom{N}{c} \therefore \forall x\, \atom{N}{x}$
-\item $\atom{R}{d}e, \exists x\, \atom{R}{x,d} \therefore \atom{R}{e,d}$
+\item $\atom{R}{d,e}, \exists x\, \atom{R}{x,d} \therefore \atom{R}{e,d}$
 \item $\exists x(\atom{E}{x} \eand \atom{F}{x}), \exists x\, \atom{F}{x} \eif \exists x\, \atom{G}{x} \therefore \exists x(\atom{E}{x} \eand \atom{G}{x})$
 \item $\forall x\, \atom{O}{x,c}, \forall x\, \atom{O}{c,x} \therefore \forall x\, \atom{O}{x,x}$
 \item $\exists x(\atom{J}{x} \eand \atom{K}{x}), \exists x \enot \atom{K}{x}, \exists x \enot \atom{J}{x} \therefore \exists x(\enot \atom{J}{x} \eand \enot \atom{K}{x})$
@@ -1100,7 +1099,7 @@ Veja como podemos mostar que a sentença \mbox{`$\atom{R}{a,a}\eor\enot \atom{R}
 	\end{quote}
 Esta explicação é, ela própria, um argumento válido, e sua conclusão é verdadeira. Mas esta explicação não é um argumento na LPO, é um argumento em português \emph{sobre} a LPO; ou seja, é um argumento em nossa metalinguagem.
 
-Uma outra característica deste nosso argumento metalinguístico é que como a sentença em questão não contem quantificadores, não precisamos pensar em como interpretar `$a$' e `$R$'; dissemos apenas que qualquer que seja a interpretação,  `$\atom{R}{a,a}$' será verdadeira ou falsa.
+Uma outra característica deste nosso argumento metalinguístico é que como a sentença em questão não contém quantificadores, não precisamos pensar em como interpretar `$a$' e `$R$'; dissemos apenas que qualquer que seja a interpretação,  `$\atom{R}{a,a}$' será verdadeira ou falsa.
 Poderíamos ter argumentado de modo similar a respeito de sentenças da LVF.
 
 Eis aqui um outro exemplo de raciocínio sobre todas as interpretações.
@@ -1134,9 +1133,9 @@ Há outros casos que também exigem que raciocinemos sobre todas as interpretaç
 	\begin{ebullet}
 	\item que uma sentença é uma contradição; pois isso requer que ela seja falsa em \emph{todas} as interpretações.
 	\item que duas sentenças são logicamente equivalentes; pois isso requer que elas tenham o mesmo valor de verdade em \emph{todas} as interpretações.
-	\item que algumas sentenças são conjuntamente insatisfatórias; pois isso requer que não haja interpretação na qual todas essas sentenças sejam verdadeiras; ou seja, que, em \emph{toda} interpretação, pelo menos uma dessas sentenças seja falsa.
+	\item que algumas sentenças são incompatíveis; pois isso requer que não haja interpretação na qual todas essas sentenças sejam verdadeiras; ou seja, que, em \emph{toda} interpretação, pelo menos uma dessas sentenças seja falsa.
 	\item que um argumento é válido; pois isso requer que a conclusão seja verdadeira em \emph{toda} interpretação em que as premissas são verdadeiras.
-	\item que algumas sentenças sustentam alguma outra, pois isso também requer que a sentença sustentada seja verdadeira em \emph{toda} interpretação em que as sentenças que sustentam são verdadeiras.
+	\item que algumas sentenças sustentam alguma outra; pois isso também requer que a sentença sustentada seja verdadeira em \emph{toda} interpretação na qual as sentenças que a sustentam são verdadeiras.
 	\end{ebullet}
 O problema é que, com as ferramentas que temos no momento, raciocinar sobre todas as interpretações é um sério desafio! Vamos ver apenas mais um exemplo. Aqui está um argumento que é obviamente válido:
 	$$\forall x(\atom{H}{x} \eand \atom{J}{x}) \ \therefore \ \forall x\, \atom{H}{x}$$
@@ -1147,7 +1146,7 @@ Para mostrar isso temos que raciocinar da seguinte maneira:
 		Considere uma interpretação arbitrária na qual a premissa `$\forall x(\atom{H}{x} \eand \atom{J}{x})$' seja verdadeira.
 		Segue-se que `$\atom{H}{x} \eand \atom{J}{x}$' é satisfeita por todos os objetos nesta interpretação.
 		Então `$\atom{H}{x}$' também será satisfeita por todos os objetos.\footnote{
-			Aqui, novamente, fazemos uso do fato de que qualquer objeto que satisfaça $\meta{A}(\meta{x}) \land \meta{B}(\meta{x})$ deve satisfazer a $\meta{A}(\meta{x})$ and $\meta{B}(\meta{x})$.
+			Aqui, novamente, fazemos uso do fato de que qualquer objeto que satisfaça $\meta{A}(\meta{x}) \land \meta{B}(\meta{x})$ deve satisfazer a $\meta{A}(\meta{x})$ e $\meta{B}(\meta{x})$.
 		}
 		Logo, `$\forall x\, \atom{H}{x}$' deve ser verdadeira nesta interpretação.
 		Como a única coisa que assumimos sobre a interpretação é que nela `$\forall x(\atom{H}{x} \eand \atom{J}{x})$' é verdadeira, então, a mesma conclusão deve valer para qualquer outra interpretação que satisfaça a mesma condição.
