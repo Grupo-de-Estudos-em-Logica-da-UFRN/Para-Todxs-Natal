@@ -3,6 +3,18 @@
 
 \usepackage{forallxyyc}
 
+% Sequência abaixo permite referencias ao ambiente \begin{description} \end{description}
+% --- início da sequência ---
+\makeatletter
+\def\namedlabel#1#2{\begingroup
+    #2%
+    \def\@currentlabel{#2}%
+    \phantomsection\label{#1}\endgroup
+}
+\makeatother
+% --- fim da sequência ---
+
+
 \usepackage[absolute,overlay]{textpos}
 
 \RequirePackage[a-1b]{pdfx}

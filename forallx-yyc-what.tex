@@ -21,10 +21,12 @@ Uma das sentenças, chamada de \define{conclusion}, é o ponto final do raciocí
 As outras, chamadas de \definepl{premise}, são o ponto inicial do raciocínio e representam as informações das quais se parte para chegar à conclusão. 
 Um argumento, então, é algo como:
 
-	\begin{earg}\label{argButlerGardner}
+	\begin{earg}
 		\item[] Ou foi o mordomo, ou foi o jardineiro.
 		\item[] Não foi o mordomo.
 		\item[\therefore] Foi o jardineiro.
+		\phantomsection
+		\label{argButlerGardner}
 	\end{earg}
 	
 %Aqui temos uma série de sentenças.
@@ -246,10 +248,12 @@ em qualquer situação na qual as duas premissas forem verdadeiras, a conclusão
 Quando não existe situação possível em que as premissas são verdadeiras e a conclusão é falsa, então a verdade das premissas garante (justifica) a verdade da conclusão e o argumento é válido.
 
 Veja mais dois exemplos de argumentos válidos.
-\begin{earg}\label{ValidoMaria}
+\begin{earg}
 	\item[] Se Maria da Paz mora em Paris, então ela mora na França.
 	\item[] Maria da Paz mora em Paris.
 	\item[\therefore] Maria da Paz mora na França.
+	\phantomsection
+	\label{ValidoMaria}
 \end{earg}
 
 \begin{earg}
@@ -263,9 +267,9 @@ E mesmo assim eles são válidos.
 Isso pode ocorrer porque a validade de um argumento não nos diz nada sobre se sua conclusão é verdadeira ou não. 
 Ela nos diz apenas que as premissas dão garantia para a conclusão.
 O seja:
-\begin{description}\label{premissafalsa}
+\begin{description}
 	\item[Quando as premissas \textit{são} todas verdadeiras:] a validade do argumento garante que a conclusão também é.
-	\item[Quando as premissas \textit{não são} todas verdadeiras:] a conclusão pode ser verdadeira ou falsa.
+	\item[\namedlabel{premissafalsa}{Quando as premissas \textit{não são} todas verdadeiras:}] a conclusão pode ser verdadeira ou falsa.
 	A validade, nesse caso, garante apenas que se as premissas \textit{fossem} todas verdadeiras, a conclusão também \textit{seria}.
 \end{description}
 Então, quando alguma premissa é falsa, é perfeitamente aceitável que um argumento válido tenha conclusão falsa.
@@ -563,6 +567,7 @@ Então, se quisermos proibir cenários nos quais ser uma oftalmologista e ser um
 		\item[] Alguém é oftalmologista se e somente se é médico de olhos.
 		\item[\therefore] Jussara é uma médica de olhos.
 	\end{earg}
+
 Vamos chamar de \define{nomologicamente valido}\label{nomoval} um argumento para o qual não há contraexemplos que não violem as leis da natureza; e vamos chamar de \define{conceitualmente valido} um argumento para o qual não há contraexemplos que não violem as conexões de nossos conceitos.
 
 Esses dois exemplos de validades alternativas, ambas diferentes da validade lógica mais tradicional que estudaremos neste livro, ilustram algo muito importante:

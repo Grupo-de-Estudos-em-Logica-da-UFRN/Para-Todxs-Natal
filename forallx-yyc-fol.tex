@@ -7,10 +7,12 @@
 
 \section[Olhar dentro das sentenças]{A necessidade de `olhar dentro' das sentenças}
 Considere o seguinte argumento, que é obviamente válido em português:
-\begin{earg}\label{willard1}
+\begin{earg}
 	\item[] Samir é um lógico.
 	\item[] Todos os lógicos usam chapéus ridículos.
 	\item[\therefore] Samir usa chapéus ridículos.
+	\phantomsection
+	\label{willard1}
 \end{earg}
 Repare que todas as sentenças deste argumento são atômicas, ou seja, não são compostas por sentenças mais simples ligadas por conectivos verofuncionais.
 Por isso qualquer chave de simbolização para o argumento na LVF seria semelhante a esta:
@@ -708,11 +710,12 @@ Podemos, então, definir a seguinte chave de simbolização:
 
 Nosso argumento pode agora ser assim simbolizado:
 \begin{earg}
-\label{surgeon2}
 \item[] $\forall x\bigl[\enot (\atom{C}{x} \eand \atom{H}{x}) \eif \enot \atom{T}{x}\bigr]$
 \item[] $\forall x(\atom{C}{x} \eif \atom{G}{x})$
 \item[] $\atom{C}{b} \eand \enot \atom{H}{b}$
 \item[\therefore] $\atom{G}{b} \eand \enot \atom{T}{b}$
+\phantomsection
+\label{surgeon2}
 \end{earg}
 Reflita com calma nesta simbolização e veja como ela formaliza adequadamente o argumento, de acordo com a chave de simbolização proposta.
 
@@ -739,9 +742,10 @@ O problema é que ser \emph{habilidoso como cirurgião} é bem diferente de ser 
 Para simbolizar corretamente esse argumento precisaremos de dois predicados diferentes para `habilidoso', um para cada tipo distinto de habilidade que estamos considerando.
 Se fizermos `$\atom{H_1}{x}$' significar `$x$ é habilidoso como cirurgião' e `$\atom{H_2}{x}$' significar `$x$ é habilidoso como tenista', então poderemos simbolizar este último argumento como:
 \begin{earg}
-\label{surgeon3correct}
 \item[] $(\atom{C}{c} \eand \atom{H_1}{c}) \eand \atom{J}{c}$
 \item[\therefore] $\atom{J}{c} \eand \atom{H_2}{c}$
+\phantomsection
+\label{surgeon3correct}
 \end{earg}
 Esta nova simbolização é um argumento inválido, exatamente como o argumento original em português que ele simboliza.
 
