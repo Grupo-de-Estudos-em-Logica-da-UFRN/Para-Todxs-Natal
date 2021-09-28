@@ -869,7 +869,9 @@ Portanto, de acordo com nossa definição, `$\enot L \eif (J \eor L)$' e `$\enot
 A seguinte observação é de extrema importância:
 	\factoidbox{
 		Se $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sustentam $\meta{C}$ na LVF, então o argumento  $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$ é  válido.
-	}\label{SusVal}
+	}
+	\phantomsection
+	\label{SusVal}
 %Aqui está a explicação.
 %Conforme vimos na Seção \ref{ss:Validade}, um argumento é válido quando ele não tem contraexemplo, ou seja, quando não há situação na qual suas premissas sejam todas verdadeiras e sua conclusão seja falsa.
 %A ideia geral, então, é a seguinte:
@@ -1801,10 +1803,10 @@ Isso requer uma tabela de verdade parcial de uma linha apenas.
 Para fazer isso aplicamos estes mesmos procedimentos para construir uma tabela parcial de uma linha, na qual uma das sentenças é verdadeira e a outra é falsa.
 
 \paragraph{Consistência.}
-Para mostrar que algumas sentenças são conjuntamente satisfatórias, devemos mostrar que existe uma valoração em que todas as sentenças são verdadeiras.
+Para mostrar que algumas sentenças são compatíveis, devemos mostrar que existe uma valoração em que todas as sentenças são verdadeiras.
 Uma tabela de verdade parcial com uma única linha é suficiente para fazer isso.
 
-Já para mostrar que algumas sentenças são conjuntamente insatisfatórias, devemos mostrar que não há valoração em que todas as sentenças sejam verdadeiras. 
+Já para mostrar que algumas sentenças são incompatíveis, devemos mostrar que não há valoração em que todas as sentenças sejam verdadeiras. 
 Para isso, uma tabela parcial não basta. Precisamos de uma tabela completa, com todas as linhas para ver que em cada linha da tabela pelo menos uma das sentenças é falsa.
 
 \paragraph{Validade.}
@@ -1857,7 +1859,7 @@ Use tabelas de verdade completas ou parciais (conforme o que for apropriado) par
 \solutions
 \problempart
 \label{pr.TT.satisfiable4}
-Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para determinar se as sentenças de cada um dos seis grupos abaixo são ou não conjuntamente satisfatórias:
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para determinar se as sentenças de cada um dos seis grupos abaixo são ou não compatíveis:
 \begin{earg}
 \item $A \eand B$, $C\eif \enot B$, $C$ %unsatisfiable
 \item $A\eif B$, $B\eif C$, $A$, $\enot C$ %unsatisfiable
@@ -2108,7 +2110,7 @@ Use tabelas de verdade completas ou parciais (conforme o que for apropriado) par
 
 \noindent\problempart
 \label{pr.TT.satisfiable5}
-Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para decidir se as sentenças de cada um dos dez grupos abaixo são ou não conjuntamente satisfatórias:
+Use tabelas de verdade completas ou parciais (conforme o que for apropriado) para decidir se as sentenças de cada um dos dez grupos abaixo são ou não compatíveis:
 \begin{earg}
 \item $A\eif A$, $\enot A \eif \enot A$, $A\eand A$, $A\eor A$ %satisfiable
 \item $A \eif \enot A$, $\enot A \eif A$%unsatisfiable. 

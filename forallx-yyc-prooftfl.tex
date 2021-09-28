@@ -9,7 +9,7 @@
 
 No  Capítulo  \ref{s:Valid}, dissemos que um argumento é válido se e somente se não existe nenhuma situação na qual todas as premissas são verdadeiras e a conclusão é falsa. Posteriormente,  apresentamos as tabelas de verdade para as sentenças da LVF, onde  cada linha de uma tabela completa corresponde a uma valoração. E vimos que uma tabela de verdade conjunta para todas as sentenças de um argumento fornece um modo direto de verificar se ele é válido ou não: basta examinar se existe alguma linha na qual as premissas são todas verdadeiras e a conclusão é falsa.
 
-Entretanto, tabelas de verdade não nos dão necessariamente muito  \emph{insight}. Considere os dois seguintes argumentos na LVF:
+Entretanto, tabelas de verdade não nos dão necessariamente muito \emph{insight}. Considere os dois seguintes argumentos na LVF:
 \begin{align*}
 P \eor Q, \enot P & \therefore Q\\
 P \eif Q, P & \therefore Q
@@ -1140,7 +1140,7 @@ Neste ponto, parece que uma estratégia óbvia para tentar justificar  `$\ered$'
 \have{5}{\meta{A}}\ip{2-4}
 \end{fitchproof} 
 
-Isso parece bem estranho: lembre que estamos considerando uma situação onde as estratégias de trabalhar do começo para o fim e do fim para o começo não nos levaram a lugar nenhum e, por isso, propusemos uma nova estratégia: fazer uma prova indireta com a regra IP. A estratégia consiste em supor $\enot \meta{A}$ como hipótese de uma subprova e provar `$\ered$'. Aí, com IP, fechamos esta subprova e concluímos $\meta{A}$. Mas esta estratégia nos trouxe à situação (indicada na linha~$m - 1$ acima) onde o subobjetivo que temos que provar para completar a prova de `$\ered$' é o prórprio $\meta{A}$. Ou seja, parece que andamos em círculos. Queríamos, inicialmente, provar $\meta{A}$ e para para conseguir isso, nosso passo intermediário exige que provemos a mesma sentença $\meta{A}$.
+Isso parece bem estranho: lembre que estamos considerando uma situação onde as estratégias de trabalhar do começo para o fim e do fim para o começo não nos levaram a lugar nenhum e, por isso, propusemos uma nova estratégia: fazer uma prova indireta com a regra IP. A estratégia consiste em supor $\enot \meta{A}$ como hipótese de uma subprova e provar `$\ered$'. Aí, com IP, fechamos esta subprova e concluímos $\meta{A}$. Mas esta estratégia nos trouxe à situação (indicada na linha~$m - 1$ acima) onde o subobjetivo que temos que provar para completar a prova de `$\ered$' é o prórprio $\meta{A}$. Ou seja, parece que andamos em círculos. Queríamos, inicialmente, provar $\meta{A}$ e para para conseguir isso, nosso passo intermediário exige que provemos a mesma sentença $\meta{A}$.
 
 Apesar desta situação parecer estranha e circular, ela não é. Note que a prova de $\meta{A}$ que precisamos fazer no passo intermediário está dentro de uma subprova onde temos uma suposição adicional ($\enot \meta{A}$) para trabalhar, que não estava disponível antes. Então a situação é diferente. Vamos ver na seção seguinte um famoso exemplo de uma prova onde isso ocorre.
 
@@ -1894,8 +1894,8 @@ O argumento é válido &  Fazer uma prova da conclusão a partir das premissas &
 \item  A sentença $ \enot(X \eor (Y \eor Z)) \eor (X \eor (Y \eor Z))$  não é contingente.
 \item  A sentença $B \eif \enot S$  é equivalente à sentença $\enot \enot B \eif \enot S$.
 \item  A sentença $ \enot (X \eor O) $ não é equivalente à sentença $X \eand O$.
-\item  As sentenças $\enot(A \eor B)$, $C$, $C \eif A$  são conjuntamente inconsistentes.
-\item  As sentenças $\enot(A \eor B)$, $\enot{B}$, $B \eif A$ são conjuntamente consistentes.
+\item  As sentenças $\enot(A \eor B)$, $C$, $C \eif A$  são incompatíveis.
+\item  As sentenças $\enot(A \eor B)$, $\enot{B}$, $B \eif A$ são compatíveis.
 \item  O argumento $\enot(A \eor (B \eor C)) $ \therefore $ \enot{C}$ é válido.
 \item  O argumento $\enot(A \eand (B \eor C))$ \therefore $ \enot{C}$ é  inválido.
 \end{enumerate}
@@ -1911,9 +1911,9 @@ O argumento é válido &  Fazer uma prova da conclusão a partir das premissas &
 \item A sentença$ (B \eiff (C \eor B)) $ não é uma contradição. 
 \item A sentença$ ((\enot X \eiff X) \eor X) $  é equivalente à sentença $X$.
 \item A sentença $F \eand (K \eand R) $ não  é equivalente à sentença $ (F \eiff (K \eiff R)) $.
-\item As sentenças $ \enot (W \eif W)$, $(W \eiff W) \eand W$, $E \eor (W \eif \enot (E \eand W))$ são conjuntamente inconsistentes. 
+\item As sentenças $ \enot (W \eif W)$, $(W \eiff W) \eand W$, $E \eor (W \eif \enot (E \eand W))$ são incompatíveis. 
 
-\item As sentenças  $\enot R \eor C $, $(C \eand R) \eif \enot R$, $(\enot (R \eor R) \eif R) $ são conjuntamente consistentes.
+\item As sentenças  $\enot R \eor C $, $(C \eand R) \eif \enot R$, $(\enot (R \eor R) \eif R) $ são compatíveis.
 \item O argumento $\enot \enot (C \eiff \enot C), ((G \eor C) \eor G) \therefore ((G \eif C) \eand G) $ é válido.
 \item O argumento $ \enot \enot L,  (C \eif \enot L) \eif C) \therefore \enot C$  é  inválido.
 \end{enumerate}

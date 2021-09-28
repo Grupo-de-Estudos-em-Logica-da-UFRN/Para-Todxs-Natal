@@ -7,7 +7,7 @@
 \chapter[Extensionalidade]{Extensionali- dade}\label{s:Interpretations}
 
 A lógica verofuncional (LVF) recebeu este nome porque todos os seus conectivos são verofuncionais, ou seja, são funções de verdade.
-Dizer que um conecitvo da LVF, a conjunção (\eand) por exemplo, é uma função de verdade, é dizer algo análogo ao que os matemáticos dizem quando afirmam que a adição ($+$) é uma função numérica.
+Dizer que um conectivo da LVF, a conjunção (\eand) por exemplo, é uma função de verdade, é dizer algo análogo ao que os matemáticos dizem quando afirmam que a adição ($+$) é uma função numérica.
 A adição é uma função numérica porque ela leva números em números através de uma operação.
 Por exemplo, em  `$2+3$', a adição ($+$) toma dois números como argumentos (o $2$ e o $3$) e através de uma operação os leva a um número (o $5$) que é o resultado da adição de $2$ com $3$.
 Suponha agora que `$A$' é verdadeira e `$B$' é falsa. A conjunção `$A\eand B$' faz algo análogo ao exemplo da adição.
@@ -779,7 +779,7 @@ $$\meta{A}_1,\meta{A}_2,\ldots \meta{A}_n \nvDash\meta{C}$$
 \end{center}
 
 \item As sentenças $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$ são \define{satisfiable in FOL} se e somente se há alguma interpretação na qual todas são verdadeiras.
-Eles são \xdefine{conjuntamente insatisfatorias} se não houver tal interpretação.
+Eles são \xdefine{incompativeis} se não houver tal interpretação.
 \end{itemize}
 
 
@@ -953,7 +953,7 @@ Logo, `$\forall x \exists y\, \atom{L}{x,y}$' é verdadeira.
 Por outro lado, a conclusão, `$\exists y \forall x\, \atom{L}{x,y}$',  é claramente falsa, pois sua verdade exigiria que houvesse uma única pessoa que fosse casada com todas as outras pessoas no domínio, inclusive com ela mesma.
 Portanto, o argumento tem premissa verdadeira e conclusão falsa nesta interpretação e, por isso, é inválido.
 
-Como no exemplo anterior, podemos observar ainda, como consequência imediata, que as sentenças `$\forall x \exists y\, \atom{L}{x,y}$' e `$\enot\exists y \forall x\, \atom{L}{x,y}$' são conjuntamente satisfatórias e que `$\forall x \exists y\, \atom{L}{x,y}$' não sustenta `$\exists y \forall x\, \atom{L}{x,y}$'.
+Como no exemplo anterior, podemos observar ainda, como consequência imediata, que as sentenças `$\forall x \exists y\, \atom{L}{x,y}$' e `$\enot\exists y \forall x\, \atom{L}{x,y}$' são compatíveis e que `$\forall x \exists y\, \atom{L}{x,y}$' não sustenta `$\exists y \forall x\, \atom{L}{x,y}$'.
 
 Para o nosso terceiro exemplo, vamos misturar as coisas um pouco.
 Na Seção \ref{s:Interpret}, p.\,\pageref{s:Interpret}, descrevemos como apresentar algumas interpretações usando diagramas. Por exemplo:
@@ -1166,7 +1166,7 @@ A tabela a seguir indica, para todos os conceitos semânticos que vimos, se as d
 a sentença é uma validade? & todas & uma \\
 a sentença é uma contradição? &  todas  & uma \\
 as sentenças são equivalentes? & todas & uma \\
-as sentenças são conjuntamente satisfatórias? & uma & todas \\
+as sentenças são compatíveis? & uma & todas \\
 O argumento é válido? & todas & uma \\
 As premissas sustentam a conclusão? & todas & uma \\
 \cline{1-3}
