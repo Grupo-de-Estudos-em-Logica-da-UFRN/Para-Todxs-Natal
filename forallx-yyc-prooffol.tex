@@ -27,7 +27,7 @@ Vejamos um exemplo:
  
 Neste caso, obtivemos a linha 2 também abandonando o quantificador universal, mas substituindo todas as instâncias de `$x$' por `$d$'. Poderíamos ter feito o mesmo com qualquer outro nome que quiséssemos.
 
-Aqui está uma ilustração da regra de eliminação do universal ($\forall$E):
+Aqui está uma ilustração da regra de \textit{eliminação do universal} ($\forall$E):
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{a}{\forall \meta{x}\,\meta{A}(\meta{x})}
@@ -74,7 +74,7 @@ Aqui está uma prova que justifica esse argumento:
 Nesse caso, substituímos apenas \emph{uma} das duas ocorrências do nome `$a$' por uma variável `$x$' e colocamos o quantificador existencial.
 Antes de apresentar a regra de introdução do existencial precisamos de mais uma notação.
 
-Escreveremos $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$ para enfatizar que uma sentença $\meta{A}$ contém uma ou mais ocorrências do nome $\meta{c}$, e escrevemos $\meta{A}(\ldots \meta{x} \ldots \meta{c}\ldots)$ para indicar qualquer fórmula obtida de $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$ substituindo algumas ou todas as instâncias do nome  $\meta{c}$ pela variável $\meta{x}$. Assim, nossa regra de introdução do existencial fica:
+Escreveremos $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$ para enfatizar que uma sentença $\meta{A}$ contém uma ou mais ocorrências do nome $\meta{c}$, e escrevemos $\meta{A}(\ldots \meta{x} \ldots \meta{c}\ldots)$ para indicar qualquer fórmula obtida de $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$ substituindo algumas ou todas as instâncias do nome  $\meta{c}$ pela variável $\meta{x}$. Assim, nossa regra de \textit{introdução do existencial} fica:
  
 \factoidbox{
 \begin{fitchproof}
@@ -160,7 +160,7 @@ Ou seja, quando `$a$' é absolutamente genérico,  de `$\atom{F}{a}$' podemos co
 	Por exemplo, se para um número genérico $n$ é verdade que $\frac{2n}{2}=n$, então essa propriedade vale para todos os números e podemos concluir que $\forall x\,(\frac{2x}{2}=x)$.}
 %O ponto crucial aqui é que `$a$' é um nome \emph{arbitrário}. Não há nada especial no nome `$a$'. Poderíamos ter escolhido qualquer outro nome ao invés de `$a$' que a prova continuaria boa. É essa ideia de usar um nome genérico, sobre o qual nada foi dito, que motiva a regra de introdução do universal ($\forall$I):
 
-A nossa regra $\forall$I terá, então, que conter um meio de garantir que um dado nome é absolutamente genérico.
+A nossa regra de \textit{introdução do universal} ($\forall$I) terá, então, que conter um meio de garantir que um dado nome é absolutamente genérico.
 Isso é obtido através do uso de uma subprova rotulada e de uma restrição para a aplicação da regra:
 
 \factoidbox{
@@ -280,7 +280,7 @@ Sabemos que algo é~`$F$', ou seja, que pelo menos um indivíduo do domínio tem
 
 Detalhando isso, nas linhas $1$ e $2$ escrevemos nossas suposições e na linha~$3$ fizemos uma suposição adicional: `$\atom{F}{b}$', que é apenas uma instância de substituição de `$\exists x\,\atom{F}{x}$'. A partir disso, obtivemos `$\exists x\,\atom{G}{x}$' na linha $6$. Como não fizemos nenhuma outra suposição sobre o objeto nomeado por `$b$', além de que ele é um `$F$', e como a linha $1$ garante que algo é `$F$', nós podemos descartar esta suposição adicional `$\atom{F}{b}$' e ainda assim concluir `$\exists x\,\atom{G}{x}$', na linha~$7$.
 
-Levando em consideração tudo isso, obtemos a regra de eliminação  do existencial ($\exists$E):
+Levando em consideração tudo isso, obtemos a regra de \textit{eliminação  do existencial} ($\exists$E):
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{a}{\exists \meta{x}\,\meta{A}(\meta{x})}
@@ -698,7 +698,7 @@ Isso requer o uso de IP. Use apenas as regras básicas da LVF, além das regras 
 
 \chapter{Transformação de quantificadores}\label{s:CQ}
 
-Nesta seção, introduziremos quatro regras adicionais às regras básicas da seção anterior com o objetivo de agilizar a interação entre os quantificadores e a negação. Essas regras de transformação de quantificadores serão chamadas regras CQ.
+Nesta seção, introduziremos quatro regras adicionais às regras básicas da seção anterior com o objetivo de agilizar a interação entre os quantificadores e a negação. Essas regras de \textit{transformação de quantificadores} serão chamadas regras TQ.
  
 No Capítulo  \ref{s:FOLBuildingBlocks}, notamos que $\forall x\, \enot\meta{A}$
    é logicamente equivalente a  $\enot\exists x\meta{A}$. Adicionaremos, então, duas novas regras em nosso sistema de provas para refletir os dois sentidos dessa equivalência.
@@ -769,14 +769,14 @@ Quando todos os quantificadores ocorrem no início de uma sentença, diz-se que 
 
 No Capítulo  \ref{s:Interpretations}, mencionamos o filosoficamente controverso   princípio da \emph{identidade dos indiscerníveis}, que afirma que objetos que são indistinguíveis em todos os aspectos são, de fato, idênticos entre si. Entretanto, dissemos também que esse não é um princípio válido na LPO.  Disso resulta que não importa o quanto você saiba sobre dois objetos, você não vai conseguir provar que eles são idênticos a partir de suas outras propriedades e relações. Isso traduz-se no fato de que não é possível inferir nenhuma afirmação de identidade `$a=b$' que contenha dois nomes diferentes a partir de um grupo de sentenças nas quais o próprio predicado de identidade não ocorra. A regra de introdução da identidade da LPO não pode, portanto, permitir a conclusão de afirmações de identidade com nomes diferentes, do tipo `$a=b$'.
 
-Por outro lado, todo objeto é idêntico a si mesmo. Ou seja, não são necessárias quaisquer premissas para concluir que algo é idêntico a si mesmo. Por isso o esquema geral da regra de introdução da identidade é simplesmente:
+Por outro lado, todo objeto é idêntico a si mesmo. Ou seja, não são necessárias quaisquer premissas para concluir que algo é idêntico a si mesmo. Por isso o esquema geral da regra de \textit{introdução da identidade} é simplesmente:
 \factoidbox{
 \begin{fitchproof}
 	\have[\ \,\,\,]{x}{\meta{c}=\meta{c}} \by{=I}{}
 \end{fitchproof}}
 Observe que essa regra não requer referência a nenhuma linha anterior da prova. Para qualquer nome \meta{c}, você pode escrever $\meta{c}=\meta{c}$ em qualquer ponto, justificando apenas com a regra  {=}I.
  
-Nossa regra de eliminação é mais divertida. Se você estabeleceu `$a=b$',  qualquer coisa que seja verdadeira para o objeto nomeado por `$a$' também deve ser verdadeira para o objeto nomeado por `$b$'. Para qualquer sentença com `$a$', você pode substituir algumas ou todas as ocorrências de `$a$' por `$b$' e produzir uma sentença equivalente. Por exemplo,  a partir de `$\atom{R}{a,a}$' e `$a = b$',  você pode deduzir `$\atom{R}{a,b}$', `$\atom{R}{b,a}$' ou `$\atom{R}{b,b}$'. De forma geral:
+Nossa regra de eliminação é mais divertida. Se você estabeleceu `$a=b$',  qualquer coisa que seja verdadeira para o objeto nomeado por `$a$' também deve ser verdadeira para o objeto nomeado por `$b$'. Para qualquer sentença com `$a$', você pode substituir algumas ou todas as ocorrências de `$a$' por `$b$' e produzir uma sentença equivalente. Por exemplo,  a partir de `$\atom{R}{a,a}$' e `$a = b$',  você pode deduzir `$\atom{R}{a,b}$', `$\atom{R}{b,a}$' ou `$\atom{R}{b,b}$'. Aqui está o esquema geral da regra de \textit{eliminação da identidade} ($=$E):
 \factoidbox{\begin{fitchproof}
 	\have[m]{e}{\meta{a}=\meta{b}}
 	\have[n]{a}{\meta{A}(\ldots \meta{a} \ldots \meta{a}\ldots)}
@@ -943,7 +943,7 @@ estamos dizendo que há uma prova que termina com $\meta{C}$ e cujas únicas sup
 $$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \entails \meta{C}$$
 significa que não há nenhuma valoração (ou interpretação) na qual  $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ são todas verdadeiras e~$\meta{C}$ é falsa. Isso diz respeito a atribuições de verdade e falsidade às sentenças. Essa é portanto uma \emph{noção semântica}.
 
-Embora nossas noções semântica e de teoria da prova sejam \emph{noções diferentes}, há uma conexão profunda entre elas. Para explicar essa conexão, começaremos considerando a relação entre a classificar uma sentença como um teorema (p. 292  ??) e classifica-la como uma validade lógica (p. 223 ??).
+Embora nossas noções semântica e de teoria da prova sejam \emph{noções diferentes}, há uma conexão profunda entre elas. Para explicar essa conexão, começaremos considerando a relação entre a classificar uma sentença como um teorema (p. \pageref{def:syntactic_tautology_in_sl}) e classifica-la como uma validade lógica (p. \pageref{def:validade_logica}).
 
 Para mostrar que uma sentença é um teorema, você só precisa produzir uma prova. Pode ser difícil produzir uma prova de vinte linhas, mas não é tão difícil verificar cada linha da prova e confirmar se ela é legítima; e se cada linha da prova individualmente é legítima, então toda a prova é legítima. Mostrar que uma sentença é uma validade lógica, no entanto, requer raciocinar sobre todas as interpretações possíveis. Dada a escolha entre mostrar que uma sentença é um teorema e mostrar que é uma validade lógica, seria mais fácil mostrar que é um teorema.
 

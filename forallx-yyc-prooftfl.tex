@@ -134,7 +134,7 @@ Se, por exemplo, estamos fazendo uma prova onde obtivemos `$R$'  na linha 8 e `$
 	\have[\ ]{c}{R \eand L} \ai{a, b}
 \end{fitchproof}
 
- Note que cada linha de nossa prova  ou deve ser uma suposição, ou deve ser justificada por alguma regra.    Citamos  aqui   `$\eand$I 8, 15' para indicar que esta linha foi obtida pela regra da introdução da conjunção  ($\eand$I) aplicada às linhas 8 e 15.  Poderíamos igualmente obter a conjunção com a ordem invertida:
+ Note que cada linha de nossa prova  ou deve ser uma suposição, ou deve ser justificada por alguma regra.    Citamos  aqui   `$\eand$I 8, 15' para indicar que esta linha foi obtida pela regra da \textit{introdução da conjunção}  ($\eand$I) aplicada às linhas 8 e 15.  Poderíamos igualmente obter a conjunção com a ordem invertida:
 \begin{fitchproof}
 	\have[8]{a}{R}
 	\have[15]{b}{L}
@@ -153,9 +153,9 @@ Deixemos claro que o enunciado da regra não é uma prova, mas um esquema, afina
 Similarmente, as indicações `$m$' e `$n$' acima não são os numerais que usaríamos em uma prova propriamente dita. Elas também são símbolos da metalinguagem, que usamos quando queremos falar sobre um número de linha não identificado de uma prova. Em uma  prova específica da LVF, as linhas  são numeradas por `$1$', `$2$', `$3$', e assim por diante.  Mas quando definimos a regra, usamos variáveis `$m$', `$n$',...  para fazer referência a linhas não especificadas em que as sentenças citadas pela regra ocorrem.
 A regra $\eand$I requer apenas que tenhamos ambos os conjuntos em linhas anteriores à aplicação da regra. Eles podem estar próximos ou distantes um do outro, e podem aparecer em qualquer ordem.
 
-A regra é chamada de `\emph{introdução} da conjunção'  porque  ela introduz   uma sentença cujo conectivo principal é a conjunção `$\eand$'.  Correspondentemente,  temos uma regra que \emph{elimina}  este conectivo. 
+A regra é chamada de \emph{introdução} da conjunção  porque  ela introduz   uma sentença cujo conectivo principal é a conjunção `$\eand$'.  Correspondentemente,  temos uma regra que \emph{elimina}  este conectivo. 
 
- Vamos supor que já foi mostrado que Louis é ambos  reservado e  leal.  Você   está autorizado a concluir que Louis   é reservado. Igualmente você   está autorizado a concluir que Louis é leal. Juntando tudo isto, obtemos nossa(s) regra(s) de eliminação da conjunção:
+ Vamos supor que já foi mostrado que Louis é ambos  reservado e  leal.  Você   está autorizado a concluir que Louis   é reservado. Igualmente você   está autorizado a concluir que Louis é leal. Juntando tudo isto, obtemos nossa(s) regra(s) de \textit{eliminação da conjunção}:
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eand\meta{B}}
@@ -244,7 +244,7 @@ Considere o seguinte argumento:
 		\item[] Jane é inteligente.
 		\item[\therefore] ela é rápida.
 \end{earg}
-Este argumento certamente é valido, e ele sugere diretamente uma aplicação da  regra de eliminação do condicional  ($\eif$E):
+Este argumento certamente é valido, e ele sugere diretamente uma aplicação da  regra de \textit{eliminação do condicional}  ($\eif$E):
  
 \factoidbox{
 \begin{fitchproof}
@@ -255,7 +255,7 @@ Este argumento certamente é valido, e ele sugere diretamente uma aplicação da
  Esta regra também é chamada  \emph{modus ponens}. Novamente, esta é uma regra de eliminação porque ela nos permite quebrar uma sentença cujo conectivo principal é `$\eif$', eliminando este conectivo, e obtendo como resultado uma de suas partes: o consequente do condicional.
  Note que o condicional  $\meta{A}\eif\meta{B}$ e o antecedente~$\meta{A}$ podem estar separados um do outro na prova, e eles podem aparecer em qualquer ordem. Entretanto, na citação para a regra $\eif$E, sempre citamos primeiro o condicional, seguido pelo antecedente. 
 
-A regra de introdução do condicional também é bastante simples de motivar.  O seguinte argumento deve ser válido:
+A regra de \textit{introdução do condicional} também é bastante simples de motivar.  O seguinte argumento deve ser válido:
 	\begin{quote}
 		Louis é reservado.    Portanto, se Louis é leal, então Louis é ambos  reservado \emph{e} leal.
 	\end{quote}
@@ -301,7 +301,7 @@ A suposição adicional `$L$’, juntamente com a premissa`$R$' nos permitiu obt
 
 Observe que na linha $4$ voltamos a usar apenas uma linha vertical na esquerda. Fizemos isso para indicar que a suposição adicional `$L$' não vigora mais nesta linha. Ela foi descartada. Repare que a diferença entre as linhas $3$ e $4$ é que na linha $3$ há uma asserção  de `$R \eand L$' justificada por duas suposições:  `$R$' e `$L$'; e na linha $4$ há uma asserção de  `$L \eif (R \eand L)$' justificada por apenas uma suposição:  `$R$'. `$L$' passou de suposição em vigor na linha $3$, para antecedente do condicional na linha $4$.
 
- O padrão geral usado aqui é o seguinte. Primeiro adicionamos uma suposição, $\meta{A}$;  e desta suposição  adicional, provamos~$\meta{B}$. Neste caso, sabemos o seguinte: se~$\meta{A}$ é verdadeira, então ~$\meta{B}$ também é verdadeira.  Isto está envolvido na regra de introdução do condicional:
+ O padrão geral usado aqui é o seguinte. Primeiro adicionamos uma suposição, $\meta{A}$;  e desta suposição  adicional, provamos~$\meta{B}$. Neste caso, sabemos o seguinte: se~$\meta{A}$ é verdadeira, então ~$\meta{B}$ também é verdadeira.  Isto está envolvido na regra de \textit{introdução do condicional}:
 
 
 \factoidbox{
@@ -455,8 +455,7 @@ aninhada.
 
 \section{Bicondicional}
 As regras para o bicondicional serão como versões de via de mão dupla das regras para o condicional. 
-
-Para provar `$F \eiff G$',  por exemplo, você deve ser capaz de provar `$G$' a partir da  suposição `$F$' \emph{e}  provar `$F$' a partir da suposição `$G$'. A regra de introdução do bicondicional ({\eiff}I) requer, portanto, duas subprovas.  Esquematicamente, a regra funciona assim: 
+Para provar `$F \eiff G$',  por exemplo, você deve ser capaz de provar `$G$' a partir da  suposição `$F$' \emph{e}  provar `$F$' a partir da suposição `$G$'. A regra de \textit{introdução do bicondicional} ({\eiff}I) requer, portanto, duas subprovas. Veja:  %Esquematicamente, a regra funciona assim: 
 
  
 
@@ -474,14 +473,14 @@ Para provar `$F \eiff G$',  por exemplo, você deve ser capaz de provar `$G$' a 
 \end{fitchproof}}
 Pode haver tantas linhas quantas você quiser entre $i$ e $j$, e tantas linhas quantas você quiser entre $k$ e $l$.  Além disso, as subprovas podem vir em qualquer ordem, e a segunda subprova não precisa vir imediatamente após a primeira.
 
-A regra de eliminação do bicondicional ({\eiff}E) permite fazer um pouco mais do que a regra do condicional.  Se você tem a sentença do lado esquerdo do bicondicional, você pode obter a sentença que está no lado direito. E inversamente, se você tem a sentença que está no lado direito do bicondicional, pode obter a sentença que está no lado esquerdo. Assim temos:
+A regra de \textit{eliminação do bicondicional} ({\eiff}E) permite fazer um pouco mais do que a regra do condicional.  Se você tem a sentença do lado esquerdo do bicondicional, você pode obter a sentença que está no lado direito. E inversamente, se você tem a sentença que está no lado direito do bicondicional, pode obter a sentença que está no lado esquerdo. Assim temos:
 \factoidbox{
 \begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eiff\meta{B}}
 	\have[n]{a}{\meta{A}}
 	\have[\ ]{b}{\meta{B}} \be{ab,a}
 \end{fitchproof}}
-e igualmente:
+\noindent e igualmente:
 \factoidbox{\begin{fitchproof}
 	\have[m]{ab}{\meta{A}\eiff\meta{B}}
 	\have[n]{a}{\meta{B}}
@@ -497,7 +496,7 @@ Vamos supor que Louis seja reservado.  Então Louis é reservado ou leal. Afinal
 
 Vamos enfatizar esse ponto. Suponha que Louis seja reservado. Disso se segue que  Louis é \emph{ou} reservado \emph{ou} vegetariano.  Igualmente,  disso se segue que \emph{ou} Louis   é reservado \emph{ou} estudante. Também  Igualmente se segue que   \emph{ou} Louis é reservado ou a lua é redonda. Muitas dessas são inferências estranhas, mas não há nada \emph{logicamente} errado com elas, mesmo que eles violem todos os tipos de normas implícitas de conversação.
 
-Munido com tudo isso, apresentamos as regras de introdução da disjunção:
+Munido com tudo isso, apresentamos as regras de \textit{introdução da disjunção}:
 
 \factoidbox{\begin{fitchproof}
 	\have[m]{a}{\meta{A}}
@@ -523,7 +522,7 @@ Observamos que a tabela de verdade para mostrar isso teria 128 linhas.
 A regra da eliminação da disjunção é, no entanto, um pouco mais complicada. Vamos supor que  Louis é reservado ou leal.  O que podemos concluir disso? Caso  Louis  não seja reservado; pode ser que ele seja leal.   Igualmente, caso  Louis  não seja leal, pode ser que ele seja reservado.  Disjunções, por si sós, são difíceis de trabalhar.
 
 Mas suponha que, de alguma forma, possamos mostrar os dois seguinte fatos: primeiro, que sendo Louis reservado implica que ele seja um economista; segundo, que sendo Louis leal implica que ele seja um economista.
-Então, se sabemos que Louis é reservado ou leal, então sabemos que, seja ele o que for, Louis é um economista.   Esse insight pode ser expresso na regra a seguir, que é a regra de eliminação da disjunção  ($\eor$E):
+Então, se sabemos que Louis é reservado ou leal, então sabemos que, seja ele o que for, Louis é um economista.   Esse insight pode ser expresso na regra a seguir, que é a regra de \textit{eliminação da disjunção}  ($\eor$E):
 \factoidbox{
 	\begin{fitchproof}
 		\have[m]{ab}{\meta{A}\eor\meta{B}}
@@ -585,7 +584,7 @@ Fazer isso envolve apenas ser capaz de percorrer todas as linhas de uma prova e 
 
 Trataremos agora da negação, o nosso  último conectivo. Entretanto, temos que fazer mais esforços para lidar com ele, pois precisamos conectar negação e  \emph{contradição}. 
 
-Uma forma eficaz de argumentar é demonstrar que o seus oponentes se contradizem. Nesse ponto, você os tem sob controle. Eles têm que desistir de pelo menos uma de suas suposições. Vamos usar essa ideia em nosso sistema de provas, adicionando um novo símbolo, `$\ered$', às nossas provas. Esse símbolo deve ser lido como algo como `contradição!'\ ou `isso é um absurdo!'  Podemos usar   a regra para a introdução desse símbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma sentença e sua negação aparecendo em nossa prova:
+Uma forma eficaz de argumentar é demonstrar que o seus oponentes se contradizem. Nesse ponto, você os tem sob controle. Eles têm que desistir de pelo menos uma de suas suposições. Vamos usar essa ideia em nosso sistema de provas, adicionando um novo símbolo, `$\ered$', às nossas provas. Esse símbolo deve ser lido como algo como `contradição!'\ ou `isso é um absurdo!'  Podemos usar   a regra para a introdução desse símbolo sempre que nos contradizermos explicitamente, ou seja, sempre que encontrarmos uma sentença e sua negação aparecendo em nossa prova. 
 \factoidbox{
 \begin{fitchproof}
   \have[m]{na}{\enot\meta{A}}
@@ -596,11 +595,12 @@ As sentenças citadas não precisam estar em linhas vizinhas, nem importa a orde
 
 %Não importa em que ordem a sentença e sua negação aparecem, e elas não precisam aparecer em linhas vizinhas. No entanto, sempre citamos o número da linha da negação primeiro, seguido pelo da sentença em que foi negada.
 
+Em muitos livros essa regra é chamada de introdução do absurdo, mas aqui nós a chamaremos de \textit{eliminação da negação}.
 Obviamente, existe um vínculo estreito entre contradição e negação. 
 A regra $\enot$E permite obter uma contradição explícita, ~`$\ered$',  
  a partir de duas sentenças contraditórias, $\meta{A}$ e sua negação $\enot \meta{A}$. 
-Escolhemos classificar essa regra como uma regra de eliminação pelo seguinte motivo: é a regra mais básica que nos permite passar de uma premissa que contenha uma negação, ou seja $\enot\meta{A}$, 
-para uma sentença que não a contenha, ou seja,  `$\ered$'.  Portanto, é uma regra que \emph{elimina}~`$\enot$'.
+Nós escolhemos classificar essa regra como uma regra de eliminação porque ela é a regra mais básica que nos permite passar de uma premissa que contém uma negação $\enot\meta{A}$ 
+para uma sentença que não contém  `$\ered$'.  Portanto, é uma regra que \emph{elimina}~`$\enot$'.
 
 Dissemos que o símbolo  `$\ered$'  deve ser lido como ‘contradição!’ ou `absurdo!', mas isso não nos diz muito sobre como este símbolo deve ser tratado na LVF. Existem, aproximadamente, três modos diferentes de abordá-lo:
 
@@ -612,7 +612,7 @@ Dissemos que o símbolo  `$\ered$'  deve ser lido como ‘contradição!’ ou `
 			
 Existe algo filosoficamente  muito atraente na terceira opção, mas aqui adotaremos \emph{oficialmente} a primeira. `$\ered$'  deve ser lido como uma letra sentencial que é sempre falsa. Isso significa que, em nossas provas, podemos manuseá-lo do mesmo modo como fazemos com qualquer outra letra sentencial.
 
-Ainda precisamos estabelecer uma regra para a introdução da negação. A regra é muito simples: se assumirmos algo que leva a uma contradição, a suposição deve estar errada. Esse pensamento motiva a seguinte regra:
+Ainda precisamos estabelecer uma regra para a \textit{introdução da negação}. A regra é muito simples: se assumirmos algo que leva a uma contradição, a suposição deve estar errada. Esse pensamento motiva a seguinte regra:
 
 \factoidbox{\begin{fitchproof}
 \open
@@ -640,10 +640,11 @@ Se a suposição de que $\meta{A}$ é verdadeira leva a uma contradição, $\met
 \close
 \have[\ ]{na}{\meta{A}}\ip{a-nb}
 \end{fitchproof}}
-Essa regra é chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua negação. Formalmente, a regra é muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ não é a conclusão da regra, não estamos introduzindo~`$\enot$', então  IP não é uma regra que introduz qualquer conectivo. Também não elimina um conectivo, pois não possui premissas autônomas que contenham~`$\enot$', apenas uma subprova com uma suposição da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: é por isso que $\enot$E elimina~`$\enot$', mas a regra IP não.\footnote{Existem lógicos que não aceitam a regra IP, mas aceitam $\enot$E. Eles são chamados de ``intuicionistas''. Os intuicionistas não aceitam nossa suposição básica de que cada sentença tem um dos dois valores de verdade, verdadeiro ou falso. Eles também acham que  `$\enot$' funciona diferentemente. Para eles, uma prova do `$\ered$' a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do `$\ered$' a partir de $\enot\meta{A}$ não garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ não são equivalentes.}
+Essa regra é chamada de \emph{prova indireta}, pois permite provar $\meta{A}$  indiretamente, assumindo sua negação. Formalmente, a regra é muito semelhante a $\enot$I, mas $\meta{A}$ e $\enot\meta{A}$ mudaram de lugar. Como $\enot\meta{A}$ não é a conclusão da regra, não estamos introduzindo~`$\enot$', então  PI não é uma regra que introduz qualquer conectivo. Também não elimina um conectivo, pois não possui premissas autônomas que contenham~`$\enot$', apenas uma subprova com uma suposição da forma~$\enot\meta{A}$. Por outro lado, $\enot$E tem uma premissa da forma $\enot\meta{A}$: é por isso que $\enot$E elimina~`$\enot$', mas a regra PI não.\footnote{
+	Existem lógicos que não aceitam a regra PI, mas aceitam $\enot$E. Eles são chamados de \textit{intuicionistas}. Os intuicionistas não aceitam nossa suposição básica de que cada sentença tem um dos dois valores de verdade, verdadeiro ou falso. Eles também acham que  `$\enot$' funciona diferentemente. Para eles, uma prova do `$\ered$' a partir de $\meta{A}$ garante $\enot \meta{A}$, mas uma prova do `$\ered$' a partir de $\enot\meta{A}$ não garante que~$\meta{A}$, mas apenas $\enot\enot\meta{A}$. Portanto, para eles, $\meta{A}$ e $\enot\enot\meta{A}$ não são equivalentes.}
 
 
-Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir de $\meta{D}$. Usando IP, podemos ir na outra direção (com essencialmente a mesma prova).
+Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir de $\meta{D}$. Usando PI, podemos ir na outra direção (com essencialmente a mesma prova).
 	\begin{fitchproof}
 		\hypo{d}{\enot\enot D}
 		\open
@@ -655,7 +656,7 @@ Usando $\enot$I, fomos capazes de dar uma prova de $\enot\enot\meta{D}$ a partir
 
 A nossa última regra de inferência é uma espécie de regra de eliminação para `$\ered$', conhecida como \emph{explosão} ou \emph{trivialização}\footnote{O nome latino para esse princípio é  \emph{ex contradictione quod libet}, ``da contradição, qualquer coisa''.}.  Intuitivamente, ela nos permite concluir o que quisermos a partir de uma contradição. Mas, qual a motivação dessa regra de inferência? A expressão retórica `... e se isso for verdade, eu comerei o meu chapéu' captura, de certa forma, a ideia desse raciocínio. Ora, as contradições simplesmente não podem ser verdadeiras. A motivação da regra pode então ser descrita mais ou menos assim: como as contradições nunca ocorrem, aceitar uma contradição é aceitar o impossível. Mas quem aceita até o impossível, aceita qualquer coisa. Portanto, de uma contradição podemos inferir qualquer sentença.
 
-Agora apresentamos formalmente a regra da eliminação do absurdo ($\ered$E):
+Agora apresentamos formalmente a regra da \textit{eliminação do absurdo} ($\ered$E):
 
 \factoidbox{\begin{fitchproof}
 \have[m]{bot}{\ered}
@@ -666,7 +667,9 @@ Observe que  \meta{A} pode ser \emph{qualquer} sentença.
 A regra de explosão é um pouco estranha. Parece que  \meta{A}  chega em nossa prova como um coelho que sai de uma cartola. Ao tentar encontrar provas, é muito tentador querer usá-la em qualquer lugar, pois parece muito poderosa. Resista a essa tentação: você só pode aplicá-la quando já tiver~`$\ered$'!   E você obtém `$\ered$'   somente quando suas suposições são contraditórias.
  
 
-Ainda assim, não é estranho que, de uma contradição, alguma coisa deva seguir? Não de acordo com nossa noção de sustentação e validade. \meta{A} sustenta \meta{B} se e somente se não existe nenhuma valoração de letras sentenciais que tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas `$\ered$' é uma contradição, nunca é verdadeiro, seja qual for a valoração das letras sentenciais.  Como não existe nenhuma valoração que faz  `$\ered$' verdadeiro, claro que também não existe nenhuma valoração que faz  `$\ered$'  verdadeiro e \meta{B} falsa! Então, de acordo com a nossa definição de sustentação,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradição sustenta qualquer coisa.\footnote{Existem alguns lógicos que não aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conexão relevante} entre \meta{A} e \meta{B}, mas não há uma entre `$\ered$' e alguma sentença arbitrária~\meta{B}. Portanto, esses lógicos desenvolvem outras lógicas "relevantes" nas quais  a regra de explosão é não permitida.}
+Ainda assim, não é estranho que, de uma contradição, alguma coisa deva seguir? Não de acordo com nossa noção de sustentação e validade. \meta{A} sustenta \meta{B} se e somente se não existe nenhuma valoração de letras sentenciais que tornam \meta{A} verdadeira e \meta{B} falsa ao mesmo tempo. Mas `$\ered$' é uma contradição, nunca é verdadeiro, seja qual for a valoração das letras sentenciais.  Como não existe nenhuma valoração que faz  `$\ered$' verdadeiro, claro que também não existe nenhuma valoração que faz  `$\ered$'  verdadeiro e \meta{B} falsa! Então, de acordo com a nossa definição de sustentação,  $\ered \entails \meta{B}$,  para qualquer que seja \meta{B}. Uma contradição sustenta qualquer coisa.\footnote{
+	%Existem alguns lógicos que não aceitam isso. Eles acham que se \meta{A} implica \meta{B}, deve haver alguma \emph{conexão relevante} entre \meta{A} e \meta{B}, mas não há uma entre `$\ered$' e alguma sentença arbitrária~\meta{B}. Portanto, esses lógicos desenvolvem outras lógicas "relevantes" nas quais  a regra de explosão não é permitida.
+	Existem lógicos que rejeitam a regra de explosão. Eles não aceitam que de uma contradição tudo se segue. Esses lógicos e seus sistemas são, de modo abrangente, chamados de \textit{paraconsistentes}. Um dos pioneiros nos estudos destas lógicas é o brasileiro Newton da Costa, com seus trabalhos do início dos anos de 1960. Não há consenso entre os paraconsistentes sobre quais são as principais motivações para sua rejeição da regra da explosão. Um grupo radical deles acredita que a realidade contém contradições, e que portanto não temos motivos para rejeitá-las, nem para assumir que tudo se segue delas. Esses paraconsistentes radicais são conhecidos como \textit{dialeteístas} e o filósofo Graham Priest é um de seus principais representantes. Um outro grupo rejeita a regra da explosão com base na ideia de que se \meta{B} se segue de \meta{A}, então deve haver uma conexão relevante entre \meta{A} e \meta{B}. Mas não há conexão relevante entre `$\ered$' e um sentença arbitrária \meta{B}. Por isso eles rejeitam a regra da explosão. As lógicas propostas por este grupo são chamadas de \textit{lógicas relevantes} e dois de seus proponentes mais representativos são os lógicos Nuel Belnap e Alan Anderson.}
 
 \emph{Estas são todas as regras básicas para o sistema de provas da LVF.}
 
@@ -1341,7 +1344,7 @@ Essa linha de pensamento motiva a seguinte regra:
 		\close
 		\have[\ ]{ab}{\meta{B}}\tnd{a-c1,b-c2}
 	\end{fitchproof}}
- Essa regra é às vezes chamada de lei do \emph{terceiro excluído}, pois encapsula a ideia de que \meta{A} pode ser verdadeira ou $\enot \meta{A}$ pode ser verdadeira, mas não há meio caminho em que nenhuma das duas seja verdadeira.\footnote{Você pode às vezes encontrar lógicos ou filósofos falando sobre ``tertium non datur''. Esse é o mesmo princípio que o terceiro excluído; significa ``não há terceira via''. Lógicos que têm dúvidas sobre provas indiretas também têm dúvidas sobre a LEM.} Pode haver tantas linhas quantas você quiser entre $i$ e $j$, e tantas linhas quantas quiser entre $k$ e $l$.  Além disso, as subprovas podem vir em qualquer ordem, e a segunda subprova não precisa vir imediatamente após a primeira.
+ Essa regra é às vezes chamada de \emph{lei do terceiro excluído}, pois encapsula a ideia de que \meta{A} pode ser verdadeira ou $\enot \meta{A}$ pode ser verdadeira, mas não há meio caminho em que nenhuma das duas seja verdadeira.\footnote{Você pode às vezes encontrar lógicos ou filósofos falando sobre ``tertium non datur''. Esse é o mesmo princípio que o terceiro excluído; significa ``não há terceira via''. Lógicos que têm dúvidas sobre provas indiretas também têm dúvidas sobre a LEM.} Pode haver tantas linhas quantas você quiser entre $i$ e $j$, e tantas linhas quantas quiser entre $k$ e $l$.  Além disso, as subprovas podem vir em qualquer ordem, e a segunda subprova não precisa vir imediatamente após a primeira.
 
 Para ver a regra em ação, considere:
  
@@ -1483,7 +1486,7 @@ Faça uma prova para cada um dos quatro argumentos seguintes:
 $$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves \meta{C}$$
 significa que existe uma prova que termina com $\meta{C}$  cujas suposições não descartadas estão entre $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$. Quando queremos dizer que  \emph{não} é o caso que existe uma prova que termine com $\meta{C}$ a partir de $\meta{A}_1$, $\meta{A}_2$, \dots,~$\meta{A}_n$, escrevemos:  $$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \nproves \meta{C}$$  
 
-O símbolo `$\proves$'  é chamado de  \emph{roleta simples}. Queremos enfatizar que este não é o símbolo do roleta dupla (`$\entails$') que introduzimos no Capítulo~\ref{s:SemanticConcepts}  para simbolizar sustentação. O símbolo roleta simples, `$\proves$', diz respeito à existência de provas; enquanto que a roleta dupla, `$\entails$', diz respeito à existência de valorações (ou interpretações, quando usadas na FOL). \emph{Elas são noções muito diferentes}.
+O símbolo `$\proves$'  é chamado de  \emph{roleta simples}. Queremos enfatizar que este não é o símbolo do roleta dupla (`$\entails$') que introduzimos no Capítulo~\ref{s:SemanticConcepts}  para simbolizar sustentação. O símbolo roleta simples, `$\proves$', diz respeito à existência de provas; enquanto que a roleta dupla, `$\entails$', diz respeito à existência de valorações (ou interpretações, quando usadas na LPO). \emph{Elas são noções muito diferentes}.
 
 Com o nosso símbolo  `$\proves$',  podemos introduzir um pouco mais de terminologia. Para dizer que existe uma prova de $\meta{A}$ sem suposições não descartadas, escrevemos: ${} \proves \meta{A}$. Nesse caso, dizemos que $\meta{A}$ é um \define{teorema}.
 	\factoidbox{\label{def:syntactic_tautology_in_sl}
@@ -1835,9 +1838,9 @@ Sentença contingente	&	Uma sentença cuja tabela de verdade contém Vs e Fs sob
 
 Sentenças equivalentes  &	As colunas sob os conectivos principais são idênticas & As sentenças podem ser derivadas uma da outra	\\ \hline
 
-Sentenças  insatisfatórias / inconsistentes	&	Sentenças que não possuem uma única linha na tabela de verdade, onde todas são verdadeiras	& Sentenças a partir das quais se pode derivar uma contradição \\ \hline
+Sentenças  incompatíveis (inconsistentes)	&	Sentenças que não possuem uma única linha na tabela de verdade, onde todas são verdadeiras	& Sentenças a partir das quais se pode derivar uma contradição \\ \hline
 
-Sentenças  satisfatórias  / consistentes	&	Sentenças que tenham pelo menos uma linha na tabela de verdade onde elas todas são verdadeiras & Sentenças  a partir das quais não se pode derivar uma contradição.	\\ \hline
+Sentenças  compatíveis (consistentes)	&	Sentenças que tenham pelo menos uma linha na tabela de verdade onde elas todas são verdadeiras & Sentenças  a partir das quais não se pode derivar uma contradição.	\\ \hline
 
 Argumento válido 		&	Um argumento cuja tabela de verdade não tem  nenhuma linha  na qual  tem Vs sob todos os conectivos principais das premissas e F sob o conectivo principal da conclusão  & Um argumento em que se pode derivar a conclusão a partir das premissas	\\ 
 \end{tabu}

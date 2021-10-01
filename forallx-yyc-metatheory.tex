@@ -128,10 +128,10 @@ Fazendo a mesma coisa com as outras linhas da tabela nas quais $\meta{S}$ é ver
 %$$\enot A \eand \enot B \eand \enot C$$
 Então, o que fizemos até aqui foi que, dada a tabela de verdade de $\meta{S}$, para cada uma das linhas em que $\meta{S}$ é verdeira, construímos uma sentença que é verdadeira nesta linha e falsa em todas as outras:
 	\begin{earg}
-		\item  `$A \eand B \eand C$'\hfill verdadeira apenas na linha 1
-		\item `$A \eand \enot B \eand C$' \hfill verdadeira apenas na linha 3
-		\item `$\enot A \eand \enot B \eand C$' \hfill verdadeira apenas na linha 7
-		\item `$\enot A \eand \enot B \eand \enot C$' \hfill verdadeira apenas na linha 8
+		\item[]   $A \eand B \eand C$ \hfill  -- \ \ \ \ \ \ verdadeira apenas na linha 1
+		\item[]  $A \eand \enot B \eand C$ \hfill  -- \ \ \ \ \ \  verdadeira apenas na linha 3
+		\item[]  $\enot A \eand \enot B \eand C$ \hfill  -- \ \ \ \ \ \  verdadeira apenas na linha 7
+		\item[]  $\enot A \eand \enot B \eand \enot C$ \hfill  -- \ \ \ \ \ \  verdadeira apenas na linha 8
 	\end{earg}
 Fazendo uma disjunção destas 4 sentenças obtemos:
 $$(A \eand B \eand C) \eor (A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand \enot C)$$
@@ -165,14 +165,14 @@ Para obter uma sentença na FND que seja logicamente equivalente a $\meta{S}$, h
 			\end{align*}
 		O objetivo destas regras é garantir que  $\meta{B_i}$ será verdadeira na (e somente na) linha $i$ da tabela de verdade de $\meta{S}$.
 		
-		Considere agora  $i_1$, $i_2$, \dots, $i_m$ os números das linhas da tabela verdade onde $\meta{S}$ é \emph{verdadeira} e seja $\meta{D}$ a seguinte sentença:
+		Considere agora  $i_1$, $i_2$, \dots, $i_m$ os números das linhas da tabela de verdade onde $\meta{S}$ é \emph{verdadeira} e seja $\meta{D}$ a seguinte sentença:
 		$$\meta{B}_{i_1} \eor \meta{B}_{i_2} \eor \ldots \eor \meta{B}_{i_m}$$
 		Como estamos considerando o caso 2, em que $\meta{S}$ é verdadeira em pelo menos uma linha de sua tabela de verdade, a sentença $\meta{D}$ está, por isso, bem definida.
 		$\meta{D}$ é, em geral, uma disjunção de conjunções de literais e no caso limite, quando $\meta{S}$ é verdadeira em apenas uma linha de sua tabela, $\meta{D}$ é uma conjunção de literais.
 		Seja qual for o caso, $\meta{D}$ está na FND.
 		
-		Além disso, a construção de $\meta{D}$ assegura também que, para cada linha~$i$ da tabela de verdade, $\meta{S}$ é verdadeira na linha $i$ da tabela verdade \emph{se e somente se} um dos disjuntos de $\meta{D}$ (a saber, $\meta{B_i}$) é verdadeiro na, e somente na, linha $i$.
-		Portanto, $\meta{S}$ e $\meta{D}$ têm a mesma tabela verdade e são, por isso, logicamente equivalentes.
+		Além disso, a construção de $\meta{D}$ assegura também que, para cada linha~$i$ da tabela de verdade, $\meta{S}$ é verdadeira na linha $i$ \emph{se e somente se} um dos disjuntos de $\meta{D}$ (a saber, $\meta{B_i}$) é verdadeiro na, e somente na, linha $i$.
+		Portanto, $\meta{S}$ e $\meta{D}$ têm a mesma tabela de verdade e são, por isso, logicamente equivalentes.
 	\end{enumerate}
 	Esses dois casos esgotam todas as possibilidades para a tabela de $\meta{S}$ e em ambos obtivemos uma sentença na FND que é logicamente equivalente a $\meta{S}$.
 	Eles garantem, portanto, que dada qualquer sentença $\meta{S}$ há uma sentença na FND que é equivalente a $\meta{S}$. E isso finaliza a nossa prova do teorema da forma normal disjuntiva.
@@ -204,8 +204,8 @@ Podemos agora propor e provar outro teorema sobre forma normal:
 
 Seja $\meta{S}$ uma sentença LVF.
 	\begin{itemize}
-       	\item Começamos escrevendo a tabela verdade completa para $\meta{S}$.
-       	\item Se $\meta{S}$ é \emph{verdadeira} em todas as linhas da tabela verdade, então $(\meta{A}_1 \eor \enot \meta{A}_1)$ satisfaz o teorema, já que está na FNC e é logicamente equivalente a $\meta{S}$.
+       	\item Começamos escrevendo a tabela de verdade completa para $\meta{S}$.
+       	\item Se $\meta{S}$ é \emph{verdadeira} em todas as linhas da tabela de verdade, então $(\meta{A}_1 \eor \enot \meta{A}_1)$ satisfaz o teorema, já que está na FNC e é logicamente equivalente a $\meta{S}$.
        	\item Se $\meta{S}$ é \emph{falsa} em pelo menos uma linha da sua tabela de verdade, então, para cada linha onde $\meta{S}$ é falsa, escreva uma disjunção $(\pm\meta{A}_1 \eor \ldots \eor \pm\meta{A}_n)$ que seja \emph{falsa} nesta linha (e verdadeira em todas as outras).\footnote{
        	Quais devem ser as regras para a construção desta sentença? Tente descobrir. O que queremos aqui é o inverso do que fizemos na prova do teorema da FND.
        	Lá queríamos uma sentença verdadeira na linha especificada e falsa em todas as outras, que fosse uma conjunção de literais.
@@ -287,7 +287,7 @@ E para mostrar isso, basta mostrar que
 		(\meta{A} \eand \meta{B}) & \text{\quad \ e \quad} \enot(\enot \meta{A} \eor\enot \meta{B})
 		\end{align*}
 		são logicamente equivalentes.\footnote{
-			Considere, por exemplo, uma sentença com os três tipos de conectivos, tal como $((\enot A \eand B) \eor \enot C)$.
+			Considere, por exemplo, uma sentença com os três tipos de conectivos, tal como `$((\enot A \eand B) \eor \enot C)$'.
 			É fácil ver como a aplicação desta equivalência transforma esta sentença em uma que contém apenas disjunção e negação:
 			$$((\enot A \eand B) \eor \enot C) \ \ \iff \ \ (\enot(\enot\enot A \eor\enot B) \eor \enot C)$$
 			a sentença da direita é equivalente à da esquerda e só emprega `$\enot$' e `$\eor$'.}
@@ -319,7 +319,7 @@ Eles não são incluídos nas apresentações típicas da LVF porque eles tornam
 Mas a sua existência mostra que, se quiséssemos, poderíamos ter definido a linguagem da LVF com apenas um conectivo e, mesmo assim, ela seria expressivamente adequada.
 
 Veremos dois destes conectivos.
-O primeiro deles, simbolizado por `$\uparrow$', tem a seguinte tabela verdade característica. 
+O primeiro deles, simbolizado por `$\uparrow$', tem a seguinte tabela de verdade característica. 
 \begin{center}
 \begin{tabular}{c c | c}
 $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
@@ -331,7 +331,7 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
 \end{tabular}
 \end{center}
 
- Este conectivo costuma ser chamado de `o traço de Sheffer'\footnote{ em inglês: `\emph{the Sheffer stroke}'.}, em homenagem a Henry Sheffer, que o propôs e usou para mostrar como reduzir o número de conectivos lógicos da versão da LVF introduzida por Russell e Whitehead na famosa obra  \emph{Principia Mathematica}.\footnote{
+ Este conectivo costuma ser chamado de `barra de Sheffer'\footnote{ em inglês: `\emph{the Sheffer stroke}'.}, em homenagem a Henry Sheffer, que o propôs e usou para mostrar como reduzir o número de conectivos lógicos da versão da LVF introduzida por Russell e Whitehead na famosa obra  \emph{Principia Mathematica}.\footnote{
  Confira Sheffer, `A Set of Five Independent Postulates for Boolean Algebras, with application to logical constants' (1913, \emph{Transactions of the American Mathematical Society} 14.4)}
  (Na verdade, Charles Sanders Peirce antecipou Sheffer em cerca de 30 anos, mas nunca publicou seus resultados.)\footnote{
  Veja Peirce, `A Boolian Algebra with One Constant', que data de1880. Veja também, de Peirce, os seus  \emph{Collected Papers}, 4. 264--5.}
@@ -347,7 +347,8 @@ Assim como fizemos na prova dos casos subsidiários do Teorema da Adequação Ex
 			\enot \meta{A} &\text{\quad \ e \quad} (\meta{A} \uparrow \meta{A})\\
 			(\meta{A} \eor \meta{B}) & \text{\quad \ e \quad} ((\meta{A} \uparrow \meta{A}) \uparrow (\meta{B} \uparrow \meta{B}))
 		\end{align*}
-ao Resultado Subsidiário~\ref{expressive:eor}.\footnote{Como exercício, use a tabela característica da `$\uparrow$' acima para verificar que estas sentenças são mesmo logicamente equivalentes.}
+ao Resultado Subsidiário~\ref{expressive:eor}.\footnote{
+	Como exercício, use a tabela característica da barra de Sheffer `$\uparrow$' acima para verificar que estas sentenças são mesmo logicamente equivalentes.}
 
 Da mesma forma, podemos considerar o conectivo `$\downarrow$', cuja tabela característica é:
 \begin{center}
@@ -383,7 +384,7 @@ Mas essa não é uma tarefa mecânica.
 Ela envolve um pouco de arte.
 
 Vejamos um exemplo concreto.
-Será que o conjunto unitário $\{\eor\}$ é expressivamente adequado?
+Será que a disjunção sozinha $\{\eor\}$ forma um conjunto expressivamente adequado?
 Um pouco de reflexão nos convencerá de que a resposta é não.
 Não parece possível construir uma sentença que tenha apenas disjunções e cuja tabela de verdade seja idêntica à tabela característica da negação.
 				\begin{center}

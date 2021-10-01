@@ -763,7 +763,7 @@ Aqui estão elas:
 
 \begin{itemize}
 \item Uma sentença  $\meta{A}$ é uma \define{validity} se e somente se $\meta{A}$ for verdadeira em todas as interpretações; ou seja, se
-$$\entails\meta{A}$$
+$$\entails\meta{A}$$ \label{def:validade_logica}
 \item $\meta{A}$ é uma \define{contradiction of FOL} na LPO se e somente se $\meta{A}$ for falsa em todas as interpretações; ou seja, se
 $$\entails\enot\meta{A}$$
 \item $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é um argumento \define{valid in FOL} (na LPO) se e somente se não houver interpretação em que todas as premissas são verdadeiras e a conclusão é falsa; ou seja, se
@@ -889,8 +889,8 @@ comprova que `$\exists x\, \atom{S}{x}$' e `$\forall x\, \atom{S}{x}$' não são
 	}
 
 
-\section{Validade, sustentação e satisfação}
-Para testar a validade, a sustentação ou a satisfação, normalmente precisamos produzir interpretações capazes de determinam o valor de verdade de várias sentenças.
+\section{Validade, sustentação e compatibilidade}
+Para testar a validade, a sustentação ou a compatibilidade, normalmente precisamos produzir interpretações capazes de determinar o valor de verdade de várias sentenças.
 Considere o seguinte argumento na LPO:
 \begin{earg}
 	\item[] $\exists x(\atom{G}{x} \eif \atom{G}{a})$
