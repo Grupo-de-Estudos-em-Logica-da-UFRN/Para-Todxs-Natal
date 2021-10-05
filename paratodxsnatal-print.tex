@@ -5,6 +5,19 @@
 % Carrega pacote feito para o livro de lógica
 \usepackage{forallxyyc}
 
+% Sequência abaixo permite referencias ao ambiente \begin{description} \end{description}
+
+% --- início da sequência ---
+\makeatletter
+\def\namedlabel#1#2{\begingroup
+    #2%
+    \def\@currentlabel{#2}%
+    \phantomsection\label{#1}\endgroup
+}
+\makeatother
+% --- fim da sequência ---
+% Deve-se fazer a referência usando \namedlabel{chave para referência}{Nome a ser exibido}. Ex.: se quisermos um link para o item "Argumento" em uma descrição, devemos colocar, em vez de "\item[Argumento\label{<nome>}]" a alternativa "\item[\namedlabel{<nome>}{Argumento}]".
+
 \colorlet{leadbeater}{black}
 \colorlet{dkleadbeater}{black}
 \colorlet{ltleadbeater}{black!50}
