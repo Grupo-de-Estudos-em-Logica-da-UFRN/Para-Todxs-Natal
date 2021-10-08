@@ -3,7 +3,7 @@
 \label{ch.normalform}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
 
-\chapter{Formas normais e expressividade}
+\chapter{Formas normais}
 
 
 \section{Forma Normal Disjuntiva}\label{s:DNFDefined}
@@ -229,8 +229,9 @@ Uma delas na FND e outra na FNC.
 		\item $((\enot (A \eand \enot B) \eif C) \eand \enot (A \eand D))$
 	\end{earg}
 
+\chapter{Conectivos funcionalmente completos}
         
-\section{Adequação Expressiva da LVF}  
+%\section{Adequação Expressiva da LVF}  
 
 Dos conectivos da LVF, a engação, `$\enot$', é um conectivo de um lugar (unário), ou seja, liga-se a uma única sentença, e todos os outros são conectivos de dois lugares (binários) que se ligam a exatamente duas sentenças.
 Mas nós podemos cogitar sobre conectivos de \textit{n} lugares (\textit{n}-ários), que ligam-se a $n$ sentenças.
@@ -257,15 +258,15 @@ Ou será que para dizer o que `$\heartsuit(A,B,C)$' diz, os conectivos que \emph
 
 Vamos refazer esta pergunta de um modo mais geral e preciso.
 Antes disso, aqui vai um pouco de vocabulário.
-Chamaremos um conjunto de conectivos de \define{expressivamente adequado} se e somente se as sentenças construídas apenas com estes conectivos são capazes de nos dar todas as tabelas de verdade possíveis.
-Dito de outro modo, um conjunto de conectivos é \emph{expressivamente adequado} se e somente se dada qualquer tabela de verdade, existe alguma sentença com todos os seus conectivos pertencentes a este grupo e que tem exatamente esta tabela de verdade.
+Chamaremos um grupo de conectivos de \define{conjunto funcionalmente completo} se e somente se as sentenças construídas apenas com conectivos desse grupo são capazes de nos dar todas as tabelas de verdade possíveis.
+Dito de outro modo, um conjunto de conectivos é \emph{funcionalmente completo} se e somente se dada qualquer tabela de verdade, existe alguma sentença com todos os seus conectivos pertencentes a este grupo e que tem exatamente esta tabela de verdade.
 
-O ponto geral aqui é que quando um conjunto de conectivos é expressivamente adequado, podemos, com ele, construir sentenças que nos dão qualquer tabela de verdade.
-Todas as tabelas de verdade são alcançáveis através de um conjunto de conectivos expressivamente adequado.
-Então, o modo mais geral e preciso da pergunta feita acima é: será que o conjunto total de conectivos da LVF, $\{\enot, \eand, \eor, \eif, \eiff\}$, é expressivamente adequado?
-	\factoidbox{\label{thm:ExpressiveAdequacy}\textbf{Teorema da Adequação Expressiva.}
-O conjunto dos conectivos da LVF é expressivamente adequado.
-Na verdade, cada um dos seguintes pares é um conjunto expressivamente adequado de conectivos:
+O ponto geral aqui é que quando um conjunto de conectivos é funcionalmente completo, podemos, com ele, construir sentenças que nos dão qualquer tabela de verdade.
+Todas as tabelas de verdade são alcançáveis através de um conjunto de conectivos funcionalmente completo.
+Então, o modo mais geral e preciso da pergunta feita acima é: será que o conjunto total de conectivos da LVF, $\{\enot, \eand, \eor, \eif, \eiff\}$, é funcionalmente completo?
+	\factoidbox{\label{thm:ExpressiveAdequacy}\textbf{Teorema da Completude Funcional.}
+O conjunto dos conectivos da LVF é funcionalmente completo.
+Na verdade, cada um dos seguintes pares é um conjunto funcionalmente completo de conectivos:
 \begin{earg}
 \item\label{expressive:eor} `$\enot$' e `$\eor$'
 \item\label{expressive:eand} `$\enot$' e `$\eand$'
@@ -275,11 +276,11 @@ Na verdade, cada um dos seguintes pares é um conjunto expressivamente adequado 
 Dada qualquer tabela verdade, podemos usar o método empregado na prova do Teorema FND para obter uma sentença com os conectivos tradicionais da LVF cuja tabela de verdade é idêntica a esta dada.
 Por exemplo, aplicando aquele método à tabela de `$\heartsuit(A, B, C)$' apresentada acima,  obtemos a seguinte sentença que tem exatamente a mesma tabela de verdade:
 		$$(A \eand B \eand \enot C) \eor (A \eand \enot B \eand C) \eor (\enot A \eand B \eand \enot C)$$			
-Ou seja, o método empregado na prova do Teorema da FND nos garante que $\{\enot, \eand, \eor \}$ é um conjunto expressivamente adequado de conectivos, porque conseguimos produzir qualquer tabela de verdade com eles.
-Então é claro que o conjunto de todos os conectivos da LVF, que contém $\{\enot, \eand, \eor \}$, também é expressivamente adequado.
+Ou seja, o método empregado na prova do Teorema da FND nos garante que $\{\enot, \eand, \eor \}$ é um conjunto funcionalmente completo de conectivos, porque conseguimos produzir qualquer tabela de verdade com eles.
+Então é claro que o conjunto de todos os conectivos da LVF, que contém $\{\enot, \eand, \eor \}$, também é funcionalmente completo.
 Vamos agora provar alguns resultados subsidiários.
 
-\subsubsection{Resultado subsidiário \ref{expressive:eor}: adequação expressiva de `$\enot$' e `$\eor$'}	
+\subsubsection{Resultado subsidiário \ref{expressive:eor}: $\{\enot, \eor \}$ é funcionlamente completo}	
 Observe que as sentenças que construímos através do método de prova do Teorema da FND sempre vão conter apenas os conectivos `$\enot$', `$\eand$' e `$\eor$'.
 Portanto, para demonstrar este resultado subsidiário é suficiente mostrar que dada qualquer sentença cujos conectivos sejam `$\enot$', `$\eand$' e `$\eor$', existe uma sentença tautologicamente equivalente na qual ocorrem apenas os conectivos `$\enot$' e `$\eor$'.
 E para mostrar isso, basta mostrar que
@@ -292,31 +293,30 @@ E para mostrar isso, basta mostrar que
 			$$((\enot A \eand B) \eor \enot C) \ \ \iff \ \ (\enot(\enot\enot A \eor\enot B) \eor \enot C)$$
 			a sentença da direita é equivalente à da esquerda e só emprega `$\enot$' e `$\eor$'.}
 
-\subsubsection{Resultado subsidiário \ref{expressive:eand}: adequação expressiva de `$\enot$' e `$\eand$'}
-Exatamente como no caso anterior, como já provamos que $\{ \enot, \eand, \eor\}$ é expressivamente adequado, a equivalência 
+\subsubsection{Resultado subsidiário \ref{expressive:eand}: $\{\enot, \eand \}$ é funcionlamente completo}
+Exatamente como no caso anterior, como já provamos que $\{ \enot, \eand, \eor\}$ é funcionalmente completo, a equivalência 
 		\begin{align*}
 		(\meta{A} \eor \meta{B}) & \text{\quad \ e \quad}\enot(\enot \meta{A} \eand\enot \meta{B})
 		\end{align*}
 é suficiente para mostrar que $\{ \enot, \eand\}$ também é, uma vez que nos dá um método para substituir disjunções por conjunções combinadas com negações.
 
-\subsubsection{Resultado subsidiário \ref{expressive:eif}: adequação expressiva de `$\enot$' e `$\eif$'}
-%\emph{Subsidiary Result \ref{expressive:eif}: expressive adequacy of `$\enot$' and `$\eif$'.}
+\subsubsection{Resultado subsidiário \ref{expressive:eif}: $\{\enot, \eif \}$ é funcionlamente completo}
 Aqui também, como no caso dos resultados subsidiários anteriores, estas duas equivalências 
 		\begin{align*}
 		(\meta{A} \eor \meta{B}) &\text{\quad \ e \quad} (\enot \meta{A} \eif \meta{B})\\
 		(\meta{A} \eand \meta{B}) &\text{\quad \ e \quad} \enot(\meta{A} \eif \enot\meta{B})
 		\end{align*}
-são suficientes para demonstrar que $\{ \enot, \eif\}$ é expressivamente adequado, pois nos dão um método para transformar sentenças na FND em sentenças que contenham apenas a negação e o condicional como conectivos.
+são suficientes para demonstrar que $\{ \enot, \eif\}$ é funcionalmente completo, pois nos dão um método para transformar sentenças na FND em sentenças que contenham apenas a negação e o condicional como conectivos.
 
 Em resumo, não há qualquer \emph{necessidade} de adicionar novos conectivos à LVF.
 Estes resultados nos mostram, inclusive, que já existe alguma redundância entre os conectivos que temos: poderíamos ter nos contentado com apenas dois conectivos, se quiséssemos ser realmente austeros.
 
 
-\section{Adequação expressiva com um único conectivo}
+\section{Concetivos que são funcionalmente completos sozinhos}
 
-Há alguns conectivos de dois lugares que são expressivamente adequados \emph{individualmente}; ou seja, podemos obter todas as tabelas de verdade com sentenças em que ocorrem apenas conectivos de um destes tipos.
+Há alguns conectivos de dois lugares que são funcionalmente completos \emph{individualmente}; ou seja, podemos obter todas as tabelas de verdade com sentenças em que ocorrem apenas conectivos de um destes tipos.
 Eles não são incluídos nas apresentações típicas da LVF porque eles tornam as tabelas e as simbolizações das sentenças em português mais complicadas.
-Mas a sua existência mostra que, se quiséssemos, poderíamos ter definido a linguagem da LVF com apenas um conectivo e, mesmo assim, ela seria expressivamente adequada.
+Mas a sua existência mostra que, se quiséssemos, poderíamos ter definido a linguagem da LVF com apenas um conectivo e, mesmo assim, ela seria funcionalmente completa.
 
 Veremos dois destes conectivos.
 O primeiro deles, simbolizado por `$\uparrow$', tem a seguinte tabela de verdade característica. 
@@ -336,13 +336,13 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
  (Na verdade, Charles Sanders Peirce antecipou Sheffer em cerca de 30 anos, mas nunca publicou seus resultados.)\footnote{
  Veja Peirce, `A Boolian Algebra with One Constant', que data de1880. Veja também, de Peirce, os seus  \emph{Collected Papers}, 4. 264--5.}
  É bastante comum, também, chamar este conectivo de `\emph{nand}', já que sua tabela característica é equivalente à tabela da negação da conjunção (em inglês: \emph{not} $+$ \emph{and} $=$ \emph{nand}).
-\factoidbox{O conectivo \label{prop:upexpressive}`$\uparrow$' é, sozinho, expressivamente adequado.}
+\factoidbox{O conectivo \label{prop:upexpressive}`$\uparrow$' é, sozinho, funcionalmente completo.}
 
 
 
-O Teorema da Adequação Expressiva garante que o conjunto $\{\enot, \eor\}$ é expressivamente adequado.
+O Teorema da Completude Funcional garante que o conjunto $\{\enot, \eor\}$ é expressivamente adequado.
 Portanto, é suficiente mostrar que, dada qualquer sentença que contém apenas esses dois conectivos, podemos reescrevê-la como uma sentença logicamente equivalente que contém apenas o `$\uparrow$'.
-Assim como fizemos na prova dos casos subsidiários do Teorema da Adequação Expressiva, aqui também basta aplicarmos as seguintes equivalências
+Similarmente ao que fizemos na prova dos três resultados subsidiários do Teorema da Completude Funcional, aqui também basta aplicarmos as seguintes equivalências
 		\begin{align*}
 			\enot \meta{A} &\text{\quad \ e \quad} (\meta{A} \uparrow \meta{A})\\
 			(\meta{A} \eor \meta{B}) & \text{\quad \ e \quad} ((\meta{A} \uparrow \meta{A}) \uparrow (\meta{B} \uparrow \meta{B}))
@@ -362,29 +362,29 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\downarrow} \meta{B}$\\
 \end{tabular}
 \end{center}
 Este conectivo é algumas vezes chamado de `seta de Peirce' (apesar de o próprio Peirce o ter batizado de `\emph{ampheck}').
-Seu nome mais comum, no entanto, é `\emph{nor}', porque sua tabela de verdade característica é a negação da disjunção (\emph{not} $+$ \emph{or} $=$ \emph{nor}).
-	\factoidbox{O conectivo `$\downarrow$' é, sozinho, expressivamente adequado.}
+Seu nome mais comum, no entanto, é `\emph{nor}', porque sua tabela de verdade característica é idêntica à tabela  da negação da disjunção (\emph{not} $+$ \emph{or} $=$ \emph{nor}).
+	\factoidbox{O conectivo `$\downarrow$' é, sozinho, funcionalmente completo.}
 
 Analogamente ao resultado anterior para o `$\uparrow$', as equivalências
 		\begin{align*}
 			\enot \meta{A} &\text{\quad \ e \quad} (\meta{A} \downarrow \meta{A})\\
 			(\meta{A} \eand \meta{B}) & \text{\quad \ e \quad} ((\meta{A} \downarrow \meta{A}) \downarrow (\meta{B} \downarrow \meta{B}))
 		\end{align*}
-aplicadas ao Resultado Subsidiário~\ref{expressive:eand} são suficientes para demonstrar a adequação expressiva de $\downarrow$.
+aplicadas ao Resultado Subsidiário~\ref{expressive:eand} são suficientes para demonstrar que `$\downarrow$' é funcionalmente completo sozinho.
 
 
-\section{Identificando a inadequação expressiva}
+\section{Identificando a ausência da completude funcional}
 
-De fato, os \emph{únicos} conectivos binários que são expressivamente adequados individualmente são `$\uparrow$' e `$\downarrow$'.
+De fato, os \emph{únicos} conectivos binários que são funcionalmente completos individualmente são `$\uparrow$' e `$\downarrow$'.
 Mas como podemos demonstrar isso?
-Ou ainda, como podemos mostrar que um certo conjunto de conectivos \emph{não é} expressivamente adequado?
+Ou ainda, como podemos mostrar que um certo conjunto de conectivos \emph{não é} funcionalmente completo?
  
 O modo mais direto de fazer isso é tentar encontrar alguma tabela de verdade \emph{impossível} de ser expressa usando apenas os conectivos do conjunto dado.
 Mas essa não é uma tarefa mecânica.
 Ela envolve um pouco de arte.
 
 Vejamos um exemplo concreto.
-Será que a disjunção sozinha $\{\eor\}$ forma um conjunto expressivamente adequado?
+Será que a disjunção sozinha $\{\eor\}$ é um conectivo funcionalmente completo?
 Um pouco de reflexão nos convencerá de que a resposta é não.
 Não parece possível construir uma sentença que tenha apenas disjunções e cuja tabela de verdade seja idêntica à tabela característica da negação.
 				\begin{center}
@@ -399,15 +399,15 @@ A razão intuitiva deste fato é simples: o valor da primeira linha da tabela de
 A negação leva o Verdadeiro no Falso, mas nenhuma combinação de disjunções fará isso.
 As disjunções sempre levam o Verdadeiro no Verdadeiro.
 O mesmo raciocínio vale para a conjunção, o condicional e o bicondicional.
- 	\factoidbox{Nenhum dos conectivos `$\eor$', `$\eand$', `$\eif$', e `$\eiff$' é expressivamente adequado isoladamente.}
+ 	\factoidbox{Nenhum dos conectivos `$\eor$', `$\eand$', `$\eif$', e `$\eiff$' é funcionalmente completo sozinho.}
 
 De fato, a seguinte afirmação é verdadeira:        
         
-\factoidbox{Os \emph{únicos} conectivos binários que são expressivamente adequados isoladamente são `$\uparrow$' e `$\downarrow$'. }        
+\factoidbox{Os \emph{únicos} conectivos binários que são funcionalmente completos sozinhos são `$\uparrow$' e `$\downarrow$'. }        
 
-Isso, no entanto, é mais difícil de provar do que a inadequação expressiva dos conectivos primitivos tomados isoladamente.
+Provar isso, no entanto, é mais difícil do que provar que nenhum conectivo primitivo da LVF é funcionalmente completo sozinho.
 Por exemplo, o conectivo ``ou exclusivo'' não tem um V na primeira linha de sua tabela de verdade característica e, portanto, o método usado acima não funciona para mostrar que ele não pode expressar todas as tabelas de verdade.
-Também é mais difícil mostrar, por exemplo, que  $\{\eiff, \enot\}$ não é um conjunto expressivamente adequado.
+Também é mais difícil mostrar, por exemplo, que  $\{\eiff, \enot\}$ não é um conjunto funcionalmente completo.
 
 
 \chapter{Teorema da correção}\label{ch:Soundness}
