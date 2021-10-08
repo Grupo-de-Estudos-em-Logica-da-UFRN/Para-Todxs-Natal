@@ -348,22 +348,37 @@ $n$ & $\exists x_1\ldots\exists x_n\bigl[\atom{F}{x_1} \eand\ldots\eand \atom{F}
 \begin{multicols}{2}
 \subsection*{Eliminação do universal}
 
-\begin{proof}
-	\have[m]{a}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
-	\have[\ ]{c}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)} \Ae{a}
-\end{proof}
+%\begin{proof}
+%	\have[m]{a}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+%	\have[\ ]{c}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)} \Ae{a}
+%\end{proof}
+\begin{fitchproof}
+	\have[m]{a}{\forall \meta{x}\,\meta{A}(\meta{x})}
+	\have[\ ]{c}{\meta{A}(\meta{c})} \Ae{a}
+\end{fitchproof}
 
 \subsection*{Introdução do universal}
 
-\begin{proof}
-	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
-	\have[\ ]{c}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)} \Ai{a}
-\end{proof}
+%\begin{proof}
+%	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+%	\have[\ ]{c}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)} \Ai{a}
+%\end{proof}
+\begin{fitchproof}
+\open
+	\hypo[k]{x}{\footnotesize \boxed{\meta{c}}}
+	\have[m]{a}{\meta{A}(\meta{c})}
+\close
+	\have[\ ]{c}{\forall \meta{x}\,\meta{A}(\meta{x})} \Ai{x-a}	
+\end{fitchproof}
 
-\medskip\begin{raggedright}
-\meta{c} não pode ocorrer em nenhuma suposição não descartada
+%\medskip
+\begin{raggedright}
+%\meta{c} não pode ocorrer em nenhuma suposição não descartada
 
-\meta{x} não pode ocorrer em\\ $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$
+%\meta{x} não pode ocorrer em\\ $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$
+\textsc{(1)} {\small \meta{c} não deve ocorrer fora da subprova rotulada.}
+
+\textsc{(2)} {\small \meta{x} não deve ocorrer em $\meta{A}(\meta{c})$}
 \end{raggedright}
 
 \subsection*{Introdução do existencial}
@@ -374,23 +389,35 @@ $n$ & $\exists x_1\ldots\exists x_n\bigl[\atom{F}{x_1} \eand\ldots\eand \atom{F}
 \end{proof}
 
 \medskip\begin{raggedright}
-\noindent \meta{x} não pode ocorrer em\\ $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$
+{\small \noindent \meta{x} não pode ocorrer em\\ $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$}
 \end{raggedright}
 %\noindent You can replace one or more instance of \meta{c} with \meta{x}.
 
 \subsection*{Eliminação do existencial}
 
-\begin{proof}
-	\have[m]{a}{\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+%\begin{proof}
+%	\have[m]{a}{\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+%	\open	
+%		\hypo[i]{b}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+%		\have[j]{c}{\meta{B}}
+%	\close
+%	\have[\ ]{d}{\meta{B}}\Ee{a,b-c}
+%\end{proof}
+%
+%\medskip\begin{raggedright}
+%{\small \noindent \meta{c} não pode ocorrer em nenhuma suposição não descartada, em $\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$, ou em \meta{B}}
+
+\begin{fitchproof}
+	\have[m]{a}{\exists \meta{x}\,\meta{A}(\meta{x})}
 	\open	
-		\hypo[i]{b}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+		\hypo[i]{b}{{\footnotesize \boxed{\meta{c}}} \ \ \meta{A}(\meta{c})}
 		\have[j]{c}{\meta{B}}
 	\close
-	\have[\ ]{d}{\meta{B}}\Ee{a,b-c}
-\end{proof}
-
+	\have[\ ]{d}{\meta{B}} \Ee{a,b-c}
+\end{fitchproof}
 \medskip\begin{raggedright}
-\noindent \meta{c} não pode ocorrer em nenhuma suposição não descartada, em $\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$, ou em \meta{B}\end{raggedright}\vfill\columnbreak
+{\small \noindent \meta{c} não deve ocorrer fora da subprova rotulada.}
+\end{raggedright}\vfill\columnbreak
 
 \end{multicols}
 

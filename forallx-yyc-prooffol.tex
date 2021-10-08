@@ -691,7 +691,7 @@ Use as estratégias para encontrar provas para cada um dos cinco seguintes argum
 \item $\exists x(\atom{A}{x} \eif \forall y\,\atom{A}{y})$
 \item $\exists x(\exists y\,\atom{A}{y} \eif \atom{A}{x})$
 \end{earg}
-Isso requer o uso de IP. Use apenas as regras básicas da LVF, além das regras básicas dos quantificadores.
+Isso requer o uso de PI. Use apenas as regras básicas da LVF, além das regras básicas dos quantificadores.
 
  %%%%%% ----------------------  CAPITULO  35 - Transformação de quantificadores  -------------------
  %%%%%% ----------------------  CAPITULO  35 - Transformação de quantificadores  -------------------
@@ -713,7 +713,7 @@ e
 		\have[m]{a}{ \enot \exists \meta{x}\, \meta{A}}
 		\have[\ ]{con}{\forall \meta{x}\, \enot \meta{A}}\cq{a}
 	\end{fitchproof}}
-As duas seguintes  regras CQ  são adicionadas ao nosso sistema de provas para governar a equivalência lógica entre as sentenças $\exists x\, \enot\meta{A}$  e   $\enot\forall x\meta{A}$, vista também no  Capítulo  \ref{s:FOLBuildingBlocks}.
+As duas seguintes  regras TQ  são adicionadas ao nosso sistema de provas para governar a equivalência lógica entre as sentenças $\exists x\, \enot\meta{A}$  e   $\enot\forall x\meta{A}$, vista também no  Capítulo  \ref{s:FOLBuildingBlocks}.
 
  
 \factoidbox{
@@ -727,7 +727,7 @@ e
 		\have[m]{a}{\enot \forall \meta{x}\, \meta{A}}
 		\have[\ ]{con}{\exists \meta{x}\, \enot \meta{A}}\cq{a}
 	\end{fitchproof}}
-Essas são as quatro regras de transformação de quantificadores, CQ. Mostraremos no  capítulo \ref{s:DerivedFOL} que todas as essas regras CQ podem ser derivadas das regras básicas da LPO. 
+Essas são as quatro regras de transformação de quantificadores, TQ. Mostraremos no  capítulo \ref{s:DerivedFOL} que todas as essas regras TQ podem ser derivadas das regras básicas da LPO. 
 
 %%%%%% -----------------------  CAP  35  - EXERCICIOS   --------------------------   
 
@@ -890,9 +890,9 @@ Simbolize e prove o seguinte argumento:
 
 
 \chapter{Regras derivadas}\label{s:DerivedFOL}
-Lembramos que na LVF primeiro introduzimos as regras básicas do sistema de provas e depois adicionamos outras regras.  Posteriormente mostramos que essas regras adicionais eram todas regras derivadas das regras básica da LVF. Faremos o mesmo no caso caso da LPO.  No  Capítulo  \ref{s:BasicFOL} introduzimos algumas regras básicas para a LPO e no Capítulo  \ref{s:CQ} adicionamos  as  regras de transformação de quantificadores, CQ.  Veremos que todas as quatro regras CQ podem ser \emph{derivadas} das regras \emph{básicas} da LPO.  
+Lembramos que na LVF primeiro introduzimos as regras básicas do sistema de provas e depois adicionamos outras regras.  Posteriormente mostramos que essas regras adicionais eram todas regras derivadas das regras básica da LVF. Faremos o mesmo no caso caso da LPO.  No  Capítulo  \ref{s:BasicFOL} introduzimos algumas regras básicas para a LPO e no Capítulo  \ref{s:CQ} adicionamos  as  regras de transformação de quantificadores, TQ.  Veremos que todas as quatro regras TQ podem ser \emph{derivadas} das regras \emph{básicas} da LPO.  
 
-A prova abaixo mostra que a primeira regra CQ é derivada, ou seja, que a inferência de $\enot\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$ a partir de $\forall \meta{x}\, \enot \atom{\meta{A}}{\meta{x}}$ que ela autoriza pode ser feita usando apenas as regras básicas.
+A prova abaixo mostra que a primeira regra TQ é derivada, ou seja, que a inferência de $\enot\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$ a partir de $\forall \meta{x}\, \enot \atom{\meta{A}}{\meta{x}}$ que ela autoriza pode ser feita usando apenas as regras básicas.
 \begin{fitchproof}
 	\hypo{An}{\forall \meta{x}\, \enot \atom{\meta{A}}{\meta{x}} }
 	\open
@@ -908,7 +908,7 @@ A prova abaixo mostra que a primeira regra CQ é derivada, ou seja, que a infer�
 	\have{dada}{\enot \exists \meta{x}\, \atom{\meta{A}}{\meta{x}}}\ni{E-red2}
 \end{fitchproof}
 %You will note that on line 3 I have written `for $\exists$E'. This is not technically a part of the proof. It is just a reminder---to me and to you---of why I have bothered to introduce `$\enot \atom{A}{c}$' out of the blue. You might find it helpful to add similar annotations to assumptions when performing proofs. But do not add annotations on lines other than assumptions: the proof requires its own citation, and your annotations will clutter it.
-A prova seguinte mostra que a inferência da terceira regra CQ também pode ser obtida apenas com as regras básicas da LPO.  
+A prova seguinte mostra que a inferência da terceira regra TQ também pode ser obtida apenas com as regras básicas da LPO.  
    
 \begin{fitchproof}
 	\hypo{nEna}{\exists \meta{x}\, \enot \atom{\meta{A}}{\meta{x}}} 
@@ -924,13 +924,13 @@ A prova seguinte mostra que a inferência da terceira regra CQ também pode ser 
 	\close
 	\have{dada}{\enot \forall \meta{x}\, \atom{\meta{A}}{\meta{x}}}\ni{Aa-con1}
 \end{fitchproof}
-Isso explica por que essas duas regras podem ser tratadas como derivadas.  Justificativas semelhantes podem ser oferecidas para as outras duas regras CQ.
+Isso explica por que essas duas regras podem ser tratadas como derivadas.  Justificativas semelhantes podem ser oferecidas para as outras duas regras TQ.
 
 %%%%%% -----------------------  CAP  37  EXERCICIOS  -------------------------- 
 \practiceproblems
 
 \problempart
-Mostre que a segunda e a quarta regra  CQ são regras derivadas.
+Mostre que a segunda e a quarta regra  TQ são regras derivadas.
 
 %%%%%% -----------------------  CAPITULO  38  -  Provas e semântica  --------------------------  
 

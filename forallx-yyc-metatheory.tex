@@ -432,7 +432,7 @@ Dizemos, então, que um sistema formal de provas é \definepl{soundness} (com re
 Usando as notações de metalinguagem que acabamos de relembrar, podemos dizer, então, que provar que o sistema formal da LVF é correto equivale a provar o seguinte teorema:
 
 \begin{factoidboxe}\textbf
-	{Teorema da Correção.} Para quaisquer sentenças $\Gamma$ e $\meta{C}$: se $\Gamma\proves\meta{C}$, então $\Gamma \entails\meta{C}$.
+	{Teorema da Correção.} Para quaisquer sentenças de $\Gamma$ e $\meta{C}$: se $\Gamma\proves\meta{C}$, então $\Gamma \entails\meta{C}$.
 \end{factoidboxe}
 
 Para provar este teorema usaremos a seguinte ideia geral:
@@ -441,7 +441,7 @@ Como uma prova envolve apenas repetidas aplicações destas regras, esta verific
 
 %====== versão modificada em 04-04-2021 ======%
 Em primeiro lugar, precisamos tornar mais precisa essa idéia de ``levar ao erro''.
-Vamos chamar uma linha de uma prova de \xdefine{inocente} se a sentença desta linha é \textit{sustentada} pelas suposições das quais esta linha \textit{depende}.
+Vamos chamar uma linha de uma prova de \textsc{inocente} se a sentença desta linha é \textit{sustentada} pelas suposições das quais esta linha \textit{depende}.
 
 Lembremos que uma linha depende de todas as suposições ainda não descartadas em linhas anteriores da prova.
 Considere, por exemplo, que $\meta{S}_1, \ldots, \meta{S}_k$ sejam todas as suposições ainda não descartadas por linhas anteriores à linha $n$ em uma prova, e que $\meta{A}_n$ seja a sentença da linha $n$.
@@ -496,7 +496,7 @@ Veja que partimos de $\Gamma \proves \meta{C}$ e chegamos em $\Gamma \entails \m
 Resta agora provar o Lema da Inocência.
 Para fazer isso começamos observando que cada linha de qualquer prova da LVF ou é uma suposição, ou é obtida aplicando-se alguma regra.
 Como todas as suposições são por definição inocentes, o que precisamos mostrar é que nenhuma aplicação de qualquer regra de inferência nos levará ao erro.
-Para tornar essa ideia mais precisa, vamos definir mais uma noção, a de \xdefine{regra confiavel}.
+Para tornar essa ideia mais precisa, vamos definir mais uma noção, a de regra \textsc{confiável}.
 Dada uma prova qualquer da LVF e uma aplicação de regra qualquer (digamos que a linha $n$ de uma prova contém a sentença $\meta{A}$ obtida pela aplicação de uma regra qualquer G)
 		   \begin{proof}
 			   \have[\vdots]{ab}{\ \vdots}
@@ -786,7 +786,7 @@ Pronto. Depois deste breve desvio, voltemos aos nossos lemas sobre a confiabilid
 %	Este tipo de situação, quando um determinado item (no caso, a regra $\enot$E) não consegue violar uma certa propriedade (no caso a confiabilidade) apenas porque as condições para que a propriedade seja satisfeita ou violada são impossíveis (no caso a inocência de todas as linhas anteriores à aplicação da regra $\enot$E), é chamado de \emph{vacuidade}. Nós dizemos que a regra $\enot$E é confiável não porque ela sempre produz uma linha inocente quando todas as linhas anteriores à sua aplicação são inocentes. Nós dizemos que a regra $\enot$E é confiável porque sempre que há ocasião para a sua aplicação, não pode ser que todas as linhas anteriores sejam inocentes. Então a regra $\enot$E é um caso a parte. Ela nunca confirma a confiabilidade, mas também nunca a viola. Quando isso ocorre, a convenção \emph{clássica} estabelecida é considerar que o item (neste caso a regra $\enot$E) \textit{satisfaz vacuamente} a propriedade (neste caso a confiabilidade).}
 
 \begin{factoidboxe}
-	X \ é uma regra de inferência confiável.
+	$\ered$E  \ é uma regra de inferência confiável.
 \end{factoidboxe}
 
 Também deixamos esta prova como um exercício.
@@ -857,7 +857,7 @@ Reescrita segundo nossa notação, (8) diz que $\Delta_n \entails \enot\meta{A}$
 %\end{itemize}
 %E se aplicamos a (8) o mesmo raciocínio por vacuidade que usamos no caso da regra $\enot$E, obtemos $\Delta_n \entails \enot\meta{A}$ e o lema também fica demonstrado.$\blacklozenge$
 
-\begin{factoidboxe}\label{lem:LastRuleSound} IP, \ $\eif$I, \ $\eif$E, \ $\eiff$I \ e \ $\eiff$E \ são todas regras confiáveis.
+\begin{factoidboxe}\label{lem:LastRuleSound} PI, \ $\eif$I, \ $\eif$E, \ $\eiff$I \ e \ $\eiff$E \ são todas regras confiáveis.
 \end{factoidboxe}
 
 Como estes casos não trazem novidade aos já apresentados, também os deixamos como exercícios.
@@ -900,9 +900,9 @@ Complete os Lemas deste capítulo que foram deixados como exercícios.
 Ou seja, mostre que as seguintes regras são confiáveis:
 	\begin{earg}
 		\item $\eor$I. (\emph{Dica}: este é um caso similar ao da regra $\eand$E.)
-		\item X. (\emph{Dica}: este é um caso similar ao da regra $\enot$E.)
+		\item $\ered$E. (\emph{Dica}: este é um caso similar ao da regra $\enot$E.)
 		\item $\eif$I. (\emph{Dica}: este é um caso similar ao da regra $\eor$E.)
 		\item $\eif$E.
-		\item IP. (\emph{Dica}: este é um caso similar ao da regra $\enot$I.)
+		\item PI. (\emph{Dica}: este é um caso similar ao da regra $\enot$I.)
 	\end{earg}
 
