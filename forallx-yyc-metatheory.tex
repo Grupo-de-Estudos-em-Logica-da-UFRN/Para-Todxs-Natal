@@ -3,7 +3,7 @@
 \label{ch.normalform}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
 
-\chapter{Formas normais}
+\chapter{Formas normais}\label{c:NormalForms}
 
 
 \section{Forma Normal Disjuntiva}\label{s:DNFDefined}
@@ -134,7 +134,7 @@ Então, o que fizemos até aqui foi que, dada a tabela de verdade de $\meta{S}$,
 		\item[]  $\enot A \eand \enot B \eand \enot C$ \hfill  -- \ \ \ \ \ \  verdadeira apenas na linha 8
 	\end{earg}
 Fazendo uma disjunção destas 4 sentenças obtemos:
-$$(A \eand B \eand C) \eor (A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand \enot C)$$
+$$(A \eand B \eand C) \eor (A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand C) \eor (\enot A \eand \enot B \eand \enot C)$$\label{longDNF}
 Repare que, devido à sua construção, esta sentença terá uma tabela de verdade idêntica à da sentença $\meta{S}$. Será verdadeira exatamente nas linhas 1, 3, 7 e 8, e falsa nas demais; exatamente como  $\meta{S}$.
 Ou seja, esta sentença é logicamente equivalente a $\meta{S}$.
 Repare também que esta sentença é uma disjunção de conjunções de literais. Ou seja, é uma sentença na FND.
@@ -233,9 +233,8 @@ Uma delas na FND e outra na FNC.
         
 %\section{Adequação Expressiva da LVF}  
 
-Dos conectivos da LVF, a engação, `$\enot$', é um conectivo de um lugar (unário), ou seja, liga-se a uma única sentença, e todos os outros são conectivos de dois lugares (binários) que se ligam a exatamente duas sentenças.
-Mas nós podemos cogitar sobre conectivos de \textit{n} lugares (\textit{n}-ários), que ligam-se a $n$ sentenças.
-Por exemplo, poderíamos propor um conectivo de três lugares, cujo símbolo poderia ser um coração, `$\heartsuit$', e estipular que ele tem a seguinte tabela de verdade característica:
+Dos conectivos da LVF, a negação, simbolizada por `$\enot$', é o único conectivo de um lugar (unário), ou seja, que se liga a uma única sentença. Todos os outros são conectivos de dois lugares (binários) e se ligam a exatamente duas sentenças, embora possamos imaginar conectivos de \textit{n} lugares (\textit{n}-ários), que se ligariam a $n$ sentenças. Por exemplo, poderíamos propor um conectivo de três lugares cujo símbolo poderia ser um coração, `$\heartsuit$', e estipular que ele tem a seguinte tabela de verdade característica:
+
 \begin{center}
 \begin{tabular}{c c c | c}
 $A$ & $B$ & $C$ & $\heartsuit(A,B,C)$\\
@@ -250,39 +249,33 @@ $A$ & $B$ & $C$ & $\heartsuit(A,B,C)$\\
  F & F & F & F
 \end{tabular}
 \end{center}
-Um tal conectivo, provavelmente, não corresponde nem aproximadamente a nenhuma expressão do português. Pelo menos não do jeito que `$\eand$' corresponde a `e', por exemplo.
-Mas independentemente disso, há uma questão interessante a ser feita aqui. Suponha que nós queremos construir uma sentença que diz exatamente o que `$\heartsuit(A,B,C)$' diz.
-Ou seja, suponha que queremos construir uma sentença tautologicamente equivalente a `$\heartsuit(A,B,C)$', cuja tabela é idêntica à tabela de `$\heartsuit(A,B,C)$'.
-Será que para fazer isso nós precisamos adicionar à LVF o conectivo  `$\heartsuit$' e sua tabela característica?
+Tal conectivo provavelmente não corresponde nem aproximadamente a nenhuma expressão do português. Pelo menos não do jeito que `$\eand$' corresponde a `e', por exemplo. Independentemente disso, há uma questão interessante a ser feita aqui. Suponha que queremos construir uma sentença que diz exatamente o que `$\heartsuit(A,B,C)$' diz, ou seja: uma sentença tautologicamente equivalente a `$\heartsuit(A,B,C)$', cuja tabela é idêntica à tabela de `$\heartsuit(A,B,C)$'.
+Será que para fazer isso nós precisamos adicionar à LVF o conectivo `$\heartsuit$' e sua tabela característica?
 Ou será que para dizer o que `$\heartsuit(A,B,C)$' diz, os conectivos que \emph{já existem} na LVF bastam?
 
-Vamos refazer esta pergunta de um modo mais geral e preciso.
-Antes disso, aqui vai um pouco de vocabulário.
-Chamaremos um grupo de conectivos de \define{conjunto funcionalmente completo} se e somente se as sentenças construídas apenas com conectivos desse grupo são capazes de nos dar todas as tabelas de verdade possíveis.
-Dito de outro modo, um conjunto de conectivos é \emph{funcionalmente completo} se e somente se dada qualquer tabela de verdade, existe alguma sentença com todos os seus conectivos pertencentes a este grupo e que tem exatamente esta tabela de verdade.
+Vamos refazer esta pergunta de um modo mais geral e preciso. Antes disso, aqui vai um pouco de vocabulário. Chamemos um grupo de conectivos de conjunto funcionalmente completo se e somente se formos capazes de construir qualquer tabela de verdade usando apenas conectivos pertencentes a esse grupo.
 
-O ponto geral aqui é que quando um conjunto de conectivos é funcionalmente completo, podemos, com ele, construir sentenças que nos dão qualquer tabela de verdade.
-Todas as tabelas de verdade são alcançáveis através de um conjunto de conectivos funcionalmente completo.
-Então, o modo mais geral e preciso da pergunta feita acima é: será que o conjunto total de conectivos da LVF, $\{\enot, \eand, \eor, \eif, \eiff\}$, é funcionalmente completo?
+A partir da definição acima podemos refazer de maneira mais precisa a nossa pergunta: será que o conjunto total de conectivos da LVF, $\{\enot, \eand, \eor, \eif, \eiff\}$, é funcionalmente completo?
 	\factoidbox{\label{thm:ExpressiveAdequacy}\textbf{Teorema da Completude Funcional.}
 O conjunto dos conectivos da LVF é funcionalmente completo.
+}
+
 Na verdade, cada um dos seguintes pares é um conjunto funcionalmente completo de conectivos:
 \begin{earg}
 \item\label{expressive:eor} `$\enot$' e `$\eor$'
 \item\label{expressive:eand} `$\enot$' e `$\eand$'
 \item\label{expressive:eif} `$\enot$' e `$\eif$'
-\end{earg}}
+\end{earg}
 
-Dada qualquer tabela verdade, podemos usar o método empregado na prova do Teorema FND para obter uma sentença com os conectivos tradicionais da LVF cuja tabela de verdade é idêntica a esta dada.
-Por exemplo, aplicando aquele método à tabela de `$\heartsuit(A, B, C)$' apresentada acima,  obtemos a seguinte sentença que tem exatamente a mesma tabela de verdade:
+Dada qualquer tabela verdade, podemos usar o método empregado na prova do Teorema FND para obter uma sentença com os conectivos tradicionais da LVF cuja tabela de verdade é idêntica a essa dada. Por exemplo, aplicando aquele método à tabela de `$\heartsuit(A, B, C)$' apresentada acima, obtemos a seguinte sentença que tem exatamente a mesma tabela de verdade:
 		$$(A \eand B \eand \enot C) \eor (A \eand \enot B \eand C) \eor (\enot A \eand B \eand \enot C)$$			
 Ou seja, o método empregado na prova do Teorema da FND nos garante que $\{\enot, \eand, \eor \}$ é um conjunto funcionalmente completo de conectivos, porque conseguimos produzir qualquer tabela de verdade com eles.
 Então é claro que o conjunto de todos os conectivos da LVF, que contém $\{\enot, \eand, \eor \}$, também é funcionalmente completo.
 Vamos agora provar alguns resultados subsidiários.
 
-\subsubsection{Resultado subsidiário \ref{expressive:eor}: $\{\enot, \eor \}$ é funcionlamente completo}	
+\subsubsection{Resultado subsidiário \ref{expressive:eor}: $\{\enot, \eor \}$ é funcionalmente completo}	
 Observe que as sentenças que construímos através do método de prova do Teorema da FND sempre vão conter apenas os conectivos `$\enot$', `$\eand$' e `$\eor$'.
-Portanto, para demonstrar este resultado subsidiário é suficiente mostrar que dada qualquer sentença cujos conectivos sejam `$\enot$', `$\eand$' e `$\eor$', existe uma sentença tautologicamente equivalente na qual ocorrem apenas os conectivos `$\enot$' e `$\eor$'.
+Portanto, para demonstrar esse resultado subsidiário é suficiente mostrar que dada qualquer sentença cujos conectivos sejam `$\enot$', `$\eand$' e `$\eor$', existe uma sentença tautologicamente equivalente na qual ocorrem apenas os conectivos `$\enot$' e `$\eor$'.
 E para mostrar isso, basta mostrar que
 		\begin{align*}
 		(\meta{A} \eand \meta{B}) & \text{\quad \ e \quad} \enot(\enot \meta{A} \eor\enot \meta{B})
@@ -293,14 +286,14 @@ E para mostrar isso, basta mostrar que
 			$$((\enot A \eand B) \eor \enot C) \ \ \iff \ \ (\enot(\enot\enot A \eor\enot B) \eor \enot C)$$
 			a sentença da direita é equivalente à da esquerda e só emprega `$\enot$' e `$\eor$'.}
 
-\subsubsection{Resultado subsidiário \ref{expressive:eand}: $\{\enot, \eand \}$ é funcionlamente completo}
+\subsubsection{Resultado subsidiário \ref{expressive:eand}: $\{\enot, \eand \}$ é funcionalmente completo}
 Exatamente como no caso anterior, como já provamos que $\{ \enot, \eand, \eor\}$ é funcionalmente completo, a equivalência 
 		\begin{align*}
 		(\meta{A} \eor \meta{B}) & \text{\quad \ e \quad}\enot(\enot \meta{A} \eand\enot \meta{B})
 		\end{align*}
 é suficiente para mostrar que $\{ \enot, \eand\}$ também é, uma vez que nos dá um método para substituir disjunções por conjunções combinadas com negações.
 
-\subsubsection{Resultado subsidiário \ref{expressive:eif}: $\{\enot, \eif \}$ é funcionlamente completo}
+\subsubsection{Resultado subsidiário \ref{expressive:eif}: $\{\enot, \eif \}$ é funcionalmente completo}
 Aqui também, como no caso dos resultados subsidiários anteriores, estas duas equivalências 
 		\begin{align*}
 		(\meta{A} \eor \meta{B}) &\text{\quad \ e \quad} (\enot \meta{A} \eif \meta{B})\\
@@ -309,16 +302,16 @@ Aqui também, como no caso dos resultados subsidiários anteriores, estas duas e
 são suficientes para demonstrar que $\{ \enot, \eif\}$ é funcionalmente completo, pois nos dão um método para transformar sentenças na FND em sentenças que contenham apenas a negação e o condicional como conectivos.
 
 Em resumo, não há qualquer \emph{necessidade} de adicionar novos conectivos à LVF.
-Estes resultados nos mostram, inclusive, que já existe alguma redundância entre os conectivos que temos: poderíamos ter nos contentado com apenas dois conectivos, se quiséssemos ser realmente austeros.
+Esses resultados nos mostram, inclusive, que já existe alguma redundância entre os conectivos que temos: poderíamos ter nos contentado com apenas dois conectivos, se quiséssemos ser realmente austeros.
 
 
-\section{Concetivos que são funcionalmente completos sozinhos}
+\section{Conectivos que são individualmente suficientes para a completude funcional}
 
-Há alguns conectivos de dois lugares que são funcionalmente completos \emph{individualmente}; ou seja, podemos obter todas as tabelas de verdade com sentenças em que ocorrem apenas conectivos de um destes tipos.
+Há alguns conectivos de dois lugares que são funcionalmente completos \emph{individualmente}; ou seja, podemos obter todas as tabelas de verdade com sentenças em que ocorrem apenas conectivos de um desses tipos.
 Eles não são incluídos nas apresentações típicas da LVF porque eles tornam as tabelas e as simbolizações das sentenças em português mais complicadas.
 Mas a sua existência mostra que, se quiséssemos, poderíamos ter definido a linguagem da LVF com apenas um conectivo e, mesmo assim, ela seria funcionalmente completa.
 
-Veremos dois destes conectivos.
+Veremos dois desses conectivos.
 O primeiro deles, simbolizado por `$\uparrow$', tem a seguinte tabela de verdade característica. 
 \begin{center}
 \begin{tabular}{c c | c}
@@ -331,14 +324,12 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
 \end{tabular}
 \end{center}
 
- Este conectivo costuma ser chamado de `barra de Sheffer'\footnote{ em inglês: `\emph{the Sheffer stroke}'.}, em homenagem a Henry Sheffer, que o propôs e usou para mostrar como reduzir o número de conectivos lógicos da versão da LVF introduzida por Russell e Whitehead na famosa obra  \emph{Principia Mathematica}.\footnote{
+Esse conectivo costuma ser chamado de `barra de Sheffer'\footnote{ em inglês: `\emph{the Sheffer stroke}'.}, em homenagem a Henry Sheffer, que o propôs e usou para mostrar como reduzir o número de conectivos lógicos da versão da LVF introduzida por Russell e Whitehead na famosa obra  \emph{Principia Mathematica}.\footnote{
  Confira Sheffer, `A Set of Five Independent Postulates for Boolean Algebras, with application to logical constants' (1913, \emph{Transactions of the American Mathematical Society} 14.4)}
  (Na verdade, Charles Sanders Peirce antecipou Sheffer em cerca de 30 anos, mas nunca publicou seus resultados.)\footnote{
  Veja Peirce, `A Boolian Algebra with One Constant', que data de1880. Veja também, de Peirce, os seus  \emph{Collected Papers}, 4. 264--5.}
- É bastante comum, também, chamar este conectivo de `\emph{nand}', já que sua tabela característica é equivalente à tabela da negação da conjunção (em inglês: \emph{not} $+$ \emph{and} $=$ \emph{nand}).
-\factoidbox{O conectivo \label{prop:upexpressive}`$\uparrow$' é, sozinho, funcionalmente completo.}
-
-
+ É bastante comum, também, chamar esse conectivo de `\emph{nand}', já que sua tabela característica é equivalente à tabela da negação da conjunção (em inglês: \emph{not} $+$ \emph{and} $=$ \emph{nand}).
+\factoidbox{O conectivo \label{prop:upexpressive}`$\uparrow$' é, sozinho, suficiente para a completude funcional.}
 
 O Teorema da Completude Funcional garante que o conjunto $\{\enot, \eor\}$ é funcionalmente completo.
 Portanto, é suficiente mostrar que, dada qualquer sentença que contém apenas esses dois conectivos, podemos reescrevê-la como uma sentença logicamente equivalente que contém apenas o `$\uparrow$'.
@@ -361,9 +352,9 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\downarrow} \meta{B}$\\
  F & F & V
 \end{tabular}
 \end{center}
-Este conectivo é algumas vezes chamado de `seta de Peirce' (apesar de o próprio Peirce o ter batizado de `\emph{ampheck}').
+Esse conectivo é algumas vezes chamado de `seta de Peirce' (apesar de o próprio Peirce o ter batizado de `\emph{ampheck}').
 Seu nome mais comum, no entanto, é `\emph{nor}', porque sua tabela de verdade característica é idêntica à tabela  da negação da disjunção (\emph{not} $+$ \emph{or} $=$ \emph{nor}).
-	\factoidbox{O conectivo `$\downarrow$' é, sozinho, funcionalmente completo.}
+	\factoidbox{O conectivo `$\downarrow$' é, sozinho, suficiente para a completude funcional.}
 
 Analogamente ao resultado anterior para o `$\uparrow$', as equivalências
 		\begin{align*}
@@ -372,13 +363,14 @@ Analogamente ao resultado anterior para o `$\uparrow$', as equivalências
 		\end{align*}
 aplicadas ao Resultado Subsidiário~\ref{expressive:eand} são suficientes para demonstrar que `$\downarrow$' é funcionalmente completo sozinho.
 
+De fato, a seguinte afirmação é verdadeira:        
+        
+\factoidbox{Os \emph{únicos} conectivos binários que são individualmente suficientes para a completude funcional são `$\uparrow$' e `$\downarrow$'.}
 
 \section{Identificando a ausência da completude funcional}
 
-De fato, os \emph{únicos} conectivos binários que são funcionalmente completos individualmente são `$\uparrow$' e `$\downarrow$'.
-Mas como podemos demonstrar isso?
-Ou ainda, como podemos mostrar que um certo conjunto de conectivos \emph{não é} funcionalmente completo?
- 
+Como podemos demonstrar que `$\uparrow$' e `$\downarrow$' são os únicos conectivos que, individualmente, são suficientes para a completude funcional? Ou ainda, como podemos mostrar que um certo conjunto de conectivos \emph{não é} funcionalmente completo?
+
 O modo mais direto de fazer isso é tentar encontrar alguma tabela de verdade \emph{impossível} de ser expressa usando apenas os conectivos do conjunto dado.
 Mas essa não é uma tarefa mecânica.
 Ela envolve um pouco de arte.
@@ -395,20 +387,208 @@ Não parece possível construir uma sentença que tenha apenas disjunções e cu
 				 F & V
 				\end{tabular}
 				\end{center}
-A razão intuitiva deste fato é simples: o valor da primeira linha da tabela de verdade da negação é o Falso, mas o valor da primeira linha da tabela de qualquer sentença que tenha \emph{apenas} disjunções ($\eor$) sempre será o Verdadeiro.
+A razão intuitiva desse fato é simples: o valor da primeira linha da tabela de verdade da negação é o Falso, mas o valor da primeira linha da tabela de qualquer sentença que tenha \emph{apenas} disjunções ($\eor$) sempre será o Verdadeiro.
 A negação leva o Verdadeiro no Falso, mas nenhuma combinação de disjunções fará isso.
 As disjunções sempre levam o Verdadeiro no Verdadeiro.
 O mesmo raciocínio vale para a conjunção, o condicional e o bicondicional.
- 	\factoidbox{Nenhum dos conectivos `$\eor$', `$\eand$', `$\eif$', e `$\eiff$' é funcionalmente completo sozinho.}
+ 	\factoidbox{Nenhum dos conectivos `$\eor$', `$\eand$', `$\eif$', e `$\eiff$' é individualmente suficiente para a completude funcional.}
 
-De fato, a seguinte afirmação é verdadeira:        
-        
-\factoidbox{Os \emph{únicos} conectivos binários que são funcionalmente completos sozinhos são `$\uparrow$' e `$\downarrow$'. }        
-
-Provar isso, no entanto, é mais difícil do que provar que nenhum conectivo primitivo da LVF é funcionalmente completo sozinho.
+Provar isso, no entanto, é mais difícil do que provar que nenhum conectivo primitivo da LVF é individualmente suficiente para a completude funcional.
 Por exemplo, o conectivo ``ou exclusivo'' não tem um V na primeira linha de sua tabela de verdade característica e, portanto, o método usado acima não funciona para mostrar que ele não pode expressar todas as tabelas de verdade.
 Também é mais difícil mostrar, por exemplo, que  $\{\eiff, \enot\}$ não é um conjunto funcionalmente completo.
 
+%%%%%%%   ============   \chapter{Provando equivalências}       =========
+
+\chapter{Provando equivalências}\label{ch:equivalences}
+
+\section{Substituibilidade  de equivalentes}
+
+Na  Seção \ref{sec:equivalent} vimos que duas sentenças $\metav{P}$ e $\metav{Q}$ são equivalentes (na LVF) se e somente se para toda valoração seus valores de verdade são idênticos.  Vimos também muitos exemplos disso e usamos tabelas de verdade e provas em dedução natural para mostrar tais equivalências.  No Capítulo \ref{c:NormalForms},  provamos que toda sentença da LVF é equivalente a uma sentença na forma normal conjuntiva  e a uma outra na forma normal disjuntiva.  Se $\metav{P}$ e $\metav{Q}$ são equivalentes,  elas sempre têm o mesmo valor de verdade, qualquer uma sustenta a outra, e partir de qualquer uma delas você pode provar a outra.
+
+
+Duas sentenças não precisam ser idênticas para serem equivalentes: as sentenças `$\enot\enot A$' e~`$A$'  têm sempre o mesmo valor de verdade, mas a primeira começa com o símbolo `$\enot$', enquanto a segunda não.  Mas você pode se perguntar:  dado um par de sentenças equivalentes, sempre que substituímos uma sentença pela outra, os resultados também são equivalentes? Por exemplo, considere as sentenças  `$\enot\enot A \eif B$' e `$A \eif B$'.  Veja que a segunda sentença é o resultado de substituir  `$\enot\enot A$' por~`$A$' na primeira. E essas duas sentenças também são equivalentes.
+
+Esse é um fato geral e não é difícil ver porque é verdadeiro. Em qualquer valoração, calculamos o valor de verdade de uma sentença "de dentro para fora".   Então, para determinar o valor de verdade da senteça `$\enot\enot A \eif B$',  primeiro calculamos o valor de verdade de  `$\enot\enot A$' e depois calculamos o valor de verdade da sentença completa a partir dos valores  de verdade de `$\enot\enot A$’ e de~`$B$’, usando a tabela de verdade do `$\eif$’. 
+Mas, uma vez que `$A$'  e  `$\enot\enot A$'' são equivalentes, elas sempre têm o mesmo valor de verdade em uma determinada valoração---portanto, substituir `$\enot\enot A$' por `$A$' não pode alterar o valor de verdade da sentença completa. O mesmo, evidentemente, é verdadeiro para qualquer outra sentença equivalente a `$\enot\enot A$', com por exemplo, `$A \eand (A \eor A)$'.
+
+Para mostrar esse resultado em geral, vamos usar a notação $\metav{R}(\metav{P})$ para representar uma sentença que contém a sentença $\metav{P}$ como uma parte dela. Então,  dizemos que $\metav{R}(\metav{Q})$ é o resultado da substituição da ocorrência de $\metav{P}$ pela sentença $\metav{Q}$  em $\metav{R}$.  Por exemplo, se $\metav{P}$ é a letra sentencial ~`$A$', $\metav{Q}$ é a sentença `$\enot\enot A$' e $\metav{R}(\metav{P})$  é  `$A \eif B$', então $\metav{R}(\metav{Q})$  é `$\enot\enot A \eif B$’.
+
+\factoidbox{Se $\metav{P}$ e $\metav{Q}$ são equivalentes, então   $\metav{R}(\metav{P})$ e $\metav{R}(\metav{Q})$ também são.}
+
+Podemos concluir desse fato que se $\metav{P}$ e $\metav{Q}$ são equivalentes, então qualquer sentença da forma $\metav{R}(\metav{P}) \eiff \metav{R}(\metav{Q})$  será uma tautologia. No entanto, as provas em dedução natural serão totalmente diferentes para os diferente~$\metav{R}$. (Como exercício, faça  provas que mostram que 
+\begin{align*}
+	& \vdash (\enot\enot P \eif Q) \eiff (P \eif Q)  \text{ e}\\
+	& \vdash (\enot\enot P \eand Q) \eiff (P \eand Q)
+\end{align*}
+e compare os dois.)
+
+Se $\metav{P}$ e~$\metav{Q}$ são sentenças equivalentes, e você substitui uma dada letra sentencial que ocorre em $\metav{P}$ e em~$\metav{Q}$ por uma mesma sentença $\metav{R}$, as duas sentenças resultantes também serão equivalentes. Por exemplo, suponha que $\metav{P}$ é  `$A \land B$', $\metav{Q}$ é `$B \land A$’ e   $\metav{R}$ é `$\enot C$’. É claro que $\metav{P}$ e~$\metav{Q}$ são equivalentes. Se você substituir a letra sentencial `$A$' tanto de $\metav{P}$ quanto de $\metav{Q}$ pela sentença `$\enot C$’, as sentenças que você obtém, `$\enot C \land B$' e `$B \land \enot C$’  serão também equivalentes. 
+Podemos registrar isso também:
+
+\factoidbox{A equivalência é preservada sob a substituição das letras sentenciais. Ou seja, se  as sentenças $\metav{P}(A)$ e $\metav{Q}(A)$ são equivalentes e ambas contêm a letra sentencial~`$A$', então as sentenças $\metav{P}(\metav{R})$ e $\metav{Q}(\metav{R})$ (resultado da substituição de `$A$' por $\metav{R}$ em ambas) também são equivalentes.}
+
+Isso significa que, uma vez que tenhamos mostrado que duas sentenças são equivalentes (por exemplo., `$\enot\enot A$' e `$A$', ou `$A \land B$' e `$B \land A$') sabemos que todas as suas "instâncias" comuns também são equivalentes. Observe que não obtemos isso imediatamente a partir de uma tabela de verdade ou de uma prova em dedução natural. Por exemplo, uma tabela de verdade que mostra que `$\enot\enot A$' e~`$A$' são equivalentes \emph{não} mostra também que `$\enot\enot(B \eif C)$' e `$B \eif C$' são equivalentes: a primeira precisa de apenas 2 linhas, a última de 4 linhas.
+
+%============   \section    Chains of equivalences   ===========
+
+\section{Cadeias de equivalências}
+
+Para verificar se duas sentenças são equivalentes, você pode ou fazer uma tabela de verdade ou procurar uma prova formal. Mas existe um método mais simples, baseado no princípio da substituibilidade de equivalentes que acabamos de discutir: de posse de um pequeno catálogo de equivalências simples, substitua partes de sua primeira sentença por partes equivalentes e repita até chegar à segunda sentença.
+
+Esse método de mostrar sentenças equivalentes é sustentado pelos dois fatos da seção anterior. O primeiro fato nos diz que \emph{se} duas sentenças tais como $\enot\enot \metav{P}$ e $\metav{P}$ são equivalentes (para qualquer sentença $\metav{P}$), então substituir $\enot\enot \metav{P}$ em uma sentença por $\metav{P}$ resulta em uma sentença equivalente. O segundo fato nos diz que  a equivalência é preservada sob a substituição das letras sentenciais.  Assim,  como `$\enot\enot A$' e~`$A$' são logicamente equivalentes,   sempre que substituirmos `$A$' em ambas `$\enot\enot A$' e~`$A$' por qualquer sentença $\metav{P}$, pelo  segundo fato podemos concluir que   $\enot\enot \metav{P}$ e $\metav{P}$ são equivalentes.
+
+ 
+
+Vamos dar um exemplo. Pelas Leis de De Morgan, os seguintes pares de sentenças são equivalentes:
+\begin{align*}
+	\enot (A \eand B) & \text{ e } (\enot A \eor \enot B)\\
+	\enot (A \eor B) & \text{ e } (\enot A \eand \enot B)
+\end{align*}
+Isso pode ser verificado construindo duas tabelas de verdade, ou quatro provas em dedução natural que mostram:
+\begin{align*}
+	\enot (A \eand B) & \vdash (\enot A \eor \enot B)\\
+	(\enot A \eor \enot B) & \vdash \enot (A \eand B)\\
+	\enot (A \eor B) & \vdash (\enot A \eand \enot B)\\
+	(\enot A \eand \enot B) & \vdash \enot (A \eor B)
+\end{align*}
+
+Pelo segundo fato, quaisquer pares de sentenças das seguintes formas são equivalentes:
+\begin{align*}
+	\enot (\metav{P} \eand \metav{Q}) & \text{ e } (\enot \metav{P} \eor \enot \metav{Q})\\
+	\enot (\metav{P} \eor \metav{Q}) & \text{ e } (\enot \metav{P} \eand \enot \metav{Q})
+\end{align*}
+
+Agora considere a sentença
+\begin{itemize}
+	\item[(1)]   $\enot(R \eor (S \eand T))$
+\end{itemize}
+Mostraremos  como obter uma sentença equivalente  à sentença (1), na qual todas as ocorrências de `$\enot$' se anexam diretamente às letras sentenciais. Primeiro, repare que a sentença (1) tem a forma: 
+\begin{itemize}
+	\item[(2)]   $\enot(\metav{P} \eor \metav{Q})$,  \,\,  onde $\metav{P}$ é~`$R$' \,\, e \,\, $\metav{Q}$ é `$(S \eand T)$' 
+\end{itemize}
+Logo, de (2) e pela segunda Lei de De Morgan, temos que:
+\begin{itemize}
+	\item[(3)]    $(\enot \metav{P} \eand \enot \metav{Q})$
+\end{itemize}
+Mas,  em (2)  dissemos que  $\metav{P}$ é~`$R$' \, e \, $\metav{Q}$ é `$(S \eand T)$'. Logo, fazendo as respectivas substituições em (3) obtemos:
+\begin{itemize}
+	\item[(4)]   $(\enot R \eand \enot (S \eand T))$ 
+\end{itemize}
+Esta nova sentença contém como parte a sentença `$\enot (S \eand T)$’ e   pela primeira Lei de De Morgan é equivalente a:
+\begin{itemize}
+	\item[(5)]     $(\enot S \eor \enot T)$
+\end{itemize}
+Portanto, podemos substituir em (4) a parte `$\enot (S \eand T)$' por (5), cujo resultado é a seguinte  sentença:
+\begin{itemize}
+	\item[(6)]    $(\enot R \eand (\enot S \eor \enot T))$
+\end{itemize}
+Chegamos a (6) através de substituições de cadeias de equivalências e não é difícil verificar que (6) é equivalente a (1). Além disso,  veja que em (6) todas as ocorrências do símbolo `$\enot$' se anexam diretamente às letras  sentenciais como desejávamos. Nós  ``empurramos''  as negações para dentro o máximo possível. Podemos registrar essa cadeia de equivalências, listando as etapas individuais e registrando qual equivalência básica é usada em cada caso:
+
+\begin{align*}
+	& \fbox{\enot(\fbox{$R$} \eor \fbox{$(S \eand T)$})} \\
+	& \fbox{(\enot(\fbox{$R$} \eand \enot\fbox{$(S \eand T)$})} && \text{DeM}\\
+	& (\enot(R \eand \fbox{$\enot(\fbox{$S$} \eand \fbox{$T$})$}) \\
+	& (\enot(R \eand \fbox{$(\enot \fbox{$S$} \eor \enot \fbox{$T$})$}) && \text{DeM}
+\end{align*}
+Destacamos a sentença substituída e aquelas que correspondem a $\metav{P}$ e~$\metav{Q}$ nas Leis de De Morgan para maior clareza, mas isso não é necessário e não vamos continuar fazendo isso.
+
+
+Na tabela~\ref{tab:equivalences} fornecemos uma lista de equivalências básicas que você pode usar para essas cadeias de equivalências. Os rótulos abreviam o nome usual para as respectivas leis lógicas: Eliminação da dupla negação (EDN), De Morgan (DeM), comutatividade (Comut), distributividade (Dist), associatividade (Assoc), idempotência (Id) e absorção (Abs).
+
+
+\begin{table}
+\factoidbox{
+	\begin{align*}
+\lnot\lnot \metav{P} & \Leftrightarrow \metav{P} && \text{(EDN)}\\[2ex]
+(\metav{P} \eif \metav{Q}) & \Leftrightarrow (\lnot \metav{P} \lor \metav{Q})
+&& \text{(Cond)}\\
+\lnot(\metav{P} \eif \metav{Q}) & \Leftrightarrow (\metav{P} \land \lnot\metav{Q}) \\[2ex]
+(\metav{P} \eiff \metav{Q}) & \Leftrightarrow ((\metav{P} \eif \metav{Q}) \land  (\metav{Q} \eif \metav{P}))
+&& \text{(Bicond)}\\[2ex]
+\lnot(\metav{P} \land \metav{Q}) & \Leftrightarrow (\lnot\metav{P} \lor \lnot\metav{Q})
+&& \text{(DeM)}\\
+\lnot(\metav{P} \lor \metav{Q}) & \Leftrightarrow (\lnot\metav{P} \land \lnot\metav{Q}) \\[2ex]
+(\metav{P} \lor \metav{Q}) & \Leftrightarrow (\metav{Q} \lor \metav{P}) & &\text{(Comut)}\\
+(\metav{P} \land \metav{Q}) & \Leftrightarrow (\metav{Q} \land \metav{P})\\[2ex]
+(\metav{P} \land (\metav{Q} \lor \metav{R})) & \Leftrightarrow ((\metav{P} \land \metav{Q}) \lor (\metav{P} \land \metav{R}))
+&& \text{(Dist)}\\
+(\metav{P} \lor (\metav{Q} \land \metav{R})) & \Leftrightarrow ((\metav{P} \lor \metav{Q}) \land (\metav{P} \lor \metav{R}))\\
+(\metav{P} \lor (\metav{Q} \lor \metav{R})) & \Leftrightarrow ((\metav{P} \lor \metav{Q}) \lor \metav{R}) & &\text{(Assoc)}\\
+(\metav{P} \land (\metav{Q} \land \metav{R})) & \Leftrightarrow ((\metav{P} \land \metav{Q}) \land \metav{R})\\[2ex]
+(\metav{P} \lor \metav{P}) & \Leftrightarrow \metav{P} && \text{(Id)}\\
+(\metav{P} \land \metav{P}) & \Leftrightarrow \metav{P}\\[2ex]
+(\metav{P} \land (\metav{P} \lor \metav{Q})) & \Leftrightarrow \metav{P}&& \text{(Abs)}\\
+(\metav{P} \lor (\metav{P} \land \metav{Q})) & \Leftrightarrow \metav{P}\\[2ex]
+(\metav{P} \land (\metav{Q} \lor \lnot\metav{Q})) & \Leftrightarrow \metav{P}  && \text{(Simp)}\\
+(\metav{P} \lor (\metav{Q} \land \lnot\metav{Q})) & \Leftrightarrow \metav{P}\\[2ex]
+(\metav{P} \lor (\metav{Q} \lor \lnot\metav{Q})) & \Leftrightarrow (\metav{Q} \lor \lnot\metav{Q}) \\
+(\metav{P} \land (\metav{Q} \land \lnot\metav{Q})) & \Leftrightarrow (\metav{Q} \land \lnot\metav{Q})
+\end{align*}  }
+\caption{Equivalências básicas}
+\label{tab:equivalences}
+\end{table}
+
+%%%%%  ========   \section  {Encontrando formas normais equivalentes}  ======
+
+\section{Encontrando formas normais equivalentes}
+
+No Capítulo~\ref{c:NormalForms} mostramos que toda sentença da LVF é logicamente equivalente a uma sentença na forma normal disjuntiva (FND) e a uma outra na forma normal conjuntiva (FNC). 
+Fizemos isso fornecendo um método cuja ideia é que dada uma sentença qualquer, podemos utilizar sua tabela de verdade como fonte para produzir uma sentença na FND (ou na FNC) com uma tabela de verdade idêntica, garantindo assim, que seja logicamente equivalente à sentença original.
+Entretanto, esse método tem duas desvantagens. A primeira é que as sentenças resultantes na FND ou na FNC nem sempre são as mais curtas. A segunda é que o próprio método se torna difícil de aplicar quando a sentença com a qual você começa contém uma grande quantidade de letras sentenciais (uma vez que a tabela de verdade para uma sentença com $n$ letras sentenciais tem $2^n$ linhas).
+
+
+Podemos usar cadeias de equivalências como um método alternativo: para encontrar uma sentença na FND,  podemos aplicar sucessivamente equivalências básicas até encontrarmos uma sentença equivalente que esteja na FND. Lembre-se das condições que uma sentença na FND deve satisfazer:
+\begin{earg}
+	\item[(\textsc{fnd1})] Nenhum conectivo que não seja negação, conjunção ou disjunção ocorre na sentença;
+	\item[(\textsc{fnd2})] Qualquer negação que ocorra na sentença é a negação de uma letra sentencial;
+	\item[(\textsc{fnd3})] Qualquer conjunção que ocorra na sentença é conjunção de literais; ou seja, apenas sentenças atômicas ou negações de sentenças atômicas podem ser conjuntos das conjunções.
+\end{earg}
+A condição (\textsc{fnd1}) diz que devemos remover todos os símbolos `$\eif$' e~`$\eiff$' de uma sentença. As equivalências básicas (Cond) e (Bicond) nos ajudam a fazer isso. Por exemplo, suponha que comecemos com a sentença:
+\begin{align*}
+&(1) \,\,\,\,  \enot(A \eand \enot C) \land (\enot A\eif \enot B).
+\intertext{Podemos nos livrar do `$\eif$' usando (Cond). Neste caso, $\metav{P}$ é `$\enot A$' e $\metav{Q}$ é `$\enot{B}$'. Assim, obtemos:}
+&(2) \,\,\,\, \enot(A \eand \enot C) \land (\enot\enot A \eor \enot B) && \text{Cond}
+\intertext{A  dupla negação pode ser removida, uma vez que `$\enot\enot A$'  é equivalente a~`$A$':}
+&(3) \,\,\,\, \enot(A \eand \enot C) \land (A \eor \enot B) && \text{EDN}
+\intertext{Agora a condição (\textsc{fnd1}) é satisfeita: A sentença (3) contém apenas `$\enot$', `$\eand$', e `$\eor$'.  Entretanto, a primeira parte da conjunção da sentença (3) não satisfaz a condição (\textsc{fnd2}), pois existe uma  ocorrência de `$\enot$’  que não  é aplicada imediatamente a uma letra  sentencial.  E, para garantir que (\textsc{fnd2}) seja satisfeita, vamos usar as Leis de De Morgan e  da Eliminação da dupla negação (EDN) quantas vezes forem necessárias.}
+&(4) \,\,\,\, (\enot A \eor \enot\enot C) \land (A \eor \enot B) && \text{DeM}\\
+&(5) \,\,\,\, (\enot A \eor C) \land (A \eor \enot B) && \text{EDN}
+\intertext{A sentença resultante, (5), está agora na FNC---é uma conjunção de disjunções de letras sentenciais  e letras sentenciais negadas. Mas queremos uma sentença na FND, ou seja, uma sentença em que (\textsc{fnd3}) seja satisfeita: nenhuma disjunção, `$\eor$', deve ocorrer no escopo de uma conjunção,~`$\eand$'.  Vamos usar então as leis distributivas (Dist) para garantir isso.  Repare que a sentença (5) é da forma $\metav{P} \land (\metav{Q} \lor \metav{R})$, onde $\metav{P}$ é `$(\enot A \eor C)$', $\metav{Q}$ é `$A$', e $\metav{R}$ é `$\enot B$'. Ao aplicar (Dist) mais uma vez  obtemos:}
+&(6) \,\,\,\, ((\enot A \eor C) \eand A)) \eor ((\enot A \eor C) \eand \enot B) && \text{Dist}
+\intertext{Esse resultado parece pior, mas se continuarmos chegaremos a um resultado melhor! Observe que poderíamos aplicar (Dist) em (6) na primeira parte da disjunção principal, se  `$\eor$’ não estivesse no lado errado.
+ Assim, precisamos antes aplicar a comutatividade (Comut) em `$(\enot A \eor C) \eand A$' e obter:}
+&(7) \,\,\,\, (A \eand (\enot A \eor C)) \eor ((\enot A \eor C) \eand \enot B) && \text{Comut}
+\intertext{Agora sim, podemos aplicar (Dist) novamente  em `$A \eand (\enot A \eor C)$' e obter:}
+&(8) \,\,\,\, ((A \eand \enot A) \eor (A \eand C)) \eor ((\enot A \eor C) \eand \enot B) && \text{Dist}
+\intertext{Veja que na metade esquerda de (8), nenhuma `$\eor$' está no escopo de uma `$\eand$'. Vamos aplicar os mesmos princípios para a metade direita:}
+&(9) \,\,\,\, ((A \eand \enot A) \eor (A \eand C)) \eor (\enot B \eand (\enot A \eor C)) && \text{Comut}\\
+&(10) \,\,\,\, ((A \eand \enot A) \eor (A \eand C)) \eor ((\enot B \eand \enot A) \eor (\enot B \eand C)) && \text{Dist}
+\intertext{Nossa sentença agora está na FND, como desejávamos! Mas podemos simplificar a sentença (10) mais um pouco: `$(A \eand \enot A)$' é uma contradição na LVF, ou seja, é sempre falsa.  E, conforme explícito na segunda equivalência básica rotulada de Simp (simplificação) em nossa tabela acima, a disjunção de uma sentença $\metav{P}$ com uma contradição é equivalente à sentença $\metav{P}$. Então, aplicando a comutatividade ao disjunto da primeira metade de (10), esta primeira parte fica  com a forma $\metav{P} \lor (\metav{Q} \land \lnot\metav{Q})$ na qual podemos aplicar a segunda simplificação,  como segue:}
+&(11) \,\,\,\, ((A \eand C) \eor (A \eand \enot A)) \eor ((\enot B \eand \enot A) \eor (\enot B \eand C)) && \text{Comut}\\
+&(12) \,\,\,\, (A \eand C) \eor ((\enot B \eand \enot A) \eor (\enot B \eand C)) && \text{Simp}
+\end{align*}
+O resultado anterior, a sentença (10), já estava na FND,  mas a sentença
+do resultado final, a sentença (12), além de estar na FND, é um pouco mais simples. Também é muito mais simples do que a sentença na FND que teríamos obtido pelo método do Capítulo~\ref{c:NormalForms},  
+tal como  apresentada lá (na p.~\pageref{longDNF}), com todos os parênteses necessários:
+$$((((A \eand B) \eand C) \eor ((A \eand \enot B) \eand C)) \eor ((\enot A \eand \enot B) \eand C)) \eor ((\enot A \eand \enot B) \eand \enot C)$$
+Lembramos que esta sentença foi obtida a partir da tabela de verdade da sentença $\metav{S}$ da Seção  \ref{s:DNFTruthTable} e a sentença (1)  com a qual começamos, `$\enot(A \eand \enot C) \land (\enot A\eif \enot B)$', poderia ter sido a sentença $\metav{S}$, pois ela tem exatamente a mesma tabela verdade. 
+
+ 
+\practiceproblems
+\problempart
+\label{pr.DNF2}
+Considere as seguintes sentenças:
+\begin{earg}
+	\item $(A \eif \enot B)$
+	\item $\enot (A \eiff B)$
+	\item $(\enot A \eor \enot (A \eand B))$
+	\item $(\enot (A \eif B ) \eand (A \eif C))$
+	\item $(\enot (A \eor B) \eiff ((\enot C \eand \enot A) \eif \enot B))$
+	\item $((\enot (A \eand \enot B) \eif C) \eand \enot (A \eand D))$
+\end{earg}
+Para cada sentença, encontre uma sentença equivalente na FND e outra na FNC, fornecendo uma cadeia de equivalências. Use (Id), (Abs) e (Simp) para simplificar suas sentenças o máximo possível.
+
+%%%%%%%  ++++++++  chapter    Soundness
 
 \chapter{Teorema da correção}\label{ch:Soundness}
 

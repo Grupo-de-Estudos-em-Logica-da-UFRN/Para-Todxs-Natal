@@ -991,6 +991,7 @@ A moral é simples. Quando lidamos com relações, ou seja, predicados com mais 
 
 
 \section{A ordem dos quantificadores}
+\label{ss:OrderQuant}
 Considere a sentença `todo mundo ama alguém'.
 Esta é uma sentença ambígua.
 Ela pode ter qualquer um dos seguintes dois significados:
@@ -1155,7 +1156,7 @@ Sugiro que você releia com calma todas as simbolizações feitas nesta Seção 
 
 
 \section{Quantificadores escondidos}
-
+\label{ss:SuppQuant}
 A lógica pode, com frequência, nos ajudar a esclarecer o significado de afirmações em português, especialmente quando seus quantificadores são deixados implícitos ou sua ordem é ambígua ou pouco clara.
 A clareza de expressão e pensamento proporcionada pela aprendizagem da LPO pode oferecer uma grande vantagem em sua capacidade argumentativa.
 A seguinte discussão é um ótimo exemplo disso.
@@ -2133,3 +2134,162 @@ Em cada uma das seis fórmulas abaixo, para todas as variáveis, identifique as 
 \problempart
 Dentre as seis fórmulas do exercício acima, apenas uma é uma sentença.
 Qual? E por quê?
+
+\chapter{Ambiguidade}\label{s:ambiguityFOL}
+
+No Capítulo~\ref{s:AbmbiguityTFL} discutimos o fato de que sentenças em português podem ser ambíguas e observamos que isso não ocorre com sentenças da LVF. Uma aplicação importante disso é que a ambiguidade estrutural das sentenças em português pode frequentemente, e de forma útil, ser corrigida usando diferentes simbolizações. Uma outra fonte comum de confusão é a \emph{ambiguidade de escopo}, onde a frase em português não deixa claro qual palavra lógica deve estar no escopo de qual, o que permite múltiplas interpretações.
+
+Na LPO, todo conectivo ou quantificador tem um escopo bem determinado, então em qualquer sentença sempre está explícito se um deles ocorre ou não no escopo de outro. Vamos ilustrar essa característica a partir de alguns exemplos onde podemos contrastar a LPO com a língua portuguesa.
+
+Consideremos o estereótipo
+
+\begin{center}
+`Esquerdistas são maconheiros'
+\end{center}
+
+Se o representarmos como tendo a forma `todo $E$ é~$M$' onde $\atom{E}{x}$ simboliza `\gap{x} é esquerdista' e $\atom{M}{x}$ é `\gap{x} é maconheiro', a formalização óbvia em LPO é:
+
+$$\forall x (\atom{E}{x} \eif \atom{M}{x})$$
+
+Curiosamente, se considerarmos a negação da sentença original, ou seja:
+
+\begin{center}
+`Esquerdistas não são maconheiros'
+\end{center}
+
+veremos que não é trivial escolher a formalização apropriada, já que poderíamos querer dizer:
+
+\begin{center}
+ `Nem todos os esquerdistas são maconheiros'
+\end{center}
+
+cuja formalização seria
+
+$$\enot \forall x (\atom{E}{x} \eif \atom{M}{x})$$
+
+mas também poderíamos querer dizer
+
+\begin{center}
+ `Nenhum esquerdista é maconheiro'
+\end{center}
+
+cuja formalização seria
+
+$$\forall x (\atom{E}{x} \eif \enot \atom{M}{x})$$
+
+Se compararmos as duas formalizações anteriores, veremos que a diferença nos dois significados da sentença ambígua depende da relação de escopo entre `\enot' e `$\forall$'. Na primeira, `$\forall$' está no escopo de `\enot', enquanto na segunda ocorre o contrário.
+
+Claro, também podemos alternativamente simbolizar as duas leituras usando quantificadores existenciais, obtendo respectivamente:
+
+\begin{center}
+$$\exists x (\atom{E}{x} \eand \enot \atom{M}{x})$$
+e
+$$\enot \exists x (\atom{E}{x} \eand \atom{M}{x})$$
+\end{center}
+
+No Capítulo~\ref{s:MoreMonadic} discutimos como simbolizar sentenças envolvendo ``apenas''.
+
+Considere a sentença:
+
+\begin{earg}
+    \item [\ex{onlyamb}] Apenas gatos jovens são brincalhões.
+\end{earg}
+
+Usemos a seguinte chave de simbolização:
+
+\begin{ekey}
+    \item [\atom{G}{x}] \gap{x}~é um gato;
+    \item [\atom{B}{x}] \gap{x}~é brincalhão;
+    \item [\atom{J}{x}] \gap{x}~é jovem.
+\end{ekey}
+
+De acordo com nosso esquema, usando a chave acima, teríamos a seguinte simbolização:
+
+$$\forall x (\atom{B}{x} \eif (\atom{J}{x} \eand \atom{G}{x}))$$
+
+O significado dessa sentença da LPO é algo como `Se um animal é brincalhão, é um gato jovem' (supondo que o domínio seja de animais, é claro). No entanto, provavelmente não é isso o que se quer dizer ao afirmar~\ref{onlyamb}. É mais provável que queiramos dizer que gatos velhos não são brincalhões. Em outras palavras, o que queremos dizer é que se algo é um gato e é brincalhão, deve ser jovem. Isso seria simbolizado como:
+
+$$\forall x ((\atom{G}{x} \eand \atom{B}{x}) \eif \atom{J}{x})$$
+
+Existe até uma terceira leitura! Suponha que estejamos falando sobre animais jovens e suas características. E suponha que você queira dizer que, de todos os animais jovens, apenas os gatos são brincalhões. Você poderia simbolizar essa leitura como:
+
+$$\forall x ((\atom{J}{x} \eand \atom{B}{x}) \eif \atom{G}{x })$$
+
+Cada uma das duas últimas leituras pode ser priorizada em português se fizermos uso adequado de ênfase ao expressarmos a sentença. Por exemplo, para sugerir a última leitura poderíamos escrever `Apenas \emph{gatos} jovens são brincalhões', e para obter a penúltima leitura poderíamos escrever `Apenas gatos \emph{jovens} são brincalhões'. Se quiséssemos dar prioridade à primeira leitura, poderíamos enfatizar `jovens' e `gatos', obtendo: `Apenas \emph{gatos jovens} são brincalhões' (mas não gatos velhos ou cães de qualquer idade).
+
+Nas seções \ref{ss:OrderQuant} e \ref{ss:SuppQuant} discutimos a importância da ordem dos quantificadores. Isso é relevante aqui porque, em português, a ordem dos quantificadores às vezes não é completamente determinada. Quando tanto quantificadores universais (`todos') quanto existenciais (`algum', `um') estão envolvidos, isso pode resultar em ambiguidades de escopo.
+
+Considere:
+
+\begin{earg}
+    \item [\ex{everya}] Todos foram ver um filme.
+\end{earg}
+
+Essa frase é ambígua. Em uma interpretação, significa que há um único filme que todos foram ver. Em outra, significa que todos foram ver algum filme, mas não necessariamente o mesmo. As duas leituras podem ser formalizadas, respectivamente, como:
+
+\begin{center}
+$$\exists x (\atom{F}{x} \eand \forall y (\atom{P}{y} \eif \atom{V}{y, x}))$$
+e
+$$\forall y (\atom{P}{y} \eif \exists x (\atom{F}{x} \eand \atom{V}{y, x}))$$
+\end{center}
+
+Assumimos aqui que o domínio contém (pelo menos) pessoas e filmes, e que a chave de simbolização é:
+
+\begin{ekey}
+    \item [\atom{P}{y}] \gap{y}~é uma pessoa;
+    \item [\atom{F}{x}] \gap{x}~é um filme;
+    \item [\atom{V}{y, x}] \gap{y}~foi ver~\gap{x}.
+\end{ekey}
+
+Na primeira leitura dizemos que o quantificador existencial tem \emph{escopo amplo} e seu escopo contém o quantificador universal (que tem \emph{escopo restrito}), enquanto na segunda leitura ocorre o contrário.
+
+No Capítulo~\ref{subsec.defdesc} encontramos outra ambiguidade de escopo, que surgiu no contexto das descrições definidas que envolvem negação. Considere o próprio exemplo de Russell:
+
+\begin{earg}
+    \item [\ex{thenot}] O rei da França não é careca.
+\end{earg}
+
+Se a descrição definida tem escopo amplo e estamos interpretando o `não' como uma negação `restrita' (que se aplica a apenas parte da sentença), a sentença~\ref{thenot} é interpretada como afirmando a existência de um único rei da França, a quem atribuímos a característica de não ser careca.
+
+Se usarmos a chave de simbolização
+
+\begin{ekey}
+    \item [\atom{R}{x}] \gap{x}~é rei da França;
+    \item [\atom{C}{x}] \gap{x}~é careca.
+\end{ekey}
+
+obteremos a seguinte formalização:
+
+$$\exists x\bigl[\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \enot \atom{C}{x}\bigr]$$
+
+Na outra leitura, o `não' nega a sentença
+
+\begin{center}
+`O rei da França é careca'
+\end{center}
+
+e nós a simbolizaríamos como:
+
+$$\enot \exists x\bigl[\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \atom{C}{x}\bigr]$$
+
+No primeiro caso, dizemos que a descrição definida tem escopo amplo, enquanto no segundo tem escopo restrito.
+
+\practiceproblems
+\problempart
+
+Cada uma das seguintes sentenças é ambígua. Forneça chaves de simbolização e expresse formalmente as leituras possíveis.
+
+\begin{earg}
+    \item Não tem uma pessoa na festa.
+    \item A perícia criminal encontrou apenas cabelos ruivos no local.
+    \item O assassino de Smith não foi preso.
+\end{earg}
+
+\problempart
+Russell deu o seguinte exemplo em seu artigo `On Denoting':
+
+\begin{quote}
+    Ouvi falar de um proprietário de um iate, bastante sensível, a quem um convidado, ao ver o iate pela primeira vez, comentou: `Eu pensei que seu iate era maior do que é'; e o proprietário respondeu: `Não, meu iate não é maior do que é'.
+\end{quote}
+
+Explique a situação.
