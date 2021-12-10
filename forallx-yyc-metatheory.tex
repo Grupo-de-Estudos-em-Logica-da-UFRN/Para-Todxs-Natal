@@ -253,7 +253,7 @@ Tal conectivo provavelmente não corresponde nem aproximadamente a nenhuma expre
 Será que para fazer isso nós precisamos adicionar à LVF o conectivo `$\heartsuit$' e sua tabela característica?
 Ou será que para dizer o que `$\heartsuit(A,B,C)$' diz, os conectivos que \emph{já existem} na LVF bastam?
 
-Vamos refazer esta pergunta de um modo mais geral e preciso. Antes disso, aqui vai um pouco de vocabulário. Chamemos um grupo de conectivos de conjunto funcionalmente completo se e somente se formos capazes de construir qualquer tabela de verdade usando apenas conectivos pertencentes a esse grupo.
+Vamos refazer esta pergunta de um modo mais geral e preciso. Antes disso, aqui vai um pouco de vocabulário: chamemos um grupo de conectivos de conjunto \textit{funcionalmente completo} se e somente se formos capazes de construir qualquer tabela de verdade usando apenas conectivos pertencentes a esse grupo.
 
 A partir da definição acima podemos refazer de maneira mais precisa a nossa pergunta: será que o conjunto total de conectivos da LVF, $\{\enot, \eand, \eor, \eif, \eiff\}$, é funcionalmente completo?
 	\factoidbox{\label{thm:ExpressiveAdequacy}\textbf{Teorema da Completude Funcional.}
@@ -307,7 +307,7 @@ Esses resultados nos mostram, inclusive, que já existe alguma redundância entr
 
 \section{Conectivos que são individualmente suficientes para a completude funcional}
 
-Há alguns conectivos de dois lugares que são funcionalmente completos \emph{individualmente}; ou seja, podemos obter todas as tabelas de verdade com sentenças em que ocorrem apenas conectivos de um desses tipos.
+Há alguns conectivos de dois lugares que, \emph{individualmente}, são suficientes para obtermos a completude funcional; ou seja, podemos obter todas as tabelas de verdade com sentenças em que ocorrem apenas conectivos de um desses tipos.
 Eles não são incluídos nas apresentações típicas da LVF porque eles tornam as tabelas e as simbolizações das sentenças em português mais complicadas.
 Mas a sua existência mostra que, se quiséssemos, poderíamos ter definido a linguagem da LVF com apenas um conectivo e, mesmo assim, ela seria funcionalmente completa.
 
@@ -326,7 +326,7 @@ $\meta{A}$ & $\meta{B}$ & $\meta{A} \mathrel{\uparrow} \meta{B}$\\
 
 Esse conectivo costuma ser chamado de `barra de Sheffer'\footnote{ em inglês: `\emph{the Sheffer stroke}'.}, em homenagem a Henry Sheffer, que o propôs e usou para mostrar como reduzir o número de conectivos lógicos da versão da LVF introduzida por Russell e Whitehead na famosa obra  \emph{Principia Mathematica}.\footnote{
  Confira Sheffer, `A Set of Five Independent Postulates for Boolean Algebras, with application to logical constants' (1913, \emph{Transactions of the American Mathematical Society} 14.4)}
- (Na verdade, Charles Sanders Peirce antecipou Sheffer em cerca de 30 anos, mas nunca publicou seus resultados.)\footnote{
+ (Na verdade, Charles Sanders Peirce antecipou Sheffer em cerca de 30 anos, mas nunca publicou seus resultados).\footnote{
  Veja Peirce, `A Boolian Algebra with One Constant', que data de1880. Veja também, de Peirce, os seus  \emph{Collected Papers}, 4. 264--5.}
  É bastante comum, também, chamar esse conectivo de `\emph{nand}', já que sua tabela característica é equivalente à tabela da negação da conjunção (em inglês: \emph{not} $+$ \emph{and} $=$ \emph{nand}).
 \factoidbox{O conectivo \label{prop:upexpressive}`$\uparrow$' é, sozinho, suficiente para a completude funcional.}
@@ -361,7 +361,7 @@ Analogamente ao resultado anterior para o `$\uparrow$', as equivalências
 			\enot \meta{A} &\text{\quad \ e \quad} (\meta{A} \downarrow \meta{A})\\
 			(\meta{A} \eand \meta{B}) & \text{\quad \ e \quad} ((\meta{A} \downarrow \meta{A}) \downarrow (\meta{B} \downarrow \meta{B}))
 		\end{align*}
-aplicadas ao Resultado Subsidiário~\ref{expressive:eand} são suficientes para demonstrar que `$\downarrow$' é funcionalmente completo sozinho.
+aplicadas ao Resultado Subsidiário~\ref{expressive:eand} são suficientes para demonstrar que `$\downarrow$' é, sozinho, suficiente para obtermos a completude funcional.
 
 De fato, a seguinte afirmação é verdadeira:        
         
