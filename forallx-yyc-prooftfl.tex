@@ -51,7 +51,7 @@ O sistema resultante de regras nos dará um novo modo de pensar sobre a validade
 
  
 
-Neste capítulo,  apresentaremos um sistema em  \xdefine{deducao natural} para a LVF. Para cada conectivo, teremos  \xdefine{regras de introducao},  que nos permitem provar uma sentença que tenha esse conectivo como operador lógico principal, e \xdefine{regras de eliminacao}, que nos permitem provar algo a partir de uma sentença que tenha esse conectivo como operador lógico principal. 
+Neste capítulo,  apresentaremos um sistema em  \define{natural deduction} para a LVF. Para cada conectivo, teremos  \definepl{introduction rule},  que nos permitem provar uma sentença que tenha esse conectivo como operador lógico principal, e \definepl{elimination rule}, que nos permitem provar algo a partir de uma sentença que tenha esse conectivo como operador lógico principal. 
 
  %%%%%% --------------------------------  Seção: A  ideia de uma prova formal
 
@@ -375,7 +375,7 @@ Podemos descrever o processo de fazer uma suposição adicional através da noç
 
 Quando começamos a subprova, traçamos outra linha vertical para indicar que não estamos mais na prova principal. Então escrevemos a suposição sobre a qual a subprova será baseada.  Podemos entender o ato de iniciar uma subprova como similar ao de fazer a seguinte questão:  \emph{o que será que podemos concluir se também fizermos esta suposição adicional?}
 
-Quando estamos trabalhando dentro da subprova, podemos nos referir à suposição adicional que acrescentamos ao introduzir a subprova,  e a qualquer coisa que obtivemos de nossas suposições originais (afinal de contas, essas suposições originais ainda estão em vigor). Entretanto, em algum momento,  queremos parar de usar a suposição adicional: queremos sair da subprova e retornar à prova principal. Para indicar que retornamos à prova principal, a linha vertical da subprova chega ao fim.  Neste ponto, dizemos que a subprova está \xdefine{fechada}. Com a subprova fechada, deixamos de lado a suposição.  Logo, será ilegítimo recorrer a ela e a qualquer coisa que dependa dessa suposição adicional. Assim, estipulamos:
+Quando estamos trabalhando dentro da subprova, podemos nos referir à suposição adicional que acrescentamos ao introduzir a subprova,  e a qualquer coisa que obtivemos de nossas suposições originais (afinal de contas, essas suposições originais ainda estão em vigor). Entretanto, em algum momento,  queremos parar de usar a suposição adicional: queremos sair da subprova e retornar à prova principal. Para indicar que retornamos à prova principal, a linha vertical da subprova chega ao fim.  Nesse ponto, dizemos que a subprova está fechada. Com a subprova fechada, deixamos de lado a suposição.  Logo, será ilegítimo recorrer a ela e a qualquer coisa que dependa dessa suposição adicional. Assim, estipulamos:
 
 
 \factoidbox{Para citar uma linha individual quando aplicamos uma regra:
@@ -385,7 +385,7 @@ Quando estamos trabalhando dentro da subprova, podemos nos referir à suposiçã
 \end{enumerate}}
 Esta estipulação exclui a desastrosa tentativa da prova acima. A regra $\eif$E exige que citemos duas linhas anteriores da prova. Na prova pretendida, acima, uma dessas linhas (nomeadamente, linha~$4$)  ocorre dentro de uma subprova que (pela linha~$5$) já tinha sido fechada. Isto é ilegítimo. 
 
-O fechamento de uma subprova é chamado de \xdefine{descarte} da suposição desta subprova. Assim, fica estabelecido: \emph{você não pode se referir a nada que foi obtido usando suposições descartadas}. 
+O fechamento de uma subprova é chamado de descarte da suposição dessa subprova. Assim, fica estabelecido: \emph{você não pode se referir a nada que foi obtido usando suposições descartadas}. 
 
 Subprovas, então, nos permitem pensar sobre o que podemos mostrar,  se fizermos suposições adicionais.  O que podemos  tirar disso não é surpreendente: no curso de uma prova, temos que acompanhar com muito cuidado as suposições que estamos fazendo uso, em qualquer momento.  Nosso sistema de provas faz isso graficamente bem. (De fato, é exatamente por isso que escolhemos usar  \emph{este}  sistema de provas).
 
