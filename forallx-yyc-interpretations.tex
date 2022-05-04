@@ -60,8 +60,8 @@ têm significados muito diferentes!
 O ponto aqui é que a LPO não nos fornece nenhum recurso para lidar com nuances de significado.
 O único modo no qual dois predicados da LPO podem ser distintos um do outro é sendo verdadeiros de coisas diferentes.
 %Tudo o que conseguimos dizer na LPO através de predicados é de que coisas eles  são verdadeiros, seja estipulando diretamente (listando explicitamente as coisas), seja indiretamente, via chave de simbolização.
-As coisas das quais um predicado é verdadeiro são conhecidas como a \xdefine{extensao} desse predicado.
-Nós dizemos que a LPO é uma \xdefine{linguagem extensional} porque ela reduz os predicados a suas extensões.
+As coisas das quais um predicado é verdadeiro são conhecidas como a \define{extensao} desse predicado.
+Nós dizemos que a LPO é uma \define{linguagem extensional} porque ela reduz os predicados a suas extensões.
 Ou seja, não conseguimos, com a LPO, exprimir as diferenças de significado entre predicados que tenham a mesma extensão.    
 
 Apenas para fixar este ponto importante, vejamos mais um exemplo.
@@ -554,7 +554,7 @@ A expressão:
 $$\meta{A}(\meta{c})$$
 será usada para denotar na metalinguagem a fórmula obtida quando substituímos por $\meta{c}$ \emph{todas} as ocorrências livres de $\meta{x}$ em \meta{A}.
 A fórmula resultante, $\meta{A}(\meta{c})$, é chamada de \define{substitution instance} de $\forall \meta{x} \meta{A}$ e $\exists \meta{x} \meta{A}$.
-Além disso, $\meta{c}$ é chamado de \xdefine{nome de instanciacao}.
+Além disso, $\meta{c}$ é chamado de nome de instanciação.
 
 Vejamos um exemplo.
 Considere a sentença da LPO:
@@ -580,14 +580,14 @@ Usaremos a notação
 $$\mathbf{I}[d/\meta{c}]$$
 para nos referirmos à interpretação que é igual a $\mathbf{I}$, com um acréscimo:
 $\mathbf{I}[d/\meta{c}]$ atribui o nome $\meta{c}$ ao objeto $d$.
-Então podemos dizer que $d$ \xdefine{satisfaz} a fórmula $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ se e somente se $\meta{A}(\meta{c})$ é verdadeira em $\mathbf{I}[d/\meta{c}]$.
+Então podemos dizer que $d$ \define{satisfacao} a fórmula $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ se e somente se $\meta{A}(\meta{c})$ é verdadeira em $\mathbf{I}[d/\meta{c}]$.
 (Quando $d$ satisfaz $\meta{A}(\meta{x})$, nós dizemos também que $\meta{A}(\meta{x})$ é \emph{verdadeira de} $d$.
 
 \factoidbox{A interpretação $\mathbf{I}[d/\meta{c}]$ é igual à interpretação $\mathbf{I}$, com o acréscimo de que atribui o nome $\meta{c}$ ao objeto $d$.
 
 \
 \\
-Um objeto $d$ \xdefine{satisfaz} $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ \\
+Um objeto $d$ \define{satisfacao} $\meta{A}(\meta{x})$ na interpretação $\mathbf{I}$ \\
 \hbox{\textbf{se e somente se}} $\meta{A}(\meta{c})$ é verdadeira em $\mathbf{I}[d/\meta{c}]$.
 }
 
@@ -764,12 +764,12 @@ Aqui estão elas:
 \begin{itemize}
 \item Uma sentença  $\meta{A}$ é uma \define{validity} se e somente se $\meta{A}$ for verdadeira em todas as interpretações; ou seja, se
 $$\entails\meta{A}$$ \label{def:validade_logica}
-\item $\meta{A}$ é uma \define{contradiction of FOL} na LPO se e somente se $\meta{A}$ for falsa em todas as interpretações; ou seja, se
+\item $\meta{A}$ é uma \define{contradiction of FOL} se e somente se $\meta{A}$ for falsa em todas as interpretações; ou seja, se
 $$\entails\enot\meta{A}$$
-\item $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é um argumento \define{valid in FOL} (na LPO) se e somente se não houver interpretação em que todas as premissas são verdadeiras e a conclusão é falsa; ou seja, se
+\item $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é um argumento \define{valid in FOL} se e somente se não houver interpretação em que todas as premissas são verdadeiras e a conclusão é falsa; ou seja, se
 $$\meta{A}_1,\meta{A}_2,\ldots \meta{A}_n \entails\meta{C}$$
 
-\item Um argumento $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é \xdefine{invalido na LPO} se e somente se ele não é válido, ou seja, quando há alguma interpretação na qual todas as suas premissas são verdadeiras e a conclusão é falsa.
+\item Um argumento $\meta{A}_1, \meta{A}_2, \ldots \meta{A}_n \therefore \meta{C}$ é \textit{invalido na LPO} se e somente se ele não é válido, ou seja, quando há alguma interpretação na qual todas as suas premissas são verdadeiras e a conclusão é falsa.
 Denotamos isso por:
 $$\meta{A}_1,\meta{A}_2,\ldots \meta{A}_n \nvDash\meta{C}$$
  
@@ -779,7 +779,7 @@ $$\meta{A}_1,\meta{A}_2,\ldots \meta{A}_n \nvDash\meta{C}$$
 \end{center}
 
 \item As sentenças $\meta{A}_1$, $\meta{A}_2$, \dots, $\meta{A}_n$ são \define{satisfiable in FOL} se e somente se há alguma interpretação na qual todas são verdadeiras.
-Eles são \xdefine{incompativeis} se não houver tal interpretação.
+Elas são \textit{incompatíveis na LPO} se não houver tal interpretação.
 \end{itemize}
 
 

@@ -40,7 +40,7 @@
 {
  name=mundo possível,
  plural=mundos possíveis,
- description={-- um mundo possível é uma alternativa concebível para o mundo real, no qual os fatos que compõem o mundo real poderiam ocorrer diferentemente de como ocorrem}
+ description={-- Um mundo possível é uma versão alternativa para o mundo real, onde um ou mais fatos são substituídos por versões alternativas que não ocorrem (ou ocorreram) na realidade, mas que poderiam ocorrer (ou ter ocorrido)}
 }
 
 \newglossaryentry{conclusion}
@@ -97,6 +97,14 @@ serem verdadeiros}
  plural=expressões da LVF,
  text=expressão da LVF,
  description={-- qualquer sequência de símbolos da LVF}
+}
+
+\newglossaryentry{FOL expression}
+{
+ name=expressão da LPO,
+ plural=expressões da LPO,
+ text=expressão da LPO,
+ description={-- qualquer sequência de símbolos da LPO}
 }
 
 \newglossaryentry{necessary truth}
@@ -378,6 +386,14 @@ description={-- (1) um operador lógico da LVF usado para combinar letras senten
  description = {-- um símbolo da LPO usado para simbolizar uma propriedade ou relação}
 }
 
+
+\newglossaryentry{relation}
+{
+ name = relação,
+ plural=relações,
+ description = {-- tipo especial de predicado que une (relaciona) dois ou mais indivíduos. Relações podem ser binárias, como `\blank\ ama\blank' que relaciona dois indivíduos, o que ama e o que é amado, podem ser ternárias, como `\blank pegou emprestado o \blank\ de \blank' que relaciona três indivíduos, quem pegou emprestado, a coisa que foi emprestada e quem emprestou; e também podem ser quaternárias ou, de um modo geral, $n$-árias, para qualquer $n$ finito}
+}
+
 \newglossaryentry{universal quantifier}
 {
  name = quantificador universal,
@@ -484,16 +500,16 @@ description={-- (1) um operador lógico da LVF usado para combinar letras senten
 \newglossaryentry{contradiction of FOL}
 {
  name=contradição na LPO,
- text=contradição,
+ text=contradição na LPO,
  description={--  uma sentença da LPO que é falsa em todas as interpretações}
 } 
 
 \newglossaryentry{valid in FOL}
 {
  name=validade de argumentos na LPO,
- text = válido,
- description={-- a propriedade dos argumentos da LPO para os quais não há nenhuma interpretação na qual todas as suas premissas são verdadeiras e a conclusão é falsa}
-}
+ text = válido na LPO,
+ description={-- a propriedade dos argumentos da LPO para os quais não há nenhuma interpretação em que todas as suas premissas são verdadeiras e sua conclusão é falsa. Argumentos que não são válidos na LPO, ou seja, argumentos para os quais há pelo menos uma interpretação com suas premissas verdadeiras e sua conclusão falsa são classificados com \textit{inválidos na LPO}}
+ }
 
 \newglossaryentry{support}
 {
@@ -514,20 +530,18 @@ description={-- (1) um operador lógico da LVF usado para combinar letras senten
 {
  name=compatibilidade na LPO,
  text=compatíveis na LPO,
- description={-- (ou \textit{satisfação conjunta na LPO}) a propriedade de um grupo de sentenças da LPO para as quais há pelo menos uma interpretação na qual todas as sentenças do grupo são verdadeiras}
+ description={-- (ou \textit{satisfação conjunta na LPO}) a propriedade de um grupo de sentenças da LPO para o qual há pelo menos uma interpretação em que todas as sentenças do grupo são verdadeiras. Quando isso ocorre as sentenças deste grupo são compatíveis entre si. Por outro lado, um grupo cujas sentenças não são compatíveis entre si, ou seja, para o qual não há qualquer interpretação em que todas as sentenças do grupo sejam verdadeiras, tem a propriedade da \textit{incompatibilidade}, e suas sentenças são ditas incompatíveis entre si}
 }
 
 \newglossaryentry{disjunctive normal form}
 {
  name = forma normal disjuntiva (FND),
- text = forma normal disjuntiva,
  description = {-- está na forma normal disjuntiva uma sentença que é uma disjunção de conjunções de sentenças atômicas ou negações de sentenças atômicas}
 }
 
 \newglossaryentry{forma normal conjuntiva}
 {
  name = forma normal conjuntiva (FNC),
- text = forma normal conjuntiva,
  description = {-- está na forma normal conjuntiva uma sentença que é uma conjunção de disjunções de sentenças atômicas ou de negações de sentenças atômicas}
 }
 
@@ -553,9 +567,10 @@ description={-- (1) um operador lógico da LVF usado para combinar letras senten
 
 \newglossaryentry{dedutivamente inconsistente}
 {
- name={dedutivamente inconsistente}, 
- plural={dedutivamente inconsistentes},
- description={-- a propriedade de um grupo de sentenças a partir do qual se pode provar uma contradição}
+ name={inconsistência dedutiva}, 
+ text={dedutivamente inconsistente},
+  plural={dedutivamente inconsistentes},
+ description={-- a propriedade de um grupo de sentenças a partir do qual se pode provar uma contradição. Um grupo de sentenças que não é dedutivamente inconsistente, ou seja, a partir do qual não há prova de uma contradição é dito ser \textit{dedutivamente consistente}.}
 }
 
 \newglossaryentry{completude}
@@ -637,4 +652,42 @@ description={-- (1) um operador lógico da LVF usado para combinar letras senten
  name=situação,
  plural=situações,
  description={-- (ou \textit{situação possível}) um estado de coisas que representa um cenário hipotético no qual todas as sentenças de um grupo são claramente identificáveis como verdadeiras ou falsas}
+}
+
+
+\newglossaryentry{verdadeiro}
+{
+name=verdadeiro,
+plural=verdadeiros,
+description={-- (ou \textit{verdade}) um dos dois valores de verdade clássicos usados para clarificar as sentenças; o outro é o falso. Uma sentença é classificada como verdadeira em uma situação quando o que ela declara ocorre na situação}
+}
+
+
+\newglossaryentry{extensao}
+{
+name=extensão,
+description={-- a extensão de um predicado é o subconjunto do domínio do discurso que contém todos e apenas os indivíduos que satisfazem o predicado. Por exemplo, a extensão do predicado `\blank\ é honesto' no domínio dos seres humanos corresponde ao conjunto de todas as pessoas honestas}
+}
+
+
+\newglossaryentry{linguagem extensional}
+{
+name=linguagem extensional,
+description={-- é uma linguagem na qual quaisquer dois predicados são indistinguíveis em todas  as interpretações nas quais têm a mesma  extensão. Em oposição às linguagens extensionais, existem as linguagens intensionais, nas quais dois predicados com a mesma extensão em uma dada interpretação podem ainda ser distinguidos quando têm significados (intensões) diferentes. A LPO é uma linguagem extensional, enquanto o português é intensional. Por exemplo, usualmente interpretados, os predicados `\blank\ é um animal racional' e `\blank\ é um primata com polegar opositor' têm supostamente a mesma extensão, o conjunto dos seres humanos, e por isso, suas simbolizações na LPO serão indistinguíveis nesta interpretação usual. Mas estes predicados são claramente distinguíveis em português, porque ainda que o conjunto dos seres racionais e o dos primatas com polegar opositor sejam idênticos, o significado de  `ser racional' é bem diferente do de `ter polegar opositor'}
+}
+
+
+\newglossaryentry{satisfacao}
+{
+ name=satisfação,
+ plural=satisfaz,
+ text=satisfaz,
+ description={-- Um indivíduo do domínio de uma interpretação satisfaz uma fórmula (sentença com variável livre) quando a sentença obtida desta fórmula através da substituição de sua variável livre pelo nome do indivíduo é verdadeira na interpretação. Por exemplo, na interpretação dada pelo mundo real, a fórmula `x foi o primeiro reitor da UFRN' é satisfeita pelo indivíduo cujo nome é `Onofre Lopes da Silva', porque a sentença `Onofre Lopes da Silva foi o primeiro reitor da UFRN' é verdadeira. Definindo de um modo mais formal: seja $\mathbf{I}$ uma interpretação e $i$ o indivíduo do domínio que, de acordo com $\mathbf{I}$, é nomeado por `$d$'. Dizemos que $i$ satisfaz a fórmula $\meta{A}(\meta{x})$ em $\mathbf{I}$, quando a sentença $\meta{A}(\meta{d})$, obtida de $\meta{A}(\meta{x})$ pela substituição de todas as ocorrências livres de `$x$' pelo nome `$d$' for verdadeira em $\mathbf{I}$}
+}
+
+\newglossaryentry{literal}
+{
+name=literal,
+text=literais,
+description={-- chamamos de literal qualquer sentença da LVF que seja ou uma letra sentencial (sentença atômica) ou a negação de uma letra sentencial. Por exemplo, são literais as sentenças: $A, \enot B, A_3, \enot F_2, ...$}
 }
