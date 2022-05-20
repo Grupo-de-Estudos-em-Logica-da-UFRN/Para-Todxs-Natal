@@ -765,7 +765,7 @@ Foi isso que fizemos ao separar a noção de `ser habilidoso' em duas. Habilidos
 Mas podemos ainda nos perguntar: não seria suficiente ter um único predicado que significa, por exemplo, `$x$ é um cirurgião habilidoso', em vez de dois predicados, um para  `$x$ é habilidoso' e outro para  `$x$ é um cirurgião'?
 A resposta é: em algumas situações, sim; mas em outras, não.
 A sentença \ref{surgeon1} mostra que às vezes não precisamos distinguir entre cirurgiões habilidosos e outros cirurgiões.
-Mas se quisermos simbolizar, por exemplo, `Ana e Marcelo são cirurgiões. Ela é habilidosa, jé ele, nem tanto', separar em dois predicados, um para `ser um cirurgião' e outro para `ser habilidoso' parece a melhor escolha.
+Mas se quisermos simbolizar, por exemplo, `Ana e Marcelo são cirurgiões. Ela é habilidosa, já ele, nem tanto', separar em dois predicados, um para `ser um cirurgião' e outro para `ser habilidoso' parece a melhor escolha.
 
 Uma outra pergunta importante é: devemos sempre distinguir, em nossas simbolizações, as diferentes  acepções vinculadas a uma mesma palavra, tal como habilidoso, bom, ruim ou grande?
 A resposta é não. O argumento sobre Bruno exemplificado acima mostra que nos contextos em que apenas uma das acepções do predicado ambíguo está sendo utilizada, não precisamos indicar nenhuma separação especial.
@@ -791,7 +791,7 @@ Cada uma destas `figuras', veremos mais adiante neste livro, é um argumento vá
 	\item \textbf{Disamis.} Algum G é F. Todo G é H. Portanto: Algum H é F.
 	\item \textbf{Ferison.} Nenhum G é F. Algum G é H. Portanto: Algum H não é F.
 	\item \textbf{Bokardo.} Algum G não é F. Todo G é H. Portanto:  Algum H não é~F.
-	\item \textbf{Camenes.} Todo F é G. Nenhum G é H Portanto: Nenhum H é F.
+	\item \textbf{Camenes.} Todo F é G. Nenhum G é H. Portanto: Nenhum H é F.
 	\item \textbf{Dimaris.} Algum F é G. Todo G é H. Portanto: Algum H é F.
 	\item \textbf{Fresison.} Nenhum F é G. Algum G é H. Portanto: Algum H não é~F.
 \end{earg}
@@ -1967,6 +1967,7 @@ Existem seis tipos de símbolos na LPO:
 \item[Conectivos]  $\enot,\eand,\eor,\eif,\eiff$
 \item[Parênteses] ( , )
 \item[Quantificadores]  $\forall, \exists$
+\item[Relação de Identidade] $=$
 \end{description}
 Definimos uma \define{FOL expression} como qualquer sequência de símbolos da LPO.
 Se você pegar quaisquer dos símbolos da LPO e escrevê-los sequencialmente, em qualquer ordem, você terá uma expressão.
@@ -2273,6 +2274,8 @@ e nós a simbolizaríamos como:
 $$\enot \exists x\bigl[\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \atom{C}{x}\bigr]$$
 
 No primeiro caso, dizemos que a descrição definida tem escopo amplo, enquanto no segundo tem escopo restrito.
+
+Vale lembrar que se aceitarmos a sugestão da abordagem de Russell, que vimos no Capítulo~\ref{subsec.defdesc}, devemos considerar que as descrições definidas têm escopo amplo e suas eventuais negações escopo restrito.
 
 \practiceproblems
 \problempart

@@ -255,7 +255,7 @@ Se deixarmos alguma sem substituir, ela ocorrerá fora da subprova rotulada e is
 	Na verdade, a própria notação utilizada na apresentação da regra $\forall$I já revela que na passagem de $\meta{A}(\meta{c})$ para $\forall \meta{x}\,\meta{A}(\meta{x})$, \textit{todas} as ocorrências de $\meta{c}$ devem ser substituídas por $\meta{x}$.
 	Se fosse permitido deixar algumas ocorrências de $\meta{c}$ em $\forall \meta{x}\,\meta{A}(\meta{x})$, deveríamos ter usado a mesma notação mais liberal da regra $\exists$E, e teríamos escrito $\meta{A}(\ldots \meta{c}\ldots\meta{c}\ldots)$ e  $\forall \meta{x}\,\meta{A}(\ldots\meta{x}\ldots\meta{c}\ldots)$.}
 
-Por fim, a restrição 2, de modo exatamente análogo ao explicado no caso da regra $\exists$I (p.\,\pageref{RegraEI}), tem apenas o de papel evitar que se produza um choque de variáveis.
+Por fim, a restrição 2, de modo exatamente análogo ao explicado no caso da regra $\exists$I (p.\,\pageref{RegraEI}), tem apenas o papel de evitar que se produza um choque de variáveis.
 
 %%%%%% ----------------------- 33.5 Eliminação do existencial  -------------
 \section{Eliminação do existencial}
@@ -521,7 +521,7 @@ Especificamente, suponha que você queira provar $\forall \meta{x}\, \atom{\meta
 	\have{m}{\forall \meta{x}\, \atom{\meta{A}}{\meta{x}}}\Ai{x-n}
 \end{fitchproof}
 
- Aqui, $\atom{\meta{A}}{\meta{c}}$ é obtido de $\atom{\meta{A}}{\meta{x}}$ substituindo cada ocorrência livre de $\meta{x}$ em $\atom{\meta{A}}{\meta{x}}$ por~$\meta{c}$.  Para que esta seja uma aplicação legítima da regra  $\forall$I, você tem que escolher um nome novo para ser $\meta{c}$ e nunca usar ele fora desta subprova.
+ Aqui, $\atom{\meta{A}}{\meta{c}}$ é obtido de $\atom{\meta{A}}{\meta{x}}$ substituindo cada ocorrência livre de $\meta{x}$ em $\atom{\meta{A}}{\meta{x}}$ por~$\meta{c}$.  Para que esta seja uma aplicação legítima da regra  $\forall$I, você tem que escolher um nome novo para ser $\meta{c}$ e nunca usá-lo fora desta subprova.
 
 
 Para trabalhar do fim para o começo  a partir de uma sentença $\exists \meta{x}\, \atom{\meta{A}}{\meta{x}}$, escrevemos similarmente uma sentença acima dela que pode servir como justificativa para uma aplicação da regra $\exists$I, ou seja, uma sentença da forma $\atom{\meta{A}}{\meta{c}}$. 
@@ -727,7 +727,7 @@ e
 		\have[m]{a}{\enot \forall \meta{x}\, \meta{A}}
 		\have[\ ]{con}{\exists \meta{x}\, \enot \meta{A}}\cq{a}
 	\end{fitchproof}}
-Essas são as quatro regras de transformação de quantificadores, TQ. Mostraremos no  capítulo \ref{s:DerivedFOL} que todas as essas regras TQ podem ser derivadas das regras básicas da LPO. 
+Essas são as quatro regras de transformação de quantificadores, TQ. Mostraremos no  capítulo \ref{s:DerivedFOL} que todas essas regras TQ podem ser derivadas das regras básicas da LPO. 
 
 %%%%%% -----------------------  CAP  35  - EXERCICIOS   --------------------------   
 
