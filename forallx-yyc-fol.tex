@@ -641,7 +641,7 @@ se \emph{qualquer pessoa} for realmente um sanfoneiro, escolha a pessoa que voc�
 
 A sentença \ref{qscope2}, por outro lado, pode ser parafraseada como `toda pessoa $x$ é tal que, se $x$ for sanfoneiro, então Larissa é uma sanfoneira'. Isso é simbolizado por:
 $$\forall x (\atom{S}{x} \eif \atom{S}{l})$$
-Esta sentença é falsa; Dominguinhos é sanfoneiro.
+Esta sentença pode ser falsa; Dominguinhos é sanfoneiro.
 Então, `$\atom{S}{d}$' é verdadeira. 
 Mas suponha que Larissa não seja uma sanfoneira (digamos que ela seja  uma zabumbeira), então `$\atom{S}{l}$' é falsa.
 Logo, `$\atom{S}{d} \eif \atom{S}{l}$' será falsa e, por causa disso, \mbox{`$\forall x (\atom{S}{x} \eif \atom{S}{l})$'} também será falsa.
@@ -650,8 +650,8 @@ Em resumo, as sentenças
 \begin{center}
 	$\forall x \atom{S}{x} \eif \atom{S}{l}$ \\ $\forall x (\atom{S}{x} \eif \atom{S}{l})$
 \end{center} 
-são muito diferentes uma da outra.
-A primeira é necessariamente verdadeira e a segunda é falsa.
+cuja única diferença sintática está nos parênteses, fazem asserções muito diferentes uma da outra.
+A primeira é necessariamente verdadeira e a segunda pode ser falsa.
 Podemos explicar esta diferença em termos do \emph{âmbito} (ou \emph{escopo}) do quantificador.
 O âmbito de uma quantificação é muito parecido com o âmbito da negação, que estudamos na LVF.
 Nos ajudará aqui se relembrarmos brevemente como funciona o escopo da negação.
