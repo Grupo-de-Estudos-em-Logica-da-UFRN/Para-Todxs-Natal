@@ -22,9 +22,10 @@
 % Permite alinhamento à direita usando \includegraphics[right]{<figura>}
 \usepackage[export]{adjustbox}
 
-% Data (Daniel)
-\def\mydate{\leavevmode\hbox{\twodigits\day/\twodigits\month/\the\year}}
-\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+% Data (Daniel) --- comentar/descomentar conforme data estática ou dinâminca (corrigir também na capa, no arquivo frontmatter)
+%\def\mydate{\leavevmode\hbox{\twodigits\day/\twodigits\month/\the\year}} % linha abaixo faz parte desse comando
+%\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+\def\mydate{13/10/2022}
 
 %RZ: typefaces 
 
