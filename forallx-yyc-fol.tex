@@ -247,7 +247,7 @@ Com base nesta paráfrase ela pode também ser simbolizada usando a negação e 
 $$\forall x\, \enot \atom{B}{x}$$
 Ambas são simbolizações aceitáveis.
 De fato, conforme ficará claro mais adiante, em geral, $\forall x\, \enot\meta{A}$ é logicamente equivalente a $\enot\exists x\,\meta{A}$.
-(Observe que voltamos aqui à prática, explicada no Capítulo \ref{s:UseMention}, de usar `$\meta{A}$' como meta-variável.)
+(Observe que voltamos aqui à prática, explicada no Capítulo \ref{s:UseMention}, de usar `$\meta{A}$' como metavariável.)
 A escolha sobre simbolizar uma sentença como \ref{q.ne} de uma maneira ou da outra depende do que soa mais natural em alguns contextos e  não representa muito mais do que uma mera questão de gosto.
 
 A sentença \ref{q.en} é parafraseada mais naturalmente como:
@@ -424,7 +424,7 @@ A sentença \ref{quan3} pode ser parafraseada como:
 `Não é o caso de que todas as moedas sobre a mesa são moedas de dez centavos'.
 Portanto, podemos simbolizá-la por:
 $$\enot \forall x(\atom{M}{x} \eif \atom{D}{x})$$
-Mas você também pode olhar para a sentença \ref{quan3} e parafrasea-la como `Alguma moeda sobre a mesa não é uma moeda de 10 centavos'.
+Mas você também pode olhar para a sentença \ref{quan3} e parafraseá-la como `Alguma moeda sobre a mesa não é uma moeda de 10 centavos'.
 Você, então, a simbolizaria como:
 $$\exists x(\atom{M}{x} \eand \enot \atom{D}{x})$$
 Embora talvez isso ainda não seja óbvio para você, essas duas sentenças são logicamente equivalentes.
@@ -1013,7 +1013,7 @@ Para que esta sentença fosse verdadeira, precisaria haver pelo menos uma pessoa
 
 O objetivo deste exemplo é ilustrar que a ordem dos quantificadores é muito importante.
 Repare que a única diferença entre as simbolizações das sentenças \ref{lovecycle} e \ref{loveconverge} é a ordem dos quantificadores.
-De fato, confundir a ordem correta dos quantificadores corresponde à conhecida \emph{falácia de mudanca de quantificador}.
+De fato, confundir a ordem correta dos quantificadores corresponde à conhecida \emph{falácia de mudança de quantificador}.
 Vejamos um exemplo que aparece com frequência, em diferentes formas, na literatura filosófica:
 	\begin{earg}
 		\item[] Para toda pessoa, há alguma verdade que ela é incapaz de reconhecer. \ ($\forall \exists$)
@@ -1442,7 +1442,7 @@ E podem, então, ser simbolizadas como:
 $$\forall x (\atom{D}{x,h} \eif x = p)$$
 Há, no entanto, uma sutileza aqui.
 Você acha que quando afirmamos qualquer uma das sentenças \ref{else3}--\ref{else6} acima estamos assumindo que Paulo deve dinheiro a Hasina?
-Parece óbivio que sim!
+Parece óbvio que sim!
 Todas elas afirmam que Paulo deve dinheiro à Hasina e acrescentam a isto o fato de que ninguém mais deve dinheiro à Hasina.
 Então, ao afirmar qualquer uma destas sentenças nos comprometemos com a afirmação de que Paulo deve dinheiro a Hasina.
 Agora pense um pouco sobre as duas alternativas de simbolização que propusemos para estas sentenças.
@@ -1607,7 +1607,7 @@ Estas três sentenças contém a expressão
 \begin{center}
 	`o traidor'
 \end{center}
-que, em todas elas, tem a função de se referir a um certo indivíduo \emph{único} do domíno, através de uma descrição que o define (ser o traidor).
+que, em todas elas, tem a função de se referir a um certo indivíduo \emph{único} do domínio, através de uma descrição que o define (ser o traidor).
 A sentença \ref{traitor3} tem ainda uma outra expressão do mesmo tipo:
 \begin{center}
 	`o delegado'
@@ -1671,7 +1671,7 @@ Apesar da aparência semelhante com as sentenças quantificadas $\forall x\, \at
 Por exemplo, `$\forall x\, \atom{T}{x}$' é verdadeira se todos os indivíduos do domínio são traidores e falsa, caso contrário.
 Entretanto, não cabe perguntarmos se  `$\maththe x\, \atom{T}{x}$' é verdadeira ou falsa.
 `$\maththe x\, \atom{T}{x}$' é uma expressão que se comporta como os nomes.
-Sua função é designar (apontar) um indivíduo específico do domíno, o único indivíduo que é um traidor.
+Sua função é designar (apontar) um indivíduo específico do domínio, o único indivíduo que é um traidor.
 Assim, dada nossa chave, simbolizaríamos a sentença \ref{traitor1} acima, `Nivaldo é o traidor', como:
 $$n = \maththe x\, \atom{T}{x}$$
 Já a sentença \ref{traitor2}, `O traidor estudou na UFRN', seria simbolizada por:
@@ -1925,7 +1925,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das d
 \item[\text{domínio}] animais no mundo
 \item[\atom{E}{x}] \gap{x} está no pasto da fazenda Estrela.
 \item[\atom{C}{x}] \gap{x} é um cavalo.
-\item[\atom{P}{x}] \gap{x} é Pégasus.
+\item[\atom{P}{x}] \gap{x} é Pégaso.
 \item[\atom{A}{x}] \gap{x} tem asas.
 \end{ekey}
 \end{center}
@@ -1935,7 +1935,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das d
 \item Há mais de um cavalo no pasto da fazenda Estrela.
 \item Há três cavalos no pasto da fazenda Estrela.
 \item Há uma única criatura alada no pasto da fazenda Estrela; quaisquer outras criaturas nesse pasto não têm asas.
-\item O animal que é Pégasus é um cavalo alado.
+\item O animal que é Pégaso é um cavalo alado.
 \item O animal no pasto da fazenda Estrela não é um cavalo.
 \item O cavalo no pasto da fazenda estrela, não tem asas.
 \end{earg}
@@ -2158,6 +2158,7 @@ Curiosamente, se considerarmos a negação da sentença original, ou seja:
 `Esquerdistas não são maconheiros'
 \end{center}
 
+\noindent
 veremos que não é trivial escolher a formalização apropriada, já que poderíamos querer dizer:
 
 \begin{center}
